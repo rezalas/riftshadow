@@ -62,8 +62,6 @@ public:
 	void				SetDebugMode(int fDebugMode = 1);
 
 	void				Bug(const char *tError, ...);
-	void				Log(const char *tEvent, ...);
-	void				Debug(const char *tDebug, ...);
 	void				Wiznet(const char *tText, int iWizType, int iMinLevel = 0, ...);
 
 	char *				GetError();				//returns text of last error	

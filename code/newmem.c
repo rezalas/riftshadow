@@ -145,7 +145,7 @@ void *palloc_struct(long nStructSize)
 */
 void free_pstring(char *pstr)
 {
-//	RS.Log("Trying to free %s : %ld.",pstr,(long)pstr);
+//	RS.Logger.Info("Trying to free {} : {}.",pstr,(long)pstr);
 //	if(pstr == nullptr)
 //		RS.Bug("Error: Trying to free null pstring.");
 	if(pstr == nullptr 

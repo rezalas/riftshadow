@@ -1174,8 +1174,7 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
 	int i, scalps;
 	TROPHY_DATA *placeholder;
 
-	sprintf(buf, "Loading %s.", ch->name);
-	RS.Log(buf);
+	RS.Logger.Info("Loading {}.", ch->name);
 
 	zero_vector(limmune_flags);
 	zero_vector(lres_flags);

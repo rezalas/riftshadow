@@ -173,18 +173,3 @@ void CMud::Bug(const char *tError, ...)
 	std::string str = std::string((RSTR)bug);
 	wiznet(str.data(), 0, 0, WIZ_DEBUG, 0, 0);
 }
-
-void CMud::Debug(const char *tDebug, ...)
-{
-	return;
-//TODO: why are these instructions after the return?
-//	TString debug;
-//	MUNCH_VARARG(tDebug, (RSTR)debug) //burp	
-}
-
-void CMud::Log(const char *tEvent, ...)
-{
-	TString log;
-	MUNCH_VARARG(tEvent, log) //varargs are always better with a little gray poupon
-	fprintf(stderr,"%s\n\r", (RSTR)log); //temporary
-}

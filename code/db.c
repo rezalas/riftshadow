@@ -3913,7 +3913,7 @@ void do_llimit(CHAR_DATA *ch, char *argument)
 	{
 		strcpy(strPlr, file.data());
 		if(bDebug)
-			RS.Log(strPlr);
+			RS.Logger.Debug(strPlr);
 
 		if (!str_cmp(strPlr, chkbuf))
 			break; /* Exit if == Zzz.plr file */

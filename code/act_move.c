@@ -3861,12 +3861,11 @@ void smart_track(CHAR_DATA *ch, CHAR_DATA *mob)
 
 	/* Uncomment for tracking info */
 	/*
-	sprintf(buf,"MOB %s tracking from ROOM %d to ROOM %d -- %d iterations.\n\r",
+	RS.Logger.Info("MOB {} tracking from ROOM {} to ROOM {} -- {} iterations.\n\r",
 		mob->name,
 		mob->in_room->vnum,
 		ch->in_room->vnum,
 		iterations);
-	RS.Log(buf);
 	*/
 
 	move_char(mob, solve->dir_from, false, true);
@@ -3928,12 +3927,11 @@ void walk_to_room(CHAR_DATA *mob, ROOM_INDEX_DATA *goal)
 	}
 
 	/*
-	sprintf(buf,"MOB %s walking from ROOM %d to ROOM %d -- %d iterations.\n\r",
+	RS.Logger.Info("MOB {} walking from ROOM {} to ROOM {} -- {} iterations.\n\r",
 		mob->name,
 		mob->in_room->vnum,
 		goal->vnum,
 		iterations);
-	RS.Log(buf);
 	*/
 
 	move_char(mob, solve->dir_from, false, true);

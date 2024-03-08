@@ -102,18 +102,15 @@ bool check_arms(CHAR_DATA *ch, OBJ_DATA *obj)
 bool can_loot(CHAR_DATA *ch, OBJ_DATA *obj)
 {
 	CHAR_DATA *owner, *wch;
-	char buf[MAX_STRING_LENGTH];
 
 	if (obj->item_type == ITEM_CORPSE_PC
 		&& (!is_npc(ch) || is_affected_by(ch, AFF_CHARM)))
 	{
-		sprintf(buf, "%s looting %s.",
+		RS.Logger.Info("{} looting {}.",
 			is_npc(ch)
 				? ((ch->master == nullptr) ? "Unknown mob" : ch->master->name)
 				: ch->name,
-		obj->short_descr);
-
-		RS.Log(buf);
+			obj->short_descr);
 		ch->pause = 5;
 	}
 

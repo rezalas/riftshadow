@@ -495,13 +495,11 @@ void init_descriptor(int control)
 
 		addr = ntohl(sock.sin_addr.s_addr);
 
-		sprintf(buf, "%d.%d.%d.%d", (addr >> 24) & 0xFF, (addr >> 16) & 0xFF, (addr >> 8) & 0xFF, (addr)&0xFF);
-		sprintf(log_buf, "Sock.sinaddr:  %s", buf);
-		RS.Log(log_buf);
+		RS.Logger.Info("Sock.sinaddr:  {}.{}.{}.{}", (addr >> 24) & 0xFF, (addr >> 16) & 0xFF, (addr >> 8) & 0xFF, (addr)&0xFF);
 
 		if (strstr(buf, "204.82.56."))
 		{
-			RS.Log("DNS lookup refused. Forbidding access.");
+			RS.Logger.Info("DNS lookup refused. Forbidding access.");
 			write_to_descriptor(desc, "Your site has been banned from this mud due to DNS problems.\n\r", 0);
 
 			close(desc);
@@ -579,8 +577,7 @@ void close_socket(DESCRIPTOR_DATA *dclose)
 
 	if ((ch = dclose->character) != nullptr)
 	{
-		sprintf(log_buf, "Closing link to %s.", ch->name);
-		RS.Log(log_buf);
+		RS.Logger.Info("Closing link to {}.", ch->name);
 
 		/* cut down on wiznet spam when rebooting */
 		if (dclose->connected == CON_PLAYING && !merc_down)
@@ -639,8 +636,7 @@ bool read_from_descriptor(DESCRIPTOR_DATA *d)
 	iStart = strlen(d->inbuf);
 	if (iStart >= sizeof(d->inbuf) - 10)
 	{
-		sprintf(log_buf, "%s input overflow!", d->host);
-		RS.Log(log_buf);
+		RS.Logger.Info("{} input overflow!", d->host);
 
 		write_to_descriptor(d->descriptor, "\n\r*** PUT A LID ON IT!!! ***\n\r", 0);
 		return false;
@@ -659,7 +655,7 @@ bool read_from_descriptor(DESCRIPTOR_DATA *d)
 		}
 		else if (nRead == 0)
 		{
-			RS.Log("EOF encountered on read.");
+			RS.Logger.Info("EOF encountered on read.");
 			return false;
 		}
 		else if (errno == EAGAIN)
@@ -1497,8 +1493,7 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
 
 			if (IS_SET(ch->act, PLR_DENY))
 			{
-				sprintf(log_buf, "Denying access to %s@%s.", argument, d->host);
-				RS.Log(log_buf);
+				RS.Logger.Info("Denying access to {}@{}.", argument, d->host);
 
 				write_to_buffer(d, "You are denied access.\n\r", 0);
 				close_socket(d);
@@ -1615,16 +1610,15 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
 			ch->pcdata->logon_time = palloc_string(ctime(&current_time));
 			ch->pcdata->logon_time[strlen(ch->pcdata->logon_time) - 1] = '\0';
 
-			sprintf(log_buf, "%s@%s has connected. [%d (%d) obj] %s",
+			buffer = fmt::format("{}@{} has connected. [{} ({}) obj] {}",
 				ch->true_name,
 				d->host, count_carried(ch, false),
 				count_carried(ch, true),
 				auto_check_multi(d, d->host) ? " (MULTI)" : "");
-
-			RS.Log(log_buf);
+			RS.Logger.Info(buffer);
 			login_log(ch, 1);
 
-			wiznet(log_buf, nullptr, nullptr, WIZ_SITES, 0, get_trust(ch));
+			wiznet(buffer.data(), nullptr, nullptr, WIZ_SITES, 0, get_trust(ch));
 
 			if (is_immortal(ch))
 			{
@@ -2019,14 +2013,14 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
 			}
 
 			ch->SetClass(iClass);
-			sprintf(log_buf, "%s@%s new player.%s",
+			buffer = fmt::format("{}@{} new player.{}",
 				ch->name, d->host,
 				auto_check_multi(d, d->host) ? " (MULTI-CHAR?)" : "");
-			RS.Log(log_buf);
+			RS.Logger.Info(buffer);
 			login_log(ch, 0);
 
 			wiznet("Newbie alert!  $N sighted.", ch, nullptr, WIZ_NEWBIE, 0, 0);
-			wiznet(log_buf, nullptr, nullptr, WIZ_SITES, 0, get_trust(ch));
+			wiznet(buffer.data(), nullptr, nullptr, WIZ_SITES, 0, get_trust(ch));
 
 			if (ch->Class()->GetIndex() == CLASS_SORCERER)
 			{
@@ -2964,8 +2958,7 @@ bool check_reconnect(DESCRIPTOR_DATA *d, char *name, bool fConn)
 					obj->pIndexData->limcount++;
 				}
 
-				sprintf(log_buf, "%s@%s reconnected.", ch->name, d->host);
-				RS.Log(log_buf);
+				RS.Logger.Info("{}@{} reconnected.", ch->name, d->host);
 
 				wiznet("$N recovers from link death.", ch, nullptr, WIZ_LINKS, 0, get_trust(ch));
 				d->connected = CON_PLAYING;

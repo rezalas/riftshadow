@@ -232,7 +232,7 @@ void clean_mud()
 			if (!load_char_obj(d, tbuf))
 			{
 				nSQL.Delete("players WHERE name = '%s'", row[0]);
-				RS.Log("Deleting player...");
+				RS.Logger.Info("Deleting player...");
 			}
 
 			free_char(d->character);

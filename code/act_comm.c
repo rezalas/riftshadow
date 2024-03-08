@@ -1793,7 +1793,7 @@ void do_quit_new(CHAR_DATA *ch, char *argument, bool autoq)
 	send_to_char("Alas, all good things must come to an end.\n\r", ch);
 	act("$n has left the realm.", ch, nullptr, nullptr, TO_ROOM);
 
-	sprintf(log_buf, "%s@%s has %squit. [%ld played, %d (%d) obj]",
+	auto buffer = fmt::format("{}@{} has {}quit. [{} played, {} ({}) obj]",
 			ch->true_name,
 			!IS_SET(ch->comm, COMM_NOSOCKET) ? ch->pcdata->host : "",
 			autoq ? "auto" : "",
@@ -1801,8 +1801,8 @@ void do_quit_new(CHAR_DATA *ch, char *argument, bool autoq)
 			count_carried(ch, false),
 			count_carried(ch, true));
 
-	RS.Log(log_buf);
-	wiznet(log_buf, ch, nullptr, WIZ_SITES, 0, get_trust(ch));
+	RS.Logger.Info(buffer);
+	wiznet(buffer.data(), ch, nullptr, WIZ_SITES, 0, get_trust(ch));
 	login_log(ch, 2);
 
 	/*
