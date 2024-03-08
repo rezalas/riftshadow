@@ -2330,11 +2330,11 @@ void fread_obj(CHAR_DATA *ch, FILE *fp)
 
 					if (iValue < 0 || iValue > 3)
 					{
-						RS.Bug("Fread_obj: bad iValue %d.", iValue);
+						RS.Logger.Warn("Fread_obj: bad iValue {}.", iValue);
 					}
 					else if (sn < 0)
 					{
-						RS.Bug("Fread_obj: unknown skill.");
+						RS.Logger.Warn("Fread_obj: unknown skill.");
 					}
 					else
 					{
@@ -2383,7 +2383,7 @@ void fread_obj(CHAR_DATA *ch, FILE *fp)
 					vnum = fread_number(fp);
 
 					if ((obj->pIndexData = get_obj_index(vnum)) == nullptr)
-						RS.Bug("Fread_obj: bad vnum %d.", vnum);
+						RS.Logger.Warn("Fread_obj: bad vnum {}.", vnum);
 					else
 						fVnum = true;
 
@@ -2405,7 +2405,7 @@ void fread_obj(CHAR_DATA *ch, FILE *fp)
 
 		if (!fMatch)
 		{
-			// RS.Bug("Fread_obj: no match.");
+			// RS.Logger.Warn("Fread_obj: no match.");
 			fread_to_eol(fp);
 		}
 	}

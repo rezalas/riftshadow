@@ -83,9 +83,9 @@ void save_area_list()
 	FILE *fp;
 	AREA_DATA *pArea;
 
-	if ((fp = fopen(RIFT_AREA_LIST, "w")) == nullptr)
+	if ((fp = fopen(AREA_LIST, "w")) == nullptr)
 	{
-		RS.Logger.Warn("Save_area_list: fopen {}: {}", RIFT_AREA_LIST, std::strerror(errno));
+		RS.Logger.Warn("Save_area_list: fopen {}: {}", AREA_LIST, std::strerror(errno));
 	}
 	else
 	{

@@ -3993,8 +3993,8 @@ void load_rooms(FILE *fp)
 		letter = fread_letter(fp);
 		if (letter != '#')
 		{
-			RS.Bug("Letter is %c.", letter);
-			RS.Bug("Load_newrooms: # not found, last vnum %d.", vnum);
+			RS.Logger.Error("Letter is {}.", letter);
+			RS.Logger.Error("Load_newrooms: # not found, last vnum {}.", vnum);
 			exit(0);
 		}
 
@@ -4101,7 +4101,7 @@ void load_rooms(FILE *fp)
 				door = flag_lookup(fread_word(fp), direction_table);
 				if (door < 0 || door > 5)
 				{
-					RS.Bug("Fread_rooms: vnum %d has bad door number.", vnum);
+					RS.Logger.Error("Fread_rooms: vnum {} has bad door number.", vnum);
 					exit(1);
 				}
 
@@ -4192,7 +4192,7 @@ void load_newresets(FILE *fp)
 
 	if (area_last == nullptr)
 	{
-		RS.Bug("Load_resets: no #AREA seen yet.");
+		RS.Logger.Error("Load_resets: no #AREA seen yet.");
 		exit(1);
 	}
 
@@ -4380,13 +4380,13 @@ void load_newresets(FILE *fp)
 
 				if (pReset->arg2 < 0 || pReset->arg2 > 6)
 				{
-					RS.Bug("Load_resets: 'R': bad exit %d.", pReset->arg2);
+					RS.Logger.Error("Load_resets: 'R': bad exit {}.", pReset->arg2);
 					exit(1);
 				}
 
 				break;
 			default:
-				RS.Bug("Load_resets: bad command '%c'.", letter);
+				RS.Logger.Error("Load_resets: bad command '{}'.", letter);
 				exit(1);
 				break;
 		}

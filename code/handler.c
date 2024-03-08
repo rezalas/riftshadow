@@ -505,7 +505,7 @@ int get_skill(CHAR_DATA *ch, int sn)
 	}
 	else if (sn < -1 || sn > MAX_SKILL)
 	{
-		RS.Bug("Bad sn %d in get_skill.", sn);
+		RS.Logger.Warn("Bad sn {} in get_skill.", sn);
 		skill = 0;
 	}
 	else if (!is_npc(ch))
@@ -1454,7 +1454,7 @@ void affect_remove(CHAR_DATA *ch, AFFECT_DATA *paf)
 
 	if (ch->affected == nullptr)
 	{
-		RS.Bug("Affect_remove: no affect on %s.", ch->name);
+		RS.Logger.Warn("Affect_remove: no affect on {}.", ch->name);
 		return;
 	}
 
@@ -1484,7 +1484,7 @@ void affect_remove(CHAR_DATA *ch, AFFECT_DATA *paf)
 
 		if (prev == nullptr)
 		{
-			RS.Bug("Affect_remove: cannot find paf.");
+			RS.Logger.Warn("Affect_remove: cannot find paf.");
 			return;
 		}
 	}
@@ -1590,7 +1590,7 @@ void char_from_room(CHAR_DATA *ch)
 
 	if (ch->in_room == nullptr)
 	{
-		RS.Bug("Char_from_room: nullptr.");
+		RS.Logger.Debug("Char_from_room: nullptr.");
 		return;
 	}
 
@@ -1636,7 +1636,7 @@ void char_from_room(CHAR_DATA *ch)
 		}
 		/*
 		if ( prev == nullptr )
-			RS.Bug("Char_from_room: ch not found.");
+			RS.Logger.Warn("Char_from_room: ch not found.");
 		*/
 	}
 
@@ -1682,7 +1682,7 @@ void char_to_room(CHAR_DATA *ch, ROOM_INDEX_DATA *pRoomIndex)
 	{
 		ROOM_INDEX_DATA *room;
 
-		RS.Bug("Char_to_room: nullptr.");
+		RS.Logger.Debug("Char_to_room: nullptr.");
 
 		if ((room = get_room_index(ROOM_VNUM_TEMPLE)) != nullptr)
 			char_to_room(ch, room);
@@ -1769,7 +1769,7 @@ void obj_from_char(OBJ_DATA *obj)
 
 	if ((ch = obj->carried_by) == nullptr)
 	{
-		RS.Bug("Obj_from_char: null ch.");
+		RS.Logger.Debug("Obj_from_char: null ch.");
 		return;
 	}
 
@@ -1794,7 +1794,7 @@ void obj_from_char(OBJ_DATA *obj)
 		}
 
 		if (prev == nullptr)
-			RS.Bug("Obj_from_char: obj not in list.");
+			RS.Logger.Warn("Obj_from_char: obj not in list.");
 	}
 
 	obj->carried_by = nullptr;
@@ -1892,7 +1892,7 @@ void equip_char(CHAR_DATA *ch, OBJ_DATA *obj, int iWear, bool show)
 	status= false;
 	if (iWear != WEAR_COSMETIC && get_eq_char(ch, iWear) != nullptr)
 	{
-		RS.Bug("Equip_char: already equipped (%d) -- %s -- %s.", iWear, ch->name, ch->in_room->area->file_name);
+		RS.Logger.Warn("Equip_char: already equipped ({}) -- {} -- {}.", iWear, ch->name, ch->in_room->area->file_name);
 		return;
 	}
 
@@ -1984,7 +1984,7 @@ void unequip_char(CHAR_DATA *ch, OBJ_DATA *obj, bool show)
 
 	if (obj->wear_loc == WEAR_NONE)
 	{
-		RS.Bug("Unequip_char: already unequipped.");
+		RS.Logger.Warn("Unequip_char: already unequipped.");
 		return;
 	}
 
@@ -2062,7 +2062,7 @@ void obj_from_room(OBJ_DATA *obj)
 
 	if ((in_room = obj->in_room) == nullptr)
 	{
-		RS.Bug("obj_from_room: nullptr.");
+		RS.Logger.Debug("obj_from_room: nullptr.");
 		return;
 	}
 
@@ -2094,7 +2094,7 @@ void obj_from_room(OBJ_DATA *obj)
 
 		if (prev == nullptr)
 		{
-			RS.Bug("Obj_from_room: obj not found.");
+			RS.Logger.Warn("Obj_from_room: obj not found.");
 			return;
 		}
 	}
@@ -2156,7 +2156,7 @@ void obj_from_obj(OBJ_DATA *obj)
 
 	if ((obj_from = obj->in_obj) == nullptr)
 	{
-		RS.Bug("Obj_from_obj: null obj_from.");
+		RS.Logger.Debug("Obj_from_obj: null obj_from.");
 		return;
 	}
 
@@ -2179,7 +2179,7 @@ void obj_from_obj(OBJ_DATA *obj)
 
 		if (prev == nullptr)
 		{
-			RS.Bug("Obj_from_obj: obj not found.");
+			RS.Logger.Warn("Obj_from_obj: obj not found.");
 			return;
 		}
 	}
@@ -2238,7 +2238,7 @@ void extract_obj(OBJ_DATA *obj)
 
 		if (prev == nullptr)
 		{
-			RS.Bug("Extract_obj: obj %d not found.", obj->pIndexData->vnum);
+			RS.Logger.Warn("Extract_obj: obj {} not found.", obj->pIndexData->vnum);
 			return;
 		}
 	}
@@ -2271,7 +2271,7 @@ void extract_char(CHAR_DATA *ch, bool fPull)
 		if (is_npc(ch))
 			sprintf(vn, "%d", ch->pIndexData->vnum);
 
-		RS.Bug("Extract_char: in_room is nullptr.  %s%s.",
+		RS.Logger.Warn("Extract_char: in_room is nullptr.  {}{}.",
 			is_npc(ch) ? "Vnum is " : "Name is ",
 			is_npc(ch) ? vn : ch->name);
 	}
@@ -2319,7 +2319,7 @@ void extract_char(CHAR_DATA *ch, bool fPull)
 
 	if (is_npc(ch) && CQueue::HasQueuePending(ch))
 	{
-		RS.Bug("Attempt at extracting mob %d while it has queue events pending.  Deleting events.", ch->pIndexData->vnum);
+		RS.Logger.Warn("Attempt at extracting mob {} while it has queue events pending.  Deleting events.", ch->pIndexData->vnum);
 		CQueue::DeleteQueuedEventsInvolving(ch);
 	}
 
@@ -2374,7 +2374,7 @@ void extract_char(CHAR_DATA *ch, bool fPull)
 
 		if (prev == nullptr)
 		{
-			RS.Bug("Extract_char: char not found.");
+			RS.Logger.Warn("Extract_char: char not found.");
 			return;
 		}
 	}
@@ -2622,7 +2622,7 @@ void deduct_cost(CHAR_DATA *ch, int cost)
 
 	if (ch->gold < 0)
 	{
-		RS.Bug("deduct costs: gold %d < 0", ch->gold);
+		RS.Logger.Warn("deduct costs: gold {} < 0", ch->gold);
 		ch->gold = 0;
 	}
 }
@@ -2642,7 +2642,7 @@ void deduct_cost(CHAR_DATA *ch, long cost)
 
 	if (ch->gold < 0)
 	{
-		RS.Bug("deduct costs: gold %d < 0", ch->gold);
+		RS.Logger.Warn("deduct costs: gold {} < 0", ch->gold);
 		ch->gold = 0;
 	}
 }
@@ -2657,7 +2657,7 @@ OBJ_DATA *create_money(int gold)
 
 	if (gold <= 0)
 	{
-		RS.Bug("Create_money: zero or negative money [%d].", gold);
+		RS.Logger.Warn("Create_money: zero or negative money [{}].", gold);
 		gold = std::max(1, gold);
 	}
 	else if (gold == 1)
@@ -2954,7 +2954,7 @@ bool can_see_obj(CHAR_DATA *ch, OBJ_DATA *obj)
 
 	if (!ch->in_room)
 	{
-		RS.Bug("ERROR IN CANSEEOBJ!");
+		RS.Logger.Warn("ERROR IN CANSEEOBJ!");
 		return false;
 	}
 
@@ -3034,7 +3034,7 @@ char *affect_loc_name(int location)
 			return apply_locations[i].display;
 	}
 
-	RS.Bug("Affect_location_name: unknown location %d.", location);
+	RS.Logger.Warn("Affect_location_name: unknown location {}.", location);
 	return "(unknown)";
 }
 
@@ -3996,7 +3996,7 @@ void affect_modify_room(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *paf, bool fAdd)
 			room->sector_type += mod;
 			break;
 		default:
-			RS.Bug("Affect_modify_room: unknown location %d.", paf->location);
+			RS.Logger.Warn("Affect_modify_room: unknown location {}.", paf->location);
 			break;
 	}
 }
@@ -4084,7 +4084,7 @@ void affect_remove_room(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *paf)
 
 	if (room->affected == nullptr)
 	{
-		RS.Bug("Affect_remove_room: no affect.");
+		RS.Logger.Warn("Affect_remove_room: no affect.");
 		return;
 	}
 
@@ -4114,7 +4114,7 @@ void affect_remove_room(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *paf)
 
 		if (prev == nullptr)
 		{
-			RS.Bug("Affect_remove_room: cannot find paf.");
+			RS.Logger.Warn("Affect_remove_room: cannot find paf.");
 			return;
 		}
 	}
@@ -4140,7 +4140,7 @@ void affect_remove_room(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *paf)
 
 			if (prev == nullptr)
 			{
-				RS.Bug("Affect_remove_room: cannot find room.");
+				RS.Logger.Warn("Affect_remove_room: cannot find room.");
 				return;
 			}
 		}
@@ -4230,7 +4230,7 @@ char *raffect_loc_name(int location)
 			return "nope";
 	}
 
-	RS.Bug("raffect_location_name: unknown location %d.", location);
+	RS.Logger.Warn("raffect_location_name: unknown location {}.", location);
 	return "(unknown)";
 }
 
@@ -4285,7 +4285,7 @@ void charaff_from_obj_index(OBJ_INDEX_DATA *obj, AFFECT_DATA *paf)
 {
 	if (obj->charaffs == nullptr)
 	{
-		RS.Bug("charaff_from_obj_index: no affect.");
+		RS.Logger.Warn("charaff_from_obj_index: no affect.");
 		return;
 	}
 
@@ -4307,7 +4307,7 @@ void charaff_from_obj_index(OBJ_INDEX_DATA *obj, AFFECT_DATA *paf)
 
 		if (prev == nullptr)
 		{
-			RS.Bug("charaff_from_obj_index: cannot find paf.");
+			RS.Logger.Warn("charaff_from_obj_index: cannot find paf.");
 			return;
 		}
 	}
@@ -4455,7 +4455,7 @@ void affect_modify_obj(OBJ_DATA *obj, OBJ_AFFECT_DATA *paf, bool fAdd)
 				obj->weight += mod;
 				break;
 			default:
-				RS.Bug("affect_modify_obj: unknown location %d.", paf->location);
+				RS.Logger.Warn("affect_modify_obj: unknown location {}.", paf->location);
 		}
 	}
 }
@@ -4503,7 +4503,7 @@ void affect_remove_obj(OBJ_DATA *obj, OBJ_AFFECT_DATA *paf, bool show)
 
 	if (!obj->affected)
 	{
-		RS.Bug("affect_remove_obj: no affect!");
+		RS.Logger.Warn("affect_remove_obj: no affect!");
 		return;
 	}
 
@@ -4533,7 +4533,7 @@ void affect_remove_obj(OBJ_DATA *obj, OBJ_AFFECT_DATA *paf, bool show)
 
 		if (!prev)
 		{
-			RS.Bug("affect_remove_obj: cannot find paf on obj #%d!", obj->pIndexData->vnum);
+			RS.Logger.Warn("affect_remove_obj: cannot find paf on obj #{}!", obj->pIndexData->vnum);
 			return;
 		}
 	}
@@ -4608,7 +4608,7 @@ char *oaffect_loc_name(int location)
 			return "weight";
 	}
 
-	RS.Bug("oaffect_loc_name: unknown  location %d.", location);
+	RS.Logger.Warn("oaffect_loc_name: unknown  location {}.", location);
 	return "(unknown)";
 }
 
@@ -4697,7 +4697,7 @@ void affect_modify_area(AREA_DATA *area, AREA_AFFECT_DATA *paf, bool fAdd)
 
 			break;
 		default:
-			RS.Bug("affect_modify_area: unknown location %d.", paf->location);
+			RS.Logger.Warn("affect_modify_area: unknown location {}.", paf->location);
 	}
 }
 
@@ -4744,7 +4744,7 @@ void affect_remove_area(AREA_DATA *area, AREA_AFFECT_DATA *paf)
 
 	if (!area->affected)
 	{
-		RS.Bug("affect_remove_area: no affect!");
+		RS.Logger.Warn("affect_remove_area: no affect!");
 		return;
 	}
 
@@ -4774,7 +4774,7 @@ void affect_remove_area(AREA_DATA *area, AREA_AFFECT_DATA *paf)
 
 		if (!prev)
 		{
-			RS.Bug("affect_remove_area: cannot find paf!");
+			RS.Logger.Warn("affect_remove_area: cannot find paf!");
 			return;
 		}
 	}
@@ -4845,7 +4845,7 @@ char *aaffect_loc_name(int location)
 			return "wind";
 	}
 
-	RS.Bug("aaffect_loc_name: unknown  location %d.", location);
+	RS.Logger.Warn("aaffect_loc_name: unknown  location {}.", location);
 	return "(unknown)";
 }
 

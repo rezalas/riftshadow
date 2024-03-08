@@ -320,7 +320,7 @@ void load_improgs(FILE *fp)
 			case 'S':
 				break;
 			default:
-				RS.Bug("Load_improgs: letter '%c' not *IMS.", letter);
+				RS.Logger.Error("Load_improgs: letter '{}' not *IMS.", letter);
 				exit(1);
 		}
 
@@ -359,7 +359,7 @@ void load_specs(FILE *fp)
 				}
 
 				if (!ispec_table[i].spec_name)
-					RS.Bug("Error: Unable to load ispec for #%d.", pObjIndex->vnum);
+					RS.Logger.Warn("Error: Unable to load ispec for #{}.", pObjIndex->vnum);
 
 				break;
 			/*
@@ -395,11 +395,11 @@ void load_specs(FILE *fp)
 				}
 
 				if (!mspec_table[i].spec_name)
-					RS.Bug("Error: Unable to load mspec for #%d.", pMobIndex->vnum);
+					RS.Logger.Warn("Error: Unable to load mspec for #{}.", pMobIndex->vnum);
 
 				break;
 			default:
-				RS.Bug("Load_specs: letter '%c' not *IMRA.", letter);
+				RS.Logger.Error("Load_specs: letter '{}' not *IMRA.", letter);
 				exit(1);
 		}
 
@@ -425,7 +425,7 @@ void load_mobs(FILE *fp)
 		letter = fread_letter(fp);
 		if (letter != '#')
 		{
-			RS.Bug("Load_new_mobiles: # not found.");
+			RS.Logger.Error("Load_new_mobiles: # not found.");
 			exit(1);
 		}
 
@@ -436,7 +436,7 @@ void load_mobs(FILE *fp)
 		fBootDb = false;
 		if (get_mob_index(vnum) != nullptr)
 		{
-			RS.Bug("Load_new_mobiles: vnum %d duplicated.", vnum);
+			RS.Logger.Error("Load_new_mobiles: vnum {} duplicated.", vnum);
 			exit(1);
 		}
 		fBootDb = true;
@@ -690,7 +690,7 @@ void load_mobs(FILE *fp)
 
 			if (pos == -1)
 			{
-				RS.Bug("No flag in the %s table named %s was found (mob %s - %d).",
+				RS.Logger.Error("No flag in the {} table named {} was found (mob {} - {}).",
 					aword,
 					bword,
 					pMobIndex->player_name,
@@ -759,7 +759,7 @@ void load_mobs(FILE *fp)
 				}
 				else
 				{
-					RS.Bug("Flag remove: flag not found.");
+					RS.Logger.Error("Flag remove: flag not found.");
 					exit(1);
 				}
 			}
@@ -930,11 +930,11 @@ void load_mobs(FILE *fp)
 				}
 
 				if (opennum >= MAX_PROFS_TAUGHT_BY_MOB)
-					RS.Bug("Error: Mob %d teaches too many profs.", pMobIndex->vnum);
+					RS.Logger.Warn("Error: Mob {} teaches too many profs.", pMobIndex->vnum);
 
 				pMobIndex->profs_taught[opennum] = CProficiencies::ProfIndexLookup(fread_string(fp));
 				if (pMobIndex->profs_taught[opennum] == -1)
-					RS.Bug("Error: Mob %d trying to teach invalid proficiency.", pMobIndex->vnum);
+					RS.Logger.Warn("Error: Mob {} trying to teach invalid proficiency.", pMobIndex->vnum);
 			}
 			else if (letter == 'Y')
 			{
@@ -969,7 +969,9 @@ void load_mobs(FILE *fp)
 
 void bugout(char *reason)
 {
-	RS.Bug(reason);
+	//TODO: Tie this into the logging system
+
+	RS.Logger.Warn(reason);
 
 	auto fp = fopen(RIFT_ROOT_DIR "../logs/bugout.txt", "a");
 	fprintf(fp, "%s\n", reason);
@@ -979,6 +981,8 @@ void bugout(char *reason)
 
 void bug_exit(char *file, int nLine)
 {
+	//TODO: Tie this into the logging system
+
 	char buf[MSL];
 	sprintf(buf, "Exiting MUD: called from %s:%d.", file, nLine);
 	bugout(buf);
@@ -997,7 +1001,7 @@ void load_objs(FILE *fp)
 
 	if (!area_last) /* OLC */
 	{
-		RS.Bug("Load_objects: no #AREA seen yet.");
+		RS.Logger.Error("Load_objects: no #AREA seen yet.");
 		exit(1);
 	}
 
@@ -1010,7 +1014,7 @@ void load_objs(FILE *fp)
 		letter = fread_letter(fp);
 		if (letter != '#')
 		{
-			RS.Bug("Load_objects: # not found.");
+			RS.Logger.Error("Load_objects: # not found.");
 			exit(1);
 		}
 
@@ -1024,7 +1028,7 @@ void load_objs(FILE *fp)
 
 		if (get_obj_index(vnum) != nullptr)
 		{
-			RS.Bug("Load_objects: vnum %d duplicated.", vnum);
+			RS.Logger.Error("Load_objects: vnum {} duplicated.", vnum);
 			exit(1);
 		}
 
@@ -1185,7 +1189,7 @@ void load_objs(FILE *fp)
 
 				if (pObjIndex->cabal)
 				{
-					RS.Bug("Load_rooms: duplicate cabal fields.");
+					RS.Logger.Error("Load_rooms: duplicate cabal fields.");
 					exit(1);
 				}
 

@@ -1200,7 +1200,7 @@ void char_update(void)
 
 		if (is_npc(ch) && ch->hit < 0 && ch->in_room)
 		{
-			RS.Bug("%s in %d has HP %d", ch->name, ch->in_room->vnum, ch->hit);
+			RS.Logger.Warn("{} in {} has HP {}", ch->name, ch->in_room->vnum, ch->hit);
 		}
 
 		if (ch->ghost > 0)
@@ -3148,7 +3148,7 @@ void save_demos()
 
 	/*
 	if(!(fp=fopen(DEMO_LOG_FILE,"w")))
-		return RS.Bug("Error opening demographics.",0);
+		return RS.Logger.Warn("Error opening demographics.");
 	conn = open_conn();
 	//racial crap
 	fprintf(fp,"Riftshadow Demographics\n\r");

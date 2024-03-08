@@ -3850,7 +3850,7 @@ void set_title(CHAR_DATA *ch, char *title)
 {
 	if (is_npc(ch))
 	{
-		RS.Bug("Set_title: NPC.");
+		RS.Logger.Debug("Set_title: NPC.");
 		return;
 	}
 
@@ -3956,7 +3956,7 @@ void set_extitle(CHAR_DATA *ch, char *title)
 {
 	if (is_npc(ch))
 	{
-		RS.Bug("Set_extitle: NPC.");
+		RS.Logger.Debug("Set_extitle: NPC.");
 		return;
 	}
 

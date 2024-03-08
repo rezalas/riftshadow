@@ -157,7 +157,7 @@ void free_trophy(TROPHY_DATA *trophy)
 {
 	if (!trophy)
 	{
-		RS.Bug("ERROR: Null trophy freed!");
+		RS.Logger.Warn("ERROR: Null trophy freed!");
 		return;
 	}
 
@@ -701,7 +701,7 @@ CHAR_DATA *new_char(void)
 		ch = new CHAR_DATA;
 
 		if (bDebug)
-			RS.Bug("Char free is null.  . . . . !");
+			RS.Logger.Debug("Char free is null.  . . . . !");
 	}
 	else
 	{
