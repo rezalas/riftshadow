@@ -64,8 +64,8 @@
 #include "const.h"
 #include "utility.h"
 #include "./stdlibs/cdirectory.h"
-#include "./include/fmt/format.h"
-#include "./include/fmt/printf.h"
+#include "./include/spdlog/fmt/bundled/format.h"
+#include "./include/spdlog/fmt/bundled/printf.h"
 
 /* LOAD CABAL ITEMS */
 char *top_bounty_name[MAX_TOP_BOUNTY];

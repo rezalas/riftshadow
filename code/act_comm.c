@@ -65,8 +65,8 @@
 #include "characterClasses/thief.h"
 #include "chardef.h"
 #include "update.h"
-#include "./include/fmt/format.h"
-#include "./include/fmt/printf.h"
+#include "./include/spdlog/fmt/bundled/format.h"
+#include "./include/spdlog/fmt/bundled/printf.h"
 
 /* RT code to delete yourself */
 void do_delet(CHAR_DATA *ch, char *argument)

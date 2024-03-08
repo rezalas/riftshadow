@@ -72,8 +72,8 @@
 #include "material.h"
 #include "utility.h"
 #include "misc.h"
-#include "./include/fmt/format.h"
-#include "./include/fmt/printf.h"
+#include "./include/spdlog/fmt/bundled/format.h"
+#include "./include/spdlog/fmt/bundled/printf.h"
 
 AREA_DATA *area_first;
 unsigned int *gDebug;

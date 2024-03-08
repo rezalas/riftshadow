@@ -88,8 +88,8 @@
 #include "note.h"
 #include "help.h"
 #include "lookup.h"
-#include "./include/fmt/format.h"
-#include "./include/fmt/printf.h"
+#include "./include/spdlog/fmt/bundled/format.h"
+#include "./include/spdlog/fmt/bundled/printf.h"
 
 /*
  * Global variables.

@@ -38,7 +38,7 @@
 #include "fight.h"
 #include "skills.h"
 #include "update.h"
-#include "./include/fmt/format.h"
+#include "./include/spdlog/fmt/bundled/format.h"
 
 bool IS_IMP(CHAR_DATA *ch)
 {

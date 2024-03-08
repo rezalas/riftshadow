@@ -76,8 +76,8 @@
 #include "utility.h"
 #include "skills.h"
 #include "save.h"
-#include "./include/fmt/format.h"
-#include "./include/fmt/printf.h"
+#include "./include/spdlog/fmt/bundled/format.h"
+#include "./include/spdlog/fmt/bundled/printf.h"
 
 char *const where_name[] = {
 	"<used as light>     ",

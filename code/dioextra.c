@@ -61,8 +61,8 @@
 #include "const.h"
 #include "utility.h"
 #include "newmem.h"
-#include "./include/fmt/format.h"
-#include "./include/fmt/printf.h"
+#include "./include/spdlog/fmt/bundled/format.h"
+#include "./include/spdlog/fmt/bundled/printf.h"
 
 void do_crumble(CHAR_DATA *ch, char *argument)
 {

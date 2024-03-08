@@ -64,7 +64,7 @@
 #include "characterClasses/warrior.h"
 #include "misc.h"
 #include "skills.h"
-#include "./include/fmt/format.h"
+#include "./include/spdlog/fmt/bundled/format.h"
 
 #define MINOTAUR_ONLY		ASCII_I
 

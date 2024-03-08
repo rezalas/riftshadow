@@ -83,7 +83,7 @@
 #include "update.h"
 #include "newmem.h"
 #include "lookup.h"
-#include "./include/fmt/format.h"
+#include "./include/spdlog/fmt/bundled/format.h"
 
 #define COM_INGORE		1
 

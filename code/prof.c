@@ -17,8 +17,8 @@
 #include "update.h"
 #include "newmem.h"
 #include "act_info.h"
-#include "./include/fmt/format.h"
-#include "./include/fmt/printf.h"
+#include "./include/spdlog/fmt/bundled/format.h"
+#include "./include/spdlog/fmt/bundled/printf.h"
 
 
 //don't forget to increment max_prof in prof.h and clean make if your new proficiency goes over MAX_PROF

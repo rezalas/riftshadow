@@ -22,7 +22,7 @@
 #include "const.h"
 #include "utility.h"
 #include "misc.h"
-#include "./include/fmt/format.h"
+#include "./include/spdlog/fmt/bundled/format.h"
 
 #define MAX_NEST	100
 

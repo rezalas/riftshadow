@@ -17,7 +17,7 @@
 #include "tables.h"
 #include "interp.h"
 #include "handler.h"
-#include "./include/fmt/format.h"
+#include "./include/spdlog/fmt/bundled/format.h"
 
 #define PIECE_NONE					-1
 #define WHITE_PAWN					0

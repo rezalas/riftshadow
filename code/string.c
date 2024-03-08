@@ -27,7 +27,7 @@
 #include "comm.h"
 #include "interp.h"
 #include "db.h"
-#include "./include/fmt/format.h"
+#include "./include/spdlog/fmt/bundled/format.h"
 
 /*****************************************************************************
  Name:		string_edit

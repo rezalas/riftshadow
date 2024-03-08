@@ -27,7 +27,7 @@
 #include "../const.h"
 #include "../material.h"
 #include "../utility.h"
-#include "../include/fmt/format.h"
+#include "../include/spdlog/fmt/bundled/format.h"
 
 void do_backstab(CHAR_DATA *ch, char *argument)
 {

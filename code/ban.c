@@ -43,7 +43,7 @@
 #include "act_wiz.h"
 #include "interp.h"
 #include "db.h"
-#include "./include/fmt/format.h"
+#include "./include/spdlog/fmt/bundled/format.h"
 
 /// Determines if a player has been banned.
 /// @param usite: The IP address or DNS name of the computer that the player uses to connect.

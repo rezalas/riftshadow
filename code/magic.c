@@ -32,7 +32,7 @@
 #include "utility.h"
 #include "skills.h"
 #include "lookup.h"
-#include "./include/fmt/format.h"
+#include "./include/spdlog/fmt/bundled/format.h"
 
 char *target_name;
 

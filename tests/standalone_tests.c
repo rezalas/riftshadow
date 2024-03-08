@@ -1,7 +1,7 @@
 #include <string>
 #include "catch.hpp"
 #include "../code/merc.h"
-#include "../code/include/fmt/format.h"
+#include "../code/include/spdlog/fmt/bundled/format.h"
 
 TEST_CASE("test between format and sprintf", "[standalone]")
 {

@@ -23,7 +23,7 @@
 #include "comm.h"
 #include "./stdlibs/cdirectory.h"
 #include "./stdlibs/clogger.h"
-#include "./include/fmt/format.h"
+#include "./include/spdlog/fmt/bundled/format.h"
 
 CRoom *CRoom::first = nullptr;
 
