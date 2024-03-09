@@ -30,6 +30,7 @@ void CLogger::Initialize()
 		std::vector<spdlog::sink_ptr> sinks{ console_sink, file_sink };
 		auto logger = std::make_shared<spdlog::logger>("rs", sinks.begin(), sinks.end());
 		logger->set_level(spdlog::level::info);
+		logger->flush_on(spdlog::level::info);
 
 		spdlog::register_logger(logger);
 	}
