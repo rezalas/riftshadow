@@ -30,7 +30,7 @@ bool CSQLInterface::StartSQLServer(const char* host, const char* db, const char*
 
 	if(!mysql_real_connect(connection, host, user, pass, db, 0, nullptr, 0))
 	{
-		RS.Logger.Warn("Unable to connect to mysql database: {}\r\n", mysql_error(connection));
+		RS.Logger.Error("Unable to connect to mysql database: {}\r\n", mysql_error(connection));
 		return false;
 	}
 	
@@ -54,7 +54,7 @@ int CSQLInterface::IQuery(const char *query)
 	
 	if(mysql_query(connection, query))
 	{
-		RS.Logger.Warn("MYSQL IQuery Error: {} on query {}", mysql_error(connection), query);
+		RS.Logger.Error("MYSQL IQuery Error: {} on query {}", mysql_error(connection), query);
 		return 0;
 	}
 
@@ -67,7 +67,7 @@ int CSQLInterface::IQuery(const char *query)
 	else if(mysql_field_count(connection) == 0)
 		return mysql_affected_rows(connection);
 	else
-		RS.Logger.Warn("MYSQL IQuery Store Error: {} on query {}", mysql_error(connection), query);
+		RS.Logger.Error("MYSQL IQuery Store Error: {} on query {}", mysql_error(connection), query);
 
 	return 0;
 }

@@ -2298,7 +2298,6 @@ void affect_update(void)
 
 			wiznet("ERROR: $N had corrupt name!  Name has been properly repaired.  Check for other errors.", ch, nullptr, 0, 0, 0);
 			sprintf(buf, "Error: %s has corrupt name.  Repaired.\n\r", ch->true_name);
-			RS.Logger.Debug(buf);
 			RS.Logger.Info(buf);
 		}
 

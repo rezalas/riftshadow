@@ -170,7 +170,7 @@ void clean_mud()
 	if (!nSQL.StartSQLServer(riftCore.Host.c_str(),
 		riftCore.Db.c_str(), riftCore.User.c_str(), riftCore.Pwd.c_str()))
 	{
-		RS.Logger.Warn("clean_mud: failed to establish a database connection.");
+		RS.Logger.Error("clean_mud: failed to establish a database connection.");
 		return;
 	}
 
