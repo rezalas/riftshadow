@@ -88,8 +88,8 @@
 #include "note.h"
 #include "help.h"
 #include "lookup.h"
-#include "./include/fmt/format.h"
-#include "./include/fmt/printf.h"
+#include "./include/spdlog/fmt/bundled/format.h"
+#include "./include/spdlog/fmt/bundled/printf.h"
 
 /*
  * Global variables.
@@ -122,13 +122,13 @@ BIND_AGAIN:
 
 	if ((fd = socket(AF_INET, SOCK_STREAM, 0)) < 0)
 	{
-		perror("Init_socket: socket");
+		RS.Logger.Error("Init_socket: socket: {}", std::strerror(errno));
 		exit(0);
 	}
 
 	if (setsockopt(fd, SOL_SOCKET, SO_REUSEADDR, (char *)&x, sizeof(x)) < 0)
 	{
-		perror("Init_socket: SO_REUSEADDR");
+		RS.Logger.Error("Init_socket: SO_REUSEADDR: {}", std::strerror(errno));
 		close(fd);
 		exit(0);
 	}
@@ -143,7 +143,7 @@ BIND_AGAIN:
 		if ( setsockopt( fd, SOL_SOCKET, SO_DONTLINGER,
 		(char *) &ld, sizeof(ld) ) < 0 )
 		{
-			perror( "Init_socket: SO_DONTLINGER" );
+			RS.Logger.Error("Init_socket: SO_DONTLINGER: {}", std::strerror(errno));
 			close(fd);
 			exit( SAFE_EXIT );
 		}
@@ -156,7 +156,7 @@ BIND_AGAIN:
 
 	if (bind(fd, (struct sockaddr *)&sa, sizeof(sa)) < 0)
 	{
-		perror("Init socket: bind");
+		RS.Logger.Warn("Init_socket: bind: {}", std::strerror(errno));
 		if (--done < 0)
 		{
 			fprintf(stderr, "Unable to allocate port.  Exiting.\n\r");
@@ -172,7 +172,7 @@ BIND_AGAIN:
 
 	if (listen(fd, 3) < 0)
 	{
-		perror("Init socket: listen");
+		RS.Logger.Warn("Init_socket: listen: {}", std::strerror(errno));
 		close(fd);
 		exit(0);
 	}
@@ -223,7 +223,7 @@ void game_loop_unix(int control)
 
 		if (select(maxdesc + 1, &in_set, &out_set, &exc_set, &null_time) < 0)
 		{
-			perror("Game_loop: select: poll");
+			RS.Logger.Error("Game_loop: select poll: {}", std::strerror(errno));
 			exit(0);
 		}
 
@@ -420,7 +420,7 @@ void game_loop_unix(int control)
 
 				if (select(0, nullptr, nullptr, nullptr, &stall_time) < 0)
 				{
-					perror("Game_loop: select: stall");
+					RS.Logger.Error("Game_loop: select stall: {}", std::strerror(errno));
 					exit(1);
 				}
 			}
@@ -445,20 +445,20 @@ void init_descriptor(int control)
 
 	if ((desc = accept(control, (struct sockaddr *)&sock, (socklen_t *)&size)) < 0)
 	{
-		perror("New_descriptor: accept");
+		RS.Logger.Warn("Init_descriptor: accept: {}", std::strerror(errno));
 		return;
 	}
 
 	if (fcntl(desc, F_SETFL, FNDELAY) == -1)
 	{
-		perror("New_descriptor: fcntl: FNDELAY");
+		RS.Logger.Warn("Init_descriptor: fcntl FNDELAY: {}", std::strerror(errno));
 		return;
 	}
 
 #ifndef _WIN32  /* windows doesn't lock files like this so we should be able to bypass */
 	if (fcntl(desc, F_SETFL, FNDELAY) == -1)
 	{
-		perror( "New_descriptor: fcntl: FNDELAY" );
+		RS.Logger.Warn("Init_descriptor: fcntl FNDELAY: {}", std::strerror(errno));
 		return;
 	}
 #endif
@@ -482,7 +482,7 @@ void init_descriptor(int control)
 
 	if (getpeername(desc, (struct sockaddr *)&sock, (socklen_t *)&size) < 0)
 	{
-		perror("New_descriptor: getpeername");
+		RS.Logger.Warn("Init_descriptor: getpeername: {}", std::strerror(errno));
 		dnew->host = palloc_string("(unknown)");
 	}
 	else
@@ -495,13 +495,11 @@ void init_descriptor(int control)
 
 		addr = ntohl(sock.sin_addr.s_addr);
 
-		sprintf(buf, "%d.%d.%d.%d", (addr >> 24) & 0xFF, (addr >> 16) & 0xFF, (addr >> 8) & 0xFF, (addr)&0xFF);
-		sprintf(log_buf, "Sock.sinaddr:  %s", buf);
-		RS.Log(log_buf);
+		RS.Logger.Info("Sock.sinaddr:  {}.{}.{}.{}", (addr >> 24) & 0xFF, (addr >> 16) & 0xFF, (addr >> 8) & 0xFF, (addr)&0xFF);
 
 		if (strstr(buf, "204.82.56."))
 		{
-			RS.Log("DNS lookup refused. Forbidding access.");
+			RS.Logger.Info("DNS lookup refused. Forbidding access.");
 			write_to_descriptor(desc, "Your site has been banned from this mud due to DNS problems.\n\r", 0);
 
 			close(desc);
@@ -579,8 +577,7 @@ void close_socket(DESCRIPTOR_DATA *dclose)
 
 	if ((ch = dclose->character) != nullptr)
 	{
-		sprintf(log_buf, "Closing link to %s.", ch->name);
-		RS.Log(log_buf);
+		RS.Logger.Info("Closing link to {}.", ch->name);
 
 		/* cut down on wiznet spam when rebooting */
 		if (dclose->connected == CON_PLAYING && !merc_down)
@@ -619,7 +616,7 @@ void close_socket(DESCRIPTOR_DATA *dclose)
 		if (d != nullptr)
 			d->next = dclose->next;
 		else
-			RS.Bug("Close_socket: dclose not found.");
+			RS.Logger.Warn("Close_socket: dclose not found.");
 	}
 
 	close(dclose->descriptor);
@@ -639,8 +636,7 @@ bool read_from_descriptor(DESCRIPTOR_DATA *d)
 	iStart = strlen(d->inbuf);
 	if (iStart >= sizeof(d->inbuf) - 10)
 	{
-		sprintf(log_buf, "%s input overflow!", d->host);
-		RS.Log(log_buf);
+		RS.Logger.Info("{} input overflow!", d->host);
 
 		write_to_descriptor(d->descriptor, "\n\r*** PUT A LID ON IT!!! ***\n\r", 0);
 		return false;
@@ -659,7 +655,7 @@ bool read_from_descriptor(DESCRIPTOR_DATA *d)
 		}
 		else if (nRead == 0)
 		{
-			RS.Log("EOF encountered on read.");
+			RS.Logger.Info("EOF encountered on read.");
 			return false;
 		}
 		else if (errno == EAGAIN)
@@ -668,7 +664,7 @@ bool read_from_descriptor(DESCRIPTOR_DATA *d)
 		}
 		else
 		{
-			perror("Read_from_descriptor");
+			RS.Logger.Warn("Init_descriptor: read: {}", std::strerror(errno));
 			return false;
 		}
 	}
@@ -1381,7 +1377,7 @@ void write_to_buffer(DESCRIPTOR_DATA *d, const char *txt, int length)
 
 		if (d->outsize >= 32000)
 		{
-			RS.Bug("Buffer overflow. Closing.\n\r");
+			RS.Logger.Warn("Buffer overflow. Closing.\n\r");
 			d->outtop = 0;
 			close_socket(d);
 			return;
@@ -1421,7 +1417,7 @@ bool write_to_descriptor(int desc, char *txt, int length)
 		nBlock = std::min(length - iStart, 4096);
 		if ((nWrite = write(desc, txt + iStart, nBlock)) < 0)
 		{
-			perror("Write_to_descriptor");
+			RS.Logger.Warn("Write_to_descriptor: write: {}", std::strerror(errno));
 			return false;
 		}
 	}
@@ -1497,8 +1493,7 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
 
 			if (IS_SET(ch->act, PLR_DENY))
 			{
-				sprintf(log_buf, "Denying access to %s@%s.", argument, d->host);
-				RS.Log(log_buf);
+				RS.Logger.Info("Denying access to {}@{}.", argument, d->host);
 
 				write_to_buffer(d, "You are denied access.\n\r", 0);
 				close_socket(d);
@@ -1615,16 +1610,15 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
 			ch->pcdata->logon_time = palloc_string(ctime(&current_time));
 			ch->pcdata->logon_time[strlen(ch->pcdata->logon_time) - 1] = '\0';
 
-			sprintf(log_buf, "%s@%s has connected. [%d (%d) obj] %s",
+			buffer = fmt::format("{}@{} has connected. [{} ({}) obj] {}",
 				ch->true_name,
 				d->host, count_carried(ch, false),
 				count_carried(ch, true),
 				auto_check_multi(d, d->host) ? " (MULTI)" : "");
-
-			RS.Log(log_buf);
+			RS.Logger.Info(buffer);
 			login_log(ch, 1);
 
-			wiznet(log_buf, nullptr, nullptr, WIZ_SITES, 0, get_trust(ch));
+			wiznet(buffer.data(), nullptr, nullptr, WIZ_SITES, 0, get_trust(ch));
 
 			if (is_immortal(ch))
 			{
@@ -2019,14 +2013,14 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
 			}
 
 			ch->SetClass(iClass);
-			sprintf(log_buf, "%s@%s new player.%s",
+			buffer = fmt::format("{}@{} new player.{}",
 				ch->name, d->host,
 				auto_check_multi(d, d->host) ? " (MULTI-CHAR?)" : "");
-			RS.Log(log_buf);
+			RS.Logger.Info(buffer);
 			login_log(ch, 0);
 
 			wiznet("Newbie alert!  $N sighted.", ch, nullptr, WIZ_NEWBIE, 0, 0);
-			wiznet(log_buf, nullptr, nullptr, WIZ_SITES, 0, get_trust(ch));
+			wiznet(buffer.data(), nullptr, nullptr, WIZ_SITES, 0, get_trust(ch));
 
 			if (ch->Class()->GetIndex() == CLASS_SORCERER)
 			{
@@ -2828,7 +2822,7 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
 			do_unread(ch, "");
 			break;
 		default:
-			RS.Bug("Nanny: bad d->connected %d.", d->connected);
+			RS.Logger.Warn("Nanny: bad d->connected {}.", d->connected);
 			close_socket(d);
 			return;
 	}
@@ -2964,8 +2958,7 @@ bool check_reconnect(DESCRIPTOR_DATA *d, char *name, bool fConn)
 					obj->pIndexData->limcount++;
 				}
 
-				sprintf(log_buf, "%s@%s reconnected.", ch->name, d->host);
-				RS.Log(log_buf);
+				RS.Logger.Info("{}@{} reconnected.", ch->name, d->host);
 
 				wiznet("$N recovers from link death.", ch, nullptr, WIZ_LINKS, 0, get_trust(ch));
 				d->connected = CON_PLAYING;
@@ -3185,7 +3178,7 @@ void act_area(const char *format, CHAR_DATA *ch, CHAR_DATA *victim)
 
 				if (*str >= 'A' && *str <= 'Z')
 				{
-					RS.Bug("Act: missing arg2 for code %d.", *str);
+					RS.Logger.Warn("Act: missing arg2 for code {}.", *str);
 					i = " <@@@> ";
 				}
 				else
@@ -3206,7 +3199,7 @@ void act_area(const char *format, CHAR_DATA *ch, CHAR_DATA *victim)
 							i = his_her[URANGE(0, victim->sex, 2)];
 							break;
 						default:
-							RS.Bug("Act: bad code %d.", *str);
+							RS.Logger.Warn("Act: bad code {}.", *str);
 							i = " <@@@> ";
 							break;
 					}
@@ -3279,7 +3272,7 @@ void act_new(const char *format, CHAR_DATA *ch, const void *arg1, const void *ar
 	{
 		if (vch == nullptr)
 		{
-			RS.Bug("Act: null vch with TO_VICT. -- %s", format);
+			RS.Logger.Warn("Act: null vch with TO_VICT. -- {}", format);
 			return;
 		}
 
@@ -3333,7 +3326,7 @@ void act_new(const char *format, CHAR_DATA *ch, const void *arg1, const void *ar
 
 			if (arg2 == nullptr && *str >= 'A' && *str <= 'Z' && *str != 'I')
 			{
-				RS.Bug("Act: missing arg2 for code %d.", *str);
+				RS.Logger.Warn("Act: missing arg2 for code {}.", *str);
 				i = " <@@@> ";
 			}
 			else
@@ -3422,7 +3415,7 @@ void act_new(const char *format, CHAR_DATA *ch, const void *arg1, const void *ar
 						}
 						break;
 					default:
-						RS.Bug("Act: bad code %d.", *str);
+						RS.Logger.Warn("Act: bad code {}.", *str);
 						i = " <@@@> ";
 						break;
 				}

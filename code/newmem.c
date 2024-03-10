@@ -58,7 +58,7 @@ char *talloc_string(const char *str)
 	tStrLen = strlen(str) + 1; //+1 for the null we add at the end
 	if(tStrLen > TEMP_STRING_MEM_SIZE)
 	{
-		RS.Bug("Error: Temp string too large.");
+		RS.Logger.Warn("Error: Temp string too large.");
 		return nullptr;
 	}
 	if(tStrMem + tStrLen >= TEMP_STRING_MEM_SIZE)
@@ -94,7 +94,7 @@ void *talloc_struct(long nStructSize)
 		return nullptr;
 	if(nStructSize > TEMP_STRUCT_MEM_SIZE)
 	{
-		RS.Bug("Error: Temp struct too large.");
+		RS.Logger.Warn("Error: Temp struct too large.");
 		return nullptr;
 	}
 	if(tStrMem + nStructSize >= TEMP_STRUCT_MEM_SIZE)
@@ -116,7 +116,7 @@ char *palloc_string(const char *str)
 	int slen = strlen(str) + 1;
 	if(str == nullptr)
 	{
-		RS.Bug("Bad code form that'll lead to free_pstr() crashes: attempting to palloc_string a nullptr.");
+		RS.Logger.Warn("Bad code form that'll lead to free_pstr() crashes: attempting to palloc_string a nullptr.");
 		return nullptr;
 	}
 	nAllocString++;
@@ -124,7 +124,7 @@ char *palloc_string(const char *str)
 	tstr = new char[slen];
 	if(!tstr)
 	{
-		RS.Bug("Unable to allocate pstring.");
+		RS.Logger.Warn("Unable to allocate pstring.");
 		return nullptr;
 	}
 	strcpy(tstr,str);
@@ -135,7 +135,7 @@ void *palloc_struct(long nStructSize)
 {
 	if(nStructSize < 1)
 	{
-		RS.Bug("Attempting to palloc_struct of 0 or less size.  Bad idea.");
+		RS.Logger.Warn("Attempting to palloc_struct of 0 or less size.  Bad idea.");
 		return nullptr;
 	}
 	nAllocPerm++;
@@ -145,9 +145,9 @@ void *palloc_struct(long nStructSize)
 */
 void free_pstring(char *pstr)
 {
-//	RS.Log("Trying to free %s : %ld.",pstr,(long)pstr);
+//	RS.Logger.Info("Trying to free {} : {}.",pstr,(long)pstr);
 //	if(pstr == nullptr)
-//		RS.Bug("Error: Trying to free null pstring.");
+//		RS.Logger.Debug("Error: Trying to free null pstring.");
 	if(pstr == nullptr 
          ||   pstr == &str_empty[0]) 
                 return;
@@ -181,14 +181,14 @@ void *init_temp_struct_mem(void)
 {
 	void *tStrAlloc = (void *)new char [TEMP_STRUCT_MEM_SIZE];
 	if(!tStrAlloc)
-		RS.Bug("Error: Unable to dlmalloc() temporary struct memory.");
+		RS.Logger.Warn("Error: Unable to dlmalloc() temporary struct memory.");
 	return tStrAlloc;
 }
 void *init_temp_string_mem(void)
 {
 	void *tStrAlloc = new char[TEMP_STRING_MEM_SIZE];
 	if(!tStrAlloc)
-		RS.Bug("Error: Unable to dlmalloc() temporary string memory.");
+		RS.Logger.Warn("Error: Unable to dlmalloc() temporary string memory.");
 	return tStrAlloc;
 }
 

@@ -75,7 +75,7 @@
 #include "material.h"
 #include "utility.h"
 #include "lookup.h"
-#include "./include/fmt/format.h"
+#include "./include/spdlog/fmt/bundled/format.h"
 
 /*
  * Control the fights going on.
@@ -1475,11 +1475,10 @@ int damage_new(CHAR_DATA *ch, CHAR_DATA *victim, int idam, int dt, int dam_type,
 
 		if (!is_npc(victim))
 		{
-			sprintf(log_buf, "%s killed by %s at %d",
+			RS.Logger.Info("{} killed by {} at {}",
 				victim->name,
 				(is_npc(ch) ? ch->short_descr : ch->name),
 				ch->in_room->vnum);
-			RS.Log(log_buf);
 		}
 
 		/*
@@ -3567,7 +3566,6 @@ void raw_kill(CHAR_DATA *ch, CHAR_DATA *victim)
 
 void pk_record(CHAR_DATA *ch, CHAR_DATA *victim)
 {
-	char buf[MSL];
 	CHAR_DATA *wch;
 	int killer_group = 0, victim_group = 0;
 	int killer_in_room = 0;
@@ -3581,22 +3579,19 @@ void pk_record(CHAR_DATA *ch, CHAR_DATA *victim)
 	{
 		if (is_same_group(wch, ch) && !is_npc(wch) && (wch->in_room == ch->in_room || wch->ghost > 0))
 		{
-			sprintf(buf, "Adding %s to killer_group", wch->name);
-			RS.Log(buf);
+			RS.Logger.Info("Adding {} to killer_group", wch->name);
 			killer_group++;
 		}
 
 		if (is_same_group(wch, ch) && wch->in_room == ch->in_room && !is_npc(wch))
 		{
-			sprintf(buf, "Adding %s to killer_in_room", wch->name);
-			RS.Log(buf);
+			RS.Logger.Info("Adding {} to killer_in_room", wch->name);
 			killer_in_room++;
 		}
 
 		if (is_same_group(wch, victim) && (wch->in_room == victim->in_room || wch->ghost > 0))
 		{
-			sprintf(buf, "Adding %s to victim_group.", wch->name);
-			RS.Log(buf);
+			RS.Logger.Info("Adding {} to victim_group.", wch->name);
 			victim_group++;
 		}
 	}

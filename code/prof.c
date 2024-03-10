@@ -17,8 +17,8 @@
 #include "update.h"
 #include "newmem.h"
 #include "act_info.h"
-#include "./include/fmt/format.h"
-#include "./include/fmt/printf.h"
+#include "./include/spdlog/fmt/bundled/format.h"
+#include "./include/spdlog/fmt/bundled/printf.h"
 
 
 //don't forget to increment max_prof in prof.h and clean make if your new proficiency goes over MAX_PROF
@@ -291,7 +291,7 @@ void CProficiencies::GetProfsTaughtByTrainer(char_data* ch, char_data* trainer)
 {
 	if (ch == nullptr)
 	{
-		RS.Bug("CProficiencies::GetProfsTaughtByTrainer: Charater is null.");
+		RS.Logger.Debug("CProficiencies::GetProfsTaughtByTrainer: Charater is null.");
 		return;
 	}
 	
@@ -326,7 +326,7 @@ void CProficiencies::TrainProficiency(char_data* ch, char_data* trainer, char* a
 {
 	if (ch == nullptr)
 	{
-		RS.Bug("CProficiencies::TrainProficiency: Charater is null.");
+		RS.Logger.Debug("CProficiencies::TrainProficiency: Charater is null.");
 		return;
 	}
 	
@@ -502,7 +502,7 @@ void CProficiencies::ListKnownProficiencies(char_data* player)
 {
 	if (player == nullptr)
 	{
-		RS.Bug("CProficiencies::ListKnownProficiencies: Player is null.");
+		RS.Logger.Debug("CProficiencies::ListKnownProficiencies: Player is null.");
 		return;
 	}
 
@@ -539,7 +539,7 @@ void CProficiencies::ListBasicProficiencies(char_data* player)
 {
 	if (player == nullptr)
 	{
-		RS.Bug("CProficiencies::ListBasicProficiencies: Player is null.");
+		RS.Logger.Debug("CProficiencies::ListBasicProficiencies: Player is null.");
 		return;
 	}
 
@@ -586,7 +586,7 @@ void CProficiencies::SetProf(int profindex, int proflevel)
 	auto profs_size = std::size(profs);
 	if (profindex < 0 || profindex > profs_size - 1)
 	{
-		RS.Bug("CProficiencies::SetProf : profindex out of bounds [%d]", profindex);
+		RS.Logger.Warn("CProficiencies::SetProf : profindex out of bounds [{}]", profindex);
 		return;
 	}
 
@@ -657,7 +657,7 @@ const char* CProficiencies::GetSkillLevelName(int ind)
 	auto profs_size = std::size(profs);
 	if(ind < 0 || ind > profs_size - 1)
 	{
-		RS.Bug("CProficiencies::GetSkillLevelName : index out of bounds [%d]", ind);
+		RS.Logger.Warn("CProficiencies::GetSkillLevelName : index out of bounds [{}]", ind);
 		return "";
 	}
 
@@ -892,7 +892,7 @@ void prof_tracking(CHAR_DATA *ch, char *argument)
 {
 	if (ch == nullptr)
 	{
-		RS.Bug("prof_bandage: ch is nullptr");
+		RS.Logger.Debug("prof_bandage: ch is nullptr");
 		return;
 	}
 
@@ -1124,7 +1124,7 @@ void prof_bandage(CHAR_DATA *ch, char *argument)
 {
 	if (ch == nullptr)
 	{
-		RS.Bug("prof_bandage: ch is nullptr");
+		RS.Logger.Debug("prof_bandage: ch is nullptr");
 		return;
 	}
 

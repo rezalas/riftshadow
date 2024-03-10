@@ -72,8 +72,8 @@
 #include "material.h"
 #include "utility.h"
 #include "misc.h"
-#include "./include/fmt/format.h"
-#include "./include/fmt/printf.h"
+#include "./include/spdlog/fmt/bundled/format.h"
+#include "./include/spdlog/fmt/bundled/printf.h"
 
 AREA_DATA *area_first;
 unsigned int *gDebug;
@@ -1079,7 +1079,7 @@ void do_disconnect(CHAR_DATA *ch, char *argument)
 		}
 	}
 
-	RS.Bug("Do_disconnect: desc not found.");
+	RS.Logger.Warn("Do_disconnect: desc not found.");
 	send_to_char("Descriptor not found!\n\r", ch);
 }
 
@@ -2200,7 +2200,7 @@ void do_ostat(CHAR_DATA *ch, char *argument)
 
 		if (!ispec_table[i].spec_name)
 		{
-			RS.Bug("Error: Invalid ispec.");
+			RS.Logger.Warn("Error: Invalid ispec.");
 			return;
 		}
 
@@ -2838,7 +2838,7 @@ void do_mstat(CHAR_DATA *ch, char *argument)
 
 		if (!mspec_table[i].spec_name)
 		{
-			RS.Bug("Error: Invalid mspec.");
+			RS.Logger.Warn("Error: Invalid mspec.");
 			return;
 		}
 

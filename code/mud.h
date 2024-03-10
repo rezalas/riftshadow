@@ -12,6 +12,7 @@
 
 #include "rift.h"
 #include "gameloop.h"
+#include "stdlibs/clogger.h"
 #include "stdlibs/sql.h"
 #include "queue.h"
 #include "interp2.h"
@@ -36,6 +37,7 @@ public:
 	virtual ~CMud();
 //	CGameLoop 			GameEngine;
 	CSQLInterface		SQL;
+	CLogger				Logger;
 //	CInterpreter		Interpreter;
 	CQueue				Queue;
 	Config				Settings;
@@ -59,9 +61,6 @@ public:
 	int					GetDebugMode();
 	void				SetDebugMode(int fDebugMode = 1);
 
-	void				Bug(const char *tError, ...);
-	void				Log(const char *tEvent, ...);
-	void				Debug(const char *tDebug, ...);
 	void				Wiznet(const char *tText, int iWizType, int iMinLevel = 0, ...);
 
 	char *				GetError();				//returns text of last error	

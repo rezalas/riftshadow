@@ -200,7 +200,7 @@ void iprog_set(OBJ_INDEX_DATA *obj, const char *progtype, const char *name)
 
 	if (!iprog_table[i].name)
 	{
-		RS.Bug("Load_improgs: 'I': Function not found for vnum %d", obj->vnum);
+		RS.Logger.Warn("Load_improgs: 'I': Function not found for vnum {}", obj->vnum);
 		return;
 	}
 
@@ -431,7 +431,7 @@ void iprog_set(OBJ_INDEX_DATA *obj, const char *progtype, const char *name)
 		return;
 	}
 
-	RS.Bug("Load_improgs: 'I': invalid program type for vnum %d", obj->vnum);
+	RS.Logger.Error("Load_improgs: 'I': invalid program type for vnum {}", obj->vnum);
 	exit(1);
 }
 
@@ -3654,7 +3654,7 @@ void open_elevator(ROOM_INDEX_DATA *eleRoom, ROOM_INDEX_DATA *toRoom)
 
 			if (!eleRoom->exit[reverse_d(i)])
 			{
-				RS.Bug("Invalid eleRoom exit in Open_Elevator");
+				RS.Logger.Warn("Invalid eleRoom exit in Open_Elevator");
 				return;
 			}
 
@@ -3702,7 +3702,7 @@ void verb_prog_iseldheim_lever_pull(OBJ_DATA *obj, CHAR_DATA *ch, char *argument
 
 	if (!tRoom)
 	{
-		RS.Bug("Whack ass shit up in dis lizzever!");
+		RS.Logger.Warn("Whack ass shit up in dis lizzever!");
 		return;
 	}
 
@@ -3936,7 +3936,7 @@ void verb_prog_turn_wyntran(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 
 	if ((pMobIndex = get_mob_index(4627)) == nullptr)
 	{
-		RS.Bug("verb_prog_turn_wyntran mob loading error");
+		RS.Logger.Warn("verb_prog_turn_wyntran mob loading error");
 		return;
 	}
 
@@ -4048,7 +4048,7 @@ void verb_prog_fallendesert_climb_ladder(OBJ_DATA *obj, CHAR_DATA *ch, char *arg
 	}
 	else
 	{
-		RS.Bug("error climbing ladder in fallen desert, wrong vnum for room");
+		RS.Logger.Warn("error climbing ladder in fallen desert, wrong vnum for room");
 		return;
 	}
 
@@ -4093,7 +4093,7 @@ void verb_prog_fallendesert_(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 	}
 	else
 	{
-		RS.Bug("error climbing ladder in fallen desert, wrong vnum for room");
+		RS.Logger.Warn("error climbing ladder in fallen desert, wrong vnum for room");
 		return;
 	}
 

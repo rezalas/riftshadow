@@ -70,6 +70,8 @@
 #include "titles.h"
 #include "utility.h"
 #include "magic.h"
+#include "./include/spdlog/fmt/bundled/format.h"
+
 
 int save_number = 0;
 
@@ -195,8 +197,7 @@ void gain_exp(CHAR_DATA *ch, int gain)
 
 		ch->level += 1;
 
-		sprintf(buf, "%s gained level %d", ch->name, ch->level);
-		RS.Log(buf);
+		RS.Logger.Info("{} gained level {}", ch->name, ch->level);
 
 		sprintf(buf, "$N has attained level %d!", ch->level);
 		wiznet(buf, ch, nullptr, WIZ_LEVELS, 0, 0);
@@ -1199,7 +1200,7 @@ void char_update(void)
 
 		if (is_npc(ch) && ch->hit < 0 && ch->in_room)
 		{
-			RS.Bug("%s in %d has HP %d", ch->name, ch->in_room->vnum, ch->hit);
+			RS.Logger.Warn("{} in {} has HP {}", ch->name, ch->in_room->vnum, ch->hit);
 		}
 
 		if (ch->ghost > 0)
@@ -2297,8 +2298,7 @@ void affect_update(void)
 
 			wiznet("ERROR: $N had corrupt name!  Name has been properly repaired.  Check for other errors.", ch, nullptr, 0, 0, 0);
 			sprintf(buf, "Error: %s has corrupt name.  Repaired.\n\r", ch->true_name);
-			RS.Bug(buf);
-			RS.Log(buf);
+			RS.Logger.Info(buf);
 		}
 
 		for (paf = ch->affected; paf; paf = paf_next)
@@ -3147,7 +3147,7 @@ void save_demos()
 
 	/*
 	if(!(fp=fopen(DEMO_LOG_FILE,"w")))
-		return RS.Bug("Error opening demographics.",0);
+		return RS.Logger.Warn("Error opening demographics.");
 	conn = open_conn();
 	//racial crap
 	fprintf(fp,"Riftshadow Demographics\n\r");

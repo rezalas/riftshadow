@@ -61,8 +61,8 @@
 #include "const.h"
 #include "utility.h"
 #include "newmem.h"
-#include "./include/fmt/format.h"
-#include "./include/fmt/printf.h"
+#include "./include/spdlog/fmt/bundled/format.h"
+#include "./include/spdlog/fmt/bundled/printf.h"
 
 void do_crumble(CHAR_DATA *ch, char *argument)
 {
@@ -1461,7 +1461,7 @@ void do_ctrack(CHAR_DATA *ch, char *argument)
 
 	auto returnCode = system(buf);
 	if(returnCode != 0) // grep returns 0 on SUCCESS, > 0 on ERROR. system returns -1 on ERROR
-		RS.Bug("Command [%s] failed with exit code [%d]", buf, returnCode);
+		RS.Logger.Warn("Command [{}] failed with exit code [{}]", buf, returnCode);
 
 	fpChar = fopen(TEMP_GREP_RESULTS, "r");
 	if (fpChar == nullptr)
@@ -1671,7 +1671,7 @@ void do_pload(CHAR_DATA *ch, char *argument)
 
 	auto returnCode = system(buffer.c_str());
 	if(returnCode != 0) // cp returns 0 on SUCCESS, 1 on ERROR. system returns -1 on ERROR
-		RS.Bug("Command [%s] failed with exit code [%d]", buffer.data(), returnCode);
+		RS.Logger.Warn("Command [{}] failed with exit code [{}]", buffer.data(), returnCode);
 
 	d->character->desc = nullptr;
 	d->character->next = char_list;

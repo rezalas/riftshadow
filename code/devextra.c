@@ -38,7 +38,7 @@
 #include "fight.h"
 #include "skills.h"
 #include "update.h"
-#include "./include/fmt/format.h"
+#include "./include/spdlog/fmt/bundled/format.h"
 
 bool IS_IMP(CHAR_DATA *ch)
 {
@@ -101,7 +101,7 @@ void do_pswitch(CHAR_DATA *ch, char *argument)
 
 	auto returnCode = system(buf);
 	if(returnCode != 0) // cp returns 0 on SUCCESS, 1 on ERROR. system returns -1 on ERROR
-		RS.Bug("Command [%s] failed with exit code [%d]", buf, returnCode);
+		RS.Logger.Warn("Command [{}] failed with exit code [{}]", buf, returnCode);
 
 	d->character->desc = nullptr;
 	d->character->next = char_list;
@@ -170,7 +170,7 @@ void clean_mud()
 	if (!nSQL.StartSQLServer(riftCore.Host.c_str(),
 		riftCore.Db.c_str(), riftCore.User.c_str(), riftCore.Pwd.c_str()))
 	{
-		RS.Bug("clean_mud: failed to establish a database connection.");
+		RS.Logger.Error("clean_mud: failed to establish a database connection.");
 		return;
 	}
 
@@ -232,7 +232,7 @@ void clean_mud()
 			if (!load_char_obj(d, tbuf))
 			{
 				nSQL.Delete("players WHERE name = '%s'", row[0]);
-				RS.Log("Deleting player...");
+				RS.Logger.Info("Deleting player...");
 			}
 
 			free_char(d->character);
@@ -773,7 +773,7 @@ void delete_char(char *name, bool save_pfile)
 
 	auto returnCode = system(buf2);
 	if(returnCode != 0) // both mv and rm return 0 on SUCCESS, > 0 on ERROR. system returns -1 on ERROR
-		RS.Bug("Command [%s] failed with exit code [%d]", buf2, returnCode);
+		RS.Logger.Warn("Command [{}] failed with exit code [{}]", buf2, returnCode);
 
 	cres = RS.SQL.Delete("players WHERE name='%s'", name);
 
@@ -1722,7 +1722,7 @@ void pay_bounty(CHAR_DATA *ch, CHAR_DATA *victim)
 	mod = 2.0 * (float)((float)victim->level / (float)100);
 
 	if (!mod)
-		RS.Bug("Error: Mod is 0.");
+		RS.Logger.Warn("Error: Mod is 0.");
 
 	if (victim->cabal > 0)
 		credit = (int)((float)credit * 1.3);
@@ -2601,7 +2601,7 @@ void do_commune(CHAR_DATA *ch, char *argument)
 			target = TARGET_RUNE;
 			break;
 		default:
-			RS.Bug("Do_cast: bad target for sn %d.", sn);
+			RS.Logger.Warn("Do_cast: bad target for sn {}.", sn);
 			return;
 	}
 
@@ -2951,7 +2951,7 @@ void do_call(CHAR_DATA *ch, char *argument)
 			target = TARGET_DIR;
 			break;
 		default:
-			RS.Bug("Do_cast: bad target for sn %d.", sn);
+			RS.Logger.Warn("Do_cast: bad target for sn {}.", sn);
 			return;
 	}
 
@@ -3271,7 +3271,7 @@ OBJ_DATA *make_cosmetic(char *name, char *wearloc, char *underloc, char *cosmeti
 
 	if (!ch)
 	{
-		RS.Bug("Make_cosmetic bug: no charlist?!");
+		RS.Logger.Warn("Make_cosmetic bug: no charlist?!");
 		return 0;
 	}
 

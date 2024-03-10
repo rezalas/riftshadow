@@ -42,7 +42,7 @@
 #include "interp.h"
 #include "db.h"
 #include "utility.h"
-#include "./include/fmt/format.h"
+#include "./include/spdlog/fmt/bundled/format.h"
 
 /* does aliasing and other fun stuff */
 void substitute_alias(DESCRIPTOR_DATA *d, char *argument)

@@ -163,7 +163,7 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 
 	if (door < 0 || door > 5)
 	{
-		RS.Bug("Do_move: bad door %d.", door);
+		RS.Logger.Warn("Do_move: bad door {}.", door);
 		return;
 	}
 
@@ -3653,7 +3653,7 @@ void do_animal_call(CHAR_DATA *ch, char *argument)
 	auto pMobIndex = get_mob_index(type);
 	if (pMobIndex == nullptr)
 	{
-		RS.Bug("Animal call: Bad mob vnum call %d.", type);
+		RS.Logger.Warn("Animal call: Bad mob vnum call {}.", type);
 
 		send_to_char("You call out to the wild but nothing responds.\n\r", ch);
 		act("$n calls out to the wild but nothing responds.", ch, 0, 0, TO_ROOM);
@@ -3718,7 +3718,7 @@ void do_animal_call(CHAR_DATA *ch, char *argument)
 	}
 	else
 	{
-		RS.Bug("Bad animal call: %d.", type);
+		RS.Logger.Warn("Bad animal call: {}.", type);
 
 		send_to_char("You call out to the wild but nothing responds.\n\r", ch);
 		act("$n calls out to the wild but nothing comes.\n\r", ch, 0, 0, TO_ROOM);
@@ -3846,7 +3846,7 @@ void smart_track(CHAR_DATA *ch, CHAR_DATA *mob)
 		sprintf(buf,"MOB %s tracking from ROOM %d to ROOM %d -- %d iterations.\n\r",
 			mob->name, mob->in_room->vnum,
 			ch->in_room->vnum,iterations);
-		RS.Bug(buf);
+		RS.Logger.Warn(buf);
 		*/
 		return;
 	}
@@ -3861,12 +3861,11 @@ void smart_track(CHAR_DATA *ch, CHAR_DATA *mob)
 
 	/* Uncomment for tracking info */
 	/*
-	sprintf(buf,"MOB %s tracking from ROOM %d to ROOM %d -- %d iterations.\n\r",
+	RS.Logger.Info("MOB {} tracking from ROOM {} to ROOM {} -- {} iterations.\n\r",
 		mob->name,
 		mob->in_room->vnum,
 		ch->in_room->vnum,
 		iterations);
-	RS.Log(buf);
 	*/
 
 	move_char(mob, solve->dir_from, false, true);
@@ -3915,7 +3914,7 @@ void walk_to_room(CHAR_DATA *mob, ROOM_INDEX_DATA *goal)
 	auto solve = best_path;
 	if (!best_path)
 	{
-		RS.Bug("Some weird tracking shit just happened with mob vnum %d.", mob->pIndexData->vnum);
+		RS.Logger.Warn("Some weird tracking shit just happened with mob vnum {}.", mob->pIndexData->vnum);
 		return;
 	}
 
@@ -3928,12 +3927,11 @@ void walk_to_room(CHAR_DATA *mob, ROOM_INDEX_DATA *goal)
 	}
 
 	/*
-	sprintf(buf,"MOB %s walking from ROOM %d to ROOM %d -- %d iterations.\n\r",
+	RS.Logger.Info("MOB {} walking from ROOM {} to ROOM {} -- {} iterations.\n\r",
 		mob->name,
 		mob->in_room->vnum,
 		goal->vnum,
 		iterations);
-	RS.Log(buf);
 	*/
 
 	move_char(mob, solve->dir_from, false, true);

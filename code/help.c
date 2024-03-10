@@ -16,7 +16,7 @@
 #include "devextra.h"
 #include "newmem.h"
 #include "utility.h"
-#include "./include/fmt/format.h"
+#include "./include/spdlog/fmt/bundled/format.h"
 
 int can_see_help(CHAR_DATA *ch, MYSQL_ROW row, bool fOnlyResult)
 {

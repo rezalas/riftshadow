@@ -26,8 +26,11 @@ public:
 
 	template <typename... Args>
 	void Bug(std::string_view fmt, Args &&...args)
-	{
+	{		
 		spdlog::get("rs")->warn(fmt, std::forward<Args>(args)...);
+
+		//TODO: The old RS.Bug had this attached to it. Need to investigate if it is needed or not.
+		//	wiznet(str.data(), 0, 0, WIZ_DEBUG, 0, 0);
 	}
 
 	template <typename... Args>
@@ -36,36 +39,66 @@ public:
 		spdlog::get("rs")->log(spdlog::level::info, fmt, std::forward<Args>(args)...);
 	}
 
+	/// @brief Log trace messages
+	/// @tparam ...Args: Template parameter pack used to specify the variadic arguments. 
+	/// @param fmt: The message to log
+	/// @param ...args: Variadic arguments used to fill the format specifiers identified in the fmt string. 
+	/// @note Format specifiers are in the fmt::* format.
 	template <typename... Args>
 	void Trace(std::string_view fmt, Args &&...args)
 	{
 		spdlog::get("rs")->trace(fmt, std::forward<Args>(args)...);
 	}
 
+	/// @brief Log debug messages
+	/// @tparam ...Args: Template parameter pack used to specify the variadic arguments. 
+	/// @param fmt: The message to log
+	/// @param ...args: Variadic arguments used to fill the format specifiers identified in the fmt string. 
+	/// @note Format specifiers are in the fmt::* format.
 	template <typename... Args>
 	void Debug(std::string_view fmt, Args &&...args)
 	{
 		spdlog::get("rs")->debug(fmt, std::forward<Args>(args)...);
 	}
 
+	/// @brief Log informational messages
+	/// @tparam ...Args: Template parameter pack used to specify the variadic arguments. 
+	/// @param fmt: The message to log
+	/// @param ...args: Variadic arguments used to fill the format specifiers identified in the fmt string. 
+	/// @note Format specifiers are in the fmt::* format.
 	template <typename... Args>
 	void Info(std::string_view fmt, Args &&...args)
 	{
 		spdlog::get("rs")->info(fmt, std::forward<Args>(args)...);
 	}
 
+	/// @brief Log warning messages
+	/// @tparam ...Args: Template parameter pack used to specify the variadic arguments. 
+	/// @param fmt: The message to log
+	/// @param ...args: Variadic arguments used to fill the format specifiers identified in the fmt string. 
+	/// @note Format specifiers are in the fmt::* format.
 	template <typename... Args>
 	void Warn(std::string_view fmt, Args &&...args)
 	{
 		spdlog::get("rs")->warn(fmt, std::forward<Args>(args)...);
 	}
 
+	/// @brief Log error messages
+	/// @tparam ...Args: Template parameter pack used to specify the variadic arguments. 
+	/// @param fmt: The message to log
+	/// @param ...args: Variadic arguments used to fill the format specifiers identified in the fmt string. 
+	/// @note Format specifiers are in the fmt::* format.
 	template <typename... Args>
 	void Error(std::string_view fmt, Args &&...args)
 	{
 		spdlog::get("rs")->error(fmt, std::forward<Args>(args)...);
 	}
 
+	/// @brief Log critical messages
+	/// @tparam ...Args: Template parameter pack used to specify the variadic arguments. 
+	/// @param fmt: The message to log
+	/// @param ...args: Variadic arguments used to fill the format specifiers identified in the fmt string. 
+	/// @note Format specifiers are in the fmt::* format.
 	template <typename... Args>
 	void Critical(std::string_view fmt, Args &&...args)
 	{

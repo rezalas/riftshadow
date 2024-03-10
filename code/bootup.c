@@ -23,7 +23,7 @@
 #include "comm.h"
 #include "./stdlibs/cdirectory.h"
 #include "./stdlibs/clogger.h"
-#include "./include/fmt/format.h"
+#include "./include/spdlog/fmt/bundled/format.h"
 
 CRoom *CRoom::first = nullptr;
 
@@ -40,7 +40,7 @@ void CMud::LoadObjLimits()
 	long min_bounty = 0;
 	float tempfloat;
 
-	RS.Log("Loading object counts off players now...");
+	Logger.Info("Loading object counts off players now...");
 
 	auto dir = CDirectory(RIFT_PLAYER_DIR);
 	auto files = dir.GetFiles(".plr");
@@ -56,7 +56,7 @@ void CMud::LoadObjLimits()
 	{
 		strcpy(strPlr, file.data());
 		if(bDebug)
-			RS.Log(strPlr);
+			Logger.Debug(strPlr);
 
 		if (!str_cmp(strPlr,chkbuf))
 			break;
@@ -64,7 +64,7 @@ void CMud::LoadObjLimits()
 		fpChar = fopen(strPlr, "r");
 		if (fpChar == nullptr)
 		{
-			perror(strPlr);
+			RS.Logger.Error("LoadObjLimits: fopen {}: {}", strPlr, std::strerror(errno));
 			exit(1);
 		}
 
@@ -112,8 +112,7 @@ void CMud::LoadObjLimits()
 
 			if(lastlogin && plevel && plevel < 52 && lastlogin + 3456000 < current_time)
 			{
-				auto buffer = fmt::format("Autodeleting {}.", temp_player_name);
-				RS.Log(buffer.c_str());
+				Logger.Info("Autodeleting {}.", temp_player_name);
 				breakout = true;
 				delete_char(temp_player_name, true);
 				break;
@@ -139,7 +138,7 @@ void CMud::LoadObjLimits()
 		fpChar = nullptr;
 	}
 
-	RS.Log("Object Limits loaded");
+	Logger.Info("Object Limits loaded");
 
 	/* CABAL LIMITS */
 	for(i=1;i<MAX_CABAL;i++)
@@ -148,7 +147,7 @@ void CMud::LoadObjLimits()
 		cabal_max[i] = (short)tempfloat<=15 ? 15 : (short)tempfloat;
 	}
 
-	RS.Log("Cabal Limits loaded");
+	Logger.Info("Cabal Limits loaded");
 }
 
 
@@ -203,11 +202,11 @@ void CMud::LoadAreas()
 {
 	FILE *fpList;
 
-	RS.Log("Loading area files now...");
+	Logger.Info("Loading area files now...");
 
 	if ( ( fpList = fopen( AREA_LIST, "r" ) ) == nullptr )
 	{
-		perror( AREA_LIST );
+		RS.Logger.Error("LoadAreas: fopen {}: {}", AREA_LIST, std::strerror(errno));
 		exit( 1 );
 	}
 
@@ -219,7 +218,7 @@ void CMud::LoadAreas()
 			break;
 
 		if (bDebug)
-			RS.Log(strArea);
+			Logger.Debug(strArea);
 
 		if ( strArea[0] == '-' )
 		{
@@ -230,7 +229,7 @@ void CMud::LoadAreas()
 			auto strAreaFullPath = fmt::format("{}/{}", RIFT_AREA_DIR, strArea);
 			if ( ( fpArea = fopen(strAreaFullPath.c_str(), "r" ) ) == nullptr )
 			{
-				perror(strAreaFullPath.c_str());
+				RS.Logger.Error("LoadAreas: fopen {}: {}", strAreaFullPath, std::strerror(errno));
 				exit( 1 );
 			}
 		}
@@ -241,7 +240,7 @@ void CMud::LoadAreas()
 
 			if ( fread_letter( fpArea ) != '#' )
 			{
-				RS.Bug("Boot_db: # not found.");
+				RS.Logger.Error("Boot_db: # not found.");
 				exit( 1 );
 			}
 
@@ -259,7 +258,7 @@ void CMud::LoadAreas()
 			else if ( !str_cmp( word, "SPECS" ) ) load_specs(fpArea);
 			else
 			{
-				RS.Bug("Boot_db: bad section name.");
+				RS.Logger.Warn("Boot_db: bad section name.");
 			}
 		}
 
@@ -306,11 +305,11 @@ void CMud::InitializeTables()
 
 	//begin_benchmark
 	
-	RS.Log("Loading class and race data...");
+	Logger.Info("Loading class and race data...");
 	CClass::LoadClassTable("* FROM class_table ORDER BY id ASC");
 	//CRace::LoadRaceTable("* FROM race_table ORDER BY pcrace DESC, name ASC");
 	
-	//RS.Log("Loading commands...");
+	//Logger.Info("Loading commands...");
 	//CCommand::LoadCmdTable("* FROM interp_table ORDER BY id ASC");
 
 	//end_benchmark("Table initialization")

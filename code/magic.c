@@ -32,7 +32,7 @@
 #include "utility.h"
 #include "skills.h"
 #include "lookup.h"
-#include "./include/fmt/format.h"
+#include "./include/spdlog/fmt/bundled/format.h"
 
 char *target_name;
 
@@ -978,7 +978,7 @@ void do_cast(CHAR_DATA *ch, char *argument)
 			target = TARGET_DIR;
 			break;
 		default:
-			RS.Bug("Do_cast: bad target for sn %d.", sn);
+			RS.Logger.Warn("Do_cast: bad target for sn {}.", sn);
 			return;
 	}
 	/*
@@ -1132,7 +1132,7 @@ void obj_cast_spell(int sn, int level, CHAR_DATA *ch, CHAR_DATA *victim, OBJ_DAT
 
 	if (sn >= MAX_SKILL || skill_table[sn].spell_fun == 0)
 	{
-		RS.Bug("Obj_cast_spell: bad sn %d.", sn);
+		RS.Logger.Warn("Obj_cast_spell: bad sn {}.", sn);
 		return;
 	}
 
@@ -1261,7 +1261,7 @@ void obj_cast_spell(int sn, int level, CHAR_DATA *ch, CHAR_DATA *victim, OBJ_DAT
 
 			break;
 		default:
-			RS.Bug("Obj_cast_spell: bad target for sn %d.", sn);
+			RS.Logger.Warn("Obj_cast_spell: bad target for sn {}.", sn);
 			return;
 	}
 

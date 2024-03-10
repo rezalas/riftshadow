@@ -83,7 +83,7 @@
 #include "update.h"
 #include "newmem.h"
 #include "lookup.h"
-#include "./include/fmt/format.h"
+#include "./include/spdlog/fmt/bundled/format.h"
 
 #define COM_INGORE		1
 
@@ -750,9 +750,9 @@ void interpret(CHAR_DATA *ch, char *argument)
 
 	if ((!is_npc(ch) && IS_SET(ch->act, PLR_LOG)) || fLogAll || cmd_table[cmd].log == LOG_ALWAYS)
 	{
-		sprintf(log_buf, "Log %s: %s", ch->desc->original ? ch->desc->original->true_name : ch->true_name, logline);
-		wiznet(log_buf, ch, nullptr, WIZ_SECURE, 0, get_trust(ch));
-		RS.Log(log_buf);
+		auto buffer = fmt::format("Log {}: {}", ch->desc->original ? ch->desc->original->true_name : ch->true_name, logline);
+		wiznet(buffer.data(), ch, nullptr, WIZ_SECURE, 0, get_trust(ch));
+		RS.Logger.Info(buffer);
 	}
 
 	if (ch->desc != nullptr && ch->desc->snoop_by != nullptr)

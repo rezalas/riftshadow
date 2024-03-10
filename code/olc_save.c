@@ -83,10 +83,9 @@ void save_area_list()
 	FILE *fp;
 	AREA_DATA *pArea;
 
-	if ((fp = fopen(RIFT_AREA_DIR "/area.lst", "w")) == nullptr)
+	if ((fp = fopen(AREA_LIST, "w")) == nullptr)
 	{
-		RS.Bug("Save_area_list: fopen");
-		perror("area.lst");
+		RS.Logger.Warn("Save_area_list: fopen {}: {}", AREA_LIST, std::strerror(errno));
 	}
 	else
 	{
@@ -839,7 +838,7 @@ void save_specs(FILE *fp, AREA_DATA *pArea)
 					fprintf(fp, "I %d %s\n", pObjIndex->vnum, ispec_table[i].spec_name);
 				/*
 				else
-					RS.Bug("Problem saving ispec on obj %d.", pObjIndex->vnum);
+					RS.Logger.Warn("Problem saving ispec on obj {}.", pObjIndex->vnum);
 				*/
 			}
 		}
@@ -858,7 +857,7 @@ void save_specs(FILE *fp, AREA_DATA *pArea)
 					fprintf(fp, "M %d %s\n", pMob->vnum, mspec_table[i].spec_name);
 				/*
 				else if(mspec_table[i].spec_func != pMob->spec_prog.func)
-					RS.Bug("Problem saving mspec on mob %d.", pMob->vnum);
+					RS.Logger.Warn("Problem saving mspec on mob {}.", pMob->vnum);
 				*/
 			}
 		}
@@ -938,17 +937,16 @@ void save_area(AREA_DATA *pArea)
 
 	auto returnCode = system(buf);
 	if(returnCode != 0) // mv returns 0 on SUCCESS, > 0 on ERROR. system returns -1 on ERROR
-		RS.Bug("Command [%s] failed with exit code [%d]", buf, returnCode);
+		RS.Logger.Warn("Command [{}] failed with exit code [{}]", buf, returnCode);
 
 	buffer = std::string("touch " AREA_DUMP_FILE);
 	returnCode = system(buffer.c_str());
 	if(returnCode != 0) // couldn't find exit code for touch, assuming touch returns 0 on SUCCESS, > 0 on ERROR. system returns -1 on ERROR
-		RS.Bug("Command [%s] failed with exit code [%d]", buffer.data(), returnCode);
+		RS.Logger.Warn("Command [{}] failed with exit code [{}]", buffer.data(), returnCode);
 
 	if (!(fp = fopen(pArea->file_name, "w")))
 	{
-		RS.Bug("Open_area: fopen");
-		perror(pArea->file_name);
+		RS.Logger.Warn("Open_area: fopen {}: {}", pArea->file_name, std::strerror(errno));
 	}
 
 	fprintf(fp, "#AREA\n");
@@ -1108,7 +1106,7 @@ void do_asave(CHAR_DATA *ch, char *argument)
 					continue;
 
 				clean_olc_aflags(pArea);
-				RS.Log(pArea->name);
+				RS.Logger.Info(pArea->name);
 
 				sprintf(buf, "Saving..%s\n", pArea->name);
 				wiznet(buf, 0, nullptr, WIZ_DEBUG, 0, 0);

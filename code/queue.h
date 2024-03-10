@@ -2,6 +2,7 @@
 #define QUEUE_H
 
 #include "rift.h"
+#include "./stdlibs/clogger.h"
 #include <stdarg.h>
 /*
 * DO NOT TOUCH ANYTHING
@@ -16,13 +17,14 @@ public:
 	CQueue();
 	~CQueue();
 	
-	static void 		ProcessQueue(void);
+	static void 	ProcessQueue(void);
 	static void		AddToQueue(int nTimer, int nArgs, ...);
 	static bool		HasQueuePending(void *qChar);	
 	static void		DeleteQueuedEventsInvolving(void *qChar);
 private:
 	void			FreeQueue();
 
+	inline static CLogger Logger = CLogger();
 	static CQueue *	queue_first;
 	CQueue *		queue_next;
 	QUEUE_FUNCTION 	queue_function;

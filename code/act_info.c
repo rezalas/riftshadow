@@ -76,8 +76,8 @@
 #include "utility.h"
 #include "skills.h"
 #include "save.h"
-#include "./include/fmt/format.h"
-#include "./include/fmt/printf.h"
+#include "./include/spdlog/fmt/bundled/format.h"
+#include "./include/spdlog/fmt/bundled/printf.h"
 
 char *const where_name[] = {
 	"<used as light>     ",
@@ -3850,7 +3850,7 @@ void set_title(CHAR_DATA *ch, char *title)
 {
 	if (is_npc(ch))
 	{
-		RS.Bug("Set_title: NPC.");
+		RS.Logger.Debug("Set_title: NPC.");
 		return;
 	}
 
@@ -3956,7 +3956,7 @@ void set_extitle(CHAR_DATA *ch, char *title)
 {
 	if (is_npc(ch))
 	{
-		RS.Bug("Set_extitle: NPC.");
+		RS.Logger.Debug("Set_extitle: NPC.");
 		return;
 	}
 

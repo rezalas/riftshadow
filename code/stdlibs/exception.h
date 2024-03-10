@@ -2,7 +2,7 @@
 #define EXCEPTION
 #include "strings.h"
 
-extern void bug(const char *bugstr, ...);
+//extern void bug(const char *bugstr, ...);
 
 class Exception
 {
@@ -12,7 +12,7 @@ public:
 		TString tbug, ebug;
 		MUNCH_VARARG(pMsg, tbug)
 		ebug.Format("Bug at %s:%d - %s",pFile,nLine,(const char *)tbug);
-		bug(ebug);
+//		bug(ebug);
 	}
 };
 #endif

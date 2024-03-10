@@ -22,7 +22,7 @@
 #include "const.h"
 #include "utility.h"
 #include "misc.h"
-#include "./include/fmt/format.h"
+#include "./include/spdlog/fmt/bundled/format.h"
 
 #define MAX_NEST	100
 
@@ -129,9 +129,7 @@ void save_char_obj(CHAR_DATA *ch)
 
 	if ((fp = fopen(strsave, "w")) == nullptr)
 	{
-		auto buf = fmt::format("Save_char_obj: fopen fails for character: {} file name: {} ", ch->true_name, strsave);
-		RS.Bug(buf.c_str());
-		perror(strsave);
+		RS.Logger.Warn("Save_char_obj: fopen fails for character: {} file name: {} : {}", ch->true_name, strsave, std::strerror(errno));
 	}
 	else
 	{
@@ -189,7 +187,7 @@ void fread_charmie(CHAR_DATA *ch, FILE *fp)
 
 	if (get_mob_index(vnum) == nullptr)
 	{
-		RS.Bug("Fread_charmie: bad vnum %d!!!!", vnum);
+		RS.Logger.Warn("Fread_charmie: bad vnum {}!!!!", vnum);
 		charmed = create_mobile(get_mob_index(24594));
 	}
 	else
@@ -1035,7 +1033,7 @@ bool load_char_obj(DESCRIPTOR_DATA *d, char *name)
 
 		auto returnCode = system(buffer.c_str());
 		if(returnCode != 0) // gzip returns 0 on SUCCESS, 1 on ERROR. system returns -1 on ERROR
-			RS.Bug("Command [%s] failed with exit code [%d]", buffer.data(), returnCode);
+			RS.Logger.Warn("Command [{}] failed with exit code [{}]", buffer.data(), returnCode);
 	}
 
 	sprintf(strsave, "%s/%s.plr", RIFT_PLAYER_DIR, capitalize(name));
@@ -1063,7 +1061,7 @@ bool load_char_obj(DESCRIPTOR_DATA *d, char *name)
 
 			if (letter != '#')
 			{
-				RS.Bug("Load_char_obj: # not found.");
+				RS.Logger.Warn("Load_char_obj: # not found.");
 				break;
 			}
 
@@ -1095,7 +1093,7 @@ bool load_char_obj(DESCRIPTOR_DATA *d, char *name)
 			}
 			else
 			{
-				RS.Bug("Load_char_obj: bad section.");
+				RS.Logger.Warn("Load_char_obj: bad section.");
 				break;
 			}
 		}
@@ -1174,8 +1172,7 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
 	int i, scalps;
 	TROPHY_DATA *placeholder;
 
-	sprintf(buf, "Loading %s.", ch->name);
-	RS.Log(buf);
+	RS.Logger.Info("Loading {}.", ch->name);
 
 	zero_vector(limmune_flags);
 	zero_vector(lres_flags);
@@ -1267,7 +1264,7 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
 					sn = skill_lookup(fread_word(fp));
 
 					if (sn < 0)
-						RS.Bug("Fread_char: unknown skill.");
+						RS.Logger.Warn("Fread_char: unknown skill.");
 					else
 						paf->type = sn;
 
@@ -1514,7 +1511,7 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
 					if (gn < 0)
 					{
 						fprintf(stderr, "%s", temp);
-						RS.Bug("Fread_char: unknown group. ");
+						RS.Logger.Warn("Fread_char: unknown group. ");
 					}
 					else
 					{
@@ -1733,7 +1730,7 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
 					if (sn < 0)
 					{
 						fprintf(stderr, "%s", temp);
-						RS.Bug("Fread_char: unknown skill. ");
+						RS.Logger.Warn("Fread_char: unknown skill. ");
 					}
 					else
 						ch->pcdata->learned[sn] = value;
@@ -1825,7 +1822,7 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
 
 		if (!fMatch)
 		{
-			// RS.Bug("Fread_char: no match.");
+			// RS.Logger.Warn("Fread_char: no match.");
 			fread_to_eol(fp);
 		}
 	}
@@ -1851,7 +1848,7 @@ void fread_pet(CHAR_DATA *ch, FILE *fp)
 
 		if (get_mob_index(vnum) == nullptr)
 		{
-			RS.Bug("Fread_pet: bad vnum %d.", vnum);
+			RS.Logger.Warn("Fread_pet: bad vnum {}.", vnum);
 			pet = create_mobile(get_mob_index(MOB_VNUM_FIDO));
 		}
 		else
@@ -1861,7 +1858,7 @@ void fread_pet(CHAR_DATA *ch, FILE *fp)
 	}
 	else
 	{
-		RS.Bug("Fread_pet: no vnum in file.");
+		RS.Logger.Warn("Fread_pet: no vnum in file.");
 		pet = create_mobile(get_mob_index(MOB_VNUM_FIDO));
 	}
 
@@ -1907,7 +1904,7 @@ void fread_pet(CHAR_DATA *ch, FILE *fp)
 					sn = skill_lookup(fread_word(fp));
 
 					if (sn < 0)
-						RS.Bug("Fread_char: unknown skill.");
+						RS.Logger.Warn("Fread_char: unknown skill.");
 					else
 						paf->type = sn;
 
@@ -2045,7 +2042,7 @@ void fread_pet(CHAR_DATA *ch, FILE *fp)
 
 		if (!fMatch)
 		{
-			RS.Bug("Fread_pet: no match.");
+			RS.Logger.Warn("Fread_pet: no match.");
 			fread_to_eol(fp);
 		}
 	}
@@ -2078,7 +2075,7 @@ void fread_obj(CHAR_DATA *ch, FILE *fp)
 		vnum = fread_number(fp);
 		if (get_obj_index(vnum) == nullptr)
 		{
-			RS.Bug("Fread_obj: bad vnum %d.", vnum);
+			RS.Logger.Warn("Fread_obj: bad vnum {}.", vnum);
 		}
 		else
 		{
@@ -2128,7 +2125,7 @@ void fread_obj(CHAR_DATA *ch, FILE *fp)
 					sn = skill_lookup(fread_word(fp));
 
 					if (sn < 0)
-						RS.Bug("Fread_obj: unknown skill.");
+						RS.Logger.Warn("Fread_obj: unknown skill.");
 					else
 						paf->type = sn;
 
@@ -2216,7 +2213,7 @@ void fread_obj(CHAR_DATA *ch, FILE *fp)
 				{
 					if (!fNest || (fVnum && obj->pIndexData == nullptr))
 					{
-						RS.Bug("Fread_obj: incomplete object.");
+						RS.Logger.Warn("Fread_obj: incomplete object.");
 						free_pstring(obj->name);
 						free_pstring(obj->description);
 						free_pstring(obj->short_descr);
@@ -2292,7 +2289,7 @@ void fread_obj(CHAR_DATA *ch, FILE *fp)
 
 					if (iNest < 0 || iNest >= MAX_NEST)
 					{
-						RS.Bug("Fread_obj: bad nest %d.", iNest);
+						RS.Logger.Warn("Fread_obj: bad nest {}.", iNest);
 					}
 					else
 					{
@@ -2333,11 +2330,11 @@ void fread_obj(CHAR_DATA *ch, FILE *fp)
 
 					if (iValue < 0 || iValue > 3)
 					{
-						RS.Bug("Fread_obj: bad iValue %d.", iValue);
+						RS.Logger.Warn("Fread_obj: bad iValue {}.", iValue);
 					}
 					else if (sn < 0)
 					{
-						RS.Bug("Fread_obj: unknown skill.");
+						RS.Logger.Warn("Fread_obj: unknown skill.");
 					}
 					else
 					{
@@ -2386,7 +2383,7 @@ void fread_obj(CHAR_DATA *ch, FILE *fp)
 					vnum = fread_number(fp);
 
 					if ((obj->pIndexData = get_obj_index(vnum)) == nullptr)
-						RS.Bug("Fread_obj: bad vnum %d.", vnum);
+						RS.Logger.Warn("Fread_obj: bad vnum {}.", vnum);
 					else
 						fVnum = true;
 
@@ -2408,7 +2405,7 @@ void fread_obj(CHAR_DATA *ch, FILE *fp)
 
 		if (!fMatch)
 		{
-			// RS.Bug("Fread_obj: no match.");
+			// RS.Logger.Warn("Fread_obj: no match.");
 			fread_to_eol(fp);
 		}
 	}

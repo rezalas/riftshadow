@@ -12,7 +12,6 @@
 int main(int argc, char **argv)
 {
 	struct timeval now_time;
-	char buf[MSL];
 	int port = 0;
 	int control;
 
@@ -35,7 +34,7 @@ int main(int argc, char **argv)
 	 */
 	if ((fpReserve = fopen(NULL_FILE, "r")) == nullptr)
 	{
-		perror(NULL_FILE);
+		RS.Logger.Error("Main: fopen {}: {}", NULL_FILE, std::strerror(errno));
 		exit(0);
 	}
 
@@ -71,13 +70,12 @@ int main(int argc, char **argv)
 	// boot_db( );
 	if (!RS.Bootup())
 	{
-		RS.Log("Riftshadow failed to boot, aborting.");
+		RS.Logger.Error("Riftshadow failed to boot, aborting.");
 		exit(0);
 		return 0;
 	}
 
-	sprintf(buf, "Riftshadow booted, binding on port %d.", port);
-	RS.Log(buf);
+	RS.Logger.Info("Riftshadow booted, binding on port {}.", port);
 
 	game_loop_unix(control);
 	close(control);
@@ -85,7 +83,7 @@ int main(int argc, char **argv)
 	/*
 	 * That's all, folks.
 	 */
-	RS.Log("Normal termination of game.");
+	RS.Logger.Info("Normal termination of game.");
 	exit(0);
 	return 0;
 }

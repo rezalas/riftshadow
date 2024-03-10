@@ -98,7 +98,7 @@ void aprog_set(AREA_DATA *area, const char *progtype, const char *name)
 
 	if (!aprog_table[i].name)
 	{
-		RS.Bug("Load_improgs: 'A': Function not found for area %s.", area->name);
+		RS.Logger.Warn("Load_improgs: 'A': Function not found for area {}.", area->name);
 		return;
 	}
 

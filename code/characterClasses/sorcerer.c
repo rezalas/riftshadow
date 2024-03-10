@@ -37,7 +37,7 @@
 #include "../misc.h"
 #include "../utility.h"
 #include "../skills.h"
-#include "../include/fmt/format.h"
+#include "../include/spdlog/fmt/bundled/format.h"
 
 int para_compute(int ele1, int ele2)
 {

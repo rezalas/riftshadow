@@ -335,7 +335,7 @@ void mprog_set(MOB_INDEX_DATA *mobindex, const char *progtype, const char *name)
 
 	if (!mprog_table[i].name)
 	{
-		RS.Bug("Load_improgs: 'M': Function not found for vnum %d", mobindex->vnum);
+		RS.Logger.Warn("Load_improgs: 'M': Function not found for vnum {}", mobindex->vnum);
 		return;
 	}
 
@@ -472,7 +472,7 @@ void mprog_set(MOB_INDEX_DATA *mobindex, const char *progtype, const char *name)
 		return;
 	}
 
-	RS.Bug("Load_improgs: 'M': invalid program type for vnum %d", mobindex->vnum);
+	RS.Logger.Error("Load_improgs: 'M': invalid program type for vnum {}", mobindex->vnum);
 	exit(1);
 }
 

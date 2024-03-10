@@ -7,8 +7,8 @@
 #include "devextra.h"
 #include "newmem.h"
 #include "utility.h"
-#include "./include/fmt/format.h"
-#include "./include/fmt/printf.h"
+#include "./include/spdlog/fmt/bundled/format.h"
+#include "./include/spdlog/fmt/bundled/printf.h"
 
 bool sort_votes(char *hold[], int *holdi, int cabal)
 {

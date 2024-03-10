@@ -65,8 +65,8 @@
 #include "characterClasses/thief.h"
 #include "chardef.h"
 #include "update.h"
-#include "./include/fmt/format.h"
-#include "./include/fmt/printf.h"
+#include "./include/spdlog/fmt/bundled/format.h"
+#include "./include/spdlog/fmt/bundled/printf.h"
 
 /* RT code to delete yourself */
 void do_delet(CHAR_DATA *ch, char *argument)
@@ -1775,7 +1775,7 @@ void do_quit_new(CHAR_DATA *ch, char *argument, bool autoq)
 	if (CQueue::HasQueuePending(ch))
 	{
 		if (autoq)
-			RS.Bug("Trying to autoquit char %s with pending queue.", ch->name);
+			RS.Logger.Warn("Trying to autoquit char {} with pending queue.", ch->name);
 
 		send_to_char("You cannot quit while events requiring your presence are pending.\n\r", ch);
 		return;
@@ -1793,7 +1793,7 @@ void do_quit_new(CHAR_DATA *ch, char *argument, bool autoq)
 	send_to_char("Alas, all good things must come to an end.\n\r", ch);
 	act("$n has left the realm.", ch, nullptr, nullptr, TO_ROOM);
 
-	sprintf(log_buf, "%s@%s has %squit. [%ld played, %d (%d) obj]",
+	auto buffer = fmt::format("{}@{} has {}quit. [{} played, {} ({}) obj]",
 			ch->true_name,
 			!IS_SET(ch->comm, COMM_NOSOCKET) ? ch->pcdata->host : "",
 			autoq ? "auto" : "",
@@ -1801,8 +1801,8 @@ void do_quit_new(CHAR_DATA *ch, char *argument, bool autoq)
 			count_carried(ch, false),
 			count_carried(ch, true));
 
-	RS.Log(log_buf);
-	wiznet(log_buf, ch, nullptr, WIZ_SITES, 0, get_trust(ch));
+	RS.Logger.Info(buffer);
+	wiznet(buffer.data(), ch, nullptr, WIZ_SITES, 0, get_trust(ch));
 	login_log(ch, 2);
 
 	/*
@@ -1967,7 +1967,7 @@ void add_follower(CHAR_DATA *ch, CHAR_DATA *master)
 {
 	if (ch->master != nullptr)
 	{
-		RS.Bug("Add_follower: non-nullptr master.");
+		RS.Logger.Debug("Add_follower: non-nullptr master.");
 		return;
 	}
 
@@ -2011,7 +2011,7 @@ void stop_follower(CHAR_DATA *ch)
 {
 	if (ch->master == nullptr)
 	{
-		RS.Bug("Stop_follower: nullptr master.");
+		RS.Logger.Debug("Stop_follower: nullptr master.");
 		return;
 	}
 
@@ -2057,7 +2057,7 @@ void die_follower(CHAR_DATA *ch)
 {
 	if (!ch)
 	{
-		RS.Bug("Error: Die follower, invalid master.");
+		RS.Logger.Debug("Error: Die follower, invalid master.");
 		return;
 	}
 
@@ -2077,7 +2077,7 @@ void die_follower(CHAR_DATA *ch)
 		fch_next = fch->next;
 		/*if(!fch->in_room && is_npc(fch))
 		{
-			RS.Bug("Error: Mob %d in room is nullptr!",fch->pIndexData->vnum);
+			RS.Logger.Debug("Error: Mob {} in room is nullptr!",fch->pIndexData->vnum);
 			break;
 		}*/
 		if (is_npc(fch) && (is_affected(fch, gsn_animate_dead) || is_affected_by(fch, AFF_CHARM)))
@@ -2574,7 +2574,7 @@ void speech_handler(CHAR_DATA *ch, CHAR_DATA *mob, SPEECH_DATA *speech)
 		do_sing(mob, buf);
 		break;
 	default:
-		RS.Bug("Error in speech -- missing/invalid type.");
+		RS.Logger.Warn("Error in speech -- missing/invalid type.");
 		return;
 	}
 

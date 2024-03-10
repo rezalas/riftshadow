@@ -1155,7 +1155,7 @@ BEGIN_SPEC(mspec_academy_smith)
 				return mprog_drop(1, "I can't work with this slop!", obj, mob, ch);
 			if ((comp_vnum = get_quest_val(ch, SMITH_QUEST_LASTCOMP)) == -1)
 			{
-				RS.Bug("Unable to find component vnum on player for Blacksmith quest.");
+				RS.Logger.Warn("Unable to find component vnum on player for Blacksmith quest.");
 				return 0;
 			}
 			delete_quest_val(ch, SMITH_QUEST_LASTCOMP);

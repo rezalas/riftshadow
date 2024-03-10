@@ -65,11 +65,9 @@ void CQueue::AddToQueue(int nTimer, int nArgs, ...)
 	va_list ap;
 	int i;
 	void *hax[MAX_QUEUE_ARGS];
-	//TODO: since RS is CMud and CMud has a reference to CQueue we can't rely on extern as it would cause a circular reference.
-	//TODO: thus we need to inject CMud into the CQueue constructor and reference it that way.
-	//TODO: commenting out for now.
-	// if(nTimer < 0)
-	// 	RS.Bug("Negative Queue Timer - NumArgs: %d", nArgs);	
+
+	if(nTimer < 0)
+	 	Logger.Warn("Negative Queue Timer - NumArgs: {}", nArgs);	
 	CQueue *nq = new CQueue;
 	nq->queue_delay = nTimer;
 	nq->queue_numargs = nArgs;
@@ -125,8 +123,5 @@ void CQueue::DeleteQueuedEventsInvolving(void *qChar)
 			}
 	}
 
-	//TODO: since RS is CMud and CMud has a reference to CQueue we can't rely on extern as it would cause a circular reference.
-	//TODO: thus we need to inject CMud into the CQueue constructor and reference it that way.
-	//TODO: commenting out for now.
-	//RS.Bug("%d events deleted.", deleted);
+	Logger.Warn("{} events deleted.", deleted);
 }

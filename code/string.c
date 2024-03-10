@@ -27,7 +27,7 @@
 #include "comm.h"
 #include "interp.h"
 #include "db.h"
-#include "./include/fmt/format.h"
+#include "./include/spdlog/fmt/bundled/format.h"
 
 /*****************************************************************************
  Name:		string_edit
@@ -407,7 +407,7 @@ char *format_string(char *oldstring /*, bool fSpace */)
 		}
 		else
 		{
-			RS.Bug("No spaces");
+			RS.Logger.Warn("No spaces");
 			*(rdesc + 75) = 0;
 			strcat(xbuf, rdesc);
 			strcat(xbuf, "-\n\r");
