@@ -20,17 +20,20 @@ void CLogger::Initialize()
 {
 	if (spdlog::get("rs") == nullptr)
 	{
+		auto level = spdlog::level::trace;
+		spdlog::set_level(level);
+
 		auto console_sink = std::make_shared<spdlog::sinks::stdout_color_sink_mt>();
-		console_sink->set_level(spdlog::level::info);
+		console_sink->set_level(level);
 		console_sink->set_pattern("[%^%l%$] %v");
 
 		auto file_sink = std::make_shared<spdlog::sinks::basic_file_sink_mt>(RS_LOG_FILE, true);
-		file_sink->set_level(spdlog::level::info);
+		file_sink->set_level(level);
 
 		std::vector<spdlog::sink_ptr> sinks{ console_sink, file_sink };
 		auto logger = std::make_shared<spdlog::logger>("rs", sinks.begin(), sinks.end());
-		logger->set_level(spdlog::level::info);
-		logger->flush_on(spdlog::level::info);
+		logger->set_level(level);
+		logger->flush_on(level);
 
 		spdlog::register_logger(logger);
 	}
@@ -40,4 +43,13 @@ void CLogger::Initialize()
 void CLogger::Shutdown()
 {
 	spdlog::shutdown();
+}
+
+void CLogger::SetLevel(spdlog::level::level_enum level)
+{
+	if (spdlog::get("rs") != nullptr)
+	{
+		spdlog::get("rs")->set_level(level);
+		spdlog::get("rs")->flush_on(level);
+	}
 }

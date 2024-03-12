@@ -15,6 +15,11 @@
 	log.Shutdown();
 */
 
+#ifdef SPDLOG_ACTIVE_LEVEL
+	#undef SPDLOG_ACTIVE_LEVEL
+	#define SPDLOG_ACTIVE_LEVEL SPDLOG_LEVEL_TRACE
+#endif
+
 class CLogger
 {
 public:
@@ -23,6 +28,7 @@ public:
 
 	void Initialize();
 	void Shutdown();
+	void SetLevel(spdlog::level::level_enum level);
 
 	template <typename... Args>
 	void Bug(std::string_view fmt, Args &&...args)

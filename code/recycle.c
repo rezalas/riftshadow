@@ -700,8 +700,8 @@ CHAR_DATA *new_char(void)
 	{
 		ch = new CHAR_DATA;
 
-		if (bDebug)
-			RS.Logger.Debug("Char free is null.  . . . . !");
+		// if (bDebug)
+		// 	RS.Logger.Debug("Char free is null.  . . . . !");
 	}
 	else
 	{
