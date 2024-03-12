@@ -8,12 +8,15 @@
 #include "comm.h"
 #include "interp.h"
 #include "db.h"
+#include "./include/spdlog/spdlog.h"
 
 int main(int argc, char **argv)
 {
 	struct timeval now_time;
 	int port = 0;
 	int control;
+
+	RS.Logger.SetLevel(spdlog::level::info);
 
 	/*
 	 * Memory debugging if needed.
@@ -51,6 +54,7 @@ int main(int argc, char **argv)
 		}
 		else if ((port = atoi(argv[1])) == 666)
 		{
+			RS.Logger.SetLevel(spdlog::level::debug);
 			bDebug = true;
 		}
 		else if (port <= 1024)
