@@ -2592,7 +2592,8 @@ void speech_handler(CHAR_DATA *ch, CHAR_DATA *mob, SPEECH_DATA *speech)
 		return;
 	}
 
-	RS.Queue.AddToQueue(speech->current_line->delay, 3, speech_handler, ch, mob, speech);
+	//RS.Queue.AddToNewQueue(speech->current_line->delay, 3, speech_handler, ch, mob, speech);
+	RS.Queue.AddToNewQueue(speech->current_line->delay, speech_handler, ch, mob, speech);
 }
 
 /*
