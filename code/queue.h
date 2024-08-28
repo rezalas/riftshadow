@@ -132,12 +132,10 @@ private:
 
 		std::apply([&] (const auto&... tupleArgs) 
 		{
-			size_t index = 0;
 			auto processTuple = [&](const auto& x)
 			{
-				if constexpr (std::is_same<decltype(x), CHAR_DATA*>::value)
+		 		if constexpr (std::is_same<typename std::decay<decltype(x)>::type,CHAR_DATA*>::value)
 					accumulator.push_back(x);
-				index++;
 			};
 			(processTuple(tupleArgs), ...);
 		}, t);
