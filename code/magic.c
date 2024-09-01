@@ -36,6 +36,7 @@
 
 char *target_name;
 
+
 ///
 /// Returns the number for a skill, searched by name.
 /// @param name: The name of the skill.
@@ -4350,7 +4351,7 @@ void spell_summon(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		return;
 	}
 
-	RS.Queue.AddToQueue(3, 2, summon_char, ch, victim);
+	RS.Queue.AddToNewQueue(3, summon_char, ch, victim);
 
 	act("You begin the summoning of $N.", ch, 0, victim, TO_CHAR);
 
@@ -4671,7 +4672,7 @@ void spell_word_of_recall(int sn, int level, CHAR_DATA *ch, void *vo, int target
 	if (ch != victim)
 		act("You prepare to send $N home.", ch, 0, victim, TO_CHAR);
 
-	RS.Queue.AddToQueue(6, 2, recall_execute, victim, location);
+	RS.Queue.AddToNewQueue(6, recall_execute, victim, location);
 
 	send_to_char("A tingling feeling runs down your spine for a moment.\n\r", victim);
 

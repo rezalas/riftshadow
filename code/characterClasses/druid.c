@@ -100,15 +100,15 @@ void spell_tangleroot(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 	if (number_percent() > 10)
 	{
-		RS.Queue.AddToQueue(2, 2, LAG_CHAR, victim, (2 * PULSE_VIOLENCE));
-		RS.Queue.AddToQueue(2, 8, damage_queue, ch, victim, dam, DAM_BASH, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, (char *)"entangling roots*");
-		RS.Queue.AddToQueue(2, 5, act, "A tangleroot bursts out of the ground and entangles $N!", ch, 0, victim, TO_NOTVICT);
-		RS.Queue.AddToQueue(2, 5, act, "A tangleroot bursts out of the ground and entangles you!", ch, 0, victim, TO_VICT);
-		RS.Queue.AddToQueue(2, 5, act, "A tangleroot bursts out of the ground and entangles $N!", ch, 0, victim, TO_CHAR);
+		RS.Queue.AddToNewQueue(2, LAG_CHAR, victim, (2 * PULSE_VIOLENCE));
+		RS.Queue.AddToNewQueue(2, damage_queue, ch, victim, dam, DAM_BASH, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, (char *)"entangling roots*");
+		RS.Queue.AddToNewQueue(2, act_queue, "A tangleroot bursts out of the ground and entangles $N!", ch, nullptr, victim, TO_NOTVICT);
+		RS.Queue.AddToNewQueue(2, act_queue, "A tangleroot bursts out of the ground and entangles you!", ch, nullptr, victim, TO_VICT);
+		RS.Queue.AddToNewQueue(2, act_queue, "A tangleroot bursts out of the ground and entangles $N!", ch, nullptr, victim, TO_CHAR);
 		return;
 	}
 
-	RS.Queue.AddToQueue(2, 5, act, "A tangleroot bursts out of the ground, but $N avoids it!", ch, 0, victim, TO_NOTVICT);
-	RS.Queue.AddToQueue(2, 5, act, "A tangleroot bursts out of the ground, but you manage to avoid it!", ch, 0, victim, TO_VICT);
-	RS.Queue.AddToQueue(2, 5, act, "A tangleroot bursts out of the ground, but $N avoids it!", ch, 0, victim, TO_CHAR);
+	RS.Queue.AddToNewQueue(2, act_queue, "A tangleroot bursts out of the ground, but $N avoids it!", ch, nullptr, victim, TO_NOTVICT);
+	RS.Queue.AddToNewQueue(2, act_queue, "A tangleroot bursts out of the ground, but you manage to avoid it!", ch, nullptr, victim, TO_VICT);
+	RS.Queue.AddToNewQueue(2, act_queue, "A tangleroot bursts out of the ground, but $N avoids it!", ch, nullptr, victim, TO_CHAR);
 }

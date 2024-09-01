@@ -2311,6 +2311,11 @@ void do_look(CHAR_DATA *ch, char *argument)
 	}
 }
 
+void do_look_queue (CHAR_DATA *ch, std::string argument)
+{
+	do_look(ch, argument.data());
+}
+
 /* RT added back for the hell of it */
 void do_read(CHAR_DATA *ch, char *argument)
 {

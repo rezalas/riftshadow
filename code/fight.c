@@ -5341,6 +5341,12 @@ void do_bash(CHAR_DATA *ch, char *argument)
 	}
 }
 
+void do_bash_queue (CHAR_DATA *ch, std::string argument)
+{
+	do_bash(ch, argument.data());
+}
+
+
 void do_dirt(CHAR_DATA *ch, char *argument)
 {
 	char arg[MAX_INPUT_LENGTH];

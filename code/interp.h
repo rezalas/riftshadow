@@ -124,6 +124,7 @@ extern void do_proficiencies(CHAR_DATA *ch, char *argument); // prof.c
 void list_cmd_queue(CHAR_DATA *ch);
 void clear_cmd_queue(CHAR_DATA *ch);
 void interpret(CHAR_DATA *ch, char *argument);
+void interpret_queue(CHAR_DATA *ch, std::string argument);
 bool knows_command(CHAR_DATA *ch, int cmd);
 bool check_social(CHAR_DATA *ch, char *command, char *argument);
 bool is_number(char *arg);

@@ -9,22 +9,15 @@
 * this is all in assembly and fucking around in queue.h or .c will break it
 * then I WILL BREAK YOU
 */
-#define MAX_QUEUE_ARGS		8	
-typedef void (*QUEUE_FUNCTION)(...);
 
+// forward declarations. Once char_data is separated to its own file, we can get rid of these and include the file.
+// but since these are defined in merc.h, this will have to do. We can't include merc.h because that causes a circular 
+// dependency.
 class	char_data;
 typedef struct char_data CHAR_DATA;
 class CQueue
 {
 public:
-	CQueue();
-	~CQueue();
-	
-	static void 	ProcessQueue(void);
-	static void		AddToQueue(int nTimer, int nArgs, ...);
-	static bool		HasQueuePending(void *qChar);	
-	static void		DeleteQueuedEventsInvolving(void *qChar);
-
 	/// Adds a function pointer to the queue with related arguments. The function will be executed at the specified time (in ticks).
 	/// @tparam Func: Template type of the function to call. 
 	/// @tparam ...Args: Template parameter pack used to specify the variadic arguments. 
@@ -109,15 +102,7 @@ public:
 		Logger.Warn("{} events deleted.", deleted);
 	}
 private:
-	void			FreeQueue();
-
 	inline static CLogger Logger = CLogger();
-	static CQueue *	queue_first;
-	CQueue *		queue_next;
-	QUEUE_FUNCTION 	queue_function;
-	int				queue_delay;				/* seconds _remaining_ */
-	void *			queue_args[MAX_QUEUE_ARGS];	/* Queue function args */
-	int				queue_numargs;
 	std::vector<std::tuple<int, std::vector<CHAR_DATA*>, std::function<void()>>> newQueue;
 
 	/// Helper function used to extract character data from the specfied tuple.
@@ -134,10 +119,11 @@ private:
 		{
 			auto processTuple = [&](const auto& x)
 			{
+				// decay x to get the actual argument type to compare to our character data type 
 		 		if constexpr (std::is_same<typename std::decay<decltype(x)>::type,CHAR_DATA*>::value)
 					accumulator.push_back(x);
 			};
-			(processTuple(tupleArgs), ...);
+			(processTuple(tupleArgs), ...);  // fold expression - calls processTuple for each argument in tupleArgs
 		}, t);
 
 		return accumulator;

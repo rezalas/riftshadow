@@ -36,6 +36,7 @@ void obj_say_heavenly_sceptre (CHAR_DATA *ch, OBJ_DATA *obj,char *argument);
 const char *upstring(const char *i);
 const char *lowstring(const char *i);
 void do_say (CHAR_DATA *ch, char *argument);
+void do_say_queue (CHAR_DATA *ch, std::string argument);
 void say_to (CHAR_DATA *ch, CHAR_DATA *victim, char *argument, char *extra);
 void do_whisper (CHAR_DATA *ch, char *argument);
 void do_sing (CHAR_DATA *ch, char *argument);

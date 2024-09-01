@@ -2724,7 +2724,7 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
 				}
 
 				ch->gold = 500;
-				RS.Queue.AddToQueue(3, 1, create_academy_pet, ch);
+				RS.Queue.AddToNewQueue(3, create_academy_pet, ch);
 				// academy pet here, on queue
 			}
 			else if (ch->in_room != nullptr)
@@ -3125,6 +3125,11 @@ void act(const char *format, CHAR_DATA *ch, const void *arg1, const void *arg2, 
 	act_new(format, ch, arg1, arg2, type, POS_RESTING);
 }
 
+void act_queue(std::string format, CHAR_DATA *ch, OBJ_DATA *arg1, CHAR_DATA *arg2, int type)
+{
+	act_new(format.c_str(), ch, (void*)arg1, (void*)arg2, type, POS_RESTING);
+}
+
 void act_area(const char *format, CHAR_DATA *ch, CHAR_DATA *victim)
 {
 	static char *const he_she[] = {"it", "he", "she"};
@@ -3379,7 +3384,7 @@ void act_new(const char *format, CHAR_DATA *ch, const void *arg1, const void *ar
 						i = his_her[URANGE(0, vch->sex, 2)];
 						break;
 					case 'p':
-						if (!obj1)
+						if (obj1 == nullptr)
 						{
 							i = "something";
 							break;

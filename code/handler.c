@@ -2317,10 +2317,10 @@ void extract_char(CHAR_DATA *ch, bool fPull)
 
 	char_from_room(ch);
 
-	if (is_npc(ch) && CQueue::HasQueuePending(ch))
+	if (is_npc(ch) && RS.Queue.HasNewQueuePending(ch))
 	{
 		RS.Logger.Warn("Attempt at extracting mob {} while it has queue events pending.  Deleting events.", ch->pIndexData->vnum);
-		CQueue::DeleteQueuedEventsInvolving(ch);
+		RS.Queue.DeleteNewQueuedEventsInvolving(ch);
 	}
 
 	/* Death room is set in the cabal table now */

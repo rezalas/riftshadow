@@ -172,6 +172,7 @@ void show_string (struct descriptor_data *d, char *input);
 /* quick sex fixer */
 void fix_sex (CHAR_DATA *ch);
 void act (const char *format, CHAR_DATA *ch, const void *arg1, const void *arg2, int type);
+void act_queue (std::string format, CHAR_DATA *ch, OBJ_DATA *arg1, CHAR_DATA *arg2, int type);
 void act_area (const char *format, CHAR_DATA *ch, CHAR_DATA *victim);
 void act_new (const char *format, CHAR_DATA *ch, const void *arg1, const void *arg2, int type, int min_pos);
 void announce_login (CHAR_DATA *ch);

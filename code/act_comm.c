@@ -779,6 +779,11 @@ void do_say(CHAR_DATA *ch, char *argument)
 	}
 }
 
+void do_say_queue(CHAR_DATA *ch, std::string argument)
+{
+	do_say(ch, argument.data());
+}
+
 void say_to(CHAR_DATA *ch, CHAR_DATA *victim, char *argument, char *extra)
 {
 	if (argument[0] == '\0')
@@ -1772,7 +1777,7 @@ void do_quit_new(CHAR_DATA *ch, char *argument, bool autoq)
 		}
 	}
 
-	if (CQueue::HasQueuePending(ch))
+	if (RS.Queue.HasNewQueuePending(ch))
 	{
 		if (autoq)
 			RS.Logger.Warn("Trying to autoquit char {} with pending queue.", ch->name);
