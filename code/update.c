@@ -2179,7 +2179,7 @@ void update_handler(void)
 		else
 			iprog_pulse_update(false);
 
-		RS.Queue.ProcessNewQueue();
+		RS.Queue.ProcessQueue();
 		// execute_queue();	//execute queue every second.
 	}
 

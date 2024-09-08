@@ -17,11 +17,11 @@ SCENARIO("Testing queueing functions", "[AddToQueue]")
 			CQueue sut;
 			char_data *mockPlayer = new char_data();
 
-			sut.AddToNewQueue(timer, testQueueFunction, mockPlayer);
+			sut.AddToQueue(timer, testQueueFunction, mockPlayer);
 
 			THEN("The queue should show a pending call")
 			{
-				REQUIRE(sut.HasNewQueuePending(mockPlayer));
+				REQUIRE(sut.HasQueuePending(mockPlayer));
 			}
 		}
 	}
@@ -35,15 +35,15 @@ SCENARIO("Testing deleting queue entries with that involve character", "[DeleteQ
 		char_data *mockPlayer = new char_data();
 		int timer = 3; // 3 tics 
 
-		sut.AddToNewQueue(timer, testQueueFunction, mockPlayer);
+		sut.AddToQueue(timer, testQueueFunction, mockPlayer);
 
 		WHEN("DeleteQueuedEventsInvolving is called with a specified character in the queue")
 		{
-			sut.DeleteNewQueuedEventsInvolving(mockPlayer);
+			sut.DeleteQueuedEventsInvolving(mockPlayer);
 
 			THEN("The queue should show a no pending calls")
 			{
-				auto hasQueueEntries = sut.HasNewQueuePending(mockPlayer);
+				auto hasQueueEntries = sut.HasQueuePending(mockPlayer);
 				REQUIRE(hasQueueEntries == false);
 			}
 		}
@@ -65,8 +65,8 @@ SCENARIO("Testing queue processing", "[ProcessQueue]")
 		char_data* tmpChar = new char_data();
 		tmpChar->id = 10107;
 		long expected = 1337L;
-		sut.AddToNewQueue(timer, updateValueFunction, tmpChar, expected);
-		sut.ProcessNewQueue();
+		sut.AddToQueue(timer, updateValueFunction, tmpChar, expected);
+		sut.ProcessQueue();
 		THEN("The function should update the value")
 		{
 			REQUIRE(tmpChar->id == expected);

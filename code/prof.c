@@ -404,10 +404,10 @@ void CProficiencies::TrainProficiency(char_data* ch, char_data* trainer, char* a
 				END_COLOR(ch));
 
 			char *tptr = talloc_string(buffer.c_str()); 
-			RS.Queue.AddToNewQueue((i + 1) * 2, send_to_char, tptr, ch);
+			RS.Queue.AddToQueue((i + 1) * 2, send_to_char, tptr, ch);
 		}
 
-		RS.Queue.AddToNewQueue((i + 1) * 2, act_queue, prof_msg_table[prof].learning_msgs[i], ch, nullptr, trainer, TO_CHAR);
+		RS.Queue.AddToQueue((i + 1) * 2, act_queue, prof_msg_table[prof].learning_msgs[i], ch, nullptr, trainer, TO_CHAR);
 	}
 
 	ch->Profs()->DeductPoints(proficiency.cost);
@@ -1024,11 +1024,11 @@ void prof_firestart(CHAR_DATA *ch, char *argument)
 	act("$n begins to build a campfire, gathering sticks and twigs from $s surroundings.", ch, 0, 0, TO_ROOM);
 	ch->move -= ch->level;
 
-	RS.Queue.AddToNewQueue(1, send_to_char, "You rub two sticks together, trying to produce a flame.\n\r", ch);
-	RS.Queue.AddToNewQueue(1, act_queue, "$n rubs two sticks together, trying to produce a flame.", ch, nullptr, nullptr, TO_ROOM);
-	RS.Queue.AddToNewQueue(3, send_to_char, "The sticks begin to smoke, and soon you produce a spark.\n\r", ch);
-	RS.Queue.AddToNewQueue(3, act_queue, "The sticks begin to smoke, and soon $n produces a spark.", ch, nullptr, nullptr, TO_ROOM);
-	RS.Queue.AddToNewQueue(5, build_fire, ch, dur);
+	RS.Queue.AddToQueue(1, send_to_char, "You rub two sticks together, trying to produce a flame.\n\r", ch);
+	RS.Queue.AddToQueue(1, act_queue, "$n rubs two sticks together, trying to produce a flame.", ch, nullptr, nullptr, TO_ROOM);
+	RS.Queue.AddToQueue(3, send_to_char, "The sticks begin to smoke, and soon you produce a spark.\n\r", ch);
+	RS.Queue.AddToQueue(3, act_queue, "The sticks begin to smoke, and soon $n produces a spark.", ch, nullptr, nullptr, TO_ROOM);
+	RS.Queue.AddToQueue(5, build_fire, ch, dur);
 	WAIT_STATE(ch, PULSE_VIOLENCE * 2);
 }
 

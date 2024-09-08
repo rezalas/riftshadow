@@ -1630,14 +1630,14 @@ void verb_prog_antava_touch_hand(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 	if (ch->in_room->vnum != 462)
 		return;
 
-	RS.Queue.AddToNewQueue(14, act_queue, "Darkness closes back in upon the antechamber as the stone above you shuts abruptly!", ch, nullptr, nullptr, TO_CHAR);
-	RS.Queue.AddToNewQueue(9, do_look_queue, ch, "auto");
-	RS.Queue.AddToNewQueue(9, act_queue, "$n suddenly slides down from above!", ch, nullptr, nullptr, TO_ROOM);
-	RS.Queue.AddToNewQueue(9, char_to_room, ch, tomb);
-	RS.Queue.AddToNewQueue(9, char_from_room, ch);
-	RS.Queue.AddToNewQueue(9, act_queue, "You suddenly feel the ground drop out from under you!", ch, nullptr, nullptr, TO_CHAR);
-	RS.Queue.AddToNewQueue(9, act_queue, "The sound of grinding granite fills the air as $n suddenly drops out of sight!", ch, nullptr, nullptr, TO_ROOM);
-	RS.Queue.AddToNewQueue(2, WAIT_STATE, ch, PULSE_VIOLENCE * 5);
+	RS.Queue.AddToQueue(14, act_queue, "Darkness closes back in upon the antechamber as the stone above you shuts abruptly!", ch, nullptr, nullptr, TO_CHAR);
+	RS.Queue.AddToQueue(9, do_look_queue, ch, "auto");
+	RS.Queue.AddToQueue(9, act_queue, "$n suddenly slides down from above!", ch, nullptr, nullptr, TO_ROOM);
+	RS.Queue.AddToQueue(9, char_to_room, ch, tomb);
+	RS.Queue.AddToQueue(9, char_from_room, ch);
+	RS.Queue.AddToQueue(9, act_queue, "You suddenly feel the ground drop out from under you!", ch, nullptr, nullptr, TO_CHAR);
+	RS.Queue.AddToQueue(9, act_queue, "The sound of grinding granite fills the air as $n suddenly drops out of sight!", ch, nullptr, nullptr, TO_ROOM);
+	RS.Queue.AddToQueue(2, WAIT_STATE, ch, PULSE_VIOLENCE * 5);
 }
 
 void verb_prog_sidhe_climb_vine(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
@@ -1737,8 +1737,8 @@ void verb_prog_listen_conversation(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 		{
 			row = RS.SQL.GetRow();
 			temp = palloc_string(row[0]);
-			RS.Queue.AddToNewQueue(inc * 5, free, temp);
-			RS.Queue.AddToNewQueue(inc * 5, say_to, fat, ch, (char *)"Just do yourself a favor, and watch out for $t.", temp);
+			RS.Queue.AddToQueue(inc * 5, free, temp);
+			RS.Queue.AddToQueue(inc * 5, say_to, fat, ch, (char *)"Just do yourself a favor, and watch out for $t.", temp);
 		}
 	}
 	else if (rand == 2)
@@ -1764,8 +1764,8 @@ void verb_prog_listen_conversation(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 					mysql_free_result(res2);
 				}
 			}
-			RS.Queue.AddToNewQueue(inc*4, free,temp);
-			RS.Queue.AddToNewQueue(inc*4, say_to, fat, ch, (char*)"Haha, $t got him again!  By Rygath's teeth, that's a fine thief...", temp);
+			RS.Queue.AddToQueue(inc*4, free,temp);
+			RS.Queue.AddToQueue(inc*4, say_to, fat, ch, (char*)"Haha, $t got him again!  By Rygath's teeth, that's a fine thief...", temp);
 		*/
 	}
 	/*
@@ -1834,7 +1834,7 @@ void verb_prog_listen_conversation(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 				tc = i;
 		}
 
-		RS.Queue.AddToNewQueue(inc*6, say_to, violet, ch,
+		RS.Queue.AddToQueue(inc*6, say_to, violet, ch,
 			(char*)"Well then, I suppose it's only a matter of time before we're all members of $t", cabal_table[tc].name);
 		mprog_say(inc*7,"They're really cleaning house out there.", violet, ch);
 		*/
@@ -2670,7 +2670,7 @@ void verb_prog_touch_obelisk(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 	ch->pcdata->condition[COND_HUNGER] = 1;
 	ch->pcdata->condition[COND_THIRST] = 1;
 
-	RS.Queue.AddToNewQueue(5, communion_handler, ch);
+	RS.Queue.AddToQueue(5, communion_handler, ch);
 }
 
 void communion_handler(CHAR_DATA *ch)
@@ -2700,7 +2700,7 @@ void communion_handler(CHAR_DATA *ch)
 			send_to_char(buf, ch);
 
 			af->modifier++;
-			RS.Queue.AddToNewQueue(5, communion_handler, ch);
+			RS.Queue.AddToQueue(5, communion_handler, ch);
 			break;
 		case 2:
 			sprintf(buf, "%sThe sonorous tone of a ramshorn booms through the void surrounding you.%s\n\r",
@@ -2709,7 +2709,7 @@ void communion_handler(CHAR_DATA *ch)
 			send_to_char(buf, ch);
 
 			af->modifier++;
-			RS.Queue.AddToNewQueue(5, communion_handler, ch);
+			RS.Queue.AddToQueue(5, communion_handler, ch);
 			break;
 		case 3:
 			sprintf(buf, "%sA pearly luminescence begins to coalesce before your eyes, suspended in the darkness that rushes past as you plummet.%s\n\r",
@@ -2718,7 +2718,7 @@ void communion_handler(CHAR_DATA *ch)
 			send_to_char(buf, ch);
 
 			af->modifier++;
-			RS.Queue.AddToNewQueue(5, communion_handler, ch);
+			RS.Queue.AddToQueue(5, communion_handler, ch);
 			break;
 		case 4:
 			sprintf(buf, "%sWithin the light, humanoid outlines begin to take shape.%s\n\r",
@@ -2727,7 +2727,7 @@ void communion_handler(CHAR_DATA *ch)
 			send_to_char(buf, ch);
 
 			af->modifier++;
-			RS.Queue.AddToNewQueue(5, communion_handler, ch);
+			RS.Queue.AddToQueue(5, communion_handler, ch);
 			break;
 		case 5:
 			sprintf(buf, "%sYou see a behemoth of a man, gird in naught but animal hides and a belt adorned with human scalps.%s\n\r",
@@ -2736,7 +2736,7 @@ void communion_handler(CHAR_DATA *ch)
 			send_to_char(buf, ch);
 
 			af->modifier++;
-			RS.Queue.AddToNewQueue(5, communion_handler, ch);
+			RS.Queue.AddToQueue(5, communion_handler, ch);
 			break;
 		case 6:
 			sprintf(buf, "%sThe stillness is shattered by a deafening battlecry, as the figures blur into motion.%s\n\r",
@@ -2745,7 +2745,7 @@ void communion_handler(CHAR_DATA *ch)
 			send_to_char(buf, ch);
 
 			af->modifier++;
-			RS.Queue.AddToNewQueue(5, communion_handler, ch);
+			RS.Queue.AddToQueue(5, communion_handler, ch);
 			break;
 		case 7:
 			sprintf(buf, "%sA spray of blood follows his axe's arcing path through the air, light glinting off the silver blade.%s\n\r",
@@ -2754,7 +2754,7 @@ void communion_handler(CHAR_DATA *ch)
 			send_to_char(buf, ch);
 
 			af->modifier++;
-			RS.Queue.AddToNewQueue(5, communion_handler, ch);
+			RS.Queue.AddToQueue(5, communion_handler, ch);
 			break;
 		case 8:
 			sprintf(buf, "%sYou have the sensation of being lifted higher, as your field of vision broadens.%s\n\r",
@@ -2763,7 +2763,7 @@ void communion_handler(CHAR_DATA *ch)
 			send_to_char(buf, ch);
 
 			af->modifier++;
-			RS.Queue.AddToNewQueue(5, communion_handler, ch);
+			RS.Queue.AddToQueue(5, communion_handler, ch);
 			break;
 		case 9:
 			sprintf(buf, "%sA battlefield is spread out beneath you, the combat just witnessed but a part of the larger picture.%s\n\r",
@@ -2772,7 +2772,7 @@ void communion_handler(CHAR_DATA *ch)
 			send_to_char(buf, ch);
 
 			af->modifier++;
-			RS.Queue.AddToNewQueue(5, communion_handler, ch);
+			RS.Queue.AddToQueue(5, communion_handler, ch);
 			break;
 		case 10:
 			sprintf(buf, "%sA small band of barbarians appear to have been trapped by a well-armored force of vastly superior numbers, a sheer cliffside at their backs.%s\n\r",
@@ -2781,7 +2781,7 @@ void communion_handler(CHAR_DATA *ch)
 			send_to_char(buf, ch);
 
 			af->modifier++;
-			RS.Queue.AddToNewQueue(5, communion_handler, ch);
+			RS.Queue.AddToQueue(5, communion_handler, ch);
 			break;
 		case 11:
 			sprintf(buf, "%sFierce men and women, of all the races of Shalar, the barbarian horde raise their voices in a single outcry.%s\n\r",
@@ -2790,7 +2790,7 @@ void communion_handler(CHAR_DATA *ch)
 			send_to_char(buf, ch);
 
 			af->modifier++;
-			RS.Queue.AddToNewQueue(5, communion_handler, ch);
+			RS.Queue.AddToQueue(5, communion_handler, ch);
 			break;
 		case 12:
 			sprintf(buf, "%sTheir bellowed warcry rippling out over the plains, they launch themselves into the heart of the enemy formation.%s\n\r",
@@ -2799,7 +2799,7 @@ void communion_handler(CHAR_DATA *ch)
 			send_to_char(buf, ch);
 
 			af->modifier++;
-			RS.Queue.AddToNewQueue(5, communion_handler, ch);
+			RS.Queue.AddToQueue(5, communion_handler, ch);
 			break;
 		case 13:
 			sprintf(buf, "%sThe clash of steel upon steel and the horrible cries of dying men rise from the melee below...%s\n\r",
@@ -2808,7 +2808,7 @@ void communion_handler(CHAR_DATA *ch)
 			send_to_char(buf, ch);
 
 			af->modifier++;
-			RS.Queue.AddToNewQueue(5, communion_handler, ch);
+			RS.Queue.AddToQueue(5, communion_handler, ch);
 			break;
 		case 14:
 			sprintf(buf, "%s...and the pungent odor of blood and death fills the air as the earth is stained a deep crimson.%s\n\r",
@@ -2817,7 +2817,7 @@ void communion_handler(CHAR_DATA *ch)
 			send_to_char(buf, ch);
 
 			af->modifier++;
-			RS.Queue.AddToNewQueue(5, communion_handler, ch);
+			RS.Queue.AddToQueue(5, communion_handler, ch);
 			break;
 		case 15:
 			sprintf(buf, "%sThe barbarian horde cleaves a swath of terrible carnage through the heart of the fray, destruction trailing in their wake.%s\n\r",
@@ -2826,7 +2826,7 @@ void communion_handler(CHAR_DATA *ch)
 			send_to_char(buf, ch);
 
 			af->modifier++;
-			RS.Queue.AddToNewQueue(5, communion_handler, ch);
+			RS.Queue.AddToQueue(5, communion_handler, ch);
 			break;
 		case 16:
 			sprintf(buf, "%sThe once-superior force, now decimated, turns to flee, a cacophony of shouts from the barbarians at their backs.%s\n\r",
@@ -2835,7 +2835,7 @@ void communion_handler(CHAR_DATA *ch)
 			send_to_char(buf, ch);
 
 			af->modifier++;
-			RS.Queue.AddToNewQueue(5, communion_handler, ch);
+			RS.Queue.AddToQueue(5, communion_handler, ch);
 			break;
 		case 17:
 			sprintf(buf, "%sAs suddenly as the scene appeared, it is gone, the figures sinking into the earth and fading from sight entirely.%s\n\r",
@@ -2844,7 +2844,7 @@ void communion_handler(CHAR_DATA *ch)
 			send_to_char(buf, ch);
 
 			af->modifier++;
-			RS.Queue.AddToNewQueue(5, communion_handler, ch);
+			RS.Queue.AddToQueue(5, communion_handler, ch);
 			break;
 		case 18:
 			SET_BIT(ch->comm, COMM_PROMPT);
@@ -2858,7 +2858,7 @@ void communion_handler(CHAR_DATA *ch)
 			ch->pcdata->tribe = tribe;
 
 			af->modifier++;
-			RS.Queue.AddToNewQueue(5, communion_handler, ch);
+			RS.Queue.AddToQueue(5, communion_handler, ch);
 			break;
 		case 19:
 			af->modifier++;
@@ -2881,7 +2881,7 @@ void communion_handler(CHAR_DATA *ch)
 				do_look(ch, "auto");
 			}
 
-			RS.Queue.AddToNewQueue(2, communion_handler, ch);
+			RS.Queue.AddToQueue(2, communion_handler, ch);
 			break;
 		case 20:
 			sprintf(buf, "%sYou see a blur of motion streaking towards you from the edge of the forest.%s\n\r",
@@ -2890,7 +2890,7 @@ void communion_handler(CHAR_DATA *ch)
 			send_to_char(buf, ch);
 
 			af->modifier++;
-			RS.Queue.AddToNewQueue(2, communion_handler, ch);
+			RS.Queue.AddToQueue(2, communion_handler, ch);
 			break;
 		case 21:
 			af->modifier++;
@@ -2997,7 +2997,7 @@ void communion_handler(CHAR_DATA *ch)
 			}
 
 			af->modifier++;
-			RS.Queue.AddToNewQueue(8, communion_handler, ch);
+			RS.Queue.AddToQueue(8, communion_handler, ch);
 			break;
 		case 23:
 			sprintf(buf, "%sRays of light pierce your eyelids as they flutter open, and you groggily stagger to your feet.%s\n\r",
@@ -3010,7 +3010,7 @@ void communion_handler(CHAR_DATA *ch)
 			ch->position = POS_STANDING;
 
 			af->modifier++;
-			RS.Queue.AddToNewQueue(5, communion_handler, ch);
+			RS.Queue.AddToQueue(5, communion_handler, ch);
 			break;
 		case 24:
 			sprintf(buf, "%sA trophy belt is fastened securely about your waist, and you sense the weight of a massive pelt upon your back.%s\n\r",
@@ -3093,7 +3093,7 @@ void communion_handler(CHAR_DATA *ch)
 
 			equip_char(ch, obj, WEAR_ABOUT, false);
 
-			RS.Queue.AddToNewQueue(5, communion_handler, ch);
+			RS.Queue.AddToQueue(5, communion_handler, ch);
 			break;
 		case 25:
 			sprintf(buf, "%sEven as your mind reels, trying to make sense of all you have seen, you feel infused with newfound vigor.%s\n\r",
@@ -3105,7 +3105,7 @@ void communion_handler(CHAR_DATA *ch)
 			ch->mana = ch->max_mana;
 
 			af->modifier++;
-			RS.Queue.AddToNewQueue(5, communion_handler, ch);
+			RS.Queue.AddToQueue(5, communion_handler, ch);
 			break;
 		case 26:
 			sprintf(buf,
@@ -3170,7 +3170,7 @@ void verb_prog_feed_baby(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 	act("$n's baby greedily begins to feed.", ch, 0, 0, TO_ROOM);
 	milk->value[1] = 0;
 
-	RS.Queue.AddToNewQueue(12, act_queue, "$p drifts off to sleep.", ch, obj, nullptr, TO_CHAR);
+	RS.Queue.AddToQueue(12, act_queue, "$p drifts off to sleep.", ch, obj, nullptr, TO_CHAR);
 
 	init_affect_obj(&af);
 	af.where = TO_OBJ_APPLY;
@@ -3711,13 +3711,13 @@ void verb_prog_iseldheim_lever_pull(OBJ_DATA *obj, CHAR_DATA *ch, char *argument
 
 	if (!lRoom->exit[eDir]->u1.to_room)
 	{ // call elevator SIR!
-		RS.Queue.AddToNewQueue(2, act_to_room, mmsg, lRoom);
-		RS.Queue.AddToNewQueue(2, act_to_room, mmsg, tRoom);
-		RS.Queue.AddToNewQueue(2, act_to_room, mmsg, eleRoom);
-		RS.Queue.AddToNewQueue(3, close_elevator, eleRoom);
-		RS.Queue.AddToNewQueue(5, act_to_room, (char *)"With a lurch, the lift begins to accelerate.", eleRoom);
-		RS.Queue.AddToNewQueue(9, act_to_room, (char *)"The lift shudders as it slowly comes to a halt.", eleRoom);
-		RS.Queue.AddToNewQueue(10, open_elevator, eleRoom, lRoom);
+		RS.Queue.AddToQueue(2, act_to_room, mmsg, lRoom);
+		RS.Queue.AddToQueue(2, act_to_room, mmsg, tRoom);
+		RS.Queue.AddToQueue(2, act_to_room, mmsg, eleRoom);
+		RS.Queue.AddToQueue(3, close_elevator, eleRoom);
+		RS.Queue.AddToQueue(5, act_to_room, (char *)"With a lurch, the lift begins to accelerate.", eleRoom);
+		RS.Queue.AddToQueue(9, act_to_room, (char *)"The lift shudders as it slowly comes to a halt.", eleRoom);
+		RS.Queue.AddToQueue(10, open_elevator, eleRoom, lRoom);
 
 		act("You pull the lever into the down position.", ch, 0, 0, TO_CHAR);
 		act("$n pulls the lever into the down position.", ch, 0, 0, TO_ROOM);
@@ -3725,13 +3725,13 @@ void verb_prog_iseldheim_lever_pull(OBJ_DATA *obj, CHAR_DATA *ch, char *argument
 	else if (lRoom->exit[eDir]->u1.to_room)
 	{ // elevator is here, we can send it back up
 		tRoom = get_room_index(obj->value[1]);
-		RS.Queue.AddToNewQueue(2, act_to_room, mmsg, lRoom);
-		RS.Queue.AddToNewQueue(2, act_to_room, mmsg, tRoom);
-		RS.Queue.AddToNewQueue(2, act_to_room, mmsg, eleRoom);
-		RS.Queue.AddToNewQueue(3, close_elevator, eleRoom);
-		RS.Queue.AddToNewQueue(5, act_to_room, (char *)"With a lurch, the lift begins to accelerate.", eleRoom);
-		RS.Queue.AddToNewQueue(9, act_to_room, (char *)"The lift shudders as it slowly comes to a halt.", eleRoom);
-		RS.Queue.AddToNewQueue(10, open_elevator, eleRoom, tRoom);
+		RS.Queue.AddToQueue(2, act_to_room, mmsg, lRoom);
+		RS.Queue.AddToQueue(2, act_to_room, mmsg, tRoom);
+		RS.Queue.AddToQueue(2, act_to_room, mmsg, eleRoom);
+		RS.Queue.AddToQueue(3, close_elevator, eleRoom);
+		RS.Queue.AddToQueue(5, act_to_room, (char *)"With a lurch, the lift begins to accelerate.", eleRoom);
+		RS.Queue.AddToQueue(9, act_to_room, (char *)"The lift shudders as it slowly comes to a halt.", eleRoom);
+		RS.Queue.AddToQueue(10, open_elevator, eleRoom, tRoom);
 
 		act("You pull the lever into the up position.", ch, 0, 0, TO_CHAR);
 		act("$n pulls the lever into the up position.", ch, 0, 0, TO_ROOM);
@@ -3945,9 +3945,9 @@ void verb_prog_turn_wyntran(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 	act("The temperature in the room drops rapidly as a darkened portal opens overhead.", ch, 0, 0, TO_ROOM);
 	act("The temperature in the room drops rapidly as a darkened portal opens overhead.", ch, 0, 0, TO_CHAR);
 
-	RS.Queue.AddToNewQueue(3, act_queue, "Accompanied by peals of thunder a shrouded being descends from the portal.", ch, nullptr, nullptr, TO_CHAR);
-	RS.Queue.AddToNewQueue(3, act_queue, "Accompanied by peals of thunder a shrouded being descends from the portal.", ch, nullptr, nullptr, TO_ROOM);
-	RS.Queue.AddToNewQueue(4, char_to_room, victim, ch->in_room);
+	RS.Queue.AddToQueue(3, act_queue, "Accompanied by peals of thunder a shrouded being descends from the portal.", ch, nullptr, nullptr, TO_CHAR);
+	RS.Queue.AddToQueue(3, act_queue, "Accompanied by peals of thunder a shrouded being descends from the portal.", ch, nullptr, nullptr, TO_ROOM);
+	RS.Queue.AddToQueue(4, char_to_room, victim, ch->in_room);
 
 	WAIT_STATE(ch, PULSE_VIOLENCE * 2);
 }

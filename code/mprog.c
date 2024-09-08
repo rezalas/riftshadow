@@ -157,19 +157,19 @@ const struct improg_type mprog_table[] =
 void mprog_tell(int inc, char *arg, CHAR_DATA *mob, CHAR_DATA *ch)
 {
 	auto buffer = fmt::format("{} tells you '{}{}{}'", mob->short_descr, get_char_color(ch, "tells"), arg, END_COLOR(ch));
-	RS.Queue.AddToNewQueue(inc, act_queue, buffer, ch, nullptr, nullptr, TO_CHAR);
+	RS.Queue.AddToQueue(inc, act_queue, buffer, ch, nullptr, nullptr, TO_CHAR);
 }
 
 void mprog_say(int inc, char *arg, CHAR_DATA *mob, CHAR_DATA *ch)
 {
 	auto buffer = fmt::format("{} says '{}{}{}'", mob->short_descr, get_char_color(ch, "speech"), arg, END_COLOR(ch));
-	RS.Queue.AddToNewQueue(inc, act_queue, buffer, ch, nullptr, nullptr, TO_CHAR);
+	RS.Queue.AddToQueue(inc, act_queue, buffer, ch, nullptr, nullptr, TO_CHAR);
 }
 
 void mprog_emote(int inc, char *arg, CHAR_DATA *mob, CHAR_DATA *ch)
 {
 	auto buffer = fmt::format("{} {}", mob->short_descr, arg);
-	RS.Queue.AddToNewQueue(inc, act_queue, buffer, ch, nullptr, nullptr, TO_CHAR);
+	RS.Queue.AddToQueue(inc, act_queue, buffer, ch, nullptr, nullptr, TO_CHAR);
 }
 
 int mprog_drop(int inc, char *arg, OBJ_DATA *obj, CHAR_DATA *mob, CHAR_DATA *ch)
@@ -179,12 +179,12 @@ int mprog_drop(int inc, char *arg, OBJ_DATA *obj, CHAR_DATA *mob, CHAR_DATA *ch)
 	if (arg)
 	{
 		auto buffer = fmt::format("{} says '{}{}{}'", mob->short_descr, get_char_color(ch, "speech"), arg, END_COLOR(ch));
-		RS.Queue.AddToNewQueue(inc, act_queue, buffer, ch, nullptr, nullptr, TO_CHAR);
+		RS.Queue.AddToQueue(inc, act_queue, buffer, ch, nullptr, nullptr, TO_CHAR);
 	}
 
-	RS.Queue.AddToNewQueue(inc, obj_to_room, obj, mob->in_room);
-	RS.Queue.AddToNewQueue(inc, obj_from_char, obj);
-	RS.Queue.AddToNewQueue(inc, act_queue, "$n drops $p.", mob, obj, nullptr, TO_ROOM);
+	RS.Queue.AddToQueue(inc, obj_to_room, obj, mob->in_room);
+	RS.Queue.AddToQueue(inc, obj_from_char, obj);
+	RS.Queue.AddToQueue(inc, act_queue, "$n drops $p.", mob, obj, nullptr, TO_ROOM);
 	return 0;
 }
 
@@ -195,12 +195,12 @@ int mprog_give(int inc, char *arg, OBJ_DATA *obj, CHAR_DATA *mob, CHAR_DATA *ch)
 	if (arg)
 	{
 		auto buffer = fmt::format("{} says '{}{}{}'", mob->short_descr, get_char_color(ch, "speech"), arg, END_COLOR(ch));
-		RS.Queue.AddToNewQueue(inc, act_queue, buffer, ch, nullptr, nullptr, TO_CHAR);
+		RS.Queue.AddToQueue(inc, act_queue, buffer, ch, nullptr, nullptr, TO_CHAR);
 	}
 
-	RS.Queue.AddToNewQueue(inc, obj_to_char, obj, ch);
-	RS.Queue.AddToNewQueue(inc, obj_from_char, obj);
-	RS.Queue.AddToNewQueue(inc, act_queue, "$n gives you $p.", mob, obj, ch, TO_VICT);
+	RS.Queue.AddToQueue(inc, obj_to_char, obj, ch);
+	RS.Queue.AddToQueue(inc, obj_from_char, obj);
+	RS.Queue.AddToQueue(inc, act_queue, "$n gives you $p.", mob, obj, ch, TO_VICT);
 	return 0;
 }
 
@@ -618,9 +618,9 @@ void pulse_prog_arangird_patrol(CHAR_DATA *mob)
 void greet_prog_profteacher(CHAR_DATA *mob, CHAR_DATA *ch)
 {
 	if (number_percent() > 50)
-		RS.Queue.AddToNewQueue(2, act_queue, "$N beckons you to approach $M.", ch, nullptr, mob, TO_CHAR);
+		RS.Queue.AddToQueue(2, act_queue, "$N beckons you to approach $M.", ch, nullptr, mob, TO_CHAR);
 	else
-		RS.Queue.AddToNewQueue(2, act_queue, "$N meets your eyes thoughtfully, nodding slightly.", ch, nullptr, mob, TO_CHAR);
+		RS.Queue.AddToQueue(2, act_queue, "$N meets your eyes thoughtfully, nodding slightly.", ch, nullptr, mob, TO_CHAR);
 }
 
 void greet_prog_ruins_spirit(CHAR_DATA *mob, CHAR_DATA *ch)
@@ -1562,7 +1562,7 @@ void attack_prog_lesser_demon(CHAR_DATA *mob, CHAR_DATA *attacker)
 		char_from_room(mob);
 		char_to_room(mob, get_room_index(3));
 
-		RS.Queue.AddToNewQueue(1, delay_extract, mob);
+		RS.Queue.AddToQueue(1, delay_extract, mob);
 		af->owner->pcdata->lesserdata[LESSER_BARBAS] = FAVOR_NONE;
 		return;
 	}
@@ -1602,7 +1602,7 @@ void attack_prog_lesser_demon(CHAR_DATA *mob, CHAR_DATA *attacker)
 		char_from_room(mob);
 		char_to_room(mob, get_room_index(3));
 
-		RS.Queue.AddToNewQueue(1, delay_extract, mob);
+		RS.Queue.AddToQueue(1, delay_extract, mob);
 		return;
 	}
 
@@ -1642,7 +1642,7 @@ void attack_prog_lesser_demon(CHAR_DATA *mob, CHAR_DATA *attacker)
 		char_from_room(mob);
 		char_to_room(mob, get_room_index(3));
 
-		RS.Queue.AddToNewQueue(1, delay_extract, mob);
+		RS.Queue.AddToQueue(1, delay_extract, mob);
 		return;
 	}
 
@@ -1773,9 +1773,9 @@ void speech_prog_aamon(CHAR_DATA *mob, CHAR_DATA *ch, char *speech)
 			break;
 		default:
 			do_emote(mob, "laughs giddily and whirls to leave.");
-			RS.Queue.AddToNewQueue(1, do_say_queue, mob, "I'll be leaving now,  and leaving you to your thoughts!  You'll never know the answer to my riddle.");
-			RS.Queue.AddToNewQueue(2, act_queue, "With a puff of hazy purple smoke and a sound like a cough, $n disappears.", mob, nullptr, nullptr, TO_ROOM);
-			RS.Queue.AddToNewQueue(3, delay_extract, mob);
+			RS.Queue.AddToQueue(1, do_say_queue, mob, "I'll be leaving now,  and leaving you to your thoughts!  You'll never know the answer to my riddle.");
+			RS.Queue.AddToQueue(2, act_queue, "With a puff of hazy purple smoke and a sound like a cough, $n disappears.", mob, nullptr, nullptr, TO_ROOM);
+			RS.Queue.AddToQueue(3, delay_extract, mob);
 			ch->pcdata->lesserdata[LESSER_AAMON] = FAVOR_FAILED;
 			break;
 	}
@@ -1889,7 +1889,7 @@ void speech_prog_ipos(CHAR_DATA *mob, CHAR_DATA *ch, char *speech)
 		act("              $t", mob, mob->speechbuf[2], 0, TO_ROOM);
 		act("              $t", mob, mob->speechbuf[3], 0, TO_ROOM);
 
-		RS.Queue.AddToNewQueue(2, do_say_queue, mob, "Quite the worst bit of garbage I've ever had the joyless task of committing to memory.  Good day,  my rhythmless friend.");
+		RS.Queue.AddToQueue(2, do_say_queue, mob, "Quite the worst bit of garbage I've ever had the joyless task of committing to memory.  Good day,  my rhythmless friend.");
 
 		do_note(mob, "to anti-paladin");
 		do_note(mob, "subject Verse, the Worst");
@@ -1914,7 +1914,7 @@ void speech_prog_ipos(CHAR_DATA *mob, CHAR_DATA *ch, char *speech)
 		do_note(mob, "+ [at the bottom of the scroll, in florid script, is a single 'I']");
 		do_note(mob, "send");
 
-		RS.Queue.AddToNewQueue(4, send_to_char, (char *)"You feel suddenly overcome with a desire to lash out at someone verbally.\n\r", ch);
+		RS.Queue.AddToQueue(4, send_to_char, (char *)"You feel suddenly overcome with a desire to lash out at someone verbally.\n\r", ch);
 
 		ch->pcdata->lesserdata[LESSER_IPOS] = FAVOR_GRANTED;
 		ch->pcdata->learned[skill_lookup("taunt")] = 1;
@@ -1924,8 +1924,8 @@ void speech_prog_ipos(CHAR_DATA *mob, CHAR_DATA *ch, char *speech)
 			free_pstring(mob->speechbuf[i]);
 		}
 
-		RS.Queue.AddToNewQueue(5, act_queue, "With a derisive snort, $n steps through a gate and vanishes without a trace.", mob, nullptr, nullptr, TO_ROOM);
-		RS.Queue.AddToNewQueue(6, delay_extract, mob);
+		RS.Queue.AddToQueue(5, act_queue, "With a derisive snort, $n steps through a gate and vanishes without a trace.", mob, nullptr, nullptr, TO_ROOM);
+		RS.Queue.AddToQueue(6, delay_extract, mob);
 	}
 }
 
@@ -1951,11 +1951,11 @@ void speech_prog_oze(CHAR_DATA *mob, CHAR_DATA *ch, char *speech)
 
 		stop_fighting(mob, true);
 
-		RS.Queue.AddToNewQueue(3, act_queue, "Suddenly rejuvenated, Oze begins to growl deep in his torso of exposed organs.", mob, nullptr, nullptr, TO_ROOM);
-		RS.Queue.AddToNewQueue(5, do_say_queue, mob, "I would say that your deed would be remembered... but as you were the one who put me here in the first place,  I doubt very much that you would wish it so.  I take my leave.");
-		RS.Queue.AddToNewQueue(7, act_queue, "With a squelching sound, Oze thins into a gout of blood and shoots into the sky.", mob, nullptr, nullptr, TO_ROOM);
-		RS.Queue.AddToNewQueue(8, delay_extract, mob);
-		RS.Queue.AddToNewQueue(8, save_char_obj, ch);
+		RS.Queue.AddToQueue(3, act_queue, "Suddenly rejuvenated, Oze begins to growl deep in his torso of exposed organs.", mob, nullptr, nullptr, TO_ROOM);
+		RS.Queue.AddToQueue(5, do_say_queue, mob, "I would say that your deed would be remembered... but as you were the one who put me here in the first place,  I doubt very much that you would wish it so.  I take my leave.");
+		RS.Queue.AddToQueue(7, act_queue, "With a squelching sound, Oze thins into a gout of blood and shoots into the sky.", mob, nullptr, nullptr, TO_ROOM);
+		RS.Queue.AddToQueue(8, delay_extract, mob);
+		RS.Queue.AddToQueue(8, save_char_obj, ch);
 		ch->pcdata->greaterdata[GREATER_OZE] = FAVOR_GRANTED;
 		ch->pcdata->learned[skill_lookup("leech")] = 1;
 		ch->pcdata->perm_hit -= 70;
@@ -1969,8 +1969,8 @@ void speech_prog_oze(CHAR_DATA *mob, CHAR_DATA *ch, char *speech)
 		sprintf(buf, "The abyss will not forget this treachery, %s.", ch->name);
 		do_whisper(mob, buf);
 
-		RS.Queue.AddToNewQueue(1, act_queue, "The puddle of gore before you that was once a greater demon dissolves into the earth.", mob, nullptr, nullptr, TO_ROOM);
-		RS.Queue.AddToNewQueue(2, delay_extract, mob);
+		RS.Queue.AddToQueue(1, act_queue, "The puddle of gore before you that was once a greater demon dissolves into the earth.", mob, nullptr, nullptr, TO_ROOM);
+		RS.Queue.AddToQueue(2, delay_extract, mob);
 		ch->pcdata->greaterdata[GREATER_OZE] = FAVOR_FAILED;
 		return;
 	}
@@ -1995,11 +1995,11 @@ void speech_prog_gamygyn(CHAR_DATA *mob, CHAR_DATA *ch, char *speech)
 
 		act("Roaring suddenly with a thunder not unlike a thousand horses, $n rises.", mob, 0, 0, TO_ROOM);
 
-		RS.Queue.AddToNewQueue(2, act_queue, "Plunging suddenly headlong, the demon dissolves into your midsection as you scream involuntarily.", mob, nullptr, ch, TO_VICT);
-		RS.Queue.AddToNewQueue(2, act_queue, "Plunging suddenly headlong, the demon dissolves into $N's midsection as $E screams.", mob, nullptr, ch, TO_NOTVICT);
-		RS.Queue.AddToNewQueue(3, delay_extract, mob);
-		RS.Queue.AddToNewQueue(3, send_to_char, buf, ch);
-		RS.Queue.AddToNewQueue(3, sprintf, buf, (char *)"%sA dark soul writhes within you, discomfited,  and you remember your bargain.%s\n\r", get_char_color(ch, "blue"), END_COLOR(ch));
+		RS.Queue.AddToQueue(2, act_queue, "Plunging suddenly headlong, the demon dissolves into your midsection as you scream involuntarily.", mob, nullptr, ch, TO_VICT);
+		RS.Queue.AddToQueue(2, act_queue, "Plunging suddenly headlong, the demon dissolves into $N's midsection as $E screams.", mob, nullptr, ch, TO_NOTVICT);
+		RS.Queue.AddToQueue(3, delay_extract, mob);
+		RS.Queue.AddToQueue(3, send_to_char, buf, ch);
+		RS.Queue.AddToQueue(3, sprintf, buf, (char *)"%sA dark soul writhes within you, discomfited,  and you remember your bargain.%s\n\r", get_char_color(ch, "blue"), END_COLOR(ch));
 
 		init_affect(&af);
 		af.where = TO_AFFECTS;
@@ -2021,10 +2021,10 @@ void speech_prog_gamygyn(CHAR_DATA *mob, CHAR_DATA *ch, char *speech)
 
 		act("With a flourishing fanfare which seems nonetheless foreboding, $n rises.", mob, 0, 0, TO_ROOM);
 
-		RS.Queue.AddToNewQueue(1, do_tell, mob, buf);
-		RS.Queue.AddToNewQueue(1, sprintf, buf, (char *)"%s You may yet live to regret your rash decision.  Doubtless the seeds of realization sprout within you now.", ch->name);
-		RS.Queue.AddToNewQueue(2, act_queue, "Flashing a great dark light, $n vanishes from sight.", mob, nullptr, nullptr, TO_ROOM);
-		RS.Queue.AddToNewQueue(3, delay_extract, mob);
+		RS.Queue.AddToQueue(1, do_tell, mob, buf);
+		RS.Queue.AddToQueue(1, sprintf, buf, (char *)"%s You may yet live to regret your rash decision.  Doubtless the seeds of realization sprout within you now.", ch->name);
+		RS.Queue.AddToQueue(2, act_queue, "Flashing a great dark light, $n vanishes from sight.", mob, nullptr, nullptr, TO_ROOM);
+		RS.Queue.AddToQueue(3, delay_extract, mob);
 
 		ch->pcdata->greaterdata[GREATER_GAMYGYN] = FAVOR_FAILED;
 	}
@@ -2047,17 +2047,17 @@ void speech_prog_orobas(CHAR_DATA *mob, CHAR_DATA *ch, char *speech)
 
 		do_emote(mob, "smiles deviously, and you grow confused attempting to locate his lips.");
 
-		RS.Queue.AddToNewQueue(1, do_say, mob, buf);
-		RS.Queue.AddToNewQueue(1, sprintf, buf, (char *)"Very well.  I shall watch over you.  I require the corpse of another anti-paladin to warm my feet,  %s... I trust you shall not disappoint.", ch->name);
-		RS.Queue.AddToNewQueue(2, act_queue, "Before you realize what's happening, $n has planted a firm grip on your arm.", mob, nullptr, ch, TO_VICT);
-		RS.Queue.AddToNewQueue(3, act_queue, "The terrible demon's many hands begin grappling with your frame.", mob, nullptr, ch, TO_VICT);
-		RS.Queue.AddToNewQueue(5, act_queue, "A multitude of taloned fingers dig deeply into your flesh.", mob, nullptr, ch, TO_VICT);
-		RS.Queue.AddToNewQueue(6, act_queue, "$n draws $mself toward you and you scream involuntarily!", mob, nullptr, ch, TO_VICT);
-		RS.Queue.AddToNewQueue(8, act_queue, "You writhe in agony and pure horror as $n reaches down your throat...", mob, nullptr, ch, TO_VICT);
-		RS.Queue.AddToNewQueue(10, act_queue, "In a few moments, $n has vanished entirely into your body.", mob, nullptr, ch, TO_VICT);
-		RS.Queue.AddToNewQueue(11, delay_extract, mob);
-		RS.Queue.AddToNewQueue(12, send_to_char, buf, ch);
-		RS.Queue.AddToNewQueue(12, sprintf, buf, (char *)"%sA dark soul writhes within you, discomfited,  and you remember your bargain.%s\n\r", get_char_color(ch, "red"), END_COLOR(ch));
+		RS.Queue.AddToQueue(1, do_say, mob, buf);
+		RS.Queue.AddToQueue(1, sprintf, buf, (char *)"Very well.  I shall watch over you.  I require the corpse of another anti-paladin to warm my feet,  %s... I trust you shall not disappoint.", ch->name);
+		RS.Queue.AddToQueue(2, act_queue, "Before you realize what's happening, $n has planted a firm grip on your arm.", mob, nullptr, ch, TO_VICT);
+		RS.Queue.AddToQueue(3, act_queue, "The terrible demon's many hands begin grappling with your frame.", mob, nullptr, ch, TO_VICT);
+		RS.Queue.AddToQueue(5, act_queue, "A multitude of taloned fingers dig deeply into your flesh.", mob, nullptr, ch, TO_VICT);
+		RS.Queue.AddToQueue(6, act_queue, "$n draws $mself toward you and you scream involuntarily!", mob, nullptr, ch, TO_VICT);
+		RS.Queue.AddToQueue(8, act_queue, "You writhe in agony and pure horror as $n reaches down your throat...", mob, nullptr, ch, TO_VICT);
+		RS.Queue.AddToQueue(10, act_queue, "In a few moments, $n has vanished entirely into your body.", mob, nullptr, ch, TO_VICT);
+		RS.Queue.AddToQueue(11, delay_extract, mob);
+		RS.Queue.AddToQueue(12, send_to_char, buf, ch);
+		RS.Queue.AddToQueue(12, sprintf, buf, (char *)"%sA dark soul writhes within you, discomfited,  and you remember your bargain.%s\n\r", get_char_color(ch, "red"), END_COLOR(ch));
 
 		init_affect(&af);
 		af.where = TO_AFFECTS;
@@ -2080,9 +2080,9 @@ void speech_prog_orobas(CHAR_DATA *mob, CHAR_DATA *ch, char *speech)
 
 		act("Shrieks of outrage rise up from $n, arms and legs kicking out toward you.", mob, 0, 0, TO_ROOM);
 
-		RS.Queue.AddToNewQueue(1, do_say_queue, mob, "I expected nothing else.");
-		RS.Queue.AddToNewQueue(2, act_queue, "With a fierce snarl and many assorted whispers, $n streaks into the darkness.", mob, nullptr, nullptr, TO_ROOM);
-		RS.Queue.AddToNewQueue(3, delay_extract, mob);
+		RS.Queue.AddToQueue(1, do_say_queue, mob, "I expected nothing else.");
+		RS.Queue.AddToQueue(2, act_queue, "With a fierce snarl and many assorted whispers, $n streaks into the darkness.", mob, nullptr, nullptr, TO_ROOM);
+		RS.Queue.AddToQueue(3, delay_extract, mob);
 
 		ch->pcdata->greaterdata[GREATER_OROBAS] = FAVOR_FAILED;
 	}
@@ -2107,15 +2107,15 @@ void speech_prog_geryon(CHAR_DATA *mob, CHAR_DATA *ch, char *speech)
 		do_say(mob, buf);
 		do_emote(mob, "smiles pleasantly once more, reaching to his belt for a small metal tool.");
 
-		RS.Queue.AddToNewQueue(2, act_queue, "Cupping one hand around the back of your head, Geryon plunges with the tool....", mob, nullptr, ch, TO_VICT);
-		RS.Queue.AddToNewQueue(4, act_queue, "The greater demon's even, pearly teeth are the last thing your left eye sees.", mob, nullptr, ch, TO_VICT);
-		RS.Queue.AddToNewQueue(5, act_queue, "The next thing your right eye sees is a hand moving away, holding a bloody orb.", mob, nullptr, ch, TO_VICT);
-		RS.Queue.AddToNewQueue(6, act_queue, "You stifle a scream as the suddenness of the operation becomes realization.", mob, nullptr, ch, TO_VICT);
-		RS.Queue.AddToNewQueue(8, act_queue, "Geryon drops your left eye into a bag at his belt, still smiling.", mob, nullptr, ch, TO_VICT);
-		RS.Queue.AddToNewQueue(10, do_say_queue, mob, "That's a good lad!  Do try not to cry just yet,  there's nothing quite like the sting of tears in an open eye socket.  Now,  then....");
-		RS.Queue.AddToNewQueue(11, send_to_char, (char *)"The warmth of suffused power tingles through your fingers.\n\r", ch);
-		RS.Queue.AddToNewQueue(12, do_emote, mob, (char *)"bows deeply and disappears,  leaving you alone with your dark thoughts.");
-		RS.Queue.AddToNewQueue(13, delay_extract, mob);
+		RS.Queue.AddToQueue(2, act_queue, "Cupping one hand around the back of your head, Geryon plunges with the tool....", mob, nullptr, ch, TO_VICT);
+		RS.Queue.AddToQueue(4, act_queue, "The greater demon's even, pearly teeth are the last thing your left eye sees.", mob, nullptr, ch, TO_VICT);
+		RS.Queue.AddToQueue(5, act_queue, "The next thing your right eye sees is a hand moving away, holding a bloody orb.", mob, nullptr, ch, TO_VICT);
+		RS.Queue.AddToQueue(6, act_queue, "You stifle a scream as the suddenness of the operation becomes realization.", mob, nullptr, ch, TO_VICT);
+		RS.Queue.AddToQueue(8, act_queue, "Geryon drops your left eye into a bag at his belt, still smiling.", mob, nullptr, ch, TO_VICT);
+		RS.Queue.AddToQueue(10, do_say_queue, mob, "That's a good lad!  Do try not to cry just yet,  there's nothing quite like the sting of tears in an open eye socket.  Now,  then....");
+		RS.Queue.AddToQueue(11, send_to_char, (char *)"The warmth of suffused power tingles through your fingers.\n\r", ch);
+		RS.Queue.AddToQueue(12, do_emote, mob, (char *)"bows deeply and disappears,  leaving you alone with your dark thoughts.");
+		RS.Queue.AddToQueue(13, delay_extract, mob);
 
 		ch->pcdata->greaterdata[GREATER_GERYON] = GERYON_EYE;
 		return;
@@ -2129,16 +2129,16 @@ void speech_prog_geryon(CHAR_DATA *mob, CHAR_DATA *ch, char *speech)
 		do_say(mob, buf);
 		do_emote(mob, "smiles pleasantly once more, reaching to his belt for a very sharp knife.");
 
-		RS.Queue.AddToNewQueue(2, act_queue, "Seizing your hand abruptly, Geryon places the blade of his knife against it.", mob, nullptr, ch, TO_VICT);
-		RS.Queue.AddToNewQueue(4, act_queue, "With a quick sawing motion, the greater demon looses your left index finger!", mob, nullptr, ch, TO_VICT);
-		RS.Queue.AddToNewQueue(5, act_queue, "Blood pounding in your ears, you're unsure whether the scream you hear is yours.", mob, nullptr, ch, TO_VICT);
-		RS.Queue.AddToNewQueue(6, act_queue, "Catching the flying finger in his hand, Geryon places it into a bag at his belt.", mob, nullptr, ch, TO_VICT);
-		RS.Queue.AddToNewQueue(7, act_queue, "Geryon releases your wrist, and gouts of blood begin to pour from the wound.", mob, nullptr, ch, TO_VICT);
-		RS.Queue.AddToNewQueue(8, act_queue, "Geryon flashes his handsome smile and pushes stray hair back from his face.", mob, nullptr, ch, TO_VICT);
-		RS.Queue.AddToNewQueue(10, do_say_queue, mob, "Well done, my boy.  Just stop up that stump you've got,  or you'll bleed to death before I've gone!  Now,  then...");
-		RS.Queue.AddToNewQueue(11, send_to_char, (char *)"The warmth of suffused power tingles through your eyes.\n\r", ch);
-		RS.Queue.AddToNewQueue(12, do_emote, mob, (char *)"bows deeply and disappears,  leaving you alone with your dark thoughts.");
-		RS.Queue.AddToNewQueue(13, delay_extract, mob);
+		RS.Queue.AddToQueue(2, act_queue, "Seizing your hand abruptly, Geryon places the blade of his knife against it.", mob, nullptr, ch, TO_VICT);
+		RS.Queue.AddToQueue(4, act_queue, "With a quick sawing motion, the greater demon looses your left index finger!", mob, nullptr, ch, TO_VICT);
+		RS.Queue.AddToQueue(5, act_queue, "Blood pounding in your ears, you're unsure whether the scream you hear is yours.", mob, nullptr, ch, TO_VICT);
+		RS.Queue.AddToQueue(6, act_queue, "Catching the flying finger in his hand, Geryon places it into a bag at his belt.", mob, nullptr, ch, TO_VICT);
+		RS.Queue.AddToQueue(7, act_queue, "Geryon releases your wrist, and gouts of blood begin to pour from the wound.", mob, nullptr, ch, TO_VICT);
+		RS.Queue.AddToQueue(8, act_queue, "Geryon flashes his handsome smile and pushes stray hair back from his face.", mob, nullptr, ch, TO_VICT);
+		RS.Queue.AddToQueue(10, do_say_queue, mob, "Well done, my boy.  Just stop up that stump you've got,  or you'll bleed to death before I've gone!  Now,  then...");
+		RS.Queue.AddToQueue(11, send_to_char, (char *)"The warmth of suffused power tingles through your eyes.\n\r", ch);
+		RS.Queue.AddToQueue(12, do_emote, mob, (char *)"bows deeply and disappears,  leaving you alone with your dark thoughts.");
+		RS.Queue.AddToQueue(13, delay_extract, mob);
 
 		ch->pcdata->greaterdata[GREATER_GERYON] = GERYON_FINGER;
 		return;
@@ -2161,12 +2161,12 @@ void speech_prog_cimeries(CHAR_DATA *mob, CHAR_DATA *ch, char *speech)
 
 		send_to_char("The sound of Cimeries' claw grinding against your skull fills your soul...", ch);
 
-		RS.Queue.AddToNewQueue(2, act_queue, "Slowly, with a disgusting grin, Cimeries scrapes your ear away from your head.", mob, nullptr, ch, TO_VICT);
-		RS.Queue.AddToNewQueue(3, act_queue, "The sound of tearing flesh nearly makes you vomit, and pain buckles your knees.", mob, nullptr, ch, TO_VICT);
-		RS.Queue.AddToNewQueue(5, act_queue, "Finally, having finished his hideous operation, Cimeries strikes your chest.", mob, nullptr, ch, TO_VICT);
-		RS.Queue.AddToNewQueue(6, act_queue, "You seem to absorb the blow more readily than you'd have thought possible.", mob, nullptr, ch, TO_VICT);
-		RS.Queue.AddToNewQueue(8, act_queue, "Suddenly, the monstrous demon fades into shadows and dissipates.", mob, nullptr, nullptr, TO_ROOM);
-		RS.Queue.AddToNewQueue(9, delay_extract, mob);
+		RS.Queue.AddToQueue(2, act_queue, "Slowly, with a disgusting grin, Cimeries scrapes your ear away from your head.", mob, nullptr, ch, TO_VICT);
+		RS.Queue.AddToQueue(3, act_queue, "The sound of tearing flesh nearly makes you vomit, and pain buckles your knees.", mob, nullptr, ch, TO_VICT);
+		RS.Queue.AddToQueue(5, act_queue, "Finally, having finished his hideous operation, Cimeries strikes your chest.", mob, nullptr, ch, TO_VICT);
+		RS.Queue.AddToQueue(6, act_queue, "You seem to absorb the blow more readily than you'd have thought possible.", mob, nullptr, ch, TO_VICT);
+		RS.Queue.AddToQueue(8, act_queue, "Suddenly, the monstrous demon fades into shadows and dissipates.", mob, nullptr, nullptr, TO_ROOM);
+		RS.Queue.AddToQueue(9, delay_extract, mob);
 
 		ch->pcdata->greaterdata[GREATER_CIMERIES] = CIMERIES_EAR;
 		ch->pcdata->beauty = std::max(1, ch->pcdata->beauty - 4);
@@ -2179,12 +2179,12 @@ void speech_prog_cimeries(CHAR_DATA *mob, CHAR_DATA *ch, char *speech)
 
 		send_to_char("You feel Cimeries' claw dig into the bridge of your nose and pull...", ch);
 
-		RS.Queue.AddToNewQueue(2, act_queue, "Slowly, with a disgusting grin, Cimeries scrapes your nose away from your head.", mob, nullptr, ch, TO_VICT);
-		RS.Queue.AddToNewQueue(3, act_queue, "The sound of tearing flesh nearly makes you vomit, and pain buckles your knees.", mob, nullptr, ch, TO_VICT);
-		RS.Queue.AddToNewQueue(5, act_queue, "Finally, having finished his hideous operation, Cimeries strikes your chest.", mob, nullptr, ch, TO_VICT);
-		RS.Queue.AddToNewQueue(6, act_queue, "You seem to absorb the blow more readily than you'd have thought possible.", mob, nullptr, ch, TO_VICT);
-		RS.Queue.AddToNewQueue(8, act_queue, "Suddenly, the monstrous demon fades into shadows and dissipates.", mob, nullptr, nullptr, TO_ROOM);
-		RS.Queue.AddToNewQueue(9, delay_extract, mob);
+		RS.Queue.AddToQueue(2, act_queue, "Slowly, with a disgusting grin, Cimeries scrapes your nose away from your head.", mob, nullptr, ch, TO_VICT);
+		RS.Queue.AddToQueue(3, act_queue, "The sound of tearing flesh nearly makes you vomit, and pain buckles your knees.", mob, nullptr, ch, TO_VICT);
+		RS.Queue.AddToQueue(5, act_queue, "Finally, having finished his hideous operation, Cimeries strikes your chest.", mob, nullptr, ch, TO_VICT);
+		RS.Queue.AddToQueue(6, act_queue, "You seem to absorb the blow more readily than you'd have thought possible.", mob, nullptr, ch, TO_VICT);
+		RS.Queue.AddToQueue(8, act_queue, "Suddenly, the monstrous demon fades into shadows and dissipates.", mob, nullptr, nullptr, TO_ROOM);
+		RS.Queue.AddToQueue(9, delay_extract, mob);
 
 		ch->pcdata->greaterdata[GREATER_CIMERIES] = CIMERIES_NOSE;
 		ch->pcdata->beauty = std::max(1, ch->pcdata->beauty - 4);
@@ -2461,8 +2461,8 @@ void greet_prog_tower_shopkeeper(CHAR_DATA *mob, CHAR_DATA *ch)
 
 	act("$N glances over his shoulder at $n and grumbles.", ch, 0, mob, TO_ROOM);
 	act("$n glances over his shoulder at you and grumbles.", mob, 0, ch, TO_VICT);
-	RS.Queue.AddToNewQueue(4, do_say_queue, mob, "Well,  are ye goin' to buy somethin' or are ye just going t'stand there and stare at me!?");
-	RS.Queue.AddToNewQueue(24, do_astrip, mob, (char *)"");
+	RS.Queue.AddToQueue(4, do_say_queue, mob, "Well,  are ye goin' to buy somethin' or are ye just going t'stand there and stare at me!?");
+	RS.Queue.AddToQueue(24, do_astrip, mob, (char *)"");
 }
 
 void pulse_prog_wizard_summon(CHAR_DATA *mob)
@@ -2515,7 +2515,7 @@ void pulse_prog_wizard_summon(CHAR_DATA *mob)
 
 				do_look(vch, "auto");
 
-				RS.Queue.AddToNewQueue(1, do_say_queue, mob, "Please be more careful, and examine your surroundings.  You'll live longer.");
+				RS.Queue.AddToQueue(1, do_say_queue, mob, "Please be more careful, and examine your surroundings.  You'll live longer.");
 
 				affect_remove(mob, paf);
 			}
@@ -3167,15 +3167,15 @@ void fight_prog_law_subdue(CHAR_DATA *mob, CHAR_DATA *ch)
 		char_from_room(ch);
 		char_to_room(ch, get_room_index(5));
 
-		RS.Queue.AddToNewQueue(10, send_to_char, (char *)"You are dimly aware of being dragged along the ground...\n\r", ch);
-		RS.Queue.AddToNewQueue(19, wake_up, ch);
-		RS.Queue.AddToNewQueue(19, affect_strip, ch, gsn_subdue);
-		RS.Queue.AddToNewQueue(19, char_to_room, ch, pRoom);
-		RS.Queue.AddToNewQueue(19, char_from_room, ch);
-		RS.Queue.AddToNewQueue(20, send_to_char, (char *)"You are shaken awake by a fuzzy man, as seen through your own personal haze.\n\r", ch);
-		RS.Queue.AddToNewQueue(20, act_queue, "$N comes to $S knees holding the back of $S head.", nullptr, nullptr, ch, TO_NOTVICT);
-		RS.Queue.AddToNewQueue(21, send_to_char, buf, ch);
-		RS.Queue.AddToNewQueue(21, sprintf, buf, (char *)"A Hydra trooper tells you '%sAnd stay out of Cimar, ye %s!%s'\n\r", get_char_color(ch, "tells"), get_insult(ch), END_COLOR(ch));
+		RS.Queue.AddToQueue(10, send_to_char, (char *)"You are dimly aware of being dragged along the ground...\n\r", ch);
+		RS.Queue.AddToQueue(19, wake_up, ch);
+		RS.Queue.AddToQueue(19, affect_strip, ch, gsn_subdue);
+		RS.Queue.AddToQueue(19, char_to_room, ch, pRoom);
+		RS.Queue.AddToQueue(19, char_from_room, ch);
+		RS.Queue.AddToQueue(20, send_to_char, (char *)"You are shaken awake by a fuzzy man, as seen through your own personal haze.\n\r", ch);
+		RS.Queue.AddToQueue(20, act_queue, "$N comes to $S knees holding the back of $S head.", nullptr, nullptr, ch, TO_NOTVICT);
+		RS.Queue.AddToQueue(21, send_to_char, buf, ch);
+		RS.Queue.AddToQueue(21, sprintf, buf, (char *)"A Hydra trooper tells you '%sAnd stay out of Cimar, ye %s!%s'\n\r", get_char_color(ch, "tells"), get_insult(ch), END_COLOR(ch));
 	}
 	else
 	{

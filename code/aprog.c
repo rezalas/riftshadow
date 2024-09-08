@@ -282,8 +282,8 @@ void tick_prog_ilopheth(AREA_DATA *area)
 					END_COLOR(pedroom->people));
 				act(buf, pedroom->people, 0, 0, TO_ALL);
 
-				RS.Queue.AddToNewQueue(4, act_queue, "The opacity of the crystal sphere appears to fade, and it begins to glow a brilliant white!", pedroom->people, nullptr, nullptr, TO_ALL);
-				RS.Queue.AddToNewQueue(7, act_queue, "To the northwest, an immense pillar of light ascends from the forest into the heavens!", pedroom->people, nullptr, nullptr, TO_ALL);
+				RS.Queue.AddToQueue(4, act_queue, "The opacity of the crystal sphere appears to fade, and it begins to glow a brilliant white!", pedroom->people, nullptr, nullptr, TO_ALL);
+				RS.Queue.AddToQueue(7, act_queue, "To the northwest, an immense pillar of light ascends from the forest into the heavens!", pedroom->people, nullptr, nullptr, TO_ALL);
 			}
 
 			for (obj = portroom->contents; obj; obj = obj->next_content)
@@ -416,10 +416,10 @@ void sun_prog_ilopheth(AREA_DATA *area)
 	switch (sun)
 	{
 		case SolarPosition::Sunrise:
-			RS.Queue.AddToNewQueue(15, zone_echo, area,	(char *)"With the beginning of the day sounds of life fill the valley, as the forest comes alive.");
+			RS.Queue.AddToQueue(15, zone_echo, area, (char *)"With the beginning of the day sounds of life fill the valley, as the forest comes alive.");
 			break;
 		case SolarPosition::Sunset:
-			RS.Queue.AddToNewQueue(15, zone_echo, area, (char *)"The forest grows still, as the night sky settles over the valley.");
+			RS.Queue.AddToQueue(15, zone_echo, area, (char *)"The forest grows still, as the night sky settles over the valley.");
 			break;
 	}
 }

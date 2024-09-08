@@ -25,7 +25,7 @@ public:
 	/// @param func: The function to execute at the specified time.
 	/// @param ...args: Variadic arguments used to call the function.
 	template<class Func, class... Args>
-	void AddToNewQueue(int nTimer, Func func, Args &&...args)
+	void AddToQueue(int nTimer, Func func, Args &&...args)
 	{
 		if(nTimer < 0)
 			Logger.Warn("Negative Queue Timer - NumArgs: {}", sizeof...(Args));	
@@ -41,7 +41,7 @@ public:
 
 	/// Processes all items on the queue. Any entry that has a timer of zero gets executed.
 	/// Once all items are processed, those functions that have executed are removed from the queue.
-	void ProcessNewQueue()
+	void ProcessQueue()
 	{
 		newQueue.erase(
 			std::remove_if(newQueue.begin(), newQueue.end(), [](const auto& item)
@@ -65,7 +65,7 @@ public:
 	/// This function applies to both directions (eg. either character being affected or is affecting another pc or environment).
 	/// @param qChar: The character to lookup in the queue.
 	/// @return true if there are entries related to the character in the queue; otherwise false.
-	bool HasNewQueuePending(CHAR_DATA *qChar)
+	bool HasQueuePending(CHAR_DATA *qChar)
 	{
 		for (auto& q : newQueue)
 		{
@@ -81,7 +81,7 @@ public:
 
 	/// Deletes all entries in the queue pertaining to the specified character.
 	/// @param qChar: The character to lookup in the queue.
-	void DeleteNewQueuedEventsInvolving(CHAR_DATA *qChar)
+	void DeleteQueuedEventsInvolving(CHAR_DATA *qChar)
 	{
 		int deleted = 0;
 		newQueue.erase(

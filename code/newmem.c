@@ -197,7 +197,7 @@ void do_memtest(CHAR_DATA *ch, char *argument)
 	char buf[MSL];
 	CHAR_DATA *qch;
 	argument = one_argument(argument, buf);
-	RS.Queue.AddToNewQueue(6, do_bash_queue, ch, "Calenduil");
+	RS.Queue.AddToQueue(6, do_bash_queue, ch, "Calenduil");
 	return;
 
 	//TODO: what the what???

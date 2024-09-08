@@ -2724,7 +2724,7 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
 				}
 
 				ch->gold = 500;
-				RS.Queue.AddToNewQueue(3, create_academy_pet, ch);
+				RS.Queue.AddToQueue(3, create_academy_pet, ch);
 				// academy pet here, on queue
 			}
 			else if (ch->in_room != nullptr)
