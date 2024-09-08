@@ -1755,6 +1755,11 @@ void zone_echo(AREA_DATA *area, char *echo)
 	}
 }
 
+void zone_echo_queue(AREA_DATA *area, std::string echo)
+{
+	zone_echo(area, echo.data());
+}
+
 bool old_is_adjacent_area(AREA_DATA *area, AREA_DATA *area2)
 {
 	ROOM_INDEX_DATA *to_room;

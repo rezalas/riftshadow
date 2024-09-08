@@ -467,14 +467,14 @@ void speech_prog_ilopheth_shack(ROOM_INDEX_DATA *room, CHAR_DATA *ch, char *spee
 				do_say(mob, "So he told you my name, did he?  You're here to learn, eh?  They always are.  Always coming, "\
 							"wanting what's mine.  Wanting, taking, with their grubby minds and dull hands, yes.");
 				RS.Queue.AddToQueue(5, do_say_queue, mob, "Well you can't have it!");
-				RS.Queue.AddToQueue(8, do_emote, mob, (char *)"pauses for a moment and strokes his long,  ragged beard.");
+				RS.Queue.AddToQueue(8, do_emote_queue, mob, "pauses for a moment and strokes his long,  ragged beard.");
 				RS.Queue.AddToQueue(10, do_say_queue, mob, "Unless....  Yes,  yes... you can help me!  Ah,  my turn to grub!");
 				RS.Queue.AddToQueue(13, do_say_queue, mob,
 									"Can't go out there,  or they'd tear me to pieces,  yes!  Crack my skull open "\
 									"and snatch my brains and all their knowledge!  But I need something....");
 				RS.Queue.AddToQueue(15, do_say_queue, mob, "Moss!  Not just any moss.  Special moss.  White moss.  Glows,  it does.");
 				RS.Queue.AddToQueue(17, do_say_queue, mob, "So,  you'll get it for me,  yes?");
-				RS.Queue.AddToQueue(18, do_emote, mob, (char *)"peers at you expectantly.");
+				RS.Queue.AddToQueue(18, do_emote_queue, mob, "peers at you expectantly.");
 			}
 
 			break;
@@ -628,7 +628,7 @@ void give_prog_ilopheth_hermit(CHAR_DATA *mob, CHAR_DATA *ch, OBJ_DATA *obj)
 		RS.Queue.AddToQueue(3, do_say_queue, mob,
 				"This is it!  You've found it!  Oh yes, yes!  A fine specimen indeed!  Not bad for "\
 				"some grubber, no,  no,  not bad at all!");
-		RS.Queue.AddToQueue(7, do_emote, mob, (char *)"pauses in his examination of the moss and peers at you.");
+		RS.Queue.AddToQueue(7, do_emote_queue, mob, "pauses in his examination of the moss and peers at you.");
 		RS.Queue.AddToQueue(10, do_say_queue, mob,
 				"Oh yes!  You want me to help you.  With magic, yes?  Knowledge...  powerful "\
 				"magic,  perhaps you can handle it.  Perhaps... perhaps not!  Perhaps your head "\
@@ -639,12 +639,12 @@ void give_prog_ilopheth_hermit(CHAR_DATA *mob, CHAR_DATA *ch, OBJ_DATA *obj)
 		RS.Queue.AddToQueue(18, do_say_queue, mob,
 				"Mysteries... no... not this one.  Arcane... no.  Curses of Ba... hrm, hee hee,  "\
 				"no not that one either.  Ah,  here we go!  Secrets of the Talismanic Powers.");
-		RS.Queue.AddToQueue(23, do_emote, mob, (char *)"slowly straightens and totters toward you,  cradling the tome in his hands.");
+		RS.Queue.AddToQueue(23, do_emote_queue, mob, "slowly straightens and totters toward you,  cradling the tome in his hands.");
 		RS.Queue.AddToQueue(27, do_say_queue, mob,
 				"Here it is... right on page... what the... grubbers!  The page.. it's stolen!  "\
 				"Gone!  Vanished into thin air!  You stole it!  I'll kill you!");
 		RS.Queue.AddToQueue(31, do_say_queue, mob, "Oh, wait.  No, you didn't.  Yes,  yes,  I know.  Those grubbers must've got it!");
-		RS.Queue.AddToQueue(34, do_emote, mob, (char *)"waves his arms around wildly.  VERY wildly.  He must be seriously perturbed.");
+		RS.Queue.AddToQueue(34, do_emote_queue, mob, "waves his arms around wildly.  VERY wildly.  He must be seriously perturbed.");
 		RS.Queue.AddToQueue(37, do_say_queue, mob,
 				"Grubbers!  Well,  a secret I'll tell you.  Yes,  a secret!  I didn't always used "\
 				"to live here!  No no!");
@@ -665,7 +665,7 @@ void give_prog_ilopheth_hermit(CHAR_DATA *mob, CHAR_DATA *ch, OBJ_DATA *obj)
 		RS.Queue.AddToQueue(71, do_look_queue, ch, "auto");
 		RS.Queue.AddToQueue(71, char_to_room, ch, outside);
 		RS.Queue.AddToQueue(71, char_from_room, ch);
-		RS.Queue.AddToQueue(71, do_emote, mob, (char *)"hustles you rapidly out of his shack.");
+		RS.Queue.AddToQueue(71, do_emote_queue, mob, "hustles you rapidly out of his shack.");
 
 		ch->pcdata->quests[TALISMANIC_QUEST] = 4;
 		return;
@@ -681,8 +681,8 @@ void give_prog_ilopheth_hermit(CHAR_DATA *mob, CHAR_DATA *ch, OBJ_DATA *obj)
 		RS.Queue.AddToQueue(8, do_say_queue, mob,
 				"Oh, wait.  No you didn't.  Now I can show you what I've been meaning to all this "\
 				"time,  hee hee.  I think you'll like it,  oh yes you will.");
-		RS.Queue.AddToQueue(13, do_emote, mob, (char *)"inserts the page into the book,  confirming the perfect fit with a glance.");
-		RS.Queue.AddToQueue(16, do_emote, mob, (char *)"totters over to your side and begins to murmur softly.");
+		RS.Queue.AddToQueue(13, do_emote_queue, mob, "inserts the page into the book,  confirming the perfect fit with a glance.");
+		RS.Queue.AddToQueue(16, do_emote_queue, mob, "totters over to your side and begins to murmur softly.");
 		RS.Queue.AddToQueue(20, do_emote, mob,
 			(char *)"speaks with remarkable lucidity for one so seemingly deranged,  guiding you "\
 					"through an explanation of the arcane tome.");
@@ -696,11 +696,11 @@ void give_prog_ilopheth_hermit(CHAR_DATA *mob, CHAR_DATA *ch, OBJ_DATA *obj)
 		RS.Queue.AddToQueue(34, do_say_queue, mob,
 				"Well,  you've taken enough of my time.  You'll have to be on your way now... I'm "\
 				"expecting company,  hee hee!");
-		RS.Queue.AddToQueue(37, do_emote, mob, (char *)"winks mischievously.");
+		RS.Queue.AddToQueue(37, do_emote_queue, mob, "winks mischievously.");
 		RS.Queue.AddToQueue(40, do_look_queue, ch, "auto");
 		RS.Queue.AddToQueue(40, char_to_room, ch, outside);
 		RS.Queue.AddToQueue(40, char_from_room, ch);
-		RS.Queue.AddToQueue(40, do_emote, mob, (char *)"hustles you rapidly out of his shack.");
+		RS.Queue.AddToQueue(40, do_emote_queue, mob, "hustles you rapidly out of his shack.");
 		RS.Queue.AddToQueue(41, talismanic_reward, ch);
 	}
 

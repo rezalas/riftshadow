@@ -7999,7 +7999,7 @@ void spell_mana_infusion(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	af1.owner = ch;
 	new_affect_to_char(victim, &af1);
 
-	RS.Queue.AddToQueue(2, damage_queue, ch, victim, level, DAM_OTHER, HIT_UNBLOCKABLE, HIT_NOADD, dammod, (char *)"the escaping mana*");
+	RS.Queue.AddToQueue(2, damage_queued, ch, victim, level, DAM_OTHER, HIT_UNBLOCKABLE, HIT_NOADD, dammod, "the escaping mana*");
 	RS.Queue.AddToQueue(2, affect_strip, victim, gsn_mana_infusion);
 	RS.Queue.AddToQueue(2, act_queue, "You scream in pain as the mana rushes from your body!", victim, nullptr, nullptr, TO_CHAR);
 	RS.Queue.AddToQueue(2, act_queue, "As the mana rushes out of $n's body, $e cries out in pain!", victim, nullptr, nullptr, TO_ROOM);

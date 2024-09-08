@@ -1708,7 +1708,7 @@ void verb_prog_listen_conversation(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 	int i = 0, rand, inc = 2, tc = 0, cres = 0, ccount[MAX_CABAL];
 	CHAR_DATA *fat, *minotaur, *violet;
 	char buf[MSL];
-	char *temp = (char *)'\0';
+	std::string temp;
 	CRow row;
 
 	rand = dice(1, 4);
@@ -1736,9 +1736,8 @@ void verb_prog_listen_conversation(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 		if (cres)
 		{
 			row = RS.SQL.GetRow();
-			temp = palloc_string(row[0]);
-			RS.Queue.AddToQueue(inc * 5, free, temp);
-			RS.Queue.AddToQueue(inc * 5, say_to, fat, ch, (char *)"Just do yourself a favor, and watch out for $t.", temp);
+			temp = std::string(row[0]);
+			RS.Queue.AddToQueue(inc * 5, say_to_queue, fat, ch, "Just do yourself a favor, and watch out for $t.", temp);
 		}
 	}
 	else if (rand == 2)
@@ -1760,12 +1759,11 @@ void verb_prog_listen_conversation(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 				if(atoi(row2[0]) > tc)
 				{
 					tc = atoi(row2[0]);
-					temp = palloc_string(row[0]);
+					temp = std::string(row[0]);
 					mysql_free_result(res2);
 				}
 			}
-			RS.Queue.AddToQueue(inc*4, free,temp);
-			RS.Queue.AddToQueue(inc*4, say_to, fat, ch, (char*)"Haha, $t got him again!  By Rygath's teeth, that's a fine thief...", temp);
+			RS.Queue.AddToQueue(inc*4, say_to_queue, fat, ch, "Haha, $t got him again!  By Rygath's teeth, that's a fine thief...", temp);
 		*/
 	}
 	/*
@@ -1796,13 +1794,12 @@ void verb_prog_listen_conversation(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 			if(atoi(row2[0]) > tc)
 			{
 				tc = atoi(row2[0]);
-				temp = talloc_string(row[0]);
+				temp = std::string(row[0]);
 				mysql_free_result(res2);
 			}
 		}
 
-		add_one_to_queue(inc*4,free,temp);
-		add_four_to_queue(inc*4,say_to,fat,ch,"$t has been inducting people like mad, and I think I've got a shot.", temp);
+		add_four_to_queue(inc*4,say_to_queue,fat,ch,"$t has been inducting people like mad, and I think I've got a shot.", temp);
 		mprog_emote(inc*5,"gurgles quietly into his drink.", minotaur, ch);
 	}
 	*/
@@ -1834,8 +1831,8 @@ void verb_prog_listen_conversation(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 				tc = i;
 		}
 
-		RS.Queue.AddToQueue(inc*6, say_to, violet, ch,
-			(char*)"Well then, I suppose it's only a matter of time before we're all members of $t", cabal_table[tc].name);
+		RS.Queue.AddToQueue(inc*6, say_to_queue, violet, ch,
+			"Well then, I suppose it's only a matter of time before we're all members of $t", std::string(cabal_table[tc].name));
 		mprog_say(inc*7,"They're really cleaning house out there.", violet, ch);
 		*/
 	}
@@ -3672,13 +3669,17 @@ void act_to_room(void *vo1, void *vo2)
 	act((char *)vo1, pRoom->people, 0, 0, TO_ALL);
 }
 
+void act_to_room_queue(std::string format, ROOM_INDEX_DATA *room)
+{
+	act_to_room((void *)format.data(), (void *)room);
+}
+
 void verb_prog_iseldheim_lever_pull(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 {
 
 	ROOM_INDEX_DATA *lRoom = ch->in_room, *eleRoom, *tRoom = nullptr;
 	int eDir = obj->value[0], i;
 	bool elInTransit = true;
-	char *mmsg;
 	eleRoom = get_room_index(obj->value[2]);
 
 	if (!eleRoom)
@@ -3706,17 +3707,17 @@ void verb_prog_iseldheim_lever_pull(OBJ_DATA *obj, CHAR_DATA *ch, char *argument
 		return;
 	}
 
-	mmsg = talloc_string("A loud grinding noise can be heard as the gears above the lift begin to turn.");
+	auto mmsg = std::string("A loud grinding noise can be heard as the gears above the lift begin to turn.");
 	eleRoom->mana_rate = 101; // ele in use
 
 	if (!lRoom->exit[eDir]->u1.to_room)
 	{ // call elevator SIR!
-		RS.Queue.AddToQueue(2, act_to_room, mmsg, lRoom);
-		RS.Queue.AddToQueue(2, act_to_room, mmsg, tRoom);
-		RS.Queue.AddToQueue(2, act_to_room, mmsg, eleRoom);
+		RS.Queue.AddToQueue(2, act_to_room_queue, mmsg, lRoom);
+		RS.Queue.AddToQueue(2, act_to_room_queue, mmsg, tRoom);
+		RS.Queue.AddToQueue(2, act_to_room_queue, mmsg, eleRoom);
 		RS.Queue.AddToQueue(3, close_elevator, eleRoom);
-		RS.Queue.AddToQueue(5, act_to_room, (char *)"With a lurch, the lift begins to accelerate.", eleRoom);
-		RS.Queue.AddToQueue(9, act_to_room, (char *)"The lift shudders as it slowly comes to a halt.", eleRoom);
+		RS.Queue.AddToQueue(5, act_to_room_queue, "With a lurch, the lift begins to accelerate.", eleRoom);
+		RS.Queue.AddToQueue(9, act_to_room_queue, "The lift shudders as it slowly comes to a halt.", eleRoom);
 		RS.Queue.AddToQueue(10, open_elevator, eleRoom, lRoom);
 
 		act("You pull the lever into the down position.", ch, 0, 0, TO_CHAR);
@@ -3725,12 +3726,12 @@ void verb_prog_iseldheim_lever_pull(OBJ_DATA *obj, CHAR_DATA *ch, char *argument
 	else if (lRoom->exit[eDir]->u1.to_room)
 	{ // elevator is here, we can send it back up
 		tRoom = get_room_index(obj->value[1]);
-		RS.Queue.AddToQueue(2, act_to_room, mmsg, lRoom);
-		RS.Queue.AddToQueue(2, act_to_room, mmsg, tRoom);
-		RS.Queue.AddToQueue(2, act_to_room, mmsg, eleRoom);
+		RS.Queue.AddToQueue(2, act_to_room_queue, mmsg, lRoom);
+		RS.Queue.AddToQueue(2, act_to_room_queue, mmsg, tRoom);
+		RS.Queue.AddToQueue(2, act_to_room_queue, mmsg, eleRoom);
 		RS.Queue.AddToQueue(3, close_elevator, eleRoom);
-		RS.Queue.AddToQueue(5, act_to_room, (char *)"With a lurch, the lift begins to accelerate.", eleRoom);
-		RS.Queue.AddToQueue(9, act_to_room, (char *)"The lift shudders as it slowly comes to a halt.", eleRoom);
+		RS.Queue.AddToQueue(5, act_to_room_queue, "With a lurch, the lift begins to accelerate.", eleRoom);
+		RS.Queue.AddToQueue(9, act_to_room_queue, "The lift shudders as it slowly comes to a halt.", eleRoom);
 		RS.Queue.AddToQueue(10, open_elevator, eleRoom, tRoom);
 
 		act("You pull the lever into the up position.", ch, 0, 0, TO_CHAR);

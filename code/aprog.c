@@ -416,10 +416,10 @@ void sun_prog_ilopheth(AREA_DATA *area)
 	switch (sun)
 	{
 		case SolarPosition::Sunrise:
-			RS.Queue.AddToQueue(15, zone_echo, area, (char *)"With the beginning of the day sounds of life fill the valley, as the forest comes alive.");
+			RS.Queue.AddToQueue(15, zone_echo_queue, area, "With the beginning of the day sounds of life fill the valley, as the forest comes alive.");
 			break;
 		case SolarPosition::Sunset:
-			RS.Queue.AddToQueue(15, zone_echo, area, (char *)"The forest grows still, as the night sky settles over the valley.");
+			RS.Queue.AddToQueue(15, zone_echo_queue, area, "The forest grows still, as the night sky settles over the valley.");
 			break;
 	}
 }

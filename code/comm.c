@@ -3027,6 +3027,11 @@ void send_to_char(const char *txt, CHAR_DATA *ch)
 		write_to_buffer(ch->desc, txt, strlen(txt));
 }
 
+void send_to_char_queue (std::string txt, CHAR_DATA *ch)
+{
+	send_to_char(txt.c_str(), ch);
+}
+
 void send_to_chars(const char *txt, CHAR_DATA *ch, int min, ...)
 {
 	if (txt != nullptr && ch->desc != nullptr)

@@ -5079,3 +5079,8 @@ int damage_queue(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int damtype, bool bl
 {
 	return damage_new(ch, victim, dam, gsn_bash, damtype, true, blockable, add, mult, dnoun);
 }
+
+int damage_queued(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int damtype, bool blockable, int add, int mult, std::string dnoun)
+{
+	return damage_new(ch, victim, dam, gsn_bash, damtype, true, blockable, add, mult, dnoun.data());
+}

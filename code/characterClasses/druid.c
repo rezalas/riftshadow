@@ -101,7 +101,7 @@ void spell_tangleroot(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	if (number_percent() > 10)
 	{
 		RS.Queue.AddToQueue(2, LAG_CHAR, victim, (2 * PULSE_VIOLENCE));
-		RS.Queue.AddToQueue(2, damage_queue, ch, victim, dam, DAM_BASH, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, (char *)"entangling roots*");
+		RS.Queue.AddToQueue(2, damage_queued, ch, victim, dam, DAM_BASH, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "entangling roots*");
 		RS.Queue.AddToQueue(2, act_queue, "A tangleroot bursts out of the ground and entangles $N!", ch, nullptr, victim, TO_NOTVICT);
 		RS.Queue.AddToQueue(2, act_queue, "A tangleroot bursts out of the ground and entangles you!", ch, nullptr, victim, TO_VICT);
 		RS.Queue.AddToQueue(2, act_queue, "A tangleroot bursts out of the ground and entangles $N!", ch, nullptr, victim, TO_CHAR);

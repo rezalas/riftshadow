@@ -162,6 +162,7 @@ void stop_idling (CHAR_DATA *ch);
  * Write to one char.
  */
 void send_to_char (const char *txt, CHAR_DATA *ch);
+void send_to_char_queue (std::string txt, CHAR_DATA *ch);
 void send_to_chars (const char *txt, CHAR_DATA *ch, int min, ...);
 /*
  * Send a page to one char.

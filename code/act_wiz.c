@@ -6322,6 +6322,11 @@ void do_astrip(CHAR_DATA *ch, char *argument)
 		send_to_char("All affects stripped from yourself.\n\r", ch);
 }
 
+void do_astrip_queue (CHAR_DATA *ch, std::string argument)
+{
+	do_astrip(ch, argument.data());
+}
+
 void do_limcounter(CHAR_DATA *ch, char *argument)
 {
 	OBJ_INDEX_DATA *pObjIndex;
