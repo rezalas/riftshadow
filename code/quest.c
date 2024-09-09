@@ -633,9 +633,9 @@ void give_prog_ilopheth_hermit(CHAR_DATA *mob, CHAR_DATA *ch, OBJ_DATA *obj)
 				"Oh yes!  You want me to help you.  With magic, yes?  Knowledge...  powerful "\
 				"magic,  perhaps you can handle it.  Perhaps... perhaps not!  Perhaps your head "\
 				"will crack like a delicate little egg,  hee hee!");
-		RS.Queue.AddToQueue(15, do_emote, mob,
-			(char *)"goes over to a towering stack of books and scraps in a far corner of the shack,  "\
-					"and begins to rummage.");
+		RS.Queue.AddToQueue(15, do_emote_queue, mob,
+				"goes over to a towering stack of books and scraps in a far corner of the shack,  "\
+				"and begins to rummage.");
 		RS.Queue.AddToQueue(18, do_say_queue, mob,
 				"Mysteries... no... not this one.  Arcane... no.  Curses of Ba... hrm, hee hee,  "\
 				"no not that one either.  Ah,  here we go!  Secrets of the Talismanic Powers.");

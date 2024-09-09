@@ -19,6 +19,7 @@
 #include "devextra.h"
 #include "utility.h"
 #include "room.h"
+#include "./include/spdlog/fmt/bundled/format.h"
 
 BEGIN_MSPECS
 	DEF_SPEC(mspec_academy_smith, TRAP_MGREET | TRAP_MGIVE | TRAP_MSPEECH) /* smith quest */
@@ -268,15 +269,10 @@ void create_academy_pet(CHAR_DATA *ch)
 						"I can aid you in finding food, water, a boat, and a place to practice.  If you need to find "\
 						"somewhere to fight for learning, I can help with that, as well as a few other things.");
 
-	char tbuf[MSL], *tref;
-
 	RS.Queue.AddToQueue(5, do_say_queue, mob, "To ask for my aid, direct your question to me.");
 
-	sprintf(tbuf, "%s, I need to find food.", mob->short_descr);
-
-	tref = talloc_string(tbuf);
-
-	RS.Queue.AddToQueue(8, do_say, ch, tref);
+	auto buffer = fmt::format("{}, I need to find food.", mob->short_descr);
+	RS.Queue.AddToQueue(8, do_say_queue, ch, buffer);
 }
 
 void apet_force(CHAR_DATA *ch, const char *cmd, int delay)
