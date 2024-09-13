@@ -88,7 +88,7 @@ void spell_stasis_wall(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		usually make sure the lag on the rune
 		is at least as long as the lag on the draw_rune queue
 	*/
-	RS.Queue.AddToQueue(9, draw_rune_queue, rune, rune->owner); 
+	RS.Queue.AddToQueue(9, "spell_stasis_wall", "draw_rune_queue", draw_rune_queue, rune, rune->owner); 
 }
 
 bool trigger_stasis_wall(void *vo, void *vo2, void *vo3, void *vo4)

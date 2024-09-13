@@ -34,6 +34,7 @@ set(RIFT_SOURCE config.cpp
 	skills.c
 	tables.c
 	update.c
+	queue.c
 	tattoo.c
 	dioextra.c
 	cabal.c

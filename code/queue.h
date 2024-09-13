@@ -4,6 +4,7 @@
 #include "rift.h"
 #include "./stdlibs/clogger.h"
 #include <stdarg.h>
+
 /*
 * DO NOT TOUCH ANYTHING
 * this is all in assembly and fucking around in queue.h or .c will break it
@@ -22,88 +23,58 @@ public:
 	/// @tparam Func: Template type of the function to call. 
 	/// @tparam ...Args: Template parameter pack used to specify the variadic arguments. 
 	/// @param nTimer: The time (in ticks) which the function executes.
+	/// @param from: The name of the function that placed funcName on the queue.
+	/// @param funcName: The name of the function being placed on the queue.
 	/// @param func: The function to execute at the specified time.
 	/// @param ...args: Variadic arguments used to call the function.
 	template<class Func, class... Args>
-	void AddToQueue(int nTimer, Func func, Args &&...args)
+	void AddToQueue(int nTimer, std::string from, std::string funcName, Func func, Args &&...args)
 	{
 		if(nTimer < 0)
 			Logger.Warn("Negative Queue Timer - NumArgs: {}", sizeof...(Args));	
 
 		// capture parameter pack
-		auto tuple = std::tuple<Args...>(args...);
+		// //auto tuple = std::tuple<typename std::decay<Args>::type...>(args...);
+		// auto tuple = std::tuple<Args...>(args...);
+		// auto chs = GetCharacterData(tuple);
+		auto tuple = std::forward_as_tuple(std::forward<Args>(args)...);
 		auto chs = GetCharacterData(tuple);
 
 		// place on queue
-		auto qtip = std::make_tuple(nTimer, chs, [&]() { std::apply(func, tuple); });
-		newQueue.push_back(qtip);
+		//auto qtip = std::make_tuple(nTimer, from, funcName, chs, [&]() { std::apply(func, tuple); });
+		//newQueue.push_back({nTimer, from, funcName, chs, [&]() { std::apply(func, tuple); }});
+		newQueue.push_back({nTimer, from, funcName, chs, [&]() { std::apply(func, std::move(tuple)); }});
+
+		Logger.Warn("Add => {} added {} with timer {}", from, funcName, nTimer);
 	}
 
 	/// Processes all items on the queue. Any entry that has a timer of zero gets executed.
 	/// Once all items are processed, those functions that have executed are removed from the queue.
-	void ProcessQueue()
-	{
-		newQueue.erase(
-			std::remove_if(newQueue.begin(), newQueue.end(), [](const auto& item)
-			{
-				auto delay = std::get<0>(item); 
-				if (delay < 0)
-					return true;
-
-				if (--delay == 0)
-				{
-					auto func = std::get<2>(item);
-					func();
-					return true;
-				}
-
-				return false;
-			}), newQueue.end());
-	}
+	void ProcessQueue();
 
 	/// Determines if a specific character has any remaining entries in the queue.
 	/// This function applies to both directions (eg. either character being affected or is affecting another pc or environment).
 	/// @param qChar: The character to lookup in the queue.
 	/// @return true if there are entries related to the character in the queue; otherwise false.
-	bool HasQueuePending(CHAR_DATA *qChar)
-	{
-		for (auto& q : newQueue)
-		{
-			auto delay = std::get<0>(q);
-			auto v = std::get<1>(q);
-			auto contains = std::find(v.begin(), v.end(), qChar) != v.end();
-			if (contains && delay > 0)
-				return true;
-		}
-
-		return false;
-	}
+	bool HasQueuePending(CHAR_DATA *qChar);
 
 	/// Deletes all entries in the queue pertaining to the specified character.
 	/// @param qChar: The character to lookup in the queue.
-	void DeleteQueuedEventsInvolving(CHAR_DATA *qChar)
-	{
-		int deleted = 0;
-		newQueue.erase(
-			std::remove_if(newQueue.begin(), newQueue.end(), [&](const auto& item)
-			{
-				auto delay = std::get<0>(item);
-				auto v = std::get<1>(item);
-				auto contains = std::find(v.begin(), v.end(), qChar) != v.end();
-				if (contains && delay > 0)
-				{
-					deleted++;
-					return true;
-				}
-
-				return false;
-			}), newQueue.end());
-
-		Logger.Warn("{} events deleted.", deleted);
-	}
+	void DeleteQueuedEventsInvolving(CHAR_DATA *qChar);
 private:
 	inline static CLogger Logger = CLogger();
-	std::vector<std::tuple<int, std::vector<CHAR_DATA*>, std::function<void()>>> newQueue;
+
+	struct queueEntry_t
+	{
+		int timer;
+		std::string callerFuncName;
+		std::string calleeFuncName;
+		std::vector<CHAR_DATA*> charList;
+		std::function<void()> function;
+	};
+
+	// std::vector<std::tuple<int, std::string, std::string, std::vector<CHAR_DATA*>, std::function<void()>>> newQueue;
+	std::vector<queueEntry_t> newQueue;
 
 	/// Helper function used to extract character data from the specfied tuple.
 	/// @note Main use is for extracting character data sent to the AddToQueue method.

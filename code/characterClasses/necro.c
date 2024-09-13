@@ -82,16 +82,16 @@ void spell_dark_vessel(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 	act("$n plunges a hand into $p's chest cavity, and removes the heart.", ch, corpse, 0, TO_ROOM);
 
-	RS.Queue.AddToQueue(2, act_queue, "$n holds the heart aloft as it visibly begins to harden.", ch, nullptr, nullptr, TO_ROOM);
+	RS.Queue.AddToQueue(2, "spell_dark_vessel", "act_queue", act_queue, "$n holds the heart aloft as it visibly begins to harden.", ch, nullptr, nullptr, TO_ROOM);
 	send_to_char("You remove the corpse's heart and squeeze the blood out of it, hardening it into a solid object.\n\r", ch);
 
-	RS.Queue.AddToQueue(4, make_urn, ch, corpse);
+	RS.Queue.AddToQueue(4, "spell_dark_vessel", "make_urn", make_urn, ch, corpse);
 	
 	if(isNewUrn == false)
 	{
-		RS.Queue.AddToQueue(6, send_to_char, "You drink the remaining blood from your old vessel, expelling each drop into the new one as your body convulses!\n\r The old vessel drops from your hand as it turns to ash.\n\r", ch);
-		RS.Queue.AddToQueue(7, act_queue, "$n drinks a thick fluid from a sanguine object and begins convulsing as they expel the fluid into the newly made vessel!", ch, nullptr, nullptr, TO_ROOM);
-		RS.Queue.AddToQueue(8, act_queue, "$n shudders, releasing the sanguine object as it turns to ash.", ch, nullptr, nullptr, TO_ROOM);
+		RS.Queue.AddToQueue(6, "spell_dark_vessel", "send_to_char_queue", send_to_char_queue, "You drink the remaining blood from your old vessel, expelling each drop into the new one as your body convulses!\n\r The old vessel drops from your hand as it turns to ash.\n\r", ch);
+		RS.Queue.AddToQueue(7, "spell_dark_vessel", "act_queue", act_queue, "$n drinks a thick fluid from a sanguine object and begins convulsing as they expel the fluid into the newly made vessel!", ch, nullptr, nullptr, TO_ROOM);
+		RS.Queue.AddToQueue(8, "spell_dark_vessel", "act_queue", act_queue, "$n shudders, releasing the sanguine object as it turns to ash.", ch, nullptr, nullptr, TO_ROOM);
 	}
 }
 
@@ -400,7 +400,7 @@ void spell_animate_dead(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	act("You kneel before $p, chanting softly in an arcane language.", ch, corpse, 0, TO_CHAR);
 	act("$n kneels before $p, chanting softly in an unintelligible language.", ch, corpse, 0, TO_ROOM);
 
-	RS.Queue.AddToQueue(2, animate_two, ch, corpse);
+	RS.Queue.AddToQueue(2, "spell_animate_dead", "animate_two", animate_two, ch, corpse);
 }
 
 void animate_two(CHAR_DATA *ch, OBJ_DATA *corpse)
@@ -430,7 +430,7 @@ void animate_two(CHAR_DATA *ch, OBJ_DATA *corpse)
 	act("You carve elaborate runes onto the torso of $p.", ch, corpse, nullptr, TO_CHAR);
 	act("$n carves elaborate runes onto the torso of $p.", ch, corpse, nullptr, TO_ROOM);
 
-	RS.Queue.AddToQueue(2, animate_three, ch, corpse);
+	RS.Queue.AddToQueue(2, "animate_two", "animate_three", animate_three, ch, corpse);
 }
 
 void animate_three(CHAR_DATA *ch, OBJ_DATA *corpse)
@@ -459,7 +459,7 @@ void animate_three(CHAR_DATA *ch, OBJ_DATA *corpse)
 
 	act("The flesh of the corpse begins to decay rapidly, its skin left bloated and sagging.", ch, nullptr, nullptr, TO_ALL);
 
-	RS.Queue.AddToQueue(2, animate_four, ch, corpse);
+	RS.Queue.AddToQueue(2, "animate_three", "animate_four", animate_four, ch, corpse);
 }
 
 void animate_four(CHAR_DATA *ch, OBJ_DATA *corpse)
@@ -681,7 +681,7 @@ void spell_visceral(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	act("$n slices open three corpses, spreading their entrails upon the ground.", ch, 0, 0, TO_ROOM);
 	act("You slice open three corpses, spreading their entrails upon the ground.", ch, 0, 0, TO_CHAR);
 
-	RS.Queue.AddToQueue(6, visceral_two, ch);
+	RS.Queue.AddToQueue(6, "spell_visceral", "visceral_two", visceral_two, ch);
 }
 
 void visceral_two(CHAR_DATA *ch)
@@ -696,7 +696,7 @@ void visceral_two(CHAR_DATA *ch)
 	act("Upon this gore, $n pours a generous amount of blood, saturating it.", ch, 0, 0, TO_ROOM);
 	act("Upon this gore, you pour a generous amount of blood, saturating it.", ch, 0, 0, TO_CHAR);
 
-	RS.Queue.AddToQueue(6, visceral_three, ch);
+	RS.Queue.AddToQueue(6, "visceral_two", "visceral_three", visceral_three, ch);
 }
 
 void visceral_three(CHAR_DATA *ch)
@@ -719,7 +719,7 @@ void visceral_three(CHAR_DATA *ch)
 	act("$n and $s minions blissfully writhe in the carnage, praising the Dark Gods.", ch, 0, 0, TO_ROOM);
 	act("You blissfully writhe in the carnage, praising the Dark Gods.", ch, 0, 0, TO_CHAR);
 
-	RS.Queue.AddToQueue(6, visceral_four, ch);
+	RS.Queue.AddToQueue(6, "visceral_three", "visceral_four", visceral_four, ch);
 }
 
 void visceral_four(CHAR_DATA *ch)
@@ -802,7 +802,7 @@ void spell_ritual_soul(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	act("$n begins to spread out some infernal relics and charms.", ch, 0, 0, TO_ROOM);
 	act("You begin to spread out some infernal relics and charms.", ch, 0, 0, TO_CHAR);
 
-	RS.Queue.AddToQueue(3, ritual_two, ch, victim);
+	RS.Queue.AddToQueue(3, "spell_ritual_soul", "ritual_two", ritual_two, ch, victim);
 }
 
 void ritual_two(CHAR_DATA *ch, CHAR_DATA *victim)
@@ -821,7 +821,7 @@ void ritual_two(CHAR_DATA *ch, CHAR_DATA *victim)
 	act("$n pours some blood onto the floor from $s urn, and chants quietly.", ch, 0, 0, TO_ROOM);
 	act("You spill out blood from your urn, chanting softly in an arcane tongue.", ch, 0, 0, TO_CHAR);
 
-	RS.Queue.AddToQueue(3, ritual_three, ch, victim);
+	RS.Queue.AddToQueue(3, "ritual_two", "ritual_three", ritual_three, ch, victim);
 }
 
 void ritual_three(CHAR_DATA *ch, CHAR_DATA *victim)
@@ -843,7 +843,7 @@ void ritual_three(CHAR_DATA *ch, CHAR_DATA *victim)
 	ch->mana = (short)(ch->mana * .8);
 	ch->move = (short)(ch->move * .5);
 
-	RS.Queue.AddToQueue(3, ritual_four, ch, victim);
+	RS.Queue.AddToQueue(3, "ritual_three", "ritual_four", ritual_four, ch, victim);
 }
 
 void ritual_four(CHAR_DATA *ch, CHAR_DATA *victim)
@@ -929,7 +929,7 @@ void spell_ritual_flesh(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 	ch->disrupted= false;
 
-	RS.Queue.AddToQueue(3, flesh_two, ch, victim);
+	RS.Queue.AddToQueue(3, "spell_ritual_flesh", "flesh_two", flesh_two, ch, victim);
 	act("You prepare to make an unholy sacrifice to the Dark Gods!", ch, 0, 0, TO_CHAR);
 }
 
@@ -945,7 +945,7 @@ void flesh_two(CHAR_DATA *ch, CHAR_DATA *victim)
 	act("$n pours blood onto the floor, chanting softly in an undecipherable tongue.", ch, 0, 0, TO_ROOM);
 	act("You pour blood onto the floor, chanting softly in an arcane tongue.", ch, 0, 0, TO_CHAR);
 
-	RS.Queue.AddToQueue(3, flesh_three, ch, victim);
+	RS.Queue.AddToQueue(3, "flesh_two", "flesh_three", flesh_three, ch, victim);
 }
 
 void flesh_three(CHAR_DATA *ch, CHAR_DATA *victim)
@@ -964,7 +964,7 @@ void flesh_three(CHAR_DATA *ch, CHAR_DATA *victim)
 
 	ch->hit = (short)(ch->hit * 0.8);
 
-	RS.Queue.AddToQueue(3, flesh_four, ch, victim);
+	RS.Queue.AddToQueue(3, "flesh_three", "flesh_four", flesh_four, ch, victim);
 }
 
 void flesh_four(CHAR_DATA *ch, CHAR_DATA *victim)

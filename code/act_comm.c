@@ -658,12 +658,16 @@ const char *lowstring(const char *i)
 ///
 void do_say(CHAR_DATA *ch, char *argument)
 {
+//	RS.Logger.Info("entered do_say args => {}", argument);
+
 	if (argument[0] == '\0')
 	{
 		send_to_char("Say what?\n\r", ch);
 		return;
 	}
 	check_ooc(ch, argument, "SAY");
+
+//	RS.Logger.Info("entered do_say args region");
 
 #pragma region  Reasons you should not be able to talk
 	if (is_affected(ch, gsn_silence))
@@ -713,6 +717,8 @@ void do_say(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
+//	RS.Logger.Info("entered do_say args build buffer");
+
 	char saymsg[MAX_STRING_LENGTH];
 	if (argument[strlen(argument) - 1] == '!')
 		sprintf(saymsg, "exclaim");
@@ -723,6 +729,8 @@ void do_say(CHAR_DATA *ch, char *argument)
 
 	auto buffer = fmt::format("You {} '{}$T{}'", saymsg, get_char_color(ch, "speech"), END_COLOR(ch));
 	act(buffer.c_str(), ch, nullptr, argument, TO_CHAR);
+
+//	RS.Logger.Info("entered do_say args loop 1");
 
 	for (auto victim = ch->in_room->people; victim != nullptr; victim = victim->next_in_room)
 	{
@@ -743,6 +751,8 @@ void do_say(CHAR_DATA *ch, char *argument)
 		}
 	}
 
+//	RS.Logger.Info("entered do_say args loop 2");
+
 	if (IS_SET(ch->in_room->progtypes, RPROG_SPEECH))
 		ch->in_room->rprogs->speech_prog(ch->in_room, ch, argument);
 
@@ -754,6 +764,8 @@ void do_say(CHAR_DATA *ch, char *argument)
 		if (TRAPS_MEVENT(room_char, TRAP_MSPEECH))
 			CALL_MEVENT(room_char, TRAP_MSPEECH, ch, room_char, argument);
 	}
+
+//	RS.Logger.Info("entered do_say args loop 3");
 
 	report_cabal_items(ch, argument);
 
@@ -769,6 +781,8 @@ void do_say(CHAR_DATA *ch, char *argument)
 			CALL_IEVENT(char_obj, TRAP_ISPEECH, ch, char_obj, argument);
 	}
 
+//	RS.Logger.Info("entered do_say args loop 4");
+
 	for (auto char_obj = ch->in_room->contents; char_obj != nullptr; char_obj = char_obj->next_content)
 	{
 		if (IS_SET(char_obj->progtypes, IPROG_SPEECH) && char_obj->pIndexData->iprogs)
@@ -781,6 +795,7 @@ void do_say(CHAR_DATA *ch, char *argument)
 
 void do_say_queue(CHAR_DATA *ch, std::string argument)
 {
+	RS.Logger.Info("entered do_say_queue args => {}", argument);
 	do_say(ch, argument.data());
 }
 
@@ -2617,8 +2632,7 @@ void speech_handler(CHAR_DATA *ch, CHAR_DATA *mob, SPEECH_DATA *speech)
 		return;
 	}
 
-	//RS.Queue.AddToQueue(speech->current_line->delay, 3, speech_handler, ch, mob, speech);
-	RS.Queue.AddToQueue(speech->current_line->delay, speech_handler, ch, mob, speech);
+	RS.Queue.AddToQueue(speech->current_line->delay, "speech_handler", "speech_handler", speech_handler, ch, mob, speech);
 }
 
 /*

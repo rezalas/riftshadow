@@ -10,10 +10,16 @@
             "stopAtEntry": false,
             "cwd": "${workspaceRoot}/code/",
             "environment": [],
-            "externalConsole": true,
+            //"externalConsole": true,
             // "miDebuggerPath": "/bin",
             "linux": {
-                "MIMode": "gdb"
+                "MIMode": "gdb",
+                "miDebuggerPath": "/usr/bin/gdb",
+                "setupCommands": [{ 
+                    "text": "-enable-pretty-printing",
+                    "description": "enable pretty printing", 
+                    "ignoreFailures": true 
+                }]
             },
             "osx": {
                 "MIMode": "lldb"

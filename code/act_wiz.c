@@ -3454,7 +3454,7 @@ void start_reboot(CHAR_DATA *ch)
 			do_echo(ch, buf);
 
 			reboot_num--;
-			RS.Queue.AddToQueue(60, start_reboot, ch);
+			RS.Queue.AddToQueue(60, "start_reboot", "start_reboot", start_reboot, ch);
 		}
 	}
 }

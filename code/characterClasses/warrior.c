@@ -2710,8 +2710,8 @@ void do_brace(CHAR_DATA *ch, char *arg)
 		braceptr = (float *)talloc_struct(sizeof(float));
 		*braceptr = bracemod;
 
-		RS.Queue.AddToQueue(8, brace_helper_undo, ch, braceptr);
-		RS.Queue.AddToQueue(8, act_queue, "You are no longer bracing yourself against incoming blows.", ch, nullptr, nullptr, TO_CHAR);
+		RS.Queue.AddToQueue(8, "do_brace", "brace_helper_undo", brace_helper_undo, ch, braceptr);
+		RS.Queue.AddToQueue(8, "do_brace", "act_queue", act_queue, "You are no longer bracing yourself against incoming blows.", ch, nullptr, nullptr, TO_CHAR);
 		check_improve(ch, gsn_brace, true, 3);
 	}
 }
@@ -4712,7 +4712,7 @@ void do_retreat(CHAR_DATA *ch, char *arg)
 	dirptr = (int *)talloc_struct(sizeof(int));
 	*dirptr = direction;
 
-	RS.Queue.AddToQueue(3, execute_retreat, ch, dirptr);
+	RS.Queue.AddToQueue(3, "do_retreat", "execute_retreat", execute_retreat, ch, dirptr);
 
 	WAIT_STATE(ch, PULSE_VIOLENCE);
 }

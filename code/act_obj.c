@@ -2906,6 +2906,8 @@ void do_quaff(CHAR_DATA *ch, char *argument)
 				if (!check_deny_magic(ch))
 				{
 					RS.Queue.AddToQueue(nDelay,
+						"do_quaff",
+						"quaff_potion",
 						quaff_potion,
 						ch,
 						obj->value[0],
@@ -2949,6 +2951,8 @@ void do_quaff(CHAR_DATA *ch, char *argument)
 	if (!check_deny_magic(ch))
 	{
 		RS.Queue.AddToQueue(nDelay,
+			"do_quaff",
+			"quaff_potion",
 			quaff_potion,
 			ch,
 			obj->value[0],

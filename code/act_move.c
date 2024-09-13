@@ -1002,7 +1002,7 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 
 				if (td != nullptr && td->trap && td->trap->armed && ch->Profs()->ProfEffect("trap detecting") >= td->trap->quality)
 				{
-					RS.Queue.AddToQueue(1, send_to_char, "Something about your surroundings suddenly makes you feel wary.\n\r", ch);
+					RS.Queue.AddToQueue(1, "move_char", "send_to_char_queue", send_to_char_queue, "Something about your surroundings suddenly makes you feel wary.\n\r", ch);
 					break;
 				}
 			}
@@ -1048,7 +1048,7 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 		}
 		else if (is_npc(fch) && fch->last_fought == ch)
 		{
-			RS.Queue.AddToQueue((number_percent() > 25) ? 1 : 2, track_attack, fch, ch);
+			RS.Queue.AddToQueue((number_percent() > 25) ? 1 : 2, "move_char", "track_attack", track_attack, fch, ch);
 		}
 
 		/* Greet trigger for mobs  */
@@ -1215,7 +1215,7 @@ void trip_trap(CHAR_DATA *ch, ROOM_INDEX_DATA *room, TRAP_DATA *trap)
 		if (ch->Profs()->GetProf("trap detecting") / 2 >= trap->quality)
 		{
 			ch->Profs()->CheckImprove("trap detecting", 400);
-			RS.Queue.AddToQueue(1, send_to_char, "As you carefully advance, you spot a trap and quickly sidestep it!\n\r", ch);
+			RS.Queue.AddToQueue(1, "trip_trap", "send_to_char_queue", send_to_char_queue, "As you carefully advance, you spot a trap and quickly sidestep it!\n\r", ch);
 			return;
 		}
 		else
@@ -1229,7 +1229,7 @@ void trip_trap(CHAR_DATA *ch, ROOM_INDEX_DATA *room, TRAP_DATA *trap)
 	if (trap->timer)
 	{
 		act(trap->trig_echo, ch, 0, 0, TO_CHAR);
-		RS.Queue.AddToQueue(trap->timer, trap_execute, nullptr, room, trap);
+		RS.Queue.AddToQueue(trap->timer, "do_down", "trap_execute", trap_execute, nullptr, room, trap);
 	}
 	else
 	{

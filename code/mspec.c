@@ -128,8 +128,8 @@ BEGIN_SPEC(mspec_horde_tanner)
 			mprog_say(1, "Ya jus give me a sec and I'll hack this up for ya.", mob, ch);
 			mprog_emote(3, "slams the corpse on his work table and begins cutting it up.", mob, ch);
 
-			RS.Queue.AddToQueue(5, act_queue, "$N hands $n a stack of sliced raw meat.", ch, nullptr, mob, TO_ROOM);
-			RS.Queue.AddToQueue(5, act_queue, "$N hands you a stack of sliced raw meat.", ch, nullptr, mob, TO_CHAR);
+			RS.Queue.AddToQueue(5, "sname", "act_queue", act_queue, "$N hands $n a stack of sliced raw meat.", ch, nullptr, mob, TO_ROOM);
+			RS.Queue.AddToQueue(5, "sname", "act_queue", act_queue, "$N hands you a stack of sliced raw meat.", ch, nullptr, mob, TO_CHAR);
 
 			extract_obj(obj);
 		}
@@ -138,17 +138,20 @@ END_SPEC
 
 void create_academy_pet(CHAR_DATA *ch)
 {
+	RS.Logger.Info("entered create_academy_pet");
 	CHAR_DATA *mob = create_mobile(get_mob_index(ACADEMY_PET));
 	char *name;
 
 	if (!mob)
 		return;
 
+	RS.Logger.Info("entered create_academy_pet free");
 	free_pstring(mob->name);
 	free_pstring(mob->short_descr);
 	free_pstring(mob->long_descr);
 	free_pstring(mob->description);
 
+	RS.Logger.Info("entered create_academy_pet switch name");
 	switch (number_range(0, 16))
 	{
 		case 0:
@@ -206,6 +209,7 @@ void create_academy_pet(CHAR_DATA *ch)
 
 	char namebuf[MSL], ldesc[MSL];
 
+	RS.Logger.Info("entered create_academy_pet switch align");
 	switch (ch->alignment)
 	{
 		case 0:
@@ -236,6 +240,7 @@ void create_academy_pet(CHAR_DATA *ch)
 			break;
 	}
 
+	RS.Logger.Info("entered create_academy_pet setup");
 	mob->name = palloc_string(namebuf);
 	mob->short_descr = palloc_string(name);
 	mob->long_descr = palloc_string(ldesc);
@@ -244,6 +249,7 @@ void create_academy_pet(CHAR_DATA *ch)
 
 	char_to_room(mob, ch->in_room);
 
+	RS.Logger.Info("entered create_academy_pet greetings");
 	if (ch->alignment == 1000)
 	{
 		do_say(mob, "Greetings, friend.  I have been sent to help you become acclimated to the perils of these lands, "\
@@ -265,26 +271,25 @@ void create_academy_pet(CHAR_DATA *ch)
 	mob->leader = ch;
 	ch->pet = mob;
 
-	RS.Queue.AddToQueue(3, do_say_queue, mob,
+	RS.Logger.Info("entered create_academy_pet queue");
+	RS.Queue.AddToQueue(3, "create_academy_pet", "do_say_queue_1", do_say_queue, mob,
 						"I can aid you in finding food, water, a boat, and a place to practice.  If you need to find "\
 						"somewhere to fight for learning, I can help with that, as well as a few other things.");
 
-	RS.Queue.AddToQueue(5, do_say_queue, mob, "To ask for my aid, direct your question to me.");
+	RS.Queue.AddToQueue(5, "create_academy_pet", "do_say_queue_2", do_say_queue, mob, "To ask for my aid, direct your question to me.");
 
 	auto buffer = fmt::format("{}, I need to find food.", mob->short_descr);
-	RS.Queue.AddToQueue(8, do_say_queue, ch, buffer);
+	RS.Queue.AddToQueue(8, "create_academy_pet", "do_say_queue_3", do_say_queue, ch, buffer);
 }
 
 void apet_force(CHAR_DATA *ch, const char *cmd, int delay)
 {
-	char buf[MSL], *tal, *tcmd;
+	char *tcmd;
 
-	sprintf(buf, "You feel the irresistible urge to '%s'.\n\r", cmd);
+	auto buffer = fmt::format("You feel the irresistible urge to '{}}'.\n\r", cmd);
 
-	tal = talloc_string(buf);
-
-	RS.Queue.AddToQueue(delay, interpret_queue, ch, std::string(cmd));
-	RS.Queue.AddToQueue(delay, send_to_char, tal, ch);
+	RS.Queue.AddToQueue(delay, "apet_force", "interpret_queue", interpret_queue, ch, std::string(cmd));
+	RS.Queue.AddToQueue(delay, "apet_force", "send_to_char_queue", send_to_char_queue, buffer, ch);
 
 	ch->wait = std::min((int)ch->wait, 20);
 }
@@ -360,7 +365,7 @@ void apet_walk_to_room(CHAR_DATA *ch, int vnum)
 
 	WAIT_STATE(ch->leader, PULSE_VIOLENCE);
 
-	RS.Queue.AddToQueue(2, apet_walk_to_room, ch, vnum);
+	RS.Queue.AddToQueue(2, "apet_walk_to_room", "apet_walk_to_room", apet_walk_to_room, ch, vnum);
 }
 
 BEGIN_SPEC(mspec_academy_pet)
@@ -537,13 +542,13 @@ BEGIN_SPEC(mspec_academy_pet)
 
 			if (ch->alignment > -1)
 			{
-				RS.Queue.AddToQueue(2, do_say_queue, mob,
+				RS.Queue.AddToQueue(2, "sname", "do_say_queue", do_say_queue, mob,
 									"A good place to fight for us might be the Dying Forest.  I understand the trolls there "\
 									"are good opponents.");
-				RS.Queue.AddToQueue(4, do_say_queue, mob,
+				RS.Queue.AddToQueue(4, "sname", "do_say_queue", do_say_queue, mob,
 									"You can reach it by going out the eastern gate of Cimar along the Cimarrite Causeway, "\
 									"then south through the Stunted Forest to the Dying Forest.");
-				RS.Queue.AddToQueue(6, do_say_queue, mob,
+				RS.Queue.AddToQueue(6, "sname", "do_say_queue", do_say_queue, mob,
 									"On the other hand, I've heard rumors of a crypt accessible through the Cimar Library "\
 									"north of the water fountain, where you can fight the undead.  I'm not sure how you get "\
 									"in, but I bet you could find it if you looked there.");
@@ -551,25 +556,25 @@ BEGIN_SPEC(mspec_academy_pet)
 
 			if (ch->alignment == -1000)
 			{
-				RS.Queue.AddToQueue(2, do_say_queue, mob, "We can slay the fool dryads in the Emerald Forest!");
-				RS.Queue.AddToQueue(4, do_say_queue, mob,
+				RS.Queue.AddToQueue(2, "sname", "do_say_queue", do_say_queue, mob, "We can slay the fool dryads in the Emerald Forest!");
+				RS.Queue.AddToQueue(4, "sname", "do_say_queue", do_say_queue, mob,
 									"To reach it, first you should go to the major city of Melcene, out the eastern gate of "\
 									"Cimar along the Cimarrite Causeway, along the Great Shalaran Road.");
-				RS.Queue.AddToQueue(6, do_say_queue, mob,
+				RS.Queue.AddToQueue(6, "sname", "do_say_queue", do_say_queue, mob,
 									"Then, when you're before the Gates of Melcene, head north all the way, east as far as you "\
 									"can, north, and east all the way into the village square of the Emerald Forest.");
 			}
 
 			if (get_skill(ch, gsn_enhanced_damage) < 1)
 			{
-				RS.Queue.AddToQueue(7, do_say_queue, mob,
+				RS.Queue.AddToQueue(7, "sname", "do_say_queue", do_say_queue, mob,
 									"Although... I've heard of caves around Iseldheim.  Caves where there are zombies nearly "\
 									"impervious to physical attacks: they can rematerialize at the touch of metal.. but if you "\
 									"can think of a way around that - magic, maybe - you'd be good to go.");
-				RS.Queue.AddToQueue(8, do_say_queue, mob,
+				RS.Queue.AddToQueue(8, "sname", "do_say_queue", do_say_queue, mob,
 									"To get there, first head to the great Northern City of Iseldheim.  Leave Cimar by the Northern Gate, then "\
 									"head all north and east through the village along the North Cimar Road.");
-				RS.Queue.AddToQueue(9, do_say_queue, mob,
+				RS.Queue.AddToQueue(9, "sname", "do_say_queue", do_say_queue, mob,
 									"Once you're in Iseldheim, go up to the top level, out the eastern gate, and go northeast "\
 									"till you reach a woodland trail.  Caves should be around there... but be careful.");
 			}
