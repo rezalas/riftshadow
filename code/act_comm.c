@@ -719,7 +719,7 @@ void do_say(CHAR_DATA *ch, char *argument)
 
 //	RS.Logger.Info("entered do_say args build buffer");
 
-	char saymsg[MAX_STRING_LENGTH];
+	char saymsg[MAX_STRING_LENGTH] = {0};
 	if (argument[strlen(argument) - 1] == '!')
 		sprintf(saymsg, "exclaim");
 	else if (argument[strlen(argument) - 1] == '?')

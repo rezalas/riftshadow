@@ -35,15 +35,15 @@ public:
 
 		// capture parameter pack
 		// //auto tuple = std::tuple<typename std::decay<Args>::type...>(args...);
-		// auto tuple = std::tuple<Args...>(args...);
-		// auto chs = GetCharacterData(tuple);
-		auto tuple = std::forward_as_tuple(std::forward<Args>(args)...);
+		//auto tuple = std::forward_as_tuple(std::forward<Args>(args)...);
+		auto tuple = std::tuple<Args...>(args...);
 		auto chs = GetCharacterData(tuple);
 
 		// place on queue
 		//auto qtip = std::make_tuple(nTimer, from, funcName, chs, [&]() { std::apply(func, tuple); });
 		//newQueue.push_back({nTimer, from, funcName, chs, [&]() { std::apply(func, tuple); }});
-		newQueue.push_back({nTimer, from, funcName, chs, [&]() { std::apply(func, std::move(tuple)); }});
+		//newQueue.push_back({nTimer, from, funcName, chs, [&]() { std::apply(func, std::move(tuple)); }});
+		newQueue.push_back({nTimer, from, funcName, chs, [&]() { std::apply(func, std::forward_as_tuple(std::forward<Args>(args)...)); }});
 
 		Logger.Warn("Add => {} added {} with timer {}", from, funcName, nTimer);
 	}
