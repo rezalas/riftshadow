@@ -1120,6 +1120,11 @@ void interpret(CHAR_DATA *ch, char *argument)
 	tail_chain();
 }
 
+void interpret_queue(CHAR_DATA *ch, std::string argument)
+{
+	interpret(ch, argument.data());
+}
+
 bool knows_command(CHAR_DATA *ch, int cmd)
 {
 	if (!cmd_table[cmd].skill_name || cmd_table[cmd].skill_name == "none")

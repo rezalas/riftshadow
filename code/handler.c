@@ -2317,10 +2317,10 @@ void extract_char(CHAR_DATA *ch, bool fPull)
 
 	char_from_room(ch);
 
-	if (is_npc(ch) && CQueue::HasQueuePending(ch))
+	if (is_npc(ch) && RS.Queue.HasQueuePending(ch))
 	{
 		RS.Logger.Warn("Attempt at extracting mob {} while it has queue events pending.  Deleting events.", ch->pIndexData->vnum);
-		CQueue::DeleteQueuedEventsInvolving(ch);
+		RS.Queue.DeleteQueuedEventsInvolving(ch);
 	}
 
 	/* Death room is set in the cabal table now */
@@ -5078,4 +5078,9 @@ int get_ethos(CHAR_DATA *ch)
 int damage_queue(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int damtype, bool blockable, int add, int mult, char *dnoun)
 {
 	return damage_new(ch, victim, dam, gsn_bash, damtype, true, blockable, add, mult, dnoun);
+}
+
+int damage_queued(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int damtype, bool blockable, int add, int mult, std::string dnoun)
+{
+	return damage_new(ch, victim, dam, gsn_bash, damtype, true, blockable, add, mult, dnoun.data());
 }

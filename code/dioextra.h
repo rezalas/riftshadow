@@ -37,6 +37,7 @@ bool auto_check_multi (DESCRIPTOR_DATA *d_check, char *host);
 void do_pload (CHAR_DATA *ch,char *argument);
 void do_damage (CHAR_DATA *ch,char *argument);
 void zone_echo (AREA_DATA *area, char *echo);
+void zone_echo_queue (AREA_DATA *area, std::string echo);
 bool old_is_adjacent_area (AREA_DATA *area, AREA_DATA *area2);
 bool is_adjacent_area (AREA_DATA *area, AREA_DATA *area2);
 bool is_adj_range (AREA_DATA *area, AREA_DATA *area2, int range);

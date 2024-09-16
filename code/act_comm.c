@@ -713,7 +713,7 @@ void do_say(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	char saymsg[MAX_STRING_LENGTH];
+	char saymsg[MAX_STRING_LENGTH] = {0};
 	if (argument[strlen(argument) - 1] == '!')
 		sprintf(saymsg, "exclaim");
 	else if (argument[strlen(argument) - 1] == '?')
@@ -777,6 +777,11 @@ void do_say(CHAR_DATA *ch, char *argument)
 		if (TRAPS_IEVENT(char_obj, TRAP_ISPEECH))
 			CALL_IEVENT(char_obj, TRAP_ISPEECH, ch, char_obj, argument);
 	}
+}
+
+void do_say_queue(CHAR_DATA *ch, std::string argument)
+{
+	do_say(ch, argument.data());
 }
 
 void say_to(CHAR_DATA *ch, CHAR_DATA *victim, char *argument, char *extra)
@@ -855,6 +860,11 @@ void say_to(CHAR_DATA *ch, CHAR_DATA *victim, char *argument, char *extra)
 	}
 }
 
+void say_to_queue (CHAR_DATA *ch, CHAR_DATA *victim, std::string argument, std::string extra)
+{
+	say_to(ch, victim, argument.data(), extra.data());
+}
+
 void do_whisper(CHAR_DATA *ch, char *argument) /* whisper -- dioxide */
 {
 	if (!is_npc(ch) && argument[0] == '\0')
@@ -930,6 +940,11 @@ void do_whisper(CHAR_DATA *ch, char *argument) /* whisper -- dioxide */
 
 	if (is_affected(ch, gsn_unholy_communion) && (ch->Class()->name == "anti-paladin"))
 		check_unholy_communion(ch, argument);
+}
+
+void do_whisper_queue (CHAR_DATA *ch, std::string argument)
+{
+	do_whisper(ch, argument.data());
 }
 
 void do_sing(CHAR_DATA *ch, char *argument)
@@ -1256,6 +1271,11 @@ void do_tell(CHAR_DATA *ch, char *argument)
 		free_pstring(argument);
 }
 
+void do_tell_queue (CHAR_DATA *ch, std::string argument)
+{
+	do_tell(ch, argument.data());
+}
+
 void do_noreply(CHAR_DATA *ch, char *argument)
 {
 	send_to_char("You concentrate and momentarily close your ears to the replies of others.\n\r", ch);
@@ -1509,6 +1529,11 @@ void do_emote(CHAR_DATA *ch, char *argument)
 	strcat(buffer, argument);
 
 	act("$n$T", ch, nullptr, buffer, TO_ALL);
+}
+
+void do_emote_queue(CHAR_DATA *ch, std::string argument)
+{
+	do_emote(ch, argument.data());
 }
 
 void do_pmote(CHAR_DATA *ch, char *argument)
@@ -1772,7 +1797,7 @@ void do_quit_new(CHAR_DATA *ch, char *argument, bool autoq)
 		}
 	}
 
-	if (CQueue::HasQueuePending(ch))
+	if (RS.Queue.HasQueuePending(ch))
 	{
 		if (autoq)
 			RS.Logger.Warn("Trying to autoquit char {} with pending queue.", ch->name);
@@ -2592,7 +2617,7 @@ void speech_handler(CHAR_DATA *ch, CHAR_DATA *mob, SPEECH_DATA *speech)
 		return;
 	}
 
-	RS.Queue.AddToQueue(speech->current_line->delay, 3, speech_handler, ch, mob, speech);
+	RS.Queue.AddToQueue(speech->current_line->delay, "speech_handler", "speech_handler", speech_handler, ch, mob, speech);
 }
 
 /*

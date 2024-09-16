@@ -5054,7 +5054,7 @@ void spell_concave_shell(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	dirptr = (int *)talloc_struct(sizeof(int));
 	*dirptr = dir;
 
-	RS.Queue.AddToQueue(6, 3, concave_shell_move, ch, dirptr, ch->in_room);
+	RS.Queue.AddToQueue(6, "spell_concave_shell", "concave_shell_move", concave_shell_move, ch, dirptr, ch->in_room);
 
 	act("Air begins to swirl rapidly around you.", ch, 0, 0, TO_CHAR);
 	act("Swirling winds begin to mass near $n.", ch, 0, 0, TO_ROOM);
@@ -7999,13 +7999,13 @@ void spell_mana_infusion(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	af1.owner = ch;
 	new_affect_to_char(victim, &af1);
 
-	RS.Queue.AddToQueue(2, 8, damage_queue, ch, victim, level, DAM_OTHER, HIT_UNBLOCKABLE, HIT_NOADD, dammod, (char *)"the escaping mana*");
-	RS.Queue.AddToQueue(2, 2, affect_strip, victim, gsn_mana_infusion);
-	RS.Queue.AddToQueue(2, 5, act, "You scream in pain as the mana rushes from your body!", victim, 0, 0, TO_CHAR);
-	RS.Queue.AddToQueue(2, 5, act, "As the mana rushes out of $n's body, $e cries out in pain!", victim, 0, 0, TO_ROOM);
+	RS.Queue.AddToQueue(2, "spell_mana_infusion", "damage_queued", damage_queued, ch, victim, level, DAM_OTHER, HIT_UNBLOCKABLE, HIT_NOADD, dammod, "the escaping mana*");
+	RS.Queue.AddToQueue(2, "spell_mana_infusion", "affect_strip", affect_strip, victim, gsn_mana_infusion);
+	RS.Queue.AddToQueue(2, "spell_mana_infusion", "act_queue", act_queue, "You scream in pain as the mana rushes from your body!", victim, nullptr, nullptr, TO_CHAR);
+	RS.Queue.AddToQueue(2, "spell_mana_infusion", "act_queue", act_queue, "As the mana rushes out of $n's body, $e cries out in pain!", victim, nullptr, nullptr, TO_ROOM);
 
 	if (ch->level > 40 && number_percent() > 50 && !is_affected(victim, gsn_mana_sickness) && victim->hit > level + 30)
-		RS.Queue.AddToQueue(3, 2, mana_infusion_helper, ch, victim);
+		RS.Queue.AddToQueue(3, "spell_mana_infusion", "mana_infusion_helper", mana_infusion_helper, ch, victim);
 }
 
 void infusion_tick(CHAR_DATA *ch, AFFECT_DATA *af)

@@ -103,6 +103,7 @@ void verb_prog_roll_tablet (OBJ_DATA *obj, CHAR_DATA *ch, char *argument);
 void close_elevator (ROOM_INDEX_DATA *pRoom);
 void open_elevator (ROOM_INDEX_DATA *eleRoom, ROOM_INDEX_DATA *toRoom);
 void act_to_room( void *vo1, void *vo2);
+void act_to_room_queue(std::string format, ROOM_INDEX_DATA *room);
 void verb_prog_iseldheim_lever_pull (OBJ_DATA *obj, CHAR_DATA *ch, char *argument);
 void fight_prog_bugzapper (OBJ_DATA *obj, CHAR_DATA *ch);
 void fight_prog_arms_light (OBJ_DATA *obj, CHAR_DATA *ch);

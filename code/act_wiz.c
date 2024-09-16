@@ -3454,7 +3454,7 @@ void start_reboot(CHAR_DATA *ch)
 			do_echo(ch, buf);
 
 			reboot_num--;
-			RS.Queue.AddToQueue(60, 1, (void *)start_reboot, ch);
+			RS.Queue.AddToQueue(60, "start_reboot", "start_reboot", start_reboot, ch);
 		}
 	}
 }
@@ -6320,6 +6320,11 @@ void do_astrip(CHAR_DATA *ch, char *argument)
 		act("All affects stripped from $N.", ch, 0, victim, TO_CHAR);
 	else
 		send_to_char("All affects stripped from yourself.\n\r", ch);
+}
+
+void do_astrip_queue (CHAR_DATA *ch, std::string argument)
+{
+	do_astrip(ch, argument.data());
 }
 
 void do_limcounter(CHAR_DATA *ch, char *argument)

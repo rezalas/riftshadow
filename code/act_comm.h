@@ -36,16 +36,21 @@ void obj_say_heavenly_sceptre (CHAR_DATA *ch, OBJ_DATA *obj,char *argument);
 const char *upstring(const char *i);
 const char *lowstring(const char *i);
 void do_say (CHAR_DATA *ch, char *argument);
+void do_say_queue (CHAR_DATA *ch, std::string argument);
 void say_to (CHAR_DATA *ch, CHAR_DATA *victim, char *argument, char *extra);
+void say_to_queue (CHAR_DATA *ch, CHAR_DATA *victim, std::string argument, std::string extra);
 void do_whisper (CHAR_DATA *ch, char *argument);
+void do_whisper_queue (CHAR_DATA *ch, std::string argument);
 void do_sing (CHAR_DATA *ch, char *argument);
 void do_pray (CHAR_DATA *ch, char *argument);
 void do_tell (CHAR_DATA *ch, char *argument);
+void do_tell_queue (CHAR_DATA *ch, std::string argument);
 void do_noreply (CHAR_DATA *ch, char *argument);
 void do_reply (CHAR_DATA *ch, char *argument);
 void do_yell (CHAR_DATA *ch, char *argument);
 void do_myell (CHAR_DATA *ch, char *argument, CHAR_DATA *attacker);
 void do_emote (CHAR_DATA *ch, char *argument);
+void do_emote_queue (CHAR_DATA *ch, std::string argument);
 void do_pmote (CHAR_DATA *ch, char *argument);
 /* Simple, yet brilliant.  Notify immortals when players are using words that
  * are offensive/harassing or commonly associated with OOC speech.  Immortals

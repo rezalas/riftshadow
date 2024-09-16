@@ -197,9 +197,11 @@ void do_memtest(CHAR_DATA *ch, char *argument)
 	char buf[MSL];
 	CHAR_DATA *qch;
 	argument = one_argument(argument, buf);
-	CQueue j;
-	RS.Queue.AddToQueue(6,2,(void*)do_bash,ch,"Calenduil");
+	RS.Queue.AddToQueue(6, "do_memtest", "do_bash_queue", do_bash_queue, ch, "Calenduil");
 	return;
+
+	//TODO: what the what???
+
 	if(buf[0]=='\0' || !argument || !is_number(argument))
 		return;
 	if(number_percent()> (.2 * get_skill(ch,gsn_rage)))

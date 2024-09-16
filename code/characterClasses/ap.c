@@ -713,7 +713,7 @@ void command_execute(CHAR_DATA *ch)
 	sprintf(buf, "An irresistible urge forces you to '%s'.\n\r", ch->pcdata->command[1]);
 	send_to_char(buf, ch);
 
-	RS.Queue.AddToQueue(1, 2, command_execute_delay, ch, ch->pcdata->command[1]);
+	RS.Queue.AddToQueue(1, "command_execute", "command_execute_delay", command_execute_delay, ch, ch->pcdata->command[1]);
 
 	WAIT_STATE(ch, PULSE_PER_SECOND + 1);
 
@@ -1283,7 +1283,7 @@ void check_unholy_communion(CHAR_DATA *ch, char *argument)
 
 	act("As the name of the $t demon escapes your lips, the shadows writhe violently.", ch, (type == LESSER_DEMON) ? "lesser" : "greater", 0, TO_CHAR);
 
-	RS.Queue.AddToQueue(2, 5, act, "A sonorous throbbing fills your surroundings, and then all is deathly silent.", ch, nullptr, nullptr, TO_ALL);
+	RS.Queue.AddToQueue(2, "check_unholy_communion", "act_queue", act_queue, "A sonorous throbbing fills your surroundings, and then all is deathly silent.", ch, nullptr, nullptr, TO_ALL);
 
 	affect_remove(ch, af);
 
@@ -1293,12 +1293,12 @@ void check_unholy_communion(CHAR_DATA *ch, char *argument)
 	*typeptr = type;
 	*demonptr = demon;
 
-	RS.Queue.AddToQueue(3, 3, demon_appear, ch, demonptr, typeptr);
+	RS.Queue.AddToQueue(3, "check_unholy_communion", "demon_appear", demon_appear, ch, demonptr, typeptr);
 }
 
 void demon_appear(CHAR_DATA *ch, int *demonptr, int *typeptr)
 {
-	char buf[MSL];
+	std::string buffer;
 	AFFECT_DATA af;
 	int vnum = -1;
 	int demon = *demonptr, type = *typeptr;
@@ -1383,58 +1383,58 @@ void demon_appear(CHAR_DATA *ch, int *demonptr, int *typeptr)
 		switch (demon)
 		{
 			case LESSER_BARBAS:
-				RS.Queue.AddToQueue(2, 2, do_emote, mob, (char *)"roars with anger and beats his meaty fists against his chest!");
-				RS.Queue.AddToQueue(4, 5, act, "Still growling, $N peers toward you with a sneering rictus of despite.", ch, 0, mob, TO_CHAR);
-				RS.Queue.AddToQueue(6, 2, do_say, mob, (char *)"Summon me,  you fool?  Summon ME!?"); 
-				RS.Queue.AddToQueue(8, 2, do_say, mob, (char *)"I'll bet me reputation an' a slice o' me power that I'm about ta beat you senseless!");
-				RS.Queue.AddToQueue(10, 2, do_murder, mob, ch->name);
-				RS.Queue.AddToQueue(10, 5, act, "With a feral leap and a scream, $N is suddenly upon you!", ch, 0, mob, TO_CHAR);
+				RS.Queue.AddToQueue(2, "demon_appear", "do_emote_queue", do_emote_queue, mob, "roars with anger and beats his meaty fists against his chest!");
+				RS.Queue.AddToQueue(4, "demon_appear", "act_queue", act_queue, "Still growling, $N peers toward you with a sneering rictus of despite.", ch, nullptr, mob, TO_CHAR);
+				RS.Queue.AddToQueue(6, "demon_appear", "do_say_queue", do_say_queue, mob, "Summon me,  you fool?  Summon ME!?"); 
+				RS.Queue.AddToQueue(8, "demon_appear", "do_say_queue", do_say_queue, mob, "I'll bet me reputation an' a slice o' me power that I'm about ta beat you senseless!");
+				RS.Queue.AddToQueue(10, "demon_appear", "do_murder", do_murder, mob, ch->name);
+				RS.Queue.AddToQueue(10, "demon_appear", "act_queue", act_queue, "With a feral leap and a scream, $N is suddenly upon you!", ch, nullptr, mob, TO_CHAR);
 				af.duration = -1;
 				affect_to_char(mob, &af);
 				break;
 			case LESSER_AAMON:
 				WAIT_STATE(ch, 5 * PULSE_VIOLENCE);
-				RS.Queue.AddToQueue(2, 2, do_emote, mob, (char *)"twitches violently as he stares around,  bewildered.");
-				RS.Queue.AddToQueue(4, 2, do_whisper, mob, (char *)"And where am I now,  precisely?");
-				RS.Queue.AddToQueue(6, 5, act, "Jerking suddenly as if to watch in all directions at once, the demon spins.", mob, 0, 0, TO_ROOM);
-				RS.Queue.AddToQueue(8, 2, do_say, mob, (char *)"You've summoned me!  And now you will answer my riddle,  yes!");
-				RS.Queue.AddToQueue(10, 2, do_emote, mob, (char *)"clears his throat and glances around pensively.");
-				RS.Queue.AddToQueue(12, 2, do_say, mob, (char *)"Most often by hoes and by gardeners I'm chased, ");
-				RS.Queue.AddToQueue(13, 2, do_say, mob, (char *)"They cut off my head and then smash it to paste;");
-				RS.Queue.AddToQueue(14, 2, do_say, mob, (char *)"Against them, however,  my body is braced, ");
-				RS.Queue.AddToQueue(15, 2, do_say, mob, (char *)"For always I'm growing due south of the waist.");
-				RS.Queue.AddToQueue(16, 2, do_say, mob, (char *)"Now then... what am I?");
+				RS.Queue.AddToQueue(2, "demon_appear", "do_emote_queue", do_emote_queue, mob, "twitches violently as he stares around,  bewildered.");
+				RS.Queue.AddToQueue(4, "demon_appear", "do_whisper_queue", do_whisper_queue, mob, "And where am I now,  precisely?");
+				RS.Queue.AddToQueue(6, "demon_appear", "act_queue", act_queue, "Jerking suddenly as if to watch in all directions at once, the demon spins.", mob, nullptr, nullptr, TO_ROOM);
+				RS.Queue.AddToQueue(8, "demon_appear", "do_say_queue", do_say_queue, mob, "You've summoned me!  And now you will answer my riddle,  yes!");
+				RS.Queue.AddToQueue(10, "demon_appear", "do_emote_queue", do_emote_queue, mob, "clears his throat and glances around pensively.");
+				RS.Queue.AddToQueue(12, "demon_appear", "do_say_queue", do_say_queue, mob, "Most often by hoes and by gardeners I'm chased, ");
+				RS.Queue.AddToQueue(13, "demon_appear", "do_say_queue", do_say_queue, mob, "They cut off my head and then smash it to paste;");
+				RS.Queue.AddToQueue(14, "demon_appear", "do_say_queue", do_say_queue, mob, "Against them, however,  my body is braced, ");
+				RS.Queue.AddToQueue(15, "demon_appear", "do_say_queue", do_say_queue, mob, "For always I'm growing due south of the waist.");
+				RS.Queue.AddToQueue(16, "demon_appear", "do_say_queue", do_say_queue, mob, "Now then... what am I?");
 				af.duration = 8;
 				af.modifier = 0;
 				affect_to_char(mob, &af);
 				break;
 			case LESSER_MALAPHAR:
-				RS.Queue.AddToQueue(2, 2, do_emote, mob, (char *)"'s eyes light up as he realizes where he is.");
-				RS.Queue.AddToQueue(4, 2, do_say, mob, (char *)"My friend!  My friend,  my patron,  my emptor!");
-				RS.Queue.AddToQueue(6, 5, act, "Malaphar sidles up to you, and with a conspiratorial wink, waves his hand.", ch, 0, 0, TO_CHAR);
-				RS.Queue.AddToQueue(8, 2, do_whisper, mob, (char *)"I have something... something in which you would most undoubtedly be interested.");
-				RS.Queue.AddToQueue(10, 2, do_say, mob, (char *)"Sale or trade only,  I'm afraid,  no credit.  And don't waste my time offering me paltry trifles.");
+				RS.Queue.AddToQueue(2, "demon_appear", "do_emote_queue", do_emote_queue, mob, "'s eyes light up as he realizes where he is.");
+				RS.Queue.AddToQueue(4, "demon_appear", "do_say_queue", do_say_queue, mob, "My friend!  My friend,  my patron,  my emptor!");
+				RS.Queue.AddToQueue(6, "demon_appear", "act_queue", act_queue, "Malaphar sidles up to you, and with a conspiratorial wink, waves his hand.", ch, nullptr, nullptr, TO_CHAR);
+				RS.Queue.AddToQueue(8, "demon_appear", "do_whisper_queue", do_whisper_queue, mob, "I have something... something in which you would most undoubtedly be interested.");
+				RS.Queue.AddToQueue(10, "demon_appear", "do_say_queue", do_say_queue, mob, "Sale or trade only,  I'm afraid,  no credit.  And don't waste my time offering me paltry trifles.");
 				af.duration = 7;
 				affect_to_char(mob, &af);
 				break;
 			case LESSER_FURCAS:
-				RS.Queue.AddToQueue(2, 2, do_emote, mob, (char *)"appears shocked,  and he winces away from you automatically.");
-				RS.Queue.AddToQueue(4, 5, act, "Pawing his way around you, viewing you from all angles, Furcas blinks.", ch, 0, 0, TO_CHAR);
-				RS.Queue.AddToQueue(6, 2, do_whisper, mob, (char *)"...can it find us?  We think it cannot.  We hope it tries its hardest.");
-				RS.Queue.AddToQueue(8, 5, act, "Suddenly, you blink and Furcas has vanished, leaving a cold sniff in the air!", mob, 0, 0, TO_ROOM);
-				RS.Queue.AddToQueue(9, 2, furcas_vanish, ch, mob);
+				RS.Queue.AddToQueue(2, "demon_appear", "do_emote_queue", do_emote_queue, mob, "appears shocked,  and he winces away from you automatically.");
+				RS.Queue.AddToQueue(4, "demon_appear", "act_queue", act_queue, "Pawing his way around you, viewing you from all angles, Furcas blinks.", ch, nullptr, nullptr, TO_CHAR);
+				RS.Queue.AddToQueue(6, "demon_appear", "do_whisper_queue", do_whisper_queue, mob, "...can it find us?  We think it cannot.  We hope it tries its hardest.");
+				RS.Queue.AddToQueue(8, "demon_appear", "act_queue", act_queue, "Suddenly, you blink and Furcas has vanished, leaving a cold sniff in the air!", mob, nullptr, nullptr, TO_ROOM);
+				RS.Queue.AddToQueue(9, "demon_appear", "furcas_vanish", furcas_vanish, ch, mob);
 
 				af.duration = 24;
 				affect_to_char(mob, &af);
 				break;
 			case LESSER_IPOS:
-				RS.Queue.AddToQueue(2, 5, act, "$n, still steaming, looks around him with a small smile on his face.", mob, 0, 0, TO_ROOM);
-				RS.Queue.AddToQueue(4, 5, act, "His gaze settles upon you, and his smile broadens to a genuine grin.", ch, 0, 0, TO_CHAR);
-				RS.Queue.AddToQueue(6, 2, do_say, mob, (char *)"Greetings my rageful,  irascible friend!  The time for your fury has come to an end."); 
-				RS.Queue.AddToQueue(7, 2, do_say, mob, (char *)"For a moment at least,  for you see,  I am weary of warriors bleak and dark paladins dreary.");
-				RS.Queue.AddToQueue(8, 2, do_say, mob, (char *)"Instead,  it's my wish as I put pen to paper,  that you'll indulge me with a frolicsome caper.");
-				RS.Queue.AddToQueue(9, 2, do_say, mob, (char *)"Be mindful,  my ears are accustomed to rhymes; I hope you are willing to speak me four lines....");
-				RS.Queue.AddToQueue(10, 2, do_emote, mob, (char *)"thrusts forward,  anticipating your poem with an evil gleam in his eye.");
+				RS.Queue.AddToQueue(2, "demon_appear", "act_queue", act_queue, "$n, still steaming, looks around him with a small smile on his face.", mob, nullptr, nullptr, TO_ROOM);
+				RS.Queue.AddToQueue(4, "demon_appear", "act_queue", act_queue, "His gaze settles upon you, and his smile broadens to a genuine grin.", ch, nullptr, nullptr, TO_CHAR);
+				RS.Queue.AddToQueue(6, "demon_appear", "do_say_queue", do_say_queue, mob, "Greetings my rageful,  irascible friend!  The time for your fury has come to an end."); 
+				RS.Queue.AddToQueue(7, "demon_appear", "do_say_queue", do_say_queue, mob, "For a moment at least,  for you see,  I am weary of warriors bleak and dark paladins dreary.");
+				RS.Queue.AddToQueue(8, "demon_appear", "do_say_queue", do_say_queue, mob, "Instead,  it's my wish as I put pen to paper,  that you'll indulge me with a frolicsome caper.");
+				RS.Queue.AddToQueue(9, "demon_appear", "do_say_queue", do_say_queue, mob, "Be mindful,  my ears are accustomed to rhymes; I hope you are willing to speak me four lines....");
+				RS.Queue.AddToQueue(10, "demon_appear", "do_emote_queue", do_emote_queue, mob, "thrusts forward,  anticipating your poem with an evil gleam in his eye.");
 				af.modifier = 0;
 				af.duration = 8;
 				affect_to_char(mob, &af);
@@ -1457,63 +1457,65 @@ void demon_appear(CHAR_DATA *ch, int *demonptr, int *typeptr)
 		switch (demon)
 		{
 			case GREATER_OZE:
-				RS.Queue.AddToQueue(2, 2, do_emote, mob, (char *)"nearly collapses as he doubles over in sudden agony,  howling pitifully.");
-				RS.Queue.AddToQueue(3, 2, do_say, mob, (char *)"What have you done...?  What have you DONE?");
-				RS.Queue.AddToQueue(4, 5, act, "Blubbering like a child, $n slowly composes $mself and rises to $s \"feet.\"", mob, 0, 0, TO_ROOM);
-				RS.Queue.AddToQueue(6, 5, act, "$e points a hideously deformed arm toward you, dripping blood and bits of sinew.", mob, 0, 0, TO_ROOM);
-				RS.Queue.AddToQueue(8, 2, do_say, mob, (char *)"I charge you,  mortal,  with returning me to the abyss.  I have been plucked from a place... a place from whence I should not have been plucked.");
-				RS.Queue.AddToQueue(10, 2, do_emote, mob, (char *)"shudders slightly before continuing.");
-				RS.Queue.AddToQueue(11, 2, do_say, mob, (char *)"I require your blood, meddler,  in order that I might survive long enough to return....  Speak the words,  whelp.  Yes or no?");
+				RS.Queue.AddToQueue(2, "demon_appear", "do_emote_queue", do_emote_queue, mob, "nearly collapses as he doubles over in sudden agony,  howling pitifully.");
+				RS.Queue.AddToQueue(3, "demon_appear", "do_say_queue", do_say_queue, mob, "What have you done...?  What have you DONE?");
+				RS.Queue.AddToQueue(4, "demon_appear", "act_queue", act_queue, "Blubbering like a child, $n slowly composes $mself and rises to $s \"feet.\"", mob, nullptr, nullptr, TO_ROOM);
+				RS.Queue.AddToQueue(6, "demon_appear", "act_queue", act_queue, "$e points a hideously deformed arm toward you, dripping blood and bits of sinew.", mob, nullptr, nullptr, TO_ROOM);
+				RS.Queue.AddToQueue(8, "demon_appear", "do_say_queue", do_say_queue, mob, "I charge you,  mortal,  with returning me to the abyss.  I have been plucked from a place... a place from whence I should not have been plucked.");
+				RS.Queue.AddToQueue(10, "demon_appear", "do_emote_queue", do_emote_queue, mob, "shudders slightly before continuing.");
+				RS.Queue.AddToQueue(11, "demon_appear", "do_say_queue", do_say_queue, mob, "I require your blood, meddler,  in order that I might survive long enough to return....  Speak the words,  whelp.  Yes or no?");
 				af.duration = 6;
 				affect_to_char(mob, &af);
 				break;
 			case GREATER_GAMYGYN:
-				RS.Queue.AddToQueue(2, 5, act, "The undulating, shimmering form before you rings with unearthly sound.", mob, 0, 0, TO_ROOM);
-				RS.Queue.AddToQueue(4, 5, act, "Swooping toward your face, $n seems to peer directly into your eyes.", mob, 0, 0, TO_ROOM);
-				RS.Queue.AddToQueue(6, 2, do_tell, mob, buf); 
-				RS.Queue.AddToQueue(6, 3, sprintf, buf, (char *)"%s I see you,  mortal.", ch->name);
-				RS.Queue.AddToQueue(6, 5, act, "A sudden voice echoes unsettlingly in your mind:", mob, 0, ch, TO_VICT);
-				RS.Queue.AddToQueue(7, 5, act, "You wince involuntarily, pictures of transactions gone wrong in your mind's eye.", mob, 0, ch, TO_VICT);
-				RS.Queue.AddToQueue(9, 2, do_tell, mob, buf);
-				RS.Queue.AddToQueue(9, 3, sprintf, buf, (char *)"%s I will not devour you; you may yet entertain me.  Rewards shall be yours if you provide me with the dead flesh of one of your aberrant lightwalking kin.  Do you submit yourself to my desire?", ch->name);
+				RS.Queue.AddToQueue(2, "demon_appear", "act_queue", act_queue, "The undulating, shimmering form before you rings with unearthly sound.", mob, nullptr, nullptr, TO_ROOM);
+				RS.Queue.AddToQueue(4, "demon_appear", "act_queue", act_queue, "Swooping toward your face, $n seems to peer directly into your eyes.", mob, nullptr, nullptr, TO_ROOM);
+
+				buffer = fmt::format("{} I see you,  mortal.", ch->name);
+				RS.Queue.AddToQueue(6, "demon_appear", "do_tell_queue", do_tell_queue, mob, buffer); 
+				RS.Queue.AddToQueue(6, "demon_appear", "act_queue", act_queue, "A sudden voice echoes unsettlingly in your mind:", mob, nullptr, ch, TO_VICT);
+				RS.Queue.AddToQueue(7, "demon_appear", "act_queue", act_queue, "You wince involuntarily, pictures of transactions gone wrong in your mind's eye.", mob, nullptr, ch, TO_VICT);
+
+				buffer = fmt::format("{} I will not devour you; you may yet entertain me.  Rewards shall be yours if you provide me with the dead flesh of one of your aberrant lightwalking kin.  Do you submit yourself to my desire?", ch->name);
+				RS.Queue.AddToQueue(9, "demon_appear", "do_tell_queue", do_tell_queue, mob, buffer);
 				af.duration = 5;
 				affect_to_char(mob, &af);
 				break;
 			case GREATER_OROBAS:
-				RS.Queue.AddToQueue(2, 5, act, "Orobas' many faces stare around the area, nonplussed by your summoning.", mob, 0, ch, TO_VICT);
-				RS.Queue.AddToQueue(4, 2, do_say, mob, (char *)"I see.");
-				RS.Queue.AddToQueue(6, 5, act, "A great howling sound boils into existence as Orobas' limbs flail wildly!", mob, 0, 0, TO_ROOM);
-				RS.Queue.AddToQueue(8, 2, do_say, mob, (char *)"I am displeased to be here.");
-				RS.Queue.AddToQueue(9, 2, do_say, mob, (char *)"You will do my bidding,  mortal,  or I shall inform the abyss of your grievous error at once.");
-				RS.Queue.AddToQueue(10, 5, act, "The choir of blurred and screaming heads reaches a new pitch of fervor.", mob, 0, 0, TO_ALL);
-				RS.Queue.AddToQueue(12, 2, do_whisper, mob, (char *)"Speak now,  or forever mourn your decision.  Do you submit?");
+				RS.Queue.AddToQueue(2, "demon_appear", "act_queue", act_queue, "Orobas' many faces stare around the area, nonplussed by your summoning.", mob, nullptr, ch, TO_VICT);
+				RS.Queue.AddToQueue(4, "demon_appear", "do_say_queue", do_say_queue, mob, "I see.");
+				RS.Queue.AddToQueue(6, "demon_appear", "act_queue", act_queue, "A great howling sound boils into existence as Orobas' limbs flail wildly!", mob, nullptr, nullptr, TO_ROOM);
+				RS.Queue.AddToQueue(8, "demon_appear", "do_say_queue", do_say_queue, mob, "I am displeased to be here.");
+				RS.Queue.AddToQueue(9, "demon_appear", "do_say_queue", do_say_queue, mob, "You will do my bidding,  mortal,  or I shall inform the abyss of your grievous error at once.");
+				RS.Queue.AddToQueue(10, "demon_appear", "act_queue", act_queue, "The choir of blurred and screaming heads reaches a new pitch of fervor.", mob, nullptr, nullptr, TO_ALL);
+				RS.Queue.AddToQueue(12, "demon_appear", "do_whisper_queue", do_whisper_queue, mob, "Speak now,  or forever mourn your decision.  Do you submit?");
 				af.duration = 5;
 				affect_to_char(mob, &af);
 				break;
 			case GREATER_GERYON:
-				RS.Queue.AddToQueue(2, 2, do_emote, mob, (char *)"smiles pleasantly,  extending a cool,  dry hand to shake your own.");
-				RS.Queue.AddToQueue(4, 2, do_say, mob, (char *)"It's wonderful to be back here,  I must say.  It's been far too long.  Who was the last fellow?  Ah,  yes....");
-				RS.Queue.AddToQueue(5, 2, do_emote, mob, (char *)"seems to finger something in his pocket,  his eyes alight with pleasure.");
-				RS.Queue.AddToQueue(6, 5, act, "An uncomfortable sensation crawls over you as you eye this well-dressed demon.", mob, 0, ch, TO_VICT);
-				RS.Queue.AddToQueue(8, 2, do_say, mob, (char *)"But enough of my reminiscing!  I imagine you have something you wanted to discuss,  yes?  Power,  no doubt!");
-				RS.Queue.AddToQueue(10, 2, do_emote, mob, (char *)"'s smile expands to a wider grin,  and his eyes flicker red for a moment.");
-				RS.Queue.AddToQueue(11, 5, act, "...though it may have been a trick of the light.", mob, 0, 0, TO_ROOM);
-				RS.Queue.AddToQueue(12, 2, do_say, mob, (char *)"So,  to business.  What shall it be,  then?  An eye or a finger?");
+				RS.Queue.AddToQueue(2, "demon_appear", "do_emote_queue", do_emote_queue, mob, "smiles pleasantly,  extending a cool,  dry hand to shake your own.");
+				RS.Queue.AddToQueue(4, "demon_appear", "do_say_queue", do_say_queue, mob, "It's wonderful to be back here,  I must say.  It's been far too long.  Who was the last fellow?  Ah,  yes....");
+				RS.Queue.AddToQueue(5, "demon_appear", "do_emote_queue", do_emote_queue, mob, "seems to finger something in his pocket,  his eyes alight with pleasure.");
+				RS.Queue.AddToQueue(6, "demon_appear", "act_queue", act_queue, "An uncomfortable sensation crawls over you as you eye this well-dressed demon.", mob, nullptr, ch, TO_VICT);
+				RS.Queue.AddToQueue(8, "demon_appear", "do_say_queue", do_say_queue, mob, "But enough of my reminiscing!  I imagine you have something you wanted to discuss,  yes?  Power,  no doubt!");
+				RS.Queue.AddToQueue(10, "demon_appear", "do_emote_queue", do_emote_queue, mob, "'s smile expands to a wider grin,  and his eyes flicker red for a moment.");
+				RS.Queue.AddToQueue(11, "demon_appear", "act_queue", act_queue, "...though it may have been a trick of the light.", mob, nullptr, nullptr, TO_ROOM);
+				RS.Queue.AddToQueue(12, "demon_appear", "do_say_queue", do_say_queue, mob, "So,  to business.  What shall it be,  then?  An eye or a finger?");
 				af.duration = 5;
 				affect_to_char(mob, &af);
 				break;
 			case GREATER_CIMERIES:
 				WAIT_STATE(ch, 5 * PULSE_VIOLENCE);
-				RS.Queue.AddToQueue(2, 2, do_emote, mob, (char *)"rises to his feet,  and in a sudden panic attempts to flee by air.");
-				RS.Queue.AddToQueue(3, 5, act, "The greater demon's pathetic wings, completely impotent, flap helplessly.", mob, 0, 0, TO_ROOM);
-				RS.Queue.AddToQueue(4, 5, act, "You stave off a pang of guilt at having summoned this massive beast to flounder.", mob, 0, ch, TO_VICT);
-				RS.Queue.AddToQueue(6, 5, act, "Your misplaced guilt quickly turns to fear as Cimeries rounds on you savagely!", mob, 0, ch, TO_VICT);
-				RS.Queue.AddToQueue(7, 5, act, "Before you can react, Cimeries has clamped your head between two massive claws!", mob, 0, ch, TO_VICT);
-				RS.Queue.AddToQueue(9, 5, act, "You gasp in pain, blood running down your face, as his talons pierce your nose and ear!", mob, 0, ch, TO_VICT);
-				RS.Queue.AddToQueue(10, 5, act, "$n speaks in a low grunting language, and you cannot understand a word.", mob, 0, 0, TO_ROOM);
-				RS.Queue.AddToQueue(11, 5, act, "$n tugs harshly on your ear and nose in turn, eliciting another gasp of pain.", mob, 0, ch, TO_VICT);
-				RS.Queue.AddToQueue(13, 5, act, "Suddenly, his cruel choice for you becomes clear: ear or nose?", mob, 0, ch, TO_VICT);
-				RS.Queue.AddToQueue(15, 5, act, "A shiver runs down your spine while you contemplate your fate.", mob, 0, ch, TO_VICT);
+				RS.Queue.AddToQueue(2, "demon_appear", "do_emote_queue", do_emote_queue, mob, "rises to his feet,  and in a sudden panic attempts to flee by air.");
+				RS.Queue.AddToQueue(3, "demon_appear", "act_queue", act_queue, "The greater demon's pathetic wings, completely impotent, flap helplessly.", mob, nullptr, nullptr, TO_ROOM);
+				RS.Queue.AddToQueue(4, "demon_appear", "act_queue", act_queue, "You stave off a pang of guilt at having summoned this massive beast to flounder.", mob, nullptr, ch, TO_VICT);
+				RS.Queue.AddToQueue(6, "demon_appear", "act_queue", act_queue, "Your misplaced guilt quickly turns to fear as Cimeries rounds on you savagely!", mob, nullptr, ch, TO_VICT);
+				RS.Queue.AddToQueue(7, "demon_appear", "act_queue", act_queue, "Before you can react, Cimeries has clamped your head between two massive claws!", mob, nullptr, ch, TO_VICT);
+				RS.Queue.AddToQueue(9, "demon_appear", "act_queue", act_queue, "You gasp in pain, blood running down your face, as his talons pierce your nose and ear!", mob, nullptr, ch, TO_VICT);
+				RS.Queue.AddToQueue(10, "demon_appear", "act_queue", act_queue, "$n speaks in a low grunting language, and you cannot understand a word.", mob, nullptr, nullptr, TO_ROOM);
+				RS.Queue.AddToQueue(11, "demon_appear", "act_queue", act_queue, "$n tugs harshly on your ear and nose in turn, eliciting another gasp of pain.", mob, nullptr, ch, TO_VICT);
+				RS.Queue.AddToQueue(13, "demon_appear", "act_queue", act_queue, "Suddenly, his cruel choice for you becomes clear: ear or nose?", mob, nullptr, ch, TO_VICT);
+				RS.Queue.AddToQueue(15, "demon_appear", "act_queue", act_queue, "A shiver runs down your spine while you contemplate your fate.", mob, nullptr, ch, TO_VICT);
 				af.duration = 4;
 				affect_to_char(mob, &af);
 				break;
@@ -1565,9 +1567,9 @@ void lesser_demon_tick(CHAR_DATA *mob, AFFECT_DATA *af)
 			if (af->duration == 1)
 			{
 				do_emote(mob, "laughs giddily and whirls to leave.");
-				RS.Queue.AddToQueue(1, 2, do_say, mob, (char *)"I'll be leaving now,  and leaving you to your thoughts.  You'll never know the answer to my riddle.");
-				RS.Queue.AddToQueue(2, 5, act, "With a puff of hazy purple smoke and a sound like a cough, $n disappears.", mob, 0, 0, TO_ROOM);
-				RS.Queue.AddToQueue(3, 1, delay_extract, mob);
+				RS.Queue.AddToQueue(1, "lesser_demon_tick", "do_say_queue", do_say_queue, mob, "I'll be leaving now,  and leaving you to your thoughts.  You'll never know the answer to my riddle.");
+				RS.Queue.AddToQueue(2, "lesser_demon_tick", "act_queue", act_queue, "With a puff of hazy purple smoke and a sound like a cough, $n disappears.", mob, nullptr, nullptr, TO_ROOM);
+				RS.Queue.AddToQueue(3, "lesser_demon_tick", "delay_extract", delay_extract, mob);
 				break;
 			}
 		case MOB_VNUM_MALAPHAR:
@@ -2150,7 +2152,7 @@ void do_breath_mephisto(CHAR_DATA *ch, char *argument)
 	act("You begin building up the intense cold within you.", ch, 0, 0, TO_CHAR);
 	act("$n's skin shifts to a shade of blue.", ch, 0, 0, TO_ROOM);
 
-	RS.Queue.AddToQueue(3, 3, mephisto_two, ch, victim, argument);
+	RS.Queue.AddToQueue(3, "do_breath_mephisto", "mephisto_two", mephisto_two, ch, victim, argument);
 }
 
 void mephisto_two(CHAR_DATA *ch, CHAR_DATA *victim, char *argument)

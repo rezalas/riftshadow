@@ -1,127 +1,71 @@
 #include "queue.h"
-#define NOP asm volatile("nop");
+#include "merc.h"
 
-CQueue *CQueue::queue_first = 0; /*null*/
-
-CQueue::CQueue()
-{
-}
-
-CQueue::~CQueue()
-{
-}
+/// Processes all items on the queue. Any entry that has a timer of zero gets executed.
+/// Once all items are processed, those functions that have executed are removed from the queue.
 void CQueue::ProcessQueue()
 {
-	int i;
-	void *j;
-	CQueue *qf, *qf_next;
-	for(qf = queue_first; qf; qf = qf_next)
+	for (auto& item : newQueue)
 	{
-		qf_next = qf->queue_next;
-		if(qf->queue_delay < 0) /* weird bug i don't want to find, probably a fucked up addtoq somewhere in the code */
+		if (--item.timer == 0)
 		{
-			qf->FreeQueue();
-			continue;
-		}
-		if(--qf->queue_delay == 0)
-		{
-			switch(qf->queue_numargs)
-			{
-				case 0:
-					(*qf->queue_function)();
-					break;
-				case 1:
-					(*qf->queue_function)(qf->queue_args[0]);
-					break;
-				case 2:
-					(*qf->queue_function)(qf->queue_args[0],qf->queue_args[1]);
-					break;
-				case 3: 
-					(*qf->queue_function)(qf->queue_args[0],qf->queue_args[1],qf->queue_args[2]);
-					break;
-				case 4:
-					(*qf->queue_function)(qf->queue_args[0],qf->queue_args[1],qf->queue_args[2],qf->queue_args[3]);
-					break;
-				case 5:
-					(*qf->queue_function)(qf->queue_args[0],qf->queue_args[1],qf->queue_args[2],qf->queue_args[3],qf->queue_args[4]);
-					break;
-				case 6:
-					(*qf->queue_function)(qf->queue_args[0],qf->queue_args[1],qf->queue_args[2],qf->queue_args[3],qf->queue_args[4],qf->queue_args[5]);
-					break;
-				case 7:
-					(*qf->queue_function)(qf->queue_args[0],qf->queue_args[1],qf->queue_args[2],qf->queue_args[3],qf->queue_args[4],qf->queue_args[5],qf->queue_args[6]);
-					break;
-				case 8:
-					(*qf->queue_function)(qf->queue_args[0],qf->queue_args[1],qf->queue_args[2],qf->queue_args[3],qf->queue_args[4],qf->queue_args[5],qf->queue_args[6],qf->queue_args[7]);
-					break;
-			}		
-			
-			qf->FreeQueue();
+			Logger.Warn("Processing funcs ==> from {} func {} timer {}", item.callerFuncName, item.calleeFuncName, item.timer);
+
+			auto func = item.function;
+			func();
 		}
 	}
-}
-void CQueue::AddToQueue(int nTimer, int nArgs, ...)
-{
-	va_list ap;
-	int i;
-	void *hax[MAX_QUEUE_ARGS];
 
-	if(nTimer < 0)
-	 	Logger.Warn("Negative Queue Timer - NumArgs: {}", nArgs);	
-	CQueue *nq = new CQueue;
-	nq->queue_delay = nTimer;
-	nq->queue_numargs = nArgs;
-	nq->queue_next = queue_first;
-	queue_first = nq;
-	va_start(ap, nArgs);
-	nq->queue_function = (QUEUE_FUNCTION)va_arg(ap, void *);
-	for(i = 0; i < MAX_QUEUE_ARGS; i++)
-		nq->queue_args[i] = va_arg(ap, void *);
-	va_end(ap);
+	newQueue.erase(
+		std::remove_if(newQueue.begin(), newQueue.end(), [](const auto& item)
+		{
+			Logger.Warn("Processing delete ==> {}", item.timer);
+
+			return item.timer < 0;
+		}), newQueue.end());
 }
 
-void CQueue::FreeQueue(void)
+/// Determines if a specific character has any remaining entries in the queue.
+/// This function applies to both directions (eg. either character being affected or is affecting another pc or environment).
+/// @param qChar: The character to lookup in the queue.
+/// @return true if there are entries related to the character in the queue; otherwise false.
+bool CQueue::HasQueuePending(CHAR_DATA *qChar)
 {
-	if(this == queue_first)
+	for (auto& item : newQueue)
 	{
-		queue_first = this->queue_next;
-		delete this;
-		return;
-	}
-	CQueue *r;
-	for(r = queue_first; r && r->queue_next != this; r = r->queue_next)
-		;
-	if(!r)
-		throw("FreeQueue(): Invalid linked list");
-	r->queue_next = this->queue_next;
-	delete this;
-}
+		auto delay = item.timer;
+		auto v = item.charList;
+		auto contains = std::find(v.begin(), v.end(), qChar) != v.end();
 
-bool CQueue::HasQueuePending(void *qChar)
-{
-	CQueue *r;
-	for(r = queue_first; r; r = r->queue_next)
-		for(int i = 0; i < r->queue_numargs; i++)
-			if(r->queue_args[i] == qChar && r->queue_delay > 0)
-				return true;
+		Logger.Warn("==> Has queue {} {}", contains, delay);
+		if (contains && delay > 0)
+			return true;
+	}
+
 	return false;
 }
 
-void CQueue::DeleteQueuedEventsInvolving(void *qChar)
+/// Deletes all entries in the queue pertaining to the specified character.
+/// @param qChar: The character to lookup in the queue.
+void CQueue::DeleteQueuedEventsInvolving(CHAR_DATA *qChar)
 {
-	CQueue *r, *r_next = 0;//null
 	int deleted = 0;
-	for(r = queue_first; r != 0 /*null*/; r = r_next)
-	{
-		r_next = r->queue_next;
-		for(int i = 0; i < r->queue_numargs; i++)
-			if(r->queue_args[i] == qChar && r->queue_delay > 0)
+	newQueue.erase(
+		std::remove_if(newQueue.begin(), newQueue.end(), [&](const auto& item)
+		{
+			auto delay = item.timer;
+			auto v = item.charList;
+			auto contains = std::find(v.begin(), v.end(), qChar) != v.end();
+
+			Logger.Warn("==> Delete {} {}", contains, delay);
+			if (contains && delay > 0)
 			{
-				r->FreeQueue();
 				deleted++;
-				break;
+				return true;
 			}
-	}
+
+			return false;
+		}), newQueue.end());
 
 	Logger.Warn("{} events deleted.", deleted);
 }

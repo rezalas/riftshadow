@@ -118,6 +118,7 @@ void do_holylight (CHAR_DATA *ch, char *argument);
 void do_prefi (CHAR_DATA *ch, char *argument);
 void do_prefix (CHAR_DATA *ch, char *argument);
 void do_astrip (CHAR_DATA *ch,char *argument);
+void do_astrip_queue (CHAR_DATA *ch, std::string argument);
 void do_limcounter (CHAR_DATA *ch,char *argument);
 void do_classes (CHAR_DATA *ch, char *argument);
 void do_rinfo (CHAR_DATA *ch,char *argument);

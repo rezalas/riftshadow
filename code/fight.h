@@ -114,6 +114,7 @@ bool can_bash (CHAR_DATA *ch, CHAR_DATA *victim);
 void disarm (CHAR_DATA *ch, CHAR_DATA *victim);
 void do_berserk (CHAR_DATA *ch, char *argument);
 void do_bash (CHAR_DATA *ch, char *argument);
+void do_bash_queue (CHAR_DATA *ch, std::string argument);
 void do_dirt (CHAR_DATA *ch, char *argument);
 void do_trip (CHAR_DATA *ch, char *argument);
 void do_hit (CHAR_DATA *ch, char *argument);

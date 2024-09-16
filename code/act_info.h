@@ -61,6 +61,7 @@ bool show_altdesc (ROOM_INDEX_DATA *room);
 char *get_room_description(ROOM_INDEX_DATA *room);
 char *get_room_name(ROOM_INDEX_DATA *room);
 void do_look (CHAR_DATA *ch, char *argument);
+void do_look_queue (CHAR_DATA *ch, std::string argument);
 /* RT added back for the hell of it */
 void do_read (CHAR_DATA *ch, char *argument);
 /*

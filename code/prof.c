@@ -403,11 +403,11 @@ void CProficiencies::TrainProficiency(char_data* ch, char_data* trainer, char* a
 				proficiency.name,
 				END_COLOR(ch));
 
-			char *tptr = talloc_string(buffer.c_str()); 
-			RS.Queue.AddToQueue((i + 1) * 2, 2, send_to_char, tptr, ch);
+			RS.Queue.AddToQueue((i + 1) * 2, "TrainProficiency", "send_to_char_queue", send_to_char_queue, buffer, ch);
 		}
 
-		RS.Queue.AddToQueue((i + 1) * 2, 5, act, prof_msg_table[prof].learning_msgs[i], ch, 0, trainer, TO_CHAR);
+		auto message = std::string(prof_msg_table[prof].learning_msgs[i]);
+		RS.Queue.AddToQueue((i + 1) * 2, "TrainProficiency", "act_queue", act_queue, message, ch, nullptr, trainer, TO_CHAR);
 	}
 
 	ch->Profs()->DeductPoints(proficiency.cost);
@@ -1024,11 +1024,11 @@ void prof_firestart(CHAR_DATA *ch, char *argument)
 	act("$n begins to build a campfire, gathering sticks and twigs from $s surroundings.", ch, 0, 0, TO_ROOM);
 	ch->move -= ch->level;
 
-	RS.Queue.AddToQueue(1, 2, send_to_char, "You rub two sticks together, trying to produce a flame.\n\r", ch);
-	RS.Queue.AddToQueue(1, 5, act, "$n rubs two sticks together, trying to produce a flame.", ch, 0, 0, TO_ROOM);
-	RS.Queue.AddToQueue(3, 2, send_to_char, "The sticks begin to smoke, and soon you produce a spark.\n\r", ch);
-	RS.Queue.AddToQueue(3, 5, act, "The sticks begin to smoke, and soon $n produces a spark.", ch, 0, 0, TO_ROOM);
-	RS.Queue.AddToQueue(5, 2, build_fire, ch, dur);
+	RS.Queue.AddToQueue(1, "prof_firestart", "send_to_char_queue", send_to_char_queue, "You rub two sticks together, trying to produce a flame.\n\r", ch);
+	RS.Queue.AddToQueue(1, "prof_firestart", "act_queue", act_queue, "$n rubs two sticks together, trying to produce a flame.", ch, nullptr, nullptr, TO_ROOM);
+	RS.Queue.AddToQueue(3, "prof_firestart", "send_to_char_queue", send_to_char_queue, "The sticks begin to smoke, and soon you produce a spark.\n\r", ch);
+	RS.Queue.AddToQueue(3, "prof_firestart", "act_queue", act_queue, "The sticks begin to smoke, and soon $n produces a spark.", ch, nullptr, nullptr, TO_ROOM);
+	RS.Queue.AddToQueue(5, "prof_firestart", "build_fire", build_fire, ch, dur);
 	WAIT_STATE(ch, PULSE_VIOLENCE * 2);
 }
 
