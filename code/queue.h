@@ -42,8 +42,6 @@ public:
 		auto chs = GetCharacterData(tuple);
 
 		// place on queue
-		//newQueue.push_back({nTimer, from, funcName, chs, [&]() { std::apply(func, std::forward_as_tuple(std::forward<Args>(args)...)); }});
-
 		newQueue.push_back({nTimer, from, funcName, chs, [=] () mutable
 		{
 			std::apply(func, std::forward_as_tuple(std::forward<Args>(args)...));
@@ -77,7 +75,6 @@ private:
 		std::function<void()> function;
 	};
 
-	// std::vector<std::tuple<int, std::string, std::string, std::vector<CHAR_DATA*>, std::function<void()>>> newQueue;
 	std::vector<queueEntry_t> newQueue;
 
 	/// Helper function used to extract character data from the specfied tuple.
