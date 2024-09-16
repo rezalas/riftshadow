@@ -658,7 +658,7 @@ const char *lowstring(const char *i)
 ///
 void do_say(CHAR_DATA *ch, char *argument)
 {
-//	RS.Logger.Info("entered do_say args => {}", argument);
+	RS.Logger.Info("entered do_say args => {}", argument);
 
 	if (argument[0] == '\0')
 	{
@@ -667,7 +667,7 @@ void do_say(CHAR_DATA *ch, char *argument)
 	}
 	check_ooc(ch, argument, "SAY");
 
-//	RS.Logger.Info("entered do_say args region");
+	RS.Logger.Info("entered do_say args region");
 
 #pragma region  Reasons you should not be able to talk
 	if (is_affected(ch, gsn_silence))
@@ -717,7 +717,7 @@ void do_say(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-//	RS.Logger.Info("entered do_say args build buffer");
+	RS.Logger.Info("entered do_say args build buffer");
 
 	char saymsg[MAX_STRING_LENGTH] = {0};
 	if (argument[strlen(argument) - 1] == '!')
@@ -730,7 +730,7 @@ void do_say(CHAR_DATA *ch, char *argument)
 	auto buffer = fmt::format("You {} '{}$T{}'", saymsg, get_char_color(ch, "speech"), END_COLOR(ch));
 	act(buffer.c_str(), ch, nullptr, argument, TO_CHAR);
 
-//	RS.Logger.Info("entered do_say args loop 1");
+	RS.Logger.Info("entered do_say args loop 1");
 
 	for (auto victim = ch->in_room->people; victim != nullptr; victim = victim->next_in_room)
 	{
@@ -751,7 +751,7 @@ void do_say(CHAR_DATA *ch, char *argument)
 		}
 	}
 
-//	RS.Logger.Info("entered do_say args loop 2");
+	RS.Logger.Info("entered do_say args loop 2");
 
 	if (IS_SET(ch->in_room->progtypes, RPROG_SPEECH))
 		ch->in_room->rprogs->speech_prog(ch->in_room, ch, argument);
@@ -765,7 +765,7 @@ void do_say(CHAR_DATA *ch, char *argument)
 			CALL_MEVENT(room_char, TRAP_MSPEECH, ch, room_char, argument);
 	}
 
-//	RS.Logger.Info("entered do_say args loop 3");
+	RS.Logger.Info("entered do_say args loop 3");
 
 	report_cabal_items(ch, argument);
 
@@ -781,7 +781,7 @@ void do_say(CHAR_DATA *ch, char *argument)
 			CALL_IEVENT(char_obj, TRAP_ISPEECH, ch, char_obj, argument);
 	}
 
-//	RS.Logger.Info("entered do_say args loop 4");
+	RS.Logger.Info("entered do_say args loop 4");
 
 	for (auto char_obj = ch->in_room->contents; char_obj != nullptr; char_obj = char_obj->next_content)
 	{

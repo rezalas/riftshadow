@@ -4,6 +4,7 @@
 #include "rift.h"
 #include "./stdlibs/clogger.h"
 #include <stdarg.h>
+#include <iostream>
 
 /*
 * DO NOT TOUCH ANYTHING
@@ -33,17 +34,20 @@ public:
 		if(nTimer < 0)
 			Logger.Warn("Negative Queue Timer - NumArgs: {}", sizeof...(Args));	
 
+		// print parameters
+		//((std::cout << ' ' << args << std::endl), ...);
+
 		// capture parameter pack
-		// //auto tuple = std::tuple<typename std::decay<Args>::type...>(args...);
-		//auto tuple = std::forward_as_tuple(std::forward<Args>(args)...);
 		auto tuple = std::tuple<Args...>(args...);
 		auto chs = GetCharacterData(tuple);
 
 		// place on queue
-		//auto qtip = std::make_tuple(nTimer, from, funcName, chs, [&]() { std::apply(func, tuple); });
-		//newQueue.push_back({nTimer, from, funcName, chs, [&]() { std::apply(func, tuple); }});
-		//newQueue.push_back({nTimer, from, funcName, chs, [&]() { std::apply(func, std::move(tuple)); }});
-		newQueue.push_back({nTimer, from, funcName, chs, [&]() { std::apply(func, std::forward_as_tuple(std::forward<Args>(args)...)); }});
+		//newQueue.push_back({nTimer, from, funcName, chs, [&]() { std::apply(func, std::forward_as_tuple(std::forward<Args>(args)...)); }});
+
+		newQueue.push_back({nTimer, from, funcName, chs, [=] () mutable
+		{
+			std::apply(func, std::forward_as_tuple(std::forward<Args>(args)...));
+		}});
 
 		Logger.Warn("Add => {} added {} with timer {}", from, funcName, nTimer);
 	}
