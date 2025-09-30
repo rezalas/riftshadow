@@ -96,8 +96,8 @@ SCENARIO("testing skill lookup","[skill_lookup]")
 			auto skillName = skill_table[expected].name; 
 			auto firstHalf = AllLower(substr(skillName,0,3));
 			auto secondHalf = AllUpper(substr(skillName,3,(sizeof(skillName) - 3)));
-			auto finalSkillName = (std::string(firstHalf) + std::string(secondHalf)).c_str();
-			auto actual = skill_lookup(finalSkillName);
+			std::string combinedSkillName = std::string(firstHalf) + std::string(secondHalf);
+			auto actual = skill_lookup(combinedSkillName.c_str());
 			THEN("it should return the expected index")
 			{
 				REQUIRE(actual == expected);
