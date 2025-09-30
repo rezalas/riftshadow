@@ -292,6 +292,7 @@ void game_loop_unix(int control)
 
 				for (i = 1; i < d->character->pcdata->write_next; i++)
 				{
+					if (i > MAX_QUEUE - 1) break;
 					strcpy(d->character->pcdata->queue[(i - 1)], d->character->pcdata->queue[i]);
 				}
 

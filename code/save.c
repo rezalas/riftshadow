@@ -941,7 +941,7 @@ bool load_char_obj(DESCRIPTOR_DATA *d, char *name)
 
 	ch->prompt = palloc_string("<%hhp %mm %vmv %L> ");
 
-	for (i = 0; i < 20; i++)
+	for (i = 0; i < MAX_QUEUE; i++)
 	{
 		ch->pcdata->queue[i][0] = '\0';
 	}
