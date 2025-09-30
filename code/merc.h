@@ -2718,7 +2718,7 @@ struct pc_data
 	// CMD_QUEUE data
 	//
 
-	char queue[20][MAX_INPUT_LENGTH];
+	char queue[MAX_QUEUE][MAX_INPUT_LENGTH];
 	short read_next;
 	short write_next;
 	bool pending;
