@@ -54,3 +54,13 @@ db-rift-core:
 - changed-files:
   - any-glob-to-any-file
     - db/rift_core/**
+
+workflows:
+- changed-files:
+  - any-glob-to-any-file
+    - .github/workflows/**
+
+labels:
+- changed-files:
+  - any-glob-to-any-file
+    - .github/labeler.yml
