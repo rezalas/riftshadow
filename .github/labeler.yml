@@ -1,34 +1,56 @@
 areas:
-- area/**
+- changed-files:
+  - any-glob-to-any-file:
+    - area/**
 
 characters:
-- code/characterClasses/**
+- changed-files:
+  - any-glob-to-any-file
+    - code/characterClasses/**
 
 tests:
-- tests/**
+- changed-files:
+  - any-glob-to-any-file
+    - tests/**
 
 admin:
-- admin/**
+- changed-files:
+  - any-glob-to-any-file
+    - admin/**
 
 docs:
-- docs/**
+- changed-files:
+  - any-glob-to-any-file
+    - docs/**
 
 core:
-- code/**
+- changed-files:
+  - any-glob-to-any-file
+    - code/**
 
 setup:
-- Makefile
-- '**/*.sql'
-- '**/*.sh'
+- changed-files:
+  - any-glob-to-any-file
+    - Makefile
+    - '**/*.sql'
+    - '**/*.sh'
 
 dev-install:
-- dev-install.sh
+- changed-files:
+  - any-glob-to-any-file
+    - dev-install.sh
 
 db:
-- db/**
+- changed-files:
+  - any-glob-to-any-file
+    - db/**
 
 db-rift:
-- db/rift/**
+- changed-files:
+  - any-glob-to-any-file
+    - db/rift/**
 
 db-rift-core:
-- db/rift_core/**
+- changed-files:
+  - any-glob-to-any-file
+    - db/rift_core/**
