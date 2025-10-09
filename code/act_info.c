@@ -1073,7 +1073,7 @@ void do_socials(CHAR_DATA *ch, char *argument)
 	for (auto iSocial = 0; social_table[iSocial].name[0] != '\0'; iSocial++)
 	{
 		char buf[MAX_STRING_LENGTH];
-		sprintf(buf, "%-12s", social_table[iSocial].name);
+		sprintf(buf, "%-12.19s", social_table[iSocial].name);
 		send_to_char(buf, ch);
 
 		if (++col % 2 == 0)
