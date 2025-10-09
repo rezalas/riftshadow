@@ -9,7 +9,7 @@ builder.Services.AddQuartz(config =>
     config.AddTrigger(opts => opts
         .ForJob(nameof(ReleaseListenerJob))
         .WithIdentity($"{nameof(ReleaseListenerJob)}-trigger")
-        .WithCronSchedule("0 0/10 * * * ?")); // Every 10 minutes
+        .WithCronSchedule("0 0/1 * * * ?")); // Every minute
 });
 
 builder.Services.AddQuartzHostedService(opts =>
