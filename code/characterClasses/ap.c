@@ -1840,8 +1840,6 @@ void insanity_pulse(CHAR_DATA *ch, AFFECT_DATA *af)
 				do_cleave(ch, victim->name);
 				break;
 		}
-
-		break;
 	}
 }
 
