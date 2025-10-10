@@ -135,8 +135,6 @@ bool can_loot(CHAR_DATA *ch, OBJ_DATA *obj)
 		return false;
 	}
 
-	return true;
-
 	owner = nullptr;
 	for (wch = char_list; wch != nullptr; wch = wch->next)
 	{
