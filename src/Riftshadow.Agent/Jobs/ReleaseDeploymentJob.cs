@@ -22,7 +22,6 @@ public class ReleaseDeploymentJob(ILogger<ReleaseDeploymentJob> _logger,
 
         var releaseTag = context.MergedJobDataMap.GetString("releaseTag");
         var releaseId = context.MergedJobDataMap.GetLong("releaseId");
-
         if (string.IsNullOrEmpty(releaseTag))
         {
             _logger.LogWarning("No release tag provided. Skipping deployment.");

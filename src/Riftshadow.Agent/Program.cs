@@ -47,7 +47,7 @@ builder.Services.AddTransient<IGitHubClient, GitHubClient>(() =>
     return client;
 });
 
-builder.Services.AddOptions<RiftshadowAgentOptions>().Bind(builder.Configuration.GetSection(RiftshadowAgentOptions.SectionName));
+builder.Services.Configure<RiftshadowAgentOptions>(builder.Configuration.GetSection(RiftshadowAgentOptions.SectionName));
 
 var host = builder.Build();
 host.Run();
