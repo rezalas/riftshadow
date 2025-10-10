@@ -5,62 +5,62 @@ areas:
 
 characters:
 - changed-files:
-  - any-glob-to-any-file
+  - any-glob-to-any-file:
     - code/characterClasses/**
 
 tests:
 - changed-files:
-  - any-glob-to-any-file
+  - any-glob-to-any-file:
     - tests/**
 
 admin:
 - changed-files:
-  - any-glob-to-any-file
+  - any-glob-to-any-file:
     - admin/**
 
 docs:
 - changed-files:
-  - any-glob-to-any-file
+  - any-glob-to-any-file:
     - docs/**
 
 core:
 - changed-files:
-  - any-glob-to-any-file
+  - any-glob-to-any-file:
     - code/**
 
 setup:
 - changed-files:
-  - any-glob-to-any-file
+  - any-glob-to-any-file:
     - Makefile
     - '**/*.sql'
     - '**/*.sh'
 
 dev-install:
 - changed-files:
-  - any-glob-to-any-file
+  - any-glob-to-any-file:
     - dev-install.sh
 
 db:
 - changed-files:
-  - any-glob-to-any-file
+  - any-glob-to-any-file:
     - db/**
 
 db-rift:
 - changed-files:
-  - any-glob-to-any-file
+  - any-glob-to-any-file:
     - db/rift/**
 
 db-rift-core:
 - changed-files:
-  - any-glob-to-any-file
+  - any-glob-to-any-file:
     - db/rift_core/**
 
 workflows:
 - changed-files:
-  - any-glob-to-any-file
+  - any-glob-to-any-file:
     - .github/workflows/**
 
 labels:
 - changed-files:
-  - any-glob-to-any-file
+  - any-glob-to-any-file:
     - .github/labeler.yml
