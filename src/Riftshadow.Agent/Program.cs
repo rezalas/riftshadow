@@ -1,6 +1,7 @@
 using Octokit;
 
 using Quartz;
+using Riftshadow.Agent.Packages;
 
 using Riftshadow.Agent.Configuration;
 
@@ -46,6 +47,8 @@ builder.Services.AddTransient<IGitHubClient, GitHubClient>(() =>
 
     return client;
 });
+
+builder.Services.AddTransient<IPackageService, PackageService>();
 
 builder.Services.Configure<RiftshadowAgentOptions>(builder.Configuration.GetSection(RiftshadowAgentOptions.SectionName));
 

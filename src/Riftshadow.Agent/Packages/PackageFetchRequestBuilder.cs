@@ -37,19 +37,4 @@ public class PackageFetchRequestBuilder
         _request.DownloadToPath = path;
         return this;
     }
-
-    public async Task<Result> ExecuteAsync(CancellationToken cancellationToken)
-    {
-
-        if (!Directory.Exists(_request.DownloadToPath))
-            Directory.CreateDirectory(_request.DownloadToPath);
-
-        var http = new HttpClient();
-
-        var response = await http.GetAsync(_request.DownloadFromPath, cancellationToken);
-        await using var fs = File.Create(_request.DownloadToPath);
-        await response.Content.CopyToAsync(fs);
-
-        return new Result(true, "Package downloaded successfully.");
-    }
 }

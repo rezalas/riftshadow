@@ -1,4 +1,4 @@
-namespace Riftshadow.Agent.Packages;
+namespace Riftshadow.Agent;
 
 public record Result(bool Success, string Message);
 

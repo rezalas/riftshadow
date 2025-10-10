@@ -12,7 +12,8 @@ namespace Riftshadow.Agent.Jobs;
 [DisallowConcurrentExecution]
 public class ReleaseDeploymentJob(ILogger<ReleaseDeploymentJob> _logger,
                                   IGitHubClient _github,
-                                  IOptionsMonitor<RiftshadowAgentOptions> _options) : IJob
+                                  IOptionsMonitor<RiftshadowAgentOptions> _options,
+                                  IPackageService packages) : IJob
 {
     public static readonly JobKey Key = new JobKey(nameof(ReleaseDeploymentJob));
 
@@ -57,28 +58,43 @@ public class ReleaseDeploymentJob(ILogger<ReleaseDeploymentJob> _logger,
         {
             _logger.LogInformation("Found game package {packageName} for release {releaseTag}.", gamePackage.Name, releaseTag);
 
-            var gamePackageResponse = await http.GetAsync(gamePackage.BrowserDownloadUrl);
+            var fetchRequest = PackageFetchRequestBuilder.Create()
+                                                         .WithPackageName(gamePackage.Name)
+                                                         .WithReleaseTag(releaseTag)
+                                                         .DownloadFrom(gamePackage.BrowserDownloadUrl)
+                                                         .DownloadTo(Path.Combine(releasePath, gamePackage.Name))
+                                                         .Build();
 
-            if (gamePackageResponse.IsSuccessStatusCode)
+            var fetchResult = await packages.FetchPackageAsync(fetchRequest, context.CancellationToken);
+            if (!fetchResult.Success)         
             {
-                var gamePackageFilePath = Path.Combine(releasePath, gamePackage.Name);
-                await using var fs = File.Create(gamePackageFilePath);
-                await gamePackageResponse.Content.CopyToAsync(fs);
-                _logger.LogInformation("Downloaded game package to {filePath}.", gamePackageFilePath);
+                _logger.LogError("Failed to fetch game package {packageName} for release {releaseTag}: {message}", gamePackage.Name, releaseTag, fetchResult.Message);
+                return;
             }
-            else
-            {
-                _logger.LogError("Failed to download game package {packageName} for release {releaseTag}. Status code: {statusCode}", gamePackage.Name, releaseTag, gamePackageResponse.StatusCode);
-            }            
+
         }
         else
-		{
+        {
             _logger.LogWarning("No game package found for release {releaseTag}. Skipping deployment.", releaseTag);
-		}
+        }
 
         if (agentPackage is not null)
         {
             _logger.LogInformation("Found agent package {packageName} for release {releaseTag}.", agentPackage.Name, releaseTag);
+
+            var fetchRequest = PackageFetchRequestBuilder.Create()
+                                                         .WithPackageName(agentPackage.Name)
+                                                         .WithReleaseTag(releaseTag)
+                                                         .DownloadFrom(agentPackage.BrowserDownloadUrl)
+                                                         .DownloadTo(Path.Combine(releasePath, agentPackage.Name))
+                                                         .Build();
+
+            var fetchResult = await packages.FetchPackageAsync(fetchRequest, context.CancellationToken);
+            if (!fetchResult.Success)
+            {
+                _logger.LogError("Failed to fetch agent package {packageName} for release {releaseTag}: {message}", agentPackage.Name, releaseTag, fetchResult.Message);
+                return;
+            }
         }
         else
 		{
