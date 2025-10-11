@@ -11,6 +11,9 @@ on:
       - main
     paths-ignore:
       - src/Riftshadow.Agent/**
+  release:
+    types: 
+    - published
 
 env:
   # Customize the CMake build type here (Release, Debug, RelWithDebInfo, etc.)
