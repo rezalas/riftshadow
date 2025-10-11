@@ -2,9 +2,15 @@ name: Build & Test
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
+    paths-ignore:
+      - src/Riftshadow.Agent/**
   pull_request:
-    branches: [ main ]
+    branches: 
+      - main
+    paths-ignore:
+      - src/Riftshadow.Agent/**
 
 env:
   # Customize the CMake build type here (Release, Debug, RelWithDebInfo, etc.)
