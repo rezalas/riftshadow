@@ -64,3 +64,8 @@ labels:
 - changed-files:
   - any-glob-to-any-file:
     - .github/labeler.yml
+
+release-agent:
+- changed-files:
+  - any-glob-to-any-file:
+    - src/Riftshadow.Agent/**

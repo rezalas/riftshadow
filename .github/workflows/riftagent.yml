@@ -1,0 +1,60 @@
+name: Riftshadow Agent
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - src/Riftshadow.Agent/**
+      - .github/workflows/riftagent.yml
+  pull_request:
+    branches: 
+      - main
+    paths:
+      - src/Riftshadow.Agent/**
+      - .github/workflows/riftagent.yml
+  release:
+    types: 
+    - published
+
+env:
+  service: Riftshadow.Agent
+  output_path: ${{ github.workspace }}/out
+  project: src/Riftshadow.Agent/Riftshadow.Agent.csproj
+  global_json: src/Riftshadow.Agent/global.json
+  archive: riftagent_${{ github.ref_name }}.tar.gz
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v5
+      
+      - name: Setup dotnet
+        uses: actions/setup-dotnet@v4
+        with:
+          global-json-file: ${{ env.global_json }}
+
+      - name: Build
+        run: dotnet build ${{ env.project }} -c Release --os linux -o ${{ env.output_path}}
+
+      - name: Publish
+        if: github.event_name == 'release'
+        run: dotnet publish ${{ env.project }} -p:InformationalVersion=${{ github.ref_name }} -o ${{ env.output_path }}
+
+      - name: Compress Artifact
+        if: github.event_name == 'release'
+        run: |-
+          cd ${{ env.output_path }}
+          tar -czvf ${{ env.archive }} .
+      
+      - name: Upload Artifact
+        if: github.event_name == 'release'
+        run: gh release upload ${{ github.ref_name }} ${{ env.output_path }}/${{ env.archive }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}     
+
+
+
+    
