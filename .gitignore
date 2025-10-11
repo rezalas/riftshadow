@@ -2,6 +2,9 @@
 /Debug/
 *.log
 
+# MacOS file attribute stores
+.DS_Store
+
 # VSCode entries
 .vs/
 !.vscode/launch.json

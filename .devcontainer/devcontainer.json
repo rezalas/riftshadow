@@ -6,19 +6,9 @@
 		"dockerfile": "Dockerfile",
 		// Update 'VARIANT' to pick an Debian / Ubuntu OS version: debian-11, debian-10, debian-9, ubuntu-21.04, ubuntu-20.04, ubuntu-18.04
 		// Use Debian 11, Debian 9, Ubuntu 18.04 or Ubuntu 21.04 on local arm64/Apple Silicon
-		"args": { "VARIANT": "ubuntu-20.04" }
+		"args": { "VARIANT": "ubuntu-22.04" }
 	},
 	"runArgs": ["--cap-add=SYS_PTRACE", "--security-opt", "seccomp=unconfined"],
-
-	// Set *default* container specific settings.json values on container create.
-	"settings": {},
-
-	// Add the IDs of extensions you want installed when the container is created.
-	"extensions": [
-		"ms-vscode.cpptools",
-		"ms-vscode.cmake-tools",
-		"matepek.vscode-catch2-test-adapter"
-	],
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
@@ -28,7 +18,25 @@
 
 	// Comment out connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
 	"remoteUser": "vscode",
+	"updateRemoteUserUID": true,
+	
 	"features": {
-		"git": "latest"
+		//"git": "latest"
+	},
+	"remoteEnv": {
+    "PODMAN_USERNS": "keep-id"
+	
+	},
+"containerUser": "vscode",
+
+	"customizations": {
+		"vscode": {
+			//Add the IDs of extensions you want installed when the container is created.
+			"extensions": [
+			"ms-vscode.cpptools",
+			"ms-vscode.cmake-tools",
+			"matepek.vscode-catch2-test-adapter"
+			]			
+		}
 	}
 }

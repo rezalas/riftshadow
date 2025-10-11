@@ -1,3 +1,16 @@
+
+| Table of Contents |
+|-------------------|
+| [Basics](#basics) |
+| [Setting up your Environment](#setting-up-your-environment) |
+| [Using Containerization](#using-containerization) |
+| [MacOS](#macos) |
+| [Commenting](#commenting) |
+| [Optimization](#optimization) |
+| [Code Style](#code-style) |
+
+
+
 ## Basics
 When you work on anything please create an issue for it or comment on the appropriate issue to avoid duplication of work. 
 Please be descriptive in your issues, posts, and PRs and describe what you are trying to achieve.
@@ -8,6 +21,30 @@ Please be descriptive in your issues, posts, and PRs and describe what you are t
 	- More information about WSL can be found [here](https://code.visualstudio.com/docs/remote/wsl)
 2. Install the Dev Dependencies by running `dev-install.sh` in the root directory
 3. Run `cmake .` from the root directory
+
+### Using Containerization
+
+You can also use Docker or Podman to create a containerized development environment. This is the recommended way to work on the project as it ensures a consistent environment for all developers. We don't require any specific method, but if you choose docker instead of podman be sure to adjust the permissions so that it does not run as root. The project has `.devcontainer` already set up and configured to suite most environments (except MacOS - check the [MacOS section](#macos) for more info). To use the containerized environment, follow these steps:
+1. Install Docker or Podman on your machine.
+2. In vscode, install the "Remote - Containers" extension.
+3. Install the "Dev Containers" extension.
+4. If you choose to use Podman, you will need to configure the vscode `settings.json` file to use Podman instead of Docker. Add the following line to your `settings.json` file:
+	```json
+	"dev.containers.dockerPath": "podman",
+	"dev.containers.mountWaylandSocket": false
+	```
+5. Open the project in vscode.
+6. Press `F1` and select `Remote-Containers: Reopen in Container`.
+
+### MacOS
+
+f you're using MacOS, podman runs a full VM and runs the containers in that. Which means you need to alter the Dockerfile to alter the `gid` and `uid` of the user your environment is running with (in our case, `vscode`). Otherwise, you won't be able to write to the folder when it's mounted transitively through the VM, because the VM hands it the `uid` and `gid` of the local VM account instead of the host.
+
+To do this, you need to find out your `uid` and `gid` by running `id -u` and `id -g` in your terminal. Then, you need to alter the `Dockerfile` in the `.devcontainer` folder to add the following lines just before the first `RUN` line. Assuming your `uid` and `gid` are both `501`, you would add the following lines:
+
+```Dockerfile
+RUN groupmod --gid 501 vscode && usermod --uid 501 --gid 501 vscode && chown -R 501:501 /home/vscode
+```
 
 ## Commenting
 We use the Doxygen format of commenting and documentation generation. For styling and use, please see: [Doxygen Docs](https://www.doxygen.nl/manual/docblocks.html). Not everything needs to be commented, but complex topics should have comments added to ease reading them. Try to be "self documenting" by using descriptive variable names, short function bodies, and adding spacer lines between ideas where appropriate. If you think someone might wonder 'why' something was done a certain way and you have a good reason, that's a good spot for  a friendly comment. Provide supporting information for functions (and their parameters) and classes so community members can easily understand how and why to use the tools available.
