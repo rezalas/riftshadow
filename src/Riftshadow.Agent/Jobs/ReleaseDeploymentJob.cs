@@ -6,6 +6,7 @@ using Octokit;
 using Quartz;
 
 using Riftshadow.Agent.Configuration;
+using Riftshadow.Agent.Packages;
 
 namespace Riftshadow.Agent.Jobs;
 
@@ -36,71 +37,52 @@ public class ReleaseDeploymentJob(ILogger<ReleaseDeploymentJob> _logger,
             return;
         }
 
-        var gamePackagePrefix = _options.CurrentValue.GamePackagePrefix;
-        var agentPackagePrefix = _options.CurrentValue.AgentPackagePrefix;
-
-        var gamePackage = releaseAssets.FirstOrDefault(a => a.Name.StartsWith(gamePackagePrefix, StringComparison.OrdinalIgnoreCase));
-        var agentPackage = releaseAssets.FirstOrDefault(a => a.Name.StartsWith(agentPackagePrefix, StringComparison.OrdinalIgnoreCase));
-
-        if (gamePackage is null && agentPackage is null)
-        {
-            _logger.LogWarning("No relevant packages found for release {releaseTag}. Skipping deployment.", releaseTag);
-            return;
-        }
-
-        var releasePath = $"{_options.CurrentValue.ReleaseDownloadPath}/{releaseTag}";
-        if (!Directory.Exists(releasePath))        
-            Directory.CreateDirectory(releasePath);
-
-        var http = new HttpClient();
-
+        var gamePackage = GetAsset(releaseAssets, _options.CurrentValue.GamePackagePrefix);
         if (gamePackage is not null)
         {
-            _logger.LogInformation("Found game package {packageName} for release {releaseTag}.", gamePackage.Name, releaseTag);
-
-            var fetchRequest = PackageFetchRequestBuilder.Create()
-                                                         .WithPackageName(gamePackage.Name)
-                                                         .WithReleaseTag(releaseTag)
-                                                         .DownloadFrom(gamePackage.BrowserDownloadUrl)
-                                                         .DownloadTo(Path.Combine(releasePath, gamePackage.Name))
-                                                         .Build();
-
-            var fetchResult = await packages.FetchPackageAsync(fetchRequest, context.CancellationToken);
-            if (!fetchResult.Success)         
-            {
-                _logger.LogError("Failed to fetch game package {packageName} for release {releaseTag}: {message}", gamePackage.Name, releaseTag, fetchResult.Message);
-                return;
-            }
-
-        }
-        else
-        {
-            _logger.LogWarning("No game package found for release {releaseTag}. Skipping deployment.", releaseTag);
+            await FetchPackageAsync("game", releaseTag, gamePackage, context.CancellationToken);
         }
 
-        if (agentPackage is not null)
-        {
-            _logger.LogInformation("Found agent package {packageName} for release {releaseTag}.", agentPackage.Name, releaseTag);
-
-            var fetchRequest = PackageFetchRequestBuilder.Create()
-                                                         .WithPackageName(agentPackage.Name)
-                                                         .WithReleaseTag(releaseTag)
-                                                         .DownloadFrom(agentPackage.BrowserDownloadUrl)
-                                                         .DownloadTo(Path.Combine(releasePath, agentPackage.Name))
-                                                         .Build();
-
-            var fetchResult = await packages.FetchPackageAsync(fetchRequest, context.CancellationToken);
-            if (!fetchResult.Success)
-            {
-                _logger.LogError("Failed to fetch agent package {packageName} for release {releaseTag}: {message}", agentPackage.Name, releaseTag, fetchResult.Message);
-                return;
-            }
-        }
-        else
+        var agentPackage = GetAsset(releaseAssets, _options.CurrentValue.AgentPackagePrefix);
+        if(agentPackage is not null)
 		{
-            _logger.LogWarning("No agent package found for release {releaseTag}. Skipping deployment.", releaseTag);
+            await FetchPackageAsync("agent", releaseTag, agentPackage, context.CancellationToken);
 		}
-        
+
         _logger.LogInformation("Release Deployment Job finished at {time}", DateTimeOffset.Now);
     }
+
+    private ReleaseAsset? GetAsset(IReadOnlyList<ReleaseAsset>? assets, string packagePrefix)
+	{
+		return assets?.FirstOrDefault(a => a.Name.StartsWith(packagePrefix, StringComparison.OrdinalIgnoreCase));
+	}
+
+    private async Task FetchPackageAsync(string packageKey, string releaseTag, ReleaseAsset? asset, CancellationToken cancellationToken)
+	{
+		if (asset is not null)
+        {
+            _logger.LogInformation("Found {key} package {packageName} for release {releaseTag}.", packageKey, asset.Name, releaseTag);
+
+            var releasePath = $"{_options.CurrentValue.ReleaseDownloadPath}/{releaseTag}";
+
+            var fetchRequest = new PackageFetchRequest
+            {
+                PackageName = asset.Name,
+                ReleaseTag = releaseTag,
+                DownloadFromPath = asset.BrowserDownloadUrl,
+                DownloadToPath = Path.Combine(releasePath, asset.Name)
+            };
+
+            var fetchResult = await packages.FetchPackageAsync(fetchRequest, cancellationToken);
+            if (!fetchResult.Success)
+            {
+                _logger.LogError("Failed to fetch {key} package {packageName} for release {releaseTag}: {message}", packageKey, asset.Name, releaseTag, fetchResult.Message);
+                return;
+            }
+        }
+        else
+        {
+            _logger.LogWarning("No {key} package found for release {releaseTag}. Skipping deployment.", packageKey, releaseTag);
+        }
+	}
 }

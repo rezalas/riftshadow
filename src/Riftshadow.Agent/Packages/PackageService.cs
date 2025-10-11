@@ -1,21 +1,20 @@
-using Riftshadow.Agent;
-using Microsoft.Extensions.Logging;
-
 namespace Riftshadow.Agent.Packages;
 
 public class PackageService(ILogger<PackageService> logger) : IPackageService
 {
-    public Task<Result> FetchPackageAsync(PackageFetchRequest request, CancellationToken cancellationToken)
+    public async Task<Result> FetchPackageAsync(PackageFetchRequest request, CancellationToken cancellationToken)
     {
         logger.LogInformation("Fetching package {packageName} from {downloadFromPath} to {downloadToPath}", request.PackageName, request.DownloadFromPath, request.DownloadToPath);
-        
+
         if (!Directory.Exists(request.DownloadToPath))
-		{
+        {
             logger.LogInformation("Creating directory {downloadToPath}", request.DownloadToPath);
             Directory.CreateDirectory(request.DownloadToPath);
-		}
+        }
 
-        var response = await new HttpClient().GetAsync(request.DownloadFromPath, cancellationToken);
+        var http = new HttpClient();
+
+        var response = await http.GetAsync(request.DownloadFromPath, cancellationToken);
 
         if (!response.IsSuccessStatusCode)
         {
@@ -31,8 +30,8 @@ public class PackageService(ILogger<PackageService> logger) : IPackageService
         return new Result(true, $"Package {filename} downloaded successfully.");
     }
 
-    public Task InstallPackageAsync(string packagePath, string installPath)
-    {
-        throw new NotImplementedException();
-    }
+    // public Task<Result> InstallPackageAsync(string packagePath, string installPath, CancellationToken cancellationToken)
+    // {
+    //     throw new NotImplementedException();
+    // }
 }

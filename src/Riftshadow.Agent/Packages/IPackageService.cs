@@ -3,6 +3,6 @@ namespace Riftshadow.Agent.Packages;
 
 public interface IPackageService
 {
-    Task FetchPackageAsync(PackageFetchRequest request, CancellationToken cancellationToke);
-    Task InstallPackageAsync(string packagePath, string installPath);
+    Task<Result> FetchPackageAsync(PackageFetchRequest request, CancellationToken cancellationToke);
+    // Task<Result> InstallPackageAsync(string packagePath, string installPath, CancellationToken cancellationToken);
 }

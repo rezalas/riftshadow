@@ -12,7 +12,14 @@ using Microsoft.Extensions.Hosting.Systemd;
 var builder = Host.CreateApplicationBuilder(args);
 
 #if LINUX
-    builder.UserSystemd();
+    builder.UseSystemd();
+#endif
+
+#if WINDOWS && !DEBUG
+    builder.Services.AddWindowsService(options =>
+    {
+        options.ServiceName = "Riftshadow Deployment Agent";
+    });
 #endif
 
 builder.Configuration.AddEnvironmentVariables(prefix: "RIFT_");
@@ -26,7 +33,7 @@ builder.Services.AddQuartz(config =>
     config.AddTrigger(opts => opts
         .ForJob(ReleaseListenerJob.Key)
         .WithIdentity($"{nameof(ReleaseListenerJob)}-trigger")
-        .WithCronSchedule(scanCron); // Every minute
+        .WithCronSchedule(scanCron)); // Every minute
 });
 
 builder.Services.AddQuartzHostedService(opts =>
@@ -34,7 +41,7 @@ builder.Services.AddQuartzHostedService(opts =>
     opts.WaitForJobsToComplete = true;
 });
 
-builder.Services.AddTransient<IGitHubClient, GitHubClient>(() =>
+builder.Services.AddTransient<IGitHubClient, GitHubClient>((sp) =>
 {
     var client = new GitHubClient(new ProductHeaderValue("riftshadow-agent"));
 

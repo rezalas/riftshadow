@@ -33,6 +33,7 @@ public class RiftshadowAgentOptions
     public string GameInstallPath { get; set; } = "/usr/rift";
 #else
     public string GameInstallPath { get; set; } = $"{Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData)}/Riftshadow/game";
+#endif
 
     /// <summary>
     /// The name of the systemd service for the Riftshadow game.
@@ -52,11 +53,11 @@ public class RiftshadowAgentOptions
     public string AgentInstallPath { get; set; } = "/usr/riftagent";
 #else
     public string AgentInstallPath { get; set; } = $"{Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData)}/Riftshadow/agent";
-
+#endif
     /// <summary>
     /// The name of the systemd service for the Riftshadow agent.
     /// </summary>
-    public string AgentServiceName { get; set; } = "riftd";
+    public string AgentServiceName { get; set; } = "riftagent";
 
     /// <summary>
     /// The cron expression for how often to scan for new releases.
