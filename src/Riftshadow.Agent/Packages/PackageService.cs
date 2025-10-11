@@ -1,7 +1,13 @@
+using System.Security.Cryptography.X509Certificates;
+
+using Microsoft.Extensions.Options;
+
+using Riftshadow.Agent.Configuration;
+
 namespace Riftshadow.Agent.Packages;
 
 /// <inheritdoc cref="IPackageService" />
-public class PackageService(ILogger<PackageService> logger) : IPackageService
+public class PackageService(ILogger<PackageService> logger, IOptionsMonitor<RiftshadowAgentOptions> options) : IPackageService
 {
     public async Task<Result> FetchPackageAsync(PackageFetchRequest request, CancellationToken cancellationToken)
     {
@@ -30,6 +36,34 @@ public class PackageService(ILogger<PackageService> logger) : IPackageService
         logger.LogInformation("Downloaded package {packageName} to {downloadToPath}", request.PackageName, request.DownloadToPath);
         return new Result(true, $"Package {filename} downloaded successfully.");
     }
+
+    public Result<bool> PackageExists(string releaseTag, string packagePrefix)
+    {
+        var releaseResult = ReleaseExists(releaseTag);
+
+        if (releaseResult.Success == false)
+            return releaseResult;
+
+        string path = Path.Combine(options.CurrentValue.ReleaseDownloadPath, releaseTag);
+
+        var file = Directory.EnumerateFiles(path).FirstOrDefault(x => x.StartsWith(packagePrefix, StringComparison.InvariantCultureIgnoreCase));
+
+        if (string.IsNullOrWhiteSpace(file))
+            return new("Package not found", false);
+
+        return new($"Package {Path.GetFileName(file)} found", true);
+    }
+    
+    public Result<bool> ReleaseExists(string releaseTag)
+	{
+        if (string.IsNullOrWhiteSpace(releaseTag))
+            return new Result<bool>("'releaseTag' cannot be null or whitespace.", false);
+
+        string path = Path.Combine(options.CurrentValue.ReleaseDownloadPath, releaseTag);
+        bool exists = Directory.Exists(path);
+
+        return new($"{(exists ? "Found" : "No")} directory {path}", exists);
+	}
 
     // public Task<Result> InstallPackageAsync(string packagePath, string installPath, CancellationToken cancellationToken)
     // {

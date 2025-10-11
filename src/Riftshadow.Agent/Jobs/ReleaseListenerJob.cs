@@ -4,6 +4,7 @@ using Octokit;
 using Quartz;
 
 using Riftshadow.Agent.Jobs;
+using Riftshadow.Agent.Packages;
 
 /// <summary>
 /// The background job responsible for monitoring riftshadow releases
@@ -12,7 +13,7 @@ using Riftshadow.Agent.Jobs;
 /// <param name="scheduler"></param>
 /// <param name="github"></param>
 [DisallowConcurrentExecution]
-public class ReleaseListenerJob(ILogger<ReleaseListenerJob> logger, IGitHubClient github) : IJob
+public class ReleaseListenerJob(ILogger<ReleaseListenerJob> logger, IGitHubClient github, IPackageService packages) : IJob
 {
     public static readonly JobKey Key = new JobKey(nameof(ReleaseListenerJob));
     public async Task Execute(IJobExecutionContext context)
@@ -23,6 +24,20 @@ public class ReleaseListenerJob(ILogger<ReleaseListenerJob> logger, IGitHubClien
         {
             var latestRelease = await github.Repository.Release.GetLatest("rezalas", "riftshadow");
             logger.LogInformation("Latest release: {tag}", latestRelease.TagName);
+
+            var releaseExistsResult = packages.ReleaseExists(latestRelease.TagName);
+
+            if (releaseExistsResult.Success == false)
+            {
+                logger.LogError("Failed to check for release directory. Message: {msg}", releaseExistsResult.Message);
+                return;
+            }
+            
+            if(releaseExistsResult.Value) // exists
+            {
+                logger.LogInformation("Release {tag} already exists, skipping job.", latestRelease.TagName);
+                return;
+			}
 
             var deployJob = JobBuilder.Create<ReleaseDeploymentJob>()
                                       .WithIdentity(ReleaseDeploymentJob.Key)
