@@ -5,18 +5,24 @@ using Quartz;
 
 using Riftshadow.Agent.Jobs;
 
+/// <summary>
+/// The background job responsible for monitoring riftshadow releases
+/// </summary>
+/// <param name="logger"></param>
+/// <param name="scheduler"></param>
+/// <param name="github"></param>
 [DisallowConcurrentExecution]
-public class ReleaseListenerJob(ILogger<ReleaseListenerJob> _logger, IScheduler _scheduler, IGitHubClient _github) : IJob
+public class ReleaseListenerJob(ILogger<ReleaseListenerJob> logger, IGitHubClient github) : IJob
 {
     public static readonly JobKey Key = new JobKey(nameof(ReleaseListenerJob));
     public async Task Execute(IJobExecutionContext context)
     {
-        _logger.LogInformation("Release Listener Job started at {time}", DateTimeOffset.Now);
+        logger.LogInformation("Release Listener Job started at {time}", DateTimeOffset.Now);
 
         try
         {
-            var latestRelease = await _github.Repository.Release.GetLatest("rezalas", "riftshadow");
-            _logger.LogInformation("Latest release: {tag}", latestRelease.TagName);
+            var latestRelease = await github.Repository.Release.GetLatest("rezalas", "riftshadow");
+            logger.LogInformation("Latest release: {tag}", latestRelease.TagName);
 
             var deployJob = JobBuilder.Create<ReleaseDeploymentJob>()
                                       .WithIdentity(ReleaseDeploymentJob.Key)
@@ -24,19 +30,21 @@ public class ReleaseListenerJob(ILogger<ReleaseListenerJob> _logger, IScheduler 
                                       .UsingJobData("releaseId", latestRelease.Id)
                                       .Build();
 
-            _logger.LogInformation("Scheduling deployment job for release {tag}", latestRelease.TagName);
-            await _scheduler.ScheduleJob(deployJob, TriggerBuilder.Create().StartNow().Build());
+            logger.LogInformation("Scheduling deployment job for release {tag}", latestRelease.TagName);
+            await context.Scheduler.ScheduleJob(deployJob, TriggerBuilder.Create().StartNow().Build());
         }
         catch (NotFoundException)
         {
-            _logger.LogWarning("No releases found for rezalas/riftshadow repository.");
-            return;
+            // Octokit does not return a result if the target repo has no
+            // releases. Instead it simply throws a NotFoundException and so
+            // this is where we find ourselves.
+            logger.LogWarning("No releases found for rezalas/riftshadow repository.");
         }
         catch (Exception ex)
         {
-            _logger.LogError(ex, "An error occurred while checking for new releases.");
+            logger.LogError(ex, "An error occurred while checking for new releases.");
         }
 
-        _logger.LogInformation("Release Listener Job finished at {time}", DateTimeOffset.Now);
+        logger.LogInformation("Release Listener Job finished at {time}", DateTimeOffset.Now);
     }
 }

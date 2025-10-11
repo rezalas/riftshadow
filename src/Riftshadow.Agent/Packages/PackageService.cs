@@ -1,5 +1,6 @@
 namespace Riftshadow.Agent.Packages;
 
+/// <inheritdoc cref="IPackageService" />
 public class PackageService(ILogger<PackageService> logger) : IPackageService
 {
     public async Task<Result> FetchPackageAsync(PackageFetchRequest request, CancellationToken cancellationToken)
@@ -21,7 +22,7 @@ public class PackageService(ILogger<PackageService> logger) : IPackageService
             logger.LogError("Failed to download package {packageName} from {downloadFromPath}. Status code: {statusCode}", request.PackageName, request.DownloadFromPath, response.StatusCode);
             return new Result(false, $"Failed to download package {request.DownloadFromPath}. Status code: {response.StatusCode}");
         }
-        
+
         string filename = Path.GetFileName(request.DownloadToPath);
         await using var fs = File.Create(request.DownloadToPath);
         await response.Content.CopyToAsync(fs);

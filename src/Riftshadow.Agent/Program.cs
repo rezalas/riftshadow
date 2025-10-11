@@ -28,7 +28,7 @@ builder.Services.AddQuartz(config =>
 {
     config.AddJob<ReleaseListenerJob>(opts => opts.WithIdentity(ReleaseListenerJob.Key));
 
-    var scanCron = builder.Configuration.GetSection(RiftshadowAgentOptions.SectionName)[nameof(RiftshadowAgentOptions.ReleaseScanCron)] ?? "0 0/1 * * * ?";
+    var scanCron = builder.Configuration[$"{RiftshadowAgentOptions.SectionName}:{nameof(RiftshadowAgentOptions.ReleaseScanCron)}"] ?? "0 0/1 * * * ?";
 
     config.AddTrigger(opts => opts
         .ForJob(ReleaseListenerJob.Key)
