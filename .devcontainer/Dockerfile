@@ -6,7 +6,7 @@ ARG VARIANT="bullseye"
 FROM mcr.microsoft.com/vscode/devcontainers/cpp:0-${VARIANT}
 
 # This line is for ARM64, specifically on MacOS. If you don't need it, just comment it out (though it likely doesn't hurt you).
-RUN  if ["$(uname -m)" = "aarch64"]; then \
+RUN  if [ "$(uname -m)" = "aarch64" ]; then \
 	echo "Executing ARM64 uid/gid modification"; \
 	groupmod --gid 501 vscode && usermod --uid 501 --gid 501 vscode && chown -R 501:501 /home/vscode; \
 	fi
