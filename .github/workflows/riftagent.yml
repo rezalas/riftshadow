@@ -37,7 +37,7 @@ jobs:
           global-json-file: ${{ env.global_json }}
 
       - name: Build
-        run: dotnet build ${{ env.project }} -c Release -os linux -o ${{ env.output_path}}
+        run: dotnet build ${{ env.project }} -c Release --os linux -o ${{ env.output_path}}
 
       - name: Publish
         if: github.event_name == 'release'
