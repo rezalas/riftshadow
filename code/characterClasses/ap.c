@@ -1570,8 +1570,8 @@ void lesser_demon_tick(CHAR_DATA *mob, AFFECT_DATA *af)
 				RS.Queue.AddToQueue(1, "lesser_demon_tick", "do_say_queue", do_say_queue, mob, "I'll be leaving now,  and leaving you to your thoughts.  You'll never know the answer to my riddle.");
 				RS.Queue.AddToQueue(2, "lesser_demon_tick", "act_queue", act_queue, "With a puff of hazy purple smoke and a sound like a cough, $n disappears.", mob, nullptr, nullptr, TO_ROOM);
 				RS.Queue.AddToQueue(3, "lesser_demon_tick", "delay_extract", delay_extract, mob);
-				break;
 			}
+			break;
 		case MOB_VNUM_MALAPHAR:
 			if (af->duration % 2 == 0)
 			{
