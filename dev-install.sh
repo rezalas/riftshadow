@@ -71,10 +71,10 @@ if $mySqlPresent; then
 
 	{
 		sudo service mariadb start
-		sudo service mariadb status
+		sudo service mariadb status | cat
 	} || {
 		sudo service mysql start
-		sudo service mysql status
+		sudo service mysql status | cat
 	}
 
 else
@@ -86,7 +86,7 @@ else
 
 	{
 		sudo service mariadb start
-		sudo service mariadb status
+		sudo service mariadb status | cat
 	} || {
 		echo "${RED}Failed to start MariaDB, please check your service settings.${NOCOLOR}"
 		exit
