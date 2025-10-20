@@ -20,7 +20,7 @@
 		"postcss": "^8.4.31",
 		"prettier": "^2.8.8",
 		"sass": "^1.69.4",
-		"vite": "^7.1.5",
+		"vite": "^7.1.11",
 		"vite-plugin-static-copy": "^2.3.2",
 		"vue": "^3.3.6"
 	}
