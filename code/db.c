@@ -3224,6 +3224,12 @@ void do_dump(CHAR_DATA *ch, char *argument)
 
 	fclose(fpReserve);
 	fp = fopen(MEM_DUMP_FILE, "w");
+	if (fp == nullptr)
+	{
+		RS.Logger.Warn("Unable to open mem dump file: fopen {}: {}", MEM_DUMP_FILE, std::strerror(errno));
+		return;
+	}
+
 
 	/* report use of data structures */
 
@@ -3341,6 +3347,11 @@ void do_dump(CHAR_DATA *ch, char *argument)
 
 	/* start printing out mobile data */
 	fp = fopen(MOB_DUMP_FILE, "w");
+	if (fp == nullptr)
+	{
+		RS.Logger.Warn("Unable to open mob dump file: fopen {}: {}", MOB_DUMP_FILE, std::strerror(errno));
+		return;
+	}
 
 	fprintf(fp, "\nMobile Analysis\n");
 	fprintf(fp, "---------------\n");
@@ -3362,6 +3373,11 @@ void do_dump(CHAR_DATA *ch, char *argument)
 
 	/* start printing out object data */
 	fp = fopen(OBJ_DUMP_FILE, "w");
+	if (fp == nullptr)
+	{
+		RS.Logger.Warn("Unable to open obj dump file: fopen {}: {}", OBJ_DUMP_FILE, std::strerror(errno));
+		return;
+	}
 
 	fprintf(fp, "\nObject Analysis\n");
 	fprintf(fp, "---------------\n");

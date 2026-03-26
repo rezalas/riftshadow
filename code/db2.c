@@ -974,6 +974,12 @@ void bugout(char *reason)
 	RS.Logger.Warn(reason);
 
 	auto fp = fopen(RIFT_ROOT_DIR "../logs/bugout.txt", "a");
+	if (fp == nullptr)
+	{
+		RS.Logger.Warn("Unable to open bug file: fopen {}: {}", RIFT_ROOT_DIR "../logs/bugout.txt", std::strerror(errno));
+		return;
+	}
+
 	fprintf(fp, "%s\n", reason);
 	fclose(fp);
 	exit(3);

@@ -283,14 +283,20 @@ void CMud::LoadGreetingScreen()
 {
 	//can't use cfile because of weird \r action
 	FILE *fp = fopen(LOGIN_BANNER_FILE, "r");
+	if (fp == nullptr)
+	{
+		RS.Logger.Warn("Unable to open banner file: fopen {}: {}", LOGIN_BANNER_FILE, std::strerror(errno));
+		return;
+	}
+
 	char tempbuf[210], buf[4096];
 	int i;
 	buf[0] = '\0';
 	while(fgets(tempbuf,200,fp))
  	{	
 		strcat(buf,tempbuf);
-       	strcat(buf,"\r");
-    }
+		strcat(buf,"\r");
+	}
 	for(i=0; buf[i] != '\0'; i++)
 		;
 	buf[i-2] = '\0';
