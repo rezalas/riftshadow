@@ -1487,8 +1487,14 @@ void do_ctrack(CHAR_DATA *ch, char *argument)
 
 		sprintf(buf2, "%s/%s.plr", RIFT_PLAYER_DIR, newbuf);
 		fpChar2 = fopen(buf2, "r");
+		if (fpChar2 == nullptr)
+		{
+			RS.Logger.Warn("Unable to open bug file: fopen {}: {}", buf2, std::strerror(errno));
+			return;
+		}
+
 		login = get_login(ch, fpChar2);
-		close(*((int *)fpChar2));
+		fclose(fpChar2);
 
 		numMatches++;
 

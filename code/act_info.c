@@ -4519,7 +4519,15 @@ void do_password(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (strcmp(crypt(arg1, ch->pcdata->pwd), ch->pcdata->pwd))
+	auto pwd = crypt(arg1, ch->pcdata->pwd);
+	if (pwd == nullptr)
+	{
+		send_to_char("Unable to process password.\n\r", ch);
+		RS.Logger.Warn("Possible issue with crypt lib when player [{}] tried inputting password. Error: {}", ch->name, std::strerror(errno));
+		return;
+	}
+
+	if (strcmp(pwd, ch->pcdata->pwd))
 	{
 		WAIT_STATE(ch, 40);
 		send_to_char("Wrong password.  Wait 10 seconds.\n\r", ch);
@@ -4536,6 +4544,13 @@ void do_password(CHAR_DATA *ch, char *argument)
 	 * No tilde allowed because of player file format.
 	*/
 	auto pwdnew = crypt(arg2, ch->name);
+	if (pwdnew == nullptr)
+	{
+		send_to_char("Unable to process new password.\n\r", ch);
+		RS.Logger.Warn("Possible issue with crypt lib when player [{}] tried changing passwords. Error: {}", ch->name, std::strerror(errno));
+		return;
+	}
+
 	for (auto p = pwdnew; *p != '\0'; p++)
 	{
 		if (*p == '~')

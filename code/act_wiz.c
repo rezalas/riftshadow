@@ -6667,23 +6667,25 @@ void log_naughty(CHAR_DATA *ch, char *argument, int logtype)
 	strtime[strlen(strtime) - 1] = '\0';
 
 	fp = fopen(GOD_LOG_FILE, "a");
-
-	if (fp != nullptr)
+	if (fp == nullptr)
 	{
-		if (logtype == 1)
-			fprintf(fp, "%s: LOAD- %s is loading %s.\n", strtime, ch->name, argument);
-
-		if (logtype == 2)
-			fprintf(fp, "%s: SET- %s is setting %s.\n", strtime, ch->name, argument);
-
-		if (logtype == 3)
-			fprintf(fp, "%s: STRING- %s is stringing %s.\n", strtime, ch->name, argument);
-
-		if (logtype == 5)
-			fprintf(fp, "%s: INDUCT- %s is inducting %s.\n", strtime, ch->name, argument);
-
-		fclose(fp);
+		RS.Logger.Warn("Unable to open god log file: fopen {}: {}", GOD_LOG_FILE, std::strerror(errno));
+		return;
 	}
+
+	if (logtype == 1)
+		fprintf(fp, "%s: LOAD- %s is loading %s.\n", strtime, ch->name, argument);
+
+	if (logtype == 2)
+		fprintf(fp, "%s: SET- %s is setting %s.\n", strtime, ch->name, argument);
+
+	if (logtype == 3)
+		fprintf(fp, "%s: STRING- %s is stringing %s.\n", strtime, ch->name, argument);
+
+	if (logtype == 5)
+		fprintf(fp, "%s: INDUCT- %s is inducting %s.\n", strtime, ch->name, argument);
+
+	fclose(fp);
 }
 
 void do_vstat(CHAR_DATA *ch, char *argument)
@@ -7641,10 +7643,13 @@ void buglist_end_fun(CHAR_DATA *ch, char *argument)
 void do_constdump(CHAR_DATA *ch, char *argument)
 {
 	FILE *fp = fopen(CONST_DUMP_FILE, "w"), *fp2;
-	int sn, i;
-
-	if (!fp)
+	if (fp == nullptr)
+	{
+		RS.Logger.Warn("Unable to open const dump file: fopen {}: {}", CONST_DUMP_FILE, std::strerror(errno));
 		return;
+	}
+
+	int sn, i;
 
 	for (sn = 0;; sn++)
 	{
@@ -7716,6 +7721,12 @@ void do_constdump(CHAR_DATA *ch, char *argument)
 void do_interpdump(CHAR_DATA *ch, char *argument)
 {
 	FILE *fp = fopen(INTERP_DUMP_FILE, "w");
+	if (fp == nullptr)
+	{
+		RS.Logger.Warn("Unable to open interp dump file: fopen {}: {}", INTERP_DUMP_FILE, std::strerror(errno));
+		return;
+	}
+
 	int i = 0, j = 0, k = 0;
 	int bit = 0;
 
@@ -7734,6 +7745,11 @@ void do_interpdump(CHAR_DATA *ch, char *argument)
 	fclose(fp);
 
 	fp = fopen(CLIMATE_DUMP_FILE, "w");
+	if (fp == nullptr)
+	{
+		RS.Logger.Warn("Unable to open climate dump file: fopen {}: {}", CLIMATE_DUMP_FILE, std::strerror(errno));
+		return;
+	}
 
 	for (i = 0; climate_table[i].number != Climate::English; i++)
 	{
@@ -7778,6 +7794,12 @@ void do_interpdump(CHAR_DATA *ch, char *argument)
 void do_racedump(CHAR_DATA *ch, char *argument)
 {
 	FILE *fp = fopen(RACE_DUMP_FILE, "w");
+	if (fp == nullptr)
+	{
+		RS.Logger.Warn("Unable to open race dump file: fopen {}: {}", RACE_DUMP_FILE, std::strerror(errno));
+		return;
+	}
+
 	int race = 0, i = 0;
 	long temp_bit = 0;
 	char buf[MSL];

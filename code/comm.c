@@ -1438,6 +1438,7 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
 	CHAR_DATA *ch;
 	OBJ_DATA *fobj; /* For pfile limit bug */
 	OBJ_DATA *fobj_next;
+	char *pwd;
 	char *pwdnew;
 	char *p;
 	int iClass, race, i, type, sn, modif, modamt;
@@ -1582,7 +1583,17 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
 		case CON_GET_OLD_PASSWORD:
 			write_to_buffer(d, "\n\r", 2);
 
-			if (strcmp(crypt(argument, ch->pcdata->pwd), ch->pcdata->pwd))
+			pwd = crypt(argument, ch->pcdata->pwd);
+			if (pwd == nullptr)
+			{
+				write_to_buffer(d, "Unable to process password.\n\r", 0);
+				close_socket(d);
+
+				RS.Logger.Warn("Possible issue with crypt lib when player [{}] tried inputting password. Error: {}", ch->name, std::strerror(errno));
+				return;
+			}
+
+			if (strcmp(pwd, ch->pcdata->pwd))
 			{
 				write_to_buffer(d, "Wrong password.\n\r", 0);
 				/*
@@ -1742,6 +1753,14 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
 			}
 
 			pwdnew = crypt(argument, ch->name);
+			if (pwdnew == nullptr)
+			{
+				write_to_buffer(d, "Unable to process new password.\n\r", 0);
+
+				RS.Logger.Warn("Possible issue with crypt lib when player [{}] tried changing passwords. Error: {}", ch->name, std::strerror(errno));
+				return;
+			}
+
 			for (p = pwdnew; *p != '\0'; p++)
 			{
 				if (*p == '~')
@@ -1760,7 +1779,17 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
 		case CON_CONFIRM_NEW_PASSWORD:
 			write_to_buffer(d, "\n\r", 2);
 
-			if (strcmp(crypt(argument, ch->pcdata->pwd), ch->pcdata->pwd))
+			pwd = crypt(argument, ch->pcdata->pwd);
+			if (pwd == nullptr)
+			{
+				write_to_buffer(d, "Unable to process password.\n\r", 0);
+				close_socket(d);
+
+				RS.Logger.Warn("Possible issue with crypt lib when player [{}] tried confirming password. Error: {}", ch->name, std::strerror(errno));
+				return;
+			}
+
+			if (strcmp(pwd, ch->pcdata->pwd))
 			{
 				write_to_buffer(d, "Passwords don't match.\n\rRetype password: ", 0);
 				d->connected = CON_GET_NEW_PASSWORD;
