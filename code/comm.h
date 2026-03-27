@@ -67,7 +67,6 @@
 #endif
 
 extern DESCRIPTOR_DATA *descriptor_list;
-extern FILE *fpReserve;
 extern bool merc_down;
 extern bool rebooting;
 extern int reboot_num;

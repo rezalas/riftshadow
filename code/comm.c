@@ -96,7 +96,6 @@
  */
 DESCRIPTOR_DATA *descriptor_list; /* All open descriptors		*/
 DESCRIPTOR_DATA *d_next;		  /* Next descriptor in loop	*/
-FILE *fpReserve;				  /* Reserved file handle		*/
 bool god;						  /* All new chars are gods!	*/
 bool merc_down;					  /* Shutdown					*/
 bool rebooting= false;

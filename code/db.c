@@ -3222,7 +3222,6 @@ void do_dump(CHAR_DATA *ch, char *argument)
 	FILE *fp;
 	int vnum, nMatch = 0;
 
-	fclose(fpReserve);
 	fp = fopen(MEM_DUMP_FILE, "w");
 	if (fp == nullptr)
 	{
@@ -3397,7 +3396,6 @@ void do_dump(CHAR_DATA *ch, char *argument)
 
 	/* close file */
 	fclose(fp);
-	fpReserve = fopen(NULL_FILE, "r");
 }
 
 /*
@@ -3733,8 +3731,6 @@ void append_file(CHAR_DATA *ch, char *file, char *str)
 	if (is_npc(ch) || str[0] == '\0')
 		return;
 
-	fclose(fpReserve);
-
 	fp = fopen(file, "a");
 
 	if (fp == nullptr)
@@ -3750,8 +3746,6 @@ void append_file(CHAR_DATA *ch, char *file, char *str)
 		fprintf(fp, "[%5d] %s: %s: %s\n", ch->in_room ? ch->in_room->vnum : 0, ch->true_name, buf, str);
 		fclose(fp);
 	}
-
-	fpReserve = fopen(NULL_FILE, "r");
 }
 
 /*

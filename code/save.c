@@ -104,8 +104,6 @@ void save_char_obj(CHAR_DATA *ch)
 		wiznet("ALERT!! $N/$F name corrupt!!", ch, nullptr, 0, 0, 0);
 
 	/* create god log */
-	fclose(fpReserve);
-
 	if (!is_immortal(ch))
 	{
 		res = RS.SQL.Update(
@@ -159,11 +157,8 @@ void save_char_obj(CHAR_DATA *ch)
 		}
 
 		fprintf(fp, "#END\n");
-	}
-
-	if (fp != nullptr)
 		fclose(fp);
-	fpReserve = fopen(NULL_FILE, "r");
+	}
 }
 
 /*
@@ -1020,8 +1015,6 @@ bool load_char_obj(DESCRIPTOR_DATA *d, char *name)
 
 	found = false;
 
-	fclose(fpReserve);
-
 	/* decompress if .gz file exists */
 	sprintf(strsave, "%s%s%s", RIFT_PLAYER_DIR, capitalize(name), ".gz");
 
@@ -1106,8 +1099,6 @@ bool load_char_obj(DESCRIPTOR_DATA *d, char *name)
 
 	free_pstring(ch->backup_true_name);
 	ch->backup_true_name = palloc_string(name);
-
-	fpReserve = fopen(NULL_FILE, "r");
 
 	/* Morg - Valgrind fix */
 	zero_vector(ch->imm_flags);

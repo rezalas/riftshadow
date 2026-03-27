@@ -33,15 +33,6 @@ int main(int argc, char **argv)
 	strcpy(str_boot_time, ctime(&current_time));
 
 	/*
-	 * Reserve one channel for our use.
-	 */
-	if ((fpReserve = fopen(NULL_FILE, "r")) == nullptr)
-	{
-		RS.Logger.Error("Main: fopen {}: {}", NULL_FILE, std::strerror(errno));
-		exit(0);
-	}
-
-	/*
 	 * Get the port number.
 	 */
 	port = atoi(RS.SQL.Settings.GetValue("Port").c_str());
