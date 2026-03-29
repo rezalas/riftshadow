@@ -931,7 +931,6 @@ void save_area(AREA_DATA *pArea)
 	long long temp_bit;
 	char buf[MSL];
 	FILE *fp = nullptr;
-	fclose(fpReserve);
 
 	sprintf(buf, "mv -f %s " RIFT_AREA_DIR "/backup/%s.bak", pArea->file_name, pArea->file_name);
 
@@ -971,7 +970,6 @@ void save_area(AREA_DATA *pArea)
 	fprintf(fp, "#$\n");
 
 	fclose(fp);
-	fpReserve = fopen(NULL_FILE, "r"); // TODO: possible memory leak
 }
 
 void do_asave(CHAR_DATA *ch, char *argument)
