@@ -1653,7 +1653,15 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
 				break;
 			case 'Q':
 				if (!str_cmp(word, "Quest"))
-					ch->pcdata->quests[fread_number(fp)] = fread_number(fp);
+				{
+					int qindex = fread_number(fp);
+					int qvalue = fread_number(fp);
+
+					if (qindex >= 0 && qindex < MAX_QUESTS)
+						ch->pcdata->quests[qindex] = qvalue;
+					else
+						RS.Logger.Warn("Fread_char: Quest index out of range: {}.", qindex);
+				}
 
 				break;
 			case 'R':
@@ -1735,7 +1743,9 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
 
 					while ((i = fread_number(fp)) != -1)
 					{
-						ch->pcdata->sect_time[x] = i;
+						if (x < SECT_MAX)
+							ch->pcdata->sect_time[x] = i;
+
 						x++;
 					}
 				}

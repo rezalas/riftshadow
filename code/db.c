@@ -35,6 +35,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <ctype.h>
+#include <climits>
 #include <time.h>
 #include <sys/types.h>
 #include <sys/time.h>
@@ -1806,9 +1807,13 @@ void reset_room(ROOM_INDEX_DATA *pRoom)
 					int d0;
 					int d1;
 
-					for (d0 = 0; d0 < pReset->arg2 - 1; d0++)
+					int dmax = pReset->arg2;
+					if (dmax > 6)
+						dmax = 6;
+
+					for (d0 = 0; d0 < dmax - 1; d0++)
 					{
-						d1 = number_range(d0, pReset->arg2 - 1);
+						d1 = number_range(d0, dmax - 1);
 						pExit = pRoomIndex->exit[d0];
 						pRoomIndex->exit[d0] = pRoomIndex->exit[d1];
 						pRoomIndex->exit[d1] = pExit;
@@ -2623,7 +2628,12 @@ int fread_number(FILE *fp)
 
 	while (isdigit(c))
 	{
-		number = number * 10 + c - '0';
+		/* Saturate instead of overflowing on malformed/oversized input. */
+		if (number > (INT_MAX - (c - '0')) / 10)
+			number = INT_MAX;
+		else
+			number = number * 10 + c - '0';
+
 		c = getc(fp);
 	}
 
@@ -2668,7 +2678,11 @@ long fread_flag(FILE *fp)
 
 	while (isdigit(c))
 	{
-		number = number * 10 + c - '0';
+		if (number > (INT_MAX - (c - '0')) / 10)
+			number = INT_MAX;
+		else
+			number = number * 10 + c - '0';
+
 		c = getc(fp);
 	}
 
