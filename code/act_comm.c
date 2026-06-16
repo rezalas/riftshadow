@@ -1579,7 +1579,7 @@ void do_pmote(CHAR_DATA *ch, char *argument)
 			continue;
 		}
 
-		strcpy(temp, argument);
+		snprintf(temp, sizeof(temp), "%s", argument);
 		temp[strlen(argument) - strlen(letter)] = '\0';
 		last[0] = '\0';
 		name = vch->name;
