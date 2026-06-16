@@ -681,7 +681,7 @@ void interpret(CHAR_DATA *ch, char *argument)
 	 * Special parsing so ' can be a command,
 	 *   also no spaces needed after punctuation.
 	 */
-	strcpy(logline, argument);
+	snprintf(logline, sizeof(logline), "%s", argument);
 
 	if (!isalpha(argument[0]) && !isdigit(argument[0]))
 	{
@@ -718,7 +718,7 @@ void interpret(CHAR_DATA *ch, char *argument)
 		}
 
 		auto qcommand = fmt::format("{} {}", command, argument);
-		strcpy(ch->pcdata->queue[ch->pcdata->write_next], qcommand.c_str());
+		snprintf(ch->pcdata->queue[ch->pcdata->write_next], sizeof(ch->pcdata->queue[ch->pcdata->write_next]), "%s", qcommand.c_str());
 		//		sprintf(buf,"Command '%s' queued.\n\r",qcommand.c_str());
 		//		send_to_char(buf,ch);
 		ch->pcdata->write_next++;
@@ -895,9 +895,12 @@ void interpret(CHAR_DATA *ch, char *argument)
 		}
 	}
 
-	strcpy(arg_dup, argument);
+	snprintf(arg_dup, sizeof(arg_dup), "%s", argument);
 
-	strcpy(arg_dup, one_argument(arg_dup, object));
+	// since source and dest overlap, 
+	// use memmove to safely shift the remainder forward.
+	char *arg_dup_rest = one_argument(arg_dup, object);
+	memmove(arg_dup, arg_dup_rest, strlen(arg_dup_rest) + 1);
 
 	if (vprog && ((vpobj = get_obj_here(ch, object)) != nullptr) && (vpobj->pIndexData->verb) &&
 		(!str_cmp(command, vpobj->pIndexData->verb) && (ch->position >= POS_RESTING)))
