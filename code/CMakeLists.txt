@@ -82,5 +82,10 @@ set_source_files_properties(${RIFT_SOURCE} main.c PROPERTIES LANGUAGE CXX)
 add_library(RiftCore SHARED ${RIFT_SOURCE})
 add_executable(rift main.c)
 
+target_include_directories(RiftCore PUBLIC
+	"${CMAKE_SOURCE_DIR}/code/include"
+	${MYSQL_INCLUDE_DIRS}
+)
+
 target_link_libraries(rift PRIVATE RiftCore ${CRYPTOLIB} ${MARIADBLIB} m)
 
