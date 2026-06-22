@@ -46,7 +46,6 @@
 #include "interp.h"
 #include "tables.h"
 #include "recycle.h"
-#include "update.h"
 #include "spec.h"
 #include "lookup.h"
 #include "characterClasses/chrono.h"
