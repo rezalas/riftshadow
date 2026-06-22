@@ -78,7 +78,6 @@
 #include "db.h"
 #include "devextra.h"
 #include "magic.h"
-#include "handler.h"
 #include "misc.h"
 #include "string.h"
 #include "chardef.h"

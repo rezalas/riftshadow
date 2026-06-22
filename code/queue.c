@@ -9,8 +9,6 @@ void CQueue::ProcessQueue()
 	{
 		if (--item.timer == 0)
 		{
-			Logger.Warn("Processing funcs ==> from {} func {} timer {}", item.callerFuncName, item.calleeFuncName, item.timer);
-
 			auto func = item.function;
 			func();
 		}
@@ -19,8 +17,6 @@ void CQueue::ProcessQueue()
 	newQueue.erase(
 		std::remove_if(newQueue.begin(), newQueue.end(), [](const auto& item)
 		{
-			Logger.Warn("Processing delete ==> {}", item.timer);
-
 			return item.timer < 0;
 		}), newQueue.end());
 }
@@ -37,7 +33,6 @@ bool CQueue::HasQueuePending(CHAR_DATA *qChar)
 		auto v = item.charList;
 		auto contains = std::find(v.begin(), v.end(), qChar) != v.end();
 
-		Logger.Warn("==> Has queue {} {}", contains, delay);
 		if (contains && delay > 0)
 			return true;
 	}
@@ -57,7 +52,6 @@ void CQueue::DeleteQueuedEventsInvolving(CHAR_DATA *qChar)
 			auto v = item.charList;
 			auto contains = std::find(v.begin(), v.end(), qChar) != v.end();
 
-			Logger.Warn("==> Delete {} {}", contains, delay);
 			if (contains && delay > 0)
 			{
 				deleted++;
@@ -66,6 +60,4 @@ void CQueue::DeleteQueuedEventsInvolving(CHAR_DATA *qChar)
 
 			return false;
 		}), newQueue.end());
-
-	Logger.Warn("{} events deleted.", deleted);
 }

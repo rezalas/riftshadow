@@ -2,15 +2,10 @@
 #define QUEUE_H
 
 #include "rift.h"
-#include "./stdlibs/clogger.h"
 #include <stdarg.h>
+#include <functional>
 #include <iostream>
-
-/*
-* DO NOT TOUCH ANYTHING
-* this is all in assembly and fucking around in queue.h or .c will break it
-* then I WILL BREAK YOU
-*/
+#include <vector>
 
 // forward declarations. Once char_data is separated to its own file, we can get rid of these and include the file.
 // but since these are defined in merc.h, this will have to do. We can't include merc.h because that causes a circular 
@@ -32,7 +27,7 @@ public:
 	void AddToQueue(int nTimer, std::string from, std::string funcName, Func func, Args &&...args)
 	{
 		if(nTimer < 0)
-			Logger.Warn("Negative Queue Timer - NumArgs: {}", sizeof...(Args));	
+			return;	
 
 		// print parameters
 		//((std::cout << ' ' << args << std::endl), ...);
@@ -46,8 +41,6 @@ public:
 		{
 			std::apply(func, std::forward_as_tuple(std::forward<Args>(args)...));
 		}});
-
-		Logger.Warn("Add => {} added {} with timer {}", from, funcName, nTimer);
 	}
 
 	/// Processes all items on the queue. Any entry that has a timer of zero gets executed.
@@ -64,8 +57,6 @@ public:
 	/// @param qChar: The character to lookup in the queue.
 	void DeleteQueuedEventsInvolving(CHAR_DATA *qChar);
 private:
-	inline static CLogger Logger = CLogger();
-
 	struct queueEntry_t
 	{
 		int timer;

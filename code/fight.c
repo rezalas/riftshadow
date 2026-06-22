@@ -65,7 +65,6 @@
 #include "comm.h"
 #include "act_wiz.h"
 #include "update.h"
-#include "dioextra.h"
 #include "db.h"
 #include "misc.h"
 #include "characterClasses/ap.h"

@@ -48,7 +48,6 @@
 #include "spec.h"
 #include "characterClasses/warrior.h"
 #include "misc.h"
-#include "recycle.h"
 #include "iprog.h"
 #include "mprog.h"
 #include "rprog.h"

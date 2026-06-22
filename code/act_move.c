@@ -57,7 +57,6 @@
 #include "act_info.h"
 #include "characterClasses/sorcerer.h"
 #include "characterClasses/chrono.h"
-#include "update.h"
 #include "chardef.h"
 #include "const.h"
 #include "utility.h"

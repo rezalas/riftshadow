@@ -56,7 +56,6 @@
 #include "fight.h"
 #include "skills.h"
 #include "db.h"
-#include "devextra.h"
 #include "magic.h"
 #include "dioextra.h"
 #include "act_move.h"
