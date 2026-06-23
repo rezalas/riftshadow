@@ -34,6 +34,7 @@
 #include <algorithm>
 #include "olc_save.h"
 #include "rift.h"
+#include "stdlibs/cfilesystem.h"
 #include "handler.h"
 #include "olc.h"
 #include "tables.h"
@@ -927,21 +928,15 @@ void save_shops(FILE *fp, AREA_DATA *pArea)
 
 void save_area(AREA_DATA *pArea)
 {
-	std::string buffer;
 	long long temp_bit;
-	char buf[MSL];
 	FILE *fp = nullptr;
 
-	sprintf(buf, "mv -f %s " RIFT_AREA_DIR "/backup/%s.bak", pArea->file_name, pArea->file_name);
+	std::string backupPath = std::string(RIFT_AREA_DIR "/backup/") + pArea->file_name + ".bak";
+	if (!CFileSystem::Move(pArea->file_name, backupPath))
+		RS.Logger.Warn("Failed to move [{}] to [{}]", pArea->file_name, backupPath);
 
-	auto returnCode = system(buf);
-	if(returnCode != 0) // mv returns 0 on SUCCESS, > 0 on ERROR. system returns -1 on ERROR
-		RS.Logger.Warn("Command [{}] failed with exit code [{}]", buf, returnCode);
-
-	buffer = std::string("touch " AREA_DUMP_FILE);
-	returnCode = system(buffer.c_str());
-	if(returnCode != 0) // couldn't find exit code for touch, assuming touch returns 0 on SUCCESS, > 0 on ERROR. system returns -1 on ERROR
-		RS.Logger.Warn("Command [{}] failed with exit code [{}]", buffer.data(), returnCode);
+	if (!CFileSystem::Touch(AREA_DUMP_FILE))
+		RS.Logger.Warn("Failed to touch [{}]", AREA_DUMP_FILE);
 
 	if (!(fp = fopen(pArea->file_name, "w")))
 	{

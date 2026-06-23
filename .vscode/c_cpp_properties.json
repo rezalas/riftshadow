@@ -5,8 +5,8 @@
             "includePath": [
                 "${workspaceFolder}/**",
                 "/usr/include/**",
-                "/usr/lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9",
-                "/usr/lib/gcc/x86_64-linux-gnu/9/include",
+                "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11",
+                "/usr/lib/gcc/x86_64-linux-gnu/11/include",
                 "/usr/local/include"
             ],
 			"browse": {

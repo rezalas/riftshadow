@@ -4,6 +4,7 @@ set(RIFT_SOURCE config.cpp
 	strings.c
 	file.c
 	cdirectory.c
+	cfilesystem.c
 	clogger.c
 	sql.c
 	bitvector.c

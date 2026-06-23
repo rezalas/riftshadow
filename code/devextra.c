@@ -10,6 +10,7 @@
 #include <iterator>
 #include "devextra.h"
 #include "rift.h"
+#include "stdlibs/cfilesystem.h"
 #include "magic.h"
 #include "recycle.h"
 #include "db.h"
@@ -63,7 +64,6 @@ void do_pswitch(CHAR_DATA *ch, char *argument)
 {
 	DESCRIPTOR_DATA *d;
 	char name[MAX_STRING_LENGTH];
-	char buf[MAX_STRING_LENGTH];
 	CHAR_DATA *victim;
 
 	argument = one_argument(argument, name);
@@ -96,11 +96,11 @@ void do_pswitch(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	sprintf(buf, "cp %s/%s%s %s/pload.txt", RIFT_PLAYER_DIR, name, ".plr", RIFT_PLAYER_DIR);
+	auto ploadSource = fmt::format("{}/{}{}", RIFT_PLAYER_DIR, name, ".plr");
+	auto ploadDest = fmt::format("{}/pload.txt", RIFT_PLAYER_DIR);
 
-	auto returnCode = system(buf);
-	if(returnCode != 0) // cp returns 0 on SUCCESS, 1 on ERROR. system returns -1 on ERROR
-		RS.Logger.Warn("Command [{}] failed with exit code [{}]", buf, returnCode);
+	if (!CFileSystem::Copy(ploadSource, ploadDest))
+		RS.Logger.Warn("Failed to copy [{}] to [{}]", ploadSource, ploadDest);
 
 	d->character->desc = nullptr;
 	d->character->next = char_list;
@@ -760,19 +760,24 @@ void do_demo(CHAR_DATA *ch, char *name)
 
 void delete_char(char *name, bool save_pfile)
 {
-	char buf1[MSL], buf2[MSL], query[MSL];
+	char query[MSL];
 	name = capitalize(name);
 	int cres = 0;
 
 	// whack their pfile.. or maybe just move it to dead_char
-	if (save_pfile)
-		sprintf(buf2, "mv %s/%s.plr %s/dead_char/%s.plr", RIFT_PLAYER_DIR, name, RIFT_PLAYER_DIR, name);
-	else
-		sprintf(buf2, "rm %s/%s.plr", RIFT_PLAYER_DIR, name);
+	auto pfilePath = fmt::format("{}/{}.plr", RIFT_PLAYER_DIR, name);
 
-	auto returnCode = system(buf2);
-	if(returnCode != 0) // both mv and rm return 0 on SUCCESS, > 0 on ERROR. system returns -1 on ERROR
-		RS.Logger.Warn("Command [{}] failed with exit code [{}]", buf2, returnCode);
+	if (save_pfile)
+	{
+		auto deadPath = fmt::format("{}/dead_char/{}.plr", RIFT_PLAYER_DIR, name);
+		if (!CFileSystem::Move(pfilePath, deadPath))
+			RS.Logger.Warn("Failed to move [{}] to [{}]", pfilePath, deadPath);
+	}
+	else
+	{
+		if (!CFileSystem::Remove(pfilePath))
+			RS.Logger.Warn("Failed to remove [{}]", pfilePath);
+	}
 
 	cres = RS.SQL.Delete("players WHERE name='%s'", name);
 
