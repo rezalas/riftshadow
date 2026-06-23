@@ -41,6 +41,7 @@
 #include <iterator>
 #include "dioextra.h"
 #include "handler.h"
+#include "stdlibs/cfilesystem.h"
 #include "recycle.h"
 #include "tables.h"
 #include "lookup.h"
@@ -1673,11 +1674,11 @@ void do_pload(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	auto buffer = fmt::format("cp {}{}{} {}pload.txt", RIFT_PLAYER_DIR, name, ".plr", RIFT_PLAYER_DIR);
+	auto ploadSource = fmt::format("{}/{}{}", RIFT_PLAYER_DIR, name, ".plr");
+	auto ploadDest = fmt::format("{}/pload.txt", RIFT_PLAYER_DIR);
 
-	auto returnCode = system(buffer.c_str());
-	if(returnCode != 0) // cp returns 0 on SUCCESS, 1 on ERROR. system returns -1 on ERROR
-		RS.Logger.Warn("Command [{}] failed with exit code [{}]", buffer.data(), returnCode);
+	if (!CFileSystem::Copy(ploadSource, ploadDest))
+		RS.Logger.Warn("Failed to copy [{}] to [{}]", ploadSource, ploadDest);
 
 	d->character->desc = nullptr;
 	d->character->next = char_list;
@@ -1696,7 +1697,7 @@ void do_pload(CHAR_DATA *ch, char *argument)
 
 	interpret(ch, argument);
 
-	buffer = fmt::format("{}/{}{}", RIFT_PLAYER_DIR, name, ".plr");
+	auto buffer = fmt::format("{}/{}{}", RIFT_PLAYER_DIR, name, ".plr");
 
 	if (fopen(buffer.c_str(), "r") != nullptr)
 	{
