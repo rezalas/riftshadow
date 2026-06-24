@@ -1433,7 +1433,6 @@ void update_pc_last_fight(CHAR_DATA *ch, CHAR_DATA *ch2)
 void do_ctrack(CHAR_DATA *ch, char *argument)
 {
 	char arg[MAX_STRING_LENGTH];
-	char buf[MAX_STRING_LENGTH];
 	int numMatches = 0;
 	BUFFER *output;
 
@@ -1455,6 +1454,7 @@ void do_ctrack(CHAR_DATA *ch, char *argument)
 
 	output = new_buf();
 
+	std::string buffer;
 	auto dir = CDirectory(RIFT_PLAYER_DIR);
 	auto files = dir.GetFiles(".plr");
 	for (const auto &file : files)
@@ -1476,19 +1476,19 @@ void do_ctrack(CHAR_DATA *ch, char *argument)
 		auto name = std::filesystem::path(file).stem().string();
 
 		numMatches++;
-		sprintf(buf, "%3d) %s: %s\n\r", numMatches, name.c_str(), login ? login : "(none)");
-		add_buf(output, buf);
+		buffer = fmt::sprintf("%3d) %s: %s\n\r", numMatches, name.c_str(), login ? login : "(none)");
+		add_buf(output, buffer.data());
 	}
 
 	if (!numMatches)
 	{
-		sprintf(buf, "No players found in %s.\n\r", arg);
-		send_to_char(buf, ch);
+		buffer = fmt::format("No players found in {}}.\n\r", arg);
+		send_to_char(buffer.c_str(), ch);
 	}
 	else
 	{
-		sprintf(buf, "%d players found in %s:\n\r", numMatches, arg);
-		send_to_char(buf, ch);
+		buffer = fmt::format("{} players found in {}:\n\r", numMatches, arg);
+		send_to_char(buffer.c_str(), ch);
 		page_to_char(buf_string(output), ch);
 	}
 
