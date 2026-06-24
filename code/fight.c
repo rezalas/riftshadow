@@ -264,7 +264,7 @@ void check_assist(CHAR_DATA *ch, CHAR_DATA *victim)
 				{
 					if (!is_npc(ch) && !is_npc(rch) && !is_npc(victim))
 					{
-						sprintf(store, "Help!  %s is assisting %s!", rch->name, ch->name);
+						snprintf(store, sizeof(store), "Help!  %s is assisting %s!", rch->name, ch->name);
 						victim->law_pass = true;
 						do_myell(victim, store, rch);
 					}
