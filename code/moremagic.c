@@ -55,9 +55,6 @@
 #include "skills.h"
 #include "db.h"
 
-//#define TEMP_GREP_RESULTS_TWO	"../temp/tempgrepresults2.tmp"
-
-
 void spell_enlarge(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 {
 	CHAR_DATA *victim = (CHAR_DATA *)vo;

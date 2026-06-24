@@ -39,9 +39,11 @@
 #include <stdlib.h>
 #include <mysql.h>
 #include <iterator>
+#include <filesystem>
 #include "dioextra.h"
 #include "handler.h"
 #include "stdlibs/cfilesystem.h"
+#include "stdlibs/cdirectory.h"
 #include "recycle.h"
 #include "tables.h"
 #include "lookup.h"
@@ -1425,24 +1427,17 @@ void update_pc_last_fight(CHAR_DATA *ch, CHAR_DATA *ch2)
 	ch2->last_fight_name = ch->true_name;
 }
 
-/* horrid Cabal track code */
+/// Displays a list of members in a specified cabal and their last login times.
+/// @param ch The character that issued the command.
+/// @param argument The name of the cabal from which to compute the list.
 void do_ctrack(CHAR_DATA *ch, char *argument)
 {
 	char arg[MAX_STRING_LENGTH];
 	char buf[MAX_STRING_LENGTH];
-	char buf2[MAX_STRING_LENGTH];
-	char newbuf[MAX_STRING_LENGTH];
-	char results[MAX_STRING_LENGTH];
-	char *login = nullptr;
-	FILE *fpChar;
-	FILE *fpChar2;
-	int numMatches = 0, cabal, counter;
+	int numMatches = 0;
 	BUFFER *output;
 
 	one_argument(argument, arg);
-
-	output = new_buf();
-	return;
 
 	if (arg[0] == '\0')
 	{
@@ -1451,61 +1446,39 @@ void do_ctrack(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if ((cabal = cabal_lookup(arg)) == 0)
+	auto cabal = cabal_lookup(arg);
+	if (cabal == 0)
 	{
 		send_to_char("No such cabal exists.\n\r", ch);
 		return;
 	}
 
-	sprintf(arg, "%s", lowstring(arg));
-	sprintf(buf, "grep 'Cabal %s~' %s/%s > %s", arg, RIFT_PLAYER_DIR, "*.plr", TEMP_GREP_RESULTS);
+	output = new_buf();
 
-	auto returnCode = system(buf);
-	if(returnCode != 0) // grep returns 0 on SUCCESS, > 0 on ERROR. system returns -1 on ERROR
-		RS.Logger.Warn("Command [{}] failed with exit code [{}]", buf, returnCode);
-
-	fpChar = fopen(TEMP_GREP_RESULTS, "r");
-	if (fpChar == nullptr)
+	auto dir = CDirectory(RIFT_PLAYER_DIR);
+	auto files = dir.GetFiles(".plr");
+	for (const auto &file : files)
 	{
-		send_to_char("Error opening results.\n\r", ch);
-		return;
-	}
-
-	while (fgets(results, MAX_INPUT_LENGTH, fpChar))
-	{
-		free_pstring(newbuf);
-
-		for (counter = 0; counter < (int)(strlen(results) - 10); counter++)
+		FILE *fpChar = fopen(file.c_str(), "r");
+		if (fpChar == nullptr)
 		{
-			if (results[counter + 10] == '.')
-			{
-				newbuf[counter] = '\0';
-				break;
-			}
-
-			newbuf[counter] = results[counter + 10];
+			RS.Logger.Warn("do_ctrack: fopen {}: {}", file, std::strerror(errno));
+			continue;
 		}
 
-		sprintf(buf2, "%s/%s.plr", RIFT_PLAYER_DIR, newbuf);
-		fpChar2 = fopen(buf2, "r");
-		if (fpChar2 == nullptr)
-		{
-			RS.Logger.Warn("Unable to open bug file: fopen {}: {}", buf2, std::strerror(errno));
-			return;
-		}
+		int fileCabal = 0;
+		char *login = get_login(fpChar, &fileCabal);
+		fclose(fpChar);
 
-		login = get_login(ch, fpChar2);
-		fclose(fpChar2);
+		if (fileCabal != cabal)
+			continue;
+
+		auto name = std::filesystem::path(file).stem().string();
 
 		numMatches++;
-
-		sprintf(buf, "%3d) %s: %s\n\r", numMatches, newbuf, login ? login : "(none)");
+		sprintf(buf, "%3d) %s: %s\n\r", numMatches, name.c_str(), login ? login : "(none)");
 		add_buf(output, buf);
-
-		free_pstring(results);
 	}
-
-	fclose(fpChar);
 
 	if (!numMatches)
 	{
@@ -1522,16 +1495,17 @@ void do_ctrack(CHAR_DATA *ch, char *argument)
 	free_buf(output);
 }
 
-char *get_login(CHAR_DATA *ch, FILE *fpChar2)
+// Scans a player file returning its LogonTime string (or nullptr
+// if absent) and, if found, the character cabal.
+/// @param fpChar2 The file pointer that points to the character's file 
+/// @param pCabal The pointer that points to the character's cabal if found.
+/// @return The last LogonTime specified by the player file.
+char *get_login(FILE *fpChar2, int *pCabal)
 {
 	bool fMatch, end = false;
 	char *login = nullptr, *word;
 
-	if (fpChar2 == nullptr)
-	{
-		send_to_char("Error opening pfile.\n\r", ch);
-		return "";
-	}
+	*pCabal = 0;
 
 	for (;;)
 	{
@@ -1540,6 +1514,9 @@ char *get_login(CHAR_DATA *ch, FILE *fpChar2)
 
 		switch (UPPER(word[0]))
 		{
+			case 'C':
+				KEY("Cabal", *pCabal, cabal_lookup(fread_string(fpChar2)))
+				break;
 			case 'E':
 				if (!str_cmp(word, "End"))
 				{
