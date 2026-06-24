@@ -25,9 +25,9 @@ void do_lag (CHAR_DATA *ch, char *argument);
 int get_spell_aftype (CHAR_DATA *ch);
 void do_finger (CHAR_DATA *ch, char *argument);
 void update_pc_last_fight (CHAR_DATA *ch,CHAR_DATA *ch2);
-/* horrid Cabal track code */
+/* Cabal track code */
 void do_ctrack (CHAR_DATA *ch, char *argument);
-char *get_login (CHAR_DATA *ch, FILE *fpChar2);
+char *get_login (FILE *fpChar2, int *pCabal);
 void chomp (char *str);
 void chompr (char *str);
 void chop (char *str);
