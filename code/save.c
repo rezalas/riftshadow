@@ -1015,20 +1015,6 @@ bool load_char_obj(DESCRIPTOR_DATA *d, char *name)
 
 	found = false;
 
-	/* decompress if .gz file exists */
-	sprintf(strsave, "%s%s%s", RIFT_PLAYER_DIR, capitalize(name), ".gz");
-
-	if ((fp = fopen(strsave, "r")) != nullptr)
-	{
-		fclose(fp);
-
-		auto buffer = fmt::format("gzip -dfq {}", strsave);
-
-		auto returnCode = system(buffer.c_str());
-		if(returnCode != 0) // gzip returns 0 on SUCCESS, 1 on ERROR. system returns -1 on ERROR
-			RS.Logger.Warn("Command [{}] failed with exit code [{}]", buffer.data(), returnCode);
-	}
-
 	sprintf(strsave, "%s/%s.plr", RIFT_PLAYER_DIR, capitalize(name));
 
 	if ((fp = fopen(strsave, "r")) != nullptr)
