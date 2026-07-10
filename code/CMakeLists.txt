@@ -72,7 +72,6 @@ set(RIFT_SOURCE config.cpp
 	ispec.c
 	newmem.c
 	mud.c
-	bootup.c
 	characterClasses/class.c
 	prof.c
 	vote.c

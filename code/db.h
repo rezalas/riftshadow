@@ -657,6 +657,7 @@ void load_resets (FILE * fp);
  */
 void load_shops(FILE *fp);
 void load_cabal_items (void);
+void load_bans (void);
 void fix_exits (void);
 void find_adjacents (void);
 void area_update(void);

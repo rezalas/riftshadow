@@ -5,27 +5,6 @@
 #include "merc.h"
 
 /*
- *  * Local booting procedures.
- *  */
-void init_mm (void);
-void load_area (FILE *fp);
-void new_load_area (FILE *fp);   /* OLC */
-void load_mobs (FILE *fp);
-void load_objs (FILE *fp);
-void load_resets (FILE *fp);
-void load_newresets (FILE *fp);
-void load_rooms (FILE *fp);
-void load_socials (FILE *fp);
-void load_bans (void);
-void load_cabal_items (void);
-void fix_exits (void);
-void find_adjacents (void);
-void clean_notes (void);
-void load_improgs (FILE *fp);
-void load_specs (FILE *fp);
-void reset_area (AREA_DATA * pArea);
-
-/*
 * this macro loads SQL table data into a linked list
 * superfast kung fu style!
 * -cal 
