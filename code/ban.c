@@ -43,6 +43,7 @@
 #include "act_wiz.h"
 #include "interp.h"
 #include "db.h"
+#include "./repositories/banrepository.h"
 #include "./include/spdlog/fmt/bundled/format.h"
 
 /// Determines if a player has been banned.
@@ -57,18 +58,14 @@ bool check_ban(char *usite, int type, int host)
 	strcpy(site, capitalize(usite));
 	site[0] = LOWER(site[0]);
 
-	auto res = RS.SQL.Select("site,duration FROM bans WHERE ban_type=%d AND host_type=%d", type, host);
-	if (res)
+	BanRepository bans(RS.Db);
+	for (const auto &ban : bans.FindByType(type, host))
 	{
-		while (!RS.SQL.End())
+		if (strstr(site, ban.site.c_str()) != nullptr)
 		{
-			auto row = RS.SQL.GetRow();
-			if (strstr(site, row[0]) != nullptr)
-			{
-				auto buffer = fmt::format("BANNED - {} just tried to connect.", site); //TODO: change the rest of the sprintf calls to format
-				wiznet(buffer.data(), nullptr, nullptr, WIZ_LOGINS, 0, 0);
-				return true;
-			}
+			auto buffer = fmt::format("BANNED - {} just tried to connect.", site); //TODO: change the rest of the sprintf calls to format
+			wiznet(buffer.data(), nullptr, nullptr, WIZ_LOGINS, 0, 0);
+			return true;
 		}
 	}
 
@@ -87,7 +84,7 @@ void do_ban(CHAR_DATA *ch, char *argument)
 	char buf[MSL];
 	char arg1[MSL], arg2[MSL], arg3[MSL], arg4[MSL], date[MSL];
 	BUFFER *buffer;
-	int ban_type = 0, host_type = 0, res, duration = 0;
+	int ban_type = 0, host_type = 0, duration = 0;
 
 	argument = one_argument(argument, arg1);
 	argument = one_argument(argument, arg2);
@@ -96,26 +93,25 @@ void do_ban(CHAR_DATA *ch, char *argument)
 
 	if (arg1[0] != '\0' && !str_prefix(arg1, "show"))
 	{
-		res = RS.SQL.Select("bans.*,DATE_FORMAT(date,\'%%m/%%d/%%Y\') FROM bans ORDER BY duration DESC");
+		BanRepository bans(RS.Db);
+		auto banList = bans.FindAllOrderedByDuration();
 
-		if (res)
+		if (!banList.empty())
 		{
 			buffer = new_buf();
 
 			sprintf(buf, "%-25s\t%-10s\t%-10s\t%-10s\t%-10s\t%-10s\n\r", "Site", "By", "Type", "Date", "Duration", "Reason");
 			add_buf(buffer, buf);
 
-			while (!RS.SQL.End())
+			for (const auto &ban : banList)
 			{
-				auto row = RS.SQL.GetRow();
-
-				sprintf(buf, "%-25s\t%-10s\t%-10s\t%-10s\t%-10s\t%-10s\n\r",
-					row[0],
-					row[1],
-					(atoi(row[5]) > 0) ? "Newbie" : "All",
-					row[7],
-					row[4],
-					row[2]);
+				sprintf(buf, "%-25s\t%-10s\t%-10s\t%-10s\t%-10lld\t%-10s\n\r",
+					ban.site.c_str(),
+					ban.by.c_str(),
+					(ban.ban_type > 0) ? "Newbie" : "All",
+					ban.date.c_str(),
+					ban.duration,
+					ban.reason.c_str());
 
 				add_buf(buffer, buf);
 			}
@@ -170,8 +166,17 @@ void do_ban(CHAR_DATA *ch, char *argument)
 
 	strftime(date, 200, "%Y-%m-%d", localtime(&current_time));
 
-	res = RS.SQL.Insert("bans VALUES(\'%s\',\'%s\',\'%s\',\'%s\',%d,%d,%d)", arg1, ch->true_name, argument, date, duration, ban_type, host_type);
-	if (res)
+	Ban ban;
+	ban.site = arg1;
+	ban.by = ch->true_name;
+	ban.reason = argument;
+	ban.date = date;
+	ban.duration = duration;
+	ban.ban_type = ban_type;
+	ban.host_type = host_type;
+
+	BanRepository bans(RS.Db);
+	if (bans.Add(ban))
 	{
 		send_to_char("Ban added.\n\r", ch);
 		return;
@@ -194,8 +199,8 @@ void do_unban(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	auto res = RS.SQL.Delete("bans WHERE site LIKE \'%%%s%%\'", argument);
-	if (res)
+	BanRepository bans(RS.Db);
+	if (bans.RemoveBySiteContaining(argument) > 0)
 		send_to_char("Site unbanned.\n\r", ch);
 	else
 		send_to_char("Site is not banned.\n\r", ch);
