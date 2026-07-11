@@ -14,6 +14,7 @@
 #include "gameloop.h"
 #include "stdlibs/clogger.h"
 #include "stdlibs/sql.h"
+#include "stdlibs/dbsession.h"
 #include "queue.h"
 #include "interp2.h"
 #include "skill.h"
@@ -37,6 +38,7 @@ public:
 	virtual ~CMud();
 //	CGameLoop 			GameEngine;
 	CSQLInterface		SQL;
+	DbSession			Db;
 	CLogger				Logger;
 //	CInterpreter		Interpreter;
 	CQueue				Queue;

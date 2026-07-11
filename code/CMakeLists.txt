@@ -7,6 +7,8 @@ set(RIFT_SOURCE config.cpp
 	cfilesystem.c
 	clogger.c
 	sql.c
+	dbsession.c
+	repositories/banrepository.c
 	bitvector.c
 	act_comm.c
 	act_ente.c

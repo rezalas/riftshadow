@@ -76,7 +76,14 @@ bool CMud::Bootup()
 	if (!RS.SQL.StartSQLServer(riftCore.Host.c_str(),
 	riftCore.Db.c_str(), riftCore.User.c_str(), riftCore.Pwd.c_str()))
 	{
-		Logger.Warn("Failed to create a SQL connection.");
+		Logger.Error("Failed to create a SQL connection.");
+		return false;
+	}
+
+	// Prepared-statement ORM connection (coexists with RS.SQL during migration).
+	if (!RS.Db.Connect(riftCore))
+	{
+		Logger.Error("Failed to create the ORM (DbSession) connection.");
 		return false;
 	}
 
