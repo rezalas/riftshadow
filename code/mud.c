@@ -61,7 +61,11 @@ CMud::~CMud()
 	if(game_up)
 		RS.Shutdown();
 
-	Logger.Shutdown();
+	// NOTE: Do not call Logger.Shutdown() (spdlog::shutdown()) here. 
+	// It causes a use after free error due to internal teardown order. 
+	// In other words, the spdlog singleton was that backs the logger is
+	// destroyed before this destructor runs, so calling shutdown() here
+	// writes into already-freed memory. 
 }
 
 bool CMud::Bootup()

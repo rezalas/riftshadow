@@ -636,7 +636,8 @@ void CProficiencies::DisplayProfsForStat(CHAR_DATA *imm)
 	char buf[MSL], buf2[MSL];
 	int i;
 	sprintf(buf, "Proficiencies (%d pts left): ", GetPoints());
-	for(i = 0; prof_table[i].name != nullptr; i++)
+	auto prof_table_size = std::size(prof_table);
+	for(i = 0; i < prof_table_size; i++)
 	{
 		if(profs[i] == -1)
 			continue;
