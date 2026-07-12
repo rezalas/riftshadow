@@ -38,6 +38,7 @@
 #include "fight.h"
 #include "skills.h"
 #include "update.h"
+#include "./repositories/theftrepository.h"
 #include "./include/spdlog/fmt/bundled/format.h"
 
 bool IS_IMP(CHAR_DATA *ch)
@@ -760,9 +761,7 @@ void do_demo(CHAR_DATA *ch, char *name)
 
 void delete_char(char *name, bool save_pfile)
 {
-	char query[MSL];
 	name = capitalize(name);
-	int cres = 0;
 
 	// whack their pfile.. or maybe just move it to dead_char
 	auto pfilePath = fmt::format("{}/{}.plr", RIFT_PLAYER_DIR, name);
@@ -779,15 +778,14 @@ void delete_char(char *name, bool save_pfile)
 			RS.Logger.Warn("Failed to remove [{}]", pfilePath);
 	}
 
-	cres = RS.SQL.Delete("players WHERE name='%s'", name);
+	RS.SQL.Delete("players WHERE name='%s'", name);
 
-	one_query(query);
-
+	char query[MSL];
 	sprintf(query, "DELETE FROM pklogs WHERE killer='%s'", name);
 	one_query(query);
 
-	sprintf(query, "DELETE FROM theft WHERE ch='%s'", name);
-	one_query(query);
+	auto thefts = TheftRepository(RS.Db);
+	thefts.RemoveByChar(name);
 
 	sprintf(query, "DELETE FROM offerings WHERE player='%s'", name);
 	one_query(query);

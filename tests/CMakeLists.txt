@@ -19,6 +19,7 @@ set(TEST_SRC_FILES act_obj_tests.c
 	note_tests.c
 	prof_tests.c
 	queue_tests.c
+	theft_tests.c
 	utility_tests.c
 	standalone_tests.c
 	test_helpers.c
