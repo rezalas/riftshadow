@@ -42,6 +42,7 @@
 #include "./repositories/inductionrepository.h"
 #include "./repositories/noterepository.h"
 #include "./repositories/offeringrepository.h"
+#include "./repositories/loginrepository.h"
 #include "./include/spdlog/fmt/bundled/format.h"
 
 bool IS_IMP(CHAR_DATA *ch)
@@ -179,8 +180,10 @@ void clean_mud()
 
 	// 5184000 = one month
 
-	sprintf(buf, "DELETE FROM logins WHERE ctime + 5184000 < %ld", current_time);
-	one_query(buf);
+	auto logins = LoginRepository(RS.DbRift);
+	auto removedLogins = logins.RemoveOlderThan(current_time - 5184000);
+	if (removedLogins > 0)
+		RS.Logger.Info("clean_mud: removed {} old logins.", removedLogins);
 
 	auto notes = NoteRepository(RS.DbRift);
 	auto removed = notes.RemoveOlderThan(current_time - 2592000);
@@ -581,16 +584,15 @@ void do_sitetrack(CHAR_DATA *ch, char *argument)
 			add_buf(buffer, "Players from site:\n\r");
 
 			mysql_free_result(res2);
+			res2 = nullptr;
 
-			sprintf(query, "SELECT DISTINCT name FROM logins WHERE site RLIKE '%s'", row[1]);
-			mysql_query(conn2, query);
-
-			res2 = mysql_store_result(conn2);
+			auto logins = LoginRepository(RS.DbRift);
+			auto siteNames = logins.FindDistinctNamesBySite(row[1]);
 			buf[0] = '\0';
 
-			while ((row2 = mysql_fetch_row(res2)))
+			for (const auto &siteName : siteNames)
 			{
-				sprintf(query, "%-12s", row2[0]);
+				sprintf(query, "%-12s", siteName.c_str());
 				strcat(buf, query);
 
 				if (++results % 5 == 0)
@@ -779,11 +781,15 @@ void delete_char(char *name, bool save_pfile)
 	if (removed > 0)
 		RS.Logger.Info("Removed {} offerings for [{}]", removed, name);
 
-	sprintf(query, "DELETE FROM logins WHERE name='%s'", name);
-	one_query(query);
+	auto logins = LoginRepository(RS.DbRift);
+	removed = logins.RemoveByName(name);
+	if (removed > 0)
+		RS.Logger.Info("Removed {} login records for [{}]", removed, name);
 
 	auto inductions = InductionRepository(RS.DbRift);
 	inductions.RemoveByChar(name);
+	if (removed > 0)
+		RS.Logger.Info("Removed {} induction records for [{}]", removed, name);
 }
 
 MYSQL *open_fconn(void)
@@ -1953,9 +1959,6 @@ char *flags_to_string(CHAR_DATA *ch, const struct flag_type *showflags, int flag
 
 void do_ltrack(CHAR_DATA *ch, char *argument)
 {
-	MYSQL *conn;
-	MYSQL_ROW row;
-	MYSQL_RES *res_set;
 	BUFFER *buffer;
 	char arg1[MSL], arg2[MSL], buf[MSL];
 	int type = -1, show = -1, i = 0;
@@ -1990,56 +1993,40 @@ void do_ltrack(CHAR_DATA *ch, char *argument)
 		}
 	}
 
-	buffer = new_buf();
-	sprintf(buf, "%d", type);
-	auto query = fmt::format("SELECT * FROM logins WHERE (name RLIKE '{}' OR site RLIKE '{}' OR time RLIKE '{}') {}{} ORDER BY ctime DESC",
-		arg1,
-		arg1,
-		arg1,
-		type > -1 ? "AND type=" : "",
-		type > -1 ? buf : "");
+	auto logins = LoginRepository(RS.DbRift);
+	auto results = logins.Search(arg1, type);
 
-	conn = open_conn();
-	mysql_query(conn, query.c_str());
-	res_set = mysql_store_result(conn);
-
-	if (res_set == nullptr && mysql_field_count(conn) > 0)
+	if (results.empty())
 	{
-		send_to_char("Error accessing results.\n\r", ch);
-	}
-	else if (res_set)
-	{
-		while ((row = mysql_fetch_row(res_set)) != nullptr)
-		{
-			i++;
-
-			if ((show != -1 && i > show) || i > 300)
-				break;
-
-			sprintf(buf, "%s", row[7]);
-			type = atoi(buf);
-
-			sprintf(buf, "%s: %s@%s logged %s. [%s%s%s (%s) obj]\n\r",
-				row[2],
-				row[0],
-				row[1],
-				type == 0 ? "new" : type == 1 ? "in" : type == 2 ? "out" : "?",
-				type == 2 ? row[4] : "",
-				type == 2 ? " played, " : "",
-				row[5],
-				row[6]);
-			add_buf(buffer, buf);
-		}
-
-		mysql_free_result(res_set);
-		page_to_char(buf_string(buffer), ch);
-		free_buf(buffer);
-		mysql_close(conn);
+		send_to_char("No matching results were found.\n\r", ch);
 		return;
 	}
 
-	send_to_char("No matching results were found.\n\r", ch);
-	mysql_close(conn);
+	buffer = new_buf();
+
+	for (const auto &login : results)
+	{
+		i++;
+
+		if ((show != -1 && i > show) || i > 300)
+			break;
+
+		int rowType = login.type;
+
+		sprintf(buf, "%s: %s@%s logged %s. [%s%s%d (%d) obj]\n\r",
+			login.time.c_str(),
+			login.name.c_str(),
+			login.site.c_str(),
+			rowType == 0 ? "new" : rowType == 1 ? "in" : rowType == 2 ? "out" : "?",
+			rowType == 2 ? std::to_string(login.played).c_str() : "",
+			rowType == 2 ? " played, " : "",
+			login.obj,
+			login.lobj);
+		add_buf(buffer, buf);
+	}
+
+	page_to_char(buf_string(buffer), ch);
+	free_buf(buffer);
 	return;
 }
 

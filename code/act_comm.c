@@ -66,6 +66,7 @@
 #include "update.h"
 #include "./include/spdlog/fmt/bundled/format.h"
 #include "./include/spdlog/fmt/bundled/printf.h"
+#include "./repositories/loginrepository.h"
 
 /* RT code to delete yourself */
 void do_delet(CHAR_DATA *ch, char *argument)
@@ -2771,19 +2772,19 @@ void login_log(CHAR_DATA *ch, int type)
 	if (IS_SET(ch->comm, COMM_NOSOCKET))
 		return;
 
-	auto escape = ch->pcdata->host
-					  ? escape_string(ch->pcdata->host)
-					  : escape_string(ch->desc->host);
+	Login login;
+	login.name = ch->true_name;
+	login.site = ch->pcdata->host ? ch->pcdata->host : ch->desc->host;
+	login.time = log_time();
+	login.ctime = current_time;
+	login.played = type == 2 ? (int)((current_time - ch->logon) / 60) : -1;
+	login.obj = type > 0 ? count_carried(ch, false) : -1;
+	login.lobj = type > 0 ? count_carried(ch, true) : -1;
+	login.type = type;
 
-	char query[MAX_STRING_LENGTH];
-	sprintf(query, "INSERT INTO logins VALUES('%s', '%s', '%s', '%ld', '%ld', '%d', '%d', '%d')",
-			ch->true_name,
-			escape,
-			log_time(),
-			current_time,
-			type == 2 ? ((current_time - ch->logon) / 60) : -1,
-			type > 0 ? count_carried(ch, false) : -1, type > 0 ? count_carried(ch, true) : -1,
-			type);
+	auto logins = LoginRepository(RS.DbRift);
+	auto added = logins.Add(login);
 
-	one_query(query);
+	if (!added)
+		RS.Logger.Warn("Failed to add login log for {}.", ch->true_name);
 }
