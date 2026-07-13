@@ -46,6 +46,7 @@
 #include "./repositories/pklogrepository.h"
 #include "./repositories/sitecommentrepository.h"
 #include "./repositories/sitetrackerrepository.h"
+#include "./repositories/graveyardrepository.h"
 #include "./include/spdlog/fmt/bundled/format.h"
 
 bool IS_IMP(CHAR_DATA *ch)
@@ -764,14 +765,6 @@ void delete_char(char *name, bool save_pfile)
 		RS.Logger.Info("Removed {} induction records for [{}]", removed, name);
 }
 
-MYSQL *open_fconn(void)
-{
-	CSQLInterface nSQL;
-	DbConnection riftForum = nSQL.Settings.GetDbConnection("riftforum");
-	return do_conn(riftForum.Host.c_str(), riftForum.User.c_str(),
-	 riftForum.Pwd.c_str(), riftForum.Db.c_str(), riftForum.Port, nullptr, 0);
-}
-
 MYSQL_ROW one_query_row(char *query)
 {
 	MYSQL_RES *res_set;
@@ -780,24 +773,6 @@ MYSQL_ROW one_query_row(char *query)
 	res_set = one_query_res(query);
 	row = mysql_fetch_row(res_set);
 	mysql_free_result(res_set);
-	return row;
-}
-
-MYSQL_ROW one_fquery_row(char *query)
-{
-	MYSQL *conn;
-	MYSQL_RES *res_set;
-	MYSQL_ROW row;
-
-	conn = open_fconn();
-
-	mysql_query(conn, query);
-	res_set = mysql_store_result(conn);
-	row = mysql_fetch_row(res_set);
-
-	mysql_free_result(res_set);
-
-	mysql_close(conn);
 	return row;
 }
 
@@ -877,24 +852,15 @@ MYSQL *open_conn(void)
 	 riftCore.Pwd.c_str(), riftCore.Db.c_str(), riftCore.Port, nullptr, 0);
 }
 
-void one_fquery(char *query)
-{
-	MYSQL *conn;
-	conn = open_fconn();
-	mysql_query(conn, query);
-	mysql_close(conn);
-}
-
 void plug_graveyard(CHAR_DATA *ch, int type)
 {
 	int minlevel = 30, day, tid, i, max;
-	char buf[MSL], buf2[MSL], name[MSL], message[MSL], message_date[MSL], stid[MSL];
+	char buf[MSL], name[MSL], message[MSL], message_date[MSL], stid[MSL];
 	char align[MSL], ethos[MSL], type_death[MSL], message_death[MSL];
 	char *suf;
 	char ntime[MSL], year[MSL], month[MSL], dom[MSL], time[MSL], cur_date[MSL], unique[MSL];
-	MYSQL_ROW qrow;
 
-	return;
+	// TODO: Left the message building code here for now in case we decide to reviive posting to the forum or elsewhere.
 
 	if (ch->level < minlevel)
 		return;
@@ -946,22 +912,24 @@ void plug_graveyard(CHAR_DATA *ch, int type)
 	strftime(ntime, 200, "%H%M%S", localtime(&current_time));
 	strftime(year, 200, "%Y", localtime(&current_time));
 
-	qrow = one_fquery_row("select max(zthreadid) from gabe20010201051916");
+	// TODO: Possibly add this back in if we decide to keep the forum posting functionality.
+	//  For now, it's commented out because the forum database is non-existent.
+	// qrow = one_fquery_row("select max(zthreadid) from gabe20010201051916");
 
-	if (qrow[0] != nullptr)
-	{
-		sprintf(stid, "%15.0f", (float)(atoi(qrow[0]) + 1));
+	// if (qrow[0] != nullptr)
+	// {
+	// 	sprintf(stid, "%15.0f", (float)(atoi(qrow[0]) + 1));
 
-		for (i = 0; stid[i] != '\0'; i++)
-		{
-			if (stid[i] == ' ')
-				stid[i] = '0';
-		}
-	}
-	else
-	{
+	// 	for (i = 0; stid[i] != '\0'; i++)
+	// 	{
+	// 		if (stid[i] == ' ')
+	// 			stid[i] = '0';
+	// 	}
+	// }
+	// else
+	// {
 		sprintf(stid, "000000000000000");
-	}
+	//}
 
 	sprintf(cur_date, "%s/%s/%s %s", month, dom, year, time);
 	sprintf(unique, "%s%s%s%s", year, month, dom, ntime);
@@ -1037,19 +1005,31 @@ void plug_graveyard(CHAR_DATA *ch, int type)
 	else
 		sprintf(message, "%s\rPK Ratio: 0%%", message);
 
-	sprintf(buf2,
-			"insert into graveyard(Pname, Pfrags, Pfgood, Pfneutral, Pfevil, Pfdeaths, Pmdeaths, Phours) "\
-			"values('%s',%.3f, %.3f, %.3f, %.3f, %.3f, %d, %d)",\
-			ch->true_name, ch->pcdata->frags[PK_KILLS], ch->pcdata->frags[PK_GOOD], ch->pcdata->frags[PK_NEUTRAL],
-			ch->pcdata->frags[PK_EVIL], ch->pcdata->fragged, ch->pcdata->killed[MOB_KILLED], get_hours(ch));
-	one_query(buf2);
+	Graveyard grave;
+	grave.Pname = ch->true_name;
+	grave.Pfrags = ch->pcdata->frags[PK_KILLS];
+	grave.Pfgood = ch->pcdata->frags[PK_GOOD];
+	grave.Pfneutral = ch->pcdata->frags[PK_NEUTRAL];
+	grave.Pfevil = ch->pcdata->frags[PK_EVIL];
+	grave.Pfdeaths = ch->pcdata->fragged;
+	grave.Pmdeaths = ch->pcdata->killed[MOB_KILLED];
+	grave.Phours = get_hours(ch);
 
-	sprintf(buf,
-			"insert into gabe20010201051916(zposter,zposter_email,zsubject,zmessage,zdatetime,zaddress,zunique,"\
-			"zthreadid,zdelete,zmod) values('Death_Wizard','immortals@riftshadow.com','%s','%s',"\
-			"'%s','localhost',%s,'%s',0,'Death_Wizard')",
-			name, message, cur_date, unique, stid);
-	one_fquery(buf);
+	auto graveyard = GraveyardRepository(RS.DbRift);
+	auto added = graveyard.Add(grave);
+	if (!added)
+	{
+		RS.Logger.Warn("Failed to add graveyard record for [{}]", ch->true_name);
+	}
+
+	// TODO: Possibly add this back in if we decide to keep the forum posting functionality.
+	//  For now, it's commented out because the forum database is non-existent.
+	// sprintf(buf,
+	// 		"insert into gabe20010201051916(zposter,zposter_email,zsubject,zmessage,zdatetime,zaddress,zunique,"\
+	// 		"zthreadid,zdelete,zmod) values('Death_Wizard','immortals@riftshadow.com','%s','%s',"\
+	// 		"'%s','localhost',%s,'%s',0,'Death_Wizard')",
+	// 		name, message, cur_date, unique, stid);
+	// one_fquery(buf);
 }
 
 void do_pktrack(CHAR_DATA *ch, char *argument)

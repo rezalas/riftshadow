@@ -25,6 +25,7 @@ set(TEST_SRC_FILES act_obj_tests.c
 	pklog_tests.c
 	sitecomment_tests.c
 	sitetracker_tests.c
+	graveyard_tests.c
 	prof_tests.c
 	queue_tests.c
 	theft_tests.c
