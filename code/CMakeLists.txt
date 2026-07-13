@@ -14,6 +14,7 @@ set(RIFT_SOURCE config.cpp
 	repositories/voterepository.c
 	repositories/noterepository.c
 	repositories/helprepository.c
+	repositories/bugrepository.c
 	bitvector.c
 	act_comm.c
 	act_ente.c

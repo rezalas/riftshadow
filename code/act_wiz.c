@@ -73,6 +73,7 @@
 #include "utility.h"
 #include "misc.h"
 #include "./repositories/inductionrepository.h"
+#include "./repositories/bugrepository.h"
 #include "./include/spdlog/fmt/bundled/format.h"
 #include "./include/spdlog/fmt/bundled/printf.h"
 
@@ -7487,10 +7488,7 @@ void do_noskills(CHAR_DATA *ch, char *argument)
 
 void do_buglist(CHAR_DATA *ch, char *argument)
 {
-	char arg1[MSL], arg2[MSL], query[MSL], str[200];
-	MYSQL *conn;
-	MYSQL_RES *res_set = nullptr;
-	MYSQL_ROW row = nullptr;
+	char arg1[MSL], arg2[MSL], str[200], buf[MSL];
 
 	if (argument[0] == '\0')
 	{
@@ -7509,45 +7507,37 @@ void do_buglist(CHAR_DATA *ch, char *argument)
 
 	argument = one_argument(argument, arg1);
 
+	auto buglist = BugRepository(RS.DbRift);
+
 	// status 0 = unresolved, 1 = resolved, 2 = my head is on fire
+	std::vector<Bug> bugs;
+
 	if (!strcmp(arg1, "auto"))
 	{
-		sprintf(query, "SELECT * from buglist WHERE Status = 0 ORDER BY ID desc LIMIT 8");
+		bugs = buglist.FindUnresolved(8);
 		sprintf(str, "Displaying last 8 unresolved bugs.\n\r");
 	}
 	else if (is_number(arg1))
 	{
-		conn = open_conn();
-
-		if (!conn)
-		{
-			send_to_char("Error opening bug database.\n\r", ch);
-			return;
-		}
-
-		sprintf(query, "SELECT * from buglist WHERE ID = %d", atoi(arg1));
 		sprintf(str, "Displaying bug #%d:\n\r", atoi(arg1));
 		send_to_char(str, ch);
 
-		mysql_query(conn, query);
+		auto found = buglist.FindById(atoi(arg1));
 
-		res_set = mysql_store_result(conn);
-
-		if (!res_set || !(row = mysql_fetch_row(res_set)))
+		if (found.empty())
 			send_to_char("Unable to find that bug.\n\r", ch);
 		else
 		{
-			sprintf(query, "Added by: %-15s Date: %-15s\n\rStatus: %s\n\rSummary: %s\n\rDescription: %s\n\r",
-				row[1],
-				row[2],
-				atoi(row[5]) == 1 ? "Resolved" : "Unresolved",
-				row[3],
-				row[4]);
-			send_to_char(query, ch);
+			auto &bug = found[0];
+			sprintf(buf, "Added by: %-15s Date: %-15s\n\rStatus: %s\n\rSummary: %s\n\rDescription: %s\n\r",
+				bug.AddedBy.c_str(),
+				bug.Date.c_str(),
+				bug.Status == 1 ? "Resolved" : "Unresolved",
+				bug.Summary.c_str(),
+				bug.Description.c_str());
+			send_to_char(buf, ch);
 		}
 
-		mysql_free_result(res_set);
-		mysql_close(conn);
 		return;
 	}
 	else if (!strcmp(arg1, "last"))
@@ -7560,7 +7550,7 @@ void do_buglist(CHAR_DATA *ch, char *argument)
 			return;
 		}
 
-		sprintf(query, "SELECT * from buglist ORDER BY ID desc LIMIT %d", atoi(arg2));
+		bugs = buglist.FindRecent(atoi(arg2));
 		sprintf(str, "Displaying last %d bugs.\n\r", atoi(arg2));
 	}
 	else if (!strcmp(arg1, "add"))
@@ -7581,8 +7571,7 @@ void do_buglist(CHAR_DATA *ch, char *argument)
 			return;
 		}
 
-		sprintf(query, "UPDATE buglist SET Status = 1 WHERE ID = %d", atoi(arg2));
-		one_query(query);
+		buglist.MarkResolved(atoi(arg2));
 
 		send_to_char("Bug marked as resolved.\n\r", ch);
 
@@ -7594,20 +7583,9 @@ void do_buglist(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	conn = open_conn();
-
-	if (!conn)
-	{
-		send_to_char("Error opening bug database.\n\r", ch);
-		return;
-	}
-
 	send_to_char(str, ch);
-	mysql_query(conn, query);
 
-	res_set = mysql_store_result(conn);
-
-	if (!res_set)
+	if (bugs.empty())
 	{
 		send_to_char("No bugs found.\n\r", ch);
 	}
@@ -7616,30 +7594,32 @@ void do_buglist(CHAR_DATA *ch, char *argument)
 		send_to_char("ID    Added By    Summary\n\r", ch);
 		send_to_char("---   ---------   ------------\n\r", ch);
 
-		while ((row = mysql_fetch_row(res_set)) != nullptr)
+		for (auto &bug : bugs)
 		{
-			sprintf(query, "%-5s %-11s %s %s\n\r", row[0], row[1], row[3], atoi(row[5]) == 1 ? "(SOLVED)" : "");
-			send_to_char(query, ch);
+			sprintf(buf, "%-5d %-11s %s %s\n\r", bug.ID, bug.AddedBy.c_str(), bug.Summary.c_str(), bug.Status == 1 ? "(SOLVED)" : "");
+			send_to_char(buf, ch);
 		}
 	}
-
-	mysql_free_result(res_set);
-	mysql_close(conn);
 }
 
 void buglist_end_fun(CHAR_DATA *ch, char *argument)
 {
-	char query[MSL];
+	Bug bug;
+	bug.AddedBy = ch->true_name;
+	bug.Date = log_time();
+	bug.Summary = ch->pcdata->temp_str;
+	bug.Description = argument;
+	bug.Status = 0;
 
-	sprintf(query, "INSERT INTO buglist VALUES(nullptr, '%s', '%s', '%s', '%s', 0)",
-		ch->true_name,
-		log_time(),
-		ch->pcdata->temp_str,
-		argument);
-	one_query(query);
+	auto bugs = BugRepository(RS.DbRift);
+	auto added = bugs.Add(bug);
+
+	if (added)
+		send_to_char("Bug has been reported.\n\r", ch);
+	else
+		send_to_char("Unable to add bug to database.\n\r", ch);
 
 	free_pstring(ch->pcdata->temp_str);
-	send_to_char("Bug has been reported.\n\r", ch);
 }
 
 void do_constdump(CHAR_DATA *ch, char *argument)
