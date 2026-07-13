@@ -74,6 +74,7 @@
 #include "misc.h"
 #include "./repositories/inductionrepository.h"
 #include "./repositories/bugrepository.h"
+#include "./repositories/sitetrackerrepository.h"
 #include "./include/spdlog/fmt/bundled/format.h"
 #include "./include/spdlog/fmt/bundled/printf.h"
 
@@ -962,7 +963,6 @@ void do_bamfout(CHAR_DATA *ch, char *argument)
 void do_deny(CHAR_DATA *ch, char *argument)
 {
 	char arg[MAX_INPUT_LENGTH], buf[MAX_STRING_LENGTH], *cname;
-	char query[MSL];
 	CHAR_DATA *victim;
 
 	one_argument(argument, arg);
@@ -1011,8 +1011,8 @@ void do_deny(CHAR_DATA *ch, char *argument)
 	// add to denial #
 	if (victim->desc)
 	{
-		sprintf(query, "UPDATE sitetracker SET denials=denials+1 WHERE '%s' RLIKE site_name", victim->desc->host);
-		one_query(query);
+		auto sites = SiteTrackerRepository(RS.DbRift);
+		sites.IncrementDenialsByHost(victim->desc->host);
 	}
 
 	sprintf(buf, "AUTO: Denied by %s.\n\r", ch->true_name);

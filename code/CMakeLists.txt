@@ -19,6 +19,7 @@ set(RIFT_SOURCE config.cpp
 	repositories/loginrepository.c
 	repositories/pklogrepository.c
 	repositories/sitecommentrepository.c
+	repositories/sitetrackerrepository.c
 	bitvector.c
 	act_comm.c
 	act_ente.c

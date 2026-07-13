@@ -16,7 +16,6 @@
 
 bool IS_IMP (CHAR_DATA *ch);
 float calculate_inflation (void);
-char *escape_string (char *string);
 void do_pswitch (CHAR_DATA *ch, char *argument);
 void do_gold (CHAR_DATA *ch, char *argument);
 void do_clean (CHAR_DATA *ch, char *argument);

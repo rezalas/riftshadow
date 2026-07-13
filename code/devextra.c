@@ -45,6 +45,7 @@
 #include "./repositories/loginrepository.h"
 #include "./repositories/pklogrepository.h"
 #include "./repositories/sitecommentrepository.h"
+#include "./repositories/sitetrackerrepository.h"
 #include "./include/spdlog/fmt/bundled/format.h"
 
 bool IS_IMP(CHAR_DATA *ch)
@@ -58,13 +59,6 @@ bool IS_IMP(CHAR_DATA *ch)
 float calculate_inflation()
 {
 	return 1.00f + 3.00f * (player_gold / total_gold);
-}
-
-char *escape_string(char *string)
-{
-	char txt[MSL];
-	mysql_escape_string(txt, string, strlen(string));
-	return talloc_string(txt);
 }
 
 void do_pswitch(CHAR_DATA *ch, char *argument)
@@ -435,37 +429,27 @@ void do_offer(CHAR_DATA *ch, char *argument)
 
 void do_sitetrack(CHAR_DATA *ch, char *argument)
 {
-	MYSQL *conn;
-	MYSQL_RES *res_set;
-	MYSQL_ROW row;
 	BUFFER *buffer;
-	std::string query_buffer;
 	char buf[MSL], arg1[MSL], arg2[MSL], query[MSL];
-	char *escape;
-	int id, results = 0;
+	int results = 0;
 
 	if (is_npc(ch))
 		return;
 
-	conn = open_conn();
+	auto sites = SiteTrackerRepository(RS.DbRift);
 
 	if (!strcmp(argument, ""))
 	{
 		auto comments = SiteCommentRepository(RS.DbRift);
 		buffer = new_buf();
 
-		sprintf(query, "SELECT site_id, denials, site_name from sitetracker");
-		mysql_query(conn, query);
-
-		res_set = mysql_store_result(conn);
-
 		add_buf(buffer, "ID #     Site                       Denials    Comments\n\r");
 
-		while ((row = mysql_fetch_row(res_set)) != nullptr)
+		for (const auto &site : sites.FindAll())
 		{
-			id = atoi(row[0]);
-
-			sprintf(buf, "%4d     %-26s %-10s %d\n\r", id, row[2], row[1], comments.CountBySite(id));
+			sprintf(buf, "%4d     %-26s %-10d %d\n\r",
+				site.site_id, site.site_name.c_str(), site.denials,
+				comments.CountBySite(site.site_id));
 			add_buf(buffer, buf);
 		}
 
@@ -477,9 +461,6 @@ void do_sitetrack(CHAR_DATA *ch, char *argument)
 			add_buf(buffer, "Use sitetrack delcomment <comment id> to delete a comment, and sitetrack delsite <site id> to delete a site.\n\r");
 
 		page_to_char(buf_string(buffer), ch);
-		mysql_free_result(res_set);
-
-		mysql_close(conn);
 		free_buf(buffer);
 		return;
 	}
@@ -495,13 +476,12 @@ void do_sitetrack(CHAR_DATA *ch, char *argument)
 			return;
 		}
 
-		escape = escape_string(arg2);
-		sprintf(query, "INSERT INTO sitetracker VALUES(nullptr, '%s',0)", escape);
-		one_query(query);
+		SiteTracker site;
+		site.site_name = arg2;
+		sites.Add(site);
 
 		auto listing = fmt::format("A new site ({}) was added to the IP listings.  You should add a comment now explaining why it was added.\n\r", arg2);
 
-		mysql_close(conn);
 		send_to_char(listing.c_str(), ch);
 		return;
 	}
@@ -515,7 +495,6 @@ void do_sitetrack(CHAR_DATA *ch, char *argument)
 		ch->pcdata->helpid = atoi(arg2);
 		enter_text(ch, comment_end_fun);
 
-		mysql_close(conn);
 		return;
 	}
 
@@ -526,45 +505,41 @@ void do_sitetrack(CHAR_DATA *ch, char *argument)
 		if (deleted > 0)
 			RS.Logger.Info("Deleted {} site comments with id [{}]", deleted, arg2);
 
-		mysql_close(conn);
 		send_to_char("Ok.\n\r", ch);
 		return;
 	}
 
 	if (!str_cmp(arg1, "delsite") && get_trust(ch) >= 58)
 	{
-		query_buffer = fmt::format("DELETE FROM sitetracker WHERE site_id={}", arg2);
-		one_query(query_buffer.data());
+		sites.Remove(atoi(arg2));
 
-		mysql_close(conn);
 		send_to_char("Ok.\n\r", ch);
 		return;
 	}
 
 	if (is_number(arg1))
 	{
-		buffer = new_buf();
-		query_buffer = fmt::format("SELECT * from sitetracker where site_id={}", arg1);
-		mysql_query(conn, query_buffer.c_str());
+		auto found = sites.FindById(atoi(arg1));
 
-		res_set = mysql_store_result(conn);
-
-		if (!res_set || mysql_affected_rows(conn) < 1)
+		if (found.empty())
 		{
 			send_to_char("Invalid ID number.\n\r", ch);
-			mysql_close(conn);
 			return;
 		}
 
-		row = mysql_fetch_row(res_set);
-		sprintf(buf, "Viewing %s (id %s).\n\r", row[1], row[0]);
+		const auto &site = found.front();
+		buffer = new_buf();
+
+		sprintf(buf, "Viewing %s (id %d).\n\r", site.site_name.c_str(), site.site_id);
 		send_to_char(buf, ch);
 
-		sprintf(buf, "%s players from this site have been denied.", row[2]);
+		sprintf(buf, "%d players from this site have been denied.", site.denials);
+		send_to_char(buf, ch);
+
 		send_to_char("Comments:\n\r", ch);
 
 		auto comments = SiteCommentRepository(RS.DbRift);
-		auto siteComments = comments.FindBySite(atoi(arg1));
+		auto siteComments = comments.FindBySite(site.site_id);
 		buf[0] = '\r';
 
 		for (const auto &comment : siteComments)
@@ -583,7 +558,7 @@ void do_sitetrack(CHAR_DATA *ch, char *argument)
 			add_buf(buffer, "Players from site:\n\r");
 
 			auto logins = LoginRepository(RS.DbRift);
-			auto siteNames = logins.FindDistinctNamesBySite(row[1]);
+			auto siteNames = logins.FindDistinctNamesBySite(site.site_name);
 			buf[0] = '\0';
 
 			for (const auto &siteName : siteNames)
@@ -606,9 +581,6 @@ void do_sitetrack(CHAR_DATA *ch, char *argument)
 		}
 
 		page_to_char(buf_string(buffer), ch);
-		mysql_free_result(res_set);
-
-		mysql_close(conn);
 		free_buf(buffer);
 	}
 }
