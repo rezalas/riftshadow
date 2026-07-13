@@ -72,6 +72,7 @@
 #include "material.h"
 #include "utility.h"
 #include "misc.h"
+#include "./repositories/inductionrepository.h"
 #include "./include/spdlog/fmt/bundled/format.h"
 #include "./include/spdlog/fmt/bundled/printf.h"
 
@@ -337,7 +338,6 @@ void do_induct(CHAR_DATA *ch, char *argument)
 	CHAR_DATA *victim;
 	int cabal;
 	int i;
-	char query[MSL];
 
 	if (is_npc(ch))
 		return;
@@ -501,14 +501,16 @@ void do_induct(CHAR_DATA *ch, char *argument)
 
 	if (is_immortal(ch) && is_immortal(victim))
 	{
-		sprintf(query, "insert into inductions(ch, victim, cabal, ctime, chsite, victimsite) values('%s','%s',%d,%ld,'%s','%s')",
-			ch->true_name,
-			victim->true_name,
-			cabal,
-			current_time,
-			ch->pcdata->host,
-			victim->pcdata->host);
-		one_query(query);
+		Induction record;
+		record.ch = ch->true_name;
+		record.victim = victim->true_name;
+		record.cabal = cabal;
+		record.ctime = current_time;
+		record.chsite = ch->pcdata->host;
+		record.victimsite = victim->pcdata->host;
+
+		auto inductions = InductionRepository(RS.DbRift);
+		inductions.Add(record);
 	}
 
 	cabal_members[cabal]++;

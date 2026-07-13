@@ -38,7 +38,8 @@ public:
 	virtual ~CMud();
 //	CGameLoop 			GameEngine;
 	CSQLInterface		SQL;
-	DbSession			Db;
+	DbSession			Db;		// `rift_core` database connection
+	DbSession			DbRift;	// `rift` database connection
 	CLogger				Logger;
 //	CInterpreter		Interpreter;
 	CQueue				Queue;

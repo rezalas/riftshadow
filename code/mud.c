@@ -84,10 +84,18 @@ bool CMud::Bootup()
 		return false;
 	}
 
-	// Prepared-statement ORM connection (coexists with RS.SQL during migration).
+	// Setup connection to the `rift_core` database.
 	if (!RS.Db.Connect(riftCore))
 	{
-		Logger.Error("Failed to create the ORM (DbSession) connection.");
+		Logger.Error("Failed to create the DbSession connection to the rift_core database.");
+		return false;
+	}
+
+	// Setup connection to the `rift` database.
+	DbConnection rift = RS.SQL.Settings.GetDbConnection("rift");
+	if (!RS.DbRift.Connect(rift))
+	{
+		Logger.Error("Failed to create the DbSession connection to the rift database.");
 		return false;
 	}
 

@@ -39,6 +39,7 @@
 #include "skills.h"
 #include "update.h"
 #include "./repositories/theftrepository.h"
+#include "./repositories/inductionrepository.h"
 #include "./include/spdlog/fmt/bundled/format.h"
 
 bool IS_IMP(CHAR_DATA *ch)
@@ -793,8 +794,8 @@ void delete_char(char *name, bool save_pfile)
 	sprintf(query, "DELETE FROM logins WHERE name='%s'", name);
 	one_query(query);
 
-	sprintf(query, "DELETE FROM inductions WHERE ch='%s'", name);
-	one_query(query);
+	auto inductions = InductionRepository(RS.DbRift);
+	inductions.RemoveByChar(name);
 }
 
 MYSQL *open_fconn(void)

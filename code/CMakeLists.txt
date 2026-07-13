@@ -10,6 +10,7 @@ set(RIFT_SOURCE config.cpp
 	dbsession.c
 	repositories/banrepository.c
 	repositories/theftrepository.c
+	repositories/inductionrepository.c
 	bitvector.c
 	act_comm.c
 	act_ente.c
