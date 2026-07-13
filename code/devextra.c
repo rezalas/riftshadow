@@ -47,7 +47,9 @@
 #include "./repositories/sitecommentrepository.h"
 #include "./repositories/sitetrackerrepository.h"
 #include "./repositories/graveyardrepository.h"
+#include "./repositories/playerrepository.h"
 #include "./include/spdlog/fmt/bundled/format.h"
+#include "./include/spdlog/fmt/bundled/printf.h"
 
 bool IS_IMP(CHAR_DATA *ch)
 {
@@ -161,17 +163,16 @@ void do_clean(CHAR_DATA *ch, char *argument)
 
 void clean_mud()
 {
-	char buf[MSL], tbuf[MSL];
-	int cres = 0;
-	CRow row;
-	CSQLInterface nSQL;
+	char tbuf[MSL];
 	DESCRIPTOR_DATA *d;
 
-	DbConnection riftCore = nSQL.Settings.GetDbConnection("rift");
-	if (!nSQL.StartSQLServer(riftCore.Host.c_str(),
-		riftCore.Db.c_str(), riftCore.User.c_str(), riftCore.Pwd.c_str()))
+	// Bail if either persistent connection is down (clean_mud touches both the
+	// `rift_core` players table via RS.Db and the `rift` prune tables via
+	// RS.DbRift). Preserves the legacy connect-or-return guard without the
+	// redundant per-call reconnect it used to do.
+	if (!RS.Db.IsValid() || !RS.DbRift.IsValid())
 	{
-		RS.Logger.Error("clean_mud: failed to establish a database connection.");
+		RS.Logger.Error("clean_mud: database connection is not available.");
 		return;
 	}
 
@@ -197,17 +198,21 @@ void clean_mud()
 	if (removedPklogs > 0)
 		RS.Logger.Info("clean_mud: removed {} old pklogs.", removedPklogs);
 
-	// autodelete...
-	cres = RS.SQL.Select("name FROM players WHERE lastlogin + 2592000 < %ld", current_time);
+	auto players = PlayerRepository(RS.Db);
 
-	if (cres)
+	// autodelete...
+	auto inactiveNames = players.FindNamesInactiveSince(current_time - 2592000);
+
+	if (!inactiveNames.empty())
 	{
 		d = new_descriptor();
 
-		while (!RS.SQL.End())
+		// Names are materialised up-front, so delete_char() below can safely
+		// mutate the players table mid-loop (the legacy code iterated a live
+		// RS.SQL cursor while delete_char clobbered it -- a latent bug).
+		for (const auto &pname : inactiveNames)
 		{
-			row = RS.SQL.GetRow();
-			strcpy(&tbuf[0], row[0]);
+			strcpy(&tbuf[0], pname.c_str());
 
 			if (!load_char_obj(d, tbuf))
 			{
@@ -227,20 +232,19 @@ void clean_mud()
 	}
 
 	// compare db to pfiles
-	cres = RS.SQL.Select("name FROM players");
+	auto allNames = players.FindAllNames();
 
-	if (cres)
+	if (!allNames.empty())
 	{
 		d = new_descriptor();
 
-		while (!RS.SQL.End())
+		for (const auto &pname : allNames)
 		{
-			row = RS.SQL.GetRow();
-			strcpy(&tbuf[0], row[0]);
+			strcpy(&tbuf[0], pname.c_str());
 
 			if (!load_char_obj(d, tbuf))
 			{
-				nSQL.Delete("players WHERE name = '%s'", row[0]);
+				players.RemoveByName(pname);
 				RS.Logger.Info("Deleting player...");
 			}
 
@@ -737,10 +741,13 @@ void delete_char(char *name, bool save_pfile)
 			RS.Logger.Warn("Failed to remove [{}]", pfilePath);
 	}
 
-	RS.SQL.Delete("players WHERE name='%s'", name);
+	auto players = PlayerRepository(RS.Db);
+	auto removed = players.RemoveByName(name);
+	if (removed > 0)
+		RS.Logger.Info("Removed player [{}]", name);
 
 	auto pklogs = PkLogRepository(RS.DbRift);
-	auto removed = pklogs.RemoveByKiller(name);
+	removed = pklogs.RemoveByKiller(name);
 	if (removed > 0)
 		RS.Logger.Info("Removed {} pklog records for [{}]", removed, name);
 
@@ -854,11 +861,7 @@ MYSQL *open_conn(void)
 
 void plug_graveyard(CHAR_DATA *ch, int type)
 {
-	int minlevel = 30, day, tid, i, max;
-	char buf[MSL], name[MSL], message[MSL], message_date[MSL], stid[MSL];
-	char align[MSL], ethos[MSL], type_death[MSL], message_death[MSL];
-	char *suf;
-	char ntime[MSL], year[MSL], month[MSL], dom[MSL], time[MSL], cur_date[MSL], unique[MSL];
+	int minlevel = 30, day, i;
 
 	// TODO: Left the message building code here for now in case we decide to reviive posting to the forum or elsewhere.
 
@@ -867,6 +870,7 @@ void plug_graveyard(CHAR_DATA *ch, int type)
 
 	day = time_info.day + 1;
 
+	std::string suf;
 	if (day > 4 && day < 20)
 		suf = "th";
 	else if (day % 10 == 1)
@@ -878,39 +882,46 @@ void plug_graveyard(CHAR_DATA *ch, int type)
 	else
 		suf = "th";
 
-	sprintf(message_date, "On the Day %s, %d%s of the Month %s, in the Year %d,",
+	std::string message_date = fmt::sprintf("On the Day %s, %d%s of the Month %s, in the Year %d,",
 		day_name[day % 6],
 		day,
 		suf,
 		month_name[time_info.month],
 		time_info.year);
 
+	std::string type_death, message_death;
 	if (type == 1)
 	{
-		sprintf(type_death, "DEL");
-		sprintf(message_death, "took %s own life.", (ch->sex == 2) ? "her" : "his");
+		type_death = "DEL";
+		message_death = fmt::sprintf("took %s own life.", (ch->sex == 2) ? "her" : "his");
 	}
 	else if (type == 2)
 	{
-		sprintf(type_death, "CON");
-		sprintf(message_death, "perished in battle.");
+		type_death = "CON";
+		message_death = "perished in battle.";
 	}
 	else if (type == 3)
 	{
-		sprintf(type_death, "AGE");
-		sprintf(message_death, "perished of old age.");
+		type_death = "AGE";
+		message_death = "perished of old age.";
 	}
 	else
 	{
-		sprintf(type_death, "AUTO");
-		sprintf(message_death, "perished in %s sleep.", (ch->sex == 2) ? "her" : "his");
+		type_death = "AUTO";
+		message_death = fmt::sprintf("perished in %s sleep.", (ch->sex == 2) ? "her" : "his");
 	}
 
-	strftime(month, 200, "%m", localtime(&current_time));
-	strftime(dom, 200, "%d", localtime(&current_time));
-	strftime(time, 200, "%H:%M:%S", localtime(&current_time));
-	strftime(ntime, 200, "%H%M%S", localtime(&current_time));
-	strftime(year, 200, "%Y", localtime(&current_time));
+	auto strf_time = [](const char *format) {
+		char buf[64];
+		strftime(buf, sizeof(buf), format, localtime(&current_time));
+		return std::string(buf);
+	};
+
+	std::string month = strf_time("%m");
+	std::string dom = strf_time("%d");
+	std::string time_str = strf_time("%H:%M:%S");
+	std::string ntime = strf_time("%H%M%S");
+	std::string year = strf_time("%Y");
 
 	// TODO: Possibly add this back in if we decide to keep the forum posting functionality.
 	//  For now, it's commented out because the forum database is non-existent.
@@ -918,46 +929,44 @@ void plug_graveyard(CHAR_DATA *ch, int type)
 
 	// if (qrow[0] != nullptr)
 	// {
-	// 	sprintf(stid, "%15.0f", (float)(atoi(qrow[0]) + 1));
-
-	// 	for (i = 0; stid[i] != '\0'; i++)
-	// 	{
-	// 		if (stid[i] == ' ')
-	// 			stid[i] = '0';
-	// 	}
+	// 	stid = fmt::sprintf("%15.0f", (float)(atoi(qrow[0]) + 1));
+	// 	std::replace(stid.begin(), stid.end(), ' ', '0');
 	// }
 	// else
 	// {
-		sprintf(stid, "000000000000000");
+		std::string stid = "000000000000000";
 	//}
 
-	sprintf(cur_date, "%s/%s/%s %s", month, dom, year, time);
-	sprintf(unique, "%s%s%s%s", year, month, dom, ntime);
-	sprintf(name, "(%s) %s%s", type_death, ch->true_name, ch->pcdata->title);
+	std::string cur_date = fmt::sprintf("%s/%s/%s %s", month, dom, year, time_str);
+	std::string unique = fmt::sprintf("%s%s%s%s", year, month, dom, ntime);
+	std::string name = fmt::sprintf("(%s) %s%s", type_death, (const char *)ch->true_name, ch->pcdata->title);
 	if (ch->pcdata->extitle != nullptr)
-		sprintf(name, "%s%s", name, ch->pcdata->extitle);
+		name += ch->pcdata->extitle;
 
 	/* Message */
+	std::string align;
 	if (ch->alignment == 1000)
-		sprintf(align, "Good");
+		align = "Good";
 	else if (ch->alignment == 0)
-		sprintf(align, "Neutral");
+		align = "Neutral";
 	else
-		sprintf(align, "Evil");
-	if (ch->pcdata->ethos == 1000)
-		sprintf(ethos, "Lawful");
-	else if (ch->pcdata->ethos == 0)
-		sprintf(ethos, "Neutral");
-	else
-		sprintf(ethos, "Chaotic");
+		align = "Evil";
 
-	sprintf(message, "%s %s %s\n\r%s%s", message_date, ch->true_name, message_death, ch->true_name, ch->pcdata->title);
+	std::string ethos;
+	if (ch->pcdata->ethos == 1000)
+		ethos = "Lawful";
+	else if (ch->pcdata->ethos == 0)
+		ethos = "Neutral";
+	else
+		ethos = "Chaotic";
+
+	std::string message = fmt::sprintf("%s %s %s\n\r%s%s",
+		message_date, (const char *)ch->true_name, message_death, (const char *)ch->true_name, ch->pcdata->title);
 
 	if (ch->pcdata->extitle != nullptr)
-		sprintf(message, "%s%s", message, ch->pcdata->extitle);
+		message += ch->pcdata->extitle;
 
-	sprintf(message, "%s\rLevel: %d\rAge: %d %s years old, born in the Caelumaedani year %d.\rHours: %d\rRace: %s\rSex: %s\rClass: %s\r",
-		message,
+	message += fmt::sprintf("\rLevel: %d\rAge: %d %s years old, born in the Caelumaedani year %d.\rHours: %d\rRace: %s\rSex: %s\rClass: %s\r",
 		ch->level,
 		get_age(ch),
 		pc_race_table[ch->race].race_time,
@@ -969,41 +978,40 @@ void plug_graveyard(CHAR_DATA *ch, int type)
 
 	if (ch->Class()->GetIndex() == CLASS_WARRIOR)
 	{
-		sprintf(message, "%sStyle Specializations: ", message);
+		message += "Style Specializations: ";
 
 		for (i = 1; i < MAX_STYLE; i++)
 		{
 			if (IS_SET(ch->pcdata->styles, style_table[i].bit))
 			{
-				sprintf(message, "%s%s ", message, style_table[i].name);
+				message += fmt::sprintf("%s ", style_table[i].name);
 			}
 		}
 
-		sprintf(message, "%s\r", message);
+		message += "\r";
 	}
 	else if (ch->Class()->GetIndex() == CLASS_SORCERER)
 	{
-		sprintf(message, "%s%s's major elemental focus was %s and %s para-elemental focus was %s.\r",
-			message,
-			ch->true_name,
+		message += fmt::sprintf("%s's major elemental focus was %s and %s para-elemental focus was %s.\r",
+			(const char *)ch->true_name,
 			sphere_table[ch->pcdata->ele_major].name,
 			(ch->sex == 2) ? "her" : "his",
 			sphere_table[ch->pcdata->ele_para].name);
 	}
 
-	sprintf(message, "%sAlignment: %s\rEthos: %s", message, align, ethos);
+	message += fmt::sprintf("Alignment: %s\rEthos: %s", align, ethos);
 
 	if (ch->cabal)
 	{
-		sprintf(message, "%s\rCabal: %s, %s", message, cabal_table[ch->cabal].who_name, cabal_table[ch->cabal].long_name);
+		message += fmt::sprintf("\rCabal: %s, %s", cabal_table[ch->cabal].who_name, cabal_table[ch->cabal].long_name);
 		if (ch->cabal == CABAL_HORDE && ch->pcdata->tribe)
-			sprintf(message, "%s, of the %s Tribe", message, palloc_string(capitalize(tribe_table[ch->pcdata->tribe].name)));
+			message += fmt::sprintf(", of the %s Tribe", palloc_string(capitalize(tribe_table[ch->pcdata->tribe].name)));
 	}
 
 	if ((ch->pcdata->frags[PK_KILLS] + ch->pcdata->fragged) > 0)
-		sprintf(message, "%s\rPK Ratio: %.2f%%", message, (ch->pcdata->frags[PK_KILLS] * 100 / (ch->pcdata->frags[PK_KILLS] + ch->pcdata->fragged)));
+		message += fmt::sprintf("\rPK Ratio: %.2f%%", (double)(ch->pcdata->frags[PK_KILLS] * 100 / (ch->pcdata->frags[PK_KILLS] + ch->pcdata->fragged)));
 	else
-		sprintf(message, "%s\rPK Ratio: 0%%", message);
+		message += "\rPK Ratio: 0%";
 
 	Graveyard grave;
 	grave.Pname = ch->true_name;
@@ -1024,12 +1032,12 @@ void plug_graveyard(CHAR_DATA *ch, int type)
 
 	// TODO: Possibly add this back in if we decide to keep the forum posting functionality.
 	//  For now, it's commented out because the forum database is non-existent.
-	// sprintf(buf,
+	// auto buf = fmt::sprintf(
 	// 		"insert into gabe20010201051916(zposter,zposter_email,zsubject,zmessage,zdatetime,zaddress,zunique,"\
 	// 		"zthreadid,zdelete,zmod) values('Death_Wizard','immortals@riftshadow.com','%s','%s',"\
 	// 		"'%s','localhost',%s,'%s',0,'Death_Wizard')",
 	// 		name, message, cur_date, unique, stid);
-	// one_fquery(buf);
+	// one_fquery(buf.c_str());
 }
 
 void do_pktrack(CHAR_DATA *ch, char *argument)

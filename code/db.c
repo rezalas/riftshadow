@@ -62,6 +62,7 @@
 #include "misc.h"
 #include "dioextra.h"
 #include "./repositories/noterepository.h"
+#include "./repositories/playerrepository.h"
 #include "chardef.h"
 #include "const.h"
 #include "utility.h"
@@ -686,32 +687,11 @@ char *munch(char *str)
 
 void update_db_gold()
 {
-	char buf[MSL];
-	CRow row;
-	int cres;
+	auto players = PlayerRepository(RS.Db);
 
 	// Changed from > 15 to > 30 to tighten the gold up.
-	cres = RS.SQL.Select("COUNT(gold) FROM players WHERE level > 30");
-	if (cres)
-	{
-		row = RS.SQL.GetRow();
-		num_pfiles = atoi(row[0]);
-	}
-	else
-	{
-		num_pfiles = 1;
-	}
-
-	cres = RS.SQL.Select("SUM(gold) FROM players");
-	if (cres)
-	{
-		row = RS.SQL.GetRow();
-		player_gold = atoll(row[0]);
-	}
-	else
-	{
-		player_gold = 1;
-	}
+	num_pfiles = players.CountGoldAboveLevel(30);
+	player_gold = players.SumGold();
 
 	total_gold = gold_constant * num_pfiles;
 }

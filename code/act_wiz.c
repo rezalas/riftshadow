@@ -75,6 +75,7 @@
 #include "./repositories/inductionrepository.h"
 #include "./repositories/bugrepository.h"
 #include "./repositories/sitetrackerrepository.h"
+#include "./repositories/playerrepository.h"
 #include "./include/spdlog/fmt/bundled/format.h"
 #include "./include/spdlog/fmt/bundled/printf.h"
 
@@ -272,7 +273,10 @@ void do_leader(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	RS.SQL.Update("players SET induct=%d WHERE name = '%s'", ch->pcdata->induct, ch->true_name);
+	auto players = PlayerRepository(RS.Db);
+	auto inducted = players.SetInduct(ch->true_name, ch->pcdata->induct);
+	if (!inducted)
+		RS.Logger.Warn("Failed to update induction status for [{}]", ch->true_name);
 }
 
 void do_smite(CHAR_DATA *ch, char *argument)
@@ -4114,7 +4118,7 @@ void do_advance(CHAR_DATA *ch, char *argument)
 	char arg1[MAX_INPUT_LENGTH];
 	char arg2[MAX_INPUT_LENGTH];
 	CHAR_DATA *victim;
-	int level, res = 0;
+	int level;
 	int iLevel;
 
 	argument = one_argument(argument, arg1);
@@ -4199,7 +4203,12 @@ void do_advance(CHAR_DATA *ch, char *argument)
 	send_to_char(buf, victim);
 
 	if (victim->level >= 52)
-		res = RS.SQL.Delete("players WHERE name = '%s'", victim->true_name);
+	{
+		auto players = PlayerRepository(RS.Db);
+		auto removed = players.RemoveByName(victim->true_name);
+		if (!removed)
+			RS.Logger.Warn("Failed to remove player [{}]", victim->true_name);
+	}
 
 	victim->exp = exp_per_level(victim) * std::max(1, (int)victim->level);
 	save_char_obj(victim);

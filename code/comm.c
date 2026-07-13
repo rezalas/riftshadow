@@ -68,6 +68,7 @@
 #include "mspec.h"
 #include "newmem.h"
 #include "handler.h"
+#include "./repositories/playerrepository.h"
 #include "characterClasses/sorcerer.h"
 #include "act_wiz.h"
 #include "alias.h"
@@ -1446,7 +1447,6 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
 	char buffile[MAX_STRING_LENGTH];
 	int hometown;
 	int ele_num = -1, gn = -1;
-	int cres = 0;
 
 	while (isspace(*argument))
 	{
@@ -2711,16 +2711,23 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
 				zero_vector(ch->pcdata->ele_sphere);
 
 				ch->pcdata->tribe = 0;
-				cres = RS.SQL.Insert("players VALUES('%s',%ld,%d,%d,%d,%d,%d,%d,%d,%d,0,0,0,0,0,0)",
-					ch->true_name,
-					ch->logon,
-					ch->level,
-					ch->Class()->GetIndex(),
-					ch->race,
-					ch->cabal,
-					ch->sex,
-					(int)(ch->played + current_time - ch->logon) / 3600,
-					ch->alignment, ch->pcdata->ethos);
+
+				Player newPlayer;
+				newPlayer.name = ch->true_name;
+				newPlayer.lastlogin = (int)ch->logon;
+				newPlayer.level = ch->level;
+				newPlayer.class_ = ch->Class()->GetIndex();
+				newPlayer.race = ch->race;
+				newPlayer.cabal = ch->cabal;
+				newPlayer.sex = ch->sex;
+				newPlayer.hours = (int)(ch->played + current_time - ch->logon) / 3600;
+				newPlayer.align = ch->alignment;
+				newPlayer.ethos = ch->pcdata->ethos;
+
+				auto players = PlayerRepository(RS.Db);
+				auto added = players.Add(newPlayer);
+				if (!added)
+					RS.Logger.Warn("Failed to add new player [{}]", newPlayer.name);
 
 				sprintf(buf, "the %s", title_table[ch->Class()->GetIndex()][ch->level][ch->sex == SEX_FEMALE ? 1 : 0]);
 				set_title(ch, buf);
@@ -2818,16 +2825,12 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
 				break;
 			}
 
-			sprintf(buf, "players SET logins=logins+1, lastlogin=%d", (int)ch->logon);
-			/*	if(ch->cabal>0)
-				{
-					if(cabal_down_new(ch,ch->cabal,false))
-						strcat(buf,", no_clogins=no_clogins+1");
-					else
-						strcat(buf,", c_logins=c_logins+1");
-				} */
-			buffer = fmt::format("{} WHERE name = '{}'", buf, ch->true_name);
-			cres = RS.SQL.Update(buffer.c_str());
+			{
+				auto players = PlayerRepository(RS.Db);
+				auto recorded = players.RecordLogin(ch->true_name, (int)ch->logon);
+				if (!recorded)
+					RS.Logger.Warn("Failed to record login for [{}]", ch->true_name);
+			}
 
 			if (ch->pet != nullptr)
 			{
@@ -3527,7 +3530,6 @@ void do_rename(CHAR_DATA *ch, char *argument)
 {
 	char old_name[MAX_INPUT_LENGTH], new_name[MAX_INPUT_LENGTH], strsave[MAX_INPUT_LENGTH], pbuf[MSL], *cname;
 	CHAR_DATA *victim;
-	int cres = 0;
 
 	argument = one_argument(argument, old_name);
 	one_argument(argument, new_name);
@@ -3596,7 +3598,11 @@ void do_rename(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	cres = RS.SQL.Update("players SET name = '%s' WHERE name = '%s' LIMIT 1", capitalize(new_name), victim->true_name);
+	auto players = PlayerRepository(RS.Db);
+	auto renamed = players.Rename(victim->true_name, capitalize(new_name));
+	if (!renamed)
+		RS.Logger.Warn("Failed to rename player [{}]", victim->true_name);
+
 	cname = palloc_string(victim->true_name);
 
 	free_pstring(victim->name);

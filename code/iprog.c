@@ -62,6 +62,7 @@
 #include "act_info.h"
 #include "comm.h"
 #include "./repositories/inductionrepository.h"
+#include "./repositories/playerrepository.h"
 
 const struct improg_type iprog_table[] = {
 	{"get_prog", "get_prog_bad_idea", (void *)get_prog_bad_idea, "None"},
@@ -1706,11 +1707,10 @@ void verb_prog_sidhe_climb_vine(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 
 void verb_prog_listen_conversation(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 {
-	int i = 0, rand, inc = 2, tc = 0, cres = 0, ccount[MAX_CABAL];
+	int i = 0, rand, inc = 2, tc = 0, ccount[MAX_CABAL];
 	CHAR_DATA *fat, *minotaur, *violet;
 	char buf[MSL];
 	std::string temp;
-	CRow row;
 
 	rand = dice(1, 4);
 	if ((violet = get_char_room(ch, "violet")) == nullptr
@@ -1732,12 +1732,12 @@ void verb_prog_listen_conversation(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 		mprog_say(inc * 3, "It's true, I swear it!", fat, ch);
 		mprog_say(inc * 4, "That story gets better every time you tell it, Boll.", violet, ch);
 
-		cres = RS.SQL.Select("name FROM players ORDER BY pks DESC LIMIT 1");
+		auto players = PlayerRepository(RS.Db);
+		auto topPks = players.FindTopByPks(1);
 
-		if (cres)
+		if (!topPks.empty())
 		{
-			row = RS.SQL.GetRow();
-			temp = std::string(row[0]);
+			temp = topPks[0];
 			RS.Queue.AddToQueue(inc * 5, "verb_prog_listen_conversation", "say_to_queue", say_to_queue, fat, ch, "Just do yourself a favor, and watch out for $t.", temp);
 		}
 	}
