@@ -67,6 +67,7 @@
 #include "./include/spdlog/fmt/bundled/format.h"
 #include "./include/spdlog/fmt/bundled/printf.h"
 #include "./repositories/loginrepository.h"
+#include "./repositories/pklogrepository.h"
 
 /* RT code to delete yourself */
 void do_delet(CHAR_DATA *ch, char *argument)
@@ -2730,18 +2731,20 @@ void temp_death_log(CHAR_DATA *killer, CHAR_DATA *dead)
 	if (is_npc(dead) || is_npc(killer))
 		return;
 
-	char query[MAX_STRING_LENGTH];
-	sprintf(query, "INSERT INTO pklogs VALUES('%s', %d, '%s', %d, '%s', '%s (%d)',%ld)",
-			killer->true_name,
-			killer->cabal,
-			dead->true_name,
-			dead->cabal,
-			log_time(),
-			escape_string(get_room_name(dead->in_room)),
-			dead->in_room->vnum,
-			current_time);
+	PkLog pklog;
+	pklog.killer = killer->true_name;
+	pklog.killercabal = killer->cabal;
+	pklog.victim = dead->true_name;
+	pklog.victimcabal = dead->cabal;
+	pklog.date = log_time();
+	pklog.room = fmt::format("{} ({})", get_room_name(dead->in_room), dead->in_room->vnum);
+	pklog.ctime = current_time;
 
-	one_query(query);
+	auto pklogs = PkLogRepository(RS.DbRift);
+	auto added = pklogs.Add(pklog);
+
+	if (!added)
+		RS.Logger.Warn("Failed to add PK log for {}.", dead->true_name);
 }
 
 void mob_death_log(CHAR_DATA *killer, CHAR_DATA *dead)

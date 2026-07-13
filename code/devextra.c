@@ -43,6 +43,7 @@
 #include "./repositories/noterepository.h"
 #include "./repositories/offeringrepository.h"
 #include "./repositories/loginrepository.h"
+#include "./repositories/pklogrepository.h"
 #include "./include/spdlog/fmt/bundled/format.h"
 
 bool IS_IMP(CHAR_DATA *ch)
@@ -195,8 +196,10 @@ void clean_mud()
 	if (removed > 0)
 		RS.Logger.Info("clean_mud: removed {} old offerings.", removed);
 
-	sprintf(buf, "DELETE FROM pklogs WHERE ctime + 5184000 < %ld", current_time);
-	one_query(buf);
+	auto pklogs = PkLogRepository(RS.DbRift);
+	auto removedPklogs = pklogs.RemoveOlderThan(current_time - 5184000);
+	if (removedPklogs > 0)
+		RS.Logger.Info("clean_mud: removed {} old pklogs.", removedPklogs);
 
 	// autodelete...
 	cres = RS.SQL.Select("name FROM players WHERE lastlogin + 2592000 < %ld", current_time);
@@ -767,12 +770,13 @@ void delete_char(char *name, bool save_pfile)
 
 	RS.SQL.Delete("players WHERE name='%s'", name);
 
-	char query[MSL];
-	sprintf(query, "DELETE FROM pklogs WHERE killer='%s'", name);
-	one_query(query);
+	auto pklogs = PkLogRepository(RS.DbRift);
+	auto removed = pklogs.RemoveByKiller(name);
+	if (removed > 0)
+		RS.Logger.Info("Removed {} pklog records for [{}]", removed, name);
 
 	auto thefts = TheftRepository(RS.Db);
-	auto removed =thefts.RemoveByChar(name);
+	removed = thefts.RemoveByChar(name);
 	if (removed > 0)
 		RS.Logger.Info("Removed {} theft records for [{}]", removed, name);
 
@@ -1082,13 +1086,8 @@ void plug_graveyard(CHAR_DATA *ch, int type)
 
 void do_pktrack(CHAR_DATA *ch, char *argument)
 {
-	MYSQL *conn;
-	MYSQL_ROW row;
-	MYSQL_RES *res_set;
-	BUFFER *buffer;
-	char arg1[MSL], qpart[MSL], buf[MSL];
+	char arg1[MSL], buf[MSL];
 	int i = 0;
-	bool found= false;
 
 	if (!str_cmp(argument, ""))
 	{
@@ -1096,72 +1095,51 @@ void do_pktrack(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	buffer = new_buf();
 	argument = one_argument(argument, arg1);
 
+	PkLogField field;
 	if (!str_cmp(arg1, "wins"))
-	{
-		sprintf(qpart, "killer RLIKE '%s'", argument);
-	}
+		field = PkLogField::Killer;
 	else if (!str_cmp(arg1, "losses"))
-	{
-		sprintf(qpart, "victim RLIKE '%s'", argument);
-	}
+		field = PkLogField::Victim;
 	else if (!str_cmp(arg1, "all"))
-	{
-		sprintf(qpart, "killer RLIKE '%s' OR victim RLIKE '%s'", argument, argument);
-	}
+		field = PkLogField::KillerOrVictim;
 	else if (!str_cmp(arg1, "date"))
-	{
-		sprintf(qpart, "date RLIKE '%s'", argument);
-	}
+		field = PkLogField::Date;
 	else if (!str_cmp(arg1, "location"))
-	{
-		sprintf(qpart, "room RLIKE '%s'", argument);
-	}
+		field = PkLogField::Room;
 	else
 	{
 		send_to_char("Invalid option.\n\r", ch);
 		return;
 	}
 
-	auto query = fmt::format("SELECT * FROM pklogs WHERE {}", qpart);
-	conn = open_conn();
-	mysql_query(conn, query.c_str());
-	res_set = mysql_store_result(conn);
+	auto pklogs = PkLogRepository(RS.DbRift);
+	auto results = pklogs.Search(field, argument);
 
-	if (res_set == nullptr && mysql_field_count(conn) > 0)
+	if (results.empty())
 	{
-		send_to_char("Error accessing results.\n\r", ch);
-	}
-	else if (res_set)
-	{
-		while ((row = mysql_fetch_row(res_set)) != nullptr)
-		{
-			sprintf(buf, "%3d) %s(%s) killed %s(%s) at %s on %s\n\r",
-				++i,
-				row[0],
-				cabal_table[atoi(row[1])].name,
-				row[2],
-				cabal_table[atoi(row[3])].name, row[5],
-				row[4]);
-
-			add_buf(buffer, buf);
-			found = true;
-		}
-
-		if (!found)
-		{
-			send_to_char("No matching results found.\n\r", ch);
-			return;
-		}
-
-		mysql_free_result(res_set);
-		page_to_char(buf_string(buffer), ch);
-		free_buf(buffer);
+		send_to_char("No matching results found.\n\r", ch);
+		return;
 	}
 
-	mysql_close(conn);
+	BUFFER *buffer = new_buf();
+	for (auto &pklog : results)
+	{
+		sprintf(buf, "%3d) %s(%s) killed %s(%s) at %s on %s\n\r",
+			++i,
+			pklog.killer.c_str(),
+			cabal_table[pklog.killercabal].name,
+			pklog.victim.c_str(),
+			cabal_table[pklog.victimcabal].name,
+			pklog.room.c_str(),
+			pklog.date.c_str());
+
+		add_buf(buffer, buf);
+	}
+
+	page_to_char(buf_string(buffer), ch);
+	free_buf(buffer);
 }
 
 bool trusts(CHAR_DATA *ch, CHAR_DATA *victim)
