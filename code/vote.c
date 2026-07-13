@@ -1,3 +1,4 @@
+#include <utility>
 #include "vote.h"
 #include "rift.h"
 #include "db.h"
@@ -7,94 +8,85 @@
 #include "devextra.h"
 #include "newmem.h"
 #include "utility.h"
+#include "./repositories/voterepository.h"
 #include "./include/spdlog/fmt/bundled/format.h"
 #include "./include/spdlog/fmt/bundled/printf.h"
 
-bool sort_votes(char *hold[], int *holdi, int cabal)
+bool sort_votes(std::string hold[], int *holdi, int cabal)
 {
-	MYSQL_RES *res;
-	MYSQL_ROW row;
-	char buf[MSL];
-	int j, m, i;
+	int j, m;
 	bool added = false;
-	bool retVal = true;
-	char *temp;
 	int tempi;
 
 	auto hold_size = 200; //std::size(hold);
 	auto holdi_size = 200; //std::size(holdi);
-	// TODO: make hold and holdi into a std::map<char*, int>
+	// TODO: make hold and holdi into a std::map<std::string, int>
 	// NOTE: calculations assume both arrays are the same length
 	if(hold_size != holdi_size)
 		return false;
 
-	sprintf(buf, "SELECT vote_for FROM votes WHERE cabal=%d", cabal);
+	auto votes = VoteRepository(RS.DbRift);
+	auto rows = votes.FindByCabal(cabal);
 
-	res = one_query_res(buf);
-	i = mysql_num_rows(res);
+	if (rows.empty())
+		return false;
 
-	if (i > 0)
+	for (const auto &vote : rows)
 	{
-		while ((row = mysql_fetch_row(res)) != nullptr)
+		added = false;
+
+		for (j = 0; j < hold_size; j++)
 		{
-			added = false;
+			if (hold[j].empty())
+				break;
 
-			for (j = 0; j < hold_size; j++)
+			if (!str_cmp(hold[j].c_str(), vote.vote_for.c_str()))
 			{
-				if (hold[j] == nullptr)
-					break;
-
-				if (!str_cmp(hold[j], row[0]))
-				{
-					added = true;
-					holdi[j]++;
-					break;
-				}
-			}
-
-			if (!added)
-			{
-				hold[j] = row[0];
-				holdi[j] = 1;
+				added = true;
+				holdi[j]++;
+				break;
 			}
 		}
 
-		for (j = 0; j < hold_size ; j++)
+		if (!added)
 		{
-			for (m = 0; m < hold_size - j; m++)
-			{
-				if (!holdi[m] || hold[m] == nullptr)
-					continue;
+			hold[j] = vote.vote_for;
+			holdi[j] = 1;
+		}
+	}
 
-				if (holdi[m] < holdi[m + 1])
-				{
-					tempi = holdi[m];
-					holdi[m] = holdi[m + 1];
-					holdi[m + 1] = tempi;
-					temp = hold[m];
-					hold[m] = hold[m + 1];
-					hold[m + 1] = temp;
-				}
+	// TODO: pre-existing off-by-one: the inner bound should be `m < hold_size - j - 1`.
+	// As written, j==0 lets m reach hold_size-1, so `hold[m + 1]`/`holdi[m + 1]` below
+	// touch index hold_size (one past the end). Guarded-unreachable in practice -- the
+	// `!holdi[m]` check continues first unless all 200 slots hold distinct candidates,
+	// which a cabal poll never produces -- so left as-is here. Fix belongs with the
+	// std::map refactor the TODO above calls for, not this DB migration.
+	for (j = 0; j < hold_size ; j++)
+	{
+		for (m = 0; m < hold_size - j; m++)
+		{
+			if (!holdi[m] || hold[m].empty())
+				continue;
+
+			if (holdi[m] < holdi[m + 1])
+			{
+				tempi = holdi[m];
+				holdi[m] = holdi[m + 1];
+				holdi[m + 1] = tempi;
+				std::swap(hold[m], hold[m + 1]);
 			}
 		}
 	}
-	else
-	{
-		retVal = false;
-	}
 
-	mysql_free_result(res);
-	return retVal;
+	return true;
 }
 
 void do_listvotes(CHAR_DATA *ch, char *argument)
 {
 	char buf[MSL], arg1[MSL], time[MSL], arg2[MSL];
-	MYSQL_RES *res;
-	MYSQL_ROW row;
-	char *hold[200];
+	std::string hold[200];
 	int holdi[200];
-	int count = 0, cabal, i, j;
+	int count = 0, cabal, j;
 	time_t test;
 
 	argument = one_argument(argument, arg1);
@@ -108,28 +100,26 @@ void do_listvotes(CHAR_DATA *ch, char *argument)
 			return;
 		}
 
-		sprintf(buf, "SELECT * FROM votes WHERE cabal=%d", cabal);
-		res = one_query_res(buf);
-		i = mysql_num_rows(res);
+		auto votes = VoteRepository(RS.DbRift);
+		auto rows = votes.FindByCabal(cabal);
 
-		if (i > 0)
+		if (!rows.empty())
 		{
 			count = 0;
 
-			while ((row = mysql_fetch_row(res)) != nullptr)
+			for (const auto &vote : rows)
 			{
 				count++;
-				test = (time_t)atol(row[3]);
+				test = (time_t)vote.time;
 
 				strftime(time, 200, "%m-%d-%Y %H:%M:%S", localtime(&test));
-				auto buffer = fmt::format("\t{}: {} votes for {} (at {} from {})\n\r", std::to_string(count), row[0], row[1], time, row[4]); //TODO: change the rest of the sprintf calls to format
+				auto buffer = fmt::format("\t{}: {} votes for {} (at {} from {})\n\r", std::to_string(count), vote.voter, vote.vote_for, time, vote.host); //TODO: change the rest of the sprintf calls to format
 				send_to_char(buffer.c_str(), ch);
 			}
 		}
 		else
 		{
 			send_to_char("No valid votes to list.\n\r", ch);
-			mysql_free_result(res);
 		}
 	}
 	else
@@ -139,7 +129,7 @@ void do_listvotes(CHAR_DATA *ch, char *argument)
 		auto hold_size = std::size(hold);
 		for (j = 0; j < hold_size; j++)
 		{
-			hold[j] = nullptr;
+			hold[j].clear();
 			holdi[j] = 0;
 		}
 
@@ -161,11 +151,11 @@ void do_listvotes(CHAR_DATA *ch, char *argument)
 		// NOTE: hold and holdi are the same size.
 		for (j = 0; j < hold_size; j++)
 		{
-			if (hold[j] == nullptr)
+			if (hold[j].empty())
 				continue;
 
 			count++;
-			sprintf(buf, "\t%d: %s has %d votes.\n\r", count, hold[j], holdi[j]);
+			sprintf(buf, "\t%d: %s has %d votes.\n\r", count, hold[j].c_str(), holdi[j]);
 			send_to_char(buf, ch);
 		}
 	}
@@ -173,13 +163,10 @@ void do_listvotes(CHAR_DATA *ch, char *argument)
 
 void do_vote(CHAR_DATA *ch, char *argument)
 {
-	char arg1[MSL], buf[MSL], *word;
-	char *escape;
-	int cabal = 0, cvote = 0;
+	char arg1[MSL], *word;
+	int cabal = 0;
 	FILE *fp;
 	CHAR_DATA *victim;
-	MYSQL_RES *res;
-	MYSQL_ROW row;
 	bool end= false, fMatch= false;
 
 	if (is_npc(ch))
@@ -257,41 +244,26 @@ void do_vote(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	sprintf(buf, "SELECT COUNT(voter) FROM votes WHERE voter='%s'", ch->true_name);
-	res = one_query_res(buf);
-	row = mysql_fetch_row(res);
+	auto votes = VoteRepository(RS.DbRift);
+	auto existing = votes.FindByVoter(ch->true_name);
 
-	cvote = atoi(row[0]);
-	escape = ch->pcdata->host
-		? escape_string(ch->pcdata->host)
-		: escape_string(ch->desc->host);
-
-	if (cvote > 0)
+	if (!existing.empty())
 	{
-		mysql_free_result(res);
-		sprintf(buf, "SELECT vote_for FROM votes WHERE voter='%s'", ch->true_name);
-		res = one_query_res(buf);
-
-		if (res)
-		{
-			row = mysql_fetch_row(res);
-			sprintf(buf, "You have already voted for %s during this election.\n\r", row[0]);
-			send_to_char(buf, ch);
-		}
-		else
-		{
-			mysql_free_result(res);
-			return;
-		}
+		auto buffer = fmt::format("You have already voted for {} during this election.\n\r", existing.front().vote_for);
+		send_to_char(buffer.c_str(), ch);
 	}
 	else
 	{
-		auto buffer = fmt::sprintf("INSERT INTO votes VALUES('%s','%s', %d, %ld, '%s')", ch->true_name, arg1, ch->cabal, current_time, escape); //TODO: change the rest of the sprintf calls to format
-		one_query(buffer.data());
+		Vote vote;
+		vote.voter = ch->true_name;
+		vote.vote_for = arg1;
+		vote.cabal = ch->cabal;
+		vote.time = current_time;
+		vote.host = ch->pcdata->host ? ch->pcdata->host : ch->desc->host;
 
-		buffer= fmt::format("You have placed your vote for {}.\n\r", (!str_cmp(arg1, ch->true_name)) ? "yourself" : arg1);
+		votes.Add(vote);
+
+		auto buffer = fmt::format("You have placed your vote for {}.\n\r", (!str_cmp(arg1, ch->true_name)) ? "yourself" : arg1);
 		send_to_char(buffer.c_str(), ch);
 	}
-
-	mysql_free_result(res);
 }

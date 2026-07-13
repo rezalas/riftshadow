@@ -11,6 +11,7 @@ set(RIFT_SOURCE config.cpp
 	repositories/banrepository.c
 	repositories/theftrepository.c
 	repositories/inductionrepository.c
+	repositories/voterepository.c
 	bitvector.c
 	act_comm.c
 	act_ente.c
