@@ -41,6 +41,7 @@
 #include "./repositories/theftrepository.h"
 #include "./repositories/inductionrepository.h"
 #include "./repositories/noterepository.h"
+#include "./repositories/offeringrepository.h"
 #include "./include/spdlog/fmt/bundled/format.h"
 
 bool IS_IMP(CHAR_DATA *ch)
@@ -184,10 +185,12 @@ void clean_mud()
 	auto notes = NoteRepository(RS.DbRift);
 	auto removed = notes.RemoveOlderThan(current_time - 2592000);
 	if (removed > 0)
-		RS.Logger.Info("Clean_notes: removed {} old notes.", removed);
+		RS.Logger.Info("clean_mud: removed {} old notes.", removed);
 
-	sprintf(buf, "DELETE FROM offerings WHERE time + 2592000 < %ld", current_time);
-	one_query(buf);
+	auto offerings = OfferingRepository(RS.DbRift);
+	removed = offerings.RemoveOlderThan(current_time - 2592000);
+	if (removed > 0)
+		RS.Logger.Info("clean_mud: removed {} old offerings.", removed);
 
 	sprintf(buf, "DELETE FROM pklogs WHERE ctime + 5184000 < %ld", current_time);
 	one_query(buf);
@@ -248,34 +251,23 @@ void clean_mud()
 
 void do_listoffer(CHAR_DATA *ch, char *argument)
 {
-	MYSQL_RES *res_set;
-	MYSQL_ROW row;
-	char query[MSL], buf[MSL], result[200], arg1[MSL], arg2[MSL];
-	bool autol= false, found= false;
+	char buf[MSL], result[200], arg1[MSL], arg2[MSL];
+	bool found = false;
 	int status, i = 1, argnum;
 	long ttime;
 
+	auto offerings = OfferingRepository(RS.DbRift);
+
 	if (!str_cmp(argument, "auto"))
-		autol = true;
-
-	sprintf(query, "SELECT * FROM offerings WHERE deity = \"%s\" %s ORDER BY time ASC",
-		ch->true_name,
-		autol ? "AND status = 0" : "");
-
-	res_set = one_query_res(query);
-
-	if (autol && !mysql_num_rows(res_set))
 	{
-		mysql_free_result(res_set);
+		if (offerings.FindUnviewedByDeity(ch->true_name).empty())
+			return;
+
+		send_to_char("You have unviewed offerings in your shrine.\n\r", ch);
 		return;
 	}
-	else if (autol)
-	{
-		mysql_free_result(res_set);
-		
-		send_to_char("You have unviewed offerings in your shrine.\n\r", ch);		
-		return;
-	}
+
+	auto offers = offerings.FindByDeity(ch->true_name);
 
 	if (strstr(argument, "accept") || strstr(argument, "reject"))
 	{
@@ -283,7 +275,7 @@ void do_listoffer(CHAR_DATA *ch, char *argument)
 		argument = one_argument(argument, arg2);
 		argnum = atoi(arg2);
 
-		while ((row = mysql_fetch_row(res_set)))
+		for (auto &offer : offers)
 		{
 			if (i++ < argnum || argnum < 1)
 				continue;
@@ -293,10 +285,9 @@ void do_listoffer(CHAR_DATA *ch, char *argument)
 			else
 				status = 2;
 
-			sprintf(query, "UPDATE offerings SET status=%i WHERE time=%s AND player='%s'", status, row[5], row[3]);
-			one_query(query);
+			offerings.SetStatus(offer.id, status);
 
-			auto buffer = fmt::format("{}'s offering has been {}ed.\n\r", row[3], arg1); //TODO: change the rest of the sprintf calls to format
+			auto buffer = fmt::format("{}'s offering has been {}ed.\n\r", offer.player, arg1); //TODO: change the rest of the sprintf calls to format
 			send_to_char(buffer.c_str(), ch);
 
 			found = true;
@@ -306,36 +297,33 @@ void do_listoffer(CHAR_DATA *ch, char *argument)
 		if (!found)
 			send_to_char("That offering wasn't found.\n\r", ch);
 
-		mysql_free_result(res_set);
 		return;
 	}
 
 	if (is_number(argument))
 	{
 		argnum = atoi(argument);
-		while ((row = mysql_fetch_row(res_set)))
+		for (auto &offer : offers)
 		{
 			if (i++ < argnum || argnum < 1)
 				continue;
 
-			status = atoi(row[4]);
-			ttime = atol(row[5]);
+			status = offer.status;
+			ttime = (long)offer.time;
 
 			strftime(result, 200, "%a %b %d, %l:%M%P", localtime(&ttime));
-			sprintf(buf, "Offering %d:\n\rFrom: %s\n\rTime: %s\n\rStatus: %s\n\rOffering is %s (Vnum %s)\n\r",
+			sprintf(buf, "Offering %d:\n\rFrom: %s\n\rTime: %s\n\rStatus: %s\n\rOffering is %s (Vnum %d)\n\r",
 				argnum,
-				row[3],
+				offer.player.c_str(),
 				result,
 				status == 0 ? "New" : status == 1 ? "Rejected" : status == 2 ? "Approved" : "",
-				row[2],
-				row[1]);
+				offer.offeringshort.c_str(),
+				offer.offeringvnum);
 			send_to_char(buf, ch);
 
 			found = true;
 			break;
 		}
-
-		mysql_free_result(res_set);
 
 		if (!found)
 			send_to_char("You have no offerings by that number.\n\r", ch);
@@ -345,10 +333,10 @@ void do_listoffer(CHAR_DATA *ch, char *argument)
 
 	send_to_char("Offering listing:\n\r", ch);
 
-	while ((row = mysql_fetch_row(res_set)))
+	for (auto &offer : offers)
 	{
-		status = atoi(row[4]);
-		sprintf(buf, "[%3i%c]  %s offered %s\n\r", i++, status == 0 ? 'N' : status == 1 ? 'R' : status == 2 ? 'A' : ' ', row[3], row[2]);
+		status = offer.status;
+		sprintf(buf, "[%3i%c]  %s offered %s\n\r", i++, status == 0 ? 'N' : status == 1 ? 'R' : status == 2 ? 'A' : ' ', offer.player.c_str(), offer.offeringshort.c_str());
 		send_to_char(buf, ch);
 		found = true;
 	}
@@ -357,16 +345,14 @@ void do_listoffer(CHAR_DATA *ch, char *argument)
 		send_to_char("There are currently no offerings to you.\n\r", ch);
 
 	send_to_char("Use listoffer <number> to view an offering, and listoffer accept/reject <number> to accept it or not.\n\r", ch);
-	mysql_free_result(res_set);
 }
 
 void do_offer(CHAR_DATA *ch, char *argument)
 {
-	MYSQL_ROW row;
 	OBJ_DATA *obj, *altar;
-	char query[MSL];
-	char *escape;
 	int status;
+
+	auto offerings = OfferingRepository(RS.DbRift);
 
 	// status: 0 unread 1 rejected 2 accepted
 	for (altar = object_list; altar; altar = altar->next)
@@ -383,19 +369,15 @@ void do_offer(CHAR_DATA *ch, char *argument)
 
 	if (!str_cmp(argument, ""))
 	{
-		sprintf(query, "SELECT * FROM offerings WHERE deity = \"%s\" AND player = \"%s\" ORDER BY time DESC LIMIT 1",
-			altar->in_room->owner,
-			ch->true_name);
+		auto latest = offerings.FindLatestByDeityAndPlayer(altar->in_room->owner, ch->true_name);
 
-		row = one_query_row(query);
-
-		if (!row)
+		if (latest.empty())
 		{
 			send_to_char("You find no signs of any offerings you may have made.\n\r", ch);
 			return;
 		}
 
-		status = atoi(row[4]);
+		status = latest[0].status;
 		if (status == 2)
 		{
 			send_to_char("Your offering seems to have been accepted.\n\r", ch);
@@ -429,15 +411,14 @@ void do_offer(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	escape = escape_string(obj->short_descr);
-
-	sprintf(query, "INSERT INTO offerings VALUES(\"%s\", %d, \"%s\", '%s', 0, %ld, nullptr)",
-		altar->in_room->owner,
-		obj->pIndexData->vnum,
-		escape,
-		ch->true_name,
-		current_time);
-	one_query(query);
+	Offering offering;
+	offering.deity = altar->in_room->owner;
+	offering.offeringvnum = obj->pIndexData->vnum;
+	offering.offeringshort = obj->short_descr;
+	offering.player = ch->true_name;
+	offering.status = 0;
+	offering.time = current_time;
+	offerings.Add(offering);
 
 	act("You place $p on $P, offering it to your deity.", ch, obj, altar, TO_CHAR);
 	act("$n places $s offering of $p on $P.", ch, obj, altar, TO_ROOM);
@@ -789,10 +770,14 @@ void delete_char(char *name, bool save_pfile)
 	one_query(query);
 
 	auto thefts = TheftRepository(RS.Db);
-	thefts.RemoveByChar(name);
+	auto removed =thefts.RemoveByChar(name);
+	if (removed > 0)
+		RS.Logger.Info("Removed {} theft records for [{}]", removed, name);
 
-	sprintf(query, "DELETE FROM offerings WHERE player='%s'", name);
-	one_query(query);
+	auto offerings = OfferingRepository(RS.DbRift);
+	removed = offerings.RemoveByPlayer(name);
+	if (removed > 0)
+		RS.Logger.Info("Removed {} offerings for [{}]", removed, name);
 
 	sprintf(query, "DELETE FROM logins WHERE name='%s'", name);
 	one_query(query);
