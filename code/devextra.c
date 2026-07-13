@@ -40,6 +40,7 @@
 #include "update.h"
 #include "./repositories/theftrepository.h"
 #include "./repositories/inductionrepository.h"
+#include "./repositories/noterepository.h"
 #include "./include/spdlog/fmt/bundled/format.h"
 
 bool IS_IMP(CHAR_DATA *ch)
@@ -180,8 +181,10 @@ void clean_mud()
 	sprintf(buf, "DELETE FROM logins WHERE ctime + 5184000 < %ld", current_time);
 	one_query(buf);
 
-	sprintf(buf, "DELETE FROM notes WHERE timestamp + 2592000 < %ld", current_time);
-	one_query(buf);
+	auto notes = NoteRepository(RS.DbRift);
+	auto removed = notes.RemoveOlderThan(current_time - 2592000);
+	if (removed > 0)
+		RS.Logger.Info("Clean_notes: removed {} old notes.", removed);
 
 	sprintf(buf, "DELETE FROM offerings WHERE time + 2592000 < %ld", current_time);
 	one_query(buf);

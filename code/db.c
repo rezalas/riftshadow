@@ -61,6 +61,7 @@
 #include "handler.h"
 #include "misc.h"
 #include "dioextra.h"
+#include "./repositories/noterepository.h"
 #include "chardef.h"
 #include "const.h"
 #include "utility.h"
@@ -4424,10 +4425,12 @@ void load_newresets(FILE *fp)
 
 void clean_notes(void)
 {
-	char query[MSL];
-	// if the difference is over 14 days, delete it.
-	sprintf(query, "DELETE FROM notes WHERE %ld-timestamp>1209600", current_time);
-	one_query(query);
+	// if the note is over 14 days old, delete it.
+	auto notes = NoteRepository(RS.DbRift);
+	auto removed = notes.RemoveOlderThan(current_time - 1209600);
+
+	if (removed > 0)
+		RS.Logger.Info("Clean_notes: removed {} notes older than 14 days.", removed);
 }
 
 void load_race_info(void)
