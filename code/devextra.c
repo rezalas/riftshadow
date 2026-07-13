@@ -44,6 +44,7 @@
 #include "./repositories/offeringrepository.h"
 #include "./repositories/loginrepository.h"
 #include "./repositories/pklogrepository.h"
+#include "./repositories/sitecommentrepository.h"
 #include "./include/spdlog/fmt/bundled/format.h"
 
 bool IS_IMP(CHAR_DATA *ch)
@@ -434,9 +435,9 @@ void do_offer(CHAR_DATA *ch, char *argument)
 
 void do_sitetrack(CHAR_DATA *ch, char *argument)
 {
-	MYSQL *conn, *conn2;
-	MYSQL_RES *res_set, *res2;
-	MYSQL_ROW row, row2;
+	MYSQL *conn;
+	MYSQL_RES *res_set;
+	MYSQL_ROW row;
 	BUFFER *buffer;
 	std::string query_buffer;
 	char buf[MSL], arg1[MSL], arg2[MSL], query[MSL];
@@ -450,8 +451,8 @@ void do_sitetrack(CHAR_DATA *ch, char *argument)
 
 	if (!strcmp(argument, ""))
 	{
+		auto comments = SiteCommentRepository(RS.DbRift);
 		buffer = new_buf();
-		conn2 = open_conn();
 
 		sprintf(query, "SELECT site_id, denials, site_name from sitetracker");
 		mysql_query(conn, query);
@@ -464,12 +465,7 @@ void do_sitetrack(CHAR_DATA *ch, char *argument)
 		{
 			id = atoi(row[0]);
 
-			sprintf(query, "SELECT site_id FROM sitecomments WHERE site_id = %d", id);
-			mysql_query(conn2, query);
-
-			res2 = mysql_store_result(conn2);
-			sprintf(buf, "%4d     %-26s %-10s %ld\n\r", id, row[2], row[1], (long)mysql_affected_rows(conn2));
-			mysql_free_result(res2);
+			sprintf(buf, "%4d     %-26s %-10s %d\n\r", id, row[2], row[1], comments.CountBySite(id));
 			add_buf(buffer, buf);
 		}
 
@@ -484,7 +480,6 @@ void do_sitetrack(CHAR_DATA *ch, char *argument)
 		mysql_free_result(res_set);
 
 		mysql_close(conn);
-		mysql_close(conn2);
 		free_buf(buffer);
 		return;
 	}
@@ -526,8 +521,10 @@ void do_sitetrack(CHAR_DATA *ch, char *argument)
 
 	if (!str_cmp(arg1, "delcomment") && get_trust(ch) >= 58)
 	{
-		query_buffer = fmt::format("DELETE FROM sitecomments WHERE comment_id={}", arg2);
-		one_query(query_buffer.data());
+		auto comments = SiteCommentRepository(RS.DbRift);
+		auto deleted = comments.Remove(atoi(arg2));
+		if (deleted > 0)
+			RS.Logger.Info("Deleted {} site comments with id [{}]", deleted, arg2);
 
 		mysql_close(conn);
 		send_to_char("Ok.\n\r", ch);
@@ -566,16 +563,15 @@ void do_sitetrack(CHAR_DATA *ch, char *argument)
 		sprintf(buf, "%s players from this site have been denied.", row[2]);
 		send_to_char("Comments:\n\r", ch);
 
-		conn2 = open_conn();
-		query_buffer = fmt::format("SELECT * from sitecomments where site_id={}", arg1);
-		mysql_query(conn2, query_buffer.c_str());
-
-		res2 = mysql_store_result(conn2);
+		auto comments = SiteCommentRepository(RS.DbRift);
+		auto siteComments = comments.FindBySite(atoi(arg1));
 		buf[0] = '\r';
 
-		while ((row2 = mysql_fetch_row(res2)))
+		for (const auto &comment : siteComments)
 		{
-			sprintf(buf, "Added by %s on %s (CID #%s):\n\r%s", row2[2], row2[3], row2[1], row2[4]);
+			sprintf(buf, "Added by %s on %s (CID #%d):\n\r%s",
+				comment.comment_name.c_str(), comment.comment_date.c_str(),
+				comment.comment_id, comment.comment.c_str());
 			add_buf(buffer, buf);
 		}
 
@@ -585,9 +581,6 @@ void do_sitetrack(CHAR_DATA *ch, char *argument)
 		if (get_trust(ch) >= 56)
 		{
 			add_buf(buffer, "Players from site:\n\r");
-
-			mysql_free_result(res2);
-			res2 = nullptr;
 
 			auto logins = LoginRepository(RS.DbRift);
 			auto siteNames = logins.FindDistinctNamesBySite(row[1]);
@@ -614,35 +607,38 @@ void do_sitetrack(CHAR_DATA *ch, char *argument)
 
 		page_to_char(buf_string(buffer), ch);
 		mysql_free_result(res_set);
-		mysql_free_result(res2);
 
 		mysql_close(conn);
-		mysql_close(conn2);
 		free_buf(buffer);
 	}
 }
 
 void comment_end_fun(CHAR_DATA *ch, char *argument)
 {
-	char query[MSL];
-	char *escape;
+	char buf[MSL];
 
-	if (strstr(argument, "\""))
+	// The body is now a bound parameter, so the legacy double-quote guard (which
+	// only existed because the comment was interpolated into a double-quoted SQL
+	// literal) is gone along with the escape_string call.
+	SiteComment comment;
+	comment.site_id = ch->pcdata->helpid;
+	comment.comment_name = ch->true_name;
+	comment.comment_date = log_time();
+	comment.comment = argument;
+
+	auto comments = SiteCommentRepository(RS.DbRift);
+	auto added = comments.Add(comment);
+
+	if (!added)
 	{
-		send_to_char("Error:  Your comment contained a double-quotation mark.  You must use single quotes to prevent errors.\n\r", ch);
-		return;
+		send_to_char("There was an error adding your comment.  Please try again later.\n\r", ch);
+	}
+	else
+	{
+		sprintf(buf, "Your comment was added.  Use sitetrack %d to view your comments.\n\r", ch->pcdata->helpid);
+		send_to_char(buf, ch);
 	}
 
-	escape = escape_string(argument);
-	sprintf(query, "INSERT INTO sitecomments VALUES(%d, nullptr, \"%s\", \"%s\", \"%s\")",
-		ch->pcdata->helpid,
-		ch->true_name,
-		log_time(),
-		escape);
-	one_query(query);
-
-	sprintf(query, "Your comment was added.  Use sitetrack %d to view your comments.\n\r", ch->pcdata->helpid);
-	send_to_char(query, ch);
 	ch->pcdata->entered_text[0] = '\0';
 }
 
