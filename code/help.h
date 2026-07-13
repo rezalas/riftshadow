@@ -13,8 +13,10 @@
 // LOCAL FUNCTIONS
 //
 
-int can_see_help (CHAR_DATA *ch, MYSQL_ROW row, bool fOnlyResult);
-void show_helpfile (CHAR_DATA *ch, MYSQL_ROW row);
+struct Help;	// code/repositories/helprepository.h
+
+int can_see_help (CHAR_DATA *ch, const Help &help, bool fOnlyResult);
+void show_helpfile (CHAR_DATA *ch, const Help &help);
 void modhelp_end_fun (CHAR_DATA *ch, char *argument);
 void do_modhelp (CHAR_DATA *ch, char *argument);
 void do_help (CHAR_DATA *ch, char *argument);

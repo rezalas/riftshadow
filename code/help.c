@@ -16,13 +16,13 @@
 #include "devextra.h"
 #include "newmem.h"
 #include "utility.h"
-#include "./include/spdlog/fmt/bundled/format.h"
+#include "./repositories/helprepository.h"
 
-int can_see_help(CHAR_DATA *ch, MYSQL_ROW row, bool fOnlyResult)
+int can_see_help(CHAR_DATA *ch, const Help &help, bool fOnlyResult)
 {
-	int sn = skill_lookup(row[2]);
+	int sn = skill_lookup(help.skill.c_str());
 
-	if (!str_cmp(row[2], "olc"))
+	if (!str_cmp(help.skill.c_str(), "olc"))
 	{
 		if (ch->pcdata->security > 0)
 			return true;
@@ -30,10 +30,10 @@ int can_see_help(CHAR_DATA *ch, MYSQL_ROW row, bool fOnlyResult)
 			return false;
 	}
 
-	if (atoi(row[3]) > ch->level && ch->level > 0)
+	if (help.minlevel > ch->level && ch->level > 0)
 		return false;
 
-	if (atoi(row[3]) == 51 && (!str_cmp(row[2], "heroimm") && !is_heroimm(ch)))
+	if (help.minlevel == 51 && (!str_cmp(help.skill.c_str(), "heroimm") && !is_heroimm(ch)))
 		return false;
 
 	if (sn > 1 && get_skill(ch, sn) < 1)
@@ -45,76 +45,49 @@ int can_see_help(CHAR_DATA *ch, MYSQL_ROW row, bool fOnlyResult)
 	return true;
 }
 
-void show_helpfile(CHAR_DATA *ch, MYSQL_ROW row)
+void show_helpfile(CHAR_DATA *ch, const Help &help)
 {
 	char buf[MSL];
-	sprintf(buf, "%s\n\r%s\n\r", row[1], row[4]);
+	sprintf(buf, "%s\n\r%s\n\r", help.title.c_str(), help.helpdata.c_str());
 	send_to_char(buf, ch);
 }
 
 void modhelp_end_fun(CHAR_DATA *ch, char *argument)
 {
-	MYSQL *conn;
-	char query[MSL * 3], results[MSL];
+	auto helpfiles = HelpRepository(RS.DbRift);
+	int updated = helpfiles.Update(ch->pcdata->helpid, argument);
 
-	conn = open_conn();
-	sprintf(query, "UPDATE helpfiles SET helpdata=\"%s\" WHERE id=%d", argument, ch->pcdata->helpid);
-	mysql_query(conn, query);
-
-	sprintf(results, "%i helpfiles updated.\n\r", (int)mysql_affected_rows(conn));
+	char results[MSL];
+	sprintf(results, "%i helpfiles updated.\n\r", updated);
 	send_to_char(results, ch);
-	mysql_close(conn);
 }
 void do_modhelp(CHAR_DATA *ch, char *argument)
 {
-	MYSQL *conn;
-	MYSQL_RES *res_set;
-	MYSQL_ROW row;
-	char query[MSL * 2];
-	int id;
-
 	if (!str_cmp(argument, "") || !is_number(argument))
 	{
 		send_to_char("Syntax: modhelp <id>\n\r", ch);
 		return;
 	}
 
-	conn = open_conn();
-	if (!conn)
+	int id = atoi(argument);
+
+	auto helpfiles = HelpRepository(RS.DbRift);
+	auto results = helpfiles.FindById(id);
+
+	if (results.empty())
 	{
-		send_to_char("Error opening help database.\n\r", ch);
+		send_to_char("Error accessing that id number.\n\r", ch);
 		return;
 	}
 
-	id = atoi(argument);
-
-	sprintf(query, "SELECT * from helpfiles where id=%d", id);
-	mysql_query(conn, query);
-
-	res_set = mysql_store_result(conn);
-	if (res_set == nullptr)
-	{
-		send_to_char("Error accessing that id number.\n\r", ch);
-	}
-	else
-	{
-		row = mysql_fetch_row(res_set);
-		ch->pcdata->helpid = id;
-		ch->pcdata->entered_text = palloc_string(row[4]);
-		enter_text(ch, modhelp_end_fun);
-		mysql_free_result(res_set);
-	}
-
-	mysql_close(conn);
+	ch->pcdata->helpid = id;
+	ch->pcdata->entered_text = palloc_string(results[0].helpdata.c_str());
+	enter_text(ch, modhelp_end_fun);
 }
 
 void do_help(CHAR_DATA *ch, char *argument)
 {
-	int numresults = 0;
-	MYSQL *conn;
-	MYSQL_RES *res_set = nullptr, *res_set2 = nullptr;
-	MYSQL_ROW row;
-	char query[MSL * 2], buf[MSL];
+	char buf[MSL];
 
 	if (!str_cmp(argument, ""))
 	{
@@ -130,92 +103,56 @@ void do_help(CHAR_DATA *ch, char *argument)
 		}
 	}
 
-	conn = open_conn();
-	if (!conn)
-	{
-		send_to_char("Error opening help database.\n\r", ch);
-		return;
-	}
+	auto helpfiles = HelpRepository(RS.DbRift);
 
-	if (is_number(argument))
-		sprintf(query, "select * from helpfiles where id=%d", atoi(argument));
-	else if (!is_number(argument))
-		sprintf(query, "select * from helpfiles where title RLIKE '%s' ORDER BY id ASC", argument);
+	std::vector<Help> results = is_number(argument)
+		? helpfiles.FindById(atoi(argument))
+		: helpfiles.FindByTitle(argument);
 
-	mysql_query(conn, query);
-	res_set = mysql_store_result(conn);
-	numresults = mysql_affected_rows(conn);
-
-	if (!numresults || (res_set == nullptr && mysql_field_count(conn) > 0))
+	if (results.empty())
 	{
 		send_to_char("No matching helpfiles found.\n\r", ch);
 	}
-	else if (numresults == 1)
+	else if (results.size() == 1)
 	{
-		row = mysql_fetch_row(res_set);
-
-		if (!can_see_help(ch, row, true))
+		if (!can_see_help(ch, results[0], true))
 			send_to_char("No matching helpfiles found.\n\r", ch);
 		else
-			show_helpfile(ch, row);
+			show_helpfile(ch, results[0]);
 	}
 	else
 	{
-		sprintf(query, "select * from helpfiles where title RLIKE '\\'%s\\'' OR title = '%s'", argument, argument);
-		mysql_query(conn, query);
+		auto exact = helpfiles.FindByQuotedOrExactTitle(argument);
 
-		res_set2 = mysql_store_result(conn);
-		numresults = mysql_affected_rows(conn);
-
-		if (numresults > 0)
+		if (!exact.empty())
 		{
-			row = mysql_fetch_row(res_set2);
-
-			if (!can_see_help(ch, row, false))
-			{
+			if (!can_see_help(ch, exact[0], false))
 				send_to_char("No matching helpfiles found.\n\r", ch);
-			}
 			else
-			{
-				show_helpfile(ch, row);
-				mysql_free_result(res_set2);
-			}
+				show_helpfile(ch, exact[0]);
 		}
 		else
 		{
 			send_to_char("Multiple helpfiles matched your request:\n\r", ch);
 
-			while ((row = mysql_fetch_row(res_set)) != nullptr)
+			for (const Help &help : results)
 			{
-				if (!can_see_help(ch, row, false))
+				if (!can_see_help(ch, help, false))
 					continue;
 
-				sprintf(buf, "%-5s %s\n\r", row[0], row[1]);
+				sprintf(buf, "%-5d %s\n\r", help.id, help.title.c_str());
 				send_to_char(buf, ch);
 			}
 		}
 	}
-
-	mysql_free_result(res_set);
-	mysql_close(conn);
 }
 
 void do_delhelp(CHAR_DATA *ch, char *argument)
 {
-	MYSQL *conn;
-	char buf[MSL];
-	int id;
-
 	if (!str_cmp(argument, ""))
 	{
 		send_to_char("Syntax: delhelp <id #>\n\r", ch);
 		send_to_char("        Deletes the helpfile with the given ID number.\n\r", ch);
-		return;
-	}
-	conn = open_conn();
-	if (!conn)
-	{
-		send_to_char("Error opening help database.\n\r", ch);
 		return;
 	}
 
@@ -225,14 +162,14 @@ void do_delhelp(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	id = atoi(argument);
+	int id = atoi(argument);
 
-	sprintf(buf, "DELETE FROM helpfiles WHERE id=%d", id);
-	mysql_query(conn, buf);
+	auto helpfiles = HelpRepository(RS.DbRift);
+	int deleted = helpfiles.Remove(id);
 
-	sprintf(buf, "%i helpfiles deleted.\n\r", (int)mysql_affected_rows(conn));
+	char buf[MSL];
+	sprintf(buf, "%i helpfiles deleted.\n\r", deleted);
 	send_to_char(buf, ch);
-	mysql_close(conn);
 }
 
 void addhelp_end_fun(CHAR_DATA *ch, char *argument)
@@ -243,9 +180,7 @@ void addhelp_end_fun(CHAR_DATA *ch, char *argument)
 
 void do_addhelp(CHAR_DATA *ch, char *argument)
 {
-	MYSQL *conn;
 	char buf[MSL * 3], title[MSL], skill[MSL], arg[MSL], *ttitle;
-	char *escape, *escape2;
 	int minlevel;
 
 	if (!str_cmp(argument, ""))
@@ -274,36 +209,32 @@ void do_addhelp(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	conn = open_conn();
-	if (!conn)
-	{
-		send_to_char("Error opening help database.\n\r", ch);
-		return;
-	}
-
 	argument = one_argument(argument, title);
 	argument = one_argument(argument, skill);
 	argument = one_argument(argument, arg);
 
 	ttitle = palloc_string(upstring(title));
 	minlevel = atoi(arg);
-	escape = escape_string(ttitle);
-	escape2 = escape_string(ch->pcdata->entered_text);
 
-	sprintf(buf, "INSERT INTO helpfiles VALUES(nullptr, \"%s\", \"%s\", %d, \"%s\")", escape, skill, minlevel, escape2);
-	mysql_query(conn, buf);
+	Help help;
+	help.title = ttitle;
+	help.skill = skill;
+	help.minlevel = minlevel;
+	help.helpdata = ch->pcdata->entered_text;
 
-	sprintf(buf, "Help file added:\n\rTitle: %s\n\rSkill Required: %s\n\rMinimum Level: %d\n\rHelp Text: %s\n\r", ttitle, skill, minlevel, ch->pcdata->entered_text);
+	auto helpfiles = HelpRepository(RS.DbRift);
+	auto added = helpfiles.Add(help);
+
+	if (added)
+		sprintf(buf, "Help file added:\n\rTitle: %s\n\rSkill Required: %s\n\rMinimum Level: %d\n\rHelp Text: %s\n\r", ttitle, skill, minlevel, ch->pcdata->entered_text);
+	else
+		sprintf(buf, "Failed to add helpfile:\n\rTitle: %s\n\rSkill Required: %s\n\rMinimum Level: %d\n\rHelp Text: %s\n\r", ttitle, skill, minlevel, ch->pcdata->entered_text);
+
 	send_to_char(buf, ch);
-	mysql_close(conn);
 }
 
 void do_listhelp(CHAR_DATA *ch, char *argument)
 {
-	MYSQL *conn;
-	MYSQL_FIELD *field;
-	MYSQL_ROW row;
-	MYSQL_RES *res_set;
 	char buf[MSL], arg1[MSL];
 
 	if (!str_cmp(argument, ""))
@@ -317,40 +248,19 @@ void do_listhelp(CHAR_DATA *ch, char *argument)
 
 	argument = one_argument(argument, arg1);
 
-	auto query = !str_cmp(arg1, "ALL")
-		? std::string("select * from helpfiles")
-		: fmt::format("select * from helpfiles where {} RLIKE '{}'", arg1, argument);
+	auto helpfiles = HelpRepository(RS.DbRift);
 
-	conn = open_conn();
-	if (!conn)
+	std::vector<Help> results = !str_cmp(arg1, "ALL")
+		? helpfiles.FindAll()
+		: helpfiles.FindByFieldRegex(arg1, argument);
+
+	for (const Help &help : results)
 	{
-		send_to_char("Error opening help database.\n\r", ch);
-		return;
+		sprintf(buf, "Help ID: %d\n\rHelp Title: %s\n\rRequired Skill: %s\n\rMinimum Level: %d\n\r", help.id, help.title.c_str(), help.skill.c_str(), help.minlevel);
+		send_to_char(buf, ch);
+		sprintf(buf, "Help Text:\n\r%s\n\r", help.helpdata.c_str());
+		send_to_char(buf, ch);
 	}
-
-	mysql_query(conn, query.c_str());
-	res_set = mysql_store_result(conn);
-
-	if (res_set == nullptr || mysql_field_count(conn) < 1)
-	{
-		send_to_char("Error accessing results.\n\r", ch);
-	}
-	else
-	{
-		while ((row = mysql_fetch_row(res_set)) != nullptr)
-		{
-			mysql_field_seek(res_set, 0);
-			field = mysql_fetch_field(res_set);
-			sprintf(buf, "Help ID: %s\n\rHelp Title: %s\n\rRequired Skill: %s\n\rMinimum Level: %s\n\r", row[0], row[1], row[2], row[3]);
-			send_to_char(buf, ch);
-			sprintf(buf, "Help Text:\n\r%s\n\r", row[4]);
-			send_to_char(buf, ch);
-		}
-
-		mysql_free_result(res_set);
-	}
-
-	mysql_close(conn);
 }
 
 MYSQL *do_conn(const char *host_name, const char *user_name, const char *password,

@@ -13,6 +13,7 @@ set(RIFT_SOURCE config.cpp
 	repositories/inductionrepository.c
 	repositories/voterepository.c
 	repositories/noterepository.c
+	repositories/helprepository.c
 	bitvector.c
 	act_comm.c
 	act_ente.c
