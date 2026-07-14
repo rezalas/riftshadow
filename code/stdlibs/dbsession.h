@@ -26,6 +26,10 @@
  
 // TODO: Transition to a more modern C++ MySQL library. Currently we are using the C API, which is not ideal. 
  
+#ifndef my_bool
+typedef char my_bool;
+#endif
+
 
 /// A single fetched result row. Values are materialised as strings (the server
 /// converts on fetch) and exposed through typed accessors so mappers stay readable.
