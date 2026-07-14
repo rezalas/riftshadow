@@ -2,6 +2,14 @@
 #define DBSESSION_H
 
 #include <mysql.h>
+
+// Since `my_bool` was removed from the MySQL C API in 8.0,
+// MariaDB Connector/C still provides it, we need to add this shim.
+#if !defined(MARIADB_BASE_VERSION) && !defined(MARIADB_VERSION_ID) && \
+	defined(MYSQL_VERSION_ID) && MYSQL_VERSION_ID >= 80000
+typedef bool my_bool;
+#endif
+
 #include <string>
 #include <vector>
 #include <deque>
@@ -26,10 +34,6 @@
  
 // TODO: Transition to a more modern C++ MySQL library. Currently we are using the C API, which is not ideal. 
  
-#ifndef my_bool
-typedef char my_bool;
-#endif
-
 
 /// A single fetched result row. Values are materialised as strings (the server
 /// converts on fetch) and exposed through typed accessors so mappers stay readable.
