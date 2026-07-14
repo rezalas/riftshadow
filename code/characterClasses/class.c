@@ -1,9 +1,42 @@
 #include "class.h"
+#include "../mud.h"
+#include "../repositories/classrepository.h"
 
 CClass *CClass::first = nullptr;
 
 CClass::CClass()
 {
+}
+
+/// Loads class_table into the static CClass linked list.
+void CClass::LoadClassTable()
+{
+	auto classes = ClassRepository(RS.Db).FindAllOrdered();
+
+	CClass *lastp = nullptr;
+	int i = 0;
+	for (const auto &row : classes)
+	{
+		CClass *stackcopy = new CClass;
+		if (!CClass::first)
+			CClass::first = stackcopy;
+		else
+			lastp->next = stackcopy;
+
+		stackcopy->index = i++;
+		stackcopy->name.SetBuffer(row.name.c_str());
+		stackcopy->who_name.SetBuffer(row.who_name.c_str());
+		stackcopy->attr_prime = row.attr_prime;
+		stackcopy->align = row.align;
+		stackcopy->weapon = row.weapon;
+		stackcopy->gainconst = row.gainconst;
+		stackcopy->base_group.SetBuffer(row.base_group.c_str());
+		stackcopy->default_group.SetBuffer(row.default_group.c_str());
+		stackcopy->ctype = row.ctype;
+		stackcopy->status = row.status;
+		stackcopy->next = nullptr;
+		lastp = stackcopy;
+	}
 }
 
 CClass::~CClass()

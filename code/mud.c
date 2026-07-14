@@ -11,7 +11,6 @@
 #include <stdlib.h>
 #include <string.h>
 #include <fstream>
-#include "autogen/coldefs.h"
 #include "mud.h"
 #include "merc.h"
 #include "rift.h"
@@ -19,7 +18,6 @@
 #include "area.h"
 #include "room.h"
 #include "exit.h"
-#include "bootup.h"
 #include "update.h"
 #include "dioextra.h"
 #include "db.h"
@@ -485,7 +483,7 @@ void CMud::InitializeTables()
 	//begin_benchmark
 
 	Logger.Info("Loading class and race data...");
-	CClass::LoadClassTable("* FROM class_table ORDER BY id ASC");
+	CClass::LoadClassTable();
 	//CRace::LoadRaceTable("* FROM race_table ORDER BY pcrace DESC, name ASC");
 
 	//Logger.Info("Loading commands...");

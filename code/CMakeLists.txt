@@ -22,6 +22,7 @@ set(RIFT_SOURCE config.cpp
 	repositories/sitetrackerrepository.c
 	repositories/graveyardrepository.c
 	repositories/playerrepository.c
+	repositories/classrepository.c
 	bitvector.c
 	act_comm.c
 	act_ente.c

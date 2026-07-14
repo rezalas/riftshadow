@@ -13,6 +13,7 @@ set(TEST_SRC_FILES act_obj_tests.c
 	ban_tests.c
 	bug_tests.c
 	cabal_tests.c
+	class_tests.c
 	db_tests.c
 	fight_tests.c
 	handler_tests.c
