@@ -293,8 +293,8 @@ bool Statement::FetchInto(const std::function<void(const Row &)> &sink)
 	// core type-agnostic; the Row accessors convert back on read.
 	std::vector<std::vector<char>>	buffers(ncol);
 	std::vector<unsigned long>		lengths(ncol, 0);
-	std::vector<my_bool>			nulls(ncol, 0);
-	std::vector<my_bool>			errors(ncol, 0);
+	std::deque<my_bool>				nulls(ncol, 0);
+	std::deque<my_bool>				errors(ncol, 0);
 	std::vector<MYSQL_BIND>			rbind(ncol);
 	memset(rbind.data(), 0, sizeof(MYSQL_BIND) * ncol);
 
