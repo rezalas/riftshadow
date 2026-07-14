@@ -621,66 +621,33 @@ void comment_end_fun(CHAR_DATA *ch, char *argument)
 
 void show_database_info(CHAR_DATA *ch, char *argument)
 {
-	MYSQL *conn, *conn2;
-	MYSQL_RES *res_set, *res2;
-	MYSQL_ROW row, row2;
-	char query[MSL], buf[MSL], buf2[MSL];
-	float lpercent;
+	char buf[MSL];
 
-	return;
+	auto players = PlayerRepository(RS.Db);
+	auto found = players.FindByName(argument);
 
-	sprintf(query, "SELECT * from players where name='%s'", argument);
-	conn = open_conn();
-	mysql_query(conn, query);
-	res_set = mysql_store_result(conn);
-
-	if (!mysql_affected_rows(conn))
+	if (found.empty())
 	{
-		mysql_free_result(res_set);
-		mysql_close(conn);
 		send_to_char("  No database entry for player found.\n\r", ch);
 		return;
 	}
 
-	row = mysql_fetch_row(res_set);
-	conn2 = open_conn();
+	const Player &player = found[0];
+	int totalLogins = player.noc_logins + player.c_logins;
 
-	if ((atoi(row[11]) + atoi(row[12])) > 0) // caballed
+	if (totalLogins > 0) // caballed
 	{
-		lpercent = atoi(row[12]) / (atoi(row[11]) + atoi(row[12])) * 100;
+		float lpercent = (float)player.c_logins / totalLogins * 100;
 
-		sprintf(buf, "  Power: %0.2f%% (%s/%d)", lpercent, row[12], atoi(row[12]) + atoi(row[11]));
+		sprintf(buf, "  Power: %0.2f%% (%d/%d)", lpercent, player.c_logins, totalLogins);
 		send_to_char(buf, ch);
 
-		sprintf(query, "SELECT avg(c_logins) / (avg(c_logins) + avg(noc_logins))*100 from players where c_logins>0");
-		mysql_query(conn2, query);
+		float gameWide = players.AverageCabalPowerPercent();
+		float cabalWide = players.AverageCabalPowerPercent(player.cabal);
 
-		res2 = mysql_store_result(conn2);
-		row2 = mysql_fetch_row(res2);
-
-		sprintf(buf2, " and cabal=%s", row[5]);
-		strcat(query, buf2);
-
-		row2[0][6] = '\0';
-
-		sprintf(buf, " [Game-wide: %4s%%, ", row2[0]);
+		sprintf(buf, " [Game-wide: %0.2f%%, Cabal-wide: %0.2f%%]\n\r", gameWide, cabalWide);
 		send_to_char(buf, ch);
-
-		mysql_free_result(res2);
-		mysql_query(conn2, query);
-
-		res2 = mysql_store_result(conn2);
-		row2 = mysql_fetch_row(res2);
-		row2[0][6] = '\0';
-
-		sprintf(buf, "Cabal-wide: %s%%]\n\r", row2[0]);
-		send_to_char(buf, ch);
-		mysql_free_result(res2);
 	}
-
-	mysql_free_result(res_set);
-	mysql_close(conn2);
-	mysql_close(conn);
 }
 
 void do_demo(CHAR_DATA *ch, char *name)
@@ -772,58 +739,6 @@ void delete_char(char *name, bool save_pfile)
 		RS.Logger.Info("Removed {} induction records for [{}]", removed, name);
 }
 
-MYSQL_ROW one_query_row(char *query)
-{
-	MYSQL_RES *res_set;
-	MYSQL_ROW row;
-
-	res_set = one_query_res(query);
-	row = mysql_fetch_row(res_set);
-	mysql_free_result(res_set);
-	return row;
-}
-
-MYSQL_RES *one_query_res(char *query)
-{
-	MYSQL *conn;
-	MYSQL_RES *res_set;
-
-	conn = open_conn();
-
-	mysql_query(conn, query);
-	res_set = mysql_store_result(conn);
-
-	mysql_close(conn);
-	return res_set;
-}
-
-int one_query_count(char *query)
-{
-	MYSQL *conn;
-	MYSQL_RES *res_set;
-	int res;
-
-	conn = open_conn();
-
-	mysql_query(conn, query);
-	res_set = mysql_store_result(conn);
-	res = mysql_affected_rows(conn);
-
-	mysql_free_result(res_set);
-
-	mysql_close(conn);
-	return res;
-}
-
-void one_query(char *query)
-{
-	MYSQL *conn;
-
-	conn = open_conn();
-	mysql_query(conn, query);
-	mysql_close(conn);
-}
-
 void enter_text(CHAR_DATA *ch, DO_FUN *end_fun)
 {
 	if (is_npc(ch))
@@ -849,14 +764,6 @@ char *log_time(void)
 	char result[200];
 	strftime(result, 200, "%m/%d/%Y %l:%M%P", localtime(&current_time));
 	return talloc_string(result);
-}
-
-MYSQL *open_conn(void)
-{
-	CSQLInterface nSQL;
-	DbConnection riftCore = nSQL.Settings.GetDbConnection("rift");
-	return do_conn(riftCore.Host.c_str(), riftCore.User.c_str(),
-	 riftCore.Pwd.c_str(), riftCore.Db.c_str(), riftCore.Port, nullptr, 0);
 }
 
 void plug_graveyard(CHAR_DATA *ch, int type)
@@ -924,8 +831,10 @@ void plug_graveyard(CHAR_DATA *ch, int type)
 	std::string year = strf_time("%Y");
 
 	// TODO: Possibly add this back in if we decide to keep the forum posting functionality.
-	//  For now, it's commented out because the forum database is non-existent.
-	// qrow = one_fquery_row("select max(zthreadid) from gabe20010201051916");
+	//  For now, it's commented out because the forum database is non-existent. If revived,
+	//  this must go through the ORM (a repository on RS.DbRift), not the deleted raw
+	//  one_fquery/open_fconn helpers.
+	// qrow = <select max(zthreadid) from gabe20010201051916 via the forum repository>
 
 	// if (qrow[0] != nullptr)
 	// {
@@ -1031,13 +940,14 @@ void plug_graveyard(CHAR_DATA *ch, int type)
 	}
 
 	// TODO: Possibly add this back in if we decide to keep the forum posting functionality.
-	//  For now, it's commented out because the forum database is non-existent.
+	//  For now, it's commented out because the forum database is non-existent. If revived,
+	//  this insert must go through the repositories, not the deleted raw
+	//  one_fquery/open_fconn helpers.
 	// auto buf = fmt::sprintf(
 	// 		"insert into gabe20010201051916(zposter,zposter_email,zsubject,zmessage,zdatetime,zaddress,zunique,"\
 	// 		"zthreadid,zdelete,zmod) values('Death_Wizard','immortals@riftshadow.com','%s','%s',"\
 	// 		"'%s','localhost',%s,'%s',0,'Death_Wizard')",
 	// 		name, message, cur_date, unique, stid);
-	// one_fquery(buf.c_str());
 }
 
 void do_pktrack(CHAR_DATA *ch, char *argument)

@@ -38,7 +38,6 @@
 #include <string.h>
 #include <stdlib.h>
 #include <time.h>
-#include <mysql.h>
 #include "act_comm.h"
 #include "rift.h"
 #include "recycle.h"

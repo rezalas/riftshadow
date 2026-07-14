@@ -263,34 +263,3 @@ void do_listhelp(CHAR_DATA *ch, char *argument)
 	}
 }
 
-MYSQL *do_conn(const char *host_name, const char *user_name, const char *password,
-	const char *db_name, unsigned int port_num, const char *socket_name,
-	unsigned int flags)
-{
-	MYSQL *conn; /* pointer to connection handler */
-
-	conn = mysql_init(nullptr); /* allocate, initialize connection handler */
-	if (conn == nullptr)
-	{
-		print_error(nullptr, "mysql_init() failed (probably out of memory)");
-		return nullptr;
-	}
-
-	if (mysql_real_connect(conn, host_name, user_name, password, db_name, port_num, socket_name, flags) == nullptr)
-	{
-		print_error(conn, "mysql_real_connect() failed");
-		return nullptr;
-	}
-
-	return conn; /* connection is established */
-}
-
-void print_error(MYSQL *conn, char *message)
-{
-	fprintf(stderr, "%s\n", message);
-
-	if (conn != nullptr)
-	{
-		fprintf(stderr, "Error %u (%s)\n", mysql_errno(conn), mysql_error(conn));
-	}
-}

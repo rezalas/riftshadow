@@ -119,6 +119,44 @@ int PlayerRepository::RemoveByName(const std::string &name)
 	return affected < 0 ? 0 : (int)affected;
 }
 
+/// Finds a character's full stats row by name (the `dbinfo`/`show_database_info`
+/// admin lookup).
+/// @note Explicit column list, id-ordered to match the entity, rather than a
+///   positional `SELECT *`.
+/// @param name: The character's true name (bound, never interpolated).
+/// @returns A vector holding the single matching row, or empty if no such
+///   character exists.
+std::vector<Player> PlayerRepository::FindByName(const std::string &name)
+{
+	auto stmt = db.Prepare(
+		"SELECT name, lastlogin, level, class, race, cabal, sex, hours, align, "
+		"ethos, logins, noc_logins, c_logins, gold, pks, induct "
+		"FROM players WHERE name = ? LIMIT 1");
+
+	stmt->Bind(name);
+
+	return stmt->Query<Player>([](const Row &row) {
+		Player player;
+		player.name = row.Str(0);
+		player.lastlogin = row.I32(1);
+		player.level = row.I32(2);
+		player.class_ = row.I32(3);
+		player.race = row.I32(4);
+		player.cabal = row.I32(5);
+		player.sex = row.I32(6);
+		player.hours = row.I32(7);
+		player.align = row.I32(8);
+		player.ethos = row.I32(9);
+		player.logins = row.I32(10);
+		player.noc_logins = row.I32(11);
+		player.c_logins = row.I32(12);
+		player.gold = row.I64(13);
+		player.pks = row.Flt(14);
+		player.induct = row.I32(15);
+		return player;
+	});
+}
+
 /// Lists every stored character name (used to reconcile the DB against pfiles).
 /// @returns All names (empty if none).
 std::vector<std::string> PlayerRepository::FindAllNames()
@@ -176,4 +214,37 @@ long long PlayerRepository::SumGold()
 
 	auto sums = stmt->Query<long long>([](const Row &row) { return row.I64(0); });
 	return sums.empty() ? 0 : sums[0];
+}
+
+/// Computes the game-wide cabal "power" percentage -- the share of logins that
+/// happened while a cabal was powered, averaged across every character that has
+/// ever logged in while powered (`c_logins > 0`).
+/// @note `avg(c_logins) / (avg(c_logins) + avg(noc_logins)) * 100`. Used as the
+///   game-wide baseline in `show_database_info`.
+/// @returns The percentage (0.0 if no rows / the average is NULL).
+float PlayerRepository::AverageCabalPowerPercent()
+{
+	auto stmt = db.Prepare(
+		"SELECT avg(c_logins) / (avg(c_logins) + avg(noc_logins)) * 100 "
+		"FROM players WHERE c_logins > 0");
+
+	auto vals = stmt->Query<float>([](const Row &row) { return row.Flt(0); });
+	return vals.empty() ? 0.0f : vals[0];
+}
+
+/// Computes the cabal-wide "power" percentage restricted to a single cabal --
+/// the same average as the argument-less overload, filtered to one cabal.
+/// @param cabal: The cabal id to restrict the average to (bound, never
+///   interpolated).
+/// @returns The percentage (0.0 if the cabal has no qualifying rows).
+float PlayerRepository::AverageCabalPowerPercent(int cabal)
+{
+	auto stmt = db.Prepare(
+		"SELECT avg(c_logins) / (avg(c_logins) + avg(noc_logins)) * 100 "
+		"FROM players WHERE c_logins > 0 AND cabal = ?");
+
+	stmt->Bind(cabal);
+
+	auto vals = stmt->Query<float>([](const Row &row) { return row.Flt(0); });
+	return vals.empty() ? 0.0f : vals[0];
 }

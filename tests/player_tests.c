@@ -439,3 +439,129 @@ SCENARIO("summing gold across all characters", "[player][repository]")
 		}
 	}
 }
+
+SCENARIO("finding a character's full stats row by name", "[player][repository]")
+{
+	GIVEN("a session holding one character's row")
+	{
+		FakeDbSession db;
+		//	name, lastlogin, level, class, race, cabal, sex, hours, align, ethos,
+		//	logins, noc_logins, c_logins, gold, pks, induct
+		db.Rows.push_back(Row({"Karsus", "1700000000", "52", "3", "1", "5", "1",
+			"420", "-1000", "2", "80", "30", "50", "9000000000", "12.5", "1"}));
+
+		PlayerRepository repo(db);
+
+		WHEN("FindByName is called")
+		{
+			auto found = repo.FindByName("Karsus");
+
+			THEN("it binds the name, pins explicit columns, and maps each one")
+			{
+				REQUIRE(db.LastSql.find("SELECT name, lastlogin, level, class") == 0);
+				REQUIRE(db.LastSql.find("WHERE name = ? LIMIT 1") != std::string::npos);
+				REQUIRE(db.LastSql.find("*") == std::string::npos);
+				REQUIRE(db.Binds == std::vector<std::string>{"Karsus"});
+
+				REQUIRE(found.size() == 1);
+				const Player &p = found[0];
+				REQUIRE(p.name == "Karsus");
+				REQUIRE(p.lastlogin == 1700000000);
+				REQUIRE(p.level == 52);
+				REQUIRE(p.class_ == 3);
+				REQUIRE(p.race == 1);
+				REQUIRE(p.cabal == 5);
+				REQUIRE(p.sex == 1);
+				REQUIRE(p.hours == 420);
+				REQUIRE(p.align == -1000);
+				REQUIRE(p.ethos == 2);
+				REQUIRE(p.logins == 80);
+				REQUIRE(p.noc_logins == 30);
+				REQUIRE(p.c_logins == 50);
+				REQUIRE(p.gold == 9000000000LL); // exceeds 32-bit, proves I64 read
+				REQUIRE(p.pks == Approx(12.5f));
+				REQUIRE(p.induct == 1);
+			}
+		}
+	}
+
+	GIVEN("a session with no matching character")
+	{
+		FakeDbSession db;	// no rows configured
+
+		PlayerRepository repo(db);
+
+		WHEN("FindByName is called")
+		{
+			THEN("it returns an empty result")
+			{
+				REQUIRE(repo.FindByName("Nobody").empty());
+			}
+		}
+	}
+}
+
+SCENARIO("computing the game-wide cabal power percentage", "[player][repository]")
+{
+	GIVEN("a session returning the average")
+	{
+		FakeDbSession db;
+		db.Rows.push_back(Row({"62.5"}));
+
+		PlayerRepository repo(db);
+
+		WHEN("AverageCabalPowerPercent is called with no cabal")
+		{
+			float pct = repo.AverageCabalPowerPercent();
+
+			THEN("it averages powered vs unpowered logins over qualifying rows")
+			{
+				REQUIRE(db.LastSql ==
+					"SELECT avg(c_logins) / (avg(c_logins) + avg(noc_logins)) * 100 "
+					"FROM players WHERE c_logins > 0");
+				REQUIRE(db.Binds.empty());
+				REQUIRE(pct == Approx(62.5f));
+			}
+		}
+	}
+
+	GIVEN("a session returning no rows")
+	{
+		FakeDbSession db;	// no rows configured
+
+		PlayerRepository repo(db);
+
+		WHEN("AverageCabalPowerPercent is called")
+		{
+			THEN("it returns zero")
+			{
+				REQUIRE(repo.AverageCabalPowerPercent() == Approx(0.0f));
+			}
+		}
+	}
+}
+
+SCENARIO("computing a single cabal's power percentage", "[player][repository]")
+{
+	GIVEN("a session returning the cabal average")
+	{
+		FakeDbSession db;
+		db.Rows.push_back(Row({"73.2"}));
+
+		PlayerRepository repo(db);
+
+		WHEN("AverageCabalPowerPercent is called with a cabal id")
+		{
+			float pct = repo.AverageCabalPowerPercent(5);
+
+			THEN("it filters on a bound cabal, never interpolating it")
+			{
+				REQUIRE(db.LastSql ==
+					"SELECT avg(c_logins) / (avg(c_logins) + avg(noc_logins)) * 100 "
+					"FROM players WHERE c_logins > 0 AND cabal = ?");
+				REQUIRE(db.Binds == std::vector<std::string>{"5"});
+				REQUIRE(pct == Approx(73.2f));
+			}
+		}
+	}
+}

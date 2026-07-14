@@ -51,6 +51,9 @@ public:
 	bool SetInduct(const std::string &name, int induct);
 	int RemoveByName(const std::string &name);
 
+	// Entity reads
+	std::vector<Player> FindByName(const std::string &name);
+
 	// Name projections
 	std::vector<std::string> FindAllNames();
 	std::vector<std::string> FindNamesInactiveSince(long cutoff);
@@ -59,6 +62,8 @@ public:
 	// Scalar stat aggregates
 	int CountGoldAboveLevel(int level);
 	long long SumGold();
+	float AverageCabalPowerPercent();
+	float AverageCabalPowerPercent(int cabal);
 
 private:
 	IDbSession &	db;

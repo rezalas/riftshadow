@@ -6,7 +6,6 @@ set(RIFT_SOURCE config.cpp
 	cdirectory.c
 	cfilesystem.c
 	clogger.c
-	sql.c
 	dbsession.c
 	repositories/banrepository.c
 	repositories/theftrepository.c

@@ -1,7 +1,6 @@
 #ifndef DEVEXTRA_H
 #define DEVEXTRA_H
 
-#include <mysql.h>
 #include "merc.h"
 #include "handler.h"
 
@@ -27,13 +26,8 @@ void comment_end_fun (CHAR_DATA *ch, char *argument);
 void show_database_info (CHAR_DATA *ch, char *argument);
 void do_demo (CHAR_DATA *ch, char *name);
 void delete_char (char *name, bool save_pfile);
-MYSQL_ROW one_query_row (char *query);
-MYSQL_RES *one_query_res (char *query);
-int one_query_count (char *query);
-void one_query (char *query);
 void enter_text (CHAR_DATA *ch, DO_FUN *end_fun);
 char *log_time (void);
-MYSQL *open_conn (void);
 void plug_graveyard (CHAR_DATA *ch, int type);
 void do_pktrack (CHAR_DATA *ch, char *argument);
 bool trusts (CHAR_DATA *ch, CHAR_DATA *victim);

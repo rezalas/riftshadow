@@ -74,13 +74,7 @@ bool CMud::Bootup()
 	fBootDb = true;
 
 	Logger.Info("Creating persistent SQL connection...");
-	DbConnection riftCore = RS.SQL.Settings.GetDbConnection("rift_core");
-	if (!RS.SQL.StartSQLServer(riftCore.Host.c_str(),
-	riftCore.Db.c_str(), riftCore.User.c_str(), riftCore.Pwd.c_str()))
-	{
-		Logger.Error("Failed to create a SQL connection.");
-		return false;
-	}
+	DbConnection riftCore = RS.Settings.GetDbConnection("rift_core");
 
 	// Setup connection to the `rift_core` database.
 	if (!RS.Db.Connect(riftCore))
@@ -90,7 +84,7 @@ bool CMud::Bootup()
 	}
 
 	// Setup connection to the `rift` database.
-	DbConnection rift = RS.SQL.Settings.GetDbConnection("rift");
+	DbConnection rift = RS.Settings.GetDbConnection("rift");
 	if (!RS.DbRift.Connect(rift))
 	{
 		Logger.Error("Failed to create the DbSession connection to the rift database.");
@@ -155,17 +149,11 @@ bool CMud::Bootup()
 	*/
 
 #ifndef NOLOAD
-	/*RS.SQL.IQuery("LOCK TABLES class_table READ, race_table READ, interp_table READ, 
-			world_areas READ, world_rooms READ");
-	*/	
-
 	/*
 	* Load areas, rooms, object templates, and mob templates
 	*/
-	
-	//RS.LoadAreas();
 
-	//RS.SQL.IQuery("UNLOCK TABLES");
+	//RS.LoadAreas();
 #endif
 	//RS.GameEngine.GameLoop();
 	return true;

@@ -35,7 +35,7 @@ int main(int argc, char **argv)
 	/*
 	 * Get the port number.
 	 */
-	port = atoi(RS.SQL.Settings.GetValue("Port").c_str());
+	port = atoi(RS.Settings.GetValue("Port").c_str());
 	if (argc > 1)
 	{
 		if (!is_number(argv[1]))
