@@ -37,6 +37,8 @@ void CLogger::Initialize()
 
 		spdlog::register_logger(logger);
 	}
+
+	cachedLogger = spdlog::get("rs");
 }
 
 /// Stops the logger from logging any more messages.

@@ -1,6 +1,7 @@
 #ifndef CLOGGER
 #define CLOGGER
 
+#include <memory>
 #include <string>
 #include "../include/spdlog/spdlog.h"
 
@@ -32,8 +33,9 @@ public:
 
 	template <typename... Args>
 	void Bug(std::string_view fmt, Args &&...args)
-	{		
-		spdlog::get("rs")->warn(fmt, std::forward<Args>(args)...);
+	{
+		if (cachedLogger)
+			cachedLogger->warn(fmt, std::forward<Args>(args)...);
 
 		//TODO: The old RS.Bug had this attached to it. Need to investigate if it is needed or not.
 		//	wiznet(str.data(), 0, 0, WIZ_DEBUG, 0, 0);
@@ -42,7 +44,8 @@ public:
 	template <typename... Args>
 	void Log(std::string_view fmt, Args &&...args)
 	{
-		spdlog::get("rs")->log(spdlog::level::info, fmt, std::forward<Args>(args)...);
+		if (cachedLogger)
+			cachedLogger->log(spdlog::level::info, fmt, std::forward<Args>(args)...);
 	}
 
 	/// @brief Log trace messages
@@ -53,7 +56,8 @@ public:
 	template <typename... Args>
 	void Trace(std::string_view fmt, Args &&...args)
 	{
-		spdlog::get("rs")->trace(fmt, std::forward<Args>(args)...);
+		if (cachedLogger)
+			cachedLogger->trace(fmt, std::forward<Args>(args)...);
 	}
 
 	/// @brief Log debug messages
@@ -64,7 +68,8 @@ public:
 	template <typename... Args>
 	void Debug(std::string_view fmt, Args &&...args)
 	{
-		spdlog::get("rs")->debug(fmt, std::forward<Args>(args)...);
+		if (cachedLogger)
+			cachedLogger->debug(fmt, std::forward<Args>(args)...);
 	}
 
 	/// @brief Log informational messages
@@ -75,7 +80,8 @@ public:
 	template <typename... Args>
 	void Info(std::string_view fmt, Args &&...args)
 	{
-		spdlog::get("rs")->info(fmt, std::forward<Args>(args)...);
+		if (cachedLogger)
+			cachedLogger->info(fmt, std::forward<Args>(args)...);
 	}
 
 	/// @brief Log warning messages
@@ -86,7 +92,8 @@ public:
 	template <typename... Args>
 	void Warn(std::string_view fmt, Args &&...args)
 	{
-		spdlog::get("rs")->warn(fmt, std::forward<Args>(args)...);
+		if (cachedLogger)
+			cachedLogger->warn(fmt, std::forward<Args>(args)...);
 	}
 
 	/// @brief Log error messages
@@ -97,7 +104,8 @@ public:
 	template <typename... Args>
 	void Error(std::string_view fmt, Args &&...args)
 	{
-		spdlog::get("rs")->error(fmt, std::forward<Args>(args)...);
+		if (cachedLogger)
+			cachedLogger->error(fmt, std::forward<Args>(args)...);
 	}
 
 	/// @brief Log critical messages
@@ -108,8 +116,12 @@ public:
 	template <typename... Args>
 	void Critical(std::string_view fmt, Args &&...args)
 	{
-		spdlog::get("rs")->critical(fmt, std::forward<Args>(args)...);
+		if (cachedLogger)
+			cachedLogger->critical(fmt, std::forward<Args>(args)...);
 	}
+
+private:
+	std::shared_ptr<spdlog::logger> cachedLogger;
 };
 
 #endif
