@@ -11,7 +11,6 @@
 #include <stdlib.h>
 #include <string.h>
 #include <fstream>
-#include "autogen/coldefs.h"
 #include "mud.h"
 #include "merc.h"
 #include "rift.h"
@@ -19,7 +18,6 @@
 #include "area.h"
 #include "room.h"
 #include "exit.h"
-#include "bootup.h"
 #include "update.h"
 #include "dioextra.h"
 #include "db.h"
@@ -76,11 +74,20 @@ bool CMud::Bootup()
 	fBootDb = true;
 
 	Logger.Info("Creating persistent SQL connection...");
-	DbConnection riftCore = RS.SQL.Settings.GetDbConnection("rift_core");
-	if (!RS.SQL.StartSQLServer(riftCore.Host.c_str(),
-	riftCore.Db.c_str(), riftCore.User.c_str(), riftCore.Pwd.c_str()))
+	DbConnection riftCore = RS.Settings.GetDbConnection("rift_core");
+
+	// Setup connection to the `rift_core` database.
+	if (!RS.Db.Connect(riftCore))
 	{
-		Logger.Warn("Failed to create a SQL connection.");
+		Logger.Error("Failed to create the DbSession connection to the rift_core database.");
+		return false;
+	}
+
+	// Setup connection to the `rift` database.
+	DbConnection rift = RS.Settings.GetDbConnection("rift");
+	if (!RS.DbRift.Connect(rift))
+	{
+		Logger.Error("Failed to create the DbSession connection to the rift database.");
 		return false;
 	}
 
@@ -142,17 +149,11 @@ bool CMud::Bootup()
 	*/
 
 #ifndef NOLOAD
-	/*RS.SQL.IQuery("LOCK TABLES class_table READ, race_table READ, interp_table READ, 
-			world_areas READ, world_rooms READ");
-	*/	
-
 	/*
 	* Load areas, rooms, object templates, and mob templates
 	*/
-	
-	//RS.LoadAreas();
 
-	//RS.SQL.IQuery("UNLOCK TABLES");
+	//RS.LoadAreas();
 #endif
 	//RS.GameEngine.GameLoop();
 	return true;
@@ -470,7 +471,7 @@ void CMud::InitializeTables()
 	//begin_benchmark
 
 	Logger.Info("Loading class and race data...");
-	CClass::LoadClassTable("* FROM class_table ORDER BY id ASC");
+	CClass::LoadClassTable();
 	//CRace::LoadRaceTable("* FROM race_table ORDER BY pcrace DESC, name ASC");
 
 	//Logger.Info("Loading commands...");

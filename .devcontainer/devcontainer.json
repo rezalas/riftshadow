@@ -1,12 +1,7 @@
-// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
-// https://github.com/microsoft/vscode-dev-containers/tree/v0.209.6/containers/cpp
 {
-	"name": "C++",
+"name": "C++ Ubuntu 24.04",
 	"build": {
-		"dockerfile": "Dockerfile",
-		// Update 'VARIANT' to pick an Debian / Ubuntu OS version: debian-11, debian-10, debian-9, ubuntu-21.04, ubuntu-20.04, ubuntu-18.04
-		// Use Debian 11, Debian 9, Ubuntu 18.04 or Ubuntu 21.04 on local arm64/Apple Silicon
-		"args": { "VARIANT": "ubuntu-22.04" }
+		"dockerfile": "Dockerfile"
 	},
 	"runArgs": ["--cap-add=SYS_PTRACE", "--security-opt", "seccomp=unconfined"],
 
@@ -24,18 +19,17 @@
 		//"git": "latest"
 	},
 	"remoteEnv": {
-    "PODMAN_USERNS": "keep-id"
-	
+	    "PODMAN_USERNS": "keep-id"
 	},
-"containerUser": "vscode",
+	"containerUser": "vscode",
 
 	"customizations": {
 		"vscode": {
 			//Add the IDs of extensions you want installed when the container is created.
 			"extensions": [
-			"ms-vscode.cpptools",
-			"ms-vscode.cmake-tools",
-			"matepek.vscode-catch2-test-adapter"
+				"ms-vscode.cpptools",
+				"ms-vscode.cmake-tools",
+				"matepek.vscode-catch2-test-adapter"
 			]			
 		}
 	}

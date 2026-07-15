@@ -18,6 +18,7 @@
 #include "magic.h"
 #include "dioextra.h"
 #include "comm.h"
+#include "./repositories/playerrepository.h"
 #include "chardef.h"
 #include "const.h"
 #include "utility.h"
@@ -92,7 +93,6 @@ void save_char_obj(CHAR_DATA *ch)
 	char strsave[MAX_INPUT_LENGTH], filenm[MSL], query[MSL * 2];
 	FILE *fp;
 	CHAR_DATA *search;
-	int res;
 
 	if (is_npc(ch) || mPort == 4000) // do not save, sir!!!
 		return;
@@ -106,20 +106,23 @@ void save_char_obj(CHAR_DATA *ch)
 	/* create god log */
 	if (!is_immortal(ch))
 	{
-		res = RS.SQL.Update(
-			"players SET pks=%.2f,level=%d,class=%d,race=%d,cabal=%d,sex=%d,hours=%ld,align=%d,ethos=%d,gold=%ld WHERE "\
-			"name='%s' LIMIT 1",
-			ch->pcdata->frags[PK_KILLS],
-			ch->level,
-			ch->Class()->GetIndex(),
-			ch->race,
-			ch->cabal,
-			ch->pcdata->true_sex,
-			(ch->played + current_time - ch->logon) / 3600,
-			ch->alignment,
-			ch->pcdata->ethos,
-			ch->gold + ch->gold_bank,
-			ch->true_name);
+		Player player;
+		player.name = ch->true_name;
+		player.pks = ch->pcdata->frags[PK_KILLS];
+		player.level = ch->level;
+		player.class_ = ch->Class()->GetIndex();
+		player.race = ch->race;
+		player.cabal = ch->cabal;
+		player.sex = ch->pcdata->true_sex;
+		player.hours = (int)((ch->played + current_time - ch->logon) / 3600);
+		player.align = ch->alignment;
+		player.ethos = ch->pcdata->ethos;
+		player.gold = ch->gold + ch->gold_bank;
+
+		auto players = PlayerRepository(RS.Db);
+		auto saved = players.SaveStats(player);
+		if (!saved)
+			RS.Logger.Warn("Failed to save stats for player [{}]", ch->true_name);
 	}
 
 	sprintf(strsave, "%s/%s.plr", RIFT_PLAYER_DIR, capitalize(ch->true_name));

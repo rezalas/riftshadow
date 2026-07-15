@@ -34,7 +34,7 @@ public:
 		RString			name;
 		RString			who_name;			//3 letter name that shows on who
 
-		static void		LoadClassTable(const char *query);
+		static void		LoadClassTable();
 		
 		int				attr_prime;				//prime attrib
 		int				align;

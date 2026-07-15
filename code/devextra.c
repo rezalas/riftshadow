@@ -38,7 +38,18 @@
 #include "fight.h"
 #include "skills.h"
 #include "update.h"
+#include "./repositories/theftrepository.h"
+#include "./repositories/inductionrepository.h"
+#include "./repositories/noterepository.h"
+#include "./repositories/offeringrepository.h"
+#include "./repositories/loginrepository.h"
+#include "./repositories/pklogrepository.h"
+#include "./repositories/sitecommentrepository.h"
+#include "./repositories/sitetrackerrepository.h"
+#include "./repositories/graveyardrepository.h"
+#include "./repositories/playerrepository.h"
 #include "./include/spdlog/fmt/bundled/format.h"
+#include "./include/spdlog/fmt/bundled/printf.h"
 
 bool IS_IMP(CHAR_DATA *ch)
 {
@@ -51,13 +62,6 @@ bool IS_IMP(CHAR_DATA *ch)
 float calculate_inflation()
 {
 	return 1.00f + 3.00f * (player_gold / total_gold);
-}
-
-char *escape_string(char *string)
-{
-	char txt[MSL];
-	mysql_escape_string(txt, string, strlen(string));
-	return talloc_string(txt);
 }
 
 void do_pswitch(CHAR_DATA *ch, char *argument)
@@ -159,45 +163,56 @@ void do_clean(CHAR_DATA *ch, char *argument)
 
 void clean_mud()
 {
-	char buf[MSL], tbuf[MSL];
-	int cres = 0;
-	CRow row;
-	CSQLInterface nSQL;
+	char tbuf[MSL];
 	DESCRIPTOR_DATA *d;
 
-	DbConnection riftCore = nSQL.Settings.GetDbConnection("rift");
-	if (!nSQL.StartSQLServer(riftCore.Host.c_str(),
-		riftCore.Db.c_str(), riftCore.User.c_str(), riftCore.Pwd.c_str()))
+	// Bail if either persistent connection is down (clean_mud touches both the
+	// `rift_core` players table via RS.Db and the `rift` prune tables via
+	// RS.DbRift). Preserves the legacy connect-or-return guard without the
+	// redundant per-call reconnect it used to do.
+	if (!RS.Db.IsValid() || !RS.DbRift.IsValid())
 	{
-		RS.Logger.Error("clean_mud: failed to establish a database connection.");
+		RS.Logger.Error("clean_mud: database connection is not available.");
 		return;
 	}
 
 	// 5184000 = one month
 
-	sprintf(buf, "DELETE FROM logins WHERE ctime + 5184000 < %ld", current_time);
-	one_query(buf);
+	auto logins = LoginRepository(RS.DbRift);
+	auto removedLogins = logins.RemoveOlderThan(current_time - 5184000);
+	if (removedLogins > 0)
+		RS.Logger.Info("clean_mud: removed {} old logins.", removedLogins);
 
-	sprintf(buf, "DELETE FROM notes WHERE timestamp + 2592000 < %ld", current_time);
-	one_query(buf);
+	auto notes = NoteRepository(RS.DbRift);
+	auto removed = notes.RemoveOlderThan(current_time - 2592000);
+	if (removed > 0)
+		RS.Logger.Info("clean_mud: removed {} old notes.", removed);
 
-	sprintf(buf, "DELETE FROM offerings WHERE time + 2592000 < %ld", current_time);
-	one_query(buf);
+	auto offerings = OfferingRepository(RS.DbRift);
+	removed = offerings.RemoveOlderThan(current_time - 2592000);
+	if (removed > 0)
+		RS.Logger.Info("clean_mud: removed {} old offerings.", removed);
 
-	sprintf(buf, "DELETE FROM pklogs WHERE ctime + 5184000 < %ld", current_time);
-	one_query(buf);
+	auto pklogs = PkLogRepository(RS.DbRift);
+	auto removedPklogs = pklogs.RemoveOlderThan(current_time - 5184000);
+	if (removedPklogs > 0)
+		RS.Logger.Info("clean_mud: removed {} old pklogs.", removedPklogs);
+
+	auto players = PlayerRepository(RS.Db);
 
 	// autodelete...
-	cres = RS.SQL.Select("name FROM players WHERE lastlogin + 2592000 < %ld", current_time);
+	auto inactiveNames = players.FindNamesInactiveSince(current_time - 2592000);
 
-	if (cres)
+	if (!inactiveNames.empty())
 	{
 		d = new_descriptor();
 
-		while (!RS.SQL.End())
+		// Names are materialised up-front, so delete_char() below can safely
+		// mutate the players table mid-loop (the legacy code iterated a live
+		// RS.SQL cursor while delete_char clobbered it -- a latent bug).
+		for (const auto &pname : inactiveNames)
 		{
-			row = RS.SQL.GetRow();
-			strcpy(&tbuf[0], row[0]);
+			strcpy(&tbuf[0], pname.c_str());
 
 			if (!load_char_obj(d, tbuf))
 			{
@@ -217,20 +232,19 @@ void clean_mud()
 	}
 
 	// compare db to pfiles
-	cres = RS.SQL.Select("name FROM players");
+	auto allNames = players.FindAllNames();
 
-	if (cres)
+	if (!allNames.empty())
 	{
 		d = new_descriptor();
 
-		while (!RS.SQL.End())
+		for (const auto &pname : allNames)
 		{
-			row = RS.SQL.GetRow();
-			strcpy(&tbuf[0], row[0]);
+			strcpy(&tbuf[0], pname.c_str());
 
 			if (!load_char_obj(d, tbuf))
 			{
-				nSQL.Delete("players WHERE name = '%s'", row[0]);
+				players.RemoveByName(pname);
 				RS.Logger.Info("Deleting player...");
 			}
 
@@ -243,34 +257,23 @@ void clean_mud()
 
 void do_listoffer(CHAR_DATA *ch, char *argument)
 {
-	MYSQL_RES *res_set;
-	MYSQL_ROW row;
-	char query[MSL], buf[MSL], result[200], arg1[MSL], arg2[MSL];
-	bool autol= false, found= false;
+	char buf[MSL], result[200], arg1[MSL], arg2[MSL];
+	bool found = false;
 	int status, i = 1, argnum;
 	long ttime;
 
+	auto offerings = OfferingRepository(RS.DbRift);
+
 	if (!str_cmp(argument, "auto"))
-		autol = true;
-
-	sprintf(query, "SELECT * FROM offerings WHERE deity = \"%s\" %s ORDER BY time ASC",
-		ch->true_name,
-		autol ? "AND status = 0" : "");
-
-	res_set = one_query_res(query);
-
-	if (autol && !mysql_num_rows(res_set))
 	{
-		mysql_free_result(res_set);
+		if (offerings.FindUnviewedByDeity(ch->true_name).empty())
+			return;
+
+		send_to_char("You have unviewed offerings in your shrine.\n\r", ch);
 		return;
 	}
-	else if (autol)
-	{
-		mysql_free_result(res_set);
-		
-		send_to_char("You have unviewed offerings in your shrine.\n\r", ch);		
-		return;
-	}
+
+	auto offers = offerings.FindByDeity(ch->true_name);
 
 	if (strstr(argument, "accept") || strstr(argument, "reject"))
 	{
@@ -278,7 +281,7 @@ void do_listoffer(CHAR_DATA *ch, char *argument)
 		argument = one_argument(argument, arg2);
 		argnum = atoi(arg2);
 
-		while ((row = mysql_fetch_row(res_set)))
+		for (auto &offer : offers)
 		{
 			if (i++ < argnum || argnum < 1)
 				continue;
@@ -288,10 +291,9 @@ void do_listoffer(CHAR_DATA *ch, char *argument)
 			else
 				status = 2;
 
-			sprintf(query, "UPDATE offerings SET status=%i WHERE time=%s AND player='%s'", status, row[5], row[3]);
-			one_query(query);
+			offerings.SetStatus(offer.id, status);
 
-			auto buffer = fmt::format("{}'s offering has been {}ed.\n\r", row[3], arg1); //TODO: change the rest of the sprintf calls to format
+			auto buffer = fmt::format("{}'s offering has been {}ed.\n\r", offer.player, arg1); //TODO: change the rest of the sprintf calls to format
 			send_to_char(buffer.c_str(), ch);
 
 			found = true;
@@ -301,36 +303,33 @@ void do_listoffer(CHAR_DATA *ch, char *argument)
 		if (!found)
 			send_to_char("That offering wasn't found.\n\r", ch);
 
-		mysql_free_result(res_set);
 		return;
 	}
 
 	if (is_number(argument))
 	{
 		argnum = atoi(argument);
-		while ((row = mysql_fetch_row(res_set)))
+		for (auto &offer : offers)
 		{
 			if (i++ < argnum || argnum < 1)
 				continue;
 
-			status = atoi(row[4]);
-			ttime = atol(row[5]);
+			status = offer.status;
+			ttime = (long)offer.time;
 
 			strftime(result, 200, "%a %b %d, %l:%M%P", localtime(&ttime));
-			sprintf(buf, "Offering %d:\n\rFrom: %s\n\rTime: %s\n\rStatus: %s\n\rOffering is %s (Vnum %s)\n\r",
+			sprintf(buf, "Offering %d:\n\rFrom: %s\n\rTime: %s\n\rStatus: %s\n\rOffering is %s (Vnum %d)\n\r",
 				argnum,
-				row[3],
+				offer.player.c_str(),
 				result,
 				status == 0 ? "New" : status == 1 ? "Rejected" : status == 2 ? "Approved" : "",
-				row[2],
-				row[1]);
+				offer.offeringshort.c_str(),
+				offer.offeringvnum);
 			send_to_char(buf, ch);
 
 			found = true;
 			break;
 		}
-
-		mysql_free_result(res_set);
 
 		if (!found)
 			send_to_char("You have no offerings by that number.\n\r", ch);
@@ -340,10 +339,10 @@ void do_listoffer(CHAR_DATA *ch, char *argument)
 
 	send_to_char("Offering listing:\n\r", ch);
 
-	while ((row = mysql_fetch_row(res_set)))
+	for (auto &offer : offers)
 	{
-		status = atoi(row[4]);
-		sprintf(buf, "[%3i%c]  %s offered %s\n\r", i++, status == 0 ? 'N' : status == 1 ? 'R' : status == 2 ? 'A' : ' ', row[3], row[2]);
+		status = offer.status;
+		sprintf(buf, "[%3i%c]  %s offered %s\n\r", i++, status == 0 ? 'N' : status == 1 ? 'R' : status == 2 ? 'A' : ' ', offer.player.c_str(), offer.offeringshort.c_str());
 		send_to_char(buf, ch);
 		found = true;
 	}
@@ -352,16 +351,14 @@ void do_listoffer(CHAR_DATA *ch, char *argument)
 		send_to_char("There are currently no offerings to you.\n\r", ch);
 
 	send_to_char("Use listoffer <number> to view an offering, and listoffer accept/reject <number> to accept it or not.\n\r", ch);
-	mysql_free_result(res_set);
 }
 
 void do_offer(CHAR_DATA *ch, char *argument)
 {
-	MYSQL_ROW row;
 	OBJ_DATA *obj, *altar;
-	char query[MSL];
-	char *escape;
 	int status;
+
+	auto offerings = OfferingRepository(RS.DbRift);
 
 	// status: 0 unread 1 rejected 2 accepted
 	for (altar = object_list; altar; altar = altar->next)
@@ -378,19 +375,15 @@ void do_offer(CHAR_DATA *ch, char *argument)
 
 	if (!str_cmp(argument, ""))
 	{
-		sprintf(query, "SELECT * FROM offerings WHERE deity = \"%s\" AND player = \"%s\" ORDER BY time DESC LIMIT 1",
-			altar->in_room->owner,
-			ch->true_name);
+		auto latest = offerings.FindLatestByDeityAndPlayer(altar->in_room->owner, ch->true_name);
 
-		row = one_query_row(query);
-
-		if (!row)
+		if (latest.empty())
 		{
 			send_to_char("You find no signs of any offerings you may have made.\n\r", ch);
 			return;
 		}
 
-		status = atoi(row[4]);
+		status = latest[0].status;
 		if (status == 2)
 		{
 			send_to_char("Your offering seems to have been accepted.\n\r", ch);
@@ -424,15 +417,14 @@ void do_offer(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	escape = escape_string(obj->short_descr);
-
-	sprintf(query, "INSERT INTO offerings VALUES(\"%s\", %d, \"%s\", '%s', 0, %ld, nullptr)",
-		altar->in_room->owner,
-		obj->pIndexData->vnum,
-		escape,
-		ch->true_name,
-		current_time);
-	one_query(query);
+	Offering offering;
+	offering.deity = altar->in_room->owner;
+	offering.offeringvnum = obj->pIndexData->vnum;
+	offering.offeringshort = obj->short_descr;
+	offering.player = ch->true_name;
+	offering.status = 0;
+	offering.time = current_time;
+	offerings.Add(offering);
 
 	act("You place $p on $P, offering it to your deity.", ch, obj, altar, TO_CHAR);
 	act("$n places $s offering of $p on $P.", ch, obj, altar, TO_ROOM);
@@ -442,42 +434,27 @@ void do_offer(CHAR_DATA *ch, char *argument)
 
 void do_sitetrack(CHAR_DATA *ch, char *argument)
 {
-	MYSQL *conn, *conn2;
-	MYSQL_RES *res_set, *res2;
-	MYSQL_ROW row, row2;
 	BUFFER *buffer;
-	std::string query_buffer;
 	char buf[MSL], arg1[MSL], arg2[MSL], query[MSL];
-	char *escape;
-	int id, results = 0;
+	int results = 0;
 
 	if (is_npc(ch))
 		return;
 
-	conn = open_conn();
+	auto sites = SiteTrackerRepository(RS.DbRift);
 
 	if (!strcmp(argument, ""))
 	{
+		auto comments = SiteCommentRepository(RS.DbRift);
 		buffer = new_buf();
-		conn2 = open_conn();
-
-		sprintf(query, "SELECT site_id, denials, site_name from sitetracker");
-		mysql_query(conn, query);
-
-		res_set = mysql_store_result(conn);
 
 		add_buf(buffer, "ID #     Site                       Denials    Comments\n\r");
 
-		while ((row = mysql_fetch_row(res_set)) != nullptr)
+		for (const auto &site : sites.FindAll())
 		{
-			id = atoi(row[0]);
-
-			sprintf(query, "SELECT site_id FROM sitecomments WHERE site_id = %d", id);
-			mysql_query(conn2, query);
-
-			res2 = mysql_store_result(conn2);
-			sprintf(buf, "%4d     %-26s %-10s %ld\n\r", id, row[2], row[1], (long)mysql_affected_rows(conn2));
-			mysql_free_result(res2);
+			sprintf(buf, "%4d     %-26s %-10d %d\n\r",
+				site.site_id, site.site_name.c_str(), site.denials,
+				comments.CountBySite(site.site_id));
 			add_buf(buffer, buf);
 		}
 
@@ -489,10 +466,6 @@ void do_sitetrack(CHAR_DATA *ch, char *argument)
 			add_buf(buffer, "Use sitetrack delcomment <comment id> to delete a comment, and sitetrack delsite <site id> to delete a site.\n\r");
 
 		page_to_char(buf_string(buffer), ch);
-		mysql_free_result(res_set);
-
-		mysql_close(conn);
-		mysql_close(conn2);
 		free_buf(buffer);
 		return;
 	}
@@ -508,13 +481,12 @@ void do_sitetrack(CHAR_DATA *ch, char *argument)
 			return;
 		}
 
-		escape = escape_string(arg2);
-		sprintf(query, "INSERT INTO sitetracker VALUES(nullptr, '%s',0)", escape);
-		one_query(query);
+		SiteTracker site;
+		site.site_name = arg2;
+		sites.Add(site);
 
 		auto listing = fmt::format("A new site ({}) was added to the IP listings.  You should add a comment now explaining why it was added.\n\r", arg2);
 
-		mysql_close(conn);
 		send_to_char(listing.c_str(), ch);
 		return;
 	}
@@ -528,62 +500,58 @@ void do_sitetrack(CHAR_DATA *ch, char *argument)
 		ch->pcdata->helpid = atoi(arg2);
 		enter_text(ch, comment_end_fun);
 
-		mysql_close(conn);
 		return;
 	}
 
 	if (!str_cmp(arg1, "delcomment") && get_trust(ch) >= 58)
 	{
-		query_buffer = fmt::format("DELETE FROM sitecomments WHERE comment_id={}", arg2);
-		one_query(query_buffer.data());
+		auto comments = SiteCommentRepository(RS.DbRift);
+		auto deleted = comments.Remove(atoi(arg2));
+		if (deleted > 0)
+			RS.Logger.Info("Deleted {} site comments with id [{}]", deleted, arg2);
 
-		mysql_close(conn);
 		send_to_char("Ok.\n\r", ch);
 		return;
 	}
 
 	if (!str_cmp(arg1, "delsite") && get_trust(ch) >= 58)
 	{
-		query_buffer = fmt::format("DELETE FROM sitetracker WHERE site_id={}", arg2);
-		one_query(query_buffer.data());
+		sites.Remove(atoi(arg2));
 
-		mysql_close(conn);
 		send_to_char("Ok.\n\r", ch);
 		return;
 	}
 
 	if (is_number(arg1))
 	{
-		buffer = new_buf();
-		query_buffer = fmt::format("SELECT * from sitetracker where site_id={}", arg1);
-		mysql_query(conn, query_buffer.c_str());
+		auto found = sites.FindById(atoi(arg1));
 
-		res_set = mysql_store_result(conn);
-
-		if (!res_set || mysql_affected_rows(conn) < 1)
+		if (found.empty())
 		{
 			send_to_char("Invalid ID number.\n\r", ch);
-			mysql_close(conn);
 			return;
 		}
 
-		row = mysql_fetch_row(res_set);
-		sprintf(buf, "Viewing %s (id %s).\n\r", row[1], row[0]);
+		const auto &site = found.front();
+		buffer = new_buf();
+
+		sprintf(buf, "Viewing %s (id %d).\n\r", site.site_name.c_str(), site.site_id);
 		send_to_char(buf, ch);
 
-		sprintf(buf, "%s players from this site have been denied.", row[2]);
+		sprintf(buf, "%d players from this site have been denied.", site.denials);
+		send_to_char(buf, ch);
+
 		send_to_char("Comments:\n\r", ch);
 
-		conn2 = open_conn();
-		query_buffer = fmt::format("SELECT * from sitecomments where site_id={}", arg1);
-		mysql_query(conn2, query_buffer.c_str());
-
-		res2 = mysql_store_result(conn2);
+		auto comments = SiteCommentRepository(RS.DbRift);
+		auto siteComments = comments.FindBySite(site.site_id);
 		buf[0] = '\r';
 
-		while ((row2 = mysql_fetch_row(res2)))
+		for (const auto &comment : siteComments)
 		{
-			sprintf(buf, "Added by %s on %s (CID #%s):\n\r%s", row2[2], row2[3], row2[1], row2[4]);
+			sprintf(buf, "Added by %s on %s (CID #%d):\n\r%s",
+				comment.comment_name.c_str(), comment.comment_date.c_str(),
+				comment.comment_id, comment.comment.c_str());
 			add_buf(buffer, buf);
 		}
 
@@ -594,17 +562,13 @@ void do_sitetrack(CHAR_DATA *ch, char *argument)
 		{
 			add_buf(buffer, "Players from site:\n\r");
 
-			mysql_free_result(res2);
-
-			sprintf(query, "SELECT DISTINCT name FROM logins WHERE site RLIKE '%s'", row[1]);
-			mysql_query(conn2, query);
-
-			res2 = mysql_store_result(conn2);
+			auto logins = LoginRepository(RS.DbRift);
+			auto siteNames = logins.FindDistinctNamesBySite(site.site_name);
 			buf[0] = '\0';
 
-			while ((row2 = mysql_fetch_row(res2)))
+			for (const auto &siteName : siteNames)
 			{
-				sprintf(query, "%-12s", row2[0]);
+				sprintf(query, "%-12s", siteName.c_str());
 				strcat(buf, query);
 
 				if (++results % 5 == 0)
@@ -622,101 +586,68 @@ void do_sitetrack(CHAR_DATA *ch, char *argument)
 		}
 
 		page_to_char(buf_string(buffer), ch);
-		mysql_free_result(res_set);
-		mysql_free_result(res2);
-
-		mysql_close(conn);
-		mysql_close(conn2);
 		free_buf(buffer);
 	}
 }
 
 void comment_end_fun(CHAR_DATA *ch, char *argument)
 {
-	char query[MSL];
-	char *escape;
+	char buf[MSL];
 
-	if (strstr(argument, "\""))
+	// The body is now a bound parameter, so the legacy double-quote guard (which
+	// only existed because the comment was interpolated into a double-quoted SQL
+	// literal) is gone along with the escape_string call.
+	SiteComment comment;
+	comment.site_id = ch->pcdata->helpid;
+	comment.comment_name = ch->true_name;
+	comment.comment_date = log_time();
+	comment.comment = argument;
+
+	auto comments = SiteCommentRepository(RS.DbRift);
+	auto added = comments.Add(comment);
+
+	if (!added)
 	{
-		send_to_char("Error:  Your comment contained a double-quotation mark.  You must use single quotes to prevent errors.\n\r", ch);
-		return;
+		send_to_char("There was an error adding your comment.  Please try again later.\n\r", ch);
+	}
+	else
+	{
+		sprintf(buf, "Your comment was added.  Use sitetrack %d to view your comments.\n\r", ch->pcdata->helpid);
+		send_to_char(buf, ch);
 	}
 
-	escape = escape_string(argument);
-	sprintf(query, "INSERT INTO sitecomments VALUES(%d, nullptr, \"%s\", \"%s\", \"%s\")",
-		ch->pcdata->helpid,
-		ch->true_name,
-		log_time(),
-		escape);
-	one_query(query);
-
-	sprintf(query, "Your comment was added.  Use sitetrack %d to view your comments.\n\r", ch->pcdata->helpid);
-	send_to_char(query, ch);
 	ch->pcdata->entered_text[0] = '\0';
 }
 
 void show_database_info(CHAR_DATA *ch, char *argument)
 {
-	MYSQL *conn, *conn2;
-	MYSQL_RES *res_set, *res2;
-	MYSQL_ROW row, row2;
-	char query[MSL], buf[MSL], buf2[MSL];
-	float lpercent;
+	char buf[MSL];
 
-	return;
+	auto players = PlayerRepository(RS.Db);
+	auto found = players.FindByName(argument);
 
-	sprintf(query, "SELECT * from players where name='%s'", argument);
-	conn = open_conn();
-	mysql_query(conn, query);
-	res_set = mysql_store_result(conn);
-
-	if (!mysql_affected_rows(conn))
+	if (found.empty())
 	{
-		mysql_free_result(res_set);
-		mysql_close(conn);
 		send_to_char("  No database entry for player found.\n\r", ch);
 		return;
 	}
 
-	row = mysql_fetch_row(res_set);
-	conn2 = open_conn();
+	const Player &player = found[0];
+	int totalLogins = player.noc_logins + player.c_logins;
 
-	if ((atoi(row[11]) + atoi(row[12])) > 0) // caballed
+	if (totalLogins > 0) // caballed
 	{
-		lpercent = atoi(row[12]) / (atoi(row[11]) + atoi(row[12])) * 100;
+		float lpercent = (float)player.c_logins / totalLogins * 100;
 
-		sprintf(buf, "  Power: %0.2f%% (%s/%d)", lpercent, row[12], atoi(row[12]) + atoi(row[11]));
+		sprintf(buf, "  Power: %0.2f%% (%d/%d)", lpercent, player.c_logins, totalLogins);
 		send_to_char(buf, ch);
 
-		sprintf(query, "SELECT avg(c_logins) / (avg(c_logins) + avg(noc_logins))*100 from players where c_logins>0");
-		mysql_query(conn2, query);
+		float gameWide = players.AverageCabalPowerPercent();
+		float cabalWide = players.AverageCabalPowerPercent(player.cabal);
 
-		res2 = mysql_store_result(conn2);
-		row2 = mysql_fetch_row(res2);
-
-		sprintf(buf2, " and cabal=%s", row[5]);
-		strcat(query, buf2);
-
-		row2[0][6] = '\0';
-
-		sprintf(buf, " [Game-wide: %4s%%, ", row2[0]);
+		sprintf(buf, " [Game-wide: %0.2f%%, Cabal-wide: %0.2f%%]\n\r", gameWide, cabalWide);
 		send_to_char(buf, ch);
-
-		mysql_free_result(res2);
-		mysql_query(conn2, query);
-
-		res2 = mysql_store_result(conn2);
-		row2 = mysql_fetch_row(res2);
-		row2[0][6] = '\0';
-
-		sprintf(buf, "Cabal-wide: %s%%]\n\r", row2[0]);
-		send_to_char(buf, ch);
-		mysql_free_result(res2);
 	}
-
-	mysql_free_result(res_set);
-	mysql_close(conn2);
-	mysql_close(conn);
 }
 
 void do_demo(CHAR_DATA *ch, char *name)
@@ -760,9 +691,7 @@ void do_demo(CHAR_DATA *ch, char *name)
 
 void delete_char(char *name, bool save_pfile)
 {
-	char query[MSL];
 	name = capitalize(name);
-	int cres = 0;
 
 	// whack their pfile.. or maybe just move it to dead_char
 	auto pfilePath = fmt::format("{}/{}.plr", RIFT_PLAYER_DIR, name);
@@ -779,102 +708,35 @@ void delete_char(char *name, bool save_pfile)
 			RS.Logger.Warn("Failed to remove [{}]", pfilePath);
 	}
 
-	cres = RS.SQL.Delete("players WHERE name='%s'", name);
+	auto players = PlayerRepository(RS.Db);
+	auto removed = players.RemoveByName(name);
+	if (removed > 0)
+		RS.Logger.Info("Removed player [{}]", name);
 
-	one_query(query);
+	auto pklogs = PkLogRepository(RS.DbRift);
+	removed = pklogs.RemoveByKiller(name);
+	if (removed > 0)
+		RS.Logger.Info("Removed {} pklog records for [{}]", removed, name);
 
-	sprintf(query, "DELETE FROM pklogs WHERE killer='%s'", name);
-	one_query(query);
+	auto thefts = TheftRepository(RS.Db);
+	removed = thefts.RemoveByChar(name);
+	if (removed > 0)
+		RS.Logger.Info("Removed {} theft records for [{}]", removed, name);
 
-	sprintf(query, "DELETE FROM theft WHERE ch='%s'", name);
-	one_query(query);
+	auto offerings = OfferingRepository(RS.DbRift);
+	removed = offerings.RemoveByPlayer(name);
+	if (removed > 0)
+		RS.Logger.Info("Removed {} offerings for [{}]", removed, name);
 
-	sprintf(query, "DELETE FROM offerings WHERE player='%s'", name);
-	one_query(query);
+	auto logins = LoginRepository(RS.DbRift);
+	removed = logins.RemoveByName(name);
+	if (removed > 0)
+		RS.Logger.Info("Removed {} login records for [{}]", removed, name);
 
-	sprintf(query, "DELETE FROM logins WHERE name='%s'", name);
-	one_query(query);
-
-	sprintf(query, "DELETE FROM inductions WHERE ch='%s'", name);
-	one_query(query);
-}
-
-MYSQL *open_fconn(void)
-{
-	CSQLInterface nSQL;
-	DbConnection riftForum = nSQL.Settings.GetDbConnection("riftforum");
-	return do_conn(riftForum.Host.c_str(), riftForum.User.c_str(),
-	 riftForum.Pwd.c_str(), riftForum.Db.c_str(), riftForum.Port, nullptr, 0);
-}
-
-MYSQL_ROW one_query_row(char *query)
-{
-	MYSQL_RES *res_set;
-	MYSQL_ROW row;
-
-	res_set = one_query_res(query);
-	row = mysql_fetch_row(res_set);
-	mysql_free_result(res_set);
-	return row;
-}
-
-MYSQL_ROW one_fquery_row(char *query)
-{
-	MYSQL *conn;
-	MYSQL_RES *res_set;
-	MYSQL_ROW row;
-
-	conn = open_fconn();
-
-	mysql_query(conn, query);
-	res_set = mysql_store_result(conn);
-	row = mysql_fetch_row(res_set);
-
-	mysql_free_result(res_set);
-
-	mysql_close(conn);
-	return row;
-}
-
-MYSQL_RES *one_query_res(char *query)
-{
-	MYSQL *conn;
-	MYSQL_RES *res_set;
-
-	conn = open_conn();
-
-	mysql_query(conn, query);
-	res_set = mysql_store_result(conn);
-
-	mysql_close(conn);
-	return res_set;
-}
-
-int one_query_count(char *query)
-{
-	MYSQL *conn;
-	MYSQL_RES *res_set;
-	int res;
-
-	conn = open_conn();
-
-	mysql_query(conn, query);
-	res_set = mysql_store_result(conn);
-	res = mysql_affected_rows(conn);
-
-	mysql_free_result(res_set);
-
-	mysql_close(conn);
-	return res;
-}
-
-void one_query(char *query)
-{
-	MYSQL *conn;
-
-	conn = open_conn();
-	mysql_query(conn, query);
-	mysql_close(conn);
+	auto inductions = InductionRepository(RS.DbRift);
+	inductions.RemoveByChar(name);
+	if (removed > 0)
+		RS.Logger.Info("Removed {} induction records for [{}]", removed, name);
 }
 
 void enter_text(CHAR_DATA *ch, DO_FUN *end_fun)
@@ -904,38 +766,18 @@ char *log_time(void)
 	return talloc_string(result);
 }
 
-MYSQL *open_conn(void)
-{
-	CSQLInterface nSQL;
-	DbConnection riftCore = nSQL.Settings.GetDbConnection("rift");
-	return do_conn(riftCore.Host.c_str(), riftCore.User.c_str(),
-	 riftCore.Pwd.c_str(), riftCore.Db.c_str(), riftCore.Port, nullptr, 0);
-}
-
-void one_fquery(char *query)
-{
-	MYSQL *conn;
-	conn = open_fconn();
-	mysql_query(conn, query);
-	mysql_close(conn);
-}
-
 void plug_graveyard(CHAR_DATA *ch, int type)
 {
-	int minlevel = 30, day, tid, i, max;
-	char buf[MSL], buf2[MSL], name[MSL], message[MSL], message_date[MSL], stid[MSL];
-	char align[MSL], ethos[MSL], type_death[MSL], message_death[MSL];
-	char *suf;
-	char ntime[MSL], year[MSL], month[MSL], dom[MSL], time[MSL], cur_date[MSL], unique[MSL];
-	MYSQL_ROW qrow;
+	int minlevel = 30, day, i;
 
-	return;
+	// TODO: Left the message building code here for now in case we decide to reviive posting to the forum or elsewhere.
 
 	if (ch->level < minlevel)
 		return;
 
 	day = time_info.day + 1;
 
+	std::string suf;
 	if (day > 4 && day < 20)
 		suf = "th";
 	else if (day % 10 == 1)
@@ -947,84 +789,93 @@ void plug_graveyard(CHAR_DATA *ch, int type)
 	else
 		suf = "th";
 
-	sprintf(message_date, "On the Day %s, %d%s of the Month %s, in the Year %d,",
+	std::string message_date = fmt::sprintf("On the Day %s, %d%s of the Month %s, in the Year %d,",
 		day_name[day % 6],
 		day,
 		suf,
 		month_name[time_info.month],
 		time_info.year);
 
+	std::string type_death, message_death;
 	if (type == 1)
 	{
-		sprintf(type_death, "DEL");
-		sprintf(message_death, "took %s own life.", (ch->sex == 2) ? "her" : "his");
+		type_death = "DEL";
+		message_death = fmt::sprintf("took %s own life.", (ch->sex == 2) ? "her" : "his");
 	}
 	else if (type == 2)
 	{
-		sprintf(type_death, "CON");
-		sprintf(message_death, "perished in battle.");
+		type_death = "CON";
+		message_death = "perished in battle.";
 	}
 	else if (type == 3)
 	{
-		sprintf(type_death, "AGE");
-		sprintf(message_death, "perished of old age.");
+		type_death = "AGE";
+		message_death = "perished of old age.";
 	}
 	else
 	{
-		sprintf(type_death, "AUTO");
-		sprintf(message_death, "perished in %s sleep.", (ch->sex == 2) ? "her" : "his");
+		type_death = "AUTO";
+		message_death = fmt::sprintf("perished in %s sleep.", (ch->sex == 2) ? "her" : "his");
 	}
 
-	strftime(month, 200, "%m", localtime(&current_time));
-	strftime(dom, 200, "%d", localtime(&current_time));
-	strftime(time, 200, "%H:%M:%S", localtime(&current_time));
-	strftime(ntime, 200, "%H%M%S", localtime(&current_time));
-	strftime(year, 200, "%Y", localtime(&current_time));
+	auto strf_time = [](const char *format) {
+		char buf[64];
+		strftime(buf, sizeof(buf), format, localtime(&current_time));
+		return std::string(buf);
+	};
 
-	qrow = one_fquery_row("select max(zthreadid) from gabe20010201051916");
+	std::string month = strf_time("%m");
+	std::string dom = strf_time("%d");
+	std::string time_str = strf_time("%H:%M:%S");
+	std::string ntime = strf_time("%H%M%S");
+	std::string year = strf_time("%Y");
 
-	if (qrow[0] != nullptr)
-	{
-		sprintf(stid, "%15.0f", (float)(atoi(qrow[0]) + 1));
+	// TODO: Possibly add this back in if we decide to keep the forum posting functionality.
+	//  For now, it's commented out because the forum database is non-existent. If revived,
+	//  this must go through the ORM (a repository on RS.DbRift), not the deleted raw
+	//  one_fquery/open_fconn helpers.
+	// qrow = <select max(zthreadid) from gabe20010201051916 via the forum repository>
 
-		for (i = 0; stid[i] != '\0'; i++)
-		{
-			if (stid[i] == ' ')
-				stid[i] = '0';
-		}
-	}
-	else
-	{
-		sprintf(stid, "000000000000000");
-	}
+	// if (qrow[0] != nullptr)
+	// {
+	// 	stid = fmt::sprintf("%15.0f", (float)(atoi(qrow[0]) + 1));
+	// 	std::replace(stid.begin(), stid.end(), ' ', '0');
+	// }
+	// else
+	// {
+		std::string stid = "000000000000000";
+	//}
 
-	sprintf(cur_date, "%s/%s/%s %s", month, dom, year, time);
-	sprintf(unique, "%s%s%s%s", year, month, dom, ntime);
-	sprintf(name, "(%s) %s%s", type_death, ch->true_name, ch->pcdata->title);
+	std::string cur_date = fmt::sprintf("%s/%s/%s %s", month, dom, year, time_str);
+	std::string unique = fmt::sprintf("%s%s%s%s", year, month, dom, ntime);
+	std::string name = fmt::sprintf("(%s) %s%s", type_death, (const char *)ch->true_name, ch->pcdata->title);
 	if (ch->pcdata->extitle != nullptr)
-		sprintf(name, "%s%s", name, ch->pcdata->extitle);
+		name += ch->pcdata->extitle;
 
 	/* Message */
+	std::string align;
 	if (ch->alignment == 1000)
-		sprintf(align, "Good");
+		align = "Good";
 	else if (ch->alignment == 0)
-		sprintf(align, "Neutral");
+		align = "Neutral";
 	else
-		sprintf(align, "Evil");
-	if (ch->pcdata->ethos == 1000)
-		sprintf(ethos, "Lawful");
-	else if (ch->pcdata->ethos == 0)
-		sprintf(ethos, "Neutral");
-	else
-		sprintf(ethos, "Chaotic");
+		align = "Evil";
 
-	sprintf(message, "%s %s %s\n\r%s%s", message_date, ch->true_name, message_death, ch->true_name, ch->pcdata->title);
+	std::string ethos;
+	if (ch->pcdata->ethos == 1000)
+		ethos = "Lawful";
+	else if (ch->pcdata->ethos == 0)
+		ethos = "Neutral";
+	else
+		ethos = "Chaotic";
+
+	std::string message = fmt::sprintf("%s %s %s\n\r%s%s",
+		message_date, (const char *)ch->true_name, message_death, (const char *)ch->true_name, ch->pcdata->title);
 
 	if (ch->pcdata->extitle != nullptr)
-		sprintf(message, "%s%s", message, ch->pcdata->extitle);
+		message += ch->pcdata->extitle;
 
-	sprintf(message, "%s\rLevel: %d\rAge: %d %s years old, born in the Caelumaedani year %d.\rHours: %d\rRace: %s\rSex: %s\rClass: %s\r",
-		message,
+	message += fmt::sprintf("\rLevel: %d\rAge: %d %s years old, born in the Caelumaedani year %d.\rHours: %d\rRace: %s\rSex: %s\rClass: %s\r",
 		ch->level,
 		get_age(ch),
 		pc_race_table[ch->race].race_time,
@@ -1036,66 +887,73 @@ void plug_graveyard(CHAR_DATA *ch, int type)
 
 	if (ch->Class()->GetIndex() == CLASS_WARRIOR)
 	{
-		sprintf(message, "%sStyle Specializations: ", message);
+		message += "Style Specializations: ";
 
 		for (i = 1; i < MAX_STYLE; i++)
 		{
 			if (IS_SET(ch->pcdata->styles, style_table[i].bit))
 			{
-				sprintf(message, "%s%s ", message, style_table[i].name);
+				message += fmt::sprintf("%s ", style_table[i].name);
 			}
 		}
 
-		sprintf(message, "%s\r", message);
+		message += "\r";
 	}
 	else if (ch->Class()->GetIndex() == CLASS_SORCERER)
 	{
-		sprintf(message, "%s%s's major elemental focus was %s and %s para-elemental focus was %s.\r",
-			message,
-			ch->true_name,
+		message += fmt::sprintf("%s's major elemental focus was %s and %s para-elemental focus was %s.\r",
+			(const char *)ch->true_name,
 			sphere_table[ch->pcdata->ele_major].name,
 			(ch->sex == 2) ? "her" : "his",
 			sphere_table[ch->pcdata->ele_para].name);
 	}
 
-	sprintf(message, "%sAlignment: %s\rEthos: %s", message, align, ethos);
+	message += fmt::sprintf("Alignment: %s\rEthos: %s", align, ethos);
 
 	if (ch->cabal)
 	{
-		sprintf(message, "%s\rCabal: %s, %s", message, cabal_table[ch->cabal].who_name, cabal_table[ch->cabal].long_name);
+		message += fmt::sprintf("\rCabal: %s, %s", cabal_table[ch->cabal].who_name, cabal_table[ch->cabal].long_name);
 		if (ch->cabal == CABAL_HORDE && ch->pcdata->tribe)
-			sprintf(message, "%s, of the %s Tribe", message, palloc_string(capitalize(tribe_table[ch->pcdata->tribe].name)));
+			message += fmt::sprintf(", of the %s Tribe", palloc_string(capitalize(tribe_table[ch->pcdata->tribe].name)));
 	}
 
 	if ((ch->pcdata->frags[PK_KILLS] + ch->pcdata->fragged) > 0)
-		sprintf(message, "%s\rPK Ratio: %.2f%%", message, (ch->pcdata->frags[PK_KILLS] * 100 / (ch->pcdata->frags[PK_KILLS] + ch->pcdata->fragged)));
+		message += fmt::sprintf("\rPK Ratio: %.2f%%", (double)(ch->pcdata->frags[PK_KILLS] * 100 / (ch->pcdata->frags[PK_KILLS] + ch->pcdata->fragged)));
 	else
-		sprintf(message, "%s\rPK Ratio: 0%%", message);
+		message += "\rPK Ratio: 0%";
 
-	sprintf(buf2,
-			"insert into graveyard(Pname, Pfrags, Pfgood, Pfneutral, Pfevil, Pfdeaths, Pmdeaths, Phours) "\
-			"values('%s',%.3f, %.3f, %.3f, %.3f, %.3f, %d, %d)",\
-			ch->true_name, ch->pcdata->frags[PK_KILLS], ch->pcdata->frags[PK_GOOD], ch->pcdata->frags[PK_NEUTRAL],
-			ch->pcdata->frags[PK_EVIL], ch->pcdata->fragged, ch->pcdata->killed[MOB_KILLED], get_hours(ch));
-	one_query(buf2);
+	Graveyard grave;
+	grave.Pname = ch->true_name;
+	grave.Pfrags = ch->pcdata->frags[PK_KILLS];
+	grave.Pfgood = ch->pcdata->frags[PK_GOOD];
+	grave.Pfneutral = ch->pcdata->frags[PK_NEUTRAL];
+	grave.Pfevil = ch->pcdata->frags[PK_EVIL];
+	grave.Pfdeaths = ch->pcdata->fragged;
+	grave.Pmdeaths = ch->pcdata->killed[MOB_KILLED];
+	grave.Phours = get_hours(ch);
 
-	sprintf(buf,
-			"insert into gabe20010201051916(zposter,zposter_email,zsubject,zmessage,zdatetime,zaddress,zunique,"\
-			"zthreadid,zdelete,zmod) values('Death_Wizard','immortals@riftshadow.com','%s','%s',"\
-			"'%s','localhost',%s,'%s',0,'Death_Wizard')",
-			name, message, cur_date, unique, stid);
-	one_fquery(buf);
+	auto graveyard = GraveyardRepository(RS.DbRift);
+	auto added = graveyard.Add(grave);
+	if (!added)
+	{
+		RS.Logger.Warn("Failed to add graveyard record for [{}]", ch->true_name);
+	}
+
+	// TODO: Possibly add this back in if we decide to keep the forum posting functionality.
+	//  For now, it's commented out because the forum database is non-existent. If revived,
+	//  this insert must go through the repositories, not the deleted raw
+	//  one_fquery/open_fconn helpers.
+	// auto buf = fmt::sprintf(
+	// 		"insert into gabe20010201051916(zposter,zposter_email,zsubject,zmessage,zdatetime,zaddress,zunique,"\
+	// 		"zthreadid,zdelete,zmod) values('Death_Wizard','immortals@riftshadow.com','%s','%s',"\
+	// 		"'%s','localhost',%s,'%s',0,'Death_Wizard')",
+	// 		name, message, cur_date, unique, stid);
 }
 
 void do_pktrack(CHAR_DATA *ch, char *argument)
 {
-	MYSQL *conn;
-	MYSQL_ROW row;
-	MYSQL_RES *res_set;
-	BUFFER *buffer;
-	char arg1[MSL], qpart[MSL], buf[MSL];
+	char arg1[MSL], buf[MSL];
 	int i = 0;
-	bool found= false;
 
 	if (!str_cmp(argument, ""))
 	{
@@ -1103,72 +961,51 @@ void do_pktrack(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	buffer = new_buf();
 	argument = one_argument(argument, arg1);
 
+	PkLogField field;
 	if (!str_cmp(arg1, "wins"))
-	{
-		sprintf(qpart, "killer RLIKE '%s'", argument);
-	}
+		field = PkLogField::Killer;
 	else if (!str_cmp(arg1, "losses"))
-	{
-		sprintf(qpart, "victim RLIKE '%s'", argument);
-	}
+		field = PkLogField::Victim;
 	else if (!str_cmp(arg1, "all"))
-	{
-		sprintf(qpart, "killer RLIKE '%s' OR victim RLIKE '%s'", argument, argument);
-	}
+		field = PkLogField::KillerOrVictim;
 	else if (!str_cmp(arg1, "date"))
-	{
-		sprintf(qpart, "date RLIKE '%s'", argument);
-	}
+		field = PkLogField::Date;
 	else if (!str_cmp(arg1, "location"))
-	{
-		sprintf(qpart, "room RLIKE '%s'", argument);
-	}
+		field = PkLogField::Room;
 	else
 	{
 		send_to_char("Invalid option.\n\r", ch);
 		return;
 	}
 
-	auto query = fmt::format("SELECT * FROM pklogs WHERE {}", qpart);
-	conn = open_conn();
-	mysql_query(conn, query.c_str());
-	res_set = mysql_store_result(conn);
+	auto pklogs = PkLogRepository(RS.DbRift);
+	auto results = pklogs.Search(field, argument);
 
-	if (res_set == nullptr && mysql_field_count(conn) > 0)
+	if (results.empty())
 	{
-		send_to_char("Error accessing results.\n\r", ch);
-	}
-	else if (res_set)
-	{
-		while ((row = mysql_fetch_row(res_set)) != nullptr)
-		{
-			sprintf(buf, "%3d) %s(%s) killed %s(%s) at %s on %s\n\r",
-				++i,
-				row[0],
-				cabal_table[atoi(row[1])].name,
-				row[2],
-				cabal_table[atoi(row[3])].name, row[5],
-				row[4]);
-
-			add_buf(buffer, buf);
-			found = true;
-		}
-
-		if (!found)
-		{
-			send_to_char("No matching results found.\n\r", ch);
-			return;
-		}
-
-		mysql_free_result(res_set);
-		page_to_char(buf_string(buffer), ch);
-		free_buf(buffer);
+		send_to_char("No matching results found.\n\r", ch);
+		return;
 	}
 
-	mysql_close(conn);
+	BUFFER *buffer = new_buf();
+	for (auto &pklog : results)
+	{
+		sprintf(buf, "%3d) %s(%s) killed %s(%s) at %s on %s\n\r",
+			++i,
+			pklog.killer.c_str(),
+			cabal_table[pklog.killercabal].name,
+			pklog.victim.c_str(),
+			cabal_table[pklog.victimcabal].name,
+			pklog.room.c_str(),
+			pklog.date.c_str());
+
+		add_buf(buffer, buf);
+	}
+
+	page_to_char(buf_string(buffer), ch);
+	free_buf(buffer);
 }
 
 bool trusts(CHAR_DATA *ch, CHAR_DATA *victim)
@@ -1966,9 +1803,6 @@ char *flags_to_string(CHAR_DATA *ch, const struct flag_type *showflags, int flag
 
 void do_ltrack(CHAR_DATA *ch, char *argument)
 {
-	MYSQL *conn;
-	MYSQL_ROW row;
-	MYSQL_RES *res_set;
 	BUFFER *buffer;
 	char arg1[MSL], arg2[MSL], buf[MSL];
 	int type = -1, show = -1, i = 0;
@@ -2003,56 +1837,40 @@ void do_ltrack(CHAR_DATA *ch, char *argument)
 		}
 	}
 
-	buffer = new_buf();
-	sprintf(buf, "%d", type);
-	auto query = fmt::format("SELECT * FROM logins WHERE (name RLIKE '{}' OR site RLIKE '{}' OR time RLIKE '{}') {}{} ORDER BY ctime DESC",
-		arg1,
-		arg1,
-		arg1,
-		type > -1 ? "AND type=" : "",
-		type > -1 ? buf : "");
+	auto logins = LoginRepository(RS.DbRift);
+	auto results = logins.Search(arg1, type);
 
-	conn = open_conn();
-	mysql_query(conn, query.c_str());
-	res_set = mysql_store_result(conn);
-
-	if (res_set == nullptr && mysql_field_count(conn) > 0)
+	if (results.empty())
 	{
-		send_to_char("Error accessing results.\n\r", ch);
-	}
-	else if (res_set)
-	{
-		while ((row = mysql_fetch_row(res_set)) != nullptr)
-		{
-			i++;
-
-			if ((show != -1 && i > show) || i > 300)
-				break;
-
-			sprintf(buf, "%s", row[7]);
-			type = atoi(buf);
-
-			sprintf(buf, "%s: %s@%s logged %s. [%s%s%s (%s) obj]\n\r",
-				row[2],
-				row[0],
-				row[1],
-				type == 0 ? "new" : type == 1 ? "in" : type == 2 ? "out" : "?",
-				type == 2 ? row[4] : "",
-				type == 2 ? " played, " : "",
-				row[5],
-				row[6]);
-			add_buf(buffer, buf);
-		}
-
-		mysql_free_result(res_set);
-		page_to_char(buf_string(buffer), ch);
-		free_buf(buffer);
-		mysql_close(conn);
+		send_to_char("No matching results were found.\n\r", ch);
 		return;
 	}
 
-	send_to_char("No matching results were found.\n\r", ch);
-	mysql_close(conn);
+	buffer = new_buf();
+
+	for (const auto &login : results)
+	{
+		i++;
+
+		if ((show != -1 && i > show) || i > 300)
+			break;
+
+		int rowType = login.type;
+
+		sprintf(buf, "%s: %s@%s logged %s. [%s%s%d (%d) obj]\n\r",
+			login.time.c_str(),
+			login.name.c_str(),
+			login.site.c_str(),
+			rowType == 0 ? "new" : rowType == 1 ? "in" : rowType == 2 ? "out" : "?",
+			rowType == 2 ? std::to_string(login.played).c_str() : "",
+			rowType == 2 ? " played, " : "",
+			login.obj,
+			login.lobj);
+		add_buf(buffer, buf);
+	}
+
+	page_to_char(buf_string(buffer), ch);
+	free_buf(buffer);
 	return;
 }
 

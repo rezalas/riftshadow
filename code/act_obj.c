@@ -64,6 +64,7 @@
 #include "characterClasses/warrior.h"
 #include "misc.h"
 #include "skills.h"
+#include "./repositories/theftrepository.h"
 #include "./include/spdlog/fmt/bundled/format.h"
 
 #define MINOTAUR_ONLY		ASCII_I
@@ -3265,7 +3266,6 @@ void do_steal(CHAR_DATA *ch, char *argument)
 	CHAR_DATA *victim;
 	OBJ_DATA *obj;
 	int chance;
-	char query[MSL];
 
 	if (get_skill(ch, gsn_steal) == 0 || ch->level < skill_table[gsn_steal].skill_level[ch->Class()->GetIndex()])
 	{
@@ -3363,7 +3363,16 @@ void do_steal(CHAR_DATA *ch, char *argument)
 		act("$n tried to steal from $N.\n\r", ch, nullptr, victim, TO_NOTVICT);
 
 		if (!is_npc(ch) && !is_npc(victim) && !is_immortal(ch) && !is_immortal(victim))
-			RS.SQL.Insert("theft(ch, victim, obj, success) values('%s','%s','none',0)", ch->true_name, victim->true_name);
+		{
+			Theft record;
+			record.ch = ch->true_name;
+			record.victim = victim->true_name;
+			record.obj = "none";
+			record.success = 0;
+
+			auto thefts = TheftRepository(RS.Db);
+			thefts.Add(record);
+		}
 
 		switch (number_range(0, 3))
 		{
@@ -3424,10 +3433,14 @@ void do_steal(CHAR_DATA *ch, char *argument)
 
 		if (!is_npc(ch) && !is_npc(victim) && !is_immortal(ch) && !is_immortal(victim))
 		{
-			RS.SQL.Insert("theft(ch, victim, obj, success) values('%s','%s','%d',1)",
-				ch->true_name,
-				victim->true_name,
-				gold);
+			Theft record;
+			record.ch = ch->true_name;
+			record.victim = victim->true_name;
+			record.obj = std::to_string(gold);
+			record.success = 1;
+
+			auto thefts = TheftRepository(RS.Db);
+			thefts.Add(record);
 		}
 
 		send_to_char(buf, ch);
@@ -3480,10 +3493,14 @@ void do_steal(CHAR_DATA *ch, char *argument)
 
 	if (!is_npc(ch) && !is_npc(victim) && !is_immortal(ch) && !is_immortal(victim))
 	{
-		RS.SQL.Insert("theft(ch, victim, obj, success) values('%s','%s','%s',1)",
-			ch->true_name,
-			victim->true_name,
-			obj->short_descr);
+		Theft record;
+		record.ch = ch->true_name;
+		record.victim = victim->true_name;
+		record.obj = obj->short_descr;
+		record.success = 1;
+
+		auto thefts = TheftRepository(RS.Db);
+		thefts.Add(record);
 	}
 }
 

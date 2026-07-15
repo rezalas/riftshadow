@@ -38,8 +38,8 @@
 #include <string.h>
 #include <stdlib.h>
 #include <time.h>
-#include <mysql.h>
 #include "note.h"
+#include "rift.h"
 #include "devextra.h"
 #include "handler.h"
 #include "recycle.h"
@@ -49,6 +49,7 @@
 #include "interp.h"
 #include "db.h"
 #include "utility.h"
+#include "./repositories/noterepository.h"
 
 NOTE_DATA *note_free;
 
@@ -59,20 +60,16 @@ NOTE_DATA *note_free;
 int count_spool(CHAR_DATA *ch, int type)
 {
 	int count = 0;
-	MYSQL_RES *res;
-	MYSQL_ROW row;
-	char query[MSL];
 
-	sprintf(query, "SELECT * FROM notes WHERE type=%d", type);
-	res = one_query_res(query);
+	auto notes = NoteRepository(RS.DbRift);
+	auto noteType = notes.FindByType(type);
 
-	while ((row = mysql_fetch_row(res)))
+	for (const auto &note : noteType)
 	{
-		if (!hide_note(ch, row))
+		if (!hide_note(ch, note))
 			count++;
 	}
 
-	mysql_free_result(res);
 	return count;
 }
 
@@ -133,19 +130,19 @@ void do_changes(CHAR_DATA *ch, char *argument)
 /// @param pnote: The note to insert.
 void append_note(NOTE_DATA *pnote)
 {
-	char query[MSL];
+	Note note;
+	note.type = pnote->type;
+	note.sender = pnote->sender ? pnote->sender : "";
+	note.date = pnote->date ? pnote->date : "";
+	note.to_list = pnote->to_list ? pnote->to_list : "";
+	note.subject = pnote->subject ? pnote->subject : "";
+	note.message = pnote->text ? pnote->text : "";	// the note body is bound, so no escape_string
+	note.timestamp = pnote->date_stamp;
 
-	auto escape = escape_string(pnote->text);
-	sprintf(query, "INSERT INTO notes VALUES(%d,\"%s\",'%s',\"%s\",\"%s\",\"%s\",%ld)",
-		pnote->type,
-		pnote->sender,
-		pnote->date,
-		pnote->to_list,
-		pnote->subject,
-		escape,
-		pnote->date_stamp);
-
-	one_query(query);
+	auto notes = NoteRepository(RS.DbRift);
+	auto added = notes.Add(note);
+	if (!added)
+		RS.Logger.Warn("Append_note: failed to add note from {} to {}.", note.sender, note.to_list);
 }
 
 /// Determines if a character can read a note.
@@ -153,7 +150,7 @@ void append_note(NOTE_DATA *pnote)
 /// @param sender: The sender of the note.
 /// @param to_list: The recipient of the note.
 /// @returns true if the character can read the note; false otherwise.
-bool is_note_to(CHAR_DATA *ch, char *sender, char *to_list)
+bool is_note_to(CHAR_DATA *ch, const char *sender, const char *to_list)
 {
 	if (!str_cmp(ch->true_name, sender))
 		return true;
@@ -179,7 +176,7 @@ bool is_note_to(CHAR_DATA *ch, char *sender, char *to_list)
 	if (is_name(ch->true_name, to_list))
 		return true;
 
-	if (is_number(to_list) && ch->level >= atoi(to_list))
+	if (is_number(const_cast<char *>(to_list)) && ch->level >= atoi(to_list))
 		return true;
 
 	return false;
@@ -209,16 +206,16 @@ void note_attach(CHAR_DATA *ch, int type)
 
 /// Determines if a note is to be hidden from the character.
 /// @param ch: The character to potentially hide the note from.
-/// @param row: The SQL datarow that contains the note.
+/// @param note: The note to test for visibility.
 /// @returns true if the note is to be hidden from the character; false otherwise.
-bool hide_note(CHAR_DATA *ch, MYSQL_ROW row)
+bool hide_note(CHAR_DATA *ch, const Note &note)
 {
 	time_t last_read;
 
 	if (is_npc(ch))
 		return true;
 
-	switch (atoi(row[0]))
+	switch (note.type)
 	{
 		case NOTE_NOTE:
 			last_read = ch->pcdata->last_note;
@@ -239,13 +236,13 @@ bool hide_note(CHAR_DATA *ch, MYSQL_ROW row)
 			return true;
 	}
 
-	if (atol(row[6]) <= last_read)
+	if (note.timestamp <= last_read)
 		return true;
 
-	if (!str_cmp(ch->name, row[1]))
+	if (!str_cmp(ch->name, note.sender.c_str()))
 		return true;
 
-	if (!is_note_to(ch, row[1], row[3]))
+	if (!is_note_to(ch, note.sender.c_str(), note.to_list.c_str()))
 		return true;
 
 	return false;
@@ -290,10 +287,8 @@ void parse_note(CHAR_DATA *ch, char *argument, int type)
 {
 	// TODO: Break this function up into its constituent parts. It's doing like 12 different things.
 	BUFFER *buffer;
-	char buf[MAX_STRING_LENGTH], query[MSL];
+	char buf[MAX_STRING_LENGTH];
 	char arg[MAX_INPUT_LENGTH];
-	MYSQL_RES *res;
-	MYSQL_ROW row;
 	char *list_name;
 	int vnum;
 	int anum;
@@ -337,23 +332,23 @@ void parse_note(CHAR_DATA *ch, char *argument, int type)
 
 			vnum = 0;
 
-			sprintf(query, "SELECT * FROM notes WHERE type=%d ORDER BY timestamp ASC", type);
-			res = one_query_res(query);
+			auto notes = NoteRepository(RS.DbRift);
+			auto noteType = notes.FindByType(type);
 
-			while ((row = mysql_fetch_row(res)))
+			for (const auto &note : noteType)
 			{
-				if (!hide_note(ch, row))
+				if (!hide_note(ch, note))
 				{
-					sprintf(buf, "[%3d] %s: %s\n\r%s\n\rTo: %s\n\r", vnum, row[1], row[4], row[2], row[3]);
+					sprintf(buf, "[%3d] %s: %s\n\r%s\n\rTo: %s\n\r", vnum,
+						note.sender.c_str(), note.subject.c_str(), note.date.c_str(), note.to_list.c_str());
 					send_to_char(buf, ch);
 
-					page_to_char(row[5], ch);
+					page_to_char(note.message.c_str(), ch);
 
-					update_read(ch, atol(row[6]), atoi(row[0]));
-					mysql_free_result(res);
+					update_read(ch, note.timestamp, note.type);
 					return;
 				}
-				else if (is_note_to(ch, row[1], row[3]))
+				else if (is_note_to(ch, note.sender.c_str(), note.to_list.c_str()))
 				{
 					vnum++;
 				}
@@ -361,7 +356,6 @@ void parse_note(CHAR_DATA *ch, char *argument, int type)
 
 			sprintf(buf, "You have no unread %s.\n\r", list_name);
 			send_to_char(buf, ch);
-			mysql_free_result(res);
 			return;
 		}
 		else if (is_number(argument))
@@ -377,26 +371,25 @@ void parse_note(CHAR_DATA *ch, char *argument, int type)
 
 		vnum = 0;
 
-		sprintf(query, "SELECT * FROM notes WHERE type=%d ORDER BY timestamp ASC", type);
-		res = one_query_res(query);
+		auto notes = NoteRepository(RS.DbRift);
+		auto noteType = notes.FindByType(type);
 
-		while ((row = mysql_fetch_row(res)))
+		for (const auto &note : noteType)
 		{
-			if (is_note_to(ch, row[1], row[3]) && (vnum++ == anum))
+			if (is_note_to(ch, note.sender.c_str(), note.to_list.c_str()) && (vnum++ == anum))
 			{
-				sprintf(buf, "[%3d] %s: %s\n\r%s\n\rTo: %s\n\r", anum, row[1], row[4], row[2], row[3]);
+				sprintf(buf, "[%3d] %s: %s\n\r%s\n\rTo: %s\n\r", anum,
+					note.sender.c_str(), note.subject.c_str(), note.date.c_str(), note.to_list.c_str());
 				send_to_char(buf, ch);
 
-				page_to_char(row[5], ch);
-				update_read(ch, atol(row[6]), atoi(row[0]));
-				mysql_free_result(res);
+				page_to_char(note.message.c_str(), ch);
+				update_read(ch, note.timestamp, note.type);
 				return;
 			}
 		}
 
 		sprintf(buf, "There aren't that many %s.\n\r", list_name);
 		send_to_char(buf, ch);
-		mysql_free_result(res);
 		return;
 	}
 
@@ -404,14 +397,15 @@ void parse_note(CHAR_DATA *ch, char *argument, int type)
 	{
 		vnum = 0;
 
-		sprintf(query, "SELECT * FROM notes WHERE type=%d ORDER BY timestamp ASC", type);
-		res = one_query_res(query);
+		auto notes = NoteRepository(RS.DbRift);
+		auto noteType = notes.FindByType(type);
 
-		while ((row = mysql_fetch_row(res)))
+		for (const auto &note : noteType)
 		{
-			if (is_note_to(ch, row[1], row[3]))
+			if (is_note_to(ch, note.sender.c_str(), note.to_list.c_str()))
 			{
-				sprintf(buf, "[%3d%s] %s: %s\n\r", vnum, hide_note(ch, row) ? " " : "N", row[1], row[4]);
+				sprintf(buf, "[%3d%s] %s: %s\n\r", vnum, hide_note(ch, note) ? " " : "N",
+					note.sender.c_str(), note.subject.c_str());
 				send_to_char(buf, ch);
 				vnum++;
 			}
@@ -439,7 +433,6 @@ void parse_note(CHAR_DATA *ch, char *argument, int type)
 			}
 		}
 
-		mysql_free_result(res);
 		return;
 	}
 
@@ -454,24 +447,23 @@ void parse_note(CHAR_DATA *ch, char *argument, int type)
 		anum = atoi(argument);
 		vnum = 0;
 
-		sprintf(query, "SELECT * FROM notes WHERE type=%d ORDER BY timestamp ASC", type);
-		res = one_query_res(query);
+		auto notes = NoteRepository(RS.DbRift);
+		auto noteType = notes.FindByType(type);
 
-		while ((row = mysql_fetch_row(res)))
+		for (const auto &note : noteType)
 		{
-			if (!str_cmp(ch->true_name, row[1]) && vnum++ == anum)
+			if (!str_cmp(ch->true_name, note.sender.c_str()) && vnum++ == anum)
 			{
-				sprintf(query, "DELETE FROM notes WHERE timestamp=%s AND sender=\"%s\"", row[6], row[1]);
-				one_query(query);
+				auto removed = notes.Remove(note.timestamp, note.sender);
+				if (!removed)
+					RS.Logger.Warn("Parse_note: failed to remove note from {} to {}.", note.sender, note.to_list);
 
 				send_to_char("Ok.\n\r", ch);
-				mysql_free_result(res);
 				return;
 			}
 		}
 
 		send_to_char("You must provide the number of a note you have written to remove.\n\r", ch);
-		mysql_free_result(res);
 		return;
 	}
 
@@ -486,25 +478,24 @@ void parse_note(CHAR_DATA *ch, char *argument, int type)
 		anum = atoi(argument);
 		vnum = 0;
 
-		sprintf(query, "SELECT * FROM notes WHERE type=%d ORDER BY timestamp ASC", type);
-		res = one_query_res(query);
+		auto notes = NoteRepository(RS.DbRift);
+		auto noteType = notes.FindByType(type);
 
-		while ((row = mysql_fetch_row(res)))
+		for (const auto &note : noteType)
 		{
-			if (is_note_to(ch, row[1], row[3]) && vnum++ == anum)
+			if (is_note_to(ch, note.sender.c_str(), note.to_list.c_str()) && vnum++ == anum)
 			{
-				sprintf(query, "DELETE FROM notes WHERE timestamp=%s AND sender=\"%s\"", row[6], row[1]);
-				one_query(query);
+				auto removed = notes.Remove(note.timestamp, note.sender);
+				if (!removed)
+					RS.Logger.Warn("Parse_note: failed to remove note from {} to {}.", note.sender, note.to_list);
 
 				send_to_char("Ok.\n\r", ch);
-				mysql_free_result(res);
 				return;
 			}
 		}
 
 		sprintf(buf, "There aren't that many %s.\n\r", list_name);
 		send_to_char(buf, ch);
-		mysql_free_result(res);
 		return;
 	}
 

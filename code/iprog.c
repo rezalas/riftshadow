@@ -61,6 +61,8 @@
 #include "newmem.h"
 #include "act_info.h"
 #include "comm.h"
+#include "./repositories/inductionrepository.h"
+#include "./repositories/playerrepository.h"
 
 const struct improg_type iprog_table[] = {
 	{"get_prog", "get_prog_bad_idea", (void *)get_prog_bad_idea, "None"},
@@ -1705,11 +1707,10 @@ void verb_prog_sidhe_climb_vine(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 
 void verb_prog_listen_conversation(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 {
-	int i = 0, rand, inc = 2, tc = 0, cres = 0, ccount[MAX_CABAL];
+	int i = 0, rand, inc = 2, tc = 0, ccount[MAX_CABAL];
 	CHAR_DATA *fat, *minotaur, *violet;
 	char buf[MSL];
 	std::string temp;
-	CRow row;
 
 	rand = dice(1, 4);
 	if ((violet = get_char_room(ch, "violet")) == nullptr
@@ -1731,12 +1732,12 @@ void verb_prog_listen_conversation(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 		mprog_say(inc * 3, "It's true, I swear it!", fat, ch);
 		mprog_say(inc * 4, "That story gets better every time you tell it, Boll.", violet, ch);
 
-		cres = RS.SQL.Select("name FROM players ORDER BY pks DESC LIMIT 1");
+		auto players = PlayerRepository(RS.Db);
+		auto topPks = players.FindTopByPks(1);
 
-		if (cres)
+		if (!topPks.empty())
 		{
-			row = RS.SQL.GetRow();
-			temp = std::string(row[0]);
+			temp = topPks[0];
 			RS.Queue.AddToQueue(inc * 5, "verb_prog_listen_conversation", "say_to_queue", say_to_queue, fat, ch, "Just do yourself a favor, and watch out for $t.", temp);
 		}
 	}
@@ -2672,7 +2673,7 @@ void verb_prog_touch_obelisk(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 
 void communion_handler(CHAR_DATA *ch)
 {
-	char buf[MSL], short_desc[MSL], long_desc[MSL], name[MSL], query[MSL];
+	char buf[MSL], short_desc[MSL], long_desc[MSL], name[MSL];
 	OBJ_DATA *obj, *remove;
 	AFFECT_DATA *af;
 	CHAR_DATA *animal;
@@ -3026,14 +3027,16 @@ void communion_handler(CHAR_DATA *ch)
 
 			if (is_immortal(af->owner) && is_immortal(ch))
 			{
-				sprintf(query, "insert into inductions(ch, victim, cabal, ctime, chsite, victimsite) values('%s','%s',%d,%ld,'%s','%s')",
-					af->owner->true_name,
-					ch->true_name,
-					CABAL_HORDE,
-					current_time,
-					af->owner->pcdata->host,
-					ch->pcdata->host);
-				one_query(query);
+				Induction record;
+				record.ch = af->owner->true_name;
+				record.victim = ch->true_name;
+				record.cabal = CABAL_HORDE;
+				record.ctime = current_time;
+				record.chsite = af->owner->pcdata->host;
+				record.victimsite = ch->pcdata->host;
+
+				auto inductions = InductionRepository(RS.DbRift);
+				inductions.Add(record);
 			}
 
 			obj = create_object(get_obj_index(OBJ_VNUM_TROPHY_BELT), 60);

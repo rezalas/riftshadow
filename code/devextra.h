@@ -1,7 +1,6 @@
 #ifndef DEVEXTRA_H
 #define DEVEXTRA_H
 
-#include <mysql.h>
 #include "merc.h"
 #include "handler.h"
 
@@ -16,7 +15,6 @@
 
 bool IS_IMP (CHAR_DATA *ch);
 float calculate_inflation (void);
-char *escape_string (char *string);
 void do_pswitch (CHAR_DATA *ch, char *argument);
 void do_gold (CHAR_DATA *ch, char *argument);
 void do_clean (CHAR_DATA *ch, char *argument);
@@ -28,16 +26,8 @@ void comment_end_fun (CHAR_DATA *ch, char *argument);
 void show_database_info (CHAR_DATA *ch, char *argument);
 void do_demo (CHAR_DATA *ch, char *name);
 void delete_char (char *name, bool save_pfile);
-MYSQL *open_fconn (void);
-MYSQL_ROW one_query_row (char *query);
-MYSQL_ROW one_fquery_row (char *query);
-MYSQL_RES *one_query_res (char *query);
-int one_query_count (char *query);
-void one_query (char *query);
 void enter_text (CHAR_DATA *ch, DO_FUN *end_fun);
 char *log_time (void);
-MYSQL *open_conn (void);
-void one_fquery (char *query);
 void plug_graveyard (CHAR_DATA *ch, int type);
 void do_pktrack (CHAR_DATA *ch, char *argument);
 bool trusts (CHAR_DATA *ch, CHAR_DATA *victim);

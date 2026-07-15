@@ -232,7 +232,6 @@ typedef void APROG_FUN_MYELL (AREA_DATA *area, CHAR_DATA *ch, CHAR_DATA *victim)
 #ifndef RSINCLUDES
 #define RSINCLUDES
 #include <math.h>
-#include <mysql.h>
 #include <unistd.h>
 #include <signal.h>
 #include <stdarg.h>

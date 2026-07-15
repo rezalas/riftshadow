@@ -40,6 +40,8 @@ struct note_data
 
 extern NOTE_DATA *note_free;
 
+struct Note;	// code/repositories/noterepository.h
+
 //
 // LOCAL FUNCTIONS
 //
@@ -50,9 +52,9 @@ void do_note (CHAR_DATA *ch,char *argument);
 void do_news (CHAR_DATA *ch,char *argument);
 void do_changes (CHAR_DATA *ch,char *argument);
 void append_note (NOTE_DATA *pnote);
-bool is_note_to (CHAR_DATA *ch, char *sender, char *to_list);
+bool is_note_to (CHAR_DATA *ch, const char *sender, const char *to_list);
 void note_attach (CHAR_DATA *ch, int type);
-bool hide_note (CHAR_DATA *ch, MYSQL_ROW row);
+bool hide_note (CHAR_DATA *ch, const Note &note);
 void update_read (CHAR_DATA *ch, long stamp, int type);
 void parse_note (CHAR_DATA *ch, char *argument, int type);
 

@@ -61,6 +61,8 @@
 #include "handler.h"
 #include "misc.h"
 #include "dioextra.h"
+#include "./repositories/noterepository.h"
+#include "./repositories/playerrepository.h"
 #include "chardef.h"
 #include "const.h"
 #include "utility.h"
@@ -685,32 +687,11 @@ char *munch(char *str)
 
 void update_db_gold()
 {
-	char buf[MSL];
-	CRow row;
-	int cres;
+	auto players = PlayerRepository(RS.Db);
 
 	// Changed from > 15 to > 30 to tighten the gold up.
-	cres = RS.SQL.Select("COUNT(gold) FROM players WHERE level > 30");
-	if (cres)
-	{
-		row = RS.SQL.GetRow();
-		num_pfiles = atoi(row[0]);
-	}
-	else
-	{
-		num_pfiles = 1;
-	}
-
-	cres = RS.SQL.Select("SUM(gold) FROM players");
-	if (cres)
-	{
-		row = RS.SQL.GetRow();
-		player_gold = atoll(row[0]);
-	}
-	else
-	{
-		player_gold = 1;
-	}
+	num_pfiles = players.CountGoldAboveLevel(30);
+	player_gold = players.SumGold();
 
 	total_gold = gold_constant * num_pfiles;
 }
@@ -4424,10 +4405,12 @@ void load_newresets(FILE *fp)
 
 void clean_notes(void)
 {
-	char query[MSL];
-	// if the difference is over 14 days, delete it.
-	sprintf(query, "DELETE FROM notes WHERE %ld-timestamp>1209600", current_time);
-	one_query(query);
+	// if the note is over 14 days old, delete it.
+	auto notes = NoteRepository(RS.DbRift);
+	auto removed = notes.RemoveOlderThan(current_time - 1209600);
+
+	if (removed > 0)
+		RS.Logger.Info("Clean_notes: removed {} notes older than 14 days.", removed);
 }
 
 void load_race_info(void)

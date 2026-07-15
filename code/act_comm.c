@@ -38,7 +38,6 @@
 #include <string.h>
 #include <stdlib.h>
 #include <time.h>
-#include <mysql.h>
 #include "act_comm.h"
 #include "rift.h"
 #include "recycle.h"
@@ -66,6 +65,8 @@
 #include "update.h"
 #include "./include/spdlog/fmt/bundled/format.h"
 #include "./include/spdlog/fmt/bundled/printf.h"
+#include "./repositories/loginrepository.h"
+#include "./repositories/pklogrepository.h"
 
 /* RT code to delete yourself */
 void do_delet(CHAR_DATA *ch, char *argument)
@@ -2729,18 +2730,20 @@ void temp_death_log(CHAR_DATA *killer, CHAR_DATA *dead)
 	if (is_npc(dead) || is_npc(killer))
 		return;
 
-	char query[MAX_STRING_LENGTH];
-	sprintf(query, "INSERT INTO pklogs VALUES('%s', %d, '%s', %d, '%s', '%s (%d)',%ld)",
-			killer->true_name,
-			killer->cabal,
-			dead->true_name,
-			dead->cabal,
-			log_time(),
-			escape_string(get_room_name(dead->in_room)),
-			dead->in_room->vnum,
-			current_time);
+	PkLog pklog;
+	pklog.killer = killer->true_name;
+	pklog.killercabal = killer->cabal;
+	pklog.victim = dead->true_name;
+	pklog.victimcabal = dead->cabal;
+	pklog.date = log_time();
+	pklog.room = fmt::format("{} ({})", get_room_name(dead->in_room), dead->in_room->vnum);
+	pklog.ctime = current_time;
 
-	one_query(query);
+	auto pklogs = PkLogRepository(RS.DbRift);
+	auto added = pklogs.Add(pklog);
+
+	if (!added)
+		RS.Logger.Warn("Failed to add PK log for {}.", dead->true_name);
 }
 
 void mob_death_log(CHAR_DATA *killer, CHAR_DATA *dead)
@@ -2771,19 +2774,19 @@ void login_log(CHAR_DATA *ch, int type)
 	if (IS_SET(ch->comm, COMM_NOSOCKET))
 		return;
 
-	auto escape = ch->pcdata->host
-					  ? escape_string(ch->pcdata->host)
-					  : escape_string(ch->desc->host);
+	Login login;
+	login.name = ch->true_name;
+	login.site = ch->pcdata->host ? ch->pcdata->host : ch->desc->host;
+	login.time = log_time();
+	login.ctime = current_time;
+	login.played = type == 2 ? (int)((current_time - ch->logon) / 60) : -1;
+	login.obj = type > 0 ? count_carried(ch, false) : -1;
+	login.lobj = type > 0 ? count_carried(ch, true) : -1;
+	login.type = type;
 
-	char query[MAX_STRING_LENGTH];
-	sprintf(query, "INSERT INTO logins VALUES('%s', '%s', '%s', '%ld', '%ld', '%d', '%d', '%d')",
-			ch->true_name,
-			escape,
-			log_time(),
-			current_time,
-			type == 2 ? ((current_time - ch->logon) / 60) : -1,
-			type > 0 ? count_carried(ch, false) : -1, type > 0 ? count_carried(ch, true) : -1,
-			type);
+	auto logins = LoginRepository(RS.DbRift);
+	auto added = logins.Add(login);
 
-	one_query(query);
+	if (!added)
+		RS.Logger.Warn("Failed to add login log for {}.", ch->true_name);
 }

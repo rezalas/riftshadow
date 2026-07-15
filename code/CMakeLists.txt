@@ -6,7 +6,22 @@ set(RIFT_SOURCE config.cpp
 	cdirectory.c
 	cfilesystem.c
 	clogger.c
-	sql.c
+	dbsession.c
+	repositories/banrepository.c
+	repositories/theftrepository.c
+	repositories/inductionrepository.c
+	repositories/voterepository.c
+	repositories/noterepository.c
+	repositories/helprepository.c
+	repositories/bugrepository.c
+	repositories/offeringrepository.c
+	repositories/loginrepository.c
+	repositories/pklogrepository.c
+	repositories/sitecommentrepository.c
+	repositories/sitetrackerrepository.c
+	repositories/graveyardrepository.c
+	repositories/playerrepository.c
+	repositories/classrepository.c
 	bitvector.c
 	act_comm.c
 	act_ente.c
