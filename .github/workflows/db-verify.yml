@@ -1,0 +1,87 @@
+name: Database Verify
+
+# Proves the codified SQL under db/ still builds a database identical to the
+# archived dumps in docs/historical/db-dumps/.
+#
+# This workflow sounds the alarm if drift and omissions shipped silently
+# in our db files. See db/README.md.
+#
+# The dumps are part of the trigger, not just db/: editing one changes the
+# source of truth, which is exactly when this needs to run.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - db/**
+      - docs/historical/db-dumps/**
+      - .github/workflows/db-verify.yml
+  pull_request:
+    branches: [main]
+    paths:
+      - db/**
+      - docs/historical/db-dumps/**
+      - .github/workflows/db-verify.yml
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v5
+
+    # MariaDB via apt rather than a service container, so root connects over
+    # the local socket and `sudo mysql` works unchanged -- the same path
+    # developers use locally. A service container would be reached over TCP,
+    # which would put the client on the Docker gateway rather than localhost
+    # and defeat the 'rift'@'localhost' grants that 00-bootstrap.sql creates.
+    #
+    # ubuntu-latest ships MySQL 8.0 preinstalled, and mariadb-server conflicts
+    # with it on Debian/Ubuntu. Remove MySQL explicitly rather than leaving apt
+    # to resolve the conflict implicitly. This is safe: runners are ephemeral
+    # and single-use, so nothing outside this job can see it, and no other
+    # workflow in this repo uses a database at all.
+    - name: Remove preinstalled MySQL
+      run: |
+        sudo systemctl stop mysql.service || true
+        sudo apt-get remove -y --purge \
+          'mysql-server*' 'mysql-client*' 'mysql-common' || true
+        sudo apt-get autoremove -y
+
+    - name: Install and start MariaDB
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y mariadb-server
+        sudo service mariadb start
+
+    # Fail here with a clear message rather than 30 lines deep inside verify.sh
+    # if the server never came up.
+    - name: Wait for MariaDB to accept connections
+      run: |
+        for i in $(seq 1 30); do
+          if sudo mysqladmin ping --silent; then
+            echo "MariaDB is up"
+            sudo mysql -e "SELECT VERSION();"
+            exit 0
+          fi
+          sleep 1
+        done
+        echo "MariaDB did not become ready in 30s"
+        sudo journalctl -u mariadb --no-pager -n 50 || true
+        exit 1
+
+    # Builds one database from the dumps and another from db/install.sh, then
+    # compares table sets, per-table structure, and every row. Non-zero exit on
+    # any difference. Uses scratch databases and drops them on exit.
+    - name: Prove the codified SQL matches the archived dumps
+      run: sh db/tools/verify.sh
+
+    # verify.sh drives install.sh with DB_SUFFIX set, which skips
+    # 00-bootstrap.sql -- so a broken CREATE USER or GRANT would pass the step
+    # above. Run a real install and then query as the unprivileged `rift` user
+    # to cover the bootstrap and the grants too.
+    - name: Prove a real install works end to end
+      run: |
+        sh db/install.sh
+        mysql -urift -prift123 -e "SELECT COUNT(*) FROM rift_core.world_areas;"
+        mysql -urift -prift123 -e "SELECT COUNT(*) FROM rift.helpfiles;"

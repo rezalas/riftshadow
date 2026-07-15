@@ -97,22 +97,24 @@ fi
 #sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-9 60 --slave /usr/bin/g++ g++ /usr/bin/g++-9
 
 # Setup Database
+# The databases are stood up from the codified per-table SQL under db/, driven
+# by db/manifest.txt. See db/README.md. Output is deliberately NOT suppressed:
+# hiding it leaves out valuable debugging information.
 echo "${NOCOLOR}Running database scaffolding\n"
 {
-	if [ -e ./db/setup.sql ]; then
-		sudo mysql -v mysql < ./db/setup.sql
-		sudo mysql -v rift_core < ./db/rift_core.sql >/dev/null 2>&1
-		sudo mysql -v rift < ./db/rift.sql >/dev/null 2>&1
-	elif [ -e ~/code/db/setup.sql ]; then
-		sudo mysql -v mysql < ~/code/db/setup.sql
-		sudo mysql -v rift_core < ~/code/db/rift_core.sql >/dev/null 2>&1
-		sudo mysql -v rift < ~/code/db/rift.sql >/dev/null 2>&1
+	if [ -f ./db/install.sh ]; then
+		sh ./db/install.sh
+	elif [ -f ~/code/db/install.sh ]; then
+		sh ~/code/db/install.sh
 		~/code/admin/artisan migrate
+	else
+		echo "${RED}db/install.sh not found. Cannot scaffold the database.${NOCOLOR}"
+		exit 1
 	fi
 } ||
 { # log that there was an error and to check the MySQL settings
-	echo "${RED}There was a problem running setup.sql on your local server. Inspect the error above${NOCOLOR}"
-	exit
+	echo "${RED}Database scaffolding failed. Inspect the error above.${NOCOLOR}"
+	exit 1
 }
 
 echo "${GREEN}Database scaffolding successful! Huzzah!${NOCOLOR}"
