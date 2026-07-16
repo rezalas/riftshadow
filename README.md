@@ -41,8 +41,8 @@ If you're interested in helping us with this project, you can find more informat
 
 The following packages are required to build on linux x86 and test the application at this time.
 
-* make
 * cmake
+* ninja (optional but highly suggested)
 * git
 * g++
 * sql-server (mariadb suggested)
@@ -51,7 +51,12 @@ The following packages are required to build on linux x86 and test the applicati
 
 ### Building
 
-To build, run `cmake .` at the root of the project directory which will build system-appropriate Makefile configs. Then, run `make` to begin the build process. Afterward if successful the binary is located in the `./code/` directory and ready to execute.
+To build, run `cmake .` at the root of the project directory which will build system-appropriate Makefile configs. 
+Afterward if successful the binary is located in the `./code/` directory and ready to execute.
+
+> **Note:** If you decide to use ninja, run `cmake -GNinja .` first to generate the ninja build files. Ninja keeps
+> track of cmake changes, so it's only a one time command. To build, run `ninja`.
+
 
 ### Running the Server
 1. Get your environment ready with the steps in "[Setting up your Environment](./CONTRIBUTING.md)"
@@ -72,13 +77,24 @@ You will also need to inject the databases into the mysql server, add a user nam
 
 ## SQL Setup
 
-required DBs and assoc. files
+`dev-install.sh` stands the databases up for you. To do it by hand, from the
+repo root with MariaDB running:
 
-| Database  | SQL struct file |
-|-----------|-----------------|
-|  rift_core | rift_core.sql|
-|  rift | rift.sql |
-|  riftforum | unknown / needs creation |
+```sh
+sh db/install.sh
+```
+
+That creates both databases, the `rift` user and grants, and loads every table
+from the codified SQL under `db/`. See [db/README.md](db/README.md) for the
+layout, and for how to regenerate and verify it.
+
+| Database  | Source |
+|-----------|--------|
+| rift_core | `db/rift_core/{schema,seed}/<table>.sql` — game data, 13 tables |
+| rift | `db/rift/{schema,seed}/<table>.sql` — website/community data, 15 tables |
+
+`config.json` also carries a `riftforum` connection block, but nothing reads it
+— no database of that name is needed or created.
 
 default user: rift
 default pwd: rift123
