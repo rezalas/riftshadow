@@ -49,8 +49,10 @@ CMud::CMud()
 
 	if (!Settings.isLoaded())
 	{
-		Logger.Error("Unable to load configuration!\r\n");
-		exit(0);
+		// If the settings fail to load because of a pathing issue, then
+		// Logging will fail as well. Using bare console output instead.
+		fprintf(stderr, "FATAL: could not load configuration '%s' (path is relative to cwd)\n", CONFIG_FILE);
+		exit(1);
 	}
 }
 
