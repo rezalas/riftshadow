@@ -77,3 +77,51 @@ jobs:
         env:
           ASAN_OPTIONS: detect_leaks=0:detect_odr_violation=0
           UBSAN_OPTIONS: print_stacktrace=1
+
+  smoke:
+    name: smoke-boot-asan
+    runs-on: ubuntu-latest
+    env:
+      CC: clang
+      CXX: clang++
+    steps:
+      - uses: actions/checkout@v5
+
+      # A runner-local MariaDB, not a service container: the game connects to
+      # "localhost" (config.json), which the database connector resolves to a
+      # unix socket, and db/install.sh grants rift@'localhost' over that socket.
+      # A service container would sit on a Docker network reachable only over
+      # TCP which would change the connection setup.
+      - name: Install toolchain and MariaDB
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ninja-build clang \
+            mariadb-server mariadb-client libmariadb-dev libmariadb-dev-compat
+
+      - name: Start MariaDB
+        run: |
+          sudo service mariadb start
+          for _ in $(seq 1 30); do
+            sudo mysqladmin ping >/dev/null 2>&1 && break
+            sleep 1
+          done
+          sudo mysqladmin ping
+
+      - name: Provision databases (db/install.sh)
+        run: sh db/install.sh
+
+      - name: Configure (sanitized)
+        run: cmake -S . -B build-asan -G Ninja -DCMAKE_BUILD_TYPE=Debug -DRIFT_SANITIZE=ON
+
+      - name: Build
+        run: cmake --build build-asan
+
+      # Boot rift on a scratch port against the provisioned DB and
+      # asserts: boots past table init, areas load, greeting served,
+      # and no sanitizer report in the log.
+      - name: Smoke test (boot-and-greet, under ASAN)
+        run: tests/smoke/boot_test.sh
+        env:
+          RIFT_BIN: ${{ github.workspace }}/build-asan/code/rift
+          ASAN_OPTIONS: detect_leaks=0:detect_odr_violation=0
+          UBSAN_OPTIONS: print_stacktrace=1
