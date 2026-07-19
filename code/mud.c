@@ -438,6 +438,7 @@ void CMud::LoadAreas()
 
 	fBootDb = false;
 
+	Logger.Info("Loaded {} areas.", top_area);
 }
 
 void CMud::LoadOptions()
