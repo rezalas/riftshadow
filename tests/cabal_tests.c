@@ -100,14 +100,22 @@ SCENARIO("testing update cabal skills","[update_cskills]")
 			auto player = TestHelperCreatePlayer("player 1");
 
 			for (auto skill : cabal_skills)
-				player->pcdata->learned[skill_lookup(skill.skill)] = 70;
-			
+			{
+				auto sn = skill_lookup(skill.skill);
+				if (sn < 0)
+					continue;
+				player->pcdata->learned[sn] = 70;
+			}
+
 			update_cskills(player);
 			THEN("it should set all cabal skills to zero")
 			{
 				for(auto skill : cabal_skills)
 				{
-					REQUIRE(player->pcdata->learned[skill_lookup(skill.skill)] == 0);
+					auto sn = skill_lookup(skill.skill);
+					if (sn < 0)
+						continue;
+					REQUIRE(player->pcdata->learned[sn] == 0);
 				}
 			}
 		}
@@ -124,17 +132,21 @@ SCENARIO("testing update cabal skills","[update_cskills]")
 			{
 				for(auto skill : cabal_skills)
 				{
+					auto sn = skill_lookup(skill.skill);
+					if (sn < 0) // "isolation"/"hunters stealth" have no skill; learned[-1] is UB
+						continue;
+
 					if(skill.cabal != player->cabal)
 					{
-						REQUIRE(player->pcdata->learned[skill_lookup(skill.skill)] == 0);
+						REQUIRE(player->pcdata->learned[sn] == 0);
 					}
 					else if(player->pcdata->cabal_level < skill.level)
 					{
-						REQUIRE(player->pcdata->learned[skill_lookup(skill.skill)] == 0);	
+						REQUIRE(player->pcdata->learned[sn] == 0);
 					}
-					else 
+					else
 					{
-						REQUIRE(player->pcdata->learned[skill_lookup(skill.skill)] > 0);
+						REQUIRE(player->pcdata->learned[sn] > 0);
 					}
 				}
 			}

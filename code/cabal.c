@@ -80,9 +80,13 @@ void update_cskills(CHAR_DATA *ch)
 		return;
 	
 	if(ch->cabal == false) // if they don't have a cabal, remove all their cabal skills.
-	{ 
+	{
 		for (auto skill : cabal_skills)
-			ch->pcdata->learned[skill_lookup(skill.skill)] = 0;
+		{
+			auto sn = skill_lookup(skill.skill);
+			if (sn >= 0)
+				ch->pcdata->learned[sn] = 0;
+		}
 
 		return;
 	}
@@ -98,6 +102,9 @@ void update_cskills(CHAR_DATA *ch)
 			continue;
 		
 		auto skillPosInLearned = skill_lookup(skill.skill);
+		if (skillPosInLearned < 0) // no such skill (e.g. "isolation"); learned[-1] is UB
+			continue;
+
 		if(ch->pcdata->learned[skillPosInLearned] < 2)
 		{
 			ch->pcdata->learned[skillPosInLearned] = 70;

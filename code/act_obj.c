@@ -4140,7 +4140,7 @@ void do_sell(CHAR_DATA *ch, char *objName)
 		send_to_char("The shopkeeper haggles with you about the price - you seem poorly equipped for this.\n\r",ch);
 	}
 
-	cost += obj->cost / costDivisor * roll / 100;
+	cost = obj->cost / costDivisor * roll / 100;
 	//cost = std::min(cost,95 * get_cost(keeper,obj,true) / 100);
 	cost = std::max(cost, 1);
 	cost = std::min((long)cost, keeper->gold);

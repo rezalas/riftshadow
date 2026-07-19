@@ -1058,7 +1058,11 @@ void load_objs(FILE *fp)
 		pObjIndex->description = fread_string(fp);
 		pObjIndex->item_type = item_lookup(fread_word(fp));
 		pObjIndex->material = fread_string(fp);
+
 		pObjIndex->material_index = material_lookup(pObjIndex->material);
+		if (pObjIndex->material_index < 0)
+			pObjIndex->material_index = 0;
+
 		zero_vector(pObjIndex->extra_flags);
 		zero_vector(pObjIndex->wear_flags);
 		zero_vector(pObjIndex->restrict_flags);
