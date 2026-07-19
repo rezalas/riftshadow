@@ -13,6 +13,11 @@ endif()
 add_compile_definitions(FMT_HEADER_ONLY)
 add_compile_options($<$<COMPILE_LANGUAGE:CXX>:-Wno-write-strings>)
 
+# Let's see those warnings. Since warnings can hide bugs
+# or weird behavior, we want to see them all.
+# -Wall -Wextra are on everywhere as *warnings only*
+add_compile_options(-Wall -Wextra)
+
 # Build option used to turn on a dedicated ASAN+UBSAN build. 
 # Basically a built in Valgrind alternative. This is useful
 # for debugging memory issues, but it is not suitable for

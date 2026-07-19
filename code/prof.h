@@ -27,7 +27,7 @@ struct proficiency_type
 	char *  name;
 	int     cost;
 	int     minlevel;
-	char *	requires;
+	char *	prerequisite;
 	long    flags; //note: old school bitvector
 };
 
@@ -46,7 +46,7 @@ struct prof_cmd_type
 {
 	char *name;
 	DO_FUN *cmd;
-	char *requires;
+	char *prerequisite;
 };
 
 

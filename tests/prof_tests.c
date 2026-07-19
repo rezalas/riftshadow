@@ -588,7 +588,7 @@ SCENARIO("retrieve a procifiency by its psn (int)", "[GetProficiency]")
 				REQUIRE(!str_cmp(result.name, proficiency.name));
 				REQUIRE(result.cost == proficiency.cost);
 				REQUIRE(result.minlevel == proficiency.minlevel);
-				REQUIRE(result.requires == proficiency.requires);
+				REQUIRE(result.prerequisite == proficiency.prerequisite);
 				REQUIRE(result.flags == proficiency.flags);
 			}
 
@@ -600,7 +600,7 @@ SCENARIO("retrieve a procifiency by its psn (int)", "[GetProficiency]")
 				REQUIRE(!str_cmp(result.name, proficiency.name));
 				REQUIRE(result.cost == proficiency.cost);
 				REQUIRE(result.minlevel == proficiency.minlevel);
-				REQUIRE(result.requires == proficiency.requires);
+				REQUIRE(result.prerequisite == proficiency.prerequisite);
 				REQUIRE(result.flags == proficiency.flags);
 			}
 
@@ -635,7 +635,7 @@ SCENARIO("retrieve a procifiency by its psn (int)", "[GetProficiency]")
 				REQUIRE(!str_cmp(result.name, proficiency.name));
 				REQUIRE(result.cost == proficiency.cost);
 				REQUIRE(result.minlevel == proficiency.minlevel);
-				REQUIRE(result.requires == proficiency.requires);
+				REQUIRE(result.prerequisite == proficiency.prerequisite);
 				REQUIRE(result.flags == proficiency.flags);
 			}
 
@@ -664,7 +664,7 @@ SCENARIO("retrieve a procifiency by its psn (string)", "[GetProficiency]")
 				REQUIRE(!str_cmp(result.name, proficiency.name));
 				REQUIRE(result.cost == proficiency.cost);
 				REQUIRE(result.minlevel == proficiency.minlevel);
-				REQUIRE(result.requires == proficiency.requires);
+				REQUIRE(result.prerequisite == proficiency.prerequisite);
 				REQUIRE(result.flags == proficiency.flags);
 			}
 
@@ -688,7 +688,7 @@ SCENARIO("retrieve a procifiency by its psn (string)", "[GetProficiency]")
 				REQUIRE(!str_cmp(result.name, proficiency.name));
 				REQUIRE(result.cost == proficiency.cost);
 				REQUIRE(result.minlevel == proficiency.minlevel);
-				REQUIRE(result.requires == proficiency.requires);
+				REQUIRE(result.prerequisite == proficiency.prerequisite);
 				REQUIRE(result.flags == proficiency.flags);
 			}
 
@@ -713,7 +713,7 @@ SCENARIO("retrieve a procifiency by its psn (string)", "[GetProficiency]")
 				REQUIRE(!str_cmp(result.name, proficiency.name));
 				REQUIRE(result.cost == proficiency.cost);
 				REQUIRE(result.minlevel == proficiency.minlevel);
-				REQUIRE(result.requires == proficiency.requires);
+				REQUIRE(result.prerequisite == proficiency.prerequisite);
 				REQUIRE(result.flags == proficiency.flags);
 			}
 
@@ -748,7 +748,7 @@ SCENARIO("retrieve a procifiency by its psn (string)", "[GetProficiency]")
 				REQUIRE(!str_cmp(result.name, proficiency.name));
 				REQUIRE(result.cost == proficiency.cost);
 				REQUIRE(result.minlevel == proficiency.minlevel);
-				REQUIRE(result.requires == proficiency.requires);
+				REQUIRE(result.prerequisite == proficiency.prerequisite);
 				REQUIRE(result.flags == proficiency.flags);
 			}
 

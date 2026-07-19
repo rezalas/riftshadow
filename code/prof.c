@@ -378,7 +378,7 @@ void CProficiencies::TrainProficiency(char_data* ch, char_data* trainer, char* a
 		return;
 	}
 
-	auto prof_requires = ProfIndexLookup(proficiency.requires);
+	auto prof_requires = ProfIndexLookup(proficiency.prerequisite);
 	if (prof_requires != -1 && ch->Profs()->GetProf(prof_requires) < 0)
 	{
 		send_to_char("That proficiency requires understanding of a proficiency you do not possess.\n\r", ch);
@@ -794,8 +794,8 @@ bool CProficiencies::InterpCommand(char *command, char *argument)
 		if (foundPos == std::string::npos)
 			continue;
 		
-		auto pindex = ProfIndexLookup(cmd.requires);
-		if (cmd.requires == "none" || pindex == -1 || ch->Profs()->HasProf(pindex))
+		auto pindex = ProfIndexLookup(cmd.prerequisite);
+		if (cmd.prerequisite == "none" || pindex == -1 || ch->Profs()->HasProf(pindex))
 		{
 			(cmd.cmd) (ch, argument);
 			return true;

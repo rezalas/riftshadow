@@ -13,6 +13,7 @@ public:
 	void		AddImmediateArg(void *arg)
 	{
 		//do this if it's really necessary
+		(void)arg;
 	}
 	void		Execute(int nArgs, ...)
 	{
@@ -20,7 +21,7 @@ public:
 			throw "Error: CFuncPtr has too many args";
 		
 		int i;
-		void *fptrs[MAX_FUNCTION_ARGS], *ptrs[MAX_FUNCTION_ARGS];
+		void *fptrs[MAX_FUNCTION_ARGS];		// ptrs[] removed: only used by the dead asm block below
 		va_list ap;
 		va_start(ap, nArgs);
 		
