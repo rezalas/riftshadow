@@ -37,6 +37,10 @@ jobs:
     steps:
       - uses: actions/checkout@v5
 
+      # Use our example config.json for testing purposes.
+      - name: Provide config.json
+        run: cp config.json.example config.json
+
       - name: Install toolchain
         run: sudo apt-get update && sudo apt-get install -y ninja-build clang
 
@@ -57,6 +61,10 @@ jobs:
       CXX: clang++
     steps:
       - uses: actions/checkout@v5
+
+      # Use our example config.json for testing purposes.
+      - name: Provide config.json
+        run: cp config.json.example config.json
 
       - name: Install toolchain
         run: sudo apt-get update && sudo apt-get install -y ninja-build clang
@@ -86,6 +94,10 @@ jobs:
       CXX: clang++
     steps:
       - uses: actions/checkout@v5
+
+      # Use our example config.json for testing purposes.
+      - name: Provide config.json
+        run: cp config.json.example config.json
 
       # A runner-local MariaDB, not a service container: the game connects to
       # "localhost" (config.json), which the database connector resolves to a
