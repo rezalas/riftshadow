@@ -34,9 +34,11 @@ set(TEST_SRC_FILES act_obj_tests.c
 	vote_tests.c
 	utility_tests.c
 	standalone_tests.c
-	test_helpers.c
 	update_tests.c
 )
+# test_helpers.c is intentionally excluded since
+# it has zero test cases and is a helper file only.
+# if needed, then include it like a header file.
 
 ##
 ## CREATE TEST TARGETS

@@ -7,44 +7,133 @@ on:
     paths-ignore:
       - src/Riftshadow.Agent/**
   pull_request:
-    branches: 
+    branches:
       - main
     paths-ignore:
       - src/Riftshadow.Agent/**
   release:
-    types: 
-    - published
-
-env:
-  # Customize the CMake build type here (Release, Debug, RelWithDebInfo, etc.)
-  BUILD_TYPE: Release
+    types:
+      - published
 
 jobs:
   build:
+    name: ${{ matrix.compiler }}-${{ matrix.build_type }}
     runs-on: ubuntu-latest
-
+    strategy:
+      fail-fast: false
+      matrix:
+        compiler: [gcc, clang]
+        build_type: [Debug, Release]
+        include:
+          - compiler: gcc
+            cc: gcc
+            cxx: g++
+          - compiler: clang
+            cc: clang
+            cxx: clang++
+    env:
+      CC: ${{ matrix.cc }}
+      CXX: ${{ matrix.cxx }}
     steps:
-    - uses: actions/checkout@v5
-    
-    - name: install ninja
-      run: sudo apt install ninja-build
-    
-    - name: configure ninja
-      run: cmake -GNinja .
-        
-    - name: Configure CMake
-      # Configure CMake in a 'build' subdirectory. `CMAKE_BUILD_TYPE` is only required if you are using a single-configuration generator such as make.
-      # See https://cmake.org/cmake/help/latest/variable/CMAKE_BUILD_TYPE.html?highlight=cmake_build_type
-      run: cmake -B ${{github.workspace}} -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
+      - uses: actions/checkout@v5
 
-    - name: Build
-      run: time ninja
-      #run: cmake --build ${{github.workspace}} --config ${{env.BUILD_TYPE}}
+      # Use our example config.json for testing purposes.
+      - name: Provide config.json
+        run: cp config.json.example config.json
 
-    - name: Test
-      working-directory: ${{github.workspace}}
-      # Execute tests defined by the CMake configuration.  
-      # See https://cmake.org/cmake/help/latest/manual/ctest.1.html for more detail
-      run: time ninja test
-      #run: ctest -C ${{env.BUILD_TYPE}}
-      
+      - name: Install toolchain
+        run: sudo apt-get update && sudo apt-get install -y ninja-build clang
+
+      - name: Configure
+        run: cmake -S . -B build -G Ninja -DCMAKE_BUILD_TYPE=${{ matrix.build_type }}
+
+      - name: Build
+        run: cmake --build build
+
+      - name: Test
+        run: ctest --test-dir build --output-on-failure
+
+  sanitize:
+    name: asan-ubsan
+    runs-on: ubuntu-latest
+    env:
+      CC: clang
+      CXX: clang++
+    steps:
+      - uses: actions/checkout@v5
+
+      # Use our example config.json for testing purposes.
+      - name: Provide config.json
+        run: cp config.json.example config.json
+
+      - name: Install toolchain
+        run: sudo apt-get update && sudo apt-get install -y ninja-build clang
+
+      - name: Configure (sanitized)
+        run: cmake -S . -B build-asan -G Ninja -DCMAKE_BUILD_TYPE=Debug -DRIFT_SANITIZE=ON
+
+      - name: Build
+        run: cmake --build build-asan
+
+      # ASAN halts on memory errors by default
+      # detect_leaks=0: the codebase intentionally never frees; leak reports
+      #   would be pure noise for now.
+      # detect_odr_violation=0: tolerates the one known ODR violation,
+      # UBSAN is print-only for now (halt_on_error unset) because of known UB
+      - name: Test under sanitizers
+        run: ctest --test-dir build-asan --output-on-failure
+        env:
+          ASAN_OPTIONS: detect_leaks=0:detect_odr_violation=0
+          UBSAN_OPTIONS: print_stacktrace=1
+
+  smoke:
+    name: smoke-boot-asan
+    runs-on: ubuntu-latest
+    env:
+      CC: clang
+      CXX: clang++
+    steps:
+      - uses: actions/checkout@v5
+
+      # Use our example config.json for testing purposes.
+      - name: Provide config.json
+        run: cp config.json.example config.json
+
+      # A runner-local MariaDB, not a service container: the game connects to
+      # "localhost" (config.json), which the database connector resolves to a
+      # unix socket, and db/install.sh grants rift@'localhost' over that socket.
+      # A service container would sit on a Docker network reachable only over
+      # TCP which would change the connection setup.
+      - name: Install toolchain and MariaDB
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ninja-build clang \
+            mariadb-server mariadb-client libmariadb-dev libmariadb-dev-compat
+
+      - name: Start MariaDB
+        run: |
+          sudo service mariadb start
+          for _ in $(seq 1 30); do
+            sudo mysqladmin ping >/dev/null 2>&1 && break
+            sleep 1
+          done
+          sudo mysqladmin ping
+
+      - name: Provision databases (db/install.sh)
+        run: sh db/install.sh
+
+      - name: Configure (sanitized)
+        run: cmake -S . -B build-asan -G Ninja -DCMAKE_BUILD_TYPE=Debug -DRIFT_SANITIZE=ON
+
+      - name: Build
+        run: cmake --build build-asan
+
+      # Boot rift on a scratch port against the provisioned DB and
+      # asserts: boots past table init, areas load, greeting served,
+      # and no sanitizer report in the log.
+      - name: Smoke test (boot-and-greet, under ASAN)
+        run: tests/smoke/boot_test.sh
+        env:
+          RIFT_BIN: ${{ github.workspace }}/build-asan/code/rift
+          ASAN_OPTIONS: detect_leaks=0:detect_odr_violation=0
+          UBSAN_OPTIONS: print_stacktrace=1

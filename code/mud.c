@@ -43,14 +43,23 @@ CRoom *CRoom::first = nullptr;
 
 CMud::CMud()
 {
-	Settings = Config(CONFIG_FILE);
+	// RIFT_CONFIG is an environment variable used
+	// to override the config file location allowing
+	// for alternate envirnonments.
+	const char *configPath = getenv("RIFT_CONFIG");
+	if (configPath == nullptr)
+		configPath = CONFIG_FILE;
+
+	Settings = Config(configPath);
 	Logger = CLogger();
 	Logger.Initialize();
 
 	if (!Settings.isLoaded())
 	{
-		Logger.Error("Unable to load configuration!\r\n");
-		exit(0);
+		// If the settings fail to load because of a pathing issue, then
+		// Logging will fail as well. Using bare console output instead.
+		fprintf(stderr, "FATAL: could not load configuration '%s'\n", configPath);
+		exit(1);
 	}
 }
 
@@ -429,6 +438,7 @@ void CMud::LoadAreas()
 
 	fBootDb = false;
 
+	Logger.Info("Loaded {} areas.", top_area);
 }
 
 void CMud::LoadOptions()

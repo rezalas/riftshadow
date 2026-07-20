@@ -2006,7 +2006,10 @@ CHAR_DATA *create_mobile(MOB_INDEX_DATA *pMobIndex)
 				af.modifier = 0;
 				af.location = APPLY_NONE;
 				af.type = pMobIndex->affect_sn[i];
-				SET_BIT(af.bitvector, pMobIndex->affect_bit[i]);
+				// affect_bit is NO_FLAG (-99) when the mob's affect flag name was not found
+				// in affect_flags. SET_BIT would then index bitvector[(int)-99/32] = [-3].
+				if (pMobIndex->affect_bit[i] >= 0)
+					SET_BIT(af.bitvector, pMobIndex->affect_bit[i]);
 				affect_to_char(mob, &af);
 			}
 		}

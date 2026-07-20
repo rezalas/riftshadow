@@ -1005,8 +1005,7 @@ const std::vector<cabal_list> cabal_skills =
 	{	CABAL_PHALANX,	"safehaven",			 2,		true	},
 	{	CABAL_PHALANX,	"crimson martyr",		 3,		true	},
 	{	CABAL_PHALANX,	"retribution",			 3,		true	},
-	{	CABAL_PHALANX,	"infidels fate",		 3,		true	},
-	{	CABAL_NONE,		nullptr,					 0,		false	}
+	{	CABAL_PHALANX,	"infidels fate",		 3,		true	}
 };
 
 const struct flag_type wealth_table[] =

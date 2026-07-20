@@ -557,7 +557,7 @@ void do_powers(CHAR_DATA *ch, char *argument)
 	char arg[MAX_INPUT_LENGTH];
 	char skill_list[LEVEL_HERO + 1][MAX_STRING_LENGTH];
 	char skill_columns[LEVEL_HERO + 1];
-	int gns, sn, level, min_lev = 1, max_lev = LEVEL_HERO;
+	int sn, level, min_lev = 1, max_lev = LEVEL_HERO;
 	bool fAll = false, found = false;
 	char buf[MAX_STRING_LENGTH];
 
@@ -629,9 +629,12 @@ void do_powers(CHAR_DATA *ch, char *argument)
 		skill_list[level][0] = '\0';
 	}
 
-	for (gns = 0; cabal_skills[gns].skill; gns++)
+	for (const cabal_list &cabalSkill : cabal_skills)
 	{
-		sn = skill_lookup(cabal_skills[gns].skill);
+		sn = skill_lookup(cabalSkill.skill);
+
+		if (sn < 0)
+			continue;
 
 		if ((level = skill_table[sn].skill_level[ch->Class()->GetIndex()]) < LEVEL_HERO + 1
 			&& level >= min_lev
