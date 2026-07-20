@@ -3,10 +3,13 @@
 
 #include "rift.h"
 #include <stdarg.h>
+#include <cstdint>
 #include <functional>
+#include <map>
 #include <string>
 #include <tuple>
 #include <type_traits>
+#include <unordered_map>
 #include <utility>
 #include <vector>
 
@@ -36,15 +39,18 @@ public:
 		auto tuple = std::tuple<Args...>(args...);
 		auto chs = GetCharacterData(tuple);
 
-		// Stage rather than append directly. ProcessQueue merges staged entries
-		// before it starts iterating, so a callee that queues more work cannot
-		// reallocate the vector being walked. Timing is unaffected: an entry
-		// staged during tick N is merged at the top of tick N+1 and first
-		// decremented there, exactly as a direct push_back behaved.
-		stagedQueue.push_back({nTimer, from, funcName, chs, [=] () mutable
+		// Timers of 0 and 1 both mean "next tick", so nothing can ever be scheduled
+		// into the bucket currently draining. That is what keeps ProcessQueue's loop
+		// stable without a staging buffer.
+		auto expiry = currentTick + static_cast<uint64_t>(nTimer < 1 ? 1 : nTimer);
+		auto& bucket = buckets[expiry];
+
+		bucket.push_back({from, funcName, chs, [=] () mutable
 		{
 			std::apply(func, std::forward_as_tuple(std::forward<Args>(args)...));
 		}});
+
+		RegisterEntry(chs, {expiry, bucket.size() - 1});
 	}
 
 	/// Processes all items on the queue. Any entry that has a timer of zero gets executed.
@@ -63,34 +69,44 @@ public:
 private:
 	struct queueEntry_t
 	{
-		int timer;
 		std::string callerFuncName;
 		std::string calleeFuncName;
 		std::vector<CHAR_DATA*> charList;
 		std::function<void()> function;
 
-		/// Set by DeleteQueuedEventsInvolving instead of erasing the entry, so
-		/// cancellation is safe while ProcessQueue is mid-iteration.
+		/// tombstone flag
 		bool cancelled = false;
-
-		/// Set by ProcessQueue when the entry has run. Swept in the same pass.
-		bool executed = false;
 	};
 
-	/// The materialized queue of events.
-	/// This is the queue that is processed each tick.
-	std::vector<queueEntry_t> newQueue;
+	/// reference used to hold tick and index
+	/// information about a queue entry
+	struct entryRef
+	{
+		uint64_t tick;
+		size_t index;
 
-	/// The staging area for queued events. 
-	/// This is where new entries are added before being merged into the main queue.
-	std::vector<queueEntry_t> stagedQueue;
+		bool operator==(const entryRef& other) const
+		{
+			return tick == other.tick && index == other.index;
+		}
+	};
 
-	/// Marks every live entry for a specified character as cancelled.
-	/// @return the number of entries tombstoned.
-	int CancelEntriesInvolving(std::vector<queueEntry_t>& entries, CHAR_DATA *qChar);
+	/// queue's internal tick mechanism
+	uint64_t currentTick = 0;
 
-	/// @return true if any live entry in the container has a specified character.
-	bool HasPendingIn(const std::vector<queueEntry_t>& entries, CHAR_DATA *qChar) const;
+	/// Pending events keyed by the absolute tick they fire on. Ordered so the due
+	/// bucket is always at begin(), and so a missed pulse can still drain in order.
+	/// Insertion order within a bucket is the execution order callers depend on.
+	std::map<uint64_t, std::vector<queueEntry_t>> buckets;
+
+	/// Reverse lookup for cancellation. Holds refs to *live* entries only: refs are
+	/// dropped when an entry is cancelled or executed, so a non-empty entry here
+	/// means the character genuinely has work pending.
+	std::unordered_map<CHAR_DATA*, std::vector<entryRef>> charIndex;
+
+	void RegisterEntry(const std::vector<CHAR_DATA*>& chars, entryRef ref);
+	void DropEntryRefs(const queueEntry_t& entry, entryRef ref);
+	queueEntry_t* ResolveEntry(entryRef ref);
 
 	/// Helper function used to extract character data from the specfied tuple.
 	/// @note Main use is for extracting character data sent to the AddToQueue method.

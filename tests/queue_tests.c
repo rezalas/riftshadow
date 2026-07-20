@@ -97,10 +97,9 @@ SCENARIO("Testing a queued function that cancels other events for its own char",
 		char_data *mockVictim = new char_data();
 		mockVictim->name = "Victim";
 
-		// All four are due this tick and all name the same char. The first
-		// survives the cancel (its timer is already 0 by the time it runs, and
-		// DeleteQueuedEventsInvolving only removes delay > 0); the other three
-		// are erased out from under the loop while still due.
+		// All four are due this tick and all name the same char. The first is
+		// already running by the time it cancels, so it is unaffected; the other
+		// three are still queued behind it and must not fire.
 		sut.AddToQueue(1, "queue_test", "deleteEventsQueueFunction", deleteEventsQueueFunction, mockVictim);
 		sut.AddToQueue(1, "queue_test", "wideArgQueueFunction", wideArgQueueFunction, mockVictim, 1L, 2L, 3L);
 		sut.AddToQueue(1, "queue_test", "wideArgQueueFunction", wideArgQueueFunction, mockVictim, 1L, 2L, 3L);
@@ -131,8 +130,9 @@ SCENARIO("Testing a queued function that requeues itself", "[ProcessQueue]")
 		char_data *mockPlayer = new char_data();
 		mockPlayer->name = "Test";
 
-		// Four entries leaves the vector at size == capacity == 4, so the
-		// re-entrant add below is guaranteed to reallocate.
+		// Four entries, so the re-entrant add below happens while three more are
+		// still queued behind it. Against the old flat vector this reallocated
+		// mid-iteration; the later entries must survive it either way.
 		sut.AddToQueue(1, "queue_test", "reentrantRequeueFunction", reentrantRequeueFunction, mockPlayer);
 		sut.AddToQueue(5, "queue_test", "inertQueueFunction", inertQueueFunction, mockPlayer);
 		sut.AddToQueue(5, "queue_test", "inertQueueFunction", inertQueueFunction, mockPlayer);
@@ -149,6 +149,89 @@ SCENARIO("Testing a queued function that requeues itself", "[ProcessQueue]")
 		}
 
 		activeSut = nullptr;
+	}
+}
+
+// Same-tick execution order that must run in the order they were added.
+static std::vector<int> executionOrder;
+
+void recordOrderFunction(char_data *qChar, long tag)
+{
+	executionOrder.push_back(static_cast<int>(tag));
+}
+
+SCENARIO("Testing execution order of queued events", "[ProcessQueue]")
+{
+	GIVEN("four events queued at the same tick")
+	{
+		CQueue sut;
+		char_data *mockPlayer = new char_data();
+		mockPlayer->name = "Test";
+		executionOrder.clear();
+
+		sut.AddToQueue(3, "queue_test", "recordOrderFunction", recordOrderFunction, mockPlayer, 1L);
+		sut.AddToQueue(3, "queue_test", "recordOrderFunction", recordOrderFunction, mockPlayer, 2L);
+		sut.AddToQueue(3, "queue_test", "recordOrderFunction", recordOrderFunction, mockPlayer, 3L);
+		sut.AddToQueue(3, "queue_test", "recordOrderFunction", recordOrderFunction, mockPlayer, 4L);
+
+		WHEN("the queue is processed up to that tick")
+		{
+			sut.ProcessQueue();
+			sut.ProcessQueue();
+			sut.ProcessQueue();
+
+			THEN("they execute in insertion order, on the correct tick")
+			{
+				REQUIRE(executionOrder == std::vector<int>{1, 2, 3, 4});
+			}
+		}
+	}
+
+	GIVEN("events queued across several ticks, added out of order")
+	{
+		CQueue sut;
+		char_data *mockPlayer = new char_data();
+		mockPlayer->name = "Test";
+		executionOrder.clear();
+
+		sut.AddToQueue(3, "queue_test", "recordOrderFunction", recordOrderFunction, mockPlayer, 30L);
+		sut.AddToQueue(1, "queue_test", "recordOrderFunction", recordOrderFunction, mockPlayer, 10L);
+		sut.AddToQueue(2, "queue_test", "recordOrderFunction", recordOrderFunction, mockPlayer, 20L);
+		sut.AddToQueue(1, "queue_test", "recordOrderFunction", recordOrderFunction, mockPlayer, 11L);
+
+		WHEN("the queue is processed tick by tick")
+		{
+			sut.ProcessQueue();
+			sut.ProcessQueue();
+			sut.ProcessQueue();
+
+			THEN("they execute in tick order, insertion order within a tick")
+			{
+				REQUIRE(executionOrder == std::vector<int>{10, 11, 20, 30});
+			}
+		}
+	}
+
+	GIVEN("an event queued from inside a queued event")
+	{
+		CQueue sut;
+		char_data *mockPlayer = new char_data();
+		mockPlayer->name = "Test";
+		executionOrder.clear();
+
+		sut.AddToQueue(1, "queue_test", "recordOrderFunction", recordOrderFunction, mockPlayer, 1L);
+		sut.AddToQueue(2, "queue_test", "recordOrderFunction", recordOrderFunction, mockPlayer, 2L);
+
+		WHEN("the queue is processed")
+		{
+			sut.ProcessQueue();
+			sut.ProcessQueue();
+
+			THEN("a re-entrant timer counts from the tick that was draining")
+			{
+				REQUIRE(executionOrder == std::vector<int>{1, 2});
+			}
+		}
 	}
 }
 
