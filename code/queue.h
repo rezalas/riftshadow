@@ -4,7 +4,10 @@
 #include "rift.h"
 #include <stdarg.h>
 #include <functional>
-#include <iostream>
+#include <string>
+#include <tuple>
+#include <type_traits>
+#include <utility>
 #include <vector>
 
 // forward declarations. Once char_data is separated to its own file, we can get rid of these and include the file.
@@ -27,17 +30,18 @@ public:
 	void AddToQueue(int nTimer, std::string from, std::string funcName, Func func, Args &&...args)
 	{
 		if(nTimer < 0)
-			return;	
-
-		// print parameters
-		//((std::cout << ' ' << args << std::endl), ...);
+			return;
 
 		// capture parameter pack
 		auto tuple = std::tuple<Args...>(args...);
 		auto chs = GetCharacterData(tuple);
 
-		// place on queue
-		newQueue.push_back({nTimer, from, funcName, chs, [=] () mutable
+		// Stage rather than append directly. ProcessQueue merges staged entries
+		// before it starts iterating, so a callee that queues more work cannot
+		// reallocate the vector being walked. Timing is unaffected: an entry
+		// staged during tick N is merged at the top of tick N+1 and first
+		// decremented there, exactly as a direct push_back behaved.
+		stagedQueue.push_back({nTimer, from, funcName, chs, [=] () mutable
 		{
 			std::apply(func, std::forward_as_tuple(std::forward<Args>(args)...));
 		}});
@@ -64,9 +68,29 @@ private:
 		std::string calleeFuncName;
 		std::vector<CHAR_DATA*> charList;
 		std::function<void()> function;
+
+		/// Set by DeleteQueuedEventsInvolving instead of erasing the entry, so
+		/// cancellation is safe while ProcessQueue is mid-iteration.
+		bool cancelled = false;
+
+		/// Set by ProcessQueue when the entry has run. Swept in the same pass.
+		bool executed = false;
 	};
 
+	/// The materialized queue of events.
+	/// This is the queue that is processed each tick.
 	std::vector<queueEntry_t> newQueue;
+
+	/// The staging area for queued events. 
+	/// This is where new entries are added before being merged into the main queue.
+	std::vector<queueEntry_t> stagedQueue;
+
+	/// Marks every live entry for a specified character as cancelled.
+	/// @return the number of entries tombstoned.
+	int CancelEntriesInvolving(std::vector<queueEntry_t>& entries, CHAR_DATA *qChar);
+
+	/// @return true if any live entry in the container has a specified character.
+	bool HasPendingIn(const std::vector<queueEntry_t>& entries, CHAR_DATA *qChar) const;
 
 	/// Helper function used to extract character data from the specfied tuple.
 	/// @note Main use is for extracting character data sent to the AddToQueue method.
