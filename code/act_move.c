@@ -61,7 +61,7 @@
 #include "const.h"
 #include "utility.h"
 #include "effects.h"
-#include "room.h"
+#include "direction.h"
 #include "skills.h"
 #include "lookup.h"
 #include "characterClasses/thief.h"

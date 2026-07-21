@@ -14,7 +14,7 @@
 #include "interp.h"
 #include "recycle.h"
 #include "tables.h"
-#include "room.h"
+#include "direction.h"
 #include "rift.h"
 #include "db.h"
 #include "devextra.h"

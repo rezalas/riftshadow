@@ -57,7 +57,7 @@
 #include "utility.h"
 #include "characterClasses/sorcerer.h"
 #include "mprog.h"
-#include "room.h"
+#include "direction.h"
 #include "newmem.h"
 #include "act_info.h"
 #include "comm.h"

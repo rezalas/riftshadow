@@ -40,7 +40,7 @@
 #include <algorithm>
 #include "update.h"
 #include "weather_enums.h"
-#include "room.h"
+#include "direction.h"
 #include "newmem.h"
 #include "act_wiz.h"
 #include "interp.h"

@@ -49,7 +49,7 @@
 #include "newmem.h"
 #include "misc.h"
 #include "utility.h"
-#include "room.h"
+#include "direction.h"
 
 
 /* buffer sizes */
