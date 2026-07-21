@@ -325,63 +325,82 @@ typedef void APROG_FUN_MYELL (AREA_DATA *area, CHAR_DATA *ch, CHAR_DATA *victim)
 // mprog stuff
 //
 
-#define MPROG_BRIBE					0
-#define MPROG_ENTRY					1
-#define MPROG_GREET					2
-#define MPROG_GIVE					3
-#define MPROG_FIGHT					4
-#define MPROG_DEATH					5
-#define MPROG_PULSE					6
-#define MPROG_SPEECH				7
-#define MPROG_ATTACK				8
-#define MPROG_MOVE					9
-#define MPROG_BEAT					10
-#define MPROG_AGGRESS				11
+// Mob-program trigger bit indices into mob_index_data::progtypes. One of four
+// prog-trigger families (mprog/iprog/rprog/aprog), each on its own entity's
+// progtypes field. Wire format -- rename freely, never renumber.
+enum MProgTrigger : int
+{
+	MPROG_BRIBE					= 0,
+	MPROG_ENTRY					= 1,
+	MPROG_GREET					= 2,
+	MPROG_GIVE					= 3,
+	MPROG_FIGHT					= 4,
+	MPROG_DEATH					= 5,
+	MPROG_PULSE					= 6,
+	MPROG_SPEECH				= 7,
+	MPROG_ATTACK				= 8,
+	MPROG_MOVE					= 9,
+	MPROG_BEAT					= 10,
+	MPROG_AGGRESS				= 11,
+};
 
 //
 // iprog stuff
 //
 
-#define IPROG_WEAR					0
-#define IPROG_REMOVE				1
-#define IPROG_DROP					2
-#define IPROG_SAC					3
-#define IPROG_GIVE					4
-#define IPROG_GREET					5
-#define IPROG_FIGHT					6
-#define IPROG_DEATH					7
-#define IPROG_SPEECH				8
-#define IPROG_ENTRY					9
-#define IPROG_GET					10
-#define IPROG_PULSE					11
-#define IPROG_INVOKE				12
-#define IPROG_VERB					13
-#define IPROG_LOOT					14
-#define IPROG_OPEN					15
-#define IPROG_LOOK					17
-#define IPROG_HIT					18
+// Item-program trigger bit indices into obj_index_data::progtypes. Wire format
+// -- rename freely, never renumber. Gap at 16.
+enum IProgTrigger : int
+{
+	IPROG_WEAR					= 0,
+	IPROG_REMOVE				= 1,
+	IPROG_DROP					= 2,
+	IPROG_SAC					= 3,
+	IPROG_GIVE					= 4,
+	IPROG_GREET					= 5,
+	IPROG_FIGHT					= 6,
+	IPROG_DEATH					= 7,
+	IPROG_SPEECH				= 8,
+	IPROG_ENTRY					= 9,
+	IPROG_GET					= 10,
+	IPROG_PULSE					= 11,
+	IPROG_INVOKE				= 12,
+	IPROG_VERB					= 13,
+	IPROG_LOOT					= 14,
+	IPROG_OPEN					= 15,
+	IPROG_LOOK					= 17,
+	IPROG_HIT					= 18,
+};
 
 //
 // rprog stuff
 //
 
-#define RPROG_PULSE					0
-#define RPROG_ENTRY					1
-#define RPROG_MOVE					2
-#define RPROG_DROP					3
-#define RPROG_SPEECH				4
-#define RPROG_OPEN					5
+// Room-program trigger bit indices into room_index_data::progtypes.
+enum RProgTrigger : int
+{
+	RPROG_PULSE					= 0,
+	RPROG_ENTRY					= 1,
+	RPROG_MOVE					= 2,
+	RPROG_DROP					= 3,
+	RPROG_SPEECH				= 4,
+	RPROG_OPEN					= 5,
+};
 
 //
 // aprog stuff
 //
 
-#define APROG_PULSE					0
-#define APROG_RESET					1
-#define APROG_SUN					2
-#define APROG_TICK					3
-#define APROG_AGGRESS				4
-#define APROG_MYELL					5
+// Area-program trigger bit indices into area_data::progtypes.
+enum AProgTrigger : int
+{
+	APROG_PULSE					= 0,
+	APROG_RESET					= 1,
+	APROG_SUN					= 2,
+	APROG_TICK					= 3,
+	APROG_AGGRESS				= 4,
+	APROG_MYELL					= 5,
+};
 
 //
 // Quests!
@@ -432,34 +451,42 @@ struct time_info_data
 // Connected state for a channel.
 //
 
-#define CON_PLAYING					0
-#define CON_GET_NAME				1
-#define CON_GET_OLD_PASSWORD		2
-#define CON_CONFIRM_NEW_NAME		3
-#define CON_GET_NEW_PASSWORD		4
-#define CON_CONFIRM_NEW_PASSWORD	5
-#define CON_GET_NEW_RACE			6
-#define CON_GET_NEW_SEX				7
-#define CON_GET_NEW_CLASS			8
-#define CON_ALLOCATE_STATS			9
-#define CON_GET_ALIGNMENT			10
-#define CON_GET_ETHOS				11
-#define CON_DEFAULT_CHOICE			12
-#define CON_GEN_GROUPS				13
-#define CON_NEW_CHAR				14
-#define CON_READ_IMOTD				15
-#define CON_READ_MOTD				16
-#define CON_BREAK_CONNECT			17
-#define CON_GET_CABAL				18
-#define CON_GET_SPEC_ONE			19
-#define CON_GET_SPEC_TWO			20
-#define	CON_GET_THERMAL				21
-#define	CON_GET_MATERIAL			22
-#define CON_GET_DYNAMIC				23
-#define	CON_CHOOSE_ELE				24
-#define CON_LEGIT_NAME				25
-#define CON_GET_BEAUTY				26
-#define CON_CHOOSE_WEAPON			27
+// Descriptor connection state, an ordinal in descriptor_data::connected;
+// switched on in nanny(). NOTE: CON_DIE_BOUND (defined far above, near the level
+// constants) is NOT part of this family -- it is a constitution-stat threshold
+// that shares the CON_ prefix by accident, and keeps its #define. Wire format
+// -- never renumber.
+enum ConnectionState : int
+{
+	CON_PLAYING					= 0,
+	CON_GET_NAME				= 1,
+	CON_GET_OLD_PASSWORD		= 2,
+	CON_CONFIRM_NEW_NAME		= 3,
+	CON_GET_NEW_PASSWORD		= 4,
+	CON_CONFIRM_NEW_PASSWORD	= 5,
+	CON_GET_NEW_RACE			= 6,
+	CON_GET_NEW_SEX				= 7,
+	CON_GET_NEW_CLASS			= 8,
+	CON_ALLOCATE_STATS			= 9,
+	CON_GET_ALIGNMENT			= 10,
+	CON_GET_ETHOS				= 11,
+	CON_DEFAULT_CHOICE			= 12,
+	CON_GEN_GROUPS				= 13,
+	CON_NEW_CHAR				= 14,
+	CON_READ_IMOTD				= 15,
+	CON_READ_MOTD				= 16,
+	CON_BREAK_CONNECT			= 17,
+	CON_GET_CABAL				= 18,
+	CON_GET_SPEC_ONE			= 19,
+	CON_GET_SPEC_TWO			= 20,
+	CON_GET_THERMAL				= 21,
+	CON_GET_MATERIAL			= 22,
+	CON_GET_DYNAMIC				= 23,
+	CON_CHOOSE_ELE				= 24,
+	CON_LEGIT_NAME				= 25,
+	CON_GET_BEAUTY				= 26,
+	CON_CHOOSE_WEAPON			= 27,
+};
 
 //
 // Descriptor (channel) structure.
@@ -545,15 +572,20 @@ struct bounty
 // TO types for act.
 //
 
-#define TO_ROOM						0
-#define TO_NOTVICT					1
-#define TO_VICT						2
-#define TO_CHAR						3
-#define TO_ALL						4
-#define TO_IMMINROOM				5
-#define TO_GROUP					6
-#define TO_NOTGROUP					7
-#define TO_AREA						8
+// act() message target ordinal. A separate family from the TO_* "where" values
+// below (which discriminate affect_data::bitvector); values 0-5 collide.
+enum ActTarget : int
+{
+	TO_ROOM						= 0,
+	TO_NOTVICT					= 1,
+	TO_VICT						= 2,
+	TO_CHAR						= 3,
+	TO_ALL						= 4,
+	TO_IMMINROOM				= 5,
+	TO_GROUP					= 6,
+	TO_NOTGROUP					= 7,
+	TO_AREA						= 8,
+};
 
 //
 // Help table types.
@@ -788,14 +820,18 @@ struct obj_affect_data
 // affect types
 //
 
-#define AFT_SPELL					0
-#define AFT_SKILL					1
-#define AFT_POWER					2
-#define AFT_MALADY					3
-#define AFT_COMMUNE					4
-#define AFT_INVIS					5
-#define AFT_RUNE					6
-#define AFT_TIMER					7
+// Affect-type ordinal, in affect_data::aftype. Wire format -- never renumber.
+enum AffectType : int
+{
+	AFT_SPELL					= 0,
+	AFT_SKILL					= 1,
+	AFT_POWER					= 2,
+	AFT_MALADY					= 3,
+	AFT_COMMUNE					= 4,
+	AFT_INVIS					= 5,
+	AFT_RUNE					= 6,
+	AFT_TIMER					= 7,
+};
 
 //
 // class types
@@ -839,12 +875,19 @@ struct obj_affect_data
 // wear definitions
 //
 
-#define TO_AFFECTS					0
-#define TO_OBJECT					1
-#define TO_IMMUNE					2
-#define TO_RESIST					3
-#define TO_VULN						4
-#define TO_WEAPON					5
+// affect_data::where -- the discriminator that decides which family the sibling
+// bitvector holds and which field it applies to (handler.c dispatches on it).
+// This is the tag of the six-family union described in phase-02 §0.8.1; typing
+// the union itself is deferred, but the tag values are a plain ordinal.
+enum AffectWhere : int
+{
+	TO_AFFECTS					= 0,
+	TO_OBJECT					= 1,
+	TO_IMMUNE					= 2,
+	TO_RESIST					= 3,
+	TO_VULN						= 4,
+	TO_WEAPON					= 5,
+};
 
 //
 // runes only
@@ -862,16 +905,24 @@ struct obj_affect_data
 // where definitions for room
 //
 
-#define TO_ROOM_AFFECTS				0
-#define TO_ROOM_CONST				1
-#define TO_ROOM_FLAGS				2
+// room_affect_data::where -- discriminator for a room affect's bitvector.
+enum RoomAffectWhere : int
+{
+	TO_ROOM_AFFECTS				= 0,
+	TO_ROOM_CONST				= 1,
+	TO_ROOM_FLAGS				= 2,
+};
 
 //
 // where definitions for objs
 //
 
-#define TO_OBJ_AFFECTS				0
-#define TO_OBJ_APPLY				1
+// obj_affect_data::where -- discriminator for an object affect's bitvector.
+enum ObjAffectWhere : int
+{
+	TO_OBJ_AFFECTS				= 0,
+	TO_OBJ_APPLY				= 1,
+};
 
 //
 // where definitions for area
@@ -1145,26 +1196,31 @@ enum ActFlag : int
 // damage classes
 //
 
-#define DAM_NONE					0
-#define DAM_BASH					1
-#define DAM_PIERCE					2
-#define DAM_SLASH					3
-#define DAM_FIRE					4
-#define DAM_COLD					5
-#define DAM_LIGHTNING				6
-#define DAM_ACID					7
-#define DAM_POISON					8
-#define DAM_NEGATIVE				9
-#define DAM_HOLY					10
-#define DAM_ENERGY					11
-#define DAM_MENTAL					12
-#define DAM_DISEASE					13
-#define DAM_DROWNING				14
-#define DAM_LIGHT					15
-#define DAM_OTHER					16
-#define DAM_CHARM					17
-#define DAM_SOUND					18
-#define DAM_TRUESTRIKE				19
+// Damage classes -- an ordinal passed around as an int and switched on. Wire
+// format -- rename freely, never renumber.
+enum DamageType : int
+{
+	DAM_NONE					= 0,
+	DAM_BASH					= 1,
+	DAM_PIERCE					= 2,
+	DAM_SLASH					= 3,
+	DAM_FIRE					= 4,
+	DAM_COLD					= 5,
+	DAM_LIGHTNING				= 6,
+	DAM_ACID					= 7,
+	DAM_POISON					= 8,
+	DAM_NEGATIVE				= 9,
+	DAM_HOLY					= 10,
+	DAM_ENERGY					= 11,
+	DAM_MENTAL					= 12,
+	DAM_DISEASE					= 13,
+	DAM_DROWNING				= 14,
+	DAM_LIGHT					= 15,
+	DAM_OTHER					= 16,
+	DAM_CHARM					= 17,
+	DAM_SOUND					= 18,
+	DAM_TRUESTRIKE				= 19,
+};
 #define	DAM_INTERNAL				20
 
 //
@@ -1489,9 +1545,13 @@ enum AffectObjFlag : int
 // Used in #MOBILES.
 //
 
-#define SEX_NEUTRAL					0
-#define SEX_MALE					1
-#define SEX_FEMALE					2
+// Sex ordinal, in char_data::sex. Wire format -- never renumber.
+enum Sex : int
+{
+	SEX_NEUTRAL					= 0,
+	SEX_MALE					= 1,
+	SEX_FEMALE					= 2,
+};
 
 //
 // AC types
@@ -1515,13 +1575,18 @@ enum AffectObjFlag : int
 // size
 //
 
-#define SIZE_TINY					0
-#define SIZE_SMALL					1
-#define SIZE_MEDIUM					2
-#define SIZE_LARGE					3
-#define SIZE_HUGE					4
-#define SIZE_GIANT					5
-#define SIZE_IMMENSE				6
+// Creature size, an ordinal in char_data::size; compared relationally. Wire
+// format -- never renumber. Kept ascending so size comparisons hold.
+enum Size : int
+{
+	SIZE_TINY					= 0,
+	SIZE_SMALL					= 1,
+	SIZE_MEDIUM					= 2,
+	SIZE_LARGE					= 3,
+	SIZE_HUGE					= 4,
+	SIZE_GIANT					= 5,
+	SIZE_IMMENSE				= 6,
+};
 
 //
 // Well known object virtual numbers.
@@ -2092,41 +2157,51 @@ enum ExitFlag : int
 	EX_JAMMED					= 10,
 };
 
-#define ARE_NORMAL					0
-#define ARE_ROAD_RIVER				1
-#define ARE_CABAL					2
-#define ARE_QUEST					3
-#define ARE_CITY					4
-#define ARE_UNOPENED				5
-#define ARE_SHRINE					6
+// Area sector/category ordinal. Wire format -- never renumber.
+enum AreaSector : int
+{
+	ARE_NORMAL					= 0,
+	ARE_ROAD_RIVER				= 1,
+	ARE_CABAL					= 2,
+	ARE_QUEST					= 3,
+	ARE_CITY					= 4,
+	ARE_UNOPENED				= 5,
+	ARE_SHRINE					= 6,
+};
 
 //
 // Sector types.
 // Used in #ROOMS.
 //
 
-#define SECT_INSIDE					7
-#define SECT_CITY					1
-#define SECT_FIELD					2
-#define SECT_FOREST					3
-#define SECT_HILLS					4
-#define SECT_MOUNTAIN				5
-#define SECT_WATER					6
-#define SECT_UNUSED					7
-#define SECT_UNDERWATER				8
-#define SECT_AIR					9
-#define SECT_DESERT					10
-#define SECT_ROAD					11
-#define SECT_CONFLAGRATION			12
-#define SECT_BURNING				13
-#define SECT_TRAIL					14
-#define SECT_SWAMP					15
-#define SECT_PARK					16
-#define SECT_VERTICAL				17
-#define	SECT_ICE					18
-#define	SECT_SNOW					19
-#define SECT_CAVE					20
-#define SECT_MAX					21
+// Sector (terrain) types, an ordinal in room_index_data::sector_type. Note the
+// deliberate collision: SECT_INSIDE and SECT_UNUSED are both 7. SECT_MAX (21) is
+// a count/sentinel, not a terrain. Wire format -- never renumber.
+enum SectorType : int
+{
+	SECT_INSIDE					= 7,
+	SECT_CITY					= 1,
+	SECT_FIELD					= 2,
+	SECT_FOREST					= 3,
+	SECT_HILLS					= 4,
+	SECT_MOUNTAIN				= 5,
+	SECT_WATER					= 6,
+	SECT_UNUSED					= 7,
+	SECT_UNDERWATER				= 8,
+	SECT_AIR					= 9,
+	SECT_DESERT					= 10,
+	SECT_ROAD					= 11,
+	SECT_CONFLAGRATION			= 12,
+	SECT_BURNING				= 13,
+	SECT_TRAIL					= 14,
+	SECT_SWAMP					= 15,
+	SECT_PARK					= 16,
+	SECT_VERTICAL				= 17,
+	SECT_ICE					= 18,
+	SECT_SNOW					= 19,
+	SECT_CAVE					= 20,
+	SECT_MAX					= 21,	// count/sentinel, not a terrain
+};
 
 //
 // Trap types
@@ -2280,15 +2355,22 @@ enum ExitFlag : int
 // Positions.
 //
 
-#define POS_DEAD					0
-#define POS_MORTAL					1
-#define POS_INCAP					2
-#define POS_STUNNED					3
-#define POS_SLEEPING				4
-#define POS_RESTING					5
-#define POS_SITTING					6
-#define POS_FIGHTING				7
-#define POS_STANDING				8
+// Character position, an ordinal in char_data::position (a short). Ordering is
+// load-bearing: ~96 relational comparisons (position >= POS_RESTING etc.) and it
+// is stored in cmd_type::position for the command table. Wire format -- never
+// renumber. Kept ascending exactly as-is so all comparisons hold.
+enum Position : int
+{
+	POS_DEAD					= 0,
+	POS_MORTAL					= 1,
+	POS_INCAP					= 2,
+	POS_STUNNED					= 3,
+	POS_SLEEPING				= 4,
+	POS_RESTING					= 5,
+	POS_SITTING					= 6,
+	POS_FIGHTING				= 7,
+	POS_STANDING				= 8,
+};
 
 #define MIN_PK_XP					9999	// min xp players need to start PKing
 #define MIN_LEVEL_TO_PK				23		// Minimum level for players to pk
