@@ -15,7 +15,7 @@
 #include "../act_ente.h"
 #include "../comm.h"
 #include "../update.h"
-#include "../room.h"
+#include "../direction.h"
 #include "../handler.h"
 #include "../magic.h"
 #include "../recycle.h"

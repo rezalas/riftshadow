@@ -24,7 +24,7 @@
 #include "../const.h"
 #include "../utility.h"
 #include "../skills.h"
-#include "../room.h"
+#include "../direction.h"
 #include "../devextra.h"
 #include "../dioextra.h"
 
