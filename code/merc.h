@@ -1328,72 +1328,78 @@ enum VulnFlag : int
 // body form
 //
 
-#define FORM_EDIBLE					0
-#define FORM_POISON					1
-#define FORM_MAGICAL				2
-#define FORM_INSTANT_DECAY			3
-#define FORM_OTHER					4 // defined by material bit
+// Body-form bit indices into char_data::form (and race_type::form). Note this
+// is a DIFFERENT field from char_data::act despite magic.c:1408 testing
+// ACT_UNDEAD against it -- see phase-02 §0.8.6. Wire format -- never renumber.
+enum FormFlag : int
+{
+	// material form
+	FORM_EDIBLE					= 0,
+	FORM_POISON					= 1,
+	FORM_MAGICAL				= 2,
+	FORM_INSTANT_DECAY			= 3,
+	FORM_OTHER					= 4,	// defined by material bit
 
-//
-// actual form
-//
+	// actual form
+	FORM_ANIMAL					= 6,
+	FORM_SENTIENT				= 7,
+	FORM_UNDEAD					= 8,
+	FORM_CONSTRUCT				= 9,
+	FORM_MIST					= 10,
+	FORM_INTANGIBLE				= 11,
 
-#define FORM_ANIMAL					6
-#define FORM_SENTIENT				7
-#define FORM_UNDEAD					8
-#define FORM_CONSTRUCT				9
-#define FORM_MIST					10
-#define FORM_INTANGIBLE				11
+	FORM_BIPED					= 12,
+	FORM_AQUATIC				= 13,
+	FORM_INSECT					= 14,
+	FORM_SPIDER					= 15,
+	FORM_CRUSTACEAN				= 16,
+	FORM_WORM					= 17,
+	FORM_BLOB					= 18,
 
-#define FORM_BIPED					12
-#define FORM_AQUATIC				13
-#define FORM_INSECT					14
-#define FORM_SPIDER					15
-#define FORM_CRUSTACEAN				16
-#define FORM_WORM					17
-#define FORM_BLOB					18
-
-#define FORM_MAMMAL					21
-#define FORM_BIRD					22
-#define FORM_REPTILE				23
-#define FORM_SNAKE					24
-#define FORM_DRAGON					25
-#define FORM_AMPHIBIAN				26
-#define FORM_FISH					27
-#define FORM_COLD_BLOOD				28
-#define FORM_NOSPEECH				29
+	FORM_MAMMAL					= 21,
+	FORM_BIRD					= 22,
+	FORM_REPTILE				= 23,
+	FORM_SNAKE					= 24,
+	FORM_DRAGON					= 25,
+	FORM_AMPHIBIAN				= 26,
+	FORM_FISH					= 27,
+	FORM_COLD_BLOOD				= 28,
+	FORM_NOSPEECH				= 29,
+};
 
 //
 // body parts
 //
 
-#define PART_HEAD					0
-#define PART_ARMS					1
-#define PART_LEGS					2
-#define PART_HEART					3
-#define PART_BRAINS					4
-#define PART_GUTS					5
-#define PART_HANDS					6
-#define PART_FEET					7
-#define PART_FINGERS				8
-#define PART_EAR					9
-#define PART_EYE					10
-#define PART_LONG_TONGUE			11
-#define PART_EYESTALKS				12
-#define PART_TENTACLES				13
-#define PART_FINS					14
-#define PART_WINGS					15
-#define PART_TAIL					16
+// Body-part bit indices into char_data::parts (and race_type::parts). Wire
+// format -- rename freely, never renumber. Gaps at 17-19.
+enum PartFlag : int
+{
+	PART_HEAD					= 0,
+	PART_ARMS					= 1,
+	PART_LEGS					= 2,
+	PART_HEART					= 3,
+	PART_BRAINS					= 4,
+	PART_GUTS					= 5,
+	PART_HANDS					= 6,
+	PART_FEET					= 7,
+	PART_FINGERS				= 8,
+	PART_EAR					= 9,
+	PART_EYE					= 10,
+	PART_LONG_TONGUE			= 11,
+	PART_EYESTALKS				= 12,
+	PART_TENTACLES				= 13,
+	PART_FINS					= 14,
+	PART_WINGS					= 15,
+	PART_TAIL					= 16,
 
-//
-// for combat
-//
-
-#define PART_CLAWS					20
-#define PART_FANGS					21
-#define PART_HORNS					22
-#define PART_SCALES					23
-#define PART_TUSKS					24
+	// for combat
+	PART_CLAWS					= 20,
+	PART_FANGS					= 21,
+	PART_HORNS					= 22,
+	PART_SCALES					= 23,
+	PART_TUSKS					= 24,
+};
 
 //
 // Bits for 'affected_by'.
@@ -1809,43 +1815,60 @@ enum ItemWearFlag : int
 // weapon class
 //
 
-#define WEAPON_EXOTIC				0
-#define WEAPON_SWORD				1
-#define WEAPON_DAGGER				2
-#define WEAPON_SPEAR				3
-#define WEAPON_MACE					4
-#define WEAPON_AXE					5
-#define WEAPON_FLAIL				6
-#define WEAPON_WHIP					7
-#define WEAPON_POLEARM				8
-#define WEAPON_STAFF				9
-#define WEAPON_HAND					10
+// Weapon CLASS -- an ordinal scalar in obj->value[0], compared with ==. This is
+// a separate family from the weapon-flag bits below, whose values 0-10 collide
+// with these completely. (The source's own "weapon class" / "weapon types"
+// comments have these two backwards; the names are kept, the labels corrected.)
+enum WeaponClass : int
+{
+	WEAPON_EXOTIC				= 0,
+	WEAPON_SWORD				= 1,
+	WEAPON_DAGGER				= 2,
+	WEAPON_SPEAR				= 3,
+	WEAPON_MACE					= 4,
+	WEAPON_AXE					= 5,
+	WEAPON_FLAIL				= 6,
+	WEAPON_WHIP					= 7,
+	WEAPON_POLEARM				= 8,
+	WEAPON_STAFF				= 9,
+	WEAPON_HAND					= 10,
+};
 
 //
 // weapon types
 //
 
-#define WEAPON_FLAMING				0
-#define WEAPON_FROST				1
-#define WEAPON_VAMPIRIC				2
-#define WEAPON_SHARP				3
-#define WEAPON_VORPAL				4
-#define WEAPON_TWO_HANDS			5
-#define WEAPON_SHOCKING				6
-#define WEAPON_POISON				7
-#define WEAPON_AVENGER				8
-#define WEAPON_SHADOWBANE			9
-#define WEAPON_LIGHTBRINGER			10
+// Weapon FLAGS -- bit indices tested with IS_SET_OLD on obj->value[4] (a scalar
+// int field, hence the _OLD operators). Separate family from WeaponClass above.
+enum WeaponFlag : int
+{
+	WEAPON_FLAMING				= 0,
+	WEAPON_FROST				= 1,
+	WEAPON_VAMPIRIC				= 2,
+	WEAPON_SHARP				= 3,
+	WEAPON_VORPAL				= 4,
+	WEAPON_TWO_HANDS			= 5,
+	WEAPON_SHOCKING				= 6,
+	WEAPON_POISON				= 7,
+	WEAPON_AVENGER				= 8,
+	WEAPON_SHADOWBANE			= 9,
+	WEAPON_LIGHTBRINGER			= 10,
+};
 
 //
 // gate flags
 //
 
-#define GATE_NORMAL_EXIT			0
-#define GATE_NOCURSE				1
-#define GATE_GOWITH					2
-#define GATE_BUGGY					3
-#define GATE_RANDOM					4
+// Portal gate flags -- bit indices tested with IS_SET_OLD on a portal's
+// obj->value[] scalar. Wire format -- rename freely, never renumber.
+enum GateFlag : int
+{
+	GATE_NORMAL_EXIT			= 0,
+	GATE_NOCURSE				= 1,
+	GATE_GOWITH					= 2,
+	GATE_BUGGY					= 3,
+	GATE_RANDOM					= 4,
+};
 
 //
 // furniture flags
@@ -1954,11 +1977,16 @@ enum ApplyLocation : int
 // Used in #OBJECTS.
 //
 
-#define CONT_CLOSEABLE				0
-#define CONT_PICKPROOF				1
-#define CONT_CLOSED					2
-#define CONT_LOCKED					3
-#define CONT_PUT_ON					4
+// Container flags -- bit indices tested with IS_SET_OLD on a container's
+// obj->value[1] scalar. Wire format -- rename freely, never renumber.
+enum ContainerFlag : int
+{
+	CONT_CLOSEABLE				= 0,
+	CONT_PICKPROOF				= 1,
+	CONT_CLOSED					= 2,
+	CONT_LOCKED					= 3,
+	CONT_PUT_ON					= 4,
+};
 
 #define WIELD_ONE					1
 #define WIELD_TWO					2
@@ -2047,17 +2075,22 @@ enum RoomFlag : int
 // Used in #ROOMS.
 //
 
-#define EX_ISDOOR					0
-#define EX_CLOSED					1
-#define EX_LOCKED					2
-#define EX_PICKPROOF				3
-#define EX_NOPASS					4
-#define EX_NOCLOSE					5
-#define EX_NOLOCK					6
-#define EX_NOBASH					7
-#define EX_NONOBVIOUS				8
-#define EX_TRANSLUCENT				9
-#define EX_JAMMED					10
+// Exit flags -- bit indices tested with IS_SET_OLD on exit_data::exit_info (a
+// scalar int). Wire format -- rename freely, never renumber.
+enum ExitFlag : int
+{
+	EX_ISDOOR					= 0,
+	EX_CLOSED					= 1,
+	EX_LOCKED					= 2,
+	EX_PICKPROOF				= 3,
+	EX_NOPASS					= 4,
+	EX_NOCLOSE					= 5,
+	EX_NOLOCK					= 6,
+	EX_NOBASH					= 7,
+	EX_NONOBVIOUS				= 8,
+	EX_TRANSLUCENT				= 9,
+	EX_JAMMED					= 10,
+};
 
 #define ARE_NORMAL					0
 #define ARE_ROAD_RIVER				1
@@ -3416,13 +3449,18 @@ extern QUEUE_DATA *global_queue;
 // Area flags.
 //
 
-#define AREA_NONE					0
-#define AREA_EXPLORE				0		// So far, only that gear returns to newbies
-#define AREA_NO_NEWBIES				1		// Newbies can't go in
-#define AREA_UNGHOST				2		// Walking in unghosts you
-#define AREA_CHANGED				3		// Area has been modified.
-#define AREA_ADDED					4		// Area has been added to.
-#define AREA_LOADING				5		// Used for counting in db.c
+// Area flags -- bit indices into area_data::area_flags. AREA_NONE and
+// AREA_EXPLORE are both 0 by design (alias). Wire format -- never renumber.
+enum AreaFlag : int
+{
+	AREA_NONE					= 0,
+	AREA_EXPLORE				= 0,	// So far, only that gear returns to newbies
+	AREA_NO_NEWBIES				= 1,	// Newbies can't go in
+	AREA_UNGHOST				= 2,	// Walking in unghosts you
+	AREA_CHANGED				= 3,	// Area has been modified.
+	AREA_ADDED					= 4,	// Area has been added to.
+	AREA_LOADING				= 5,	// Used for counting in db.c
+};
 
 #define MAX_DIR						6
 #define NO_FLAG						-99		// Must not be used in flags or stats.
