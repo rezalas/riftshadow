@@ -16,7 +16,7 @@
 #include "rift.h"
 #include "newmem.h"
 #include "area.h"
-#include "room.h"
+#include "direction.h"
 #include "exit.h"
 #include "update.h"
 #include "dioextra.h"
@@ -38,8 +38,6 @@
 
 
 CMud RS;
-
-CRoom *CRoom::first = nullptr;
 
 CMud::CMud()
 {
