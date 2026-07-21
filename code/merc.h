@@ -1360,48 +1360,67 @@ enum ActFlag : int
 // Used in #MOBILES.
 //
 
-#define AFF_BLIND					0
-#define AFF_INVISIBLE				1
-#define AFF_DETECT_EVIL				2
-#define AFF_DETECT_INVIS			3
-#define AFF_DETECT_MAGIC			4
-#define AFF_DETECT_HIDDEN			5
-#define AFF_DETECT_GOOD				6
-#define AFF_SANCTUARY				7
-#define AFF_DETECT_CAMO				8
-#define AFF_INFRARED				9 // unused!
-#define AFF_CURSE					10
-#define AFF_CAMOUFLAGE				11
-#define AFF_POISON					12
-#define AFF_PROTECTION				13
-#define AFF_RAGE					14
-#define AFF_SNEAK					15
-#define AFF_HIDE					16
-#define AFF_SLEEP					17
-#define AFF_CHARM					18
-#define AFF_FLYING					19
-#define AFF_PASS_DOOR				20
-#define AFF_HASTE					21
-#define AFF_CALM					22
-#define AFF_PLAGUE					23
-#define AFF_PERMANENT				24
-#define AFF_DARK_VISION				25
-#define AFF_BERSERK					26
-#define AFF_WATERBREATH				27
-#define AFF_REGENERATION			28
-#define AFF_SLOW					29
-#define AFF_NOSHOW					30
+// Bit indices for character affects. Reached through several storages:
+// char_data::affected_by, affect_data::bitvector (when where == TO_AFFECTS),
+// and race_type::aff[] -- which holds bit INDICES in a plain array, not a bit
+// vector. See phase-02 §0.8.2; act_move.c:3149 confuses the two.
+// Wire format -- rename freely, never renumber.
+enum AffectFlag : int
+{
+	AFF_BLIND					= 0,
+	AFF_INVISIBLE				= 1,
+	AFF_DETECT_EVIL				= 2,
+	AFF_DETECT_INVIS			= 3,
+	AFF_DETECT_MAGIC			= 4,
+	AFF_DETECT_HIDDEN			= 5,
+	AFF_DETECT_GOOD				= 6,
+	AFF_SANCTUARY				= 7,
+	AFF_DETECT_CAMO				= 8,
+	AFF_INFRARED				= 9,	// unused!
+	AFF_CURSE					= 10,
+	AFF_CAMOUFLAGE				= 11,
+	AFF_POISON					= 12,
+	AFF_PROTECTION				= 13,
+	AFF_RAGE					= 14,
+	AFF_SNEAK					= 15,
+	AFF_HIDE					= 16,
+	AFF_SLEEP					= 17,
+	AFF_CHARM					= 18,
+	AFF_FLYING					= 19,
+	AFF_PASS_DOOR				= 20,
+	AFF_HASTE					= 21,
+	AFF_CALM					= 22,
+	AFF_PLAGUE					= 23,
+	AFF_PERMANENT				= 24,
+	AFF_DARK_VISION				= 25,
+	AFF_BERSERK					= 26,
+	AFF_WATERBREATH				= 27,
+	AFF_REGENERATION			= 28,
+	AFF_SLOW					= 29,
+	AFF_NOSHOW					= 30,
+};
 
 //
 // AFF bits for rooms
 //
 
-#define AFF_ROOM_RANDOMIZER			0
-#define AFF_ROOM_CURSE				10
-#define AFF_ROOM_POISON				12
-#define AFF_ROOM_SLEEP				17
-#define AFF_ROOM_PLAGUE				23
-#define AFF_ROOM_SLOW				29
+// Bit indices into room_index_data::affected_by, and into
+// room_affect_data::bitvector when where == TO_ROOM_AFFECTS.
+//
+// These reuse AffectFlag's numbering space but are NOT aliases of it: this is a
+// separate family on separate storage. Five of the six happen to share a name
+// with their AffectFlag counterpart (CURSE, POISON, SLEEP, PLAGUE, SLOW) and
+// the same bit, but AFF_ROOM_RANDOMIZER == 0 collides with AFF_BLIND == 0 while
+// meaning something completely unrelated. Kept as its own enum for that reason.
+enum AffectRoomFlag : int
+{
+	AFF_ROOM_RANDOMIZER			= 0,
+	AFF_ROOM_CURSE				= 10,
+	AFF_ROOM_POISON				= 12,
+	AFF_ROOM_SLEEP				= 17,
+	AFF_ROOM_PLAGUE				= 23,
+	AFF_ROOM_SLOW				= 29,
+};
 
 // Aff bits for.. AREAS!
 // -- None currently. --
@@ -1411,7 +1430,13 @@ enum ActFlag : int
 // Aff bits for OBJS
 //
 
-#define	AFF_OBJ_BURNING				0
+// Bit indices into obj_data::affected_by, and into obj_affect_data::bitvector
+// when where == TO_OBJ_AFFECTS. A third family in AffectFlag's numbering space,
+// on a third storage. One member so far.
+enum AffectObjFlag : int
+{
+	AFF_OBJ_BURNING				= 0,
+};
 
 //
 // Sex.
@@ -1571,110 +1596,143 @@ enum ActFlag : int
 // Used in #OBJECTS.
 //
 
-#define ITEM_LIGHT					1
-#define ITEM_SCROLL					2
-#define ITEM_WAND					3
-#define ITEM_STAFF					4
-#define ITEM_WEAPON					5
-#define ITEM_NULL6					6
-#define	ITEM_DICE					7
-#define ITEM_TREASURE				8
-#define ITEM_ARMOR					9
-#define ITEM_POTION					10
-#define ITEM_CLOTHING				11
-#define ITEM_FURNITURE				12
-#define ITEM_TRASH					13
-#define ITEM_CONTAINER				15
-#define ITEM_DRINK_CON				17
-#define ITEM_KEY					18
-#define ITEM_FOOD					19
-#define ITEM_MONEY					20
-#define ITEM_BOAT					22
-#define ITEM_CORPSE_NPC				23
-#define ITEM_CORPSE_PC				24
-#define ITEM_FOUNTAIN				25
-#define ITEM_PILL					26
-#define ITEM_PROTECT				27
-#define ITEM_MAP					28
-#define ITEM_PORTAL					29
-#define ITEM_WARP_STONE				30
-#define ITEM_ROOM_KEY				31
-#define ITEM_GEM					32
-#define ITEM_JEWELRY				33
-#define ITEM_CAMPFIRE				34
-#define ITEM_CABAL_ITEM				35
-#define ITEM_SKELETON				36
-#define ITEM_URN					37
-#define ITEM_GRAVITYWELL			38
-#define ITEM_BOOK					39
-#define ITEM_PEN					40
-#define ITEM_ALTAR					41
-//#define ITEM_DONATION_PIT			42
-#define ITEM_STONE					43
+// Item TYPES -- an ordinal scalar stored in obj_data::item_type (a short), not
+// a bit field. Compared with == and switched on; never passed to IS_SET.
+//
+// The ITEM_ prefix covers THREE unrelated families (types here, extra flags and
+// wear flags below) whose values collide: ITEM_LIGHT == 1 is a type,
+// ITEM_HUM == 1 is an extra-flag bit, ITEM_WEAR_FINGER == 1 is a wear bit.
+// They are separate enums for that reason. Names are unchanged, so no call site
+// moves; the split is documentation the compiler happens to hold.
+// Wire format (area files) -- rename freely, never renumber.
+enum ItemType : int
+{
+	ITEM_LIGHT					= 1,
+	ITEM_SCROLL					= 2,
+	ITEM_WAND					= 3,
+	ITEM_STAFF					= 4,
+	ITEM_WEAPON					= 5,
+	ITEM_NULL6					= 6,
+	ITEM_DICE					= 7,
+	ITEM_TREASURE				= 8,
+	ITEM_ARMOR					= 9,
+	ITEM_POTION					= 10,
+	ITEM_CLOTHING				= 11,
+	ITEM_FURNITURE				= 12,
+	ITEM_TRASH					= 13,
+	ITEM_CONTAINER				= 15,
+	ITEM_DRINK_CON				= 17,
+	ITEM_KEY					= 18,
+	ITEM_FOOD					= 19,
+	ITEM_MONEY					= 20,
+	ITEM_BOAT					= 22,
+	ITEM_CORPSE_NPC				= 23,
+	ITEM_CORPSE_PC				= 24,
+	ITEM_FOUNTAIN				= 25,
+	ITEM_PILL					= 26,
+	ITEM_PROTECT				= 27,
+	ITEM_MAP					= 28,
+	ITEM_PORTAL					= 29,
+	ITEM_WARP_STONE				= 30,
+	ITEM_ROOM_KEY				= 31,
+	ITEM_GEM					= 32,
+	ITEM_JEWELRY				= 33,
+	ITEM_CAMPFIRE				= 34,
+	ITEM_CABAL_ITEM				= 35,
+	ITEM_SKELETON				= 36,
+	ITEM_URN					= 37,
+	ITEM_GRAVITYWELL			= 38,
+	ITEM_BOOK					= 39,
+	ITEM_PEN					= 40,
+	ITEM_ALTAR					= 41,
+	// 42 was ITEM_DONATION_PIT -- retired. Note ITEM_DONATION_PIT now exists as
+	// an *extra flag* with value 33, which is a different family entirely.
+	ITEM_STONE					= 43,
+};
 
 //
 // Extra flags.
 // Used in #OBJECTS.
 ///
 
-#define ITEM_GLOW					0
-#define ITEM_HUM					1
-#define ITEM_DARK					2
-#define ITEM_NOSHOW					3
-#define ITEM_EVIL					4
-#define ITEM_INVIS					5
-#define ITEM_MAGIC					6
-#define ITEM_NODROP					7
-#define ITEM_BLESS					8
-#define ITEM_ANTI_GOOD				9
-#define ITEM_ANTI_EVIL				10
-#define ITEM_ANTI_NEUTRAL			11
-#define ITEM_NOREMOVE				12
-#define ITEM_INVENTORY				13
-#define ITEM_NOPURGE				14
-#define ITEM_ROT_DEATH				15
-#define ITEM_VIS_DEATH				16
-#define ITEM_FIXED					17
-#define ITEM_NODISARM				18
-#define ITEM_NOLOCATE				19
-#define ITEM_MELT_DROP				20
-#define ITEM_UNDER_CLOTHES			21
-#define ITEM_SELL_EXTRACT			22
-#define ITEM_BURN_PROOF				24
-#define ITEM_NOUNCURSE				25
-#define ITEM_BRAND					26
-#define CORPSE_NO_ANIMATE			27
-#define ITEM_ANTI_LAWFUL			28
-#define ITEM_ANTI_NEUT				29
-#define ITEM_ANTI_CHAOTIC			30
-#define ITEM_NO_STASH				31
-#define ITEM_NO_SAC					32
-#define ITEM_DONATION_PIT			33
+// Extra flags -- bit indices into obj_data::extra_flags, and into
+// obj_index_data's affect bitvector where ITEM_EVIL / ITEM_BURN_PROOF are set
+// (magic.c). Distinct from ItemType above despite the shared prefix.
+// Wire format -- rename freely, never renumber. Gap at 23.
+//
+// CORPSE_NO_ANIMATE is a member of THIS family despite its different prefix:
+// value 27 sits between ITEM_BRAND (26) and ITEM_ANTI_LAWFUL (28), and it is
+// set on extra_flags at fight.c:3025. Note characterClasses/necro.c sets and
+// tests it on *wear_flags* instead, where bit 27 is outside the wear range
+// (0-18) -- see phase-02 §0.8.1. Left as found; that is a bug fix, not a rename.
+enum ItemExtraFlag : int
+{
+	ITEM_GLOW					= 0,
+	ITEM_HUM					= 1,
+	ITEM_DARK					= 2,
+	ITEM_NOSHOW					= 3,
+	ITEM_EVIL					= 4,
+	ITEM_INVIS					= 5,
+	ITEM_MAGIC					= 6,
+	ITEM_NODROP					= 7,
+	ITEM_BLESS					= 8,
+	ITEM_ANTI_GOOD				= 9,
+	ITEM_ANTI_EVIL				= 10,
+	ITEM_ANTI_NEUTRAL			= 11,
+	ITEM_NOREMOVE				= 12,
+	ITEM_INVENTORY				= 13,
+	ITEM_NOPURGE				= 14,
+	ITEM_ROT_DEATH				= 15,
+	ITEM_VIS_DEATH				= 16,
+	ITEM_FIXED					= 17,
+	ITEM_NODISARM				= 18,
+	ITEM_NOLOCATE				= 19,
+	ITEM_MELT_DROP				= 20,
+	ITEM_UNDER_CLOTHES			= 21,
+	ITEM_SELL_EXTRACT			= 22,
+	ITEM_BURN_PROOF				= 24,
+	ITEM_NOUNCURSE				= 25,
+	ITEM_BRAND					= 26,
+	CORPSE_NO_ANIMATE			= 27,
+	ITEM_ANTI_LAWFUL			= 28,
+	ITEM_ANTI_NEUT				= 29,
+	ITEM_ANTI_CHAOTIC			= 30,
+	ITEM_NO_STASH				= 31,
+	ITEM_NO_SAC					= 32,
+	ITEM_DONATION_PIT			= 33,
+};
 
 //
 // Wear flags.
 // Used in #OBJECTS.
 //
 
-#define ITEM_TAKE					0
-#define ITEM_WEAR_FINGER			1
-#define ITEM_WEAR_NECK				2
-#define ITEM_WEAR_BODY				3
-#define ITEM_WEAR_HEAD				4
-#define ITEM_WEAR_LEGS				5
-#define ITEM_WEAR_FEET				6
-#define ITEM_WEAR_HANDS				7
-#define ITEM_WEAR_ARMS				8
-#define ITEM_WEAR_SHIELD			9
-#define ITEM_WEAR_ABOUT				10
-#define ITEM_WEAR_WAIST				11
-#define ITEM_WEAR_WRIST				12
-#define ITEM_WEAR_WIELD				13
-#define ITEM_WEAR_HOLD				14
-#define ITEM_WEAR_FLOAT				15
-#define ITEM_WEAR_BRAND				16
-#define ITEM_WEAR_STRAPPED			17
-#define ITEM_WEAR_COSMETIC			18 //cosmetic, misc, up to 5/person
+// Wear flags -- bit indices into obj_data::wear_flags. The third and last
+// family under the ITEM_ prefix. Range is 0-18, which is why necro.c's use of
+// CORPSE_NO_ANIMATE (27) on this field cannot work (§0.8.1).
+// Wire format -- rename freely, never renumber.
+enum ItemWearFlag : int
+{
+	ITEM_TAKE					= 0,
+	ITEM_WEAR_FINGER			= 1,
+	ITEM_WEAR_NECK				= 2,
+	ITEM_WEAR_BODY				= 3,
+	ITEM_WEAR_HEAD				= 4,
+	ITEM_WEAR_LEGS				= 5,
+	ITEM_WEAR_FEET				= 6,
+	ITEM_WEAR_HANDS				= 7,
+	ITEM_WEAR_ARMS				= 8,
+	ITEM_WEAR_SHIELD			= 9,
+	ITEM_WEAR_ABOUT				= 10,
+	ITEM_WEAR_WAIST				= 11,
+	ITEM_WEAR_WRIST				= 12,
+	ITEM_WEAR_WIELD				= 13,
+	ITEM_WEAR_HOLD				= 14,
+	ITEM_WEAR_FLOAT				= 15,
+	ITEM_WEAR_BRAND				= 16,
+	ITEM_WEAR_STRAPPED			= 17,
+	ITEM_WEAR_COSMETIC			= 18,	// cosmetic, misc, up to 5/person
+};
 
 #define RESTRICT_OTHER				0
 #define RESTRICT_CLASS				1

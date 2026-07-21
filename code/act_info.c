@@ -730,7 +730,10 @@ void show_char_to_char_1(CHAR_DATA *victim, CHAR_DATA *ch)
 						&& IS_SET(tObj->extra_flags, ITEM_UNDER_CLOTHES)
 						&& is_worn(worn_over))
 					{
-						if (worn_over->wear_flags[0] + pow(2, ITEM_WEAR_COSMETIC) == tObj->wear_flags[0])
+						// (int) cast: ITEM_WEAR_COSMETIC is an enumerator, and std::pow has no
+						// (int, enum) overload -- every floating overload is an equally good
+						// match, so the call is ambiguous without it. Behaviour is unchanged.
+						if (worn_over->wear_flags[0] + pow(2, (int)ITEM_WEAR_COSMETIC) == tObj->wear_flags[0])
 							break;
 					}
 				}
