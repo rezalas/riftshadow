@@ -883,23 +883,35 @@ struct obj_affect_data
 /// room applies
 //
 
-#define APPLY_ROOM_NONE				0
-#define APPLY_ROOM_HEAL				1
-#define APPLY_ROOM_MANA				2
-#define APPLY_ROOM_SECT				3
-#define APPLY_ROOM_NOPE				4
+// Room-affect apply locations. A separate family from the main APPLY_* below:
+// values 0-4 collide with APPLY_NONE..APPLY_WIS, so it must be its own enum.
+enum ApplyRoomLocation : int
+{
+	APPLY_ROOM_NONE				= 0,
+	APPLY_ROOM_HEAL				= 1,
+	APPLY_ROOM_MANA				= 2,
+	APPLY_ROOM_SECT				= 3,
+	APPLY_ROOM_NOPE				= 4,
+};
 
 //
 // obj applies
 //
 
-#define	APPLY_OBJ_NONE				0
-#define	APPLY_OBJ_V0				1
-#define	APPLY_OBJ_V1				2
-#define APPLY_OBJ_V2				3
-#define APPLY_OBJ_V3				4
-#define APPLY_OBJ_V4				5
-#define APPLY_OBJ_WEIGHT			6
+// Object apply locations (the obj->value[] slots). Another separate family --
+// values 0-6 collide with both APPLY_ROOM_* and the main APPLY_*. Note
+// APPLY_OBJ_PROPERTIES (100) below belongs with this family by name but sits
+// far outside the range; kept where the source had it.
+enum ApplyObjLocation : int
+{
+	APPLY_OBJ_NONE				= 0,
+	APPLY_OBJ_V0				= 1,
+	APPLY_OBJ_V1				= 2,
+	APPLY_OBJ_V2				= 3,
+	APPLY_OBJ_V3				= 4,
+	APPLY_OBJ_V4				= 5,
+	APPLY_OBJ_WEIGHT			= 6,
+};
 
 //
 // area applies
@@ -1834,50 +1846,57 @@ enum ItemWearFlag : int
 // Used in #OBJECTS.
 //
 
-#define APPLY_NONE					0
-#define APPLY_STR					1
-#define APPLY_DEX					2
-#define APPLY_INT					3
-#define APPLY_WIS					4
-#define APPLY_CON					5
-#define APPLY_SEX					6
-#define APPLY_CLASS					7
-#define APPLY_LUCK					8 // UNUSED!!
-#define APPLY_AGE					9
-#define APPLY_HEIGHT				10
-#define APPLY_WEIGHT				11
-#define APPLY_MANA					12
-#define APPLY_HIT					13
-#define APPLY_MOVE					14
-#define APPLY_GOLD					15
-#define APPLY_EXP					16
-#define APPLY_AC					17
-#define APPLY_HITROLL				18
-#define APPLY_DAMROLL				19
-#define APPLY_SAVES					20
-#define APPLY_SAVING_PARA			21
-#define APPLY_SAVING_ROD			22
-#define APPLY_SAVING_PETRI			23
-#define APPLY_SAVING_BREATH			24
-#define APPLY_SAVING_SPELL			25
-#define APPLY_SPELL_AFFECT			26
-#define APPLY_CARRY_WEIGHT			27
-#define APPLY_DEFENSE				28
-#define APPLY_REGENERATION			29
-#define APPLY_SIZE					30
-#define APPLY_ENERGYSTATE			31
-#define APPLY_DAM_MOD				32
-#define APPLY_LEGS					33
-#define APPLY_ARMS					34
-#define APPLY_BEAUTY				35
-#define APPLY_ALIGNMENT				36
-#define APPLY_ETHOS					37
+// The main apply-location family: affect_data::location, an ordinal scalar
+// (short), not a bit field. Compared with == and switched on. APPLY_ROOM_* and
+// APPLY_OBJ_* (above) are separate families on separate location fields.
+// Wire format -- rename freely, never renumber.
+enum ApplyLocation : int
+{
+	APPLY_NONE					= 0,
+	APPLY_STR					= 1,
+	APPLY_DEX					= 2,
+	APPLY_INT					= 3,
+	APPLY_WIS					= 4,
+	APPLY_CON					= 5,
+	APPLY_SEX					= 6,
+	APPLY_CLASS					= 7,
+	APPLY_LUCK					= 8,	// UNUSED!!
+	APPLY_AGE					= 9,
+	APPLY_HEIGHT				= 10,
+	APPLY_WEIGHT				= 11,
+	APPLY_MANA					= 12,
+	APPLY_HIT					= 13,
+	APPLY_MOVE					= 14,
+	APPLY_GOLD					= 15,
+	APPLY_EXP					= 16,
+	APPLY_AC					= 17,
+	APPLY_HITROLL				= 18,
+	APPLY_DAMROLL				= 19,
+	APPLY_SAVES					= 20,
+	APPLY_SAVING_PARA			= 21,
+	APPLY_SAVING_ROD			= 22,
+	APPLY_SAVING_PETRI			= 23,
+	APPLY_SAVING_BREATH			= 24,
+	APPLY_SAVING_SPELL			= 25,
+	APPLY_SPELL_AFFECT			= 26,
+	APPLY_CARRY_WEIGHT			= 27,
+	APPLY_DEFENSE				= 28,
+	APPLY_REGENERATION			= 29,
+	APPLY_SIZE					= 30,
+	APPLY_ENERGYSTATE			= 31,
+	APPLY_DAM_MOD				= 32,
+	APPLY_LEGS					= 33,
+	APPLY_ARMS					= 34,
+	APPLY_BEAUTY				= 35,
+	APPLY_ALIGNMENT				= 36,
+	APPLY_ETHOS					= 37,
+	// APPLY_OBJ_PROPERTIES == 100 lived here originally, in the main family's
+	// numbering despite its APPLY_OBJ_ name. Kept in this enum, at its value.
+	APPLY_OBJ_PROPERTIES		= 100,
+};
 
-//
-// object affect applies.
-//
-
-#define APPLY_OBJ_PROPERTIES		100
+// APPLY_OBJ_PROPERTIES (== 100) moved into enum ApplyLocation above -- it was
+// always numbered in that family despite its name.
 
 //
 // Modifier Names
