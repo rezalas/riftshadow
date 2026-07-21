@@ -45,6 +45,7 @@ code/rift.exe
 area/rift.exe
 area/rift
 build/
+build-asan/
 tests/*_tests
 tests/*_helpers
 tests/catch

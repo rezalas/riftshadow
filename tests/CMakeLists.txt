@@ -21,6 +21,7 @@ set(TEST_SRC_FILES act_obj_tests.c
 	induction_tests.c
 	login_tests.c
 	magic_tests.c
+	mprog_tests.c
 	note_tests.c
 	offering_tests.c
 	pklog_tests.c

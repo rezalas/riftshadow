@@ -3,8 +3,14 @@
 
 #include "rift.h"
 #include <stdarg.h>
+#include <cstdint>
 #include <functional>
-#include <iostream>
+#include <map>
+#include <string>
+#include <tuple>
+#include <type_traits>
+#include <unordered_map>
+#include <utility>
 #include <vector>
 
 // forward declarations. Once char_data is separated to its own file, we can get rid of these and include the file.
@@ -27,20 +33,24 @@ public:
 	void AddToQueue(int nTimer, std::string from, std::string funcName, Func func, Args &&...args)
 	{
 		if(nTimer < 0)
-			return;	
-
-		// print parameters
-		//((std::cout << ' ' << args << std::endl), ...);
+			return;
 
 		// capture parameter pack
 		auto tuple = std::tuple<Args...>(args...);
 		auto chs = GetCharacterData(tuple);
 
-		// place on queue
-		newQueue.push_back({nTimer, from, funcName, chs, [=] () mutable
+		// Timers of 0 and 1 both mean "next tick", so nothing can ever be scheduled
+		// into the bucket currently draining. That is what keeps ProcessQueue's loop
+		// stable without a staging buffer.
+		auto expiry = currentTick + static_cast<uint64_t>(nTimer < 1 ? 1 : nTimer);
+		auto& bucket = buckets[expiry];
+
+		bucket.push_back({from, funcName, chs, [=] () mutable
 		{
 			std::apply(func, std::forward_as_tuple(std::forward<Args>(args)...));
 		}});
+
+		RegisterEntry(chs, {expiry, bucket.size() - 1});
 	}
 
 	/// Processes all items on the queue. Any entry that has a timer of zero gets executed.
@@ -59,14 +69,44 @@ public:
 private:
 	struct queueEntry_t
 	{
-		int timer;
 		std::string callerFuncName;
 		std::string calleeFuncName;
 		std::vector<CHAR_DATA*> charList;
 		std::function<void()> function;
+
+		/// tombstone flag
+		bool cancelled = false;
 	};
 
-	std::vector<queueEntry_t> newQueue;
+	/// reference used to hold tick and index
+	/// information about a queue entry
+	struct entryRef
+	{
+		uint64_t tick;
+		size_t index;
+
+		bool operator==(const entryRef& other) const
+		{
+			return tick == other.tick && index == other.index;
+		}
+	};
+
+	/// queue's internal tick mechanism
+	uint64_t currentTick = 0;
+
+	/// Pending events keyed by the absolute tick they fire on. Ordered so the due
+	/// bucket is always at begin(), and so a missed pulse can still drain in order.
+	/// Insertion order within a bucket is the execution order callers depend on.
+	std::map<uint64_t, std::vector<queueEntry_t>> buckets;
+
+	/// Reverse lookup for cancellation. Holds refs to *live* entries only: refs are
+	/// dropped when an entry is cancelled or executed, so a non-empty entry here
+	/// means the character genuinely has work pending.
+	std::unordered_map<CHAR_DATA*, std::vector<entryRef>> charIndex;
+
+	void RegisterEntry(const std::vector<CHAR_DATA*>& chars, entryRef ref);
+	void DropEntryRefs(const queueEntry_t& entry, entryRef ref);
+	queueEntry_t* ResolveEntry(entryRef ref);
 
 	/// Helper function used to extract character data from the specfied tuple.
 	/// @note Main use is for extracting character data sent to the AddToQueue method.

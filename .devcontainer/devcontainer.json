@@ -5,8 +5,10 @@
 	},
 	"runArgs": ["--cap-add=SYS_PTRACE", "--security-opt", "seccomp=unconfined"],
 
-	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	// "forwardPorts": [],
+	// Publishes the MUD port at the container runtime (equivalent to -p 9999:9999) so
+	// telnet works from the host whether or not VS Code is attached. Keep in sync with
+	// the "Port" value in config.json.
+	"appPort": [9999],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
 	// "postCreateCommand": "gcc -v",

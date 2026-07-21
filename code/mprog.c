@@ -182,8 +182,10 @@ int mprog_drop(int inc, char *arg, OBJ_DATA *obj, CHAR_DATA *mob, CHAR_DATA *ch)
 		RS.Queue.AddToQueue(inc, "mprog_drop", "act_queue", act_queue, buffer, ch, nullptr, nullptr, TO_CHAR);
 	}
 
-	RS.Queue.AddToQueue(inc, "mprog_drop", "obj_to_room", obj_to_room, obj, mob->in_room);
+	// Unlink from the mob before placing it, not after: obj_to_room clears
+	// carried_by, so the reverse order left the object in both lists.
 	RS.Queue.AddToQueue(inc, "mprog_drop", "obj_from_char", obj_from_char, obj);
+	RS.Queue.AddToQueue(inc, "mprog_drop", "obj_to_room", obj_to_room, obj, mob->in_room);
 	RS.Queue.AddToQueue(inc, "mprog_drop", "act_queue", act_queue, "$n drops $p.", mob, obj, nullptr, TO_ROOM);
 	return 0;
 }
@@ -198,8 +200,8 @@ int mprog_give(int inc, char *arg, OBJ_DATA *obj, CHAR_DATA *mob, CHAR_DATA *ch)
 		RS.Queue.AddToQueue(inc, "mprog_give", "act_queue", act_queue, buffer, ch, nullptr, nullptr, TO_CHAR);
 	}
 
-	RS.Queue.AddToQueue(inc, "mprog_give", "obj_to_char", obj_to_char, obj, ch);
 	RS.Queue.AddToQueue(inc, "mprog_give", "obj_from_char", obj_from_char, obj);
+	RS.Queue.AddToQueue(inc, "mprog_give", "obj_to_char", obj_to_char, obj, ch);
 	RS.Queue.AddToQueue(inc, "mprog_give", "act_queue", act_queue, "$n gives you $p.", mob, obj, ch, TO_VICT);
 	return 0;
 }

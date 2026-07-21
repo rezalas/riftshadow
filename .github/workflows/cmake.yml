@@ -78,13 +78,15 @@ jobs:
       # ASAN halts on memory errors by default
       # detect_leaks=0: the codebase intentionally never frees; leak reports
       #   would be pure noise for now.
-      # detect_odr_violation=0: tolerates the one known ODR violation,
-      # UBSAN is print-only for now (halt_on_error unset) because of known UB
+      # detect_odr_violation=0: tolerates the one known ODR violation
+      #   (db_tests.c includes db.c); revisit after the merc.h split.
+      # UBSAN halt_on_error=1: the known UB this waited on was the queue
+      #   re-entrancy UAF, fixed in the queue safety commit. UB now gates CI.
       - name: Test under sanitizers
         run: ctest --test-dir build-asan --output-on-failure
         env:
           ASAN_OPTIONS: detect_leaks=0:detect_odr_violation=0
-          UBSAN_OPTIONS: print_stacktrace=1
+          UBSAN_OPTIONS: print_stacktrace=1:halt_on_error=1
 
   smoke:
     name: smoke-boot-asan
@@ -136,4 +138,4 @@ jobs:
         env:
           RIFT_BIN: ${{ github.workspace }}/build-asan/code/rift
           ASAN_OPTIONS: detect_leaks=0:detect_odr_violation=0
-          UBSAN_OPTIONS: print_stacktrace=1
+          UBSAN_OPTIONS: print_stacktrace=1:halt_on_error=1
