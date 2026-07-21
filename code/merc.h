@@ -1086,38 +1086,48 @@ struct kill_data
 // Used in #MOBILES.
 //
 
-#define ACT_IS_NPC					0	// Auto set for mobs
-#define ACT_SENTINEL				1	// Stays in one room
-#define ACT_SCAVENGER				2	// Picks up objects
-#define ACT_WARD_MOB				3	// Ward mobs
-#define ACT_WANDER					4	// wanders
-#define ACT_AGGRESSIVE				5	// Attacks PC's
-#define ACT_STAY_AREA				6	// Won't leave area
-#define ACT_WIMPY					7
-#define ACT_PET						8	// Auto set for pets
-#define ACT_TRAIN					9	// Can train PC's
-#define ACT_PRACTICE				10	// Can practice PC's
-#define ACT_SMARTTRACK				11	// Will use pathfinding
-#define ACT_UNDEAD					14
-#define ACT_INNER_GUARDIAN			15	// yay.
-#define ACT_CLERIC					16
-#define ACT_MAGE					17
-#define ACT_INTELLIGENT 			18
-#define ACT_FAST_TRACK				19
-#define ACT_NOALIGN					20
-#define ACT_NOPURGE					21
-#define ACT_OUTDOORS				22
-#define ACT_INDOORS					24
-#define ACT_GUILDGUARD				25
-#define ACT_IS_HEALER				26
-#define ACT_GAIN					27
-#define ACT_UPDATE_ALWAYS			28
-#define ACT_DETECT_SPECIAL			29
-#define ACT_BANKER					30
-#define ACT_NOCTURNAL				31
-#define ACT_DIURNAL					32
-#define ACT_FASTWANDER				33
-#define ACT_LAW						34
+// Bit indices into char_data::act, mob_index_data::act and race_data::act.
+// NOTE: char_data::act carries PlrFlag as well -- the two families are disjoint
+// interpretations of one word, chosen by is_npc(). See flags.c's "act" vs "plr".
+// The values are a wire format (player files store them as letters keyed to the
+// index; area files resolve names through act_flags[]), so they may be renamed
+// but never renumbered. Gaps at 12, 13 and 23 are retired bits -- do not reuse
+// without checking existing player and area data.
+enum ActFlag : int
+{
+	ACT_IS_NPC					= 0,	// Auto set for mobs
+	ACT_SENTINEL				= 1,	// Stays in one room
+	ACT_SCAVENGER				= 2,	// Picks up objects
+	ACT_WARD_MOB				= 3,	// Ward mobs
+	ACT_WANDER					= 4,	// wanders
+	ACT_AGGRESSIVE				= 5,	// Attacks PC's
+	ACT_STAY_AREA				= 6,	// Won't leave area
+	ACT_WIMPY					= 7,
+	ACT_PET						= 8,	// Auto set for pets
+	ACT_TRAIN					= 9,	// Can train PC's
+	ACT_PRACTICE				= 10,	// Can practice PC's
+	ACT_SMARTTRACK				= 11,	// Will use pathfinding
+	ACT_UNDEAD					= 14,
+	ACT_INNER_GUARDIAN			= 15,	// yay.
+	ACT_CLERIC					= 16,
+	ACT_MAGE					= 17,
+	ACT_INTELLIGENT 			= 18,
+	ACT_FAST_TRACK				= 19,
+	ACT_NOALIGN					= 20,
+	ACT_NOPURGE					= 21,
+	ACT_OUTDOORS				= 22,
+	ACT_INDOORS					= 24,
+	ACT_GUILDGUARD				= 25,
+	ACT_IS_HEALER				= 26,
+	ACT_GAIN					= 27,
+	ACT_UPDATE_ALWAYS			= 28,
+	ACT_DETECT_SPECIAL			= 29,
+	ACT_BANKER					= 30,
+	ACT_NOCTURNAL				= 31,
+	ACT_DIURNAL					= 32,
+	ACT_FASTWANDER				= 33,
+	ACT_LAW						= 34,
+};
 
 //
 // damage classes
@@ -1890,30 +1900,42 @@ struct kill_data
 // Used in #ROOMS.
 //
 
-#define ROOM_DARK					0
-#define ROOM_NO_MOB					2
-#define ROOM_INDOORS				3
-#define ROOM_NO_CONSECRATE			4
-#define ROOM_PRIVATE				9
-#define ROOM_SAFE					10
-#define ROOM_SOLITARY				11
-#define ROOM_PET_SHOP				12
-#define ROOM_NO_RECALL				13
-#define ROOM_IMP_ONLY				14
-#define ROOM_GODS_ONLY				15
-#define ROOM_HEROES_ONLY			16
-#define ROOM_NEWBIES_ONLY			17
-#define ROOM_LAW					18
-#define ROOM_NOWHERE				19
-#define ROOM_NO_GATE				20
-#define ROOM_SILENCE				21
-#define ROOM_NO_SUMMON_TO			22
-#define ROOM_NO_SUMMON_FROM			23
-#define ROOM_NO_ALARM				25
-#define ROOM_FORCE_DUEL				27
-#define ROOM_NO_MAGIC				28
-#define ROOM_AREA_EXPLORE			29 // Don't use - Use area flags instead
-#define ROOM_NO_COMMUNE				30
+// Bit indices into room_index_data::room_flags. Also reachable through
+// room_affect_data::bitvector via TO_ROOM_FLAGS (handler.c).
+// Wire format -- rename freely, never renumber. Gaps at 1, 5-8, 24 and 26 are
+// retired bits; check existing area data before reusing any of them.
+//
+// NOTE: the ROOM_VNUM_* constants above are NOT part of this family. They are
+// room virtual numbers (values into the thousands), not bit indices, and they
+// share the prefix only by accident. ROOM_VNUM_LIMBO == 2 collides with
+// ROOM_NO_MOB == 2 harmlessly because the two are never used on the same thing.
+enum RoomFlag : int
+{
+	ROOM_DARK					= 0,
+	ROOM_NO_MOB					= 2,
+	ROOM_INDOORS				= 3,
+	ROOM_NO_CONSECRATE			= 4,
+	ROOM_PRIVATE				= 9,
+	ROOM_SAFE					= 10,
+	ROOM_SOLITARY				= 11,
+	ROOM_PET_SHOP				= 12,
+	ROOM_NO_RECALL				= 13,
+	ROOM_IMP_ONLY				= 14,
+	ROOM_GODS_ONLY				= 15,
+	ROOM_HEROES_ONLY			= 16,
+	ROOM_NEWBIES_ONLY			= 17,
+	ROOM_LAW					= 18,
+	ROOM_NOWHERE				= 19,
+	ROOM_NO_GATE				= 20,
+	ROOM_SILENCE				= 21,
+	ROOM_NO_SUMMON_TO			= 22,
+	ROOM_NO_SUMMON_FROM			= 23,
+	ROOM_NO_ALARM				= 25,
+	ROOM_FORCE_DUEL				= 27,
+	ROOM_NO_MAGIC				= 28,
+	ROOM_AREA_EXPLORE			= 29,	// Don't use - Use area flags instead
+	ROOM_NO_COMMUNE				= 30,
+};
 
 //
 // Exit flags.
@@ -2145,53 +2167,49 @@ struct kill_data
 // ACT bits for players.
 //
 
-#define PLR_IS_NPC					0 // Don't EVER set.
+// Bit indices into char_data::act -- the SAME field ActFlag uses, disambiguated
+// at runtime by is_npc(). Values collide with ActFlag deliberately and must not
+// be reconciled: PLR_AUTOABORT and ACT_SENTINEL are both bit 1 with unrelated
+// meanings. Wire format, as ActFlag -- rename freely, never renumber.
+// Gap at 18: see the "2 bits reserved" note, of which only 19 was ever taken.
+enum PlrFlag : int
+{
+	PLR_IS_NPC					= 0,	// Don't EVER set.
 
-//
-// RT auto flags
-//
+	// RT auto flags
+	PLR_AUTOABORT				= 1,
+	PLR_AUTOASSIST				= 2,
+	PLR_AUTOEXIT				= 3,
+	PLR_AUTOLOOT				= 4,
+	PLR_AUTOSAC					= 5,
+	PLR_AUTOGOLD				= 6,
+	PLR_AUTOSPLIT				= 7,
+	PLR_COLOR					= 8,
+	PLR_IGNORANT				= 9,
+	PLR_BETRAYER				= 10,
 
-#define PLR_AUTOABORT				1
-#define PLR_AUTOASSIST				2
-#define PLR_AUTOEXIT				3
-#define PLR_AUTOLOOT				4
-#define PLR_AUTOSAC					5
-#define PLR_AUTOGOLD				6
-#define PLR_AUTOSPLIT				7
-#define PLR_COLOR					8
-#define PLR_IGNORANT				9
-#define PLR_BETRAYER				10
+	// RT personal flags
+	PLR_CODER					= 11,
+	PLR_HEROIMM					= 12,
+	PLR_HOLYLIGHT				= 13,
+	PLR_EMPOWERED				= 14,
+	PLR_NOVOID					= 15,
+	PLR_NOSUMMON				= 16,
+	PLR_NOFOLLOW				= 17,
 
-//
-// RT personal flags
-//
+	// 2 bits reserved, S-T
+	PLR_NO_TRANSFER				= 19,
 
-#define PLR_CODER					11
-#define PLR_HEROIMM					12
-#define PLR_HOLYLIGHT				13
-#define PLR_EMPOWERED				14
-#define PLR_NOVOID					15
-#define PLR_NOSUMMON				16
-#define PLR_NOFOLLOW				17
-
-//
-// 2 bits reserved, S-T
-//
-
-#define PLR_NO_TRANSFER				19
-
-//
-// Bad flags
-//
-
-#define PLR_PERMIT					20
-#define PLR_MORON					21
-#define PLR_LOG						22
-#define PLR_DENY					23
-#define PLR_FREEZE					24
-#define PLR_THIEF					25
-#define PLR_KILLER					26
-#define PLR_CRIMINAL				27
+	// Bad flags
+	PLR_PERMIT					= 20,
+	PLR_MORON					= 21,
+	PLR_LOG						= 22,
+	PLR_DENY					= 23,
+	PLR_FREEZE					= 24,
+	PLR_THIEF					= 25,
+	PLR_KILLER					= 26,
+	PLR_CRIMINAL				= 27,
+};
 
 //
 // RT comm flags -- may be used on both mobs and chars
@@ -2200,7 +2218,7 @@ struct kill_data
 // Bit indices into char_data::comm. The values are a wire format -- they are
 // written to player files as letters keyed to the index (save.c print_flags),
 // so they may be renamed but never renumbered. Note the gap at 17.
-enum CommFlag : long
+enum CommFlag : int
 {
 	COMM_QUIET					= 0,
 	COMM_DEAF					= 1,
