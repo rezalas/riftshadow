@@ -1,10 +1,3 @@
-#ifdef _WIN32
-	#include <windows.h>
-	#include <winsock.h>
-	#include <winsock2.h>
-#else
-	#include "socket.h"
-#endif
 #include "stdlibs/file.h"
 //#include "autogen/fundefs.h"
 
@@ -15,9 +8,7 @@
 #include "merc.h"
 #include "rift.h"
 #include "newmem.h"
-#include "area.h"
 #include "direction.h"
-#include "exit.h"
 #include "update.h"
 #include "dioextra.h"
 #include "db.h"

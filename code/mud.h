@@ -11,11 +11,9 @@
  */
 
 #include "rift.h"
-#include "gameloop.h"
 #include "stdlibs/clogger.h"
 #include "stdlibs/dbsession.h"
 #include "queue.h"
-#include "interp2.h"
 #include "skill.h"
 #include "characterClasses/class.h"
 #include "race.h"
