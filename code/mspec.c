@@ -18,7 +18,7 @@
 #include "db.h"
 #include "devextra.h"
 #include "utility.h"
-#include "room.h"
+#include "direction.h"
 #include "./include/spdlog/fmt/bundled/format.h"
 
 BEGIN_MSPECS

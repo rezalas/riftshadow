@@ -1,12 +1,4 @@
-#ifdef _WIN32
-	#include <windows.h>
-	#include <winsock.h>
-	#include <winsock2.h>
-#else
-	#include "socket.h"
-#endif
 #include "stdlibs/file.h"
-//#include "autogen/fundefs.h"
 
 #include <stdlib.h>
 #include <string.h>
@@ -15,9 +7,7 @@
 #include "merc.h"
 #include "rift.h"
 #include "newmem.h"
-#include "area.h"
-#include "room.h"
-#include "exit.h"
+#include "direction.h"
 #include "update.h"
 #include "dioextra.h"
 #include "db.h"
@@ -38,8 +28,6 @@
 
 
 CMud RS;
-
-CRoom *CRoom::first = nullptr;
 
 CMud::CMud()
 {

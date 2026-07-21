@@ -56,7 +56,7 @@
 #include "const.h"
 #include "utility.h"
 #include "newmem.h"
-#include "room.h"
+#include "direction.h"
 #include "./include/spdlog/fmt/bundled/format.h"
 
 const struct improg_type mprog_table[] =

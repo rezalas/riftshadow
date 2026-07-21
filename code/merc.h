@@ -2253,14 +2253,7 @@ struct kill_data
 #define WIZ_TICKS					1
 #define WIZ_LOGINS					2
 #define WIZ_SITES					3
-
-#ifdef WIZ_LINKS
-#undef WIZ_LINKS
 #define WIZ_LINKS					4
-#else
-#define WIZ_LINKS					4
-#endif
-
 #define WIZ_DEATHS					5
 #define WIZ_RESETS					6
 #define WIZ_MOBDEATHS				7

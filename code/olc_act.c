@@ -49,7 +49,7 @@
 #include "material.h"
 #include "help.h"
 #include "mem.h"
-#include "room.h"
+#include "direction.h"
 #include "interp.h"
 #include "newmem.h"
 #include "magic.h"

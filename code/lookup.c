@@ -41,7 +41,7 @@
 #include "newmem.h"
 #include "db.h"
 #include "material.h"
-#include "room.h"
+#include "direction.h"
 
 int flag_lookup(const char *name, const struct flag_type *flag_table)
 {

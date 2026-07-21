@@ -10,7 +10,10 @@
 #include "stdlibs/strings.h"
 #include "stdlibs/funcptr.h"
 
-#include "classlist.h"
+// Forward declaration rather than #include "mud.h": mud.h includes this header,
+// so including it back would be circular. `extern CMud RS` below needs only an
+// incomplete type, which is exactly what a forward declaration provides.
+class CMud;
 
 #ifndef __cplusplus
 #include <stdbool.h>

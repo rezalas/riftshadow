@@ -35,7 +35,7 @@
 #include <stdio.h>
 #include <time.h>
 #include "tables.h"
-#include "room.h"
+#include "direction.h"
 
 
 //Steal the flag table, we're not storing bitvectors, but shhh, we like their functions!
