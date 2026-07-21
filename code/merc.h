@@ -1171,33 +1171,41 @@ enum ActFlag : int
 // OFF bits for mobiles
 //
 
-#define OFF_AREA_ATTACK				0
-#define OFF_BACKSTAB				1
-#define OFF_BASH					2
-#define OFF_BERSERK					3
-#define OFF_DISARM					4
-#define OFF_DODGE					5
-#define OFF_FADE					6 // UNUSED
-#define OFF_FAST					7
-#define OFF_KICK					8
-#define OFF_KICK_DIRT				9
-#define OFF_PARRY					10
-#define OFF_RESCUE					11
-#define OFF_TAIL					12
-#define OFF_TRIP					13
-#define OFF_CRUSH					14
-#define ASSIST_ALL					15
-#define ASSIST_ALIGN				16
-#define ASSIST_RACE					17
-#define ASSIST_PLAYERS				18
-#define ASSIST_GUARD				19
-#define ASSIST_VNUM					20
-#define NO_TRACK					21
-#define STATIC_TRACKING				22
-#define SPAM_MURDER					23
-#define OFF_INTIMIDATED				24
-#define OFF_UNDEAD_DRAIN			25	// True undead drain, very powerful
-#define ASSIST_GROUP				26
+// Offensive/assist bit indices into char_data::off_flags and
+// mob_index_data::off_flags. One contiguous 0-26 numbering carrying five name
+// prefixes (OFF_, ASSIST_, NO_, STATIC_, SPAM_) -- they are a single family that
+// was never given a single prefix, not distinct families. Kept as one enum with
+// the original names. Wire format -- rename freely, never renumber.
+enum OffFlag : int
+{
+	OFF_AREA_ATTACK				= 0,
+	OFF_BACKSTAB				= 1,
+	OFF_BASH					= 2,
+	OFF_BERSERK					= 3,
+	OFF_DISARM					= 4,
+	OFF_DODGE					= 5,
+	OFF_FADE					= 6,	// UNUSED
+	OFF_FAST					= 7,
+	OFF_KICK					= 8,
+	OFF_KICK_DIRT				= 9,
+	OFF_PARRY					= 10,
+	OFF_RESCUE					= 11,
+	OFF_TAIL					= 12,
+	OFF_TRIP					= 13,
+	OFF_CRUSH					= 14,
+	ASSIST_ALL					= 15,
+	ASSIST_ALIGN				= 16,
+	ASSIST_RACE					= 17,
+	ASSIST_PLAYERS				= 18,
+	ASSIST_GUARD				= 19,
+	ASSIST_VNUM					= 20,
+	NO_TRACK					= 21,
+	STATIC_TRACKING				= 22,
+	SPAM_MURDER					= 23,
+	OFF_INTIMIDATED				= 24,
+	OFF_UNDEAD_DRAIN			= 25,	// True undead drain, very powerful
+	ASSIST_GROUP				= 26,
+};
 
 //
 // return values for check_imm
@@ -1212,89 +1220,109 @@ enum ActFlag : int
 // IMM bits for mobs
 //
 
-#define IMM_SUMMON					0
-#define IMM_CHARM					1
-#define IMM_MAGIC					2
-#define IMM_WEAPON					3
-#define IMM_BASH					4
-#define IMM_PIERCE					5
-#define IMM_SLASH					6
-#define IMM_FIRE					7
-#define IMM_COLD					8
-#define IMM_LIGHTNING				9
-#define IMM_ACID					10
-#define IMM_POISON					11
-#define IMM_NEGATIVE				12
-#define IMM_HOLY					13
-#define IMM_ENERGY					14
-#define IMM_MENTAL					15
-#define IMM_DISEASE					16
-#define IMM_DROWNING				17
-#define IMM_LIGHT					18
-#define IMM_SOUND					19
-#define IMM_INTERNAL				20
-#define IMM_MITHRIL					23
-#define IMM_SILVER					24
-#define IMM_IRON					25
-#define IMM_SLEEP					26
+// Immunity bit indices, into char_data::imm_flags (and affect_data::bitvector
+// where where == TO_IMMUNE). IMM_/RES_/VULN_ are three value-identical parallel
+// families -- same damage domain, three storages. The flag tables and the area
+// file format route all three through the imm_flags table (flags.c, db2.c), so
+// they are effectively one namespace on disk; they are kept as three enums here
+// only because their C names differ (IMM_SUMMON vs RES_SUMMON) and renaming call
+// sites is out of scope. See phase-02 §0.8.2. Wire format -- never renumber.
+enum ImmuneFlag : int
+{
+	IMM_SUMMON					= 0,
+	IMM_CHARM					= 1,
+	IMM_MAGIC					= 2,
+	IMM_WEAPON					= 3,
+	IMM_BASH					= 4,
+	IMM_PIERCE					= 5,
+	IMM_SLASH					= 6,
+	IMM_FIRE					= 7,
+	IMM_COLD					= 8,
+	IMM_LIGHTNING				= 9,
+	IMM_ACID					= 10,
+	IMM_POISON					= 11,
+	IMM_NEGATIVE				= 12,
+	IMM_HOLY					= 13,
+	IMM_ENERGY					= 14,
+	IMM_MENTAL					= 15,
+	IMM_DISEASE					= 16,
+	IMM_DROWNING				= 17,
+	IMM_LIGHT					= 18,
+	IMM_SOUND					= 19,
+	IMM_INTERNAL				= 20,
+	IMM_MITHRIL					= 23,
+	IMM_SILVER					= 24,
+	IMM_IRON					= 25,
+	IMM_SLEEP					= 26,	// no RES_/VULN_ counterpart
+};
 
 //
 // RES bits for mobs
 //
 
-#define RES_SUMMON					0
-#define RES_CHARM					1
-#define RES_MAGIC					2
-#define RES_WEAPON					3
-#define RES_BASH					4
-#define RES_PIERCE					5
-#define RES_SLASH					6
-#define RES_FIRE					7
-#define RES_COLD					8
-#define RES_LIGHTNING				9
-#define RES_ACID					10
-#define RES_POISON					11
-#define RES_NEGATIVE				12
-#define RES_HOLY					13
-#define RES_ENERGY					14
-#define RES_MENTAL					15
-#define RES_DISEASE					16
-#define RES_DROWNING				17
-#define RES_LIGHT					18
-#define RES_SOUND					19
-#define RES_INTERNAL				20
-#define RES_MITHRIL					23
-#define RES_SILVER					24
-#define RES_IRON					25
+// Resistance bit indices, into char_data::res_flags. Parallel to ImmuneFlag --
+// see the note there. Stops at 25; no RES_SLEEP.
+enum ResistFlag : int
+{
+	RES_SUMMON					= 0,
+	RES_CHARM					= 1,
+	RES_MAGIC					= 2,
+	RES_WEAPON					= 3,
+	RES_BASH					= 4,
+	RES_PIERCE					= 5,
+	RES_SLASH					= 6,
+	RES_FIRE					= 7,
+	RES_COLD					= 8,
+	RES_LIGHTNING				= 9,
+	RES_ACID					= 10,
+	RES_POISON					= 11,
+	RES_NEGATIVE				= 12,
+	RES_HOLY					= 13,
+	RES_ENERGY					= 14,
+	RES_MENTAL					= 15,
+	RES_DISEASE					= 16,
+	RES_DROWNING				= 17,
+	RES_LIGHT					= 18,
+	RES_SOUND					= 19,
+	RES_INTERNAL				= 20,
+	RES_MITHRIL					= 23,
+	RES_SILVER					= 24,
+	RES_IRON					= 25,
+};
  
 //
 // VULN bits for mobs
 //
 
-#define VULN_SUMMON					0
-#define VULN_CHARM					1
-#define VULN_MAGIC					2
-#define VULN_WEAPON					3
-#define VULN_BASH					4
-#define VULN_PIERCE					5
-#define VULN_SLASH					6
-#define VULN_FIRE					7
-#define VULN_COLD					8
-#define VULN_LIGHTNING				9
-#define VULN_ACID					10
-#define VULN_POISON					11
-#define VULN_NEGATIVE				12
-#define VULN_HOLY					13
-#define VULN_ENERGY					14
-#define VULN_MENTAL					15
-#define VULN_DISEASE				16
-#define VULN_DROWNING				17
-#define VULN_LIGHT					18
-#define VULN_SOUND					19
-#define VULN_INTERNAL				20
-#define VULN_MITHRIL				23
-#define VULN_SILVER					24
-#define VULN_IRON					25
+// Vulnerability bit indices, into char_data::vuln_flags. Parallel to ImmuneFlag
+// -- see the note there. Stops at 25; no VULN_SLEEP.
+enum VulnFlag : int
+{
+	VULN_SUMMON					= 0,
+	VULN_CHARM					= 1,
+	VULN_MAGIC					= 2,
+	VULN_WEAPON					= 3,
+	VULN_BASH					= 4,
+	VULN_PIERCE					= 5,
+	VULN_SLASH					= 6,
+	VULN_FIRE					= 7,
+	VULN_COLD					= 8,
+	VULN_LIGHTNING				= 9,
+	VULN_ACID					= 10,
+	VULN_POISON					= 11,
+	VULN_NEGATIVE				= 12,
+	VULN_HOLY					= 13,
+	VULN_ENERGY					= 14,
+	VULN_MENTAL					= 15,
+	VULN_DISEASE				= 16,
+	VULN_DROWNING				= 17,
+	VULN_LIGHT					= 18,
+	VULN_SOUND					= 19,
+	VULN_INTERNAL				= 20,
+	VULN_MITHRIL				= 23,
+	VULN_SILVER					= 24,
+	VULN_IRON					= 25,
+};
 
 //
 // body form
