@@ -893,13 +893,22 @@ enum AffectWhere : int
 // runes only
 //
 
-#define RUNE_TO_WEAPON				0
-#define RUNE_TO_ARMOR				1
-#define RUNE_TO_PORTAL				2
-#define RUNE_TO_ROOM				3
+// What a rune is applied to -- an ordinal. Separate family from RUNE_TRIGGER_*
+// and the RUNE_* masks below (all three collide in value).
+enum RuneTarget : int
+{
+	RUNE_TO_WEAPON				= 0,
+	RUNE_TO_ARMOR				= 1,
+	RUNE_TO_PORTAL				= 2,
+	RUNE_TO_ROOM				= 3,
+};
 
-#define RUNE_TRIGGER_ENTRY			0
-#define RUNE_TRIGGER_EXIT			1
+// When a rune fires -- an ordinal.
+enum RuneTrigger : int
+{
+	RUNE_TRIGGER_ENTRY			= 0,
+	RUNE_TRIGGER_EXIT			= 1,
+};
 
 //
 // where definitions for room
@@ -1939,23 +1948,30 @@ enum GateFlag : int
 // furniture flags
 //
 
-#define STAND_AT					0
-#define STAND_ON					1
-#define STAND_IN					2
-#define SIT_AT						3
-#define SIT_ON						4
-#define SIT_IN						5
-#define REST_AT						6
-#define REST_ON						7
-#define REST_IN						8
-#define SLEEP_AT					9
-#define SLEEP_ON					10
-#define SLEEP_IN					11
-#define PUT_AT						12
-#define PUT_ON						13
-#define PUT_IN						14
-#define PUT_INSIDE					15
-#define LOUNGE_ON					16
+// Furniture position flags -- bit indices tested with IS_SET_OLD on a piece of
+// furniture's obj->value[2] (act_info.c). One family across six prefixes
+// (STAND_/SIT_/REST_/SLEEP_/PUT_/LOUNGE_), a single 0-16 numbering. Kept as one
+// enum with the original names. Wire format -- rename freely, never renumber.
+enum FurniturePosition : int
+{
+	STAND_AT					= 0,
+	STAND_ON					= 1,
+	STAND_IN					= 2,
+	SIT_AT						= 3,
+	SIT_ON						= 4,
+	SIT_IN						= 5,
+	REST_AT						= 6,
+	REST_ON						= 7,
+	REST_IN						= 8,
+	SLEEP_AT					= 9,
+	SLEEP_ON					= 10,
+	SLEEP_IN					= 11,
+	PUT_AT						= 12,
+	PUT_ON						= 13,
+	PUT_IN						= 14,
+	PUT_INSIDE					= 15,
+	LOUNGE_ON					= 16,
+};
 	
 //
 // Apply types (for affects).
@@ -2487,31 +2503,36 @@ enum CommFlag : int
 // WIZnet flags
 //
 
-#define WIZ_ON						0
-#define WIZ_TICKS					1
-#define WIZ_LOGINS					2
-#define WIZ_SITES					3
-#define WIZ_LINKS					4
-#define WIZ_DEATHS					5
-#define WIZ_RESETS					6
-#define WIZ_MOBDEATHS				7
-#define WIZ_FLAGS					8
-#define WIZ_PENALTIES				9
-#define WIZ_SACCING					10
-#define WIZ_LEVELS					11
-#define WIZ_SECURE					12
-#define WIZ_SWITCHES				13
-#define WIZ_SNOOPS					14
-#define WIZ_RESTORE					15
-#define WIZ_LOAD					16
-#define WIZ_NEWBIE					17
-#define WIZ_PREFIX					18
-#define WIZ_SPAM					19
-#define WIZ_CABAL					20
-#define WIZ_PERCENT					21
-#define WIZ_LOG						22
-#define	WIZ_OOC						23
-#define WIZ_DEBUG					24
+// Wiznet channel bit indices into char_data::wiznet, and passed as `long flag`
+// to wiznet(). Wire format -- rename freely, never renumber. Gap at 23.
+enum WiznetFlag : int
+{
+	WIZ_ON						= 0,
+	WIZ_TICKS					= 1,
+	WIZ_LOGINS					= 2,
+	WIZ_SITES					= 3,
+	WIZ_LINKS					= 4,
+	WIZ_DEATHS					= 5,
+	WIZ_RESETS					= 6,
+	WIZ_MOBDEATHS					= 7,
+	WIZ_FLAGS					= 8,
+	WIZ_PENALTIES					= 9,
+	WIZ_SACCING					= 10,
+	WIZ_LEVELS					= 11,
+	WIZ_SECURE					= 12,
+	WIZ_SWITCHES					= 13,
+	WIZ_SNOOPS					= 14,
+	WIZ_RESTORE					= 15,
+	WIZ_LOAD					= 16,
+	WIZ_NEWBIE					= 17,
+	WIZ_PREFIX					= 18,
+	WIZ_SPAM					= 19,
+	WIZ_CABAL					= 20,
+	WIZ_PERCENT					= 21,
+	WIZ_LOG						= 22,
+	WIZ_OOC						= 23,
+	WIZ_DEBUG					= 24,
+};
 
 //
 // AP Demonic Favors Defines
@@ -3479,11 +3500,17 @@ private:
 //rune target bitvectors
 //
 
-#define RUNE_CAST					1
-#define RUNE_ARMOR					2
-#define RUNE_WEAPON					4
-#define RUNE_DOOR					8
-#define RUNE_ROOM					16
+// Rune target bitmasks -- these are pre-shifted MASKS (1,2,4,8,16), not bit
+// indices, tested with IS_SET_OLD directly and compared with <. A third RUNE_
+// family, distinct from RuneTarget/RuneTrigger. Wire format -- never renumber.
+enum RuneMask : int
+{
+	RUNE_CAST					= 1,
+	RUNE_ARMOR					= 2,
+	RUNE_WEAPON					= 4,
+	RUNE_DOOR					= 8,
+	RUNE_ROOM					= 16,
+};
 
 
 //
