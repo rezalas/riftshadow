@@ -2197,46 +2197,46 @@ struct kill_data
 // RT comm flags -- may be used on both mobs and chars
 //
 
-#define COMM_QUIET					0
-#define COMM_DEAF					1
-#define COMM_NOWIZ					2
-#define COMM_NOAUCTION				3
-#define COMM_NOGOSSIP				4
-#define COMM_NOQUESTION				5
-#define COMM_NONEWBIE				6
-#define COMM_NOCABAL				7
-#define COMM_NOQUOTE				8
-#define COMM_SHOUTSOFF				9
-#define COMM_ANSI					10
+// Bit indices into char_data::comm. The values are a wire format -- they are
+// written to player files as letters keyed to the index (save.c print_flags),
+// so they may be renamed but never renumbered. Note the gap at 17.
+enum CommFlag : long
+{
+	COMM_QUIET					= 0,
+	COMM_DEAF					= 1,
+	COMM_NOWIZ					= 2,
+	COMM_NOAUCTION				= 3,
+	COMM_NOGOSSIP				= 4,
+	COMM_NOQUESTION				= 5,
+	COMM_NONEWBIE				= 6,
+	COMM_NOCABAL				= 7,
+	COMM_NOQUOTE				= 8,
+	COMM_SHOUTSOFF				= 9,
+	COMM_ANSI					= 10,
 
-//
-// display flags
-//
+	// display flags
+	COMM_COMPACT				= 11,
+	COMM_BRIEF					= 12,
+	COMM_PROMPT					= 13,
+	COMM_COMBINE				= 14,
+	COMM_TELNET_GA				= 15,
+	COMM_SHOW_AFFECTS			= 16,
+	COMM_IMMORTAL				= 18,
 
-#define COMM_COMPACT				11
-#define COMM_BRIEF					12
-#define COMM_PROMPT					13
-#define COMM_COMBINE				14
-#define COMM_TELNET_GA				15
-#define COMM_SHOW_AFFECTS			16
-#define COMM_IMMORTAL				18
-
-//
-// penalties
-//
-
-#define COMM_NOEMOTE				19
-#define COMM_NOSHOUT				20
-#define COMM_NOTELL					21
-#define COMM_NOCHANNELS				22 
-#define COMM_BUILDER				23
-#define COMM_SNOOP_PROOF			24
-#define COMM_AFK					25
-#define COMM_ALL_CABALS				26
-#define COMM_NOSOCKET				27
-#define COMM_SWITCHSKILLS			28
-#define COMM_NOBUILDER				29
-#define COMM_LOTS_O_COLOR			30
+	// penalties
+	COMM_NOEMOTE				= 19,
+	COMM_NOSHOUT				= 20,
+	COMM_NOTELL					= 21,
+	COMM_NOCHANNELS				= 22,
+	COMM_BUILDER				= 23,
+	COMM_SNOOP_PROOF			= 24,
+	COMM_AFK					= 25,
+	COMM_ALL_CABALS				= 26,
+	COMM_NOSOCKET				= 27,
+	COMM_SWITCHSKILLS			= 28,
+	COMM_NOBUILDER				= 29,
+	COMM_LOTS_O_COLOR			= 30,
+};
 
 //
 // Trust flags
