@@ -414,9 +414,13 @@ enum AProgTrigger : int
 #define SMITH_QUEST					6
 #define RING_QUEST					7
 
-#define REPLY_YES					1
-#define REPLY_NO					2
-#define REPLY_NEITHER				3
+// Yes/no prompt reply ordinal. Wire format -- never renumber.
+enum ReplyType : int
+{
+	REPLY_YES					= 1,
+	REPLY_NO					= 2,
+	REPLY_NEITHER				= 3,
+};
 
 #define NOTE_UNSTARTED				0
 #define NOTE_IN_PROGRESS			1
@@ -886,12 +890,16 @@ enum ClassAvailability : int
 // const.c skill table types
 //
 
-#define CMD_NONE 					0
-#define CMD_SPELL					1
-#define CMD_COMMUNE					2
-#define CMD_POWER					3
-#define CMD_BOTH					4
-#define CMD_RUNE					5
+// Magic command-type ordinal. Wire format -- never renumber.
+enum MagicCommand : int
+{
+	CMD_NONE					= 0,
+	CMD_SPELL					= 1,
+	CMD_COMMUNE					= 2,
+	CMD_POWER					= 3,
+	CMD_BOTH					= 4,
+	CMD_RUNE					= 5,
+};
 
 #define CAN_DISPEL					(1 << ASCII_A)
 #define CAN_CANCEL					(1 << ASCII_B)
@@ -1310,10 +1318,15 @@ enum OffFlag : int
 // return values for check_imm
 //
 
-#define IS_NORMAL					0
-#define IS_IMMUNE					1
-#define IS_RESISTANT				2
-#define IS_VULNERABLE				3
+// Damage-susceptibility result ordinal (check_immune etc.). Wire format --
+// never renumber.
+enum Susceptibility : int
+{
+	IS_NORMAL					= 0,
+	IS_IMMUNE					= 1,
+	IS_RESISTANT				= 2,
+	IS_VULNERABLE				= 3,
+};
 
 //
 // IMM bits for mobs
@@ -1614,9 +1627,14 @@ enum ArmorClass : int
 // dice
 //
 
-#define DICE_NUMBER					0
-#define DICE_TYPE					1
-#define DICE_BONUS					2
+// Index into a dice spec's value triple (number/type/bonus). Wire format --
+// never renumber.
+enum DiceField : int
+{
+	DICE_NUMBER					= 0,
+	DICE_TYPE					= 1,
+	DICE_BONUS					= 2,
+};
 
 //
 // size
@@ -1892,10 +1910,14 @@ enum ItemWearFlag : int
 	ITEM_WEAR_COSMETIC			= 18,	// cosmetic, misc, up to 5/person
 };
 
-#define RESTRICT_OTHER				0
-#define RESTRICT_CLASS				1
-#define RESTRICT_RACE				2
-#define RESTRICT_CABAL				3
+// Object-restriction criterion ordinal. Wire format -- never renumber.
+enum RestrictType : int
+{
+	RESTRICT_OTHER				= 0,
+	RESTRICT_CLASS				= 1,
+	RESTRICT_RACE				= 2,
+	RESTRICT_CABAL				= 3,
+};
 
 // Shapeshifter tribe ordinal. Wire format -- never renumber.
 enum Tribe : int
@@ -2125,9 +2147,13 @@ enum ContainerFlag : int
 	CONT_PUT_ON					= 4,
 };
 
-#define WIELD_ONE					1
-#define WIELD_TWO					2
-#define WIELD_PRIMARY				3
+// Wield-hand ordinal. Wire format -- never renumber.
+enum WieldType : int
+{
+	WIELD_ONE					= 1,
+	WIELD_TWO					= 2,
+	WIELD_PRIMARY				= 3,
+};
 
 #define HAS_DIED					8
 
@@ -2419,18 +2445,33 @@ enum WearLocation : int
 
 #define NORM						1
 
-#define HIT_UNBLOCKABLE				0
-#define HIT_BLOCKABLE				1
+// damage_new() flag arguments. Three independent two-value families, passed
+// positionally. Kept as three enums matching their argument slots.
+enum HitBlockable : int
+{
+	HIT_UNBLOCKABLE				= 0,
+	HIT_BLOCKABLE				= 1,
+};
 
-#define HIT_NOSPECIALS				0
-#define HIT_SPECIALS				1
+enum HitSpecials : int
+{
+	HIT_NOSPECIALS				= 0,
+	HIT_SPECIALS				= 1,
+};
 
-#define HIT_NOMULT					1
-#define HIT_NOADD 0
+enum HitModifier : int
+{
+	HIT_NOMULT					= 1,
+	HIT_NOADD					= 0,
+};
 
-#define POSTURE_OFFENSE				1
-#define POSTURE_NONE				0
-#define POSTURE_DEFENSE				-1
+// Combat posture, an ordinal spanning -1..1. POSTURE_DEFENSE is -1 (hence : int).
+enum Posture : int
+{
+	POSTURE_OFFENSE				= 1,
+	POSTURE_NONE				= 0,
+	POSTURE_DEFENSE				= -1,
+};
 
 #define MAX_QUEUE					20
 
@@ -2481,13 +2522,23 @@ enum Position : int
 #define MIN_PK_XP					9999	// min xp players need to start PKing
 #define MIN_LEVEL_TO_PK				23		// Minimum level for players to pk
 
-#define PK_KILLS					0
-#define PK_GOOD						1
-#define PK_NEUTRAL					2
-#define PK_EVIL						3
+// PK alignment-kill counters. Separate family from the killed[] index pair
+// below. Wire format -- never renumber.
+enum PkKillType : int
+{
+	PK_KILLS					= 0,
+	PK_GOOD						= 1,
+	PK_NEUTRAL					= 2,
+	PK_EVIL						= 3,
+};
 
-#define PK_KILLED					0
-#define MOB_KILLED					1
+// Index into pcdata::killed[]: player kills vs mob kills. One family, two
+// prefixes (PK_/MOB_).
+enum KilledIndex : int
+{
+	PK_KILLED					= 0,
+	MOB_KILLED					= 1,
+};
 
 //
 // ACT bits for players.
@@ -2639,22 +2690,36 @@ enum Devil : int
 };
 #define MAX_DEVIL					5
 
-#define LESSER_BARBAS				0
-#define LESSER_AAMON				1
-#define LESSER_MALAPHAR				2
-#define LESSER_FURCAS				3
-#define LESSER_IPOS					4
+// Lesser-demon name ordinal. MAX_LESSER stays a #define (constexpr commit).
+enum LesserDemon : int
+{
+	LESSER_BARBAS				= 0,
+	LESSER_AAMON				= 1,
+	LESSER_MALAPHAR				= 2,
+	LESSER_FURCAS				= 3,
+	LESSER_IPOS					= 4,
+};
 #define MAX_LESSER					5
 
-#define GREATER_OZE					0
-#define GREATER_GAMYGYN				1
-#define GREATER_OROBAS				2
-#define GREATER_GERYON				3
-#define GREATER_CIMERIES			4
+// Greater-demon name ordinal. Separate family from GreaterDemon-tier below.
+enum GreaterDemon : int
+{
+	GREATER_OZE					= 0,
+	GREATER_GAMYGYN				= 1,
+	GREATER_OROBAS				= 2,
+	GREATER_GERYON				= 3,
+	GREATER_CIMERIES			= 4,
+};
 #define MAX_GREATER					5
 
-#define LESSER_DEMON				0
-#define GREATER_DEMON				1
+// Demon tier discriminator (lesser vs greater). LESSER_DEMON/GREATER_DEMON share
+// the LESSER_/GREATER_ prefixes with the name families above but are a distinct
+// two-value family.
+enum DemonTier : int
+{
+	LESSER_DEMON				= 0,
+	GREATER_DEMON				= 1,
+};
 
 // Favor/quest-state ordinal. FAVOR_FAILED is the -1 sentinel (hence : int).
 enum FavorState : int
@@ -3594,26 +3659,33 @@ private:
 //  Target types.
 //
 
-#define TAR_IGNORE					0
-#define TAR_CHAR_OFFENSIVE			1
-#define TAR_CHAR_DEFENSIVE			2
-#define TAR_CHAR_SELF				3
-#define TAR_OBJ_INV					4
-#define TAR_OBJ_CHAR_DEF			5
-#define TAR_OBJ_CHAR_OFF			6
-#define TAR_DIR						7
-#define TAR_CHAR_AMBIGUOUS			8
-#define TAR_CHAR_GENERAL			9
+// Skill/spell target-type ordinal, in skill_type::target. TAR_END (666) is a
+// deliberate sentinel, not adjacent. Wire format -- never renumber.
+enum SkillTarget : int
+{
+	TAR_IGNORE					= 0,
+	TAR_CHAR_OFFENSIVE			= 1,
+	TAR_CHAR_DEFENSIVE			= 2,
+	TAR_CHAR_SELF				= 3,
+	TAR_OBJ_INV					= 4,
+	TAR_OBJ_CHAR_DEF			= 5,
+	TAR_OBJ_CHAR_OFF			= 6,
+	TAR_DIR						= 7,
+	TAR_CHAR_AMBIGUOUS			= 8,
+	TAR_CHAR_GENERAL			= 9,
+	TAR_END						= 666,	// don't touch
+};
 
-
-#define TAR_END						666 //don't touch
-
-#define TARGET_CHAR					0
-#define TARGET_OBJ					1
-#define TARGET_ROOM					2
-#define TARGET_NONE					3
-#define TARGET_RUNE					4
-#define TARGET_DIR					5
+// Spell effect target-type ordinal. Separate family from SkillTarget above.
+enum TargetType : int
+{
+	TARGET_CHAR					= 0,
+	TARGET_OBJ					= 1,
+	TARGET_ROOM					= 2,
+	TARGET_NONE					= 3,
+	TARGET_RUNE					= 4,
+	TARGET_DIR					= 5,
+};
 
 //
 //rune target bitvectors
