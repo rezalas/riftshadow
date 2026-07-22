@@ -617,19 +617,32 @@ struct shop_data
 	short direction;			// exit dir
 };
 
-#define BAR_CLASS					0
-#define BAR_CABAL					1
-#define BAR_SIZE					2
-#define BAR_TATTOO					3
-#define BAR_LEVEL					4
+// Door-bar restriction criterion. Three separate BAR_ families follow, colliding
+// in value; each is its own enum. Wire format -- never renumber.
+enum BarCriterion : int
+{
+	BAR_CLASS					= 0,
+	BAR_CABAL					= 1,
+	BAR_SIZE					= 2,
+	BAR_TATTOO					= 3,
+	BAR_LEVEL					= 4,
+};
 
-#define BAR_EQUAL_TO				0
-#define BAR_LESS_THAN				1
-#define BAR_GREATER_THAN			2
+// Bar comparison operator.
+enum BarComparison : int
+{
+	BAR_EQUAL_TO				= 0,
+	BAR_LESS_THAN				= 1,
+	BAR_GREATER_THAN			= 2,
+};
 
-#define BAR_SAY						0
-#define BAR_ECHO					1
-#define BAR_EMOTE					2
+// Bar rejection-message style.
+enum BarMessage : int
+{
+	BAR_SAY						= 0,
+	BAR_ECHO					= 1,
+	BAR_EMOTE					= 2,
+};
 
 struct barred_data
 {
@@ -1000,14 +1013,21 @@ enum ApplyObjLocation : int
 // Cabal definitions
 //
 
-#define CABAL_NONE					0
-#define CABAL_GUILD					1
-#define CABAL_SCION					2
-#define CABAL_HORDE					3
-#define CABAL_BOUNTY				4
-#define CABAL_THEATRE				5
-#define CABAL_PHALANX				6
-#define CABAL_NEGATIVE				8
+// Cabal identity ordinal, in char_data::cabal. NOTE: CABAL_LEADER (defined among
+// the MAX_ constants below) is NOT part of this family -- it is an induct rank
+// compared against pcdata->induct, and keeps its #define. Wire format -- never
+// renumber. Gap at 7.
+enum Cabal : int
+{
+	CABAL_NONE					= 0,
+	CABAL_GUILD					= 1,
+	CABAL_SCION					= 2,
+	CABAL_HORDE					= 3,
+	CABAL_BOUNTY				= 4,
+	CABAL_THEATRE				= 5,
+	CABAL_PHALANX				= 6,
+	CABAL_NEGATIVE				= 8,
+};
 
 #define MAX_EMPIRE					8
 #define MAX_BOUNTY					5
@@ -1877,29 +1897,42 @@ enum ItemWearFlag : int
 #define RESTRICT_RACE				2
 #define RESTRICT_CABAL				3
 
-#define TRIBE_NONE					0
-#define TRIBE_BOAR					1
-#define TRIBE_WOLF					2
-#define TRIBE_BEAR					3
-#define TRIBE_HAWK					4
-#define TRIBE_LION					5
-#define TRIBE_ELK					6
-#define TRIBE_JACKAL				7
-#define TRIBE_FOX					8
-#define TRIBE_BULL					9
-#define TRIBE_PANTHER				10
+// Shapeshifter tribe ordinal. Wire format -- never renumber.
+enum Tribe : int
+{
+	TRIBE_NONE					= 0,
+	TRIBE_BOAR					= 1,
+	TRIBE_WOLF					= 2,
+	TRIBE_BEAR					= 3,
+	TRIBE_HAWK					= 4,
+	TRIBE_LION					= 5,
+	TRIBE_ELK					= 6,
+	TRIBE_JACKAL				= 7,
+	TRIBE_FOX					= 8,
+	TRIBE_BULL					= 9,
+	TRIBE_PANTHER				= 10,
+};
 
-#define PALADIN_NONE				0
-#define PALADIN_PROTECTOR			1
-#define PALADIN_CRUSADER			2
+// Paladin-order ordinal. Wire format -- never renumber.
+enum PaladinOrder : int
+{
+	PALADIN_NONE				= 0,
+	PALADIN_PROTECTOR			= 1,
+	PALADIN_CRUSADER			= 2,
+};
 
-#define STYLE_NONE					-1
-#define STYLE_GLADIATOR				0
-#define STYLE_BARBARIAN				1
-#define STYLE_DUELIST				2
-#define STYLE_SKIRMISHER			3
-#define STYLE_DRAGOON				4
-#define STYLE_TACTICIAN				5
+// Combat-style ordinal. STYLE_NONE is the -1 sentinel (hence : int). Wire
+// format -- never renumber.
+enum CombatStyle : int
+{
+	STYLE_NONE					= -1,
+	STYLE_GLADIATOR				= 0,
+	STYLE_BARBARIAN				= 1,
+	STYLE_DUELIST				= 2,
+	STYLE_SKIRMISHER			= 3,
+	STYLE_DRAGOON				= 4,
+	STYLE_TACTICIAN				= 5,
+};
 #define MAX_STYLE					7
 #define MAX_STYLE_SKILL				38
 
@@ -2246,17 +2279,21 @@ enum SectorType : int
 // Trap types
 //
 
-#define TRAP_NONE					0
-#define TRAP_DART					1
-#define TRAP_PDART					2
-#define TRAP_FIREBALL				3
-#define TRAP_LIGHTNING				4
-#define TRAP_SLEEPGAS				5
-#define TRAP_POISONGAS				6
-#define TRAP_ACID					7
-#define TRAP_PIT					8
-#define TRAP_BOULDER				9
-#define TRAP_DRAIN					10
+// Trap effect ordinal. Wire format -- never renumber.
+enum TrapType : int
+{
+	TRAP_NONE					= 0,
+	TRAP_DART					= 1,
+	TRAP_PDART					= 2,
+	TRAP_FIREBALL				= 3,
+	TRAP_LIGHTNING				= 4,
+	TRAP_SLEEPGAS				= 5,
+	TRAP_POISONGAS				= 6,
+	TRAP_ACID					= 7,
+	TRAP_PIT					= 8,
+	TRAP_BOULDER				= 9,
+	TRAP_DRAIN					= 10,
+};
 #define MAX_TRAP					11
 
 #define ALIGN_NEUTRAL				0
@@ -2591,11 +2628,15 @@ enum WiznetFlag : int
 // AP Demonic Favors Defines
 //
 
-#define DEVIL_ASMODEUS				0
-#define DEVIL_MOLOCH				1
-#define DEVIL_BAAL					2
-#define DEVIL_DISPATER				3
-#define DEVIL_MEPHISTO				4
+// Devil-patron ordinal. Wire format -- never renumber.
+enum Devil : int
+{
+	DEVIL_ASMODEUS				= 0,
+	DEVIL_MOLOCH				= 1,
+	DEVIL_BAAL					= 2,
+	DEVIL_DISPATER				= 3,
+	DEVIL_MEPHISTO				= 4,
+};
 #define MAX_DEVIL					5
 
 #define LESSER_BARBAS				0
@@ -2615,10 +2656,14 @@ enum WiznetFlag : int
 #define LESSER_DEMON				0
 #define GREATER_DEMON				1
 
-#define FAVOR_NONE					0
-#define FAVOR_FAILED				-1
-#define FAVOR_IN_PROGRESS			1
-#define FAVOR_GRANTED				2
+// Favor/quest-state ordinal. FAVOR_FAILED is the -1 sentinel (hence : int).
+enum FavorState : int
+{
+	FAVOR_NONE					= 0,
+	FAVOR_FAILED				= -1,
+	FAVOR_IN_PROGRESS			= 1,
+	FAVOR_GRANTED				= 2,
+};
 
 #define GERYON_EYE					2
 #define GERYON_FINGER				3
@@ -2663,14 +2708,22 @@ enum ElementSlot : int
 	ELE_TYPE_PARA				= 2,
 };
 
-#define MAT_TRANSLUCENT				0
-#define MAT_TRANSPARENT				1
-#define MAT_EDIBLE					2
+// Material optical property. Separate family from MAT_SOLID.. below (collide).
+enum MaterialOptical : int
+{
+	MAT_TRANSLUCENT				= 0,
+	MAT_TRANSPARENT				= 1,
+	MAT_EDIBLE					= 2,
+};
 
-#define MAT_SOLID					0
-#define MAT_LIQUID					1
-#define MAT_GAS						2
-#define MAT_PLASMA					3
+// Material state of matter.
+enum MaterialState : int
+{
+	MAT_SOLID					= 0,
+	MAT_LIQUID					= 1,
+	MAT_GAS						= 2,
+	MAT_PLASMA					= 3,
+};
 
 //
 // Prototype for a mob.
@@ -2759,14 +2812,18 @@ private:
 // Speech info for progs
 //
 
-#define SPEECH_SAY					0
-#define SPEECH_SAYTO				1
-#define SPEECH_TELL					2
-#define SPEECH_WHISPER				3
-#define SPEECH_YELL					4
-#define SPEECH_EMOTE				5
-#define SPEECH_ECHO					6
-#define SPEECH_SING					7
+// Speech-act ordinal. Wire format -- never renumber.
+enum SpeechType : int
+{
+	SPEECH_SAY					= 0,
+	SPEECH_SAYTO				= 1,
+	SPEECH_TELL					= 2,
+	SPEECH_WHISPER				= 3,
+	SPEECH_YELL					= 4,
+	SPEECH_EMOTE				= 5,
+	SPEECH_ECHO					= 6,
+	SPEECH_SING					= 7,
+};
 
 struct speech_data
 {
