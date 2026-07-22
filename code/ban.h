@@ -29,14 +29,10 @@
 #define BAN_PERMANENT				F
 
 //
-// New ban defines
+// New ban defines -- moved to banflags.h (phase-02 3.3) so tests and the
+// repository can use them without pulling in merc.h.
 //
-
-#define NBAN_ALL					0
-#define NBAN_NEWBIE					1
-
-#define NBAN_IP						1
-#define NBAN_HOST					0
+#include "banflags.h"
 
 typedef struct ban_data BAN_DATA;
 struct ban_data

@@ -1405,7 +1405,7 @@ void spell_blindness(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	}
 
 	if (saves_spell(level - 3, victim, DAM_OTHER)
-		|| IS_SET(victim->form, ACT_UNDEAD)
+		|| (is_npc(victim) && IS_SET(victim->act, ACT_UNDEAD))
 		|| IS_SET(victim->form, FORM_UNDEAD))
 	{
 		act("You failed to blind $N.", ch, 0, victim, TO_CHAR);

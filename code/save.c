@@ -363,15 +363,15 @@ void fwrite_char(CHAR_DATA *ch, FILE *fp)
 
 		fprintf(fp, "Exp  %d\n", ch->exp);
 
-		if (ch->act != 0)
+		if (!IS_ZERO_VECTOR(ch->act))
 			fprintf(fp, "Act  %s\n", print_flags(ch->act));
 
-		if (ch->affected_by != 0)
+		if (!IS_ZERO_VECTOR(ch->affected_by))
 			fprintf(fp, "AfBy %s\n", print_flags(ch->affected_by));
 
 		fprintf(fp, "Comm %s\n", print_flags(ch->comm));
 
-		if (ch->wiznet)
+		if (!IS_ZERO_VECTOR(ch->wiznet))
 			fprintf(fp, "Wizn %s\n", print_flags(ch->wiznet));
 
 		if (ch->invis_level)
@@ -689,13 +689,13 @@ void fwrite_pet(CHAR_DATA *pet, FILE *fp)
 	if (pet->exp > 0)
 		fprintf(fp, "Exp  %d\n", pet->exp);
 
-	if (pet->act != pet->pIndexData->act)
+	if (!vector_equal(pet->act, pet->pIndexData->act))
 		fprintf(fp, "Act  %s\n", print_flags(pet->act));
 
-	if (pet->affected_by != pet->pIndexData->affected_by)
+	if (!vector_equal(pet->affected_by, pet->pIndexData->affected_by))
 		fprintf(fp, "AfBy %s\n", print_flags(pet->affected_by));
 
-	if (pet->comm != 0)
+	if (!IS_ZERO_VECTOR(pet->comm))
 		fprintf(fp, "Comm %s\n", print_flags(pet->comm));
 
 	fprintf(fp, "Pos  %d\n", pet->position = POS_FIGHTING ? POS_STANDING : pet->position);

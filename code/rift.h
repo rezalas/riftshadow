@@ -4,7 +4,8 @@
 #define STATE_INVALID	0
 #define STATE_VALID		1
 
-#define MAX_EXITS		6
+// MAX_EXITS removed -- it duplicated MAX_EXIT (direction.h), which is the count
+// of the Directions enum and the natural home. Both were 6.
 
 #include "stdlibs/bitvector.h"
 #include "stdlibs/strings.h"

@@ -2,16 +2,7 @@
 #include <algorithm>
 #include "db_mocks.h"
 #include "../code/repositories/banrepository.h"
-
-// These NBAN_* values mirror ban.h because if we include that header, 
-// it pulls in merc.h which leads to compilation errors. Once we break 
-// the dependency on merc.h, we can remove these duplicates and include 
-// ban.h instead.
-
-static const int TEST_NBAN_ALL		= 0;
-static const int TEST_NBAN_NEWBIE	= 1;
-static const int TEST_NBAN_IP		= 1;
-static const int TEST_NBAN_HOST		= 0;
+#include "../code/banflags.h"
 
 SCENARIO("finding bans by type", "[ban][repository]")
 {
@@ -25,7 +16,7 @@ SCENARIO("finding bans by type", "[ban][repository]")
 
 		WHEN("FindByType is called")
 		{
-			auto bans = repo.FindByType(TEST_NBAN_NEWBIE, TEST_NBAN_HOST);
+			auto bans = repo.FindByType(NBAN_NEWBIE, NBAN_HOST);
 
 			THEN("it issues a single parameterised query with the type bound, not interpolated")
 			{
@@ -57,7 +48,7 @@ SCENARIO("finding bans by type", "[ban][repository]")
 
 		WHEN("FindByType is called")
 		{
-			auto bans = repo.FindByType(TEST_NBAN_ALL, TEST_NBAN_IP);
+			auto bans = repo.FindByType(NBAN_ALL, NBAN_IP);
 
 			THEN("it returns nothing but still binds the requested type")
 			{
@@ -125,8 +116,8 @@ SCENARIO("adding a ban", "[ban][repository]")
 		ban.reason = "testing";
 		ban.date = "2026-07-11";
 		ban.duration = -1;
-		ban.ban_type = TEST_NBAN_NEWBIE;
-		ban.host_type = TEST_NBAN_IP;
+		ban.ban_type = NBAN_NEWBIE;
+		ban.host_type = NBAN_IP;
 
 		BanRepository repo(db);
 

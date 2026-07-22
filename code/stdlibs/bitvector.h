@@ -1,7 +1,7 @@
 #ifndef BITVECTOR_H
 #define BITVECTOR_H
 
-#define ARR(x) x < 32 ? 0 : 1
+#define ARR(x) ((x) < 32 ? 0 : 1)
 
 class CBitvector
 {

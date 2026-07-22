@@ -325,63 +325,22 @@ typedef void APROG_FUN_MYELL (AREA_DATA *area, CHAR_DATA *ch, CHAR_DATA *victim)
 // mprog stuff
 //
 
-#define MPROG_BRIBE					0
-#define MPROG_ENTRY					1
-#define MPROG_GREET					2
-#define MPROG_GIVE					3
-#define MPROG_FIGHT					4
-#define MPROG_DEATH					5
-#define MPROG_PULSE					6
-#define MPROG_SPEECH				7
-#define MPROG_ATTACK				8
-#define MPROG_MOVE					9
-#define MPROG_BEAT					10
-#define MPROG_AGGRESS				11
+#include "enums.h"  // scoped constant enums (phase-02 3.3)
 
 //
 // iprog stuff
 //
 
-#define IPROG_WEAR					0
-#define IPROG_REMOVE				1
-#define IPROG_DROP					2
-#define IPROG_SAC					3
-#define IPROG_GIVE					4
-#define IPROG_GREET					5
-#define IPROG_FIGHT					6
-#define IPROG_DEATH					7
-#define IPROG_SPEECH				8
-#define IPROG_ENTRY					9
-#define IPROG_GET					10
-#define IPROG_PULSE					11
-#define IPROG_INVOKE				12
-#define IPROG_VERB					13
-#define IPROG_LOOT					14
-#define IPROG_OPEN					15
-#define IPROG_LOOK					17
-#define IPROG_HIT					18
 
 //
 // rprog stuff
 //
 
-#define RPROG_PULSE					0
-#define RPROG_ENTRY					1
-#define RPROG_MOVE					2
-#define RPROG_DROP					3
-#define RPROG_SPEECH				4
-#define RPROG_OPEN					5
 
 //
 // aprog stuff
 //
 
-#define APROG_PULSE					0
-#define APROG_RESET					1
-#define APROG_SUN					2
-#define APROG_TICK					3
-#define APROG_AGGRESS				4
-#define APROG_MYELL					5
 
 //
 // Quests!
@@ -395,9 +354,6 @@ typedef void APROG_FUN_MYELL (AREA_DATA *area, CHAR_DATA *ch, CHAR_DATA *victim)
 #define SMITH_QUEST					6
 #define RING_QUEST					7
 
-#define REPLY_YES					1
-#define REPLY_NO					2
-#define REPLY_NEITHER				3
 
 #define NOTE_UNSTARTED				0
 #define NOTE_IN_PROGRESS			1
@@ -432,34 +388,6 @@ struct time_info_data
 // Connected state for a channel.
 //
 
-#define CON_PLAYING					0
-#define CON_GET_NAME				1
-#define CON_GET_OLD_PASSWORD		2
-#define CON_CONFIRM_NEW_NAME		3
-#define CON_GET_NEW_PASSWORD		4
-#define CON_CONFIRM_NEW_PASSWORD	5
-#define CON_GET_NEW_RACE			6
-#define CON_GET_NEW_SEX				7
-#define CON_GET_NEW_CLASS			8
-#define CON_ALLOCATE_STATS			9
-#define CON_GET_ALIGNMENT			10
-#define CON_GET_ETHOS				11
-#define CON_DEFAULT_CHOICE			12
-#define CON_GEN_GROUPS				13
-#define CON_NEW_CHAR				14
-#define CON_READ_IMOTD				15
-#define CON_READ_MOTD				16
-#define CON_BREAK_CONNECT			17
-#define CON_GET_CABAL				18
-#define CON_GET_SPEC_ONE			19
-#define CON_GET_SPEC_TWO			20
-#define	CON_GET_THERMAL				21
-#define	CON_GET_MATERIAL			22
-#define CON_GET_DYNAMIC				23
-#define	CON_CHOOSE_ELE				24
-#define CON_LEGIT_NAME				25
-#define CON_GET_BEAUTY				26
-#define CON_CHOOSE_WEAPON			27
 
 //
 // Descriptor (channel) structure.
@@ -545,15 +473,6 @@ struct bounty
 // TO types for act.
 //
 
-#define TO_ROOM						0
-#define TO_NOTVICT					1
-#define TO_VICT						2
-#define TO_CHAR						3
-#define TO_ALL						4
-#define TO_IMMINROOM				5
-#define TO_GROUP					6
-#define TO_NOTGROUP					7
-#define TO_AREA						8
 
 //
 // Help table types.
@@ -585,19 +504,8 @@ struct shop_data
 	short direction;			// exit dir
 };
 
-#define BAR_CLASS					0
-#define BAR_CABAL					1
-#define BAR_SIZE					2
-#define BAR_TATTOO					3
-#define BAR_LEVEL					4
 
-#define BAR_EQUAL_TO				0
-#define BAR_LESS_THAN				1
-#define BAR_GREATER_THAN			2
 
-#define BAR_SAY						0
-#define BAR_ECHO					1
-#define BAR_EMOTE					2
 
 struct barred_data
 {
@@ -617,11 +525,6 @@ struct barred_data
 
 #define MAX_GUILD					8
 #define MAX_STATS					5
-#define STAT_STR					0
-#define STAT_INT					1
-#define STAT_WIS					2
-#define STAT_DEX					3
-#define STAT_CON					4
 #define MAX_SPECS					8
 #define MAX_SPEC_SKILLS				1
 #define MAX_ZOMBIE					10
@@ -788,29 +691,16 @@ struct obj_affect_data
 // affect types
 //
 
-#define AFT_SPELL					0
-#define AFT_SKILL					1
-#define AFT_POWER					2
-#define AFT_MALADY					3
-#define AFT_COMMUNE					4
-#define AFT_INVIS					5
-#define AFT_RUNE					6
-#define AFT_TIMER					7
 
 //
 // class types
 //
 
-#define CLASS_NEITHER				0
-#define CLASS_CASTER				1
-#define CLASS_COMMUNER				2
 
 //
 // open or closed
 //
 
-#define CLASS_OPEN					1
-#define CLASS_CLOSED				0
 
 //
 // open or closed  race
@@ -823,12 +713,6 @@ struct obj_affect_data
 // const.c skill table types
 //
 
-#define CMD_NONE 					0
-#define CMD_SPELL					1
-#define CMD_COMMUNE					2
-#define CMD_POWER					3
-#define CMD_BOTH					4
-#define CMD_RUNE					5
 
 #define CAN_DISPEL					(1 << ASCII_A)
 #define CAN_CANCEL					(1 << ASCII_B)
@@ -839,39 +723,22 @@ struct obj_affect_data
 // wear definitions
 //
 
-#define TO_AFFECTS					0
-#define TO_OBJECT					1
-#define TO_IMMUNE					2
-#define TO_RESIST					3
-#define TO_VULN						4
-#define TO_WEAPON					5
 
 //
 // runes only
 //
 
-#define RUNE_TO_WEAPON				0
-#define RUNE_TO_ARMOR				1
-#define RUNE_TO_PORTAL				2
-#define RUNE_TO_ROOM				3
 
-#define RUNE_TRIGGER_ENTRY			0
-#define RUNE_TRIGGER_EXIT			1
 
 //
 // where definitions for room
 //
 
-#define TO_ROOM_AFFECTS				0
-#define TO_ROOM_CONST				1
-#define TO_ROOM_FLAGS				2
 
 //
 // where definitions for objs
 //
 
-#define TO_OBJ_AFFECTS				0
-#define TO_OBJ_APPLY				1
 
 //
 // where definitions for area
@@ -883,23 +750,11 @@ struct obj_affect_data
 /// room applies
 //
 
-#define APPLY_ROOM_NONE				0
-#define APPLY_ROOM_HEAL				1
-#define APPLY_ROOM_MANA				2
-#define APPLY_ROOM_SECT				3
-#define APPLY_ROOM_NOPE				4
 
 //
 // obj applies
 //
 
-#define	APPLY_OBJ_NONE				0
-#define	APPLY_OBJ_V0				1
-#define	APPLY_OBJ_V1				2
-#define APPLY_OBJ_V2				3
-#define APPLY_OBJ_V3				4
-#define APPLY_OBJ_V4				5
-#define APPLY_OBJ_WEIGHT			6
 
 //
 // area applies
@@ -914,14 +769,6 @@ struct obj_affect_data
 // Cabal definitions
 //
 
-#define CABAL_NONE					0
-#define CABAL_GUILD					1
-#define CABAL_SCION					2
-#define CABAL_HORDE					3
-#define CABAL_BOUNTY				4
-#define CABAL_THEATRE				5
-#define CABAL_PHALANX				6
-#define CABAL_NEGATIVE				8
 
 #define MAX_EMPIRE					8
 #define MAX_BOUNTY					5
@@ -1086,312 +933,58 @@ struct kill_data
 // Used in #MOBILES.
 //
 
-#define ACT_IS_NPC					0	// Auto set for mobs
-#define ACT_SENTINEL				1	// Stays in one room
-#define ACT_SCAVENGER				2	// Picks up objects
-#define ACT_WARD_MOB				3	// Ward mobs
-#define ACT_WANDER					4	// wanders
-#define ACT_AGGRESSIVE				5	// Attacks PC's
-#define ACT_STAY_AREA				6	// Won't leave area
-#define ACT_WIMPY					7
-#define ACT_PET						8	// Auto set for pets
-#define ACT_TRAIN					9	// Can train PC's
-#define ACT_PRACTICE				10	// Can practice PC's
-#define ACT_SMARTTRACK				11	// Will use pathfinding
-#define ACT_UNDEAD					14
-#define ACT_INNER_GUARDIAN			15	// yay.
-#define ACT_CLERIC					16
-#define ACT_MAGE					17
-#define ACT_INTELLIGENT 			18
-#define ACT_FAST_TRACK				19
-#define ACT_NOALIGN					20
-#define ACT_NOPURGE					21
-#define ACT_OUTDOORS				22
-#define ACT_INDOORS					24
-#define ACT_GUILDGUARD				25
-#define ACT_IS_HEALER				26
-#define ACT_GAIN					27
-#define ACT_UPDATE_ALWAYS			28
-#define ACT_DETECT_SPECIAL			29
-#define ACT_BANKER					30
-#define ACT_NOCTURNAL				31
-#define ACT_DIURNAL					32
-#define ACT_FASTWANDER				33
-#define ACT_LAW						34
 
 //
 // damage classes
 //
 
-#define DAM_NONE					0
-#define DAM_BASH					1
-#define DAM_PIERCE					2
-#define DAM_SLASH					3
-#define DAM_FIRE					4
-#define DAM_COLD					5
-#define DAM_LIGHTNING				6
-#define DAM_ACID					7
-#define DAM_POISON					8
-#define DAM_NEGATIVE				9
-#define DAM_HOLY					10
-#define DAM_ENERGY					11
-#define DAM_MENTAL					12
-#define DAM_DISEASE					13
-#define DAM_DROWNING				14
-#define DAM_LIGHT					15
-#define DAM_OTHER					16
-#define DAM_CHARM					17
-#define DAM_SOUND					18
-#define DAM_TRUESTRIKE				19
 #define	DAM_INTERNAL				20
 
 //
 // OFF bits for mobiles
 //
 
-#define OFF_AREA_ATTACK				0
-#define OFF_BACKSTAB				1
-#define OFF_BASH					2
-#define OFF_BERSERK					3
-#define OFF_DISARM					4
-#define OFF_DODGE					5
-#define OFF_FADE					6 // UNUSED
-#define OFF_FAST					7
-#define OFF_KICK					8
-#define OFF_KICK_DIRT				9
-#define OFF_PARRY					10
-#define OFF_RESCUE					11
-#define OFF_TAIL					12
-#define OFF_TRIP					13
-#define OFF_CRUSH					14
-#define ASSIST_ALL					15
-#define ASSIST_ALIGN				16
-#define ASSIST_RACE					17
-#define ASSIST_PLAYERS				18
-#define ASSIST_GUARD				19
-#define ASSIST_VNUM					20
-#define NO_TRACK					21
-#define STATIC_TRACKING				22
-#define SPAM_MURDER					23
-#define OFF_INTIMIDATED				24
-#define OFF_UNDEAD_DRAIN			25	// True undead drain, very powerful
-#define ASSIST_GROUP				26
 
 //
 // return values for check_imm
 //
 
-#define IS_NORMAL					0
-#define IS_IMMUNE					1
-#define IS_RESISTANT				2
-#define IS_VULNERABLE				3
 
 //
 // IMM bits for mobs
 //
 
-#define IMM_SUMMON					0
-#define IMM_CHARM					1
-#define IMM_MAGIC					2
-#define IMM_WEAPON					3
-#define IMM_BASH					4
-#define IMM_PIERCE					5
-#define IMM_SLASH					6
-#define IMM_FIRE					7
-#define IMM_COLD					8
-#define IMM_LIGHTNING				9
-#define IMM_ACID					10
-#define IMM_POISON					11
-#define IMM_NEGATIVE				12
-#define IMM_HOLY					13
-#define IMM_ENERGY					14
-#define IMM_MENTAL					15
-#define IMM_DISEASE					16
-#define IMM_DROWNING				17
-#define IMM_LIGHT					18
-#define IMM_SOUND					19
-#define IMM_INTERNAL				20
-#define IMM_MITHRIL					23
-#define IMM_SILVER					24
-#define IMM_IRON					25
-#define IMM_SLEEP					26
 
 //
 // RES bits for mobs
 //
 
-#define RES_SUMMON					0
-#define RES_CHARM					1
-#define RES_MAGIC					2
-#define RES_WEAPON					3
-#define RES_BASH					4
-#define RES_PIERCE					5
-#define RES_SLASH					6
-#define RES_FIRE					7
-#define RES_COLD					8
-#define RES_LIGHTNING				9
-#define RES_ACID					10
-#define RES_POISON					11
-#define RES_NEGATIVE				12
-#define RES_HOLY					13
-#define RES_ENERGY					14
-#define RES_MENTAL					15
-#define RES_DISEASE					16
-#define RES_DROWNING				17
-#define RES_LIGHT					18
-#define RES_SOUND					19
-#define RES_INTERNAL				20
-#define RES_MITHRIL					23
-#define RES_SILVER					24
-#define RES_IRON					25
  
 //
 // VULN bits for mobs
 //
 
-#define VULN_SUMMON					0
-#define VULN_CHARM					1
-#define VULN_MAGIC					2
-#define VULN_WEAPON					3
-#define VULN_BASH					4
-#define VULN_PIERCE					5
-#define VULN_SLASH					6
-#define VULN_FIRE					7
-#define VULN_COLD					8
-#define VULN_LIGHTNING				9
-#define VULN_ACID					10
-#define VULN_POISON					11
-#define VULN_NEGATIVE				12
-#define VULN_HOLY					13
-#define VULN_ENERGY					14
-#define VULN_MENTAL					15
-#define VULN_DISEASE				16
-#define VULN_DROWNING				17
-#define VULN_LIGHT					18
-#define VULN_SOUND					19
-#define VULN_INTERNAL				20
-#define VULN_MITHRIL				23
-#define VULN_SILVER					24
-#define VULN_IRON					25
 
 //
 // body form
 //
 
-#define FORM_EDIBLE					0
-#define FORM_POISON					1
-#define FORM_MAGICAL				2
-#define FORM_INSTANT_DECAY			3
-#define FORM_OTHER					4 // defined by material bit
-
-//
-// actual form
-//
-
-#define FORM_ANIMAL					6
-#define FORM_SENTIENT				7
-#define FORM_UNDEAD					8
-#define FORM_CONSTRUCT				9
-#define FORM_MIST					10
-#define FORM_INTANGIBLE				11
-
-#define FORM_BIPED					12
-#define FORM_AQUATIC				13
-#define FORM_INSECT					14
-#define FORM_SPIDER					15
-#define FORM_CRUSTACEAN				16
-#define FORM_WORM					17
-#define FORM_BLOB					18
-
-#define FORM_MAMMAL					21
-#define FORM_BIRD					22
-#define FORM_REPTILE				23
-#define FORM_SNAKE					24
-#define FORM_DRAGON					25
-#define FORM_AMPHIBIAN				26
-#define FORM_FISH					27
-#define FORM_COLD_BLOOD				28
-#define FORM_NOSPEECH				29
 
 //
 // body parts
 //
 
-#define PART_HEAD					0
-#define PART_ARMS					1
-#define PART_LEGS					2
-#define PART_HEART					3
-#define PART_BRAINS					4
-#define PART_GUTS					5
-#define PART_HANDS					6
-#define PART_FEET					7
-#define PART_FINGERS				8
-#define PART_EAR					9
-#define PART_EYE					10
-#define PART_LONG_TONGUE			11
-#define PART_EYESTALKS				12
-#define PART_TENTACLES				13
-#define PART_FINS					14
-#define PART_WINGS					15
-#define PART_TAIL					16
-
-//
-// for combat
-//
-
-#define PART_CLAWS					20
-#define PART_FANGS					21
-#define PART_HORNS					22
-#define PART_SCALES					23
-#define PART_TUSKS					24
 
 //
 // Bits for 'affected_by'.
 // Used in #MOBILES.
 //
 
-#define AFF_BLIND					0
-#define AFF_INVISIBLE				1
-#define AFF_DETECT_EVIL				2
-#define AFF_DETECT_INVIS			3
-#define AFF_DETECT_MAGIC			4
-#define AFF_DETECT_HIDDEN			5
-#define AFF_DETECT_GOOD				6
-#define AFF_SANCTUARY				7
-#define AFF_DETECT_CAMO				8
-#define AFF_INFRARED				9 // unused!
-#define AFF_CURSE					10
-#define AFF_CAMOUFLAGE				11
-#define AFF_POISON					12
-#define AFF_PROTECTION				13
-#define AFF_RAGE					14
-#define AFF_SNEAK					15
-#define AFF_HIDE					16
-#define AFF_SLEEP					17
-#define AFF_CHARM					18
-#define AFF_FLYING					19
-#define AFF_PASS_DOOR				20
-#define AFF_HASTE					21
-#define AFF_CALM					22
-#define AFF_PLAGUE					23
-#define AFF_PERMANENT				24
-#define AFF_DARK_VISION				25
-#define AFF_BERSERK					26
-#define AFF_WATERBREATH				27
-#define AFF_REGENERATION			28
-#define AFF_SLOW					29
-#define AFF_NOSHOW					30
 
 //
 // AFF bits for rooms
 //
 
-#define AFF_ROOM_RANDOMIZER			0
-#define AFF_ROOM_CURSE				10
-#define AFF_ROOM_POISON				12
-#define AFF_ROOM_SLEEP				17
-#define AFF_ROOM_PLAGUE				23
-#define AFF_ROOM_SLOW				29
 
 // Aff bits for.. AREAS!
 // -- None currently. --
@@ -1401,46 +994,28 @@ struct kill_data
 // Aff bits for OBJS
 //
 
-#define	AFF_OBJ_BURNING				0
 
 //
 // Sex.
 // Used in #MOBILES.
 //
 
-#define SEX_NEUTRAL					0
-#define SEX_MALE					1
-#define SEX_FEMALE					2
 
 //
 // AC types
 //
 
-#define AC_PIERCE					0
-#define AC_BASH						1
-#define AC_SLASH					2
-#define AC_EXOTIC					3
 #define MAX_AC						4
 
 //
 // dice
 //
 
-#define DICE_NUMBER					0
-#define DICE_TYPE					1
-#define DICE_BONUS					2
 
 //
 // size
 //
 
-#define SIZE_TINY					0
-#define SIZE_SMALL					1
-#define SIZE_MEDIUM					2
-#define SIZE_LARGE					3
-#define SIZE_HUGE					4
-#define SIZE_GIANT					5
-#define SIZE_IMMENSE				6
 
 //
 // Well known object virtual numbers.
@@ -1561,139 +1136,22 @@ struct kill_data
 // Used in #OBJECTS.
 //
 
-#define ITEM_LIGHT					1
-#define ITEM_SCROLL					2
-#define ITEM_WAND					3
-#define ITEM_STAFF					4
-#define ITEM_WEAPON					5
-#define ITEM_NULL6					6
-#define	ITEM_DICE					7
-#define ITEM_TREASURE				8
-#define ITEM_ARMOR					9
-#define ITEM_POTION					10
-#define ITEM_CLOTHING				11
-#define ITEM_FURNITURE				12
-#define ITEM_TRASH					13
-#define ITEM_CONTAINER				15
-#define ITEM_DRINK_CON				17
-#define ITEM_KEY					18
-#define ITEM_FOOD					19
-#define ITEM_MONEY					20
-#define ITEM_BOAT					22
-#define ITEM_CORPSE_NPC				23
-#define ITEM_CORPSE_PC				24
-#define ITEM_FOUNTAIN				25
-#define ITEM_PILL					26
-#define ITEM_PROTECT				27
-#define ITEM_MAP					28
-#define ITEM_PORTAL					29
-#define ITEM_WARP_STONE				30
-#define ITEM_ROOM_KEY				31
-#define ITEM_GEM					32
-#define ITEM_JEWELRY				33
-#define ITEM_CAMPFIRE				34
-#define ITEM_CABAL_ITEM				35
-#define ITEM_SKELETON				36
-#define ITEM_URN					37
-#define ITEM_GRAVITYWELL			38
-#define ITEM_BOOK					39
-#define ITEM_PEN					40
-#define ITEM_ALTAR					41
-//#define ITEM_DONATION_PIT			42
-#define ITEM_STONE					43
 
 //
 // Extra flags.
 // Used in #OBJECTS.
 ///
 
-#define ITEM_GLOW					0
-#define ITEM_HUM					1
-#define ITEM_DARK					2
-#define ITEM_NOSHOW					3
-#define ITEM_EVIL					4
-#define ITEM_INVIS					5
-#define ITEM_MAGIC					6
-#define ITEM_NODROP					7
-#define ITEM_BLESS					8
-#define ITEM_ANTI_GOOD				9
-#define ITEM_ANTI_EVIL				10
-#define ITEM_ANTI_NEUTRAL			11
-#define ITEM_NOREMOVE				12
-#define ITEM_INVENTORY				13
-#define ITEM_NOPURGE				14
-#define ITEM_ROT_DEATH				15
-#define ITEM_VIS_DEATH				16
-#define ITEM_FIXED					17
-#define ITEM_NODISARM				18
-#define ITEM_NOLOCATE				19
-#define ITEM_MELT_DROP				20
-#define ITEM_UNDER_CLOTHES			21
-#define ITEM_SELL_EXTRACT			22
-#define ITEM_BURN_PROOF				24
-#define ITEM_NOUNCURSE				25
-#define ITEM_BRAND					26
-#define CORPSE_NO_ANIMATE			27
-#define ITEM_ANTI_LAWFUL			28
-#define ITEM_ANTI_NEUT				29
-#define ITEM_ANTI_CHAOTIC			30
-#define ITEM_NO_STASH				31
-#define ITEM_NO_SAC					32
-#define ITEM_DONATION_PIT			33
 
 //
 // Wear flags.
 // Used in #OBJECTS.
 //
 
-#define ITEM_TAKE					0
-#define ITEM_WEAR_FINGER			1
-#define ITEM_WEAR_NECK				2
-#define ITEM_WEAR_BODY				3
-#define ITEM_WEAR_HEAD				4
-#define ITEM_WEAR_LEGS				5
-#define ITEM_WEAR_FEET				6
-#define ITEM_WEAR_HANDS				7
-#define ITEM_WEAR_ARMS				8
-#define ITEM_WEAR_SHIELD			9
-#define ITEM_WEAR_ABOUT				10
-#define ITEM_WEAR_WAIST				11
-#define ITEM_WEAR_WRIST				12
-#define ITEM_WEAR_WIELD				13
-#define ITEM_WEAR_HOLD				14
-#define ITEM_WEAR_FLOAT				15
-#define ITEM_WEAR_BRAND				16
-#define ITEM_WEAR_STRAPPED			17
-#define ITEM_WEAR_COSMETIC			18 //cosmetic, misc, up to 5/person
 
-#define RESTRICT_OTHER				0
-#define RESTRICT_CLASS				1
-#define RESTRICT_RACE				2
-#define RESTRICT_CABAL				3
 
-#define TRIBE_NONE					0
-#define TRIBE_BOAR					1
-#define TRIBE_WOLF					2
-#define TRIBE_BEAR					3
-#define TRIBE_HAWK					4
-#define TRIBE_LION					5
-#define TRIBE_ELK					6
-#define TRIBE_JACKAL				7
-#define TRIBE_FOX					8
-#define TRIBE_BULL					9
-#define TRIBE_PANTHER				10
 
-#define PALADIN_NONE				0
-#define PALADIN_PROTECTOR			1
-#define PALADIN_CRUSADER			2
 
-#define STYLE_NONE					-1
-#define STYLE_GLADIATOR				0
-#define STYLE_BARBARIAN				1
-#define STYLE_DUELIST				2
-#define STYLE_SKIRMISHER			3
-#define STYLE_DRAGOON				4
-#define STYLE_TACTICIAN				5
 #define MAX_STYLE					7
 #define MAX_STYLE_SKILL				38
 
@@ -1701,153 +1159,42 @@ struct kill_data
 // weapon class
 //
 
-#define WEAPON_EXOTIC				0
-#define WEAPON_SWORD				1
-#define WEAPON_DAGGER				2
-#define WEAPON_SPEAR				3
-#define WEAPON_MACE					4
-#define WEAPON_AXE					5
-#define WEAPON_FLAIL				6
-#define WEAPON_WHIP					7
-#define WEAPON_POLEARM				8
-#define WEAPON_STAFF				9
-#define WEAPON_HAND					10
 
 //
 // weapon types
 //
 
-#define WEAPON_FLAMING				0
-#define WEAPON_FROST				1
-#define WEAPON_VAMPIRIC				2
-#define WEAPON_SHARP				3
-#define WEAPON_VORPAL				4
-#define WEAPON_TWO_HANDS			5
-#define WEAPON_SHOCKING				6
-#define WEAPON_POISON				7
-#define WEAPON_AVENGER				8
-#define WEAPON_SHADOWBANE			9
-#define WEAPON_LIGHTBRINGER			10
 
 //
 // gate flags
 //
 
-#define GATE_NORMAL_EXIT			0
-#define GATE_NOCURSE				1
-#define GATE_GOWITH					2
-#define GATE_BUGGY					3
-#define GATE_RANDOM					4
 
 //
 // furniture flags
 //
 
-#define STAND_AT					0
-#define STAND_ON					1
-#define STAND_IN					2
-#define SIT_AT						3
-#define SIT_ON						4
-#define SIT_IN						5
-#define REST_AT						6
-#define REST_ON						7
-#define REST_IN						8
-#define SLEEP_AT					9
-#define SLEEP_ON					10
-#define SLEEP_IN					11
-#define PUT_AT						12
-#define PUT_ON						13
-#define PUT_IN						14
-#define PUT_INSIDE					15
-#define LOUNGE_ON					16
 	
 //
 // Apply types (for affects).
 // Used in #OBJECTS.
 //
 
-#define APPLY_NONE					0
-#define APPLY_STR					1
-#define APPLY_DEX					2
-#define APPLY_INT					3
-#define APPLY_WIS					4
-#define APPLY_CON					5
-#define APPLY_SEX					6
-#define APPLY_CLASS					7
-#define APPLY_LUCK					8 // UNUSED!!
-#define APPLY_AGE					9
-#define APPLY_HEIGHT				10
-#define APPLY_WEIGHT				11
-#define APPLY_MANA					12
-#define APPLY_HIT					13
-#define APPLY_MOVE					14
-#define APPLY_GOLD					15
-#define APPLY_EXP					16
-#define APPLY_AC					17
-#define APPLY_HITROLL				18
-#define APPLY_DAMROLL				19
-#define APPLY_SAVES					20
-#define APPLY_SAVING_PARA			21
-#define APPLY_SAVING_ROD			22
-#define APPLY_SAVING_PETRI			23
-#define APPLY_SAVING_BREATH			24
-#define APPLY_SAVING_SPELL			25
-#define APPLY_SPELL_AFFECT			26
-#define APPLY_CARRY_WEIGHT			27
-#define APPLY_DEFENSE				28
-#define APPLY_REGENERATION			29
-#define APPLY_SIZE					30
-#define APPLY_ENERGYSTATE			31
-#define APPLY_DAM_MOD				32
-#define APPLY_LEGS					33
-#define APPLY_ARMS					34
-#define APPLY_BEAUTY				35
-#define APPLY_ALIGNMENT				36
-#define APPLY_ETHOS					37
 
-//
-// object affect applies.
-//
-
-#define APPLY_OBJ_PROPERTIES		100
+// APPLY_OBJ_PROPERTIES (== 100) moved into enum ApplyLocation above -- it was
+// always numbered in that family despite its name.
 
 //
 // Modifier Names
 //
 
-#define MOD_NONE					-1
-#define MOD_VISION					0
-#define MOD_MOVEMENT				1
-#define MOD_TOUGHNESS				2
-#define MOD_SPEED					3
-#define MOD_LEVITATION				4
-#define MOD_VISIBILITY				5
-#define MOD_PHASE					6
-#define MOD_CONC					7
-#define MOD_PROTECTION				8
-#define MOD_APPEARANCE				9
-#define MOD_HEARING					10
-#define MOD_PERCEPTION				11
-#define MOD_RESISTANCE				12
-#define MOD_ENERGY_STATE			13
-#define MOD_SPEECH					14
-#define MOD_REGEN					15
-#define MOD_WARDROBE				16
 
 //
 // Values for containers (value[1]).
 // Used in #OBJECTS.
 //
 
-#define CONT_CLOSEABLE				0
-#define CONT_PICKPROOF				1
-#define CONT_CLOSED					2
-#define CONT_LOCKED					3
-#define CONT_PUT_ON					4
 
-#define WIELD_ONE					1
-#define WIELD_TWO					2
-#define WIELD_PRIMARY				3
 
 #define HAS_DIED					8
 
@@ -1890,99 +1237,24 @@ struct kill_data
 // Used in #ROOMS.
 //
 
-#define ROOM_DARK					0
-#define ROOM_NO_MOB					2
-#define ROOM_INDOORS				3
-#define ROOM_NO_CONSECRATE			4
-#define ROOM_PRIVATE				9
-#define ROOM_SAFE					10
-#define ROOM_SOLITARY				11
-#define ROOM_PET_SHOP				12
-#define ROOM_NO_RECALL				13
-#define ROOM_IMP_ONLY				14
-#define ROOM_GODS_ONLY				15
-#define ROOM_HEROES_ONLY			16
-#define ROOM_NEWBIES_ONLY			17
-#define ROOM_LAW					18
-#define ROOM_NOWHERE				19
-#define ROOM_NO_GATE				20
-#define ROOM_SILENCE				21
-#define ROOM_NO_SUMMON_TO			22
-#define ROOM_NO_SUMMON_FROM			23
-#define ROOM_NO_ALARM				25
-#define ROOM_FORCE_DUEL				27
-#define ROOM_NO_MAGIC				28
-#define ROOM_AREA_EXPLORE			29 // Don't use - Use area flags instead
-#define ROOM_NO_COMMUNE				30
 
 //
 // Exit flags.
 // Used in #ROOMS.
 //
 
-#define EX_ISDOOR					0
-#define EX_CLOSED					1
-#define EX_LOCKED					2
-#define EX_PICKPROOF				3
-#define EX_NOPASS					4
-#define EX_NOCLOSE					5
-#define EX_NOLOCK					6
-#define EX_NOBASH					7
-#define EX_NONOBVIOUS				8
-#define EX_TRANSLUCENT				9
-#define EX_JAMMED					10
 
-#define ARE_NORMAL					0
-#define ARE_ROAD_RIVER				1
-#define ARE_CABAL					2
-#define ARE_QUEST					3
-#define ARE_CITY					4
-#define ARE_UNOPENED				5
-#define ARE_SHRINE					6
 
 //
 // Sector types.
 // Used in #ROOMS.
 //
 
-#define SECT_INSIDE					7
-#define SECT_CITY					1
-#define SECT_FIELD					2
-#define SECT_FOREST					3
-#define SECT_HILLS					4
-#define SECT_MOUNTAIN				5
-#define SECT_WATER					6
-#define SECT_UNUSED					7
-#define SECT_UNDERWATER				8
-#define SECT_AIR					9
-#define SECT_DESERT					10
-#define SECT_ROAD					11
-#define SECT_CONFLAGRATION			12
-#define SECT_BURNING				13
-#define SECT_TRAIL					14
-#define SECT_SWAMP					15
-#define SECT_PARK					16
-#define SECT_VERTICAL				17
-#define	SECT_ICE					18
-#define	SECT_SNOW					19
-#define SECT_CAVE					20
-#define SECT_MAX					21
 
 //
 // Trap types
 //
 
-#define TRAP_NONE					0
-#define TRAP_DART					1
-#define TRAP_PDART					2
-#define TRAP_FIREBALL				3
-#define TRAP_LIGHTNING				4
-#define TRAP_SLEEPGAS				5
-#define TRAP_POISONGAS				6
-#define TRAP_ACID					7
-#define TRAP_PIT					8
-#define TRAP_BOULDER				9
-#define TRAP_DRAIN					10
 #define MAX_TRAP					11
 
 #define ALIGN_NEUTRAL				0
@@ -1992,57 +1264,18 @@ struct kill_data
 // Alignment selections
 //
 
-#define ALIGN_NONE					-1
-#define ALIGN_ANY					0
-#define ALIGN_GN					1
-#define ALIGN_NE					2
-#define ALIGN_GE					3
-#define ALIGN_G						4
-#define ALIGN_N						5
-#define ALIGN_E						6
 
 //
 // Ethos selections
 //
 
-#define ETHOS_NONE					-1
-#define ETHOS_ANY					0
-#define ETHOS_LN					1
-#define ETHOS_NC					2
-#define ETHOS_LC					3
-#define ETHOS_L						4
-#define ETHOS_N						5
-#define ETHOS_C						6
 
 
 //
 // Class guild used in the room 'G'  flags
 //
 
-#define GUILD_WARRIOR				1
-#define GUILD_THIEF					2
-#define GUILD_CLERIC				3
-#define GUILD_PALADIN				4
-#define GUILD_ANTI_PALADIN			5
-#define GUILD_RANGER				6
-#define GUILD_MONK					7
-#define GUILD_SHAPESHIFTER			8
-#define GUILD_ASSASSIN				9
-#define GUILD_NECROMANCER			10
-#define GUILD_SORCERER				11
 
-#define CLASS_NONE					0
-#define CLASS_WARRIOR 				1
-#define CLASS_THIEF 				2
-#define CLASS_ZEALOT 				3
-#define CLASS_PALADIN 				4
-#define CLASS_ANTI_PALADIN			5
-#define CLASS_RANGER 				6
-#define CLASS_ASSASSIN 				7
-#define CLASS_SHAPESHIFTER			8
-#define CLASS_HEALER				9
-#define CLASS_NECROMANCER 			10
-#define CLASS_SORCERER				11
 
 
 //
@@ -2050,30 +1283,6 @@ struct kill_data
 // Used in #RESETS.
 //
 
-#define WEAR_NONE					-1
-#define WEAR_LIGHT					0
-#define WEAR_FINGER_L				1
-#define WEAR_FINGER_R				2
-#define WEAR_NECK_1					3
-#define WEAR_NECK_2					4
-#define WEAR_BODY					5
-#define WEAR_HEAD					6
-#define WEAR_LEGS					7
-#define WEAR_FEET					8
-#define WEAR_HANDS					9
-#define WEAR_ARMS					10
-#define WEAR_SHIELD					11
-#define WEAR_ABOUT					12
-#define WEAR_WAIST					13
-#define WEAR_WRIST_L				14
-#define WEAR_WRIST_R				15
-#define WEAR_WIELD					16
-#define WEAR_HOLD					17
-#define WEAR_DUAL_WIELD				18
-#define WEAR_FLOAT					18
-#define WEAR_BRAND					19
-#define WEAR_STRAPPED				20
-#define WEAR_COSMETIC				21
 #define MAX_WEAR					22
 
 
@@ -2082,18 +1291,9 @@ struct kill_data
 
 #define NORM						1
 
-#define HIT_UNBLOCKABLE				0
-#define HIT_BLOCKABLE				1
 
-#define HIT_NOSPECIALS				0
-#define HIT_SPECIALS				1
 
-#define HIT_NOMULT					1
-#define HIT_NOADD 0
 
-#define POSTURE_OFFENSE				1
-#define POSTURE_NONE				0
-#define POSTURE_DEFENSE				-1
 
 #define MAX_QUEUE					20
 
@@ -2107,136 +1307,26 @@ struct kill_data
 // Conditions.
 //
 
-#define COND_DRUNK					0
-#define COND_FULL					1
-#define COND_THIRST					2
-#define COND_HUNGER					3
-#define COND_STARVING				4
-#define COND_DEHYDRATED				5
-
-#define COND_HUNGRY					50
 
 //
 // Positions.
 //
 
-#define POS_DEAD					0
-#define POS_MORTAL					1
-#define POS_INCAP					2
-#define POS_STUNNED					3
-#define POS_SLEEPING				4
-#define POS_RESTING					5
-#define POS_SITTING					6
-#define POS_FIGHTING				7
-#define POS_STANDING				8
 
 #define MIN_PK_XP					9999	// min xp players need to start PKing
 #define MIN_LEVEL_TO_PK				23		// Minimum level for players to pk
 
-#define PK_KILLS					0
-#define PK_GOOD						1
-#define PK_NEUTRAL					2
-#define PK_EVIL						3
 
-#define PK_KILLED					0
-#define MOB_KILLED					1
 
 //
 // ACT bits for players.
 //
 
-#define PLR_IS_NPC					0 // Don't EVER set.
-
-//
-// RT auto flags
-//
-
-#define PLR_AUTOABORT				1
-#define PLR_AUTOASSIST				2
-#define PLR_AUTOEXIT				3
-#define PLR_AUTOLOOT				4
-#define PLR_AUTOSAC					5
-#define PLR_AUTOGOLD				6
-#define PLR_AUTOSPLIT				7
-#define PLR_COLOR					8
-#define PLR_IGNORANT				9
-#define PLR_BETRAYER				10
-
-//
-// RT personal flags
-//
-
-#define PLR_CODER					11
-#define PLR_HEROIMM					12
-#define PLR_HOLYLIGHT				13
-#define PLR_EMPOWERED				14
-#define PLR_NOVOID					15
-#define PLR_NOSUMMON				16
-#define PLR_NOFOLLOW				17
-
-//
-// 2 bits reserved, S-T
-//
-
-#define PLR_NO_TRANSFER				19
-
-//
-// Bad flags
-//
-
-#define PLR_PERMIT					20
-#define PLR_MORON					21
-#define PLR_LOG						22
-#define PLR_DENY					23
-#define PLR_FREEZE					24
-#define PLR_THIEF					25
-#define PLR_KILLER					26
-#define PLR_CRIMINAL				27
 
 //
 // RT comm flags -- may be used on both mobs and chars
 //
 
-#define COMM_QUIET					0
-#define COMM_DEAF					1
-#define COMM_NOWIZ					2
-#define COMM_NOAUCTION				3
-#define COMM_NOGOSSIP				4
-#define COMM_NOQUESTION				5
-#define COMM_NONEWBIE				6
-#define COMM_NOCABAL				7
-#define COMM_NOQUOTE				8
-#define COMM_SHOUTSOFF				9
-#define COMM_ANSI					10
-
-//
-// display flags
-//
-
-#define COMM_COMPACT				11
-#define COMM_BRIEF					12
-#define COMM_PROMPT					13
-#define COMM_COMBINE				14
-#define COMM_TELNET_GA				15
-#define COMM_SHOW_AFFECTS			16
-#define COMM_IMMORTAL				18
-
-//
-// penalties
-//
-
-#define COMM_NOEMOTE				19
-#define COMM_NOSHOUT				20
-#define COMM_NOTELL					21
-#define COMM_NOCHANNELS				22 
-#define COMM_BUILDER				23
-#define COMM_SNOOP_PROOF			24
-#define COMM_AFK					25
-#define COMM_ALL_CABALS				26
-#define COMM_NOSOCKET				27
-#define COMM_SWITCHSKILLS			28
-#define COMM_NOBUILDER				29
-#define COMM_LOTS_O_COLOR			30
 
 //
 // Trust flags
@@ -2249,64 +1339,18 @@ struct kill_data
 // WIZnet flags
 //
 
-#define WIZ_ON						0
-#define WIZ_TICKS					1
-#define WIZ_LOGINS					2
-#define WIZ_SITES					3
-#define WIZ_LINKS					4
-#define WIZ_DEATHS					5
-#define WIZ_RESETS					6
-#define WIZ_MOBDEATHS				7
-#define WIZ_FLAGS					8
-#define WIZ_PENALTIES				9
-#define WIZ_SACCING					10
-#define WIZ_LEVELS					11
-#define WIZ_SECURE					12
-#define WIZ_SWITCHES				13
-#define WIZ_SNOOPS					14
-#define WIZ_RESTORE					15
-#define WIZ_LOAD					16
-#define WIZ_NEWBIE					17
-#define WIZ_PREFIX					18
-#define WIZ_SPAM					19
-#define WIZ_CABAL					20
-#define WIZ_PERCENT					21
-#define WIZ_LOG						22
-#define	WIZ_OOC						23
-#define WIZ_DEBUG					24
 
 //
 // AP Demonic Favors Defines
 //
 
-#define DEVIL_ASMODEUS				0
-#define DEVIL_MOLOCH				1
-#define DEVIL_BAAL					2
-#define DEVIL_DISPATER				3
-#define DEVIL_MEPHISTO				4
 #define MAX_DEVIL					5
 
-#define LESSER_BARBAS				0
-#define LESSER_AAMON				1
-#define LESSER_MALAPHAR				2
-#define LESSER_FURCAS				3
-#define LESSER_IPOS					4
 #define MAX_LESSER					5
 
-#define GREATER_OZE					0
-#define GREATER_GAMYGYN				1
-#define GREATER_OROBAS				2
-#define GREATER_GERYON				3
-#define GREATER_CIMERIES			4
 #define MAX_GREATER					5
 
-#define LESSER_DEMON				0
-#define GREATER_DEMON				1
 
-#define FAVOR_NONE					0
-#define FAVOR_FAILED				-1
-#define FAVOR_IN_PROGRESS			1
-#define FAVOR_GRANTED				2
 
 #define GERYON_EYE					2
 #define GERYON_FINGER				3
@@ -2317,39 +1361,10 @@ struct kill_data
 // Sorcerer Elemental Groups
 //
 
-#define ELE_HEAT					0
-#define ELE_COLD					1
-#define ELE_AIR						2
-#define ELE_EARTH					3
-#define ELE_WATER					4
-#define ELE_ELECTRICITY				5
-#define ELE_SMOKE					6
-#define ELE_MAGMA					7
-#define ELE_PLASMA					8
-#define ELE_ACID					9
-#define ELE_BLIZZARD				10
-#define ELE_FROST					11
-#define ELE_CRYSTAL					12
-#define ELE_ICE						13
-#define ELE_LIGHTNING				14
-#define ELE_MIST					15
-#define ELE_METAL					16
-#define ELE_OOZE					17
-#define ELE_NONE					18
 #define MAX_ELE						19
 
-#define ELE_TYPE_NONE				0
-#define ELE_TYPE_PRIMARY			1
-#define ELE_TYPE_PARA				2
 
-#define MAT_TRANSLUCENT				0
-#define MAT_TRANSPARENT				1
-#define MAT_EDIBLE					2
 
-#define MAT_SOLID					0
-#define MAT_LIQUID					1
-#define MAT_GAS						2
-#define MAT_PLASMA					3
 
 //
 // Prototype for a mob.
@@ -2438,14 +1453,6 @@ private:
 // Speech info for progs
 //
 
-#define SPEECH_SAY					0
-#define SPEECH_SAYTO				1
-#define SPEECH_TELL					2
-#define SPEECH_WHISPER				3
-#define SPEECH_YELL					4
-#define SPEECH_EMOTE				5
-#define SPEECH_ECHO					6
-#define SPEECH_SING					7
 
 struct speech_data
 {
@@ -3216,36 +2223,12 @@ private:
 //  Target types.
 //
 
-#define TAR_IGNORE					0
-#define TAR_CHAR_OFFENSIVE			1
-#define TAR_CHAR_DEFENSIVE			2
-#define TAR_CHAR_SELF				3
-#define TAR_OBJ_INV					4
-#define TAR_OBJ_CHAR_DEF			5
-#define TAR_OBJ_CHAR_OFF			6
-#define TAR_DIR						7
-#define TAR_CHAR_AMBIGUOUS			8
-#define TAR_CHAR_GENERAL			9
 
-
-#define TAR_END						666 //don't touch
-
-#define TARGET_CHAR					0
-#define TARGET_OBJ					1
-#define TARGET_ROOM					2
-#define TARGET_NONE					3
-#define TARGET_RUNE					4
-#define TARGET_DIR					5
 
 //
 //rune target bitvectors
 //
 
-#define RUNE_CAST					1
-#define RUNE_ARMOR					2
-#define RUNE_WEAPON					4
-#define RUNE_DOOR					8
-#define RUNE_ROOM					16
 
 
 //
@@ -3255,12 +2238,19 @@ private:
 #define URANGE(a, b, c)				(b < a ? a : (b > c ? c : b))
 #define LOWER(c)					(c >= 'A' && c <= 'Z' ? c + 'a' - 'A' : c)
 #define UPPER(c)					(c >= 'a' && c <= 'z' ? c + 'A' - 'a' : c)
-#define IS_SET(flag, bit)			((flag[(int)(bit/32)]) & ((long)pow(2,(bit % 32))))
-#define IS_SET_OLD(flag, bit) 		(flag & ((long)pow(2,bit)))
-#define SET_BIT(var, bit)			((var[(int)bit/32]) |= ((long)pow(2,bit % 32)))
-#define SET_BIT_OLD(var, bit) 		(var |= (long)pow(2,bit))
-#define REMOVE_BIT(var, bit)		((var[bit/32]) &= ~((long)pow(2,bit % 32)))
-#define REMOVE_BIT_OLD(var,bit) 	(var &= ~((long)pow(2,bit)))
+// Array flags -- operate on a long[MAX_BITVECTOR]; the bit is split into a word
+// index and an offset. `act`, `affected_by`, `bitvector` and friends.
+#define IS_SET(flag, bit)			((flag)[(bit) / 32] &   (1L << ((bit) % 32)))
+#define SET_BIT(var, bit)			((var)[(bit) / 32]  |=  (1L << ((bit) % 32)))
+#define REMOVE_BIT(var, bit)		((var)[(bit) / 32]  &= ~(1L << ((bit) % 32)))
+
+// Scalar flags -- operate on a single integer field, overwhelmingly obj->value[N]
+// (the furniture flags in act_info.c among them). The bit is an absolute shift,
+// with no word split. The _OLD suffix names the representation, NOT deprecation:
+// these three have 134 live call sites (140 counting TOGGLE_BIT_OLD below).
+#define IS_SET_OLD(flag, bit) 		((flag) &   (1L << (bit)))
+#define SET_BIT_OLD(var, bit) 		((var)  |=  (1L << (bit)))
+#define REMOVE_BIT_OLD(var,bit) 	((var)  &= ~(1L << (bit)))
 #define TOGGLE_BIT(var, bit)		(IS_SET(var,bit) ? REMOVE_BIT(var,bit) : SET_BIT(var,bit))
 #define TOGGLE_BIT_OLD(var, bit)	(IS_SET_OLD(var,bit) ? REMOVE_BIT_OLD(var,bit) : SET_BIT_OLD(var,bit))
 
@@ -3286,13 +2276,6 @@ extern QUEUE_DATA *global_queue;
 // Area flags.
 //
 
-#define AREA_NONE					0
-#define AREA_EXPLORE				0		// So far, only that gear returns to newbies
-#define AREA_NO_NEWBIES				1		// Newbies can't go in
-#define AREA_UNGHOST				2		// Walking in unghosts you
-#define AREA_CHANGED				3		// Area has been modified.
-#define AREA_ADDED					4		// Area has been added to.
-#define AREA_LOADING				5		// Used for counting in db.c
 
 #define MAX_DIR						6
 #define NO_FLAG						-99		// Must not be used in flags or stats.

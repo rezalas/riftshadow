@@ -1927,7 +1927,9 @@ bool remove_obj(CHAR_DATA *ch, int iWear, bool fReplace)
 		{
 			if (IS_SET(revealed->extra_flags, ITEM_UNDER_CLOTHES))
 			{
-				if (revealed->wear_flags[0] - pow(2, ITEM_WEAR_COSMETIC) == obj->wear_flags[0])
+				// (int) cast: see the matching site in act_info.c. std::pow has no
+				// (int, enum) overload, so the call is ambiguous without it.
+				if (revealed->wear_flags[0] - pow(2, (int)ITEM_WEAR_COSMETIC) == obj->wear_flags[0])
 					break;
 			}
 		}

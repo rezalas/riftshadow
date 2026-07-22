@@ -5253,7 +5253,10 @@ void do_bash(CHAR_DATA *ch, char *argument)
 		if (!is_npc(ch))
 		{
 			ch->pcdata->condition[COND_THIRST] += 8;
-			ch->pcdata->condition[COND_THIRST] = std::min((int)ch->pcdata->condition[COND_THIRST], COND_HUNGRY);
+			// (int) cast: COND_HUNGRY is a ConditionType enumerator now, and std::min
+			// needs both arguments the same type. Its numeric value (50) is used here
+			// as a clamp ceiling rather than as an index. Behaviour unchanged.
+			ch->pcdata->condition[COND_THIRST] = std::min((int)ch->pcdata->condition[COND_THIRST], (int)COND_HUNGRY);
 		}
 
 		return;
@@ -6789,7 +6792,10 @@ void do_throw(CHAR_DATA *ch, char *argument)
 		if (!is_npc(ch))
 		{
 			ch->pcdata->condition[COND_THIRST] += 8;
-			ch->pcdata->condition[COND_THIRST] = std::min((int)ch->pcdata->condition[COND_THIRST], COND_HUNGRY);
+			// (int) cast: COND_HUNGRY is a ConditionType enumerator now, and std::min
+			// needs both arguments the same type. Its numeric value (50) is used here
+			// as a clamp ceiling rather than as an index. Behaviour unchanged.
+			ch->pcdata->condition[COND_THIRST] = std::min((int)ch->pcdata->condition[COND_THIRST], (int)COND_HUNGRY);
 		}
 
 		return;
