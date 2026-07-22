@@ -993,7 +993,7 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 
 	if (!is_npc(ch) && ch->Profs()->HasProf("trap detecting"))
 	{
-		for (auto i = 0; i < MAX_EXITS; i++)
+		for (auto i = 0; i < MAX_EXIT; i++)
 		{
 			if (to_room->exit[i])
 			{
