@@ -405,15 +405,7 @@ struct barred_data
 #define MAX_ZOMBIE					10
 #define MAX_BEAUTY					10
 
-typedef int SPECFUN (long event_vector, ...);
-
-struct spec_func
-{
-	SPECFUN *func;
-	long trapvector;
-};
-
-typedef struct spec_func SPEC_FUNC;
+#include "entity/spec_func.h"
 
 struct class_type
 {
@@ -1401,52 +1393,7 @@ struct gen_data
 #include "entity/extra_descr.h"
 
 
-//
-// Prototype for an object.
-//
-
-struct obj_index_data
-{
-	OBJ_INDEX_DATA *next;
-	EXTRA_DESCR_DATA *extra_descr;
-	AFFECT_DATA *affected;
-	AFFECT_DATA *charaffs;
-	OBJ_APPLY_DATA *apply;
-	AREA_DATA *area;
-	bool new_format;
-	char *name;
-	char *short_descr;
-	char *description;
-	short vnum;
-	short reset_num;
-	short cabal;
-	char *material;
-	short material_index;
-	short item_type;
-	long extra_flags[MAX_BITVECTOR];
-	long wear_flags[MAX_BITVECTOR];
-	long restrict_flags[MAX_BITVECTOR];
-	long imm_flags[MAX_BITVECTOR];
-	long res_flags[MAX_BITVECTOR];
-	long vuln_flags[MAX_BITVECTOR];
-	short start_timer;
-	short level;
-	short condition;
-	short limtotal;
-	short limcount;
-	short count;
-	short weight;
-	int cost;
-	int value[5];
-	IPROG_DATA *iprogs;
-	long progtypes[MAX_BITVECTOR];
-	char *wear_echo[2];
-	char *remove_echo[2];
-	char *verb;
-	char *notes;
-	char *wear_loc_name;
-	SPEC_FUNC spec_prog;
-};
+#include "entity/obj_index_data.h"
 
 //
 // One object.
