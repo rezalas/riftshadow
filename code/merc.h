@@ -649,11 +649,16 @@ struct barred_data
 
 #define MAX_GUILD					8
 #define MAX_STATS					5
-#define STAT_STR					0
-#define STAT_INT					1
-#define STAT_WIS					2
-#define STAT_DEX					3
-#define STAT_CON					4
+// Primary-stat index into char_data::perm_stat[] / mod_stat[]. Wire format --
+// rename freely, never renumber.
+enum StatType : int
+{
+	STAT_STR					= 0,
+	STAT_INT					= 1,
+	STAT_WIS					= 2,
+	STAT_DEX					= 3,
+	STAT_CON					= 4,
+};
 #define MAX_SPECS					8
 #define MAX_SPEC_SKILLS				1
 #define MAX_ZOMBIE					10
@@ -837,16 +842,25 @@ enum AffectType : int
 // class types
 //
 
-#define CLASS_NEITHER				0
-#define CLASS_CASTER				1
-#define CLASS_COMMUNER				2
+// Spellcasting-class ordinal (how a class channels magic). Separate family from
+// the character-class CLASS_NONE.. list and from CLASS_OPEN/CLOSED.
+enum SpellClass : int
+{
+	CLASS_NEITHER				= 0,
+	CLASS_CASTER				= 1,
+	CLASS_COMMUNER				= 2,
+};
 
 //
 // open or closed
 //
 
-#define CLASS_OPEN					1
-#define CLASS_CLOSED				0
+// Whether a class is open for selection. A two-value ordinal, separate family.
+enum ClassAvailability : int
+{
+	CLASS_OPEN					= 1,
+	CLASS_CLOSED				= 0,
+};
 
 //
 // open or closed  race
@@ -1566,10 +1580,14 @@ enum Sex : int
 // AC types
 //
 
-#define AC_PIERCE					0
-#define AC_BASH						1
-#define AC_SLASH					2
-#define AC_EXOTIC					3
+// Armor-class index into char_data::armor[]. Wire format -- never renumber.
+enum ArmorClass : int
+{
+	AC_PIERCE					= 0,
+	AC_BASH						= 1,
+	AC_SLASH					= 2,
+	AC_EXOTIC					= 3,
+};
 #define MAX_AC						4
 
 //
@@ -2034,24 +2052,29 @@ enum ApplyLocation : int
 // Modifier Names
 //
 
-#define MOD_NONE					-1
-#define MOD_VISION					0
-#define MOD_MOVEMENT				1
-#define MOD_TOUGHNESS				2
-#define MOD_SPEED					3
-#define MOD_LEVITATION				4
-#define MOD_VISIBILITY				5
-#define MOD_PHASE					6
-#define MOD_CONC					7
-#define MOD_PROTECTION				8
-#define MOD_APPEARANCE				9
-#define MOD_HEARING					10
-#define MOD_PERCEPTION				11
-#define MOD_RESISTANCE				12
-#define MOD_ENERGY_STATE			13
-#define MOD_SPEECH					14
-#define MOD_REGEN					15
-#define MOD_WARDROBE				16
+// Spell/effect modifier type, an ordinal. MOD_NONE is the -1 sentinel, hence
+// the required : int underlying type. Wire format -- never renumber.
+enum ModType : int
+{
+	MOD_NONE					= -1,
+	MOD_VISION					= 0,
+	MOD_MOVEMENT				= 1,
+	MOD_TOUGHNESS				= 2,
+	MOD_SPEED					= 3,
+	MOD_LEVITATION				= 4,
+	MOD_VISIBILITY				= 5,
+	MOD_PHASE					= 6,
+	MOD_CONC					= 7,
+	MOD_PROTECTION				= 8,
+	MOD_APPEARANCE				= 9,
+	MOD_HEARING					= 10,
+	MOD_PERCEPTION				= 11,
+	MOD_RESISTANCE				= 12,
+	MOD_ENERGY_STATE			= 13,
+	MOD_SPEECH					= 14,
+	MOD_REGEN					= 15,
+	MOD_WARDROBE				= 16,
+};
 
 //
 // Values for containers (value[1]).
@@ -2243,57 +2266,77 @@ enum SectorType : int
 // Alignment selections
 //
 
-#define ALIGN_NONE					-1
-#define ALIGN_ANY					0
-#define ALIGN_GN					1
-#define ALIGN_NE					2
-#define ALIGN_GE					3
-#define ALIGN_G						4
-#define ALIGN_N						5
-#define ALIGN_E						6
+// Alignment SELECTION values (creation/OLC choices), an ordinal. Distinct from
+// the raw alignment scale ALIGN_NEUTRAL sits on above. ALIGN_NONE is the -1
+// sentinel (hence : int). Wire format -- never renumber.
+enum AlignmentChoice : int
+{
+	ALIGN_NONE					= -1,
+	ALIGN_ANY					= 0,
+	ALIGN_GN					= 1,
+	ALIGN_NE					= 2,
+	ALIGN_GE					= 3,
+	ALIGN_G						= 4,
+	ALIGN_N						= 5,
+	ALIGN_E						= 6,
+};
 
 //
 // Ethos selections
 //
 
-#define ETHOS_NONE					-1
-#define ETHOS_ANY					0
-#define ETHOS_LN					1
-#define ETHOS_NC					2
-#define ETHOS_LC					3
-#define ETHOS_L						4
-#define ETHOS_N						5
-#define ETHOS_C						6
+// Ethos SELECTION values (creation/OLC choices), an ordinal. Distinct from the
+// raw ethos scale ETHOS_NEUTRAL sits on. ETHOS_NONE is the -1 sentinel.
+enum EthosChoice : int
+{
+	ETHOS_NONE					= -1,
+	ETHOS_ANY					= 0,
+	ETHOS_LN					= 1,
+	ETHOS_NC					= 2,
+	ETHOS_LC					= 3,
+	ETHOS_L						= 4,
+	ETHOS_N						= 5,
+	ETHOS_C						= 6,
+};
 
 
 //
 // Class guild used in the room 'G'  flags
 //
 
-#define GUILD_WARRIOR				1
-#define GUILD_THIEF					2
-#define GUILD_CLERIC				3
-#define GUILD_PALADIN				4
-#define GUILD_ANTI_PALADIN			5
-#define GUILD_RANGER				6
-#define GUILD_MONK					7
-#define GUILD_SHAPESHIFTER			8
-#define GUILD_ASSASSIN				9
-#define GUILD_NECROMANCER			10
-#define GUILD_SORCERER				11
+// Guild ordinal (room guild-guard associations). Wire format -- never renumber.
+enum Guild : int
+{
+	GUILD_WARRIOR				= 1,
+	GUILD_THIEF					= 2,
+	GUILD_CLERIC				= 3,
+	GUILD_PALADIN				= 4,
+	GUILD_ANTI_PALADIN			= 5,
+	GUILD_RANGER				= 6,
+	GUILD_MONK					= 7,
+	GUILD_SHAPESHIFTER			= 8,
+	GUILD_ASSASSIN				= 9,
+	GUILD_NECROMANCER			= 10,
+	GUILD_SORCERER				= 11,
+};
 
-#define CLASS_NONE					0
-#define CLASS_WARRIOR 				1
-#define CLASS_THIEF 				2
-#define CLASS_ZEALOT 				3
-#define CLASS_PALADIN 				4
-#define CLASS_ANTI_PALADIN			5
-#define CLASS_RANGER 				6
-#define CLASS_ASSASSIN 				7
-#define CLASS_SHAPESHIFTER			8
-#define CLASS_HEALER				9
-#define CLASS_NECROMANCER 			10
-#define CLASS_SORCERER				11
+// Character class, an ordinal in char_data::Class()/class. The main CLASS_
+// family. Wire format -- rename freely, never renumber.
+enum CharClass : int
+{
+	CLASS_NONE					= 0,
+	CLASS_WARRIOR				= 1,
+	CLASS_THIEF					= 2,
+	CLASS_ZEALOT				= 3,
+	CLASS_PALADIN				= 4,
+	CLASS_ANTI_PALADIN			= 5,
+	CLASS_RANGER				= 6,
+	CLASS_ASSASSIN				= 7,
+	CLASS_SHAPESHIFTER			= 8,
+	CLASS_HEALER				= 9,
+	CLASS_NECROMANCER			= 10,
+	CLASS_SORCERER				= 11,
+};
 
 
 //
@@ -2301,30 +2344,36 @@ enum SectorType : int
 // Used in #RESETS.
 //
 
-#define WEAR_NONE					-1
-#define WEAR_LIGHT					0
-#define WEAR_FINGER_L				1
-#define WEAR_FINGER_R				2
-#define WEAR_NECK_1					3
-#define WEAR_NECK_2					4
-#define WEAR_BODY					5
-#define WEAR_HEAD					6
-#define WEAR_LEGS					7
-#define WEAR_FEET					8
-#define WEAR_HANDS					9
-#define WEAR_ARMS					10
-#define WEAR_SHIELD					11
-#define WEAR_ABOUT					12
-#define WEAR_WAIST					13
-#define WEAR_WRIST_L				14
-#define WEAR_WRIST_R				15
-#define WEAR_WIELD					16
-#define WEAR_HOLD					17
-#define WEAR_DUAL_WIELD				18
-#define WEAR_FLOAT					18
-#define WEAR_BRAND					19
-#define WEAR_STRAPPED				20
-#define WEAR_COSMETIC				21
+// Worn-equipment slot index into char_data::equipment[]. WEAR_NONE is the -1
+// sentinel (hence : int); WEAR_DUAL_WIELD and WEAR_FLOAT deliberately share slot
+// 18. Wire format -- rename freely, never renumber.
+enum WearLocation : int
+{
+	WEAR_NONE					= -1,
+	WEAR_LIGHT					= 0,
+	WEAR_FINGER_L				= 1,
+	WEAR_FINGER_R				= 2,
+	WEAR_NECK_1					= 3,
+	WEAR_NECK_2					= 4,
+	WEAR_BODY					= 5,
+	WEAR_HEAD					= 6,
+	WEAR_LEGS					= 7,
+	WEAR_FEET					= 8,
+	WEAR_HANDS					= 9,
+	WEAR_ARMS					= 10,
+	WEAR_SHIELD					= 11,
+	WEAR_ABOUT					= 12,
+	WEAR_WAIST					= 13,
+	WEAR_WRIST_L				= 14,
+	WEAR_WRIST_R				= 15,
+	WEAR_WIELD					= 16,
+	WEAR_HOLD					= 17,
+	WEAR_DUAL_WIELD				= 18,
+	WEAR_FLOAT					= 18,
+	WEAR_BRAND					= 19,
+	WEAR_STRAPPED				= 20,
+	WEAR_COSMETIC				= 21,
+};
 #define MAX_WEAR					22
 
 
@@ -2358,14 +2407,18 @@ enum SectorType : int
 // Conditions.
 //
 
-#define COND_DRUNK					0
-#define COND_FULL					1
-#define COND_THIRST					2
-#define COND_HUNGER					3
-#define COND_STARVING				4
-#define COND_DEHYDRATED				5
-
-#define COND_HUNGRY					50
+// Condition index into pc_data::condition[]. COND_HUNGRY (50) is an outlier
+// value, not adjacent to the rest. Wire format -- never renumber.
+enum ConditionType : int
+{
+	COND_DRUNK					= 0,
+	COND_FULL					= 1,
+	COND_THIRST					= 2,
+	COND_HUNGER					= 3,
+	COND_STARVING				= 4,
+	COND_DEHYDRATED				= 5,
+	COND_HUNGRY					= 50,
+};
 
 //
 // Positions.
@@ -2576,30 +2629,39 @@ enum WiznetFlag : int
 // Sorcerer Elemental Groups
 //
 
-#define ELE_HEAT					0
-#define ELE_COLD					1
-#define ELE_AIR						2
-#define ELE_EARTH					3
-#define ELE_WATER					4
-#define ELE_ELECTRICITY				5
-#define ELE_SMOKE					6
-#define ELE_MAGMA					7
-#define ELE_PLASMA					8
-#define ELE_ACID					9
-#define ELE_BLIZZARD				10
-#define ELE_FROST					11
-#define ELE_CRYSTAL					12
-#define ELE_ICE						13
-#define ELE_LIGHTNING				14
-#define ELE_MIST					15
-#define ELE_METAL					16
-#define ELE_OOZE					17
-#define ELE_NONE					18
+// Elemental type, an ordinal. Separate from ELE_TYPE_* below (which collide in
+// value). Wire format -- never renumber.
+enum Element : int
+{
+	ELE_HEAT					= 0,
+	ELE_COLD					= 1,
+	ELE_AIR						= 2,
+	ELE_EARTH					= 3,
+	ELE_WATER					= 4,
+	ELE_ELECTRICITY				= 5,
+	ELE_SMOKE					= 6,
+	ELE_MAGMA					= 7,
+	ELE_PLASMA					= 8,
+	ELE_ACID					= 9,
+	ELE_BLIZZARD				= 10,
+	ELE_FROST					= 11,
+	ELE_CRYSTAL					= 12,
+	ELE_ICE						= 13,
+	ELE_LIGHTNING				= 14,
+	ELE_MIST					= 15,
+	ELE_METAL					= 16,
+	ELE_OOZE					= 17,
+	ELE_NONE					= 18,
+};
 #define MAX_ELE						19
 
-#define ELE_TYPE_NONE				0
-#define ELE_TYPE_PRIMARY			1
-#define ELE_TYPE_PARA				2
+// Elemental slot type, an ordinal. Separate family from Element above.
+enum ElementSlot : int
+{
+	ELE_TYPE_NONE				= 0,
+	ELE_TYPE_PRIMARY			= 1,
+	ELE_TYPE_PARA				= 2,
+};
 
 #define MAT_TRANSLUCENT				0
 #define MAT_TRANSPARENT				1
