@@ -108,6 +108,7 @@ int remove();
 //
 
 #include "entity/fwd.h"
+#include "entity/limits.h"
 
 //
 // String and memory management parameters.
@@ -122,12 +123,9 @@ int remove();
 #define MAX_STRING_LENGTH			4608
 #endif
 
-#define MAX_INPUT_LENGTH			4608
 #define PAGELEN						20
 #define MSL							MAX_STRING_LENGTH
 #define VERSION						6
-#define MAX_MOB_AFFECT				10
-#define MAX_MOB_CAST				10
 #define MAX_STORED_ITEMS			5
 
 #ifndef RSINCLUDES
@@ -149,12 +147,8 @@ int remove();
 //
 
 #define MAX_SOCIALS					256
-#define MAX_SKILL					800
-#define MAX_GROUP					50
 #define MAX_IN_GROUP				354
 #define MAX_AREAS					500
-#define MAX_ADJACENT				25
-#define MAX_ALIAS					10
 #define MAX_CLASS					12
 #define MAX_PC_RACE					13
 #define MAX_CABAL					7
@@ -163,10 +157,7 @@ int remove();
 #define MAX_WEAPON					10
 #define MAX_HOMETOWN				5
 #define MAX_SITETRACK				5
-#define MAX_QUESTS					8
 #define MAX_ORDERS					9
-#define MAX_BITVECTOR				2
-#define MAX_PROFS_TAUGHT_BY_MOB		4
 
 #define START_LEVEL					1
 #define LEVEL_HERO					(MAX_LEVEL - 9)
@@ -220,7 +211,6 @@ int remove();
 #define C_B_CYAN					"[1;36m"
 #define C_B_WHITE					"[1;37m"
 #define MAX_COLORS					16
-#define MAX_EVENTS					13
 
 //
 // mprog stuff
@@ -425,7 +415,6 @@ struct barred_data
 //
 
 #define MAX_GUILD					8
-#define MAX_STATS					5
 #define MAX_SPECS					8
 #define MAX_SPEC_SKILLS				1
 #define MAX_ZOMBIE					10
@@ -1196,7 +1185,6 @@ struct kill_data
 
 
 
-#define MAX_QUEUE					20
 
 
 //*********************************************
@@ -1245,11 +1233,8 @@ struct kill_data
 // AP Demonic Favors Defines
 //
 
-#define MAX_DEVIL					5
 
-#define MAX_LESSER					5
 
-#define MAX_GREATER					5
 
 
 
