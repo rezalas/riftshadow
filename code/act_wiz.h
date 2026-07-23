@@ -1,7 +1,9 @@
 #ifndef ACT_WIZ_H
 #define ACT_WIZ_H
 
-#include "merc.h"
+#include <string>
+
+#include "entity/fwd.h"
 
 extern AREA_DATA *area_first;
 

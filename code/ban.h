@@ -1,7 +1,7 @@
 #ifndef BAN_H
 #define BAN_H
 
-#include "merc.h"
+#include "entity/fwd.h"
 #include "newmem.h"
 
 //	== table layout ==

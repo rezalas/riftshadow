@@ -1,7 +1,7 @@
 #ifndef ACT_ENTE_H
 #define ACT_ENTE_H
 
-#include "merc.h"
+#include "entity/fwd.h"
 
 //
 // LOCAL FUNCTIONS

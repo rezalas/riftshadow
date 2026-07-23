@@ -1,7 +1,7 @@
 #ifndef CABAL_H
 #define CABAL_H
 
-#include "merc.h"
+#include "entity/fwd.h"
 
 //
 // LOCAL FUNCTIONS

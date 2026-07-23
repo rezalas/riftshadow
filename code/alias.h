@@ -1,7 +1,7 @@
 #ifndef ALIAS_H
 #define ALIAS_H
 
-#include "merc.h"
+#include "entity/fwd.h"
 
 
 //
