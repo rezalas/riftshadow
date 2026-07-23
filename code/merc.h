@@ -1398,28 +1398,11 @@ struct pathfind_data
 
 
 
-//
-// Utility macros.
-//
-
-#define URANGE(a, b, c)				(b < a ? a : (b > c ? c : b))
-#define LOWER(c)					(c >= 'A' && c <= 'Z' ? c + 'a' - 'A' : c)
-#define UPPER(c)					(c >= 'a' && c <= 'z' ? c + 'A' - 'a' : c)
-// Array flags -- operate on a long[MAX_BITVECTOR]; the bit is split into a word
-// index and an offset. `act`, `affected_by`, `bitvector` and friends.
-#define IS_SET(flag, bit)			((flag)[(bit) / 32] &   (1L << ((bit) % 32)))
-#define SET_BIT(var, bit)			((var)[(bit) / 32]  |=  (1L << ((bit) % 32)))
-#define REMOVE_BIT(var, bit)		((var)[(bit) / 32]  &= ~(1L << ((bit) % 32)))
-
-// Scalar flags -- operate on a single integer field, overwhelmingly obj->value[N]
-// (the furniture flags in act_info.c among them). The bit is an absolute shift,
-// with no word split. The _OLD suffix names the representation, NOT deprecation:
-// these three have 134 live call sites (140 counting TOGGLE_BIT_OLD below).
-#define IS_SET_OLD(flag, bit) 		((flag) &   (1L << (bit)))
-#define SET_BIT_OLD(var, bit) 		((var)  |=  (1L << (bit)))
-#define REMOVE_BIT_OLD(var,bit) 	((var)  &= ~(1L << (bit)))
-#define TOGGLE_BIT(var, bit)		(IS_SET(var,bit) ? REMOVE_BIT(var,bit) : SET_BIT(var,bit))
-#define TOGGLE_BIT_OLD(var, bit)	(IS_SET_OLD(var,bit) ? REMOVE_BIT_OLD(var,bit) : SET_BIT_OLD(var,bit))
+// Utility macros (URANGE/LOWER/UPPER, the IS_SET/SET_BIT bit-flag family,
+// CAP, CLEAR_MEM) moved to macros.h so tests can pull them in without merc.h.
+// Included here at the original location so rift.h's inline URANGE is still seen
+// first — see the ordering note in macros.h.
+#include "macros.h"
 
 
 //TODO: Find out where these are implemented
@@ -1448,11 +1431,7 @@ extern QUEUE_DATA *global_queue;
 #define NO_FLAG						-99		// Must not be used in flags or stats.
 
 
-#define CAP(st)						(*(st) = UPPER(*(st)), st)
 #define	HIGH_VNUM					65535
 #define LOW_VNUM					-1
-
-
-#define CLEAR_MEM(stru, x)		for(unsigned int clearmem = 0; clearmem < x; clearmem++) *((char *)stru + clearmem) = '\0';
 
 #endif /* MERC_H */
