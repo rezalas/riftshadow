@@ -5,6 +5,7 @@
 #include <string.h>
 #include <time.h>
 #include <algorithm>
+#include "merc.h"
 #include "save.h"
 #include "newmem.h"
 #include "recycle.h"

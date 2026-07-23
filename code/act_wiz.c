@@ -38,6 +38,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <iterator>
+#include "merc.h"
 #include "act_wiz.h"
 #include "rift.h"
 #include "prof.h"

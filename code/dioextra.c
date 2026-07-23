@@ -39,6 +39,7 @@
 #include <stdlib.h>
 #include <iterator>
 #include <filesystem>
+#include "merc.h"
 #include "dioextra.h"
 #include "handler.h"
 #include "stdlibs/cfilesystem.h"

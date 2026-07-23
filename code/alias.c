@@ -36,6 +36,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
+#include "merc.h"
 #include "alias.h"
 #include "newmem.h"
 #include "comm.h"

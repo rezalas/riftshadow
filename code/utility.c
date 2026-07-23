@@ -1,3 +1,4 @@
+#include "merc.h"
 #include "utility.h"
 #include "db.h"
 #include "chardef.h"

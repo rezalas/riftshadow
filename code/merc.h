@@ -148,9 +148,8 @@ int remove();
 #define MAX_AREAS					500
 #define MAX_PC_RACE					13
 #define MAX_DAMAGE_MESSAGE			62
-#define MAX_LEVEL					60
+// MAX_LEVEL and MAX_HOMETOWN moved to entity/limits.h (baked into table layouts)
 #define MAX_WEAPON					10
-#define MAX_HOMETOWN				5
 #define MAX_SITETRACK				5
 #define MAX_ORDERS					9
 
@@ -205,7 +204,7 @@ int remove();
 #define C_B_MAGENTA					"[1;35m"
 #define C_B_CYAN					"[1;36m"
 #define C_B_WHITE					"[1;37m"
-#define MAX_COLORS					16
+// MAX_COLORS moved to entity/limits.h (bakes color_table's bound in tables.h)
 
 //
 // mprog stuff
@@ -547,7 +546,7 @@ struct old_char
 
 
 #define MAX_EMPIRE					8
-#define MAX_BOUNTY					5
+// MAX_BOUNTY moved to entity/limits.h (bakes bounty_table's bound in tables.h)
 #define CABAL_LEADER				5
 
 //

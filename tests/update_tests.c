@@ -1,3 +1,5 @@
+#include <cstring>
+
 #include "catch.hpp"
 #include "../code/update.h"
 #include "../code/direction.h"

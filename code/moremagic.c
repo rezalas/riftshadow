@@ -37,6 +37,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <algorithm>
+#include "merc.h"
 #include "moremagic.h"
 #include "weather_enums.h"
 #include "recycle.h"

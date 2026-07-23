@@ -42,6 +42,7 @@
 #include <fstream>
 #include <iterator>
 #include <algorithm>
+#include "merc.h"
 #include "db.h"
 #include "db2.h"
 #include "rift.h"

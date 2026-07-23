@@ -13,6 +13,7 @@
 #include <time.h>
 #include <sys/types.h>
 #include <sys/time.h>
+#include "merc.h"
 #include "newmem.h"
 #include "db.h"
 #include "comm.h"

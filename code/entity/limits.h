@@ -33,4 +33,11 @@
 #define MAX_LESSER					5
 #define MAX_GREATER					5
 
+// Level cap and bounds baked into table layouts (titles.h, tables.h).
+// merc.h's LEVEL_* ladder derives from MAX_LEVEL.
+#define MAX_LEVEL					60
+#define MAX_HOMETOWN				5
+#define MAX_COLORS					16
+#define MAX_BOUNTY					5
+
 #endif /* ENTITY_LIMITS_H */

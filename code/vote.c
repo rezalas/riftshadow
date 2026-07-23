@@ -1,4 +1,5 @@
 #include <utility>
+#include "merc.h"
 #include "vote.h"
 #include "rift.h"
 #include "db.h"

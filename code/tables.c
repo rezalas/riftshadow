@@ -34,6 +34,7 @@
 #include <sys/types.h>
 #include <stdio.h>
 #include <time.h>
+#include "merc.h"
 #include "tables.h"
 #include "direction.h"
 

@@ -1,7 +1,7 @@
 #ifndef SKILLS_H
 #define SKILLS_H
 
-#include "merc.h"
+#include "entity/fwd.h"
 
 //
 // LOCAL FUNCTIONS

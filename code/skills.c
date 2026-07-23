@@ -37,6 +37,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <algorithm>
+#include "merc.h"
 #include "skills.h"
 #include "handler.h"
 #include "magic.h"
