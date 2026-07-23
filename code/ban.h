@@ -2,6 +2,7 @@
 #define BAN_H
 
 #include "entity/fwd.h"
+#include "entity/limits.h"
 #include "newmem.h"
 
 //	== table layout ==

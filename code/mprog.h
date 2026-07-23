@@ -1,7 +1,7 @@
 #ifndef MPROG_H
 #define MPROG_H
 
-#include "merc.h"
+#include "entity/fwd.h"
 
 extern const struct improg_type mprog_table[];
 

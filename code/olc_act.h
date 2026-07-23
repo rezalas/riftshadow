@@ -14,7 +14,9 @@
  *                                                                         *
  ***************************************************************************/
 
-#include "merc.h"
+#include "entity/fwd.h"
+
+struct flag_type;	// code/tables.h
 
 struct olc_help_type
 {

@@ -1,7 +1,7 @@
 #ifndef NEWMEM_H
 #define NEWMEM_H
 
-#include "merc.h"
+#include "entity/fwd.h"
 
 
 //

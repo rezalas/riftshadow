@@ -3,7 +3,7 @@
 
 /* Eladrian's Kickin' Quest Tracking System -- ph34r */
 
-#include "merc.h"
+#include "entity/fwd.h"
 
 
 extern const struct quest_type quest_table[];
