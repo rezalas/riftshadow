@@ -38,6 +38,7 @@
 #include <time.h>
 #include <iterator>
 #include <algorithm>
+#include "merc.h"
 #include "update.h"
 #include "weather_enums.h"
 #include "direction.h"

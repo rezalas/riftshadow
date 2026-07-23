@@ -4,6 +4,7 @@
 #include <string.h>
 #include <time.h>
 #include <math.h>
+#include "../merc.h"
 #include "paladin.h"
 #include "../interp.h"
 #include "../tables.h"

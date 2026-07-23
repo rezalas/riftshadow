@@ -8,6 +8,7 @@
 #include <time.h>
 #include <algorithm>
 #include <iterator>
+#include "merc.h"
 #include "devextra.h"
 #include "rift.h"
 #include "stdlibs/cfilesystem.h"

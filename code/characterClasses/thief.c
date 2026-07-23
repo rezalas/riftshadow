@@ -4,6 +4,7 @@
 #include <string.h>
 #include <time.h>
 #include <math.h>
+#include "../merc.h"
 #include "thief.h"
 #include "../comm.h"
 #include "../devextra.h"

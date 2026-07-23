@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
+#include "merc.h"
 #include "scan.h"
 #include "handler.h"
 #include "act_info.h"

@@ -6,6 +6,7 @@
 #include <algorithm>
 #include <time.h>
 #include <math.h>
+#include "../merc.h"
 #include "ap.h"
 #include "../interp.h"
 #include "../tables.h"

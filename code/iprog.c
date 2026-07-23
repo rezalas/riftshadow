@@ -38,6 +38,7 @@
 #include <string.h>
 #include <algorithm>
 #include <time.h>
+#include "merc.h"
 #include "iprog.h"
 #include "magic.h"
 #include "interp.h"

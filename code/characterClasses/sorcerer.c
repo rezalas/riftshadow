@@ -9,6 +9,7 @@
 #include <math.h>
 #include <iterator>
 #include <algorithm>
+#include "../merc.h"
 #include "sorcerer.h"
 #include "../weather_enums.h"
 #include "../act_info.h"

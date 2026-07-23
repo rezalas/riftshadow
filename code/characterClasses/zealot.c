@@ -4,6 +4,7 @@
 #include <string.h>
 #include <time.h>
 #include <math.h>
+#include "../merc.h"
 #include "zealot.h"
 #include "../comm.h"
 #include "../handler.h"

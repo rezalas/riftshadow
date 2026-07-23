@@ -56,6 +56,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <algorithm>
+#include "merc.h"
 #include "comm.h"
 #include "recycle.h"
 #include "tables.h"

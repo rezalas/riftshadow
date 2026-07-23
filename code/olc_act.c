@@ -23,6 +23,7 @@
 #include <string.h>
 #include <time.h>
 #include <algorithm>
+#include "merc.h"
 #include "olc_act.h"
 #include "handler.h"
 #include "olc.h"

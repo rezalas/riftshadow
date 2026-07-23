@@ -5,6 +5,7 @@
 #include <time.h>
 #include <math.h>
 #include <algorithm>
+#include "merc.h"
 #include "magic.h"
 #include "characterClasses/necro.h"
 #include "recycle.h"
