@@ -19,7 +19,10 @@
 	#include <sys/socket.h>
 #endif
 
-#include "merc.h"
+#include <string>
+
+#include "entity/fwd.h"
+#include "entity/limits.h"
 #include "telnet.h"
 
 #define CHAR_WRAP			85

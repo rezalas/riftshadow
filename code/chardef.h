@@ -1,7 +1,10 @@
 #ifndef CHARDEF_H
 #define CHARDEF_H
 
-#include "merc.h"
+#include <vector>
+
+#include "entity/fwd.h"
+#include "entity/limits.h"
 
 struct pc_race_type // additional data for pc races
 {

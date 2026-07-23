@@ -2,7 +2,8 @@
 #define DB2_H
 
 #include <stdio.h>
-#include "merc.h"
+#include "entity/fwd.h"
+#include "entity/limits.h"
 
 //
 // Structure for a social in the socials table.

@@ -2,7 +2,8 @@
 #define CONST_H
 
 #include <vector>
-#include "merc.h"
+#include "entity/fwd.h"
+#include "entity/limits.h"
 
 struct item_type
 {

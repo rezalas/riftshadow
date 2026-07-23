@@ -114,7 +114,6 @@ int remove();
 // String and memory management parameters.
 //
 
-#define MAX_KEY_HASH				1024
 
 #ifdef MAX_STRING_LENGTH
 #undef MAX_STRING_LENGTH
@@ -146,12 +145,8 @@ int remove();
 // Adjust the pulse numbers to suit yourself.
 //
 
-#define MAX_SOCIALS					256
-#define MAX_IN_GROUP				354
 #define MAX_AREAS					500
-#define MAX_CLASS					12
 #define MAX_PC_RACE					13
-#define MAX_CABAL					7
 #define MAX_DAMAGE_MESSAGE			62
 #define MAX_LEVEL					60
 #define MAX_WEAPON					10
@@ -554,8 +549,6 @@ struct old_char
 #define MAX_EMPIRE					8
 #define MAX_BOUNTY					5
 #define CABAL_LEADER				5
-#define MAX_TOP_BOUNTY				14
-#define MAX_TOP_BOUNTY_SHOWN		9
 
 //
 // Tracking data

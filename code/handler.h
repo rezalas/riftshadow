@@ -1,7 +1,9 @@
 #ifndef HANDLER_H
 #define HANDLER_H
 
-#include "merc.h"
+#include <string>
+
+#include "entity/fwd.h"
 
 //
 // TODO: UNKNOWN FUNCTIONS

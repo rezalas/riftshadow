@@ -13,6 +13,10 @@
 #define MAX_STATS					5
 
 #define MAX_SKILL					800
+#define MAX_SOCIALS					256
+#define MAX_IN_GROUP				354
+#define MAX_CLASS					12
+#define MAX_CABAL					7
 #define MAX_GROUP					50
 #define MAX_ADJACENT				25
 #define MAX_ALIAS					10
