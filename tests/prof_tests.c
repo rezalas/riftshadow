@@ -1,9 +1,9 @@
 #include "catch.hpp"
 #include "../code/prof.h"
-#include "../code/merc.h"
 #include "../code/db.h"
 #include "../code/handler.h"
 #include "../code/mud.h"
+#include "../code/macros.h"  // after mud.h -> rift.h: URANGE macro must not shadow rift.h's inline
 #include "test_helpers.c"
 
 SCENARIO("performing an index lookup based on proficiency name", "[ProfIndexLookup]")
