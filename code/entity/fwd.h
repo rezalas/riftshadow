@@ -53,6 +53,7 @@ struct	track_data;			typedef struct	track_data			TRACK_DATA;
 struct	pathfind_data;		typedef struct	pathfind_data		PATHFIND_DATA;
 struct	race_data;			typedef struct	race_data			RACE_DATA;
 struct	special_prog;		typedef struct	special_prog		SPECIAL_PROG;
+struct	note_data;			typedef struct	note_data			NOTE_DATA;
 
 //
 // Function types.

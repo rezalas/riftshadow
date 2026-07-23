@@ -1425,8 +1425,6 @@ struct pathfind_data
 	PATHFIND_DATA *dir_to[6];			// Points to up to 6 rooms, NEWSUD.
 };
 
-struct note_data;
-typedef struct note_data NOTE_DATA;
 
 //
 // One character (PC or NPC).
