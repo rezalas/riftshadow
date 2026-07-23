@@ -1,7 +1,7 @@
 #ifndef MOREMAGIC_H
 #define MOREMAGIC_H
 
-#include "merc.h"
+#include "entity/fwd.h"
 
 
 //

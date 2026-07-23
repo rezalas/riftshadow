@@ -1,7 +1,7 @@
 #ifndef HELP_H
 #define HELP_H
 
-#include "merc.h"
+#include "entity/fwd.h"
 
 //
 // LOCAL FUNCTIONS

@@ -34,7 +34,10 @@
 #ifndef LOOKUP_H
 #define LOOKUP_H
 
-#include "merc.h"
+#include "entity/fwd.h"
+
+struct flag_type;		// code/tables.h
+struct display_type;	// code/tables.h
 
 //
 // LOCAL FUNCTIONS

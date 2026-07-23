@@ -2,7 +2,6 @@
 #define MATERIAL_H
 
 #include <vector>
-#include "merc.h"
 
 //
 // Liquids.

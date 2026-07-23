@@ -1,7 +1,9 @@
 #ifndef MISC_H
 #define MISC_H
 
-#include "merc.h"
+#include <stdio.h>
+
+#include "entity/fwd.h"
 
 #define MAX_PIECE					12
 

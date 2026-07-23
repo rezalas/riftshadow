@@ -3,6 +3,7 @@
 #include <sys/types.h>
 #include <stdio.h>
 #include <time.h>
+#include "merc.h"
 #include "chardef.h"
 #include "magic.h"
 #include "interp.h"
