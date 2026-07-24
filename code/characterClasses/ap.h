@@ -2,7 +2,7 @@
 #define AP_H
 
 /* Home for everything Anti */
-#include "../merc.h"
+#include "../entity/fwd.h"
 
 //
 // LOCAL FUNCTIONS

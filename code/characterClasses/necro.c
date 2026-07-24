@@ -5,6 +5,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <algorithm>
+#include "../merc.h"
 #include "necro.h"
 #include "../comm.h"
 #include "../act_comm.h"

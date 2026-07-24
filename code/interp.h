@@ -36,7 +36,9 @@
 #ifndef INTERP_H
 #define INTERP_H
 
-#include "merc.h"
+#include <string>
+
+#include "entity/fwd.h"
 
 /* for command types */
 #define ML				MAX_LEVEL		/* implementor */

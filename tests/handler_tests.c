@@ -1,5 +1,8 @@
 #include "catch.hpp"
 #include "../code/handler.h"
+#include "../code/entity/char_data.h"
+#include "../code/entity/obj_data.h"
+#include "../code/enums.h"
 #include "../code/db.h"
 
 // TEST_CASE("Test capitalization", "[string]" )

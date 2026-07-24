@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
+#include "merc.h"
 #include "aprog.h"
 #include "weather_enums.h"
 #include "comm.h"

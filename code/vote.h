@@ -2,7 +2,8 @@
 #define VOTE_H
 
 #include <string>
-#include "merc.h"
+
+#include "entity/fwd.h"
 
 bool sort_votes (std::string hold[], int *holdi, int cabal);
 void do_listvotes (CHAR_DATA *ch, char *argument);

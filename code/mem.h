@@ -1,7 +1,7 @@
 #ifndef MEM_H
 #define MEM_H
 
-#include "merc.h"
+#include "entity/fwd.h"
 
 
 //

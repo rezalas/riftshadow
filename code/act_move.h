@@ -1,7 +1,7 @@
 #ifndef ACT_MOVE_H
 #define ACT_MOVE_H
 
-#include "merc.h"
+#include "entity/fwd.h"
 
 extern char *const dir_name[];
 extern const short rev_dir[];

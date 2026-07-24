@@ -1,7 +1,7 @@
 #ifndef ACT_OBJ_H
 #define ACT_OBJ_H
 
-#include "merc.h"
+#include "entity/fwd.h"
 
 
 //

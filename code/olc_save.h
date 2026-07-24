@@ -1,7 +1,9 @@
 #ifndef OLC_SAVE_H
 #define OLC_SAVE_H
 
-#include "merc.h"
+#include <stdio.h>
+
+#include "entity/fwd.h"
 
 /*
  *  Verbose writes reset data in plain english into the comments

@@ -36,6 +36,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include "merc.h"
 #include "flags.h"
 #include "handler.h"
 #include "tables.h"

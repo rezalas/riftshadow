@@ -19,7 +19,7 @@
 #ifndef OLC_H
 #define OLC_H
 
-#include "merc.h"
+#include "entity/fwd.h"
 #include "utility.h"
 
 /*

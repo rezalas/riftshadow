@@ -5,6 +5,8 @@
 #include <vector>
 #include <algorithm>
 
+#include "entity/fwd.h"
+
 // TODO: these are defined in utility.h as regular functions but for some reason the compiler freaks out
 // TODO: so leaving them as macros for the time being
 #define IS_NPC(ch)					(IS_SET(ch->act, ACT_IS_NPC))
@@ -16,10 +18,6 @@
 
 #define MAX_PROFS 25
 
-
-struct char_data;										
-typedef struct char_data CHAR_DATA;						// mirrored definition from merc.h
-typedef void DO_FUN (CHAR_DATA *ch, char *argument);	// mirrored definition from merc.h
 
 struct proficiency_type
 {

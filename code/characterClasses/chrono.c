@@ -4,6 +4,7 @@
 #include <string.h>
 #include <time.h>
 #include <math.h>
+#include "../merc.h"
 #include "chrono.h"
 #include "../magic.h"
 #include "../comm.h"

@@ -37,6 +37,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <algorithm>
+#include "merc.h"
 #include "heal.h"
 #include "magic.h"
 #include "devextra.h"

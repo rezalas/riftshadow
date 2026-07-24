@@ -39,6 +39,7 @@
 #include <sys/time.h>
 #include <iterator>
 #include <algorithm>
+#include "merc.h"
 #include "db2.h"
 #include "handler.h"
 #include "db.h"

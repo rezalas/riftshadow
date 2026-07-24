@@ -33,6 +33,7 @@
 #include <math.h>
 #include <iterator>
 #include <algorithm>
+#include "merc.h"
 #include "cabal.h"
 #include "recycle.h"
 #include "tables.h"

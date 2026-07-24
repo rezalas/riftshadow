@@ -34,7 +34,10 @@
 #ifndef TABLES_H
 #define TABLES_H
 
-#include "merc.h"
+#include <vector>
+
+#include "entity/fwd.h"
+#include "entity/limits.h"
 #include "weather_enums.h"
 
 struct flag_type

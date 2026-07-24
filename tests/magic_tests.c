@@ -1,3 +1,5 @@
+#include <cstring>
+
 #include "catch.hpp"
 #include "../code/magic.h"
 #include "../code/const.h"

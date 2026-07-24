@@ -1,7 +1,8 @@
 #include "catch.hpp"
 #include "../code/queue.h"
-#include "../code/merc.h"
 #include "../code/act_comm.h"
+#include "../code/entity/char_data.h"
+#include "../code/enums.h"
  
 void testQueueFunction(char_data *qChar) {
     return;

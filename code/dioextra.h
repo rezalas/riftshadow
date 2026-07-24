@@ -1,7 +1,10 @@
 #ifndef DIOEXTRA_H
 #define DIOEXTRA_H
 
-#include "merc.h"
+#include <stdio.h>
+#include <string>
+
+#include "entity/fwd.h"
 
 #define TEMP_PKTRACK_FILE "../temp/temppktrack.tmp"
 

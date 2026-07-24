@@ -6,6 +6,7 @@
 #include <string.h>
 #include <time.h>
 #include <ctype.h>
+#include "merc.h"
 #include "misc.h"
 #include "magic.h"
 #include "comm.h"

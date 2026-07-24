@@ -1,7 +1,7 @@
 #ifndef ZEALOT_H
 #define ZEALOT_H
 
-#include "../merc.h"
+#include "../entity/fwd.h"
 
 //
 // LOCAL FUNCTIONS

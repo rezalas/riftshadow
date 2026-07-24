@@ -1,4 +1,7 @@
+#include <cstring>
+
 #include "catch.hpp"
+#include "../code/merc.h"
 #include "../code/utility.h"
 #include "../code/db.h"
 

@@ -1,7 +1,7 @@
 #ifndef UTILITY_H
 #define UTILITY_H
 
-#include "merc.h"
+#include "entity/fwd.h"
 
 #ifdef __cplusplus
 extern "C" {

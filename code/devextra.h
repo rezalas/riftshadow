@@ -1,7 +1,7 @@
 #ifndef DEVEXTRA_H
 #define DEVEXTRA_H
 
-#include "merc.h"
+#include "entity/fwd.h"
 #include "handler.h"
 
 #define COSM_UNDER(a,b,c,d)		obj_to_obj(make_cosmetic(a,b,c,d),obj);

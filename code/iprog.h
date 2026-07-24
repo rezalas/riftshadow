@@ -1,7 +1,9 @@
 #ifndef IPROG_H
 #define IPROG_H
 
-#include "merc.h"
+#include <string>
+
+#include "entity/fwd.h"
 
 extern const struct improg_type iprog_table[];
 extern const struct improg_type verb_prog_table[];

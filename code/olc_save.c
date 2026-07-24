@@ -32,6 +32,7 @@
 #include <string.h>
 #include <time.h>
 #include <algorithm>
+#include "merc.h"
 #include "olc_save.h"
 #include "rift.h"
 #include "stdlibs/cfilesystem.h"

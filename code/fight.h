@@ -1,7 +1,9 @@
 #ifndef FIGHT_H
 #define FIGHT_H
 
-#include "merc.h"
+#include <string>
+
+#include "entity/fwd.h"
 
 #define HITS 					(dt==gsn_kick||dt==gsn_throw||dt==gsn_bash)
 #define PEER_BALANCE_DISTANCE	8

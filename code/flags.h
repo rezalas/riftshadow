@@ -1,7 +1,7 @@
 #ifndef FLAGS_H
 #define FLAGS_H
 
-#include "merc.h"
+#include "entity/fwd.h"
 
 //
 // LOCAL FUNCTIONS

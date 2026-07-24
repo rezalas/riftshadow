@@ -42,6 +42,7 @@
 #include <string.h>
 #include <time.h>
 #include <algorithm>
+#include "merc.h"
 #include "fight.h"
 #include "handler.h"
 #include "interp.h"

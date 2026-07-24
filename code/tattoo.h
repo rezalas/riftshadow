@@ -1,7 +1,7 @@
 #ifndef TATTOO_H
 #define TATTOO_H
 
-#include "merc.h"
+#include "entity/fwd.h"
 
 //
 // TODO: UNKNOWN FUNCTIONS

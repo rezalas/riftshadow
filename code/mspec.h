@@ -1,7 +1,9 @@
 #ifndef MSPEC_H
 #define MSPEC_H
 
-#include "merc.h"
+#include <stdarg.h>
+
+#include "entity/fwd.h"
 #include "spec.h"
 
 extern va_list arglist;

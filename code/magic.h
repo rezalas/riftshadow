@@ -34,7 +34,7 @@
 #ifndef MAGIC_H
 #define MAGIC_H
 
-#include "merc.h"
+#include "entity/fwd.h"
 
 extern char *target_name;
 

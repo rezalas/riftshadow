@@ -3,7 +3,7 @@
 
 /* IMPROGS Expansion: ROOM PROGS (Eladrian) */
 
-#include "merc.h"
+#include "entity/fwd.h"
 
 extern const struct improg_type rprog_table[];
 

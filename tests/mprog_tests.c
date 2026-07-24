@@ -1,7 +1,12 @@
 #include "catch.hpp"
-#include "../code/merc.h"
 #include "../code/mprog.h"
 #include "../code/handler.h"
+#include "../code/entity/char_data.h"
+#include "../code/entity/obj_data.h"
+#include "../code/entity/room_index_data.h"
+#include "../code/entity/area_data.h"
+#include "../code/enums.h"
+#include "../code/mud.h"
 
 static room_index_data* CreateTestRoom()
 {

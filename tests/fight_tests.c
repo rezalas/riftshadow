@@ -1,5 +1,7 @@
 #include "catch.hpp"
 #include "../code/fight.h"
+#include "../code/entity/char_data.h"
+#include "../code/enums.h"
 
 SCENARIO("testing updating victim position", "[update_pos]")
 {

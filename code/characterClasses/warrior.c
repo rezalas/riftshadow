@@ -8,6 +8,7 @@
 #include <time.h>
 #include <math.h>
 #include <iterator>
+#include "../merc.h"
 #include "warrior.h"
 #include "sorcerer.h"
 #include "../act_comm.h"

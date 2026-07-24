@@ -37,6 +37,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
+#include "merc.h"
 #include "interp.h"
 #include "ban.h"
 #include "handler.h"

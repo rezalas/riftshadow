@@ -46,6 +46,7 @@
 	#include <crypt.h>
 #endif
 
+#include "merc.h"
 #include "act_info.h"
 #include "rift.h"
 #include "weather_enums.h"

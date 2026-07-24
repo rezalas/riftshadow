@@ -1,7 +1,9 @@
 #ifndef SAVE_H
 #define SAVE_H
 
-#include "merc.h"
+#include <stdio.h>
+
+#include "entity/fwd.h"
 
 
 //

@@ -31,6 +31,7 @@
  *       found in the file /Tartarus/doc/tartarus.doc                      *
  ***************************************************************************/
 
+#include "merc.h"
 #include "const.h"
 #include "magic.h"
 #include "moremagic.h"

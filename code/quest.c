@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
+#include "merc.h"
 #include "quest.h"
 #include "comm.h"
 #include "update.h"

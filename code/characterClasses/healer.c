@@ -4,6 +4,7 @@
 #include <string.h>
 #include <time.h>
 #include <math.h>
+#include "../merc.h"
 #include "healer.h"
 #include "../handler.h"
 #include "../interp.h"

@@ -104,115 +104,16 @@ int remove();
 
 
 //
-// Structure types.
+// Entity forward declarations, typedef aliases, and function types.
 //
 
-typedef struct affect_data		AFFECT_DATA;
-typedef struct area_data		AREA_DATA;
-typedef struct buf_type			BUFFER;
-typedef struct char_data		CHAR_DATA;
-typedef struct descriptor_data	DESCRIPTOR_DATA;
-typedef struct exit_data		EXIT_DATA;
-typedef struct extra_descr_data	EXTRA_DESCR_DATA;
-typedef struct help_data		HELP_DATA;
-typedef struct kill_data		KILL_DATA;
-typedef struct mem_data			MEM_DATA;
-typedef struct mob_index_data	MOB_INDEX_DATA;
-typedef struct speech_data		SPEECH_DATA;
-typedef struct line_data		LINE_DATA;
-typedef struct obj_data			OBJ_DATA;
-typedef struct obj_index_data	OBJ_INDEX_DATA;
-typedef struct pc_data			PC_DATA;
-typedef struct gen_data			GEN_DATA;
-typedef struct reset_data		RESET_DATA;
-typedef struct room_index_data	ROOM_INDEX_DATA;
-typedef struct trap_data		TRAP_DATA;
-typedef struct shop_data		SHOP_DATA;
-typedef struct time_info_data	TIME_INFO_DATA;
-typedef struct iprog_data		IPROG_DATA;
-typedef struct mprog_data		MPROG_DATA;
-typedef struct rprog_data		RPROG_DATA;
-typedef struct aprog_data		APROG_DATA;
-typedef struct bounty			BOUNTY_DATA;
-typedef struct old_char			OLD_CHAR;
-typedef struct barred_data		BARRED_DATA;
-typedef struct room_affect_data	ROOM_AFFECT_DATA;
-typedef struct area_affect_data	AREA_AFFECT_DATA;
-typedef struct obj_affect_data	OBJ_AFFECT_DATA;
-typedef struct obj_apply_data	OBJ_APPLY_DATA;
-typedef struct queue_data		QUEUE_DATA;
-typedef struct rune_data		RUNE_DATA;
-typedef struct trophy_data		TROPHY_DATA;
-typedef struct track_data		TRACK_DATA;
-typedef struct pathfind_data	PATHFIND_DATA;
-typedef struct race_data		RACE_DATA;
-typedef struct special_prog		SPECIAL_PROG;
-
-//
-// Function types.
-//
-
-typedef void DO_FUN (CHAR_DATA *ch, char *argument);
-typedef void SPELL_FUN (int sn, int level, CHAR_DATA *ch, void *vo, int target);
-typedef void GAME_FUN (CHAR_DATA *ch, CHAR_DATA *croupier, char *argument);
-typedef void OAFF_FUN (OBJ_DATA *obj, OBJ_AFFECT_DATA *af);
-typedef void AAFF_FUN (AREA_DATA *area, AREA_AFFECT_DATA *af);
-typedef void RAFF_FUN (ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *af);
-typedef void AFF_FUN (CHAR_DATA *ch, AFFECT_DATA *af);
-
-typedef bool MPROG_FUN_AGGRESS (CHAR_DATA *mob, CHAR_DATA *attacker);
-typedef void MPROG_FUN_ATTACK (CHAR_DATA *mob, CHAR_DATA *attacker);
-typedef void MPROG_FUN_BRIBE (CHAR_DATA *mob, CHAR_DATA *ch, int amount);
-typedef void MPROG_FUN_ENTRY (CHAR_DATA *mob);
-typedef void MPROG_FUN_GREET (CHAR_DATA *mob, CHAR_DATA *ch);
-typedef void MPROG_FUN_GIVE (CHAR_DATA *mob, CHAR_DATA *ch, OBJ_DATA *obj);
-typedef void MPROG_FUN_FIGHT (CHAR_DATA *mob, CHAR_DATA *victim);
-typedef bool MPROG_FUN_DEATH (CHAR_DATA *mob, CHAR_DATA *killer);
-typedef void MPROG_FUN_BEAT  (CHAR_DATA *mob);
-typedef void MPROG_FUN_PULSE (CHAR_DATA *mob);
-typedef void MPROG_FUN_SPEECH (CHAR_DATA *mob, CHAR_DATA *ch, char *speech);
-typedef bool MPROG_FUN_MOVE (CHAR_DATA *ch, CHAR_DATA *mob, ROOM_INDEX_DATA *from, int direction);
-
-typedef void IPROG_FUN_WEAR (OBJ_DATA *obj, CHAR_DATA *ch);
-typedef void IPROG_FUN_REMOVE (OBJ_DATA *obj, CHAR_DATA *ch);
-typedef void IPROG_FUN_GET (OBJ_DATA *obj, CHAR_DATA *ch);
-typedef bool IPROG_FUN_LOOT (OBJ_DATA *container, OBJ_DATA *obj, CHAR_DATA *ch);
-typedef void IPROG_FUN_DROP (OBJ_DATA *obj, CHAR_DATA *ch);
-typedef bool IPROG_FUN_SAC (OBJ_DATA *obj, CHAR_DATA *ch);
-typedef void IPROG_FUN_ENTRY (OBJ_DATA *obj);
-typedef bool IPROG_FUN_GIVE (OBJ_DATA *obj, CHAR_DATA *from, CHAR_DATA *to);
-typedef void IPROG_FUN_GREET (OBJ_DATA *obj, CHAR_DATA *ch);
-typedef void IPROG_FUN_FIGHT (OBJ_DATA *obj, CHAR_DATA *ch);
-typedef bool IPROG_FUN_DEATH (OBJ_DATA *obj, CHAR_DATA *ch);
-typedef void IPROG_FUN_SPEECH (OBJ_DATA *obj, CHAR_DATA *ch, char *speech);
-typedef void IPROG_FUN_PULSE (OBJ_DATA *obj, bool isTick);
-typedef void IPROG_FUN_INVOKE (OBJ_DATA *obj, CHAR_DATA *ch, char *argument);
-typedef bool IPROG_FUN_OPEN (OBJ_DATA *obj, CHAR_DATA *ch);
-typedef void IPROG_FUN_LOOK (OBJ_DATA *obj, CHAR_DATA *ch);
-typedef void IPROG_FUN_VERB (OBJ_DATA *obj, CHAR_DATA *ch, char *argument);
-typedef void IPROG_FUN_HIT (OBJ_DATA *obj, CHAR_DATA *ch, CHAR_DATA *victim, int damage);
-
-typedef void RPROG_FUN_PULSE (ROOM_INDEX_DATA *room);
-typedef void RPROG_FUN_ENTRY (ROOM_INDEX_DATA *room, CHAR_DATA *ch);
-typedef bool RPROG_FUN_MOVE (ROOM_INDEX_DATA *room, CHAR_DATA *ch, int dir);
-typedef void RPROG_FUN_DROP (ROOM_INDEX_DATA *room, CHAR_DATA *ch, OBJ_DATA *obj);
-typedef void RPROG_FUN_SPEECH (ROOM_INDEX_DATA *room, CHAR_DATA *ch, char *speech);
-typedef bool RPROG_FUN_OPEN (ROOM_INDEX_DATA *room, CHAR_DATA *ch, EXIT_DATA *exit);
-
-typedef void APROG_FUN_PULSE (AREA_DATA *area);
-typedef void APROG_FUN_RESET (AREA_DATA *area);
-typedef void APROG_FUN_SUN (AREA_DATA *area);
-typedef void APROG_FUN_TICK (AREA_DATA *area);
-typedef bool APROG_FUN_AGGRESS (AREA_DATA *area, CHAR_DATA *ch, CHAR_DATA *victim);
-typedef void APROG_FUN_MYELL (AREA_DATA *area, CHAR_DATA *ch, CHAR_DATA *victim);
-
-
+#include "entity/fwd.h"
+#include "entity/limits.h"
 
 //
 // String and memory management parameters.
 //
 
-#define MAX_KEY_HASH				1024
 
 #ifdef MAX_STRING_LENGTH
 #undef MAX_STRING_LENGTH
@@ -221,12 +122,9 @@ typedef void APROG_FUN_MYELL (AREA_DATA *area, CHAR_DATA *ch, CHAR_DATA *victim)
 #define MAX_STRING_LENGTH			4608
 #endif
 
-#define MAX_INPUT_LENGTH			4608
 #define PAGELEN						20
 #define MSL							MAX_STRING_LENGTH
 #define VERSION						6
-#define MAX_MOB_AFFECT				10
-#define MAX_MOB_CAST				10
 #define MAX_STORED_ITEMS			5
 
 #ifndef RSINCLUDES
@@ -247,25 +145,13 @@ typedef void APROG_FUN_MYELL (AREA_DATA *area, CHAR_DATA *ch, CHAR_DATA *victim)
 // Adjust the pulse numbers to suit yourself.
 //
 
-#define MAX_SOCIALS					256
-#define MAX_SKILL					800
-#define MAX_GROUP					50
-#define MAX_IN_GROUP				354
 #define MAX_AREAS					500
-#define MAX_ADJACENT				25
-#define MAX_ALIAS					10
-#define MAX_CLASS					12
 #define MAX_PC_RACE					13
-#define MAX_CABAL					7
 #define MAX_DAMAGE_MESSAGE			62
-#define MAX_LEVEL					60
+// MAX_LEVEL and MAX_HOMETOWN moved to entity/limits.h (baked into table layouts)
 #define MAX_WEAPON					10
-#define MAX_HOMETOWN				5
 #define MAX_SITETRACK				5
-#define MAX_QUESTS					8
 #define MAX_ORDERS					9
-#define MAX_BITVECTOR				2
-#define MAX_PROFS_TAUGHT_BY_MOB		4
 
 #define START_LEVEL					1
 #define LEVEL_HERO					(MAX_LEVEL - 9)
@@ -318,8 +204,7 @@ typedef void APROG_FUN_MYELL (AREA_DATA *area, CHAR_DATA *ch, CHAR_DATA *victim)
 #define C_B_MAGENTA					"[1;35m"
 #define C_B_CYAN					"[1;36m"
 #define C_B_WHITE					"[1;37m"
-#define MAX_COLORS					16
-#define MAX_EVENTS					13
+// MAX_COLORS moved to entity/limits.h (bakes color_table's bound in tables.h)
 
 //
 // mprog stuff
@@ -487,22 +372,7 @@ struct help_data
 };
 
 
-//
-// Shop types.
-//
-
-#define MAX_TRADE					5
-
-struct shop_data
-{
-	bool fIsPetShop;
-	int pet_cage_vnum;
-	SHOP_DATA *next;			// Next shop in list
-	MOB_INDEX_DATA *pMobIndex;
-	short open_hour;			// First opening hour
-	short close_hour;			// First closing hour
-	short direction;			// exit dir
-};
+#include "entity/shop_data.h"
 
 
 
@@ -524,21 +394,12 @@ struct barred_data
 //
 
 #define MAX_GUILD					8
-#define MAX_STATS					5
 #define MAX_SPECS					8
 #define MAX_SPEC_SKILLS				1
 #define MAX_ZOMBIE					10
 #define MAX_BEAUTY					10
 
-typedef int SPECFUN (long event_vector, ...);
-
-struct spec_func
-{
-	SPECFUN *func;
-	long trapvector;
-};
-
-typedef struct spec_func SPEC_FUNC;
+#include "entity/spec_func.h"
 
 struct class_type
 {
@@ -599,93 +460,7 @@ struct old_char
 	OBJ_DATA *carrying;
 };
 
-//
-// An affect.
-//
-
-struct affect_data
-{
-	AFFECT_DATA *next;
-	CHAR_DATA *owner;
-	char *name;
-	bool valid;
-	short where;
-	short type;
-	short level;
-	short duration;
-	short location;
-	short modifier;
-	short mod_name;
-	long bitvector[MAX_BITVECTOR];
-	int aftype;
-	AFF_FUN *tick_fun;		// goes off every tick that char is affected
-	AFF_FUN *pulse_fun;
-	AFF_FUN *end_fun;		// when the affect wears off this is called
-	short init_duration;
-	AFF_FUN *beat_fun;		// goes off every beat
-};
-
-//
-// A room affect.
-//
-
-struct room_affect_data
-{
-	ROOM_AFFECT_DATA *next;
-	CHAR_DATA *owner;
-	bool valid;
-	short where;
-	short type;
-	short level;
-	short duration;
-	short location;
-	short modifier;
-	long bitvector[MAX_BITVECTOR];
-	int aftype;
-	RAFF_FUN *pulse_fun;
-	RAFF_FUN *tick_fun;	// goes off every tick
-	RAFF_FUN *end_fun;	// when the affect wears off this is called
-};
-
-//
-// An area affect.
-//
-
-struct area_affect_data
-{
-	AREA_AFFECT_DATA *next;
-	CHAR_DATA *owner;
-	bool valid;
-	short where;
-	short type;
-	short level;
-	short duration;
-	short location;
-	short modifier;
-	long bitvector[MAX_BITVECTOR];
-	int aftype;
-	AAFF_FUN *pulse_fun;
-	AAFF_FUN *tick_fun;
-	AAFF_FUN *end_fun;
-};
-
-struct obj_affect_data
-{
-	OBJ_AFFECT_DATA *next;
-	CHAR_DATA *owner;
-	bool valid;
-	short where;
-	short type;
-	short level;
-	short duration;
-	short location;
-	short modifier;
-	long bitvector[MAX_BITVECTOR];
-	int aftype;
-	OAFF_FUN *pulse_fun;
-	OAFF_FUN *tick_fun;
-	OAFF_FUN *end_fun;
-};
+#include "entity/affect_data.h"
 
 //
 // affect types
@@ -771,10 +546,8 @@ struct obj_affect_data
 
 
 #define MAX_EMPIRE					8
-#define MAX_BOUNTY					5
+// MAX_BOUNTY moved to entity/limits.h (bakes bounty_table's bound in tables.h)
 #define CABAL_LEADER				5
-#define MAX_TOP_BOUNTY				14
-#define MAX_TOP_BOUNTY_SHOWN		9
 
 //
 // Tracking data
@@ -1295,7 +1068,6 @@ struct kill_data
 
 
 
-#define MAX_QUEUE					20
 
 
 //*********************************************
@@ -1344,11 +1116,8 @@ struct kill_data
 // AP Demonic Favors Defines
 //
 
-#define MAX_DEVIL					5
 
-#define MAX_LESSER					5
 
-#define MAX_GREATER					5
 
 
 
@@ -1366,88 +1135,7 @@ struct kill_data
 
 
 
-//
-// Prototype for a mob.
-// This is the in-memory version of #MOBILES.
-//
-class mob_index_data
-{
-public:
-	MOB_INDEX_DATA *next;
-	SHOP_DATA *pShop;
-	GAME_FUN *game_fun;
-	BARRED_DATA *barred_entry; //dev
-	MPROG_DATA *mprogs;
-	AREA_DATA *area;
-	SPEECH_DATA *speech;
-	long progtypes[MAX_BITVECTOR];
-	short vnum;
-	short group;
-	bool new_format;
-	short count;
-	short killed;
-	char *player_name;
-	char *short_descr;
-	char *long_descr;
-	char *description;
-	long act[MAX_BITVECTOR];
-	long affected_by[MAX_BITVECTOR];
-	short alignment;
-	short level;
-	short hitroll;
-	short hit[3];
-	short mana[3];
-	short damage[3];
-	short ac[4];
-	short dam_type;
-	long off_flags[MAX_BITVECTOR];
-	long imm_flags[MAX_BITVECTOR];
-	long res_flags[MAX_BITVECTOR];
-	long vuln_flags[MAX_BITVECTOR];
-	long mprog_flags[MAX_BITVECTOR];
-	short xp_mod;
-	float dam_mod;
-	short start_pos;
-	short sex;
-	short race;
-	int wealth;
-	long form[MAX_BITVECTOR];
-	long parts[MAX_BITVECTOR];
-	short size;
-
-	// restrict mobs to a specific region
-
-	int restrict_low;	// Low end of vnum range 
-	int restrict_high;	// High end of vnum range
-
-	short affect_sn[MAX_MOB_AFFECT];
-	long affect_bit[MAX_MOB_AFFECT];
-	char *cast_spell[MAX_MOB_CAST];
-
-	CClass *Class()
-	{
-		return my_class;
-	}
-
-	void SetClass(int nClassIndex)
-	{
-		my_class = CClass::GetClass(nClassIndex);
-	}
-
-	short cabal;
-	long styles[MAX_BITVECTOR];
-	short ele_major;
-	short ele_para;
-	short arms;
-	short legs;
-	char *notes;
-	int swealth;
-	char *attack_yell;
-	short profs_taught[MAX_PROFS_TAUGHT_BY_MOB];
-	SPEC_FUNC spec_prog;
-private:
-	CClass *my_class;
-};
+#include "entity/mob_index_data.h"
 
 //
 // Speech info for progs
@@ -1598,136 +1286,7 @@ struct aprog_data
 	char *myell_name;
 };
 
-//
-// Data which only PC's have.
-//
-
-struct pc_data
-{
-	PC_DATA *next;
-	BUFFER *buffer;
-	bool valid;
-	bool newbie;
-	char *pwd;
-	char *bamfin;
-	char *bamfout;
-	char *title;
-	char *extitle;
-	char *imm_death;
-	time_t last_note;
-	time_t last_idea;
-	time_t last_penalty;
-	time_t last_news;
-	time_t last_changes;
-	short perm_hit;
-	short perm_mana;
-	short perm_move;
-	short true_sex;
-	short age_mod;
-	short death_timer;
-	short death_status;
-	short ethos;
-	short oalign;
-	short oethos;
-	short sp;
-	short special;
-	short wanteds;
-	short death_count;
-	short induct;
-	short start_weapon;
-	short killed[2]; 			// 0 = PK_KILLED, 1 = MOB_KILLED
-	short kills[4];
-	float frags[4];
-	float fragged;
-	char *recentkills[100];
-	short old_room;
-	int last_level;
-	short beauty;
-	short reputation;
-	short condition[6];
-	short learned[MAX_SKILL];
-	bool group_known[MAX_GROUP];
-	bool confirm_delete;
-	char *alias[MAX_ALIAS];
-	char *alias_sub[MAX_ALIAS];
-
-	//
-	// bounties - dev
-	//
-
-	long bounty;
-	short bounty_credits;
-
-	short helpid;
-	char *temp_history_buffer;
-	char *history_buffer;
-	char *role;
-	char *temp_role;
-	char *logon_time;
-	char *color_scheme[MAX_EVENTS];
-	long shifted;
-	OLD_CHAR *old;
-	bool entering_text;
-	char *entered_text;
-	DO_FUN *end_fun;
-	long trust[MAX_BITVECTOR];
-	CHAR_DATA *trusting;
-	short energy_state;
-	char *host;
-	short quests[MAX_QUESTS];
-	time_t roll_time;
-	short birth_date;
-	short death_time;
-	short tribe;
-	long sect_time[SECT_MAX];
-	short save_timer;
-	short style;
-	long styles[MAX_BITVECTOR];
-	long ele_sphere[MAX_BITVECTOR];
-	TROPHY_DATA *trophy;
-	char *command[2];
-	
-	//
-	// Sorcerer elements data
-	//
-
-	short ele_temp[4];					// used only for creation
-	short ele_major;
-	short ele_para;
-
-	//
-	// AP devil favors data
-	//
-
-	int devildata[MAX_DEVIL];
-	int lesserdata[MAX_LESSER];
-	int greaterdata[MAX_GREATER];
-
-	int editing_item;
-	int security;						// OLC - Builder security
-	short souls;
-	int cabal_level;
-	int bounty_killed;
- 	char *temp_str;
-	short deposited_items[5];
-	short paladin_path;
-	short temp_quest;
-
-	//
-	// CMD_QUEUE data
-	//
-
-	char queue[MAX_QUEUE][MAX_INPUT_LENGTH];
-	short read_next;
-	short write_next;
-	bool pending;
-
-	//
-	// proficiency data
-	//
-
-	CProficiencies	profs;
-};
+#include "entity/pc_data.h"
 
 //
 // Data for generating characters -- only used during generation
@@ -1742,254 +1301,25 @@ struct gen_data
 	int points_chosen;
 };
 
-//
-// Extra description data for a room or object.
-//
-
-struct extra_descr_data
-{
-	EXTRA_DESCR_DATA *next;				// Next in list
-	bool valid;
-	char *keyword;						// Keyword in look/examine
-	char *description;					// What to see
-};
+#include "entity/extra_descr.h"
 
 
-//
-// Prototype for an object.
-//
+#include "entity/obj_index_data.h"
 
-struct obj_index_data
-{
-	OBJ_INDEX_DATA *next;
-	EXTRA_DESCR_DATA *extra_descr;
-	AFFECT_DATA *affected;
-	AFFECT_DATA *charaffs;
-	OBJ_APPLY_DATA *apply;
-	AREA_DATA *area;
-	bool new_format;
-	char *name;
-	char *short_descr;
-	char *description;
-	short vnum;
-	short reset_num;
-	short cabal;
-	char *material;
-	short material_index;
-	short item_type;
-	long extra_flags[MAX_BITVECTOR];
-	long wear_flags[MAX_BITVECTOR];
-	long restrict_flags[MAX_BITVECTOR];
-	long imm_flags[MAX_BITVECTOR];
-	long res_flags[MAX_BITVECTOR];
-	long vuln_flags[MAX_BITVECTOR];
-	short start_timer;
-	short level;
-	short condition;
-	short limtotal;
-	short limcount;
-	short count;
-	short weight;
-	int cost;
-	int value[5];
-	IPROG_DATA *iprogs;
-	long progtypes[MAX_BITVECTOR];
-	char *wear_echo[2];
-	char *remove_echo[2];
-	char *verb;
-	char *notes;
-	char *wear_loc_name;
-	SPEC_FUNC spec_prog;
-};
-
-//
-// One object.
-//
-
-struct obj_data
-{
-	OBJ_DATA *next;
-	OBJ_DATA *next_content;
-	OBJ_DATA *contains;
-	OBJ_DATA *in_obj;
-	OBJ_DATA *on;
-	CHAR_DATA *carried_by;
-	EXTRA_DESCR_DATA *extra_descr;
-	OBJ_APPLY_DATA *apply;
-	OBJ_AFFECT_DATA *affected;
-	AFFECT_DATA *charaffs;
-	OBJ_INDEX_DATA *pIndexData;
-	ROOM_INDEX_DATA *in_room;
-	RUNE_DATA *rune;
-	bool has_rune;
-	bool valid;
-	char *talked;
-	char *owner;
-	char *name;
-	char *short_descr;
-	char *description;
-	short item_type;
-	long extra_flags[MAX_BITVECTOR];
-	long wear_flags[MAX_BITVECTOR];
-	long imm_flags[MAX_BITVECTOR];
-	long res_flags[MAX_BITVECTOR];
-	long vuln_flags[MAX_BITVECTOR];
-	long affected_by[MAX_BITVECTOR];
-	short wear_loc;
-	short weight;
-	int cost;
-	short level;
-	short condition;
-	char *material;
-	short timer;
-	int value[5];
-	long progtypes[MAX_BITVECTOR];
-	int ohp;
-	int mob_vnum;
-	bool moved;
-	char *wear_loc_name;
-};
-
-struct obj_apply_data
-{
-	bool valid;
-	short location;
-	short modifier;
-	short type;						// For gsns, if relevant.
-	OBJ_APPLY_DATA *next;
-};
+#include "entity/obj_data.h"
 
 
-//
-// Exit data.
-//
-
-struct exit_data
-{
-	union
-	{
-		ROOM_INDEX_DATA *to_room;
-		short vnum;
-	} u1;
-
-	long exit_info[MAX_BITVECTOR];
-	short key;
-	char *keyword;
-	char *description;
-	EXIT_DATA *next;					// OLC
-	int orig_door;						// OLC
-	RUNE_DATA *rune;
-	bool has_rune;
-};
+#include "entity/exit_data.h"
 
 
 
-//
-// Reset commands:
-//   '*': comment
-//   'M': read a mobile 
-//   'O': read an object
-//   'P': put object in object
-//   'G': give object to mobile
-//   'E': equip object to mobile
-//   'D': set state of door
-//   'R': randomize room exits
-//   'S': stop (end of list)
-//
-
-//
-// Area-reset definition.
-//
-
-struct reset_data
-{
-	RESET_DATA *next;
-	char command;
-	short arg1;
-	short arg2;
-	short arg3;
-	short arg4;
-};
+#include "entity/reset_data.h"
 
 
-//
-// Area definition.
-//
-
-struct area_data
-{
-	AREA_DATA *next;
-	AREA_DATA *prev;
-	RESET_DATA *reset_first;
-	RESET_DATA *reset_last;
-	APROG_DATA *aprogs;
-	long progtypes[MAX_BITVECTOR];
-	char *file_name;
-	char *name;
-	char *credits;
-	short age;
-	short nplayer;
-	short low_range;
-	short high_range;
-	short min_vnum;
-	short max_vnum;
-	short area_type;
-	long area_flags[MAX_BITVECTOR];
-	bool empty;
-	long affected_by[MAX_BITVECTOR];
-	AREA_AFFECT_DATA *affected;
-	AREA_DATA *adjacent[MAX_ADJACENT];
-	short climate;
-	short sky;
-	short temp;
-	short wind;
-	char *builders;						// OLC - Listing of
-	int vnum;							// OLC - Area vnum
-	int security;						// OLC - Value 1-9
-};
+#include "entity/area_data.h"
 
 
-//
-// Room type.
-//
-
-struct room_index_data
-{
-	ROOM_INDEX_DATA *next;
-	ROOM_INDEX_DATA *next_room;
-	ROOM_INDEX_DATA *aff_next;
-	CHAR_DATA *people;
-	OBJ_DATA *contents;
-	EXTRA_DESCR_DATA *extra_descr;
-	AREA_DATA *area;
-	EXIT_DATA *exit[6];
-	TRACK_DATA *tracks[20];
-	PATHFIND_DATA *path;				// For smart tracking
-	char *name;
-	char *alt_name;
-	char *description;
-	char *alt_description;
-	char *owner;
-	short alt_description_cond;
-	short vnum;
-	long room_flags[MAX_BITVECTOR];
-	short sector_type;
-	short heal_rate;
-	short mana_rate;
-	short cabal;
-	short guild;
-	ROOM_AFFECT_DATA *affected;
-	long affected_by[MAX_BITVECTOR];
-	RPROG_DATA *rprogs;
-	long progtypes[MAX_BITVECTOR];
-	bool move_progs;
-	TRAP_DATA *trap;
-	RUNE_DATA *rune;
-	bool has_rune;
-	short light;
-	RESET_DATA *reset_first;			// OLC
-	RESET_DATA *reset_last; 			// OLC
-};
+#include "entity/room_index_data.h"
 
 struct trap_data
 {
@@ -2041,171 +1371,8 @@ struct pathfind_data
 	PATHFIND_DATA *dir_to[6];			// Points to up to 6 rooms, NEWSUD.
 };
 
-struct note_data;
-typedef struct note_data NOTE_DATA;
 
-//
-// One character (PC or NPC).
-//
-
-
-extern CProficiencies prof_none; //empty proficiencies for jackasses who are going to ref ch->Profs() without checking IS_NPC
-
-class	char_data
-{
-public:
-	CHAR_DATA *next;
-	CHAR_DATA *next_in_room;
-	CHAR_DATA *master;
-	CHAR_DATA *leader;
-	CHAR_DATA *fighting;
-	CHAR_DATA *reply;
-	CHAR_DATA *pet;
-	CHAR_DATA *last_fought;
-	int tracktimer;
-	time_t last_fight_time;
-	char * last_fight_name;
-	CHAR_DATA *hunting;
-	CHAR_DATA *defending;
-	MEM_DATA *memory;
-	GAME_FUN *game_fun;
-	MOB_INDEX_DATA *pIndexData;
-	DESCRIPTOR_DATA *desc;
-	AFFECT_DATA *affected;
-	NOTE_DATA *pnote;
-	OBJ_DATA *carrying;
-	OBJ_DATA *on;
-	ROOM_INDEX_DATA *in_room;
-	ROOM_INDEX_DATA *was_in_room;
-	AREA_DATA *zone;
-	PC_DATA *pcdata;
-	GEN_DATA *gen_data;
-	PATHFIND_DATA *path;	// For smart pathfinding/tracking.  Mob only.
-	PATHFIND_DATA *best;	// Stores best direction thus far.  Mob only.
-	bool valid;
-	char *name;
-	char *true_name;
-	long id;
-	short version;
-	char *short_descr;
-	char *long_descr;
-	char *description;
-	char *prompt;
-	char *prefix;
-	short group;
-	short cabal;
-	short sex;
-
-	CClass *Class()
-	{
-		return !my_class
-			? (pIndexData && pIndexData->Class()
-				? pIndexData->Class()
-				:  CClass::GetClass(CLASS_NONE))
-			: my_class;
-	}
-
-	void		SetClass(int nClassIndex)
-	{
-		my_class = CClass::GetClass(nClassIndex);
-	}
-
-	short race;
-	short level;
-	short trust;
-	int played;
-	int lines;							// for the pager
-	time_t logon;
-	short timer;
-	short wait;
-	short regen_rate;					// For imbue regeneration spell
-	int hit;
-	short max_hit;
-	short mana;
-	short max_mana;
-	short move;
-	short max_move;
-	long gold;
-	long gold_bank;
-	int exp;
-	long act[MAX_BITVECTOR];
-	long comm[MAX_BITVECTOR];			// RT added to pad the vector
-	long wiznet[MAX_BITVECTOR];			// wiz stuff
-	long imm_flags[MAX_BITVECTOR];
-	long res_flags[MAX_BITVECTOR];
-	long vuln_flags[MAX_BITVECTOR];
-	short invis_level;
-	short incog_level;
-	long affected_by[MAX_BITVECTOR];
-	short position;
-	short practice;
-	short train;
-	short carry_weight;
-	short carry_number;
-	short saving_throw;				//svs
-	short alignment;
-	short hitroll;
-	short damroll;
-	short armor[4];
-	short wimpy;
-	char *speechbuf[10];				// Buffer for various mob speech, progs, etc...
-
-	//
-	// stats
-	//
-
-	short perm_stat[MAX_STATS];
-	short mod_stat[MAX_STATS];
-
-	//
-	// parts stuff
-	//
-
-	long form[MAX_BITVECTOR];
-	long parts[MAX_BITVECTOR];
-	short size;
-	char *material;
-
-	//
-	// mobile stuff
-	//
-
-	ROOM_INDEX_DATA *home_room;
-	int mobstyle;
-	long off_flags[MAX_BITVECTOR];
-	short damage[3];
-	short dam_type;
-	short start_pos;
-	short pause;
-	short ghost;
-	int status;
-	long progtypes[MAX_BITVECTOR];
-	int hometown;
-	float dam_mod;
-	short defense_mod;
-	bool moved;
-
-	//
-	// skill/spell-specific stuff
-	//
-
-	short arms;
-	short legs;
-	short balance;
-	short batter;
-	CHAR_DATA *analyzePC;
-	int analyze;
-	short pulseTimer;					// counter for racial combat pulse
-	char *backup_true_name;				// Dev's SUPAR CLEVAR CORRUPTION FIX!!!
-	float talismanic;
-	bool disrupted;						// Has queue-using spell been disrupted?
-	int bounty_timer;
-	bool law_pass;
-	bool stolen_from;
-	CProficiencies *Profs() { return pcdata ? &pcdata->profs : &prof_none; }
-private:
-	CClass *	my_class;
-};
+#include "entity/char_data.h"
 
 //
 // Types of attacks.
@@ -2231,28 +1398,11 @@ private:
 
 
 
-//
-// Utility macros.
-//
-
-#define URANGE(a, b, c)				(b < a ? a : (b > c ? c : b))
-#define LOWER(c)					(c >= 'A' && c <= 'Z' ? c + 'a' - 'A' : c)
-#define UPPER(c)					(c >= 'a' && c <= 'z' ? c + 'A' - 'a' : c)
-// Array flags -- operate on a long[MAX_BITVECTOR]; the bit is split into a word
-// index and an offset. `act`, `affected_by`, `bitvector` and friends.
-#define IS_SET(flag, bit)			((flag)[(bit) / 32] &   (1L << ((bit) % 32)))
-#define SET_BIT(var, bit)			((var)[(bit) / 32]  |=  (1L << ((bit) % 32)))
-#define REMOVE_BIT(var, bit)		((var)[(bit) / 32]  &= ~(1L << ((bit) % 32)))
-
-// Scalar flags -- operate on a single integer field, overwhelmingly obj->value[N]
-// (the furniture flags in act_info.c among them). The bit is an absolute shift,
-// with no word split. The _OLD suffix names the representation, NOT deprecation:
-// these three have 134 live call sites (140 counting TOGGLE_BIT_OLD below).
-#define IS_SET_OLD(flag, bit) 		((flag) &   (1L << (bit)))
-#define SET_BIT_OLD(var, bit) 		((var)  |=  (1L << (bit)))
-#define REMOVE_BIT_OLD(var,bit) 	((var)  &= ~(1L << (bit)))
-#define TOGGLE_BIT(var, bit)		(IS_SET(var,bit) ? REMOVE_BIT(var,bit) : SET_BIT(var,bit))
-#define TOGGLE_BIT_OLD(var, bit)	(IS_SET_OLD(var,bit) ? REMOVE_BIT_OLD(var,bit) : SET_BIT_OLD(var,bit))
+// Utility macros (URANGE/LOWER/UPPER, the IS_SET/SET_BIT bit-flag family,
+// CAP, CLEAR_MEM) moved to macros.h so tests can pull them in without merc.h.
+// Included here at the original location so rift.h's inline URANGE is still seen
+// first — see the ordering note in macros.h.
+#include "macros.h"
 
 
 //TODO: Find out where these are implemented
@@ -2281,11 +1431,7 @@ extern QUEUE_DATA *global_queue;
 #define NO_FLAG						-99		// Must not be used in flags or stats.
 
 
-#define CAP(st)						(*(st) = UPPER(*(st)), st)
 #define	HIGH_VNUM					65535
 #define LOW_VNUM					-1
-
-
-#define CLEAR_MEM(stru, x)		for(unsigned int clearmem = 0; clearmem < x; clearmem++) *((char *)stru + clearmem) = '\0';
 
 #endif /* MERC_H */

@@ -36,6 +36,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <math.h>
+#include "merc.h"
 #include "act_move.h"
 #include "handler.h"
 #include "magic.h"

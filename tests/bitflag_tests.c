@@ -1,6 +1,7 @@
 #include <math.h>
 #include "catch.hpp"
-#include "../code/merc.h"
+#include "../code/macros.h"
+#include "../code/entity/limits.h"
 #include "../code/stdlibs/bitvector.h"
 
 // Equivalence proofs for the bitflag operator rewrite.
@@ -164,7 +165,7 @@ TEST_CASE("REMOVE_BIT_OLD matches the retired pow() macro for every bit", "[bitf
 	}
 }
 
-// TOGGLE_BIT / TOGGLE_BIT_OLD (merc.h:3264-3265) are defined in terms of the six
+// TOGGLE_BIT / TOGGLE_BIT_OLD (macros.h) are defined in terms of the six
 // operators above, so they inherit the rewrite rather than being rewritten. They
 // are covered here because phase-02 §2 did not enumerate them and they are the
 // operators most exposed to the double-evaluation hazard: TOGGLE_BIT expands its

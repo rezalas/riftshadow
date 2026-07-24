@@ -1,7 +1,7 @@
 #ifndef SHAPE_H
 #define SHAPE_H
 
-#include "merc.h"
+#include "entity/limits.h"
 
 #define MAX_FORM			22
 

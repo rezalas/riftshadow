@@ -5,6 +5,7 @@
 #include <string.h>
 #include <time.h>
 #include <ctype.h>
+#include "merc.h"
 #include "help.h"
 #include "db.h"
 #include "magic.h"

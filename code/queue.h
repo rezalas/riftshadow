@@ -13,11 +13,8 @@
 #include <utility>
 #include <vector>
 
-// forward declarations. Once char_data is separated to its own file, we can get rid of these and include the file.
-// but since these are defined in merc.h, this will have to do. We can't include merc.h because that causes a circular 
-// dependency.
-class	char_data;
-typedef struct char_data CHAR_DATA;
+#include "entity/fwd.h"
+
 class CQueue
 {
 public:

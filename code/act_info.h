@@ -1,7 +1,9 @@
 #ifndef ACT_INFO_H
 #define ACT_INFO_H
 
-#include "merc.h"
+#include <string>
+
+#include "entity/fwd.h"
 
 //
 // TODO: UNKNOWN FUNCTIONS

@@ -4,6 +4,7 @@
 #include <string.h>
 #include <time.h>
 #include <algorithm>
+#include "merc.h"
 #include "mspec.h"
 #include "handler.h"
 #include "spec.h"

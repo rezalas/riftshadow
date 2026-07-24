@@ -35,13 +35,22 @@
 #define DB_H
 
 #include <cstddef>
-#include "merc.h"
+#include <time.h>
+#include <stdio.h>
+#include <stdlib.h>		// srandom
+#include <unistd.h>		// getpid -- replaces the OLD_RAND hand declarations
 
+#include "entity/fwd.h"
+#include "entity/limits.h"
+
+#define MAX_KEY_HASH				1024
+#define MAX_TOP_BOUNTY				14
+#define MAX_TOP_BOUNTY_SHOWN		9
+
+// OLD_RAND selects the legacy Mitchell-Moore generator in db.c.  The system
+// prototypes it used to hand-declare now come from the real headers above.
 #ifndef OLD_RAND
 #define OLD_RAND
-	void srandom(unsigned int);
-	int getpid();
-	time_t time(time_t *tloc);
 #endif
 
 extern char *top_bounty_name[MAX_TOP_BOUNTY];

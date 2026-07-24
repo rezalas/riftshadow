@@ -2,7 +2,9 @@
 #define NOTE_H
 
 #include <stdio.h>
-#include "merc.h"
+#include <time.h>
+
+#include "entity/fwd.h"
 #include "prof.h"
 
 //	== table layout ==

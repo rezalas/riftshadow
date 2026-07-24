@@ -36,6 +36,7 @@
 #include <string.h>
 #include <ctype.h>
 #include <time.h>
+#include "merc.h"
 #include "lookup.h"
 #include "tables.h"
 #include "newmem.h"

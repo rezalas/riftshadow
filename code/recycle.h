@@ -34,7 +34,7 @@
 #ifndef RECYCLE_H
 #define RECYCLE_H
 
-#include "merc.h"
+#include "entity/fwd.h"
 
 /* externals for counting purposes */
 extern DESCRIPTOR_DATA *descriptor_free;

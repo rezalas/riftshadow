@@ -1,4 +1,5 @@
 #include "material.h"
+#include "enums.h"
 
 /*
  * Liquid properties.
