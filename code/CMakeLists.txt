@@ -1,6 +1,7 @@
 project(riftshadow_src)
 
 set(RIFT_SOURCE config.cpp
+	spell_target.c
 	cdirectory.c
 	cfilesystem.c
 	clogger.c

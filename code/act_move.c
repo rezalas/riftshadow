@@ -1289,7 +1289,7 @@ void trap_execute(CHAR_DATA *victim, ROOM_INDEX_DATA *room, TRAP_DATA *trap)
 				auto dam = damage_new(victim, victim, dice(trap->quality * 10, 9), TYPE_UNDEFINED, DAM_LIGHTNING, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the lightning bolt*");
 
 				if (trap->quality > 5)
-					shock_effect(victim, trap->quality * 7, dam, TARGET_CHAR);
+					shock_effect(victim, trap->quality * 7, dam);
 			}
 			break;
 		case TRAP_SLEEPGAS:

@@ -639,13 +639,13 @@ void spell_scourge(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		}
 
 		if (number_percent() > 30)
-			spell_blindness(skill_lookup("blindness"), level - 4, ch, vch, TAR_CHAR_OFFENSIVE);
+			spell_blindness(skill_lookup("blindness"), level - 4, ch, vch, TARGET_CHAR);
 
 		if (number_percent() > 30)
-			spell_poison(skill_lookup("poison"), level - 4, ch, vch, TAR_CHAR_OFFENSIVE);
+			spell_poison(skill_lookup("poison"), level - 4, ch, vch, TARGET_CHAR);
 
 		if (number_percent() > 30)
-			spell_weaken(skill_lookup("weaken"), level - 4, ch, vch, TAR_CHAR_OFFENSIVE);
+			spell_weaken(skill_lookup("weaken"), level - 4, ch, vch, TARGET_CHAR);
 	}
 
 	spell_fireball(sn, level - 2, ch, nullptr, TAR_CHAR_OFFENSIVE);

@@ -3805,7 +3805,12 @@ void spell_poison(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	OBJ_DATA *obj;
 	AFFECT_DATA af;
 
-	if (target == TAR_OBJ_INV)
+	// TARGET_OBJ is what do_cast and obj_cast_spell actually set here. This
+	// used to test TAR_OBJ_INV, which belongs to the enum that declares what a
+	// skill may be aimed at rather than the one reporting what it was aimed at,
+	// so the branch never ran and an object fell through to be read as a
+	// character below.
+	if (target == TARGET_OBJ)
 	{
 		obj = (OBJ_DATA *)vo;
 
@@ -4765,12 +4770,12 @@ void spell_acid_breath(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 	if (saves_spell(level, victim, DAM_ACID))
 	{
-		acid_effect(victim, level / 2, dam / 4, TARGET_CHAR);
+		acid_effect(victim, level / 2, dam / 4);
 		damage_old(ch, victim, dam / 2, sn, DAM_ACID, true);
 	}
 	else
 	{
-		acid_effect(victim, level, dam, TARGET_CHAR);
+		acid_effect(victim, level, dam);
 		damage_old(ch, victim, dam, sn, DAM_ACID, true);
 	}
 }
@@ -4801,7 +4806,7 @@ void spell_fire_breath(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	dam = std::max(hp_dam + dice_dam /10, dice_dam + hp_dam / 10);
 	*/
 
-	fire_effect(victim->in_room, level, dam / 2, TARGET_ROOM);
+	fire_effect(victim->in_room, level, dam / 2);
 
 	for (vch = victim->in_room->people; vch != nullptr; vch = vch_next)
 	{
@@ -4827,12 +4832,12 @@ void spell_fire_breath(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		{
 			if (saves_spell(level, vch, DAM_FIRE))
 			{
-				fire_effect(vch, level / 2, dam / 4, TARGET_CHAR);
+				fire_effect(vch, level / 2, dam / 4);
 				damage_old(ch, vch, dam / 2, sn, DAM_FIRE, true);
 			}
 			else
 			{
-				fire_effect(vch, level, dam, TARGET_CHAR);
+				fire_effect(vch, level, dam);
 				damage_old(ch, vch, dam, sn, DAM_FIRE, true);
 			}
 		}
@@ -4840,12 +4845,12 @@ void spell_fire_breath(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		{
 			if (saves_spell(level - 2, vch, DAM_FIRE))
 			{
-				fire_effect(vch, level / 4, dam / 8, TARGET_CHAR);
+				fire_effect(vch, level / 4, dam / 8);
 				damage_old(ch, vch, dam / 4, sn, DAM_FIRE, true);
 			}
 			else
 			{
-				fire_effect(vch, level / 2, dam / 4, TARGET_CHAR);
+				fire_effect(vch, level / 2, dam / 4);
 				damage_old(ch, vch, dam / 2, sn, DAM_FIRE, true);
 			}
 		}
@@ -4879,7 +4884,7 @@ void spell_frost_breath(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	dam = std::max(hp_dam + dice_dam/10,dice_dam + hp_dam/10);
 	*/
 
-	cold_effect(victim->in_room, level, dam / 2, TARGET_ROOM);
+	cold_effect(victim->in_room, level, dam / 2);
 
 	for (vch = victim->in_room->people; vch != nullptr; vch = vch_next)
 	{
@@ -4899,12 +4904,12 @@ void spell_frost_breath(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		{
 			if (saves_spell(level, vch, DAM_COLD))
 			{
-				cold_effect(vch, level / 2, dam / 4, TARGET_CHAR);
+				cold_effect(vch, level / 2, dam / 4);
 				damage_old(ch, vch, dam / 2, sn, DAM_COLD, true);
 			}
 			else
 			{
-				cold_effect(vch, level, dam, TARGET_CHAR);
+				cold_effect(vch, level, dam);
 				damage_old(ch, vch, dam, sn, DAM_COLD, true);
 			}
 		}
@@ -4912,12 +4917,12 @@ void spell_frost_breath(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		{
 			if (saves_spell(level - 2, vch, DAM_COLD))
 			{
-				cold_effect(vch, level / 4, dam / 8, TARGET_CHAR);
+				cold_effect(vch, level / 4, dam / 8);
 				damage_old(ch, vch, dam / 4, sn, DAM_COLD, true);
 			}
 			else
 			{
-				cold_effect(vch, level / 2, dam / 4, TARGET_CHAR);
+				cold_effect(vch, level / 2, dam / 4);
 				damage_old(ch, vch, dam / 2, sn, DAM_COLD, true);
 			}
 		}
@@ -4935,7 +4940,7 @@ void spell_gas_breath(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 	dam = dice(level, 5);
 
-	poison_effect(ch->in_room, level, dam, TARGET_ROOM);
+	poison_effect(ch->in_room, level, dam);
 
 	for (vch = ch->in_room->people; vch != nullptr; vch = vch_next)
 	{
@@ -4949,12 +4954,12 @@ void spell_gas_breath(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 		if (saves_spell(level, vch, DAM_POISON))
 		{
-			poison_effect(vch, level / 2, dam / 4, TARGET_CHAR);
+			poison_effect(vch, level / 2, dam / 4);
 			damage_old(ch, vch, dam / 2, sn, DAM_POISON, true);
 		}
 		else
 		{
-			poison_effect(vch, level, dam, TARGET_CHAR);
+			poison_effect(vch, level, dam);
 			damage_old(ch, vch, dam, sn, DAM_POISON, true);
 		}
 	}
@@ -5028,12 +5033,12 @@ void spell_lightning_breath(int sn, int level, CHAR_DATA *ch, void *vo, int targ
 
 	if (saves_spell(level, victim, DAM_LIGHTNING))
 	{
-		shock_effect(victim, level / 2, dam / 4, TARGET_CHAR);
+		shock_effect(victim, level / 2, dam / 4);
 		damage_old(ch, victim, dam / 2, sn, DAM_LIGHTNING, true);
 	}
 	else
 	{
-		shock_effect(victim, level, dam, TARGET_CHAR);
+		shock_effect(victim, level, dam);
 		damage_old(ch, victim, dam, sn, DAM_LIGHTNING, true);
 	}
 }
@@ -5758,9 +5763,11 @@ void spell_lifebane(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		else
 			damage_old(ch, vch, dam, sn, DAM_NEGATIVE, true);
 
-		spell_poison(sn_poison, level - 5, ch, vch, target);
-		spell_weaken(sn_weaken, level - 5, ch, vch, target);
-		spell_curse(sn_curse, level - 8, ch, vch, target);
+		// vch is a character whatever this spell itself was aimed at, so the
+		// tag has to describe vch rather than forward what we were handed.
+		spell_poison(sn_poison, level - 5, ch, vch, TARGET_CHAR);
+		spell_weaken(sn_weaken, level - 5, ch, vch, TARGET_CHAR);
+		spell_curse(sn_curse, level - 8, ch, vch, TARGET_CHAR);
 	}
 }
 

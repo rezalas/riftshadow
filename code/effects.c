@@ -47,40 +47,45 @@
 #include "magic.h"
 #include "utility.h"
 
-void acid_effect(void *vo, int level, int dam, int target)
+/// Applies an acid effect to whatever the target holds.
+/// @param target What the effect is aimed at. May be a room, a character or an object.
+/// @param level The effective level of the effect.
+/// @param dam The damage driving the effect.
+/// @details A room passes the effect on to every object lying in it, and a character passes it on to everything carried. An object may be damaged or destroyed.
+void acid_effect(SpellTarget target, int level, int dam)
 {
-	if (target == TARGET_ROOM) /* nail objects on the floor */
+	if (target.IsRoom()) /* nail objects on the floor */
 	{
-		ROOM_INDEX_DATA *room = (ROOM_INDEX_DATA *)vo;
+		ROOM_INDEX_DATA *room = target.AsRoom();
 		OBJ_DATA *obj, *obj_next;
 
 		for (obj = room->contents; obj != nullptr; obj = obj_next)
 		{
 			obj_next = obj->next_content;
-			acid_effect(obj, level, dam, TARGET_OBJ);
+			acid_effect(obj, level, dam);
 		}
 
 		return;
 	}
 
-	if (target == TARGET_CHAR) /* do the effect on a victim */
+	if (target.IsChar()) /* do the effect on a victim */
 	{
-		CHAR_DATA *victim = (CHAR_DATA *)vo;
+		CHAR_DATA *victim = target.AsChar();
 		OBJ_DATA *obj, *obj_next;
 
 		/* let's toast some gear */
 		for (obj = victim->carrying; obj != nullptr; obj = obj_next)
 		{
 			obj_next = obj->next_content;
-			acid_effect(obj, level, dam, TARGET_OBJ);
+			acid_effect(obj, level, dam);
 		}
 
 		return;
 	}
 
-	if (target == TARGET_OBJ) /* toast an object */
+	if (target.IsObj()) /* toast an object */
 	{
-		OBJ_DATA *obj = (OBJ_DATA *)vo;
+		OBJ_DATA *obj = target.AsObj();
 		OBJ_DATA *t_obj, *n_obj;
 		int chance;
 		char *msg;
@@ -202,7 +207,7 @@ void acid_effect(void *vo, int level, int dam, int target)
 					continue;
 				}
 
-				acid_effect(t_obj, level / 2, dam / 2, TARGET_OBJ);
+				acid_effect(t_obj, level / 2, dam / 2);
 			}
 		}
 
@@ -210,25 +215,30 @@ void acid_effect(void *vo, int level, int dam, int target)
 	}
 }
 
-void cold_effect(void *vo, int level, int dam, int target)
+/// Applies a cold effect to whatever the target holds.
+/// @param target What the effect is aimed at. May be a room, a character or an object.
+/// @param level The effective level of the effect.
+/// @param dam The damage driving the effect.
+/// @details A room passes the effect on to every object lying in it. A character may be chilled and carried containers may shatter.
+void cold_effect(SpellTarget target, int level, int dam)
 {
-	if (target == TARGET_ROOM) /* nail objects on the floor */
+	if (target.IsRoom()) /* nail objects on the floor */
 	{
-		ROOM_INDEX_DATA *room = (ROOM_INDEX_DATA *)vo;
+		ROOM_INDEX_DATA *room = target.AsRoom();
 		OBJ_DATA *obj, *obj_next;
 
 		for (obj = room->contents; obj != nullptr; obj = obj_next)
 		{
 			obj_next = obj->next_content;
-			cold_effect(obj, level, dam, TARGET_OBJ);
+			cold_effect(obj, level, dam);
 		}
 
 		return;
 	}
 
-	if (target == TARGET_CHAR) /* whack a character */
+	if (target.IsChar()) /* whack a character */
 	{
-		CHAR_DATA *victim = (CHAR_DATA *)vo;
+		CHAR_DATA *victim = target.AsChar();
 		OBJ_DATA *obj, *obj_next;
 
 		/* chill touch effect */
@@ -257,15 +267,15 @@ void cold_effect(void *vo, int level, int dam, int target)
 		for (obj = victim->carrying; obj != nullptr; obj = obj_next)
 		{
 			obj_next = obj->next_content;
-			cold_effect(obj, level, dam, TARGET_OBJ);
+			cold_effect(obj, level, dam);
 		}
 
 		return;
 	}
 
-	if (target == TARGET_OBJ) /* toast an object */
+	if (target.IsObj()) /* toast an object */
 	{
-		OBJ_DATA *obj = (OBJ_DATA *)vo;
+		OBJ_DATA *obj = target.AsObj();
 		int chance;
 		char *msg;
 
@@ -312,25 +322,30 @@ void cold_effect(void *vo, int level, int dam, int target)
 	}
 }
 
-void fire_effect(void *vo, int level, int dam, int target)
+/// Applies a fire effect to whatever the target holds.
+/// @param target What the effect is aimed at. May be a room, a character or an object.
+/// @param level The effective level of the effect.
+/// @param dam The damage driving the effect.
+/// @details A room passes the effect on to every object lying in it, and a character passes it on to everything carried. An object may burn away.
+void fire_effect(SpellTarget target, int level, int dam)
 {
-	if (target == TARGET_ROOM) /* nail objects on the floor */
+	if (target.IsRoom()) /* nail objects on the floor */
 	{
-		ROOM_INDEX_DATA *room = (ROOM_INDEX_DATA *)vo;
+		ROOM_INDEX_DATA *room = target.AsRoom();
 		OBJ_DATA *obj, *obj_next;
 
 		for (obj = room->contents; obj != nullptr; obj = obj_next)
 		{
 			obj_next = obj->next_content;
-			fire_effect(obj, level, dam, TARGET_OBJ);
+			fire_effect(obj, level, dam);
 		}
 
 		return;
 	}
 
-	if (target == TARGET_CHAR) /* do the effect on a victim */
+	if (target.IsChar()) /* do the effect on a victim */
 	{
-		CHAR_DATA *victim = (CHAR_DATA *)vo;
+		CHAR_DATA *victim = target.AsChar();
 		OBJ_DATA *obj, *obj_next;
 
 		/* chance of blindness */
@@ -362,15 +377,15 @@ void fire_effect(void *vo, int level, int dam, int target)
 		{
 			obj_next = obj->next_content;
 
-			fire_effect(obj, level, dam, TARGET_OBJ);
+			fire_effect(obj, level, dam);
 		}
 
 		return;
 	}
 
-	if (target == TARGET_OBJ) /* toast an object */
+	if (target.IsObj()) /* toast an object */
 	{
-		OBJ_DATA *obj = (OBJ_DATA *)vo;
+		OBJ_DATA *obj = target.AsObj();
 		OBJ_DATA *t_obj, *n_obj;
 		int chance;
 		char *msg;
@@ -452,7 +467,7 @@ void fire_effect(void *vo, int level, int dam, int target)
 					continue;
 				}
 
-				fire_effect(t_obj, level / 2, dam / 2, TARGET_OBJ);
+				fire_effect(t_obj, level / 2, dam / 2);
 			}
 		}
 
@@ -460,25 +475,30 @@ void fire_effect(void *vo, int level, int dam, int target)
 	}
 }
 
-void poison_effect(void *vo, int level, int dam, int target)
+/// Applies a poison effect to whatever the target holds.
+/// @param target What the effect is aimed at. May be a room, a character or an object.
+/// @param level The effective level of the effect.
+/// @param dam The damage driving the effect.
+/// @details A room passes the effect on to every object lying in it. Food and drink containers can be spoiled.
+void poison_effect(SpellTarget target, int level, int dam)
 {
-	if (target == TARGET_ROOM) /* nail objects on the floor */
+	if (target.IsRoom()) /* nail objects on the floor */
 	{
-		ROOM_INDEX_DATA *room = (ROOM_INDEX_DATA *)vo;
+		ROOM_INDEX_DATA *room = target.AsRoom();
 		OBJ_DATA *obj, *obj_next;
 
 		for (obj = room->contents; obj != nullptr; obj = obj_next)
 		{
 			obj_next = obj->next_content;
-			poison_effect(obj, level, dam, TARGET_OBJ);
+			poison_effect(obj, level, dam);
 		}
 
 		return;
 	}
 
-	if (target == TARGET_CHAR) /* do the effect on a victim */
+	if (target.IsChar()) /* do the effect on a victim */
 	{
-		CHAR_DATA *victim = (CHAR_DATA *)vo;
+		CHAR_DATA *victim = target.AsChar();
 		OBJ_DATA *obj, *obj_next;
 
 		/* chance of poisoning */
@@ -505,15 +525,15 @@ void poison_effect(void *vo, int level, int dam, int target)
 		for (obj = victim->carrying; obj != nullptr; obj = obj_next)
 		{
 			obj_next = obj->next_content;
-			poison_effect(obj, level, dam, TARGET_OBJ);
+			poison_effect(obj, level, dam);
 		}
 
 		return;
 	}
 
-	if (target == TARGET_OBJ) /* do some poisoning */
+	if (target.IsObj()) /* do some poisoning */
 	{
-		OBJ_DATA *obj = (OBJ_DATA *)vo;
+		OBJ_DATA *obj = target.AsObj();
 		int chance;
 
 		if (is_obj_stat(obj, ITEM_BURN_PROOF) || is_obj_stat(obj, ITEM_BLESS) || number_range(0, 4) == 0)
@@ -550,40 +570,45 @@ void poison_effect(void *vo, int level, int dam, int target)
 	}
 }
 
-void shock_effect(void *vo, int level, int dam, int target)
+/// Applies a shock effect to whatever the target holds.
+/// @param target What the effect is aimed at. May be a room, a character or an object.
+/// @param level The effective level of the effect.
+/// @param dam The damage driving the effect.
+/// @details A room passes the effect on to every object lying in it. A character may be stunned.
+void shock_effect(SpellTarget target, int level, int dam)
 {
-	if (target == TARGET_ROOM)
+	if (target.IsRoom())
 	{
-		ROOM_INDEX_DATA *room = (ROOM_INDEX_DATA *)vo;
+		ROOM_INDEX_DATA *room = target.AsRoom();
 		OBJ_DATA *obj, *obj_next;
 
 		for (obj = room->contents; obj != nullptr; obj = obj_next)
 		{
 			obj_next = obj->next_content;
-			shock_effect(obj, level, dam, TARGET_OBJ);
+			shock_effect(obj, level, dam);
 		}
 
 		return;
 	}
 
-	if (target == TARGET_CHAR)
+	if (target.IsChar())
 	{
-		CHAR_DATA *victim = (CHAR_DATA *)vo;
+		CHAR_DATA *victim = target.AsChar();
 		OBJ_DATA *obj, *obj_next;
 
 		/* toast some gear */
 		for (obj = victim->carrying; obj != nullptr; obj = obj_next)
 		{
 			obj_next = obj->next_content;
-			shock_effect(obj, level, dam, TARGET_OBJ);
+			shock_effect(obj, level, dam);
 		}
 
 		return;
 	}
 
-	if (target == TARGET_OBJ)
+	if (target.IsObj())
 	{
-		OBJ_DATA *obj = (OBJ_DATA *)vo;
+		OBJ_DATA *obj = target.AsObj();
 		int chance;
 		char *msg;
 
