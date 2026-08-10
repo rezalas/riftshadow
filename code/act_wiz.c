@@ -2852,35 +2852,13 @@ void do_mstat(CHAR_DATA *ch, char *argument)
 		send_to_char(buf, ch);
 	}
 
-	if (is_npc(victim) && victim->pIndexData->spec_prog.func)
+	if (is_npc(victim) && victim->pIndexData->spec)
 	{
-		int i;
-		long x;
-		for (i = 0; mspec_table[i].spec_name; i++)
-		{
-			if (mspec_table[i].spec_func == victim->pIndexData->spec_prog.func)
-				break;
-		}
-
-		if (!mspec_table[i].spec_name)
-		{
-			RS.Logger.Warn("Error: Invalid mspec.");
-			return;
-		}
-
-		sprintf(buf, "Mob has special prog: %s\n\r", mspec_table[i].spec_name);
+		sprintf(buf, "Mob has special prog: %s\n\r", victim->pIndexData->spec->name);
 		send_to_char(buf, ch);
+
 		send_to_char("Mob traps on: ", ch);
-
-		for (x = 1; x < 1073741824; x = x * 2)
-		{
-			if (mspec_table[i].spec_events & x)
-			{
-				send_to_char(flag_name_lookup(x, mevent_table), ch);
-				send_to_char(" ", ch);
-			}
-		}
-
+		mspec_event_names(victim->pIndexData->spec, ch);
 		send_to_char("\n\r", ch);
 	}
 

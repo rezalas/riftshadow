@@ -370,11 +370,8 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 					return;
 			}
 
-			if (TRAPS_MEVENT(moveprog, TRAP_MMOVE))
-			{
-				if (CALL_MEVENT(moveprog, TRAP_MMOVE, ch, moveprog, door) > 0)
-					return;
-			}
+			if (spec_mob_move(moveprog, ch, door) > 0)
+				return;
 		}
 
 		move = sect_table[to_room->sector_type].move_cost + sect_table[in_room->sector_type].move_cost;
@@ -1064,8 +1061,8 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 		if (room_has_pc && IS_SET(fch->progtypes, MPROG_GREET))
 			fch->pIndexData->mprogs->greet_prog(fch, ch);
 
-		if (room_has_pc && TRAPS_MEVENT(fch, TRAP_MGREET))
-			CALL_MEVENT(fch, TRAP_MGREET, ch, fch);
+		if (room_has_pc)
+			spec_mob_greet(fch, ch);
 	}
 
 	for (auto obj = ch->carrying; room_has_pc && obj != nullptr; obj = obj->next_content)

@@ -1100,11 +1100,19 @@ void give_prog_starvin_pete(CHAR_DATA *mob, CHAR_DATA *ch, OBJ_DATA *obj)
 }
 
 /* academy blacksmith quest - bring him components for a better weapon -cal */
-BEGIN_SPEC(mspec_academy_smith)
-	const int nQuestIndex = SMITH_QUEST, MIN_COMPONENT = 24500, MAX_COMPONENT = 24503;
-	int improved = 0;
+// The STAGE and SET_STAGE macros read nQuestIndex from the enclosing scope, so
+// each handler below declares it.
+static const int MIN_COMPONENT = 24500, MAX_COMPONENT = 24503;
 
-	EVENT_MGREET
+/// Opens the blacksmith quest when a suitable character walks in.
+/// @param ch The character who entered.
+/// @param mob The blacksmith.
+/// @return Always 0.
+/// @note Body taken from the EVENT_MGREET block of mspec_academy_smith.
+int academy_smith_greet(CHAR_DATA *ch, CHAR_DATA *mob)
+{
+	const int nQuestIndex = SMITH_QUEST;
+
 		if (!can_do_quest(ch, SMITH_QUEST) || STAGE(ch) != 0)
 			return 0;
 		act("$N looks up from his forge, sweat dripping down his brow.", ch, 0, mob, TO_CHAR);
@@ -1114,9 +1122,20 @@ BEGIN_SPEC(mspec_academy_smith)
 			act("$N regards you carefully, sizing you up.", ch, 0, mob, TO_CHAR);
 		mprog_say(2, "You there.  Yer look like yer in the market for something more powerful, eh?", mob, ch);
 		SET_STAGE(ch, 1);
-	END_EVENT
 
-	EVENT_MSPEECH
+	return 0;
+}
+
+/// Accepts the character's agreement and explains what to fetch.
+/// @param ch The character speaking.
+/// @param mob The blacksmith.
+/// @param argument What was said.
+/// @return Always 0.
+/// @note Body taken from the EVENT_MSPEECH block of mspec_academy_smith.
+int academy_smith_speech(CHAR_DATA *ch, CHAR_DATA *mob, char *argument)
+{
+	const int nQuestIndex = SMITH_QUEST;
+
 		if (!can_do_quest(ch, SMITH_QUEST) || STAGE(ch) != 1)
 			return 0;
 		if (agrees(ch, argument) != REPLY_YES)
@@ -1126,9 +1145,23 @@ BEGIN_SPEC(mspec_academy_smith)
 		mprog_say(6, "I need four raw metals.  Iandia said there might be some secreted in the Outlying Wilds and thereabouts.", mob, ch);
 		RS.Queue.AddToQueue(8, "sname", "act_queue", act_queue, "$N returns to his forge, turning his back to you.", ch, nullptr, mob, TO_CHAR);
 		SET_STAGE(ch, 2);
-	END_EVENT
 
-	EVENT_MGIVE
+	return 0;
+}
+
+/// Takes quest components and the academy weapon, and reforges it.
+/// @param ch The character handing something over.
+/// @param mob The blacksmith.
+/// @param obj The object handed over.
+/// @return The result of mprog_drop when the object is rejected, otherwise 0.
+/// @note Body taken from the EVENT_MGIVE block of mspec_academy_smith. The
+///       improved counter is only ever assigned inside a commented out block,
+///       so it stays 0 and the message it selects never changes.
+int academy_smith_give(CHAR_DATA *ch, CHAR_DATA *mob, OBJ_DATA *obj)
+{
+	const int nQuestIndex = SMITH_QUEST;
+	int improved = 0;
+
 		if (!can_do_quest(ch, SMITH_QUEST))
 			return 0;
 		if (STAGE(ch) == 2)
@@ -1210,13 +1243,19 @@ BEGIN_SPEC(mspec_academy_smith)
 			else
 				mprog_say(10, "I can probably work with it more if ye find me more decent metals.", mob, ch);
 		}
-	END_EVENT
-END_SPEC
 
-BEGIN_SPEC(mspec_scared_soldier)
+	return 0;
+}
+
+/// Asks the character to recover a stolen ring.
+/// @param ch The character who entered.
+/// @param mob The soldier.
+/// @return Always 0.
+/// @note Body taken from the EVENT_MGREET block of mspec_scared_soldier.
+int scared_soldier_greet(CHAR_DATA *ch, CHAR_DATA *mob)
+{
 	const int nQuestIndex = RING_QUEST;
 
-	EVENT_MGREET
 		if (!can_do_quest(ch, RING_QUEST))
 			return 0;
 		if (STAGE(ch) == 0)
@@ -1236,5 +1275,6 @@ BEGIN_SPEC(mspec_scared_soldier)
 			mprog_emote(1, "whimpers softly.", mob, ch);
 			return 0;
 		}
-	END_EVENT
-END_SPEC
+
+	return 0;
+}

@@ -16,8 +16,6 @@
 #include "handler.h"
 #include "devextra.h"
 
-va_list arglist;
-
 /// Blinds the wielder's opponent on a small chance each combat round.
 /// @param ch The character wielding the flail.
 /// @return Always 0, so combat continues normally.

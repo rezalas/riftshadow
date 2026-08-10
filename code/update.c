@@ -649,8 +649,7 @@ void mobile_update(void)
 			if (do_mob_cast(ch))
 				continue;
 
-		if (TRAPS_MEVENT(ch, TRAP_MPULSE))
-			CALL_MEVENT(ch, TRAP_MPULSE, ch);
+		spec_mob_pulse(ch);
 
 		/* That's all for sleeping / busy monster, and empty zones */
 		if (IS_SET(ch->progtypes, MPROG_PULSE)

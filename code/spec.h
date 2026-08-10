@@ -1,81 +1,6 @@
 //DO NOT TOUCH!!!!
 #ifndef SPECSLOADED
-#include <stdarg.h>
-extern va_list arglist;
-typedef int SFUN (long event_vector, ...);
-
-#define BEGIN_MSPECS			const struct spec_type mspec_table[] = {
-#define END_SPECS			{ nullptr, nullptr, 0 }, };
-
-#define DEF_SPEC(fname, events)		{ #fname, fname, events },
-#define BEGIN_SPEC(sname)		int sname (long event_vector, ...) {
-#define END_SPEC			return 0; }
-#define DECLARE_SPEC(sname)		int sname (long event_vector, ...)
-#define EVENT_TRAP(event)		if(event_vector == event) {
-#define END_EVENT			} }
-#define TRAPS_MEVENT(owner, event)	IS_NPC(owner) ? owner->pIndexData->spec_prog.trapvector & event : false
-#define CALL_MEVENT(owner, event, ...)	(*owner->pIndexData->spec_prog.func) (event, __VA_ARGS__)
-
-struct spec_type
-{
-	const char *spec_name;
-	SFUN *spec_func;
-	long spec_events;
-};
-
-#define BEGIN_MEVENT_TYPES		const struct flag_type mevent_table[] = {
-#define MEVENT(name, bit)		{ name, bit, true },
-#define END_EVENT_TYPES			{ nullptr, 0, false } };
-
-#define TRAP_MBEAT			1
-#define TRAP_MFIGHT			2
-#define TRAP_MUNUSED		4
-#define TRAP_MMISC			8
-#define TRAP_MMOVE			16
-#define TRAP_MDEATH			32
-#define TRAP_MPULSE			64
-#define TRAP_MSPEECH		128
-#define TRAP_MENTRY			256
-#define TRAP_MATTACK		512
-#define TRAP_MAGGRESS		1024
-#define TRAP_MGIVE			2048
-#define TRAP_MGREET			4096
-#define TRAP_MONEHIT		8192
-
-#define START_TRAP			va_start(arglist, event_vector)
-#define END_TRAP			va_end(arglist)
-
-#define GET_CH(x)           CHAR_DATA *x = (CHAR_DATA *) va_arg(arglist, void *)
-#define GET_OBJ(x)          OBJ_DATA *x = (OBJ_DATA *)va_arg(arglist, void *)
-#define GET_STRING(x)		char *x = (char *)va_arg(arglist, char *)
-#define EVENT_TRAP_CH(event)		EVENT_TRAP(event) START_TRAP; { \
-				 CHAR_DATA *ch = (CHAR_DATA *)va_arg(arglist, void *); \
-				 END_TRAP;
-
-#define EVENT_TRAP_ONE_HIT(event) EVENT_TRAP(event) START_TRAP; { \
-				 CHAR_DATA *ch = (CHAR_DATA *)va_arg(arglist, void *); \
-				 CHAR_DATA *victim = (CHAR_DATA *)va_arg(arglist, void *); \
-				 OBJ_DATA *wield = (OBJ_DATA *)va_arg(arglist, void *); \
-				 float *damb = (float *)va_arg(arglist, float *), &dam = *damb; \
-				 int *dtb = (int *)va_arg(arglist, int *), &dt = *dtb; \
-				 int *dam_typeb = (int *)va_arg(arglist, int *), &dam_type = *dam_typeb; \
-				 END_TRAP;
-
-#define EVENT_TRAP_CH_MOB(event)   EVENT_TRAP(event) START_TRAP; { GET_CH(ch); GET_CH(mob); END_TRAP;
-#define EVENT_TRAP_CH_MOB_OBJ(event) EVENT_TRAP(event) START_TRAP; { GET_CH(ch); GET_CH(mob); GET_OBJ(obj); END_TRAP;
-#define EVENT_MBEAT			EVENT_TRAP_CH(TRAP_MBEAT)
-#define EVENT_MFIGHT		EVENT_TRAP_CH_MOB(TRAP_MFIGHT)
-#define EVENT_MGIVE			EVENT_TRAP_CH_MOB_OBJ(TRAP_MGIVE)
-#define EVENT_MSPEECH		EVENT_TRAP(TRAP_MSPEECH) START_TRAP; { \
-								GET_CH(ch); GET_CH(mob); GET_STRING(argument); END_TRAP;
-#define EVENT_MGREET		EVENT_TRAP_CH_MOB(TRAP_MGREET)
-#define EVENT_MMOVE			EVENT_TRAP(TRAP_MMOVE) START_TRAP; { \
-								GET_CH(ch); GET_CH(mob); int door = (int)va_arg(arglist, int); END_TRAP;
-#define EVENT_MPULSE		EVENT_TRAP_CH(TRAP_MPULSE)
-#define EVENT_MDEATH		EVENT_TRAP_CH_MOB(TRAP_MDEATH)
-#define EVENT_MONEHIT		EVENT_TRAP_ONE_HIT(TRAP_MONEHIT)
-extern const struct spec_type mspec_table[];
-extern const struct flag_type mevent_table[];
+#include "utility.h"			// is_npc, used by the mob fire helpers
 
 //
 // Object special programs.
@@ -109,7 +34,7 @@ struct ISpec
 
 	int (*on_fight)(CHAR_DATA *ch, OBJ_DATA *obj) = nullptr;
 	int (*on_death)(CHAR_DATA *victim, OBJ_DATA *obj) = nullptr;
-	int (*on_speech)(CHAR_DATA *ch, OBJ_DATA *obj, const char *argument) = nullptr;
+	int (*on_speech)(CHAR_DATA *ch, OBJ_DATA *obj, char *argument) = nullptr;
 
 	// Fires on the object itself, not on a character near it.
 	int (*on_pulse)(OBJ_DATA *obj, bool isTick) = nullptr;
@@ -319,11 +244,12 @@ inline int spec_obj_death(OBJ_DATA *obj, CHAR_DATA *victim)
 /// Fires the speech event when a character speaks near the object.
 /// @param obj The object that overheard the speech.
 /// @param ch The character speaking.
-/// @param argument What was said.
+/// @param argument What was said. Mutable because handlers tokenize it with
+///        one_argument, which takes a mutable pointer.
 /// @return Non-zero if the program handled the event, 0 otherwise.
 /// @note Replaces the TRAPS_IEVENT and CALL_IEVENT pair for TRAP_ISPEECH. Bodies
 ///       written with the EVENT_ISPEECH macro now fill ISpec::on_speech.
-inline int spec_obj_speech(OBJ_DATA *obj, CHAR_DATA *ch, const char *argument)
+inline int spec_obj_speech(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 {
 	const ISpec *spec = obj_spec(obj);
 
@@ -421,6 +347,187 @@ inline int spec_obj_do_fun(OBJ_DATA *obj, CHAR_DATA *ch, int cmd, int sn, void *
 ///       ievent_table. Both that table and its IEVENT macro are gone. The table
 ///       carried no null terminator, so a bit with no entry read past its end.
 void ispec_event_names(const ISpec *spec, CHAR_DATA *to);
+
+//
+// Mob special programs.
+//
+// The same slot rule as ISpec above. The naming rule is worth stating because
+// the macros this replaces did not follow one: mob is always the character
+// that owns the program, and ch is always the other party. Under the old
+// macros ch meant the owning mob in a pulse event and the speaker in a speech
+// event, so one name meant two things in adjacent blocks of one program.
+//
+struct MSpec
+{
+	// Name as it appears in area files. Loading and saving match on this.
+	const char *name = nullptr;
+
+	int (*on_greet)(CHAR_DATA *ch, CHAR_DATA *mob) = nullptr;
+	int (*on_give)(CHAR_DATA *ch, CHAR_DATA *mob, OBJ_DATA *obj) = nullptr;
+	int (*on_speech)(CHAR_DATA *ch, CHAR_DATA *mob, char *argument) = nullptr;
+
+	// The mob's own update. There is no other party.
+	int (*on_pulse)(CHAR_DATA *mob) = nullptr;
+
+	int (*on_death)(CHAR_DATA *ch, CHAR_DATA *mob) = nullptr;
+
+	// dam, dt and dam_type are the running values for the blow landing on mob.
+	// A program may adjust them in place. Returning non-zero cancels the blow.
+	int (*on_one_hit)(CHAR_DATA *ch, CHAR_DATA *mob, OBJ_DATA *wield, float &dam, int &dt, int &dam_type) = nullptr;
+
+	int (*on_move)(CHAR_DATA *ch, CHAR_DATA *mob, int door) = nullptr;
+};
+
+extern const MSpec mspec_table[];
+
+/// Resolves the special program attached to a mob, if any.
+/// @param mob The character to resolve. May be null or a player.
+/// @return The attached program, or null when there is none.
+/// @note Replaces the owner->pIndexData->spec_prog dereference in TRAPS_MEVENT
+///       and CALL_MEVENT. The IS_NPC test that guarded TRAPS_MEVENT lives here
+///       now, so callers no longer repeat it.
+inline const MSpec *mob_spec(CHAR_DATA *mob)
+{
+	if (mob == nullptr || !is_npc(mob) || mob->pIndexData == nullptr)
+		return nullptr;
+
+	return mob->pIndexData->spec;
+}
+
+/// Fires the greet event when a character enters the mob's room.
+/// @param mob The mob doing the greeting.
+/// @param ch The character who entered.
+/// @return Non-zero if the program handled the event, 0 otherwise.
+/// @note Replaces the TRAPS_MEVENT and CALL_MEVENT pair for TRAP_MGREET. Bodies
+///       written with the EVENT_MGREET macro now fill MSpec::on_greet.
+inline int spec_mob_greet(CHAR_DATA *mob, CHAR_DATA *ch)
+{
+	const MSpec *spec = mob_spec(mob);
+
+	if (spec == nullptr || spec->on_greet == nullptr)
+		return 0;
+
+	return spec->on_greet(ch, mob);
+}
+
+/// Fires the give event when a character hands the mob an object.
+/// @param mob The mob receiving the object.
+/// @param ch The character giving it.
+/// @param obj The object handed over.
+/// @return Non-zero if the program handled the event, 0 otherwise.
+/// @note Replaces the TRAPS_MEVENT and CALL_MEVENT pair for TRAP_MGIVE. Bodies
+///       written with the EVENT_MGIVE macro now fill MSpec::on_give.
+inline int spec_mob_give(CHAR_DATA *mob, CHAR_DATA *ch, OBJ_DATA *obj)
+{
+	const MSpec *spec = mob_spec(mob);
+
+	if (spec == nullptr || spec->on_give == nullptr)
+		return 0;
+
+	return spec->on_give(ch, mob, obj);
+}
+
+/// Fires the speech event when a character speaks near the mob.
+/// @param mob The mob that overheard the speech.
+/// @param ch The character speaking.
+/// @param argument What was said. Mutable because handlers tokenize it with
+///        one_argument, which takes a mutable pointer.
+/// @return Non-zero if the program handled the event, 0 otherwise.
+/// @note Replaces the TRAPS_MEVENT and CALL_MEVENT pair for TRAP_MSPEECH. Bodies
+///       written with the EVENT_MSPEECH macro now fill MSpec::on_speech.
+inline int spec_mob_speech(CHAR_DATA *mob, CHAR_DATA *ch, char *argument)
+{
+	const MSpec *spec = mob_spec(mob);
+
+	if (spec == nullptr || spec->on_speech == nullptr)
+		return 0;
+
+	return spec->on_speech(ch, mob, argument);
+}
+
+/// Fires the pulse event on the mob's own update.
+/// @param mob The mob being updated.
+/// @return Non-zero if the program handled the event, 0 otherwise.
+/// @note Replaces the TRAPS_MEVENT and CALL_MEVENT pair for TRAP_MPULSE. Bodies
+///       written with the EVENT_MPULSE macro now fill MSpec::on_pulse. That
+///       macro bound the mob to the name ch, unlike every other mob event.
+inline int spec_mob_pulse(CHAR_DATA *mob)
+{
+	const MSpec *spec = mob_spec(mob);
+
+	if (spec == nullptr || spec->on_pulse == nullptr)
+		return 0;
+
+	return spec->on_pulse(mob);
+}
+
+/// Fires the death event for a mob that has just been killed.
+/// @param mob The mob that died.
+/// @param ch The killer.
+/// @return Non-zero if the program handled the event, in which case the rest of
+///         the death routine is skipped and the mob does not actually die.
+///         0 otherwise.
+/// @note Replaces the TRAPS_MEVENT and CALL_MEVENT pair for TRAP_MDEATH. Bodies
+///       written with the EVENT_MDEATH macro now fill MSpec::on_death.
+inline int spec_mob_death(CHAR_DATA *mob, CHAR_DATA *ch)
+{
+	const MSpec *spec = mob_spec(mob);
+
+	if (spec == nullptr || spec->on_death == nullptr)
+		return 0;
+
+	return spec->on_death(ch, mob);
+}
+
+/// Fires the one hit event for a mob taking a blow.
+/// @param mob The mob being hit.
+/// @param ch The attacker.
+/// @param wield The attacker's weapon. May be null for an unarmed blow.
+/// @param dam The running damage for this blow. A program may adjust it in place.
+/// @param dt The running damage type index. A program may adjust it in place.
+/// @param dam_type The running damage class. A program may adjust it in place.
+/// @return Non-zero if the program handled the event, in which case the blow is
+///         cancelled. 0 otherwise.
+/// @note Replaces the TRAPS_MEVENT guard and the CALL_IEVENT dispatch for
+///       TRAP_MONEHIT. The fire site used the object macro to dispatch a mob
+///       event, which went unnoticed because the two macros were identical.
+///       Bodies written with the EVENT_MONEHIT macro now fill MSpec::on_one_hit.
+inline int spec_mob_one_hit(CHAR_DATA *mob, CHAR_DATA *ch, OBJ_DATA *wield, float &dam, int &dt, int &dam_type)
+{
+	const MSpec *spec = mob_spec(mob);
+
+	if (spec == nullptr || spec->on_one_hit == nullptr)
+		return 0;
+
+	return spec->on_one_hit(ch, mob, wield, dam, dt, dam_type);
+}
+
+/// Fires the move event when a character leaves the mob's room.
+/// @param mob The mob watching the exit.
+/// @param ch The character moving.
+/// @param door The direction taken.
+/// @return Non-zero if the program handled the event, in which case the move is
+///         cancelled. 0 otherwise.
+/// @note Replaces the TRAPS_MEVENT and CALL_MEVENT pair for TRAP_MMOVE. Bodies
+///       written with the EVENT_MMOVE macro now fill MSpec::on_move. No program
+///       fills this slot, so the fire site is reachable but idle.
+inline int spec_mob_move(CHAR_DATA *mob, CHAR_DATA *ch, int door)
+{
+	const MSpec *spec = mob_spec(mob);
+
+	if (spec == nullptr || spec->on_move == nullptr)
+		return 0;
+
+	return spec->on_move(ch, mob, door);
+}
+
+/// Sends the names of the events a program handles to a character.
+/// @param spec The program to describe. May be null, in which case nothing is sent.
+/// @param to The character to send the list to.
+/// @note Replaces the loop in the stat commands that walked every bit of
+///       spec_events and mapped each one to a name through flag_name_lookup and
+///       mevent_table. Both that table and its MEVENT macro are gone.
+void mspec_event_names(const MSpec *spec, CHAR_DATA *to);
 
 #define SPECSLOADED
 #endif

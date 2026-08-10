@@ -361,7 +361,6 @@ struct barred_data
 #define MAX_ZOMBIE					10
 #define MAX_BEAUTY					10
 
-#include "entity/spec_func.h"
 
 struct class_type
 {

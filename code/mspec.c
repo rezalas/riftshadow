@@ -23,35 +23,17 @@
 #include "direction.h"
 #include "./include/spdlog/fmt/bundled/format.h"
 
-BEGIN_MSPECS
-	DEF_SPEC(mspec_academy_smith, TRAP_MGREET | TRAP_MGIVE | TRAP_MSPEECH) /* smith quest */
-	DEF_SPEC(mspec_academy_greeters, TRAP_MGREET | TRAP_MSPEECH)
-	DEF_SPEC(mspec_horde_tanner, TRAP_MGREET | TRAP_MGIVE)
-	DEF_SPEC(mspec_scared_soldier, TRAP_MGREET)
-	DEF_SPEC(mspec_academy_pet, TRAP_MSPEECH | TRAP_MPULSE | TRAP_MDEATH)
-	DEF_SPEC(mspec_minotaur_zombie, TRAP_MONEHIT)
-	DEF_SPEC(mspec_fallendesert_spirits, TRAP_MDEATH)
-END_SPECS
-
-BEGIN_MEVENT_TYPES
-	MEVENT("beat", TRAP_MBEAT)
-	MEVENT("fight", TRAP_MFIGHT)
-	MEVENT("give", TRAP_MGIVE)
-	MEVENT("misc", TRAP_MMISC)
-	MEVENT("move", TRAP_MMOVE)
-	MEVENT("death", TRAP_MDEATH)
-	MEVENT("pulse", TRAP_MPULSE)
-	MEVENT("speech", TRAP_MSPEECH)
-	MEVENT("entry", TRAP_MENTRY)
-	MEVENT("attack", TRAP_MATTACK)
-	MEVENT("aggress", TRAP_MAGGRESS)
-	MEVENT("greet", TRAP_MGREET)
-	MEVENT("onehit", TRAP_MONEHIT)
-END_EVENT_TYPES
+// The program table lives at the bottom of this file, after the handlers.
 
 // Fallen Desert Progs
-BEGIN_SPEC(mspec_fallendesert_spirits)
-	EVENT_MDEATH
+
+/// Opens the cave to the north when the spirits are killed.
+/// @param ch The killer.
+/// @param mob The spirits that died.
+/// @return Always 0, so the spirits die normally.
+/// @note Body taken from the EVENT_MDEATH block of mspec_fallendesert_spirits.
+static int fallendesert_spirits_death(CHAR_DATA *ch, CHAR_DATA *mob)
+{
 		EXIT_DATA *pexit = ch->in_room->exit[Directions::North];
 
 		REMOVE_BIT(pexit->exit_info, EX_LOCKED);
@@ -59,13 +41,21 @@ BEGIN_SPEC(mspec_fallendesert_spirits)
 
 		act("With a last wail of anguish, the spirits explode causing a shadow to engulf the cave....", mob, 0, 0, TO_ROOM);
 		act("As the bright light recedes a pinpoint of light coming through a hole to the north.", mob, 0, 0, TO_ROOM);
-	END_EVENT
-END_SPEC
 
-BEGIN_SPEC(mspec_minotaur_zombie)
-	EVENT_MONEHIT
-		CHAR_DATA *mob = victim;
+		return 0;
+}
 
+/// Rematerializes behind an unskilled attacker and counterattacks.
+/// @param ch The attacker.
+/// @param mob The zombie taking the blow.
+/// @param wield The attacker's weapon. May be null.
+/// @return 1 when the counterattack lands, which cancels the attacker's blow.
+///         0 otherwise.
+/// @note Body taken from the EVENT_MONEHIT block of mspec_minotaur_zombie. The
+///       macro bound the mob under the name victim and the body aliased it to
+///       mob, so the alias is gone.
+static int minotaur_zombie_one_hit(CHAR_DATA *ch, CHAR_DATA *mob, OBJ_DATA *wield, float &, int &, int &)
+{
 		if (number_percent() > 25)
 		{
 			if (get_skill(ch, gsn_enhanced_damage) < 2)
@@ -85,11 +75,17 @@ BEGIN_SPEC(mspec_minotaur_zombie)
 			one_hit_new(mob, ch, TYPE_UNDEFINED, HIT_SPECIALS, HIT_UNBLOCKABLE, HIT_NOADD, 80, "flank attack");
 			return 1;
 		}
-	END_EVENT
-END_SPEC
 
-BEGIN_SPEC(mspec_academy_greeters)
-	EVENT_MGREET
+		return 0;
+}
+
+/// Points new recruits at an area suited to their level.
+/// @param ch The character who entered.
+/// @param mob The greeter.
+/// @return Always 0.
+/// @note Body taken from the EVENT_MGREET block of mspec_academy_greeters.
+static int academy_greeters_greet(CHAR_DATA *ch, CHAR_DATA *mob)
+{
 	if (ch->in_room->vnum == 24537)
 	{
 		if (ch->level < 4)
@@ -99,11 +95,18 @@ BEGIN_SPEC(mspec_academy_greeters)
 		else
 			mprog_tell(1, "Greetings, recruit.  To the west is the Outlying Wilds, which should be a good challenge for you.", mob, ch);
 	}
-	END_EVENT
-END_SPEC
 
-BEGIN_SPEC(mspec_horde_tanner)
-	EVENT_MGIVE
+	return 0;
+}
+
+/// Butchers a handed-over corpse into slices of raw meat.
+/// @param ch The character handing over the corpse.
+/// @param mob The tanner.
+/// @param obj The object handed over.
+/// @return Always 0.
+/// @note Body taken from the EVENT_MGIVE block of mspec_horde_tanner.
+static int horde_tanner_give(CHAR_DATA *ch, CHAR_DATA *mob, OBJ_DATA *obj)
+{
 		if (obj->item_type == ITEM_CORPSE_NPC)
 		{
 			OBJ_DATA *venison = nullptr;
@@ -135,8 +138,9 @@ BEGIN_SPEC(mspec_horde_tanner)
 
 			extract_obj(obj);
 		}
-	END_EVENT
-END_SPEC
+
+		return 0;
+}
 
 void create_academy_pet(CHAR_DATA *ch)
 {
@@ -368,54 +372,61 @@ void apet_walk_to_room(CHAR_DATA *ch, int vnum)
 	RS.Queue.AddToQueue(2, "apet_walk_to_room", "apet_walk_to_room", apet_walk_to_room, ch, vnum);
 }
 
-BEGIN_SPEC(mspec_academy_pet)
-	EVENT_MPULSE
-		CHAR_DATA *player = Deref(ch->leader);
+/// Keeps the pet with its owner and offers occasional advice.
+/// @param mob The pet being updated.
+/// @return Always 0.
+/// @note Body taken from the EVENT_MPULSE block of mspec_academy_pet. That macro
+///       bound the pet under the name ch, while the speech and death blocks of
+///       the same program used ch for the other character and mob for the pet.
+///       The body is renamed so that mob means the pet in every handler here.
+static int academy_pet_pulse(CHAR_DATA *mob)
+{
+		CHAR_DATA *player = Deref(mob->leader);
 
 		if (player == nullptr)
 		{
-			extract_char(ch, true);
+			extract_char(mob, true);
 			return 0;
 		}
 
 		if (player->level > 22 && !is_immortal(player))
 		{
-			do_say(ch, "You are strong enough to stand on your own now.  Perhaps we shall meet again.");
-			act("$n fades into the shadows.", ch, 0, 0, TO_ROOM);
+			do_say(mob, "You are strong enough to stand on your own now.  Perhaps we shall meet again.");
+			act("$n fades into the shadows.", mob, 0, 0, TO_ROOM);
 
 			player->pet = nullptr;
-			ch->leader = nullptr;
-			ch->master = nullptr;
+			mob->leader = nullptr;
+			mob->master = nullptr;
 
-			extract_char(ch, true);
+			extract_char(mob, true);
 			return 0;
 		}
 
-		if (ch->in_room != player->in_room)
+		if (mob->in_room != player->in_room)
 		{
-			if (Deref(ch->fighting))
+			if (Deref(mob->fighting))
 			{
-				act("$n seems to fade into the shadows.", ch, 0, 0, TO_ROOM);
-				stop_fighting(ch, true);
+				act("$n seems to fade into the shadows.", mob, 0, 0, TO_ROOM);
+				stop_fighting(mob, true);
 			}
 
-			char_from_room(ch);
-			char_to_room(ch, player->in_room);
+			char_from_room(mob);
+			char_to_room(mob, player->in_room);
 
-			act("$n emerges from the shadows behind you.", ch, 0, player, TO_VICT);
+			act("$n emerges from the shadows behind you.", mob, 0, player, TO_VICT);
 			return 0;
 		}
 
-		if (ch->hit < ch->max_hit / 3)
-			stop_fighting(ch, true);
+		if (mob->hit < mob->max_hit / 3)
+			stop_fighting(mob, true);
 
-		if (ch->in_room->vnum == 24527 && number_percent() > 90)
+		if (mob->in_room->vnum == 24527 && number_percent() > 90)
 		{
-			do_say(ch, "Things in Shalar can often be deceptive at first glance.  Perhaps the bust in this room is worth a second look.");
+			do_say(mob, "Things in Shalar can often be deceptive at first glance.  Perhaps the bust in this room is worth a second look.");
 			return 0;
 		}
 
-		if (number_percent() > 96 && !Deref(ch->fighting) && !IS_SET(ch->comm, COMM_NOGOSSIP))
+		if (number_percent() > 96 && !Deref(mob->fighting) && !IS_SET(mob->comm, COMM_NOGOSSIP))
 		{
 			char *msg;
 
@@ -443,12 +454,21 @@ BEGIN_SPEC(mspec_academy_pet)
 			if (player->level < 15 && number_percent() > 50)
 				msg = "When you are ready to leave the Academy, walk out or recall and you will be trained to the twentieth level of your guild.";
 
-			do_say(ch, msg);
+			do_say(mob, msg);
 			return 0;
 		}
-	END_EVENT
 
-	EVENT_MSPEECH
+		return 0;
+}
+
+/// Answers the owner's questions and leads them to places in Cimar.
+/// @param ch The character speaking.
+/// @param mob The pet.
+/// @param argument What was said. Tokenized in place with one_argument.
+/// @return Always 0.
+/// @note Body taken from the EVENT_MSPEECH block of mspec_academy_pet.
+static int academy_pet_speech(CHAR_DATA *ch, CHAR_DATA *mob, char *argument)
+{
 		if (ch != Deref(mob->leader))
 			return 0;
 
@@ -617,9 +637,19 @@ BEGIN_SPEC(mspec_academy_pet)
 			REMOVE_BIT(mob->comm, COMM_NOGOSSIP);
 			return 0;
 		}
-	END_EVENT
 
-	EVENT_MDEATH
+		return 0;
+}
+
+/// Keeps the pet alive when it is killed, so long as it still has an owner.
+/// @param mob The pet.
+/// @return 1, which stops the death routine so the pet survives.
+/// @note Body taken from the EVENT_MDEATH block of mspec_academy_pet. This
+///       handler is reachable because the program now advertises the events it
+///       fills. Under the mask it was never reached, since the mask omitted
+///       TRAP_MDEATH while the body implemented it.
+static int academy_pet_death(CHAR_DATA *, CHAR_DATA *mob)
+{
 		mob->hit = mob->max_hit / 3;
 
 		stop_fighting(mob, true);
@@ -628,5 +658,64 @@ BEGIN_SPEC(mspec_academy_pet)
 			extract_char(mob, true);
 
 		return 1;
-	END_EVENT
-END_SPEC
+}
+
+//////////////////////////////////////////////////////////////////////
+//////// ALL SPEC CODE IS ABOVE HERE - BELOW IS MAINTENANCE //////////
+
+const MSpec mspec_table[] =
+{
+	{
+		.name = "mspec_academy_smith",		/* smith quest */
+		.on_greet = academy_smith_greet,
+		.on_give = academy_smith_give,
+		.on_speech = academy_smith_speech
+	},
+	{
+		.name = "mspec_academy_greeters",
+		.on_greet = academy_greeters_greet
+	},
+	{
+		.name = "mspec_horde_tanner",
+		.on_give = horde_tanner_give
+	},
+	{
+		.name = "mspec_scared_soldier",
+		.on_greet = scared_soldier_greet
+	},
+	{
+		.name = "mspec_academy_pet",
+		.on_speech = academy_pet_speech,
+		.on_pulse = academy_pet_pulse,
+		.on_death = academy_pet_death
+	},
+	{
+		.name = "mspec_minotaur_zombie",
+		.on_one_hit = minotaur_zombie_one_hit
+	},
+	{
+		.name = "mspec_fallendesert_spirits",
+		.on_death = fallendesert_spirits_death
+	},
+	{ }
+};
+
+/// Sends the names of the events a program handles to a character.
+/// @param spec The program to describe. May be null, in which case nothing is sent.
+/// @param to The character to send the list to.
+/// @note The names match the strings the MEVENT entries of the old mevent_table
+///       used, so builder facing output is unchanged for the events that a
+///       program can actually handle.
+void mspec_event_names(const MSpec *spec, CHAR_DATA *to)
+{
+	if (spec == nullptr)
+		return;
+
+	if (spec->on_greet) send_to_char("greet ", to);
+	if (spec->on_give) send_to_char("give ", to);
+	if (spec->on_speech) send_to_char("speech ", to);
+	if (spec->on_pulse) send_to_char("pulse ", to);
+	if (spec->on_death) send_to_char("death ", to);
+	if (spec->on_one_hit) send_to_char("onehit ", to);
+	if (spec->on_move) send_to_char("move ", to);
+}

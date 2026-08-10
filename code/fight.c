@@ -971,11 +971,8 @@ int one_hit_new(CHAR_DATA *ch, CHAR_DATA *victim, int dt, bool specials, bool bl
 
 	// mob onehit [mhit] fires when mob is hit, but item onehit fires when item does the hitting
 
-	if (is_npc(victim) && TRAPS_MEVENT(victim, TRAP_MONEHIT))
-	{
-		if (CALL_MEVENT(victim, TRAP_MONEHIT, ch, victim, wield, &dam, &dt, &dam_type) > 0)
-			return 0;
-	}
+	if (spec_mob_one_hit(victim, ch, wield, dam, dt, dam_type) > 0)
+		return 0;
 
 	result = damage_new(ch, victim, (int)dam, dt, dam_type, true, blockable, addition, multiplier, dnoun);
 
@@ -3367,11 +3364,8 @@ void raw_kill(CHAR_DATA *ch, CHAR_DATA *victim)
 			return;
 	}
 
-	if (is_npc(victim) && TRAPS_MEVENT(victim, TRAP_MDEATH))
-	{
-		if (CALL_MEVENT(victim, TRAP_MDEATH, ch, victim) > 0)
-			return;
-	}
+	if (spec_mob_death(victim, ch) > 0)
+		return;
 
 	temp_death_log(ch, victim);
 	mob_death_log(ch, victim);

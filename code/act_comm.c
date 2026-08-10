@@ -774,8 +774,7 @@ void do_say(CHAR_DATA *ch, char *argument)
 		if (IS_SET(room_char->progtypes, MPROG_SPEECH) && room_char != ch)
 			room_char->pIndexData->mprogs->speech_prog(room_char, ch, argument);
 
-		if (TRAPS_MEVENT(room_char, TRAP_MSPEECH))
-			CALL_MEVENT(room_char, TRAP_MSPEECH, ch, room_char, argument);
+		spec_mob_speech(room_char, ch, argument);
 	}
 
 	report_cabal_items(ch, argument);
@@ -950,8 +949,7 @@ void do_whisper(CHAR_DATA *ch, char *argument) /* whisper -- dioxide */
 				if (IS_SET(victim->progtypes, MPROG_SPEECH) && victim != ch)
 					victim->pIndexData->mprogs->speech_prog(victim, ch, argument);
 
-				if (TRAPS_MEVENT(victim, TRAP_MSPEECH))
-					CALL_MEVENT(victim, TRAP_MSPEECH, ch, victim, argument);
+				spec_mob_speech(victim, ch, argument);
 
 				if (is_affected(victim, gsn_word_of_command) && strstr(argument, victim->pcdata->command[0]))
 					command_execute(victim);

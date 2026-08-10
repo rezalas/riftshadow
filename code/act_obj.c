@@ -1114,8 +1114,7 @@ void do_give(CHAR_DATA *ch, char *argument)
 	if (IS_SET(victim->progtypes, MPROG_GIVE))
 		(victim->pIndexData->mprogs->give_prog)(victim, ch, obj);
 
-	if (TRAPS_MEVENT(victim, TRAP_MGIVE))
-		CALL_MEVENT(victim, TRAP_MGIVE, ch, victim, obj);
+	spec_mob_give(victim, ch, obj);
 
 	spec_obj_give(obj, ch, victim);
 }

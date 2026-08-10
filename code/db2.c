@@ -383,17 +383,16 @@ void load_specs(FILE *fp)
 				pMobIndex = get_mob_index(fread_number(fp));
 				strcpy(progname, fread_word(fp));
 
-				for (i = 0; mspec_table[i].spec_name; i++)
+				for (i = 0; mspec_table[i].name; i++)
 				{
-					if (!str_cmp(progname, mspec_table[i].spec_name))
+					if (!str_cmp(progname, mspec_table[i].name))
 					{
-						pMobIndex->spec_prog.trapvector = mspec_table[i].spec_events;
-						pMobIndex->spec_prog.func = mspec_table[i].spec_func;
+						pMobIndex->spec = &mspec_table[i];
 						break;
 					}
 				}
 
-				if (!mspec_table[i].spec_name)
+				if (!mspec_table[i].name)
 					RS.Logger.Warn("Error: Unable to load mspec for #{}.", pMobIndex->vnum);
 
 				break;
@@ -463,8 +462,7 @@ void load_mobs(FILE *fp)
 		pMobIndex->level = fread_number(fp);
 		pMobIndex->SetClass(CLASS_NONE);
 		pMobIndex->cabal = 0;
-		pMobIndex->spec_prog.trapvector = 0;
-		pMobIndex->spec_prog.func = nullptr;
+		pMobIndex->spec = nullptr;
 
 		if (!mindex_list)
 			mindex_list = pMobIndex;

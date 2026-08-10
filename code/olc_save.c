@@ -829,18 +829,10 @@ void save_specs(FILE *fp, AREA_DATA *pArea)
 	{
 		for (pMob = mob_index_hash[iHash]; pMob; pMob = pMob->next)
 		{
-			if (pMob->area != pArea || !pMob->spec_prog.func)
+			if (pMob->area != pArea || !pMob->spec)
 				continue;
 
-			for (i = 0; mspec_table[i].spec_name; i++)
-			{
-				if (mspec_table[i].spec_func == pMob->spec_prog.func)
-					fprintf(fp, "M %d %s\n", pMob->vnum, mspec_table[i].spec_name);
-				/*
-				else if(mspec_table[i].spec_func != pMob->spec_prog.func)
-					RS.Logger.Warn("Problem saving mspec on mob {}.", pMob->vnum);
-				*/
-			}
+			fprintf(fp, "M %d %s\n", pMob->vnum, pMob->spec->name);
 		}
 	}
 

@@ -5,7 +5,6 @@
 
 #include "fwd.h"
 #include "limits.h"
-#include "spec_func.h"
 #include "speech_data.h"						// SPEECH_DATA held by value in mob->speech
 #include "../characterClasses/class.h"		// CClass, used by the inline accessors
 
@@ -87,7 +86,10 @@ public:
 	int swealth;
 	char *attack_yell;
 	short profs_taught[MAX_PROFS_TAUGHT_BY_MOB];
-	SPEC_FUNC spec_prog;
+
+	// Attached mob special program, or null. Owned by the static table in
+	// mspec.c, so this is a borrowed pointer and is never freed.
+	const struct MSpec *spec;
 private:
 	CClass *my_class;
 };
