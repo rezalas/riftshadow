@@ -16,7 +16,6 @@ typedef int SFUN (long event_vector, ...);
 #define DECLARE_SPEC(sname)		int sname (long event_vector, ...)
 #define EVENT_TRAP(event)		if(event_vector == event) {
 #define END_EVENT			} }
-#define BV(x)				pow(2,x)
 #define TRAPS_IEVENT(owner, event)	owner->pIndexData->spec_prog.trapvector & event
 #define TRAPS_MEVENT(owner, event)	IS_NPC(owner) ? owner->pIndexData->spec_prog.trapvector & event : false
 #define CALL_IEVENT(owner, event, ...)	(*owner->pIndexData->spec_prog.func) (event, __VA_ARGS__)
@@ -91,11 +90,6 @@ long spec_events;
 				 CHAR_DATA *ch = (CHAR_DATA *)va_arg(arglist, void *); \
 				 CHAR_DATA *victim = (CHAR_DATA *)va_arg(arglist, void *); \
 				 OBJ_DATA *obj = (OBJ_DATA *)va_arg(arglist, void *); \
-				 END_TRAP;
-				 
-#define EVENT_TRAP_DO_FUN		EVENT_TRAP(TRAP_IDOFUN) START_TRAP; { \
-				 CHAR_DATA *ch = (CHAR_DATA *)va_arg(arglist, void *); \
-				 char *argument = va_arg(arglist, void *);\
 				 END_TRAP;
 				 
 #define EVENT_TRAP_ONE_HIT(event) EVENT_TRAP(event) START_TRAP; { \
