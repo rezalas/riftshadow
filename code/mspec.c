@@ -28,7 +28,7 @@ BEGIN_MSPECS
 	DEF_SPEC(mspec_academy_greeters, TRAP_MGREET | TRAP_MSPEECH)
 	DEF_SPEC(mspec_horde_tanner, TRAP_MGREET | TRAP_MGIVE)
 	DEF_SPEC(mspec_scared_soldier, TRAP_MGREET)
-	DEF_SPEC(mspec_academy_pet, TRAP_MSPEECH | TRAP_MPULSE)
+	DEF_SPEC(mspec_academy_pet, TRAP_MSPEECH | TRAP_MPULSE | TRAP_MDEATH)
 	DEF_SPEC(mspec_minotaur_zombie, TRAP_MONEHIT)
 	DEF_SPEC(mspec_fallendesert_spirits, TRAP_MDEATH)
 END_SPECS
