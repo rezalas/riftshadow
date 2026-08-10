@@ -220,8 +220,56 @@ def main():
         s.fail("'who' line has no class tag: %r" % line.strip())
     print(">>> who lists a class tag (%s)" % tag.group(1))
 
+    cast_a_spell(s)
+
     s.sock.close()
     return 0
+
+
+def cast_a_spell(s):
+    """Quaff the starting potion, which is the one spell cast a brand new
+    character can perform reliably.
+
+    Casting by hand is not usable as a check here. A new character knows its
+    spells at 1%, so the skill roll almost always fails and the spell function
+    is never reached, and practising first needs a guild the academy does not
+    contain. A potion has no skill roll: obj_cast_spell runs the spell every
+    time.
+
+    That matters beyond convenience. obj_cast_spell is a different producer of
+    a spell's target than do_cast is, it is not exercised by any other test,
+    and it is one of the paths that resolves what a spell is aimed at. This
+    asserts that the potion is drunk and that its spells then report their own
+    effect, so a target arriving at the spell as the wrong kind of thing, or as
+    nothing at all, shows up as a missing effect line rather than passing
+    silently.
+    """
+    s.send("quaff potion")
+    reply = s.recv(2.5)
+
+    if "You quaff the contents" not in reply:
+        s.fail("quaffing the starting potion produced no drink message")
+
+    # Quaffing prints its own line about magic flowing through the body before
+    # any spell runs, so that line proves only that the potion was consumed.
+    # The spells themselves report separately, and it is those lines that prove
+    # a spell body ran on the target obj_cast_spell built. Counting every line
+    # mentioning magic would pass even if all of the potion's spells were
+    # skipped.
+    lines = [line.strip() for line in reply.splitlines() if line.strip()]
+    consumed = [line for line in lines if "flows through your body" in line]
+    effects = [line for line in lines
+               if "tingle" in line and "flows through your body" not in line]
+
+    if not consumed:
+        s.fail("the potion was drunk but the magic never took hold")
+
+    if not effects:
+        s.fail("the potion's magic took hold but no spell reported an effect, "
+               "so no spell body ran on the target it was given")
+
+    print(">>> quaff: potion drunk, %d spell effect line(s)" % len(effects))
+    print(">>> spell dispatch reached a spell body: %r" % effects[0])
 
 
 if __name__ == "__main__":
