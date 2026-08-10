@@ -1046,8 +1046,7 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 			if (IS_SET(obj->progtypes, IPROG_GREET))
 				obj->pIndexData->iprogs->greet_prog(obj, ch);
 
-			if (TRAPS_IEVENT(obj, TRAP_IGREET))
-				CALL_IEVENT(obj, TRAP_IGREET, ch, obj);
+			spec_obj_greet(obj, ch);
 		}
 
 		CHAR_DATA *lastFought = Deref(fch->last_fought);
@@ -1515,11 +1514,8 @@ void do_open(CHAR_DATA *ch, char *argument)
 				return;
 		}
 
-		if (TRAPS_IEVENT(obj, TRAP_IOPEN))
-		{
-			if (CALL_IEVENT(obj, TRAP_IOPEN, ch, obj))
-				return;
-		}
+		if (spec_obj_open(obj, ch))
+			return;
 
 		REMOVE_BIT_OLD(obj->value[1], CONT_CLOSED);
 		

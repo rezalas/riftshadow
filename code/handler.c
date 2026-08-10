@@ -1911,8 +1911,8 @@ void equip_char(CHAR_DATA *ch, OBJ_DATA *obj, int iWear, bool show)
 	if (show && IS_SET(obj->progtypes, IPROG_WEAR))
 		(obj->pIndexData->iprogs->wear_prog)(obj, ch);
 
-	if (show && TRAPS_IEVENT(obj, TRAP_IWEAR))
-		CALL_IEVENT(obj, TRAP_IWEAR, ch, obj);
+	if (show)
+		spec_obj_wear(obj, ch);
 
 	if (iWear == WEAR_COSMETIC)
 		return;
@@ -1971,8 +1971,8 @@ void unequip_char(CHAR_DATA *ch, OBJ_DATA *obj, bool show)
 	if (show && IS_SET(obj->progtypes, IPROG_REMOVE))
 		(obj->pIndexData->iprogs->remove_prog)(obj, ch);
 
-	if (show && TRAPS_IEVENT(obj, TRAP_IREMOVE))
-		CALL_IEVENT(obj, TRAP_IREMOVE, ch, obj);
+	if (show)
+		spec_obj_remove(obj, ch);
 
 	if (obj->wear_loc == WEAR_COSMETIC)
 		return;

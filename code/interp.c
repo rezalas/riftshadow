@@ -923,8 +923,7 @@ void interpret(CHAR_DATA *ch, char *argument)
 		if (IS_SET(vpobj->progtypes, IPROG_VERB))
 			(vpobj->pIndexData->iprogs->verb_prog)(vpobj, ch, arg_dup);
 
-		if (TRAPS_IEVENT(vpobj, TRAP_IVERB))
-			CALL_IEVENT(vpobj, TRAP_IVERB, ch, vpobj, command, arg_dup);
+		spec_obj_verb(vpobj, ch, command, arg_dup);
 
 		return;
 	}
@@ -1110,11 +1109,8 @@ void interpret(CHAR_DATA *ch, char *argument)
 	OBJ_DATA *iObj;
 	for (iObj = ch->carrying; iObj; iObj = iObj->next_content)
 	{
-		if (TRAPS_IEVENT(iObj, TRAP_IDOFUN))
-		{
-			if (CALL_IEVENT(iObj, TRAP_IDOFUN, ch, iObj, cmd, sn, vo))
-				return;
-		}
+		if (spec_obj_do_fun(iObj, ch, cmd, sn, vo))
+			return;
 	}
 
 	(*cmd_table[cmd].do_fun)(ch, (char *)vo);

@@ -788,8 +788,7 @@ void do_say(CHAR_DATA *ch, char *argument)
 		if (IS_SET(char_obj->progtypes, IPROG_SPEECH) && char_obj->pIndexData->iprogs)
 			char_obj->pIndexData->iprogs->speech_prog(char_obj, ch, argument);
 
-		if (TRAPS_IEVENT(char_obj, TRAP_ISPEECH))
-			CALL_IEVENT(char_obj, TRAP_ISPEECH, ch, char_obj, argument);
+		spec_obj_speech(char_obj, ch, argument);
 	}
 
 	for (auto char_obj = ch->in_room->contents; char_obj != nullptr; char_obj = char_obj->next_content)
@@ -797,8 +796,7 @@ void do_say(CHAR_DATA *ch, char *argument)
 		if (IS_SET(char_obj->progtypes, IPROG_SPEECH) && char_obj->pIndexData->iprogs)
 			char_obj->pIndexData->iprogs->speech_prog(char_obj, ch, argument);
 
-		if (TRAPS_IEVENT(char_obj, TRAP_ISPEECH))
-			CALL_IEVENT(char_obj, TRAP_ISPEECH, ch, char_obj, argument);
+		spec_obj_speech(char_obj, ch, argument);
 	}
 }
 

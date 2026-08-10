@@ -306,8 +306,7 @@ void get_obj(CHAR_DATA *ch, OBJ_DATA *obj, OBJ_DATA *container, bool pcheck)
 		if (IS_SET(obj->progtypes, IPROG_GET))
 			(obj->pIndexData->iprogs->get_prog)(obj, ch);
 
-		if (TRAPS_IEVENT(obj, TRAP_ILOOT))
-			CALL_IEVENT(obj, TRAP_ILOOT, ch, nullptr, obj);
+		spec_obj_get(obj, ch, nullptr, obj);
 	}
 }
 
@@ -487,11 +486,8 @@ void do_get(CHAR_DATA *ch, char *argument)
 					return;
 			}
 
-			if (TRAPS_IEVENT(container, TRAP_ILOOT))
-			{
-				if (CALL_IEVENT(container, TRAP_ILOOT, ch, container, obj))
-					return;
-			}
+			if (spec_obj_get(container, ch, container, obj))
+				return;
 
 			if (isPcCorpse
 				&& is_affected_obj(container, gsn_noxious_ward)
@@ -536,11 +532,8 @@ void do_get(CHAR_DATA *ch, char *argument)
 							return;
 					}
 
-					if (TRAPS_IEVENT(container, TRAP_ILOOT))
-					{
-						if (CALL_IEVENT(container, TRAP_ILOOT, ch, container, obj))
-							return;
-					}
+					if (spec_obj_get(container, ch, container, obj))
+						return;
 
 					get_obj(ch, obj, container, false);
 
@@ -942,8 +935,7 @@ void do_drop(CHAR_DATA *ch, char *argument)
 				if (IS_SET(ch->in_room->progtypes, RPROG_DROP))
 					(ch->in_room->rprogs->drop_prog)(ch->in_room, ch, obj);
 
-				if (TRAPS_IEVENT(obj, TRAP_IDROP))
-					CALL_IEVENT(obj, TRAP_IDROP, ch, obj);
+				spec_obj_drop(obj, ch);
 
 				if (is_obj_stat(obj, ITEM_MELT_DROP))
 				{
@@ -1125,8 +1117,7 @@ void do_give(CHAR_DATA *ch, char *argument)
 	if (TRAPS_MEVENT(victim, TRAP_MGIVE))
 		CALL_MEVENT(victim, TRAP_MGIVE, ch, victim, obj);
 
-	if (TRAPS_IEVENT(obj, TRAP_IGIVE))
-		CALL_IEVENT(obj, TRAP_IGIVE, ch, victim, obj);
+	spec_obj_give(obj, ch, victim);
 }
 
 void do_skin(CHAR_DATA *ch, char *argument)
@@ -2843,11 +2834,8 @@ void do_sacrifice(CHAR_DATA *ch, char *argument)
 			return;
 	}
 
-	if (TRAPS_IEVENT(obj, TRAP_ISAC))
-	{
-		if (CALL_IEVENT(obj, TRAP_ISAC, ch, obj))
-			return;
-	}
+	if (spec_obj_sacrifice(obj, ch))
+		return;
 
 	if ((obj->item_type == ITEM_CORPSE_NPC || obj->item_type == ITEM_CONTAINER) && obj->contains)
 	{

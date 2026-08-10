@@ -3043,8 +3043,7 @@ void iprog_pulse_update(bool isTick)
 			if (IS_SET(obj->progtypes, IPROG_PULSE))
 				(obj->pIndexData->iprogs->pulse_prog)(obj, isTick);
 
-			if (TRAPS_IEVENT(obj, TRAP_IPULSE))
-				CALL_IEVENT(obj, TRAP_IPULSE, obj, isTick);
+			spec_obj_pulse(obj, isTick);
 		}
 	}
 }

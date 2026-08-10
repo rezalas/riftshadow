@@ -378,7 +378,7 @@ OBJ_INDEX_DATA *new_obj_index(void)
 		pObj->value[value] = 0;
 	}
 
-	pObj->spec_prog.trapvector = 0;
+	pObj->spec = nullptr;
 	pObj->new_format = true; /* ROM */
 
 	zero_vector(pObj->progtypes);

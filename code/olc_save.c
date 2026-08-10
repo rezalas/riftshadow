@@ -818,18 +818,10 @@ void save_specs(FILE *fp, AREA_DATA *pArea)
 	{
 		for (pObjIndex = obj_index_hash[iHash]; pObjIndex; pObjIndex = pObjIndex->next)
 		{
-			if (pObjIndex->area != pArea || !pObjIndex->spec_prog.func)
+			if (pObjIndex->area != pArea || !pObjIndex->spec)
 				continue;
 
-			for (i = 0; ispec_table[i].spec_name; i++)
-			{
-				if (ispec_table[i].spec_func == pObjIndex->spec_prog.func)
-					fprintf(fp, "I %d %s\n", pObjIndex->vnum, ispec_table[i].spec_name);
-				/*
-				else
-					RS.Logger.Warn("Problem saving ispec on obj {}.", pObjIndex->vnum);
-				*/
-			}
+			fprintf(fp, "I %d %s\n", pObjIndex->vnum, pObjIndex->spec->name);
 		}
 	}
 

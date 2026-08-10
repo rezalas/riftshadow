@@ -348,17 +348,16 @@ void load_specs(FILE *fp)
 			case 'I':
 				pObjIndex = get_obj_index(fread_number(fp));
 				strcpy(progname, fread_word(fp));
-				for (i = 0; ispec_table[i].spec_name; i++)
+				for (i = 0; ispec_table[i].name; i++)
 				{
-					if (!str_cmp(progname, ispec_table[i].spec_name))
+					if (!str_cmp(progname, ispec_table[i].name))
 					{
-						pObjIndex->spec_prog.trapvector = ispec_table[i].spec_events;
-						pObjIndex->spec_prog.func = ispec_table[i].spec_func;
+						pObjIndex->spec = &ispec_table[i];
 						break;
 					}
 				}
 
-				if (!ispec_table[i].spec_name)
+				if (!ispec_table[i].name)
 					RS.Logger.Warn("Error: Unable to load ispec for #{}.", pObjIndex->vnum);
 
 				break;
@@ -1060,10 +1059,9 @@ void load_objs(FILE *fp)
 		pObjIndex->remove_echo[1] = nullptr;
 		pObjIndex->wear_loc_name = nullptr;
 		pObjIndex->affected.clear();
-		pObjIndex->spec_prog.trapvector = 0;
+		pObjIndex->spec = nullptr;
 		pObjIndex->cabal = 0;
 		pObjIndex->verb = nullptr;
-		pObjIndex->spec_prog.func = nullptr;
 
 		switch (pObjIndex->item_type)
 		{

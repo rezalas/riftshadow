@@ -1100,13 +1100,13 @@ bool oedit_spec(CHAR_DATA *ch, char *argument)
 		return false;
 	}
 
-	for (count = 0; ispec_table[count].spec_name; count++)
+	for (count = 0; ispec_table[count].name; count++)
 	{
-		if (!str_cmp(ispec_table[count].spec_name, prog))
+		if (!str_cmp(ispec_table[count].name, prog))
 			break;
 	}
 
-	if (!ispec_table[count].spec_name)
+	if (!ispec_table[count].name)
 	{
 		buffer = fmt::format("{} is not a valid program to choose from.\n\r", prog); //TODO: change the rest of the sprintf calls to format
 		send_to_char(buffer.c_str(), ch);
@@ -1114,17 +1114,15 @@ bool oedit_spec(CHAR_DATA *ch, char *argument)
 	}
 	else if (!str_prefix(add, "add"))
 	{
-		pObjIndex->spec_prog.func = ispec_table[count].spec_func;
-		pObjIndex->spec_prog.trapvector = ispec_table[count].spec_events;
+		pObjIndex->spec = &ispec_table[count];
 		buffer = fmt::format("Object spec prog has been set to '{}'.\n\r", prog);
 		send_to_char(buffer.c_str(), ch);
 	}
 	else if (!str_prefix(add, "del"))
 	{
-		if (pObjIndex->spec_prog.func)
+		if (pObjIndex->spec)
 		{
-			pObjIndex->spec_prog.func = nullptr;
-			pObjIndex->spec_prog.trapvector = 0;
+			pObjIndex->spec = nullptr;
 			sprintf(buf, "The item spec for this item has been cleared.\n\r");
 			send_to_char(buf, ch);
 		}
@@ -3977,14 +3975,9 @@ bool oedit_show(CHAR_DATA *ch, char *argument)
 		send_to_char(buf, ch);
 	}
 
-	if (pObj->spec_prog.func)
+	if (pObj->spec)
 	{
-		for (int i = 0; ispec_table[i].spec_name; i++)
-		{
-			if (ispec_table[i].spec_func == pObj->spec_prog.func)
-				sprintf(buf, "ISpec:            [%s]\n\r", ispec_table[i].spec_name);
-		}
-
+		sprintf(buf, "ISpec:            [%s]\n\r", pObj->spec->name);
 		send_to_char(buf, ch);
 	}
 

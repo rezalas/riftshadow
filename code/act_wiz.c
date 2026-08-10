@@ -2222,36 +2222,13 @@ void do_ostat(CHAR_DATA *ch, char *argument)
 		}
 	}
 
-	if (obj->pIndexData->spec_prog.func)
+	if (obj->pIndexData->spec)
 	{
-		int i;
-		long x;
-
-		for (i = 0; ispec_table[i].spec_name; i++)
-		{
-			if (ispec_table[i].spec_func == obj->pIndexData->spec_prog.func)
-				break;
-		}
-
-		if (!ispec_table[i].spec_name)
-		{
-			RS.Logger.Warn("Error: Invalid ispec.");
-			return;
-		}
-
-		sprintf(buf, "Item has special prog: %s\n\r", ispec_table[i].spec_name);
+		sprintf(buf, "Item has special prog: %s\n\r", obj->pIndexData->spec->name);
 		send_to_char(buf, ch);
+
 		send_to_char("Item traps on: ", ch);
-
-		for (x = 1; x < 1073741824; x = x * 2)
-		{
-			if (ispec_table[i].spec_events & x)
-			{
-				send_to_char(flag_name_lookup(x, ievent_table), ch);
-				send_to_char(" ", ch);
-			}
-		}
-
+		ispec_event_names(obj->pIndexData->spec, ch);
 		send_to_char("\n\r", ch);
 	}
 

@@ -5,7 +5,6 @@
 
 #include "fwd.h"
 #include "limits.h"
-#include "spec_func.h"
 #include "extra_descr.h"
 #include "affect_data.h"		// OBJ_APPLY_DATA held by value
 
@@ -53,7 +52,10 @@ struct obj_index_data
 	char *verb;
 	char *notes;
 	char *wear_loc_name;
-	SPEC_FUNC spec_prog;
+
+	// Attached object special program, or null. Owned by the static table in
+	// ispec.c, so this is a borrowed pointer and is never freed.
+	const struct ISpec *spec;
 };
 
 #endif /* ENTITY_OBJ_INDEX_DATA_H */

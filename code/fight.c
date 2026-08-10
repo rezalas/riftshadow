@@ -164,8 +164,7 @@ void violence_update(void)
 			if (IS_SET(obj->progtypes, IPROG_FIGHT))
 				(obj->pIndexData->iprogs->fight_prog)(obj, ch);
 
-			if (TRAPS_IEVENT(obj, TRAP_IFIGHT))
-				CALL_IEVENT(obj, TRAP_IFIGHT, ch, obj);
+			spec_obj_fight(obj, ch);
 		}
 
 		if (IS_SET(ch->progtypes, MPROG_FIGHT) && (ch->wait <= 0))
@@ -967,17 +966,14 @@ int one_hit_new(CHAR_DATA *ch, CHAR_DATA *victim, int dt, bool specials, bool bl
 		dt = rdt + TYPE_HIT;
 	}
 
-	if (wield && TRAPS_IEVENT(wield, TRAP_IONEHIT))
-	{
-		if (CALL_IEVENT(wield, TRAP_IONEHIT, ch, victim, wield, &dam, &dt, &dam_type) > 0)
-			return 0;
-	}
+	if (spec_obj_one_hit(wield, ch, victim, dam, dt, dam_type) > 0)
+		return 0;
 
 	// mob onehit [mhit] fires when mob is hit, but item onehit fires when item does the hitting
 
 	if (is_npc(victim) && TRAPS_MEVENT(victim, TRAP_MONEHIT))
 	{
-		if (CALL_IEVENT(victim, TRAP_MONEHIT, ch, victim, wield, &dam, &dt, &dam_type) > 0)
+		if (CALL_MEVENT(victim, TRAP_MONEHIT, ch, victim, wield, &dam, &dt, &dam_type) > 0)
 			return 0;
 	}
 
@@ -3352,11 +3348,8 @@ void raw_kill(CHAR_DATA *ch, CHAR_DATA *victim)
 				return;
 		}
 
-		if (TRAPS_IEVENT(obj, TRAP_IDEATH))
-		{
-			if (CALL_IEVENT(obj, TRAP_IDEATH, victim, obj))
-				return;
-		}
+		if (spec_obj_death(obj, victim))
+			return;
 	}
 
 	if (is_npc(ch)
