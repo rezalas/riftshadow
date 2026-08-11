@@ -4,6 +4,7 @@
 #include <string>
 
 #include "entity/fwd.h"
+#include "entity/spell_target.h"
 
 #define HITS 					(dt==gsn_kick||dt==gsn_throw||dt==gsn_bash)
 #define PEER_BALANCE_DISTANCE	8
@@ -130,7 +131,7 @@ void do_disarm (CHAR_DATA *ch, char *argument);
 void do_surrender (CHAR_DATA *ch, char *argument);
 void do_sla (CHAR_DATA *ch, char *argument);
 void do_slay (CHAR_DATA *ch, char *argument);
-void spell_power_word_kill (int sn,int level,CHAR_DATA *ch,void *vo, int target);
+void spell_power_word_kill (int sn,int level,CHAR_DATA *ch,SpellTarget vo, int target);
 void do_herb (CHAR_DATA *ch,char *argument);
 void do_cleave (CHAR_DATA *ch,char *argument);
 void check_ground_control (CHAR_DATA *ch, CHAR_DATA *victim, float chance, int dam);

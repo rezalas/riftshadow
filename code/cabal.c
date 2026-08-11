@@ -157,7 +157,7 @@ void do_storytell(CHAR_DATA *ch, char *argument)
 }
 
 /*
-void spell_fervor(int sn, int level, CHAR_DATA *ch, void *vo, int target)
+void spell_fervor(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
 	AFFECT_DATA af;
 
@@ -184,7 +184,7 @@ void spell_fervor(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 }
 */
 
-void spell_epic(int sn, int level, CHAR_DATA *ch, void *vo, int target)
+void spell_epic(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
 	AFFECT_DATA af;
 	if (is_affected(ch, sn))
@@ -208,7 +208,7 @@ void spell_epic(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	act("$n concentrates intently for a moment, getting a wild look in $s eyes.", ch, 0, 0, TO_ROOM);
 }
 
-void spell_calm(int sn, int level, CHAR_DATA *ch, void *vo, int target)
+void spell_calm(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
 	AFFECT_DATA af;
 
@@ -241,7 +241,7 @@ void spell_calm(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	send_to_char("You manage to snap out of your rage.\n\r", ch);
 }
 
-void spell_rage(int sn, int level, CHAR_DATA *ch, void *vo, int target)
+void spell_rage(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
 	AFFECT_DATA af;
 	OBJ_DATA *obj;
@@ -622,7 +622,7 @@ void spell_rage(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	}
 }
 
-void spell_scourge(int sn, int level, CHAR_DATA *ch, void *vo, int target)
+void spell_scourge(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
 	CHAR_DATA *vch;
 	char buf[MAX_STRING_LENGTH];
@@ -648,10 +648,10 @@ void spell_scourge(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 			spell_weaken(skill_lookup("weaken"), level - 4, ch, vch, TARGET_CHAR);
 	}
 
-	spell_fireball(sn, level - 2, ch, nullptr, TAR_CHAR_OFFENSIVE);
+	spell_fireball(sn, level - 2, ch, SpellTarget(), TAR_CHAR_OFFENSIVE);
 }
 
-void spell_hunters_vision(int sn, int level, CHAR_DATA *ch, void *vo, int target)
+void spell_hunters_vision(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
 	AFFECT_DATA af;
 
@@ -680,7 +680,7 @@ void spell_hunters_vision(int sn, int level, CHAR_DATA *ch, void *vo, int target
 	send_to_char("You begin to see the world through the undeceiving eyes of a hunter.\n\r", ch);
 }
 
-void spell_hire_mercenary(int sn, int level, CHAR_DATA *ch, void *vo, int target)
+void spell_hire_mercenary(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
 	AFFECT_DATA af;
 	CHAR_DATA *merc;
@@ -804,7 +804,7 @@ void spell_hire_mercenary(int sn, int level, CHAR_DATA *ch, void *vo, int target
 	affect_to_char(ch, &af);
 }
 
-void spell_hunters_strength(int sn, int level, CHAR_DATA *ch, void *vo, int target)
+void spell_hunters_strength(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
 	AFFECT_DATA af;
 	float bcr;
@@ -834,7 +834,7 @@ void spell_hunters_strength(int sn, int level, CHAR_DATA *ch, void *vo, int targ
 	act("$n seems to move with a newfound strength and agility.", ch, 0, 0, TO_ROOM);
 }
 
-void spell_hunters_awareness(int sn, int level, CHAR_DATA *ch, void *vo, int target)
+void spell_hunters_awareness(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
 	CHAR_DATA *victim;
 	AFFECT_DATA af;
@@ -918,7 +918,7 @@ void spell_hunters_awareness(int sn, int level, CHAR_DATA *ch, void *vo, int tar
 	affect_to_char(ch, &af);
 }
 
-void spell_web(int sn, int level, CHAR_DATA *ch, void *vo, int target)
+void spell_web(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
 	CHAR_DATA *victim = (CHAR_DATA *)vo;
 	AFFECT_DATA af;
@@ -955,7 +955,7 @@ void spell_web(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		affect_to_char(victim, &af);
 }
 
-void spell_informant(int sn, int level, CHAR_DATA *ch, void *vo, int target)
+void spell_informant(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
 	CHAR_DATA *victim;
 	int amount;
@@ -1063,7 +1063,7 @@ void do_howl(CHAR_DATA *ch, char *argument)
 	WAIT_STATE(ch, PULSE_VIOLENCE * 2);
 }
 
-void spell_mana_transfer(int sn, int level, CHAR_DATA *ch, void *vo, int target)
+void spell_mana_transfer(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
 	CHAR_DATA *victim = (CHAR_DATA *)vo;
 	int mod = (ch->level * 2);
@@ -1086,7 +1086,7 @@ void spell_mana_transfer(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		victim->mana = victim->max_mana;
 }
 
-void spell_scribe(int sn, int level, CHAR_DATA *ch, void *vo, int target)
+void spell_scribe(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
 	int skill, cost, ipower;
 	OBJ_DATA *obj;
@@ -1173,7 +1173,7 @@ void spell_scribe(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	act("$n makes detailed inscriptions on a scroll in $s possession.", ch, skill_table[skill].name, 0, TO_ROOM);
 }
 
-void spell_deny_magic(int sn, int level, CHAR_DATA *ch, void *vo, int target)
+void spell_deny_magic(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
 	CHAR_DATA *victim = (CHAR_DATA *)vo;
 	AFFECT_DATA af;
@@ -1209,7 +1209,7 @@ bool check_deny_magic(CHAR_DATA *ch)
 	return true;
 }
 
-void spell_bane(int sn, int level, CHAR_DATA *ch, void *vo, int target)
+void spell_bane(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
 	CHAR_DATA *victim = (CHAR_DATA *)vo;
 	int damage;
@@ -1229,7 +1229,7 @@ void spell_bane(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	damage_new(ch, victim, damage, gsn_bane, DAM_MENTAL, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "mental assault");
 }
 
-void spell_repose(int sn, int level, CHAR_DATA *ch, void *vo, int target)
+void spell_repose(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
 	AFFECT_DATA af;
 
@@ -1250,7 +1250,7 @@ void spell_repose(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	}
 }
 
-void spell_medicine(int sn, int level, CHAR_DATA *ch, void *vo, int target)
+void spell_medicine(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
 	CHAR_DATA *vch;
 	AFFECT_DATA af;
@@ -1289,7 +1289,7 @@ void spell_medicine(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	}
 }
 
-void spell_horde_communion(int sn, int level, CHAR_DATA *ch, void *vo, int target)
+void spell_horde_communion(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
 	CHAR_DATA *victim = (CHAR_DATA *)vo;
 	AFFECT_DATA af;
@@ -1445,7 +1445,7 @@ void do_exile(CHAR_DATA *ch, char *argument)
 	victim->pcdata->extitle = palloc_string(", Exiled from the Horde");
 }
 
-void spell_piety(int sn, int level, CHAR_DATA *ch, void *vo, int target)
+void spell_piety(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
 	AFFECT_DATA af;
 	char buf[MSL];
@@ -1473,7 +1473,7 @@ void spell_piety(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	act("$n stands taller as $s righteous wrath infuses $m.", ch, 0, 0, TO_ROOM);
 }
 
-void spell_fervor(int sn, int level, CHAR_DATA *ch, void *vo, int target)
+void spell_fervor(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
 	AFFECT_DATA af;
 
@@ -1513,7 +1513,7 @@ void spell_fervor(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	act("You feel your spirit rejoice as holy fervor enters you.", ch, 0, 0, TO_CHAR);
 }
 
-void spell_spiritual_healing(int sn, int level, CHAR_DATA *ch, void *vo, int target)
+void spell_spiritual_healing(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
 	AFFECT_DATA af;
 	CHAR_DATA *victim = (CHAR_DATA *)vo;
@@ -1570,7 +1570,7 @@ void spell_spiritual_healing(int sn, int level, CHAR_DATA *ch, void *vo, int tar
 	new_affect_to_char(ch, &af);
 }
 
-void spell_shroud_of_light(int sn, int level, CHAR_DATA *ch, void *vo, int target)
+void spell_shroud_of_light(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
 	AFFECT_DATA af;
 
@@ -1601,7 +1601,7 @@ void spell_shroud_of_light(int sn, int level, CHAR_DATA *ch, void *vo, int targe
 	affect_to_char(ch, &af);
 }
 
-void spell_crimson_martyr(int sn, int level, CHAR_DATA *ch, void *vo, int target)
+void spell_crimson_martyr(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
 	CHAR_DATA *victim = Deref(ch->fighting), *vch, *vch_next;
 	AFFECT_DATA af;
@@ -1683,7 +1683,7 @@ void retribution_tick(CHAR_DATA *ch, AFFECT_DATA *af)
 	af->modifier -= (int)dam;
 }
 
-void spell_retribution(int sn, int level, CHAR_DATA *ch, void *vo, int target)
+void spell_retribution(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
 	CHAR_DATA *victim = (CHAR_DATA *)vo;
 	AFFECT_DATA af;
@@ -1780,7 +1780,7 @@ void do_phalanx(CHAR_DATA *ch, char *argument)
 	}
 }
 
-void spell_safehaven(int sn, int level, CHAR_DATA *ch, void *vo, int target)
+void spell_safehaven(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
 	CHAR_DATA *victim = (CHAR_DATA *)vo;
 

@@ -4,6 +4,7 @@
 #include <stdio.h>
 
 #include "entity/fwd.h"
+#include "entity/spell_target.h"
 
 #define MAX_PIECE					12
 
@@ -38,7 +39,7 @@ void copy_vector (long copy[], const long original[]);
 void fprint_vector (FILE *fp, char *string, long vector[], bool eol);
 char *int_to_cap_string (int number);
 char *int_to_string (int number);
-void spell_summon_nephilim (int sn, int level, CHAR_DATA *ch, void *vo, int target);
+void spell_summon_nephilim (int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target);
 void do_damdice (CHAR_DATA *ch, char *argument);
 void do_devilfavor (CHAR_DATA *ch, char *argument);
 void do_chess (CHAR_DATA *ch, char *argument);

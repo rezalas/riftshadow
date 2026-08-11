@@ -54,6 +54,11 @@ struct	race_data;			typedef struct	race_data			RACE_DATA;
 struct	special_prog;		typedef struct	special_prog		SPECIAL_PROG;
 struct	note_data;			typedef struct	note_data			NOTE_DATA;
 
+// Not an entity, but named in a function type below.  Its definition lives in
+// spell_target.h, which includes this header, so it is declared rather than
+// included here.
+class	SpellTarget;
+
 //
 // Function types.
 //
@@ -63,7 +68,7 @@ struct	note_data;			typedef struct	note_data			NOTE_DATA;
 //
 
 typedef void DO_FUN (CHAR_DATA *ch, char *argument);
-typedef void SPELL_FUN (int sn, int level, CHAR_DATA *ch, void *vo, int target);
+typedef void SPELL_FUN (int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target);
 typedef void GAME_FUN (CHAR_DATA *ch, CHAR_DATA *croupier, char *argument);
 typedef void OAFF_FUN (OBJ_DATA *obj, OBJ_AFFECT_DATA *af);
 typedef void AAFF_FUN (AREA_DATA *area, AREA_AFFECT_DATA *af);

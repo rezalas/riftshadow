@@ -2221,7 +2221,7 @@ void pulse_prog_cornogun(CHAR_DATA *mob)
 			act("$n ceases flapping its wings incessantly to let out a mournful screech.", mob, 0, 0, TO_ROOM);
 			break;
 		default:
-			spell_faerie_fog(skill_lookup("faerie fog"), mob->level, mob, nullptr, TAR_IGNORE);
+			spell_faerie_fog(skill_lookup("faerie fog"), mob->level, mob, SpellTarget(), TAR_IGNORE);
 			break;
 	}
 }
@@ -2229,7 +2229,7 @@ void pulse_prog_cornogun(CHAR_DATA *mob)
 void entry_prog_cornogun(CHAR_DATA *mob)
 {
 	act("$n flaps in on its tiny wings.", mob, 0, 0, TO_ROOM);
-	spell_faerie_fog(skill_lookup("faerie fog"), mob->level, mob, nullptr, TAR_IGNORE);
+	spell_faerie_fog(skill_lookup("faerie fog"), mob->level, mob, SpellTarget(), TAR_IGNORE);
 }
 
 void pulse_prog_imp(CHAR_DATA *mob)

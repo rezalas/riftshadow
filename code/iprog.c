@@ -2388,7 +2388,7 @@ void verb_prog_rub_talisman(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 {
 	int sn = skill_lookup("word of recall");
 	int target = TAR_CHAR_DEFENSIVE;
-	void *vo = ch;
+	SpellTarget vo = ch;
 
 	act("You rub a worn patch of the wooden talisman.", ch, 0, 0, TO_CHAR);
 	act("$n vigorously rubs $p.", ch, obj, 0, TO_ROOM);

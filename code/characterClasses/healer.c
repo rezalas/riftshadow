@@ -18,7 +18,7 @@
 #include "../const.h"
 #include "../utility.h"
 
-void spell_healing_sleep(int sn, int level, CHAR_DATA *ch, void *vo, int target)
+void spell_healing_sleep(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
 	CHAR_DATA *victim = (CHAR_DATA *)vo;
 	AFFECT_DATA af;

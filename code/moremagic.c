@@ -57,7 +57,7 @@
 #include "skills.h"
 #include "db.h"
 
-void spell_enlarge(int sn, int level, CHAR_DATA *ch, void *vo, int target)
+void spell_enlarge(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
 	CHAR_DATA *victim = (CHAR_DATA *)vo;
 	AFFECT_DATA af;
@@ -111,7 +111,7 @@ void spell_enlarge(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	}
 }
 
-void spell_sunray(int sn, int level, CHAR_DATA *ch, void *vo, int target)
+void spell_sunray(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
 	CHAR_DATA *victim = (CHAR_DATA *)vo;
 	int dam = 0;
@@ -175,7 +175,7 @@ void spell_sunray(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	damage_old(ch, victim, dam, sn, DAM_LIGHT, true);
 }
 
-void spell_cleanse(int sn, int level, CHAR_DATA *ch, void *vo, int target)
+void spell_cleanse(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
 	CHAR_DATA *victim = (CHAR_DATA *)vo;
 
@@ -319,7 +319,7 @@ int get_affect_level(CHAR_DATA *ch, int sn)
 	return -1;
 }
 
-void spell_cure_deafness(int sn, int level, CHAR_DATA *ch, void *vo, int target)
+void spell_cure_deafness(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
 	CHAR_DATA *victim = (CHAR_DATA *)vo;
 
@@ -344,7 +344,7 @@ void spell_cure_deafness(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	}
 }
 
-void spell_remove_paralysis(int sn, int level, CHAR_DATA *ch, void *vo, int target)
+void spell_remove_paralysis(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
 	CHAR_DATA *victim = (CHAR_DATA *)vo;
 
@@ -369,7 +369,7 @@ void spell_remove_paralysis(int sn, int level, CHAR_DATA *ch, void *vo, int targ
 	}
 }
 
-void spell_awaken(int sn, int level, CHAR_DATA *ch, void *vo, int target)
+void spell_awaken(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
 	CHAR_DATA *victim = (CHAR_DATA *)vo;
 	AFFECT_DATA *laf;
@@ -408,7 +408,7 @@ void spell_awaken(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	}
 }
 
-void spell_resist_heat(int sn, int level, CHAR_DATA *ch, void *vo, int target)
+void spell_resist_heat(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
 	CHAR_DATA *victim = (CHAR_DATA *)vo;
 	AFFECT_DATA af;
@@ -441,7 +441,7 @@ void spell_resist_heat(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	affect_to_char(victim, &af);
 }
 
-void spell_resist_cold(int sn, int level, CHAR_DATA *ch, void *vo, int target)
+void spell_resist_cold(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
 	CHAR_DATA *victim = (CHAR_DATA *)vo;
 	AFFECT_DATA af;
@@ -474,7 +474,7 @@ void spell_resist_cold(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	affect_to_char(victim, &af);
 }
 
-void spell_resist_lightning(int sn, int level, CHAR_DATA *ch, void *vo, int target)
+void spell_resist_lightning(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
 	CHAR_DATA *victim = (CHAR_DATA *)vo;
 	AFFECT_DATA af;
@@ -507,7 +507,7 @@ void spell_resist_lightning(int sn, int level, CHAR_DATA *ch, void *vo, int targ
 	affect_to_char(victim, &af);
 }
 
-void spell_resist_mental(int sn, int level, CHAR_DATA *ch, void *vo, int target)
+void spell_resist_mental(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
 	CHAR_DATA *victim = (CHAR_DATA *)vo;
 	AFFECT_DATA af;
@@ -540,7 +540,7 @@ void spell_resist_mental(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	affect_to_char(victim, &af);
 }
 
-void spell_resist_acid(int sn, int level, CHAR_DATA *ch, void *vo, int target)
+void spell_resist_acid(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
 	CHAR_DATA *victim = (CHAR_DATA *)vo;
 	AFFECT_DATA af;
@@ -573,7 +573,7 @@ void spell_resist_acid(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	affect_to_char(victim, &af);
 }
 
-void spell_resist_negative(int sn, int level, CHAR_DATA *ch, void *vo, int target)
+void spell_resist_negative(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
 	CHAR_DATA *victim = (CHAR_DATA *)vo;
 	AFFECT_DATA af;
@@ -606,7 +606,7 @@ void spell_resist_negative(int sn, int level, CHAR_DATA *ch, void *vo, int targe
 	affect_to_char(victim, &af);
 }
 
-void spell_group_teleport(int sn, int level, CHAR_DATA *ch, void *vo, int target)
+void spell_group_teleport(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
 	ROOM_INDEX_DATA *old_room;
 	CHAR_DATA *group;
@@ -643,7 +643,7 @@ void spell_group_teleport(int sn, int level, CHAR_DATA *ch, void *vo, int target
 	}
 }
 
-void spell_soften(int sn, int level, CHAR_DATA *ch, void *vo, int target)
+void spell_soften(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
 	CHAR_DATA *victim = (CHAR_DATA *)vo;
 	AFFECT_DATA af;
@@ -673,7 +673,7 @@ void spell_soften(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	send_to_char("You feel more frail.\n\r", victim);
 }
 
-void spell_rejuvenate(int sn, int level, CHAR_DATA *ch, void *vo, int target)
+void spell_rejuvenate(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
 	CHAR_DATA *victim = (CHAR_DATA *)vo;
 	victim->hit = std::min(victim->hit + 200, (int)victim->max_hit);
@@ -686,7 +686,7 @@ void spell_rejuvenate(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		send_to_char("Ok.\n\r", ch);
 }
 
-void spell_fatigue(int sn, int level, CHAR_DATA *ch, void *vo, int target)
+void spell_fatigue(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
 	CHAR_DATA *victim = (CHAR_DATA *)vo;
 	int dam = dice(level, 4);
@@ -705,7 +705,7 @@ void spell_fatigue(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	damage_new(ch, victim, dam, sn, DAM_MENTAL, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, nullptr);
 }
 
-void spell_strength(int sn, int level, CHAR_DATA *ch, void *vo, int target)
+void spell_strength(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
 	AFFECT_DATA af;
 
@@ -733,7 +733,7 @@ void spell_strength(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	act("$n meditates for a period of time, building up $s faith in $s Deity.", ch, 0, 0, TO_ROOM);
 }
 
-void spell_remove_taint(int sn, int level, CHAR_DATA *ch, void *vo, int target)
+void spell_remove_taint(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
 	OBJ_DATA *obj = (OBJ_DATA *)vo;
 	int chance;
@@ -761,7 +761,7 @@ void spell_remove_taint(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	}
 }
 
-void spell_worldbind(int sn, int level, CHAR_DATA *ch, void *vo, int target)
+void spell_worldbind(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
 	CHAR_DATA *victim = (CHAR_DATA *)vo;
 	AFFECT_DATA af;
@@ -798,7 +798,7 @@ void waterbreath_end(CHAR_DATA *ch, AFFECT_DATA *af)
 	check_waterbreath(ch, ch->in_room);
 }
 
-void spell_waterbreath(int sn, int level, CHAR_DATA *ch, void *vo, int target)
+void spell_waterbreath(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
 	AFFECT_DATA af;
 	CHAR_DATA *victim = (CHAR_DATA *)vo;

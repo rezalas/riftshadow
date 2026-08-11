@@ -21,7 +21,7 @@
 #include "../interp.h"
 #include "../update.h"
 
-void spell_stasis_wall(int sn, int level, CHAR_DATA *ch, void *vo, int target)
+void spell_stasis_wall(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
 	int dir = 0;
 	EXIT_DATA *pexit = nullptr;
@@ -37,8 +37,9 @@ void spell_stasis_wall(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	}
 	else
 	{
-		// just copy this brutal little casting for converting a void pointer to an integer
-		dir = (int)*(int *)vo;
+		// The direction is carried by value now, so this no longer reads
+		// through a pointer into the casting function's stack frame.
+		dir = vo.AsDir();
 	}
 
 	pexit = ch->in_room->exit[dir];
@@ -211,7 +212,7 @@ void do_rune(CHAR_DATA *ch, char *argument)
 	char arg1[MAX_INPUT_LENGTH], arg2[MAX_INPUT_LENGTH], ttype[MSL];
 	OBJ_DATA *obj;
 	EXIT_DATA *pexit = nullptr;
-	void *vo;
+	SpellTarget vo;
 	int mana, where, sn, target = 0;
 
 	if (is_npc(ch) && Deref(ch->desc) == nullptr)
@@ -278,7 +279,7 @@ void do_rune(CHAR_DATA *ch, char *argument)
 		mana = std::max((int)skill_table[sn].min_mana, 100 / (2 + ch->level - skill_table[sn].skill_level[ch->Class()->GetIndex()]));
 
 	obj = nullptr;
-	vo = nullptr;
+	vo = SpellTarget();
 
 	if (!str_prefix(ttype, "armor"))
 	{
@@ -335,7 +336,7 @@ void do_rune(CHAR_DATA *ch, char *argument)
 			return;
 		}
 
-		vo = (void *)obj;
+		vo = obj;
 
 		act("$n carefully begins to scribe an intricate rune on $p.", ch, obj, 0, TO_ROOM);
 		act("You carefully begin to scribe an intricate rune on $p.", ch, obj, 0, TO_CHAR);
@@ -348,7 +349,7 @@ void do_rune(CHAR_DATA *ch, char *argument)
 			return;
 		}
 
-		vo = &where;
+		vo = SpellTarget::Direction(where);
 
 		act("$n carefully begins to scribe an intricate rune on the $t.", ch, strcmp(pexit->keyword, "") ? pexit->keyword : "door", 0, TO_ROOM);
 		act("You carefully begin to scribe an intricate rune on the $t.", ch, strcmp(pexit->keyword, "") ? pexit->keyword : "door", 0, TO_CHAR);

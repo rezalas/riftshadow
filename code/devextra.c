@@ -2136,7 +2136,7 @@ void do_commune(CHAR_DATA *ch, char *argument)
 	CHAR_DATA *victim;
 	OBJ_DATA *obj;
 	EXIT_DATA *pexit;
-	void *vo;
+	SpellTarget vo;
 	int mana;
 	int sn, where;
 	AFFECT_DATA af, *paf;
@@ -2264,7 +2264,7 @@ void do_commune(CHAR_DATA *ch, char *argument)
 	 */
 	victim = nullptr;
 	obj = nullptr;
-	vo = nullptr;
+	vo = SpellTarget();
 	target = TARGET_NONE;
 	af.aftype = AFT_COMMUNE;
 
@@ -2300,7 +2300,7 @@ void do_commune(CHAR_DATA *ch, char *argument)
 				return;
 			}
 
-			vo = (void *)victim;
+			vo = victim;
 			target = TARGET_CHAR;
 			break;
 		case TAR_CHAR_DEFENSIVE:
@@ -2327,7 +2327,7 @@ void do_commune(CHAR_DATA *ch, char *argument)
 				}
 			}
 
-			vo = (void *)victim;
+			vo = victim;
 			target = TARGET_CHAR;
 			break;
 		case TAR_CHAR_SELF:
@@ -2337,7 +2337,7 @@ void do_commune(CHAR_DATA *ch, char *argument)
 				return;
 			}
 
-			vo = (void *)ch;
+			vo = ch;
 			target = TARGET_CHAR;
 			break;
 		case TAR_OBJ_INV:
@@ -2355,7 +2355,7 @@ void do_commune(CHAR_DATA *ch, char *argument)
 				return;
 			}
 
-			vo = (void *)obj;
+			vo = obj;
 			target = TARGET_OBJ;
 			break;
 		case TAR_OBJ_CHAR_OFF:
@@ -2387,11 +2387,11 @@ void do_commune(CHAR_DATA *ch, char *argument)
 					return;
 				}
 
-				vo = (void *)victim;
+				vo = victim;
 			}
 			else if ((obj = get_obj_here(ch, target_name)) != nullptr)
 			{
-				vo = (void *)obj;
+				vo = obj;
 				target = TARGET_OBJ;
 			}
 			else
@@ -2404,17 +2404,17 @@ void do_commune(CHAR_DATA *ch, char *argument)
 		case TAR_OBJ_CHAR_DEF:
 			if (arg2[0] == '\0')
 			{
-				vo = (void *)ch;
+				vo = ch;
 				target = TARGET_CHAR;
 			}
 			else if ((victim = get_char_room(ch, target_name)) != nullptr)
 			{
-				vo = (void *)victim;
+				vo = victim;
 				target = TARGET_CHAR;
 			}
 			else if ((obj = get_obj_carry(ch, target_name, ch)) != nullptr)
 			{
-				vo = (void *)obj;
+				vo = obj;
 				target = TARGET_OBJ;
 			}
 			else
@@ -2434,7 +2434,7 @@ void do_commune(CHAR_DATA *ch, char *argument)
 				return;
 			}
 
-			vo = &where;
+			vo = SpellTarget::Direction(where);
 			target = TARGET_RUNE;
 			break;
 		default:
@@ -2570,7 +2570,7 @@ void do_call(CHAR_DATA *ch, char *argument)
 	CHAR_DATA *victim;
 	OBJ_DATA *obj;
 	EXIT_DATA *pexit;
-	void *vo;
+	SpellTarget vo;
 	int mana, where;
 	int sn;
 	int target;
@@ -2624,7 +2624,7 @@ void do_call(CHAR_DATA *ch, char *argument)
 	 */
 	victim = nullptr;
 	obj = nullptr;
-	vo = nullptr;
+	vo = SpellTarget();
 	target = TARGET_NONE;
 
 	switch (skill_table[sn].target)
@@ -2660,7 +2660,7 @@ void do_call(CHAR_DATA *ch, char *argument)
 				return;
 			}
 
-			vo = (void *)victim;
+			vo = victim;
 			target = TARGET_CHAR;
 			break;
 		case TAR_CHAR_DEFENSIVE:
@@ -2677,7 +2677,7 @@ void do_call(CHAR_DATA *ch, char *argument)
 				}
 			}
 
-			vo = (void *)victim;
+			vo = victim;
 			target = TARGET_CHAR;
 			break;
 		case TAR_CHAR_SELF:
@@ -2687,7 +2687,7 @@ void do_call(CHAR_DATA *ch, char *argument)
 				return;
 			}
 
-			vo = (void *)ch;
+			vo = ch;
 			target = TARGET_CHAR;
 			break;
 		case TAR_OBJ_INV:
@@ -2705,7 +2705,7 @@ void do_call(CHAR_DATA *ch, char *argument)
 				return;
 			}
 
-			vo = (void *)obj;
+			vo = obj;
 			target = TARGET_OBJ;
 			break;
 		case TAR_OBJ_CHAR_OFF:
@@ -2737,11 +2737,11 @@ void do_call(CHAR_DATA *ch, char *argument)
 					return;
 				}
 
-				vo = (void *)victim;
+				vo = victim;
 			}
 			else if ((obj = get_obj_here(ch, target_name)) != nullptr)
 			{
-				vo = (void *)obj;
+				vo = obj;
 				target = TARGET_OBJ;
 			}
 			else
@@ -2754,17 +2754,17 @@ void do_call(CHAR_DATA *ch, char *argument)
 		case TAR_OBJ_CHAR_DEF:
 			if (arg2[0] == '\0')
 			{
-				vo = (void *)ch;
+				vo = ch;
 				target = TARGET_CHAR;
 			}
 			else if ((victim = get_char_room(ch, target_name)) != nullptr)
 			{
-				vo = (void *)victim;
+				vo = victim;
 				target = TARGET_CHAR;
 			}
 			else if ((obj = get_obj_carry(ch, target_name, ch)) != nullptr)
 			{
-				vo = (void *)obj;
+				vo = obj;
 				target = TARGET_OBJ;
 			}
 			else
@@ -2784,7 +2784,7 @@ void do_call(CHAR_DATA *ch, char *argument)
 				return;
 			}
 
-			vo = &where;
+			vo = SpellTarget::Direction(where);
 			target = TARGET_DIR;
 			break;
 		default:

@@ -481,7 +481,7 @@ char *int_to_string(int number)
 	}
 }
 
-void spell_summon_nephilim(int sn, int level, CHAR_DATA *ch, void *vo, int target)
+void spell_summon_nephilim(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
 	CHAR_DATA *nephilim;
 	int vnum = 2948;

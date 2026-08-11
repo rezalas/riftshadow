@@ -17,7 +17,7 @@
 #include "../devextra.h"
 
 /*
-void spell_imbue_stone(int sn, int level, CHAR_DATA *ch, void *vo, int target)
+void spell_imbue_stone(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
 	char item[MSL];
 	char type[MSL];
@@ -92,7 +92,7 @@ void spell_imbue_stone(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 }
 */
 
-void spell_tangleroot(int sn, int level, CHAR_DATA *ch, void *vo, int target)
+void spell_tangleroot(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
 	CHAR_DATA *victim = (CHAR_DATA *)vo;
 	int dam = (int)((float)((float)ch->level * 0.60f) + (dice(10, level / 4)));

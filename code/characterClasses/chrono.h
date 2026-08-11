@@ -4,12 +4,13 @@
 #include <memory>
 
 #include "../entity/fwd.h"
+#include "../entity/spell_target.h"
 
 //
 // LOCAL FUNCTIONS
 //
 
-void spell_stasis_wall (int sn, int level, CHAR_DATA *ch, void *vo,int target );
+void spell_stasis_wall (int sn, int level, CHAR_DATA *ch, SpellTarget vo,int target );
 bool trigger_stasis_wall (void *vo,void *vo2,void *vo3,void *vo4);
 bool activate_stasis_wall (void *vo,void *vo2,void *vo3,void *vo4);	//list your rune trigs here for good reference
 void draw_rune (std::unique_ptr<RUNE_DATA> rune); //attempt to add a rune that's just been initiated; consumes it

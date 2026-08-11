@@ -52,6 +52,22 @@ public:
 	// Name of the alternative currently held, for logging and diagnostics.
 	const char *KindName() const;
 
+	//
+	// TRANSITIONAL. These exist so that a spell body written as
+	// (CHAR_DATA *)vo keeps compiling while the bodies are converted one file
+	// at a time. They are scaffolding with a scheduled demolition and are
+	// deleted in this same series of changes, at which point the compiler
+	// names every body that still reads its target through a cast.
+	//
+	// They are not silent: both route through the checked accessors, so a body
+	// that reads the wrong kind logs and receives null instead of a pointer to
+	// the wrong kind of thing.
+	//
+	// Do not add call sites that rely on these.
+	//
+	operator CHAR_DATA *() const;
+	operator OBJ_DATA *() const;
+
 private:
 	// Wrapped so that a direction is a distinct alternative from any future
 	// integer payload rather than being matched by index.

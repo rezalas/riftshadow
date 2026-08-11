@@ -146,6 +146,24 @@ int SpellTarget::AsDir() const
 	return std::get<DirectionValue>(payload).value;
 }
 
+/// Reads the target as a character, implicitly.
+/// @return The character, or null if the target holds something else.
+/// @note Transitional. Lets a body still written as (CHAR_DATA *)vo compile
+///       against the typed parameter. Deleted once the bodies are converted, so
+///       that the compiler then names every one that still casts.
+SpellTarget::operator CHAR_DATA *() const
+{
+	return AsChar();
+}
+
+/// Reads the target as an object, implicitly.
+/// @return The object, or null if the target holds something else.
+/// @note Transitional, and deleted with the character conversion above.
+SpellTarget::operator OBJ_DATA *() const
+{
+	return AsObj();
+}
+
 /// Names the kind of payload the target holds.
 /// @return A short description, suitable for a log line.
 const char *SpellTarget::KindName() const
