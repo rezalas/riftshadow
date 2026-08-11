@@ -920,7 +920,7 @@ void spell_hunters_awareness(int sn, int level, CHAR_DATA *ch, SpellTarget vo, i
 
 void spell_web(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
 
 	if (is_safe(ch, victim))
@@ -1065,7 +1065,7 @@ void do_howl(CHAR_DATA *ch, char *argument)
 
 void spell_mana_transfer(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	int mod = (ch->level * 2);
 
 	if (ch == victim)
@@ -1175,7 +1175,7 @@ void spell_scribe(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 
 void spell_deny_magic(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
 
 	if (ch == victim)
@@ -1211,7 +1211,7 @@ bool check_deny_magic(CHAR_DATA *ch)
 
 void spell_bane(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	int damage;
 
 	if (IS_SET(victim->act, PLR_IGNORANT))
@@ -1291,7 +1291,7 @@ void spell_medicine(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target
 
 void spell_horde_communion(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
 
 	DESCRIPTOR_DATA *connection = Deref(ch->desc);
@@ -1516,7 +1516,7 @@ void spell_fervor(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 void spell_spiritual_healing(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
 	AFFECT_DATA af;
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 
 	if (is_affected(ch, gsn_spiritual_healing))
 	{
@@ -1685,7 +1685,7 @@ void retribution_tick(CHAR_DATA *ch, AFFECT_DATA *af)
 
 void spell_retribution(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
 
 	if (is_affected(victim, sn) || is_affected(ch, sn))
@@ -1782,7 +1782,7 @@ void do_phalanx(CHAR_DATA *ch, char *argument)
 
 void spell_safehaven(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 
 	if (victim->hit < victim->max_hit * .7)
 	{

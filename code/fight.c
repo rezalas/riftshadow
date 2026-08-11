@@ -6348,7 +6348,7 @@ void do_slay(CHAR_DATA *ch, char *argument)
 
 void spell_power_word_kill(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	int dam, saves, modify;
 
 	saves = 0;
