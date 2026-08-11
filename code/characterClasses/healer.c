@@ -20,7 +20,7 @@
 
 void spell_healing_sleep(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
 
 	if (is_affected(victim, gsn_healing_sleep))

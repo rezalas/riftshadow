@@ -94,7 +94,7 @@ void spell_imbue_stone(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int tar
 
 void spell_tangleroot(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	int dam = (int)((float)((float)ch->level * 0.60f) + (dice(10, level / 4)));
 
 	act("The ground beneath your feet begins to rumble.", ch->in_room->people, nullptr, nullptr, TO_ALL);

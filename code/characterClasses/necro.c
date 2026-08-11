@@ -194,7 +194,7 @@ void power_urn(CHAR_DATA *ch, int charges)
 
 void spell_siphon(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	int dam, blood;
 	dam = dice(level, 5);
 
@@ -231,7 +231,7 @@ void spell_siphon(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 
 void spell_hex(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA hex;
 	int roll = 0, severity = 0;
 	int drain = 0;
@@ -576,7 +576,7 @@ void animate_four(CHAR_DATA *ch, OBJ_DATA *corpse)
 
 void spell_vampiric_touch(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	int dam;
 
 	if (victim == ch)
@@ -783,7 +783,7 @@ void visceral_four(CHAR_DATA *ch)
 
 void spell_ritual_soul(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *search, *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *search, *victim = vo.AsChar();
 
 	for (OwningListWalk<CHAR_DATA> walk(char_list); !walk.Done(); walk.Step())
 	{
@@ -915,7 +915,7 @@ void ritual_four(CHAR_DATA *ch, CHAR_DATA *victim)
 
 void spell_ritual_flesh(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *search, *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *search, *victim = vo.AsChar();
 
 	for (OwningListWalk<CHAR_DATA> walk(char_list); !walk.Done(); walk.Step())
 	{
@@ -1043,7 +1043,7 @@ void flesh_four(CHAR_DATA *ch, CHAR_DATA *victim)
 
 void spell_decrepify(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
 	int mv;
 

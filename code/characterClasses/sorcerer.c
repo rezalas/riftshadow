@@ -120,7 +120,7 @@ int para_compute(int ele1, int ele2)
 
 void spell_scorch(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 
 	int dam = dice(20 + level, 3);
 
@@ -363,7 +363,7 @@ void cyclone_end_fun(AREA_DATA *area, AREA_AFFECT_DATA *af)
 
 void spell_chill(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
 
 	act("You draw the heat out of $N's flesh, chilling $M.", ch, 0, victim, TO_CHAR);
@@ -406,7 +406,7 @@ void spell_chillmetal(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int targ
 
 	if (target == TARGET_CHAR)
 	{
-		victim = (CHAR_DATA *)vo;
+		victim = vo.AsChar();
 
 		obj = get_eq_char(victim, WEAR_WIELD);
 
@@ -418,7 +418,7 @@ void spell_chillmetal(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int targ
 	}
 	else
 	{
-		obj = (OBJ_DATA *)vo;
+		obj = vo.AsObj();
 	}
 
 	if (obj->pIndexData->material_index < 0 || material_table[obj->pIndexData->material_index].mat_conductivity <= 0)
@@ -844,7 +844,7 @@ void ultradiffusion_end(CHAR_DATA *ch, AFFECT_DATA *af)
 
 void spell_heat_metal(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	OBJ_DATA *obj, *obj2;
 
 	obj = get_eq_char(victim, WEAR_WIELD);
@@ -1232,7 +1232,7 @@ void vacuum_end_fun(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *af)
 
 void spell_incandescense(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
 
 	if (is_affected(victim, sn))
@@ -1403,7 +1403,7 @@ void spell_heatshield(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int targ
 
 void spell_immolate(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	OBJ_AFFECT_DATA oaf;
 	OBJ_DATA *obj;
 	int dam = 0;
@@ -1648,7 +1648,7 @@ void spell_earthquake(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int targ
 
 void spell_electrocute(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	OBJ_DATA *obj;
 	int tconduct = 0;
 
@@ -1700,7 +1700,7 @@ void spell_electrocute(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int tar
 
 void spell_induce_pain(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	int dam = dice(level, 7) + 10;
 
 	if (saves_spell(level, victim, DAM_ENERGY))
@@ -1721,7 +1721,7 @@ void spell_induce_pain(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int tar
 
 void spell_disrupt_vision(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
 
 	if (is_affected_by(victim, AFF_BLIND)
@@ -1754,7 +1754,7 @@ void spell_disrupt_vision(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int 
 
 void spell_mana_conduit(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
 
 	if (is_affected(victim, sn))
@@ -1782,7 +1782,7 @@ void spell_mana_conduit(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int ta
 
 void spell_synaptic_enhancement(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
 
 	if (is_affected(victim, sn))
@@ -1816,7 +1816,7 @@ void spell_synaptic_enhancement(int sn, int level, CHAR_DATA *ch, SpellTarget vo
 
 void spell_synaptic_impairment(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
 
 	if (is_affected(victim, sn))
@@ -1882,7 +1882,7 @@ void spell_elecshield(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int targ
 
 void spell_scramble_neurons(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
 
 	if (is_affected(victim, sn))
@@ -1915,7 +1915,7 @@ void spell_scramble_neurons(int sn, int level, CHAR_DATA *ch, SpellTarget vo, in
 
 void spell_mana_leech(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	int drain;
 
 	act("You extend tendrils of electricity towards $N.", ch, 0, victim, TO_CHAR);
@@ -2031,7 +2031,7 @@ void spell_hydroperception(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int
 
 void spell_dehydrate(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 
 	if (!is_npc(victim) && victim->pcdata->condition[COND_THIRST] > COND_HUNGRY)
 	{
@@ -2058,7 +2058,7 @@ void spell_dehydrate(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int targe
 
 void spell_drown(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	int dam = dice(level + 10, 4);
 
 	act("You choke and gasp for air as your lungs fill with water!", victim, 0, 0, TO_CHAR);
@@ -2075,7 +2075,7 @@ void spell_drown(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 
 void spell_hydration(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	int heal = 0;
 	OBJ_DATA *obj;
 	bool spring = false;
@@ -2177,7 +2177,7 @@ void spell_hydration(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int targe
 
 void spell_regeneration(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
 
 	if (is_affected(victim, sn))
@@ -2741,7 +2741,7 @@ void spell_travelease(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int targ
 
 void spell_diffusion(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
 
 	if (!is_affected_by(victim, AFF_PASS_DOOR))
@@ -2780,7 +2780,7 @@ void spell_diffusion(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int targe
 
 void spell_disruption(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	int dam = dice(level, 5) + 20;
 
 	if (saves_spell(level, victim, DAM_INTERNAL))
@@ -2995,7 +2995,7 @@ void spell_stability(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int targe
 
 void spell_crush(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	int dam;
 
 	dam = dice(level, 3) + 20;
@@ -3079,7 +3079,7 @@ void spell_diamondskin(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int tar
 
 void spell_overbear(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	int str = 0;
 	int chance = 0;
 
@@ -3153,7 +3153,7 @@ void spell_overbear(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target
 
 void spell_reduce(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
 	char buf[MSL];
 
@@ -3303,7 +3303,7 @@ void spell_coagulate(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int targe
 
 void spell_hypothermia(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
 
 	if (is_affected_by(victim, AFF_SLEEP)
@@ -3345,7 +3345,7 @@ void spell_hypothermia(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int tar
 
 void spell_imprisonvoice(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
 
 	if (ch == victim)
@@ -3648,7 +3648,7 @@ void agitate_tick(CHAR_DATA *ch, AFFECT_DATA *af)
 
 void spell_freezemetal(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	OBJ_DATA *obj;
 	int iWear, highchance, crushdam, piercedam;
 
@@ -3708,7 +3708,7 @@ void spell_freezemetal(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int tar
 
 void spell_frostbite(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
 
 	if (saves_spell(level, victim, DAM_COLD))
@@ -3844,7 +3844,7 @@ int scramble_sn(CHAR_DATA *ch, int sn)
 
 void spell_acid_stream(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	OBJ_DATA *armor;
 	AFFECT_DATA af;
 
@@ -4230,7 +4230,7 @@ void spell_corrode_lock(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int ta
 
 void spell_attract(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
 
 	if (is_affected(victim, sn))
@@ -4283,7 +4283,7 @@ void attract_tick(CHAR_DATA *ch, AFFECT_DATA *af)
 
 void spell_absorb(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
 
 	if (is_affected(victim, gsn_absorb))
@@ -4516,7 +4516,7 @@ void spell_thunderclap(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int tar
 
 void spell_neutralize(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
 
 	if (is_affected(victim, gsn_neutralize))
@@ -4668,7 +4668,7 @@ void smokescreen_end(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *af)
 
 void spell_smother(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
 
 	act("$N chokes and gasps for air as you smother $M with thick smoke!", ch, 0, victim, TO_CHAR);
@@ -4732,7 +4732,7 @@ void spell_putrid_air(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int targ
 
 void spell_asphyxiate(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	int dam = dice(level, 5);
 
 	if (ch->in_room->sector_type && ch->in_room->sector_type == SECT_UNDERWATER)
@@ -4821,7 +4821,7 @@ void spell_noxious_ward(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int ta
 
 void spell_molten_stones(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	int blunt = 0, fire = 0;
 
 	if (ch->in_room->sector_type == SECT_WATER
@@ -4973,7 +4973,7 @@ void blanket_melt(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *af)
 
 void spell_boreal_wind(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	int dam;
 
 	if (ch->in_room->sector_type == SECT_UNDERWATER)
@@ -5220,7 +5220,7 @@ void spell_frost_glaze(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int tar
 
 void spell_unbreakable(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	OBJ_DATA *obj;
 	AFFECT_DATA af;
 
@@ -5284,7 +5284,7 @@ void spell_unbreakable(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int tar
 
 void spell_earthsembrace(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
 
 	if (!is_ground(ch->in_room))
@@ -5504,7 +5504,7 @@ void spell_pure_air(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target
 
 void spell_icelance(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
 	int dam = 2 * dice(level, 3);
 
@@ -5648,7 +5648,7 @@ void ground_thaw(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *af)
 
 void spell_bind_feet(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
 
 	if (!is_ground(ch->in_room))
@@ -5792,7 +5792,7 @@ void spell_stalactites(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int tar
 
 void spell_ice_blast(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	OBJ_DATA *obj, *obj_next;
 	OBJ_AFFECT_DATA oaf;
 
@@ -5929,7 +5929,7 @@ void spell_icy_carapace(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int ta
 
 void spell_sheath_of_ice(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
 	OBJ_AFFECT_DATA oaf;
 	OBJ_DATA *wield;
@@ -6023,7 +6023,7 @@ void spell_ironskin(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target
 
 void spell_metal_shards(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	OBJ_DATA *weapon;
 	int number, dam, i;
 
@@ -6072,7 +6072,7 @@ void spell_metal_shards(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int ta
 
 void spell_burden(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
 
 	if (is_affected(victim, gsn_burden))
@@ -6109,7 +6109,7 @@ void spell_burden(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 
 void spell_fortify_weapon(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	OBJ_DATA *weapon = (OBJ_DATA *)vo;
+	OBJ_DATA *weapon = vo.AsObj();
 	OBJ_APPLY_DATA *hitapp = nullptr, *damapp = nullptr;
 	bool damfound = false, hitfound = false;
 	bool dambonus = false, hitbonus = false;
@@ -6288,7 +6288,7 @@ void spell_fortify_weapon(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int 
 
 void spell_fortify_armor(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	OBJ_DATA *armor = (OBJ_DATA *)vo;
+	OBJ_DATA *armor = vo.AsObj();
 	int chance = 50, i, avg_ac = 0;
 
 	if (armor->item_type != ITEM_ARMOR)
@@ -6519,7 +6519,7 @@ void spell_vigorize(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target
 
 void spell_creeping_tomb(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
 
 	if (!is_ground(ch->in_room))
@@ -6682,7 +6682,7 @@ void quicksand_pulse_sink(CHAR_DATA *ch, AFFECT_DATA *af)
 
 void spell_sap_endurance(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 
 	if (!is_ground(ch->in_room))
 	{
@@ -6699,7 +6699,7 @@ void spell_sap_endurance(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int t
 
 void spell_emulsify(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	int dam;
 	float ddice = 1.5 * level;
 	dam = dice((int)ddice, 3);
@@ -6715,7 +6715,7 @@ void spell_emulsify(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target
 
 void spell_rust(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	OBJ_DATA *eq;
 	OBJ_AFFECT_DATA oaf;
 
@@ -6830,7 +6830,7 @@ void spell_airy_water(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int targ
 
 void spell_cooling_mist(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
 
 	if (is_affected(victim, gsn_cooling_mist))
@@ -6865,7 +6865,7 @@ void spell_cooling_mist(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int ta
 
 void spell_prismatic_spray(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
 	int color = number_range(1, 7), dam = 0;
 	bool poisoned = false, disint = false, blinded = false;
@@ -7080,7 +7080,7 @@ void earthfade_tick(CHAR_DATA *ch, AFFECT_DATA *af)
 
 void spell_plasma_arc(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
 
 	act("You conjure a super-bright arc of plasma at $N!", ch, nullptr, victim, TO_CHAR);
@@ -7535,7 +7535,7 @@ void check_plasma_thread(CHAR_DATA *ch, int direction)
 
 void spell_accumulate_heat(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
 
 	if (!is_ground(ch->in_room))
@@ -7570,7 +7570,7 @@ void spell_accumulate_heat(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int
 
 void spell_melt_rock(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	OBJ_DATA *obj;
 	int iWear, dam;
 
@@ -7778,7 +7778,7 @@ void spell_farsee(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 
 void spell_mana_beam(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	OBJ_AFFECT_DATA *af;
 	OBJ_DATA *obj;
 	int dam;
@@ -7948,7 +7948,7 @@ void rotating_tick(CHAR_DATA *ch, AFFECT_DATA *af)
 
 void spell_fortify_crystal(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	OBJ_DATA *crystal = (OBJ_DATA *)vo;
+	OBJ_DATA *crystal = vo.AsObj();
 	OBJ_AFFECT_DATA *af;
 
 	af = affect_find_obj(crystal->affected, gsn_fashion_crystal);
@@ -7987,7 +7987,7 @@ void mana_infusion_helper(CHAR_DATA *ch, CHAR_DATA *victim)
 
 void spell_mana_infusion(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	int dammod;
 	AFFECT_DATA af1, af;
 

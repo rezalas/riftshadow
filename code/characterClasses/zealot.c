@@ -19,7 +19,7 @@
 
 void spell_infidels_weight(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
 	int mod;
 
@@ -72,7 +72,7 @@ int get_bv_stage(CHAR_DATA *ch)
 
 void spell_burning_vision(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af, *maf;
 	int mod;
 
@@ -152,7 +152,7 @@ void burning_vision_tick(CHAR_DATA *ch, AFFECT_DATA *af)
 
 void spell_divine_malison(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af, *paf;
 	int reduction;
 

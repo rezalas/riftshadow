@@ -167,7 +167,7 @@ void do_taunt(CHAR_DATA *ch, char *argument)
 
 void spell_wrack(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
 
 	if (is_affected(victim, skill_lookup("wrack")))
@@ -241,7 +241,7 @@ void wrack_tick(CHAR_DATA *ch, AFFECT_DATA *af)
 void spell_inspire_lust(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
 
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
 	char buf[MSL];
 
@@ -731,7 +731,7 @@ void command_execute_delay(CHAR_DATA *ch, char *command)
 
 void spell_mark_of_wrath(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
 
 	if (is_npc(victim))
@@ -779,7 +779,7 @@ void spell_mark_of_wrath(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int t
 
 void spell_living_blade(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	OBJ_DATA *weapon = (OBJ_DATA *)vo;
+	OBJ_DATA *weapon = vo.AsObj();
 	OBJ_AFFECT_DATA oaf;
 
 	if (weapon->item_type != ITEM_WEAPON)
@@ -2451,7 +2451,7 @@ void spell_dark_insight(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int ta
 {
 	int found = 0;
 	float dammod;
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 
 	act("You call upon the dark powers to reveal $N's weaknesses.", ch, 0, victim, TO_CHAR);
 	act("$n utters arcane words as $e looks you over.", ch, 0, victim, TO_VICT);
