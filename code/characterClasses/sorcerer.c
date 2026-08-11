@@ -404,7 +404,7 @@ void spell_chillmetal(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int targ
 	OBJ_DATA *obj = nullptr;
 	OBJ_AFFECT_DATA oaf;
 
-	if (target == TARGET_CHAR)
+	if (vo.IsChar())
 	{
 		victim = vo.AsChar();
 
@@ -427,7 +427,7 @@ void spell_chillmetal(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int targ
 		return;
 	}
 
-	if (target == TARGET_CHAR)
+	if (vo.IsChar())
 	{
 		if (ch == victim)
 			act("You draw the heat out of your $p.", ch, obj, victim, TO_CHAR);
@@ -452,7 +452,7 @@ void spell_chillmetal(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int targ
 	oaf.modifier = 30 - obj->value[3];
 	affect_to_obj(obj, &oaf);
 
-	if (target == TARGET_CHAR)
+	if (vo.IsChar())
 	{
 		if (!trusts(ch, victim))
 			multi_hit(victim, ch, TYPE_HIT);

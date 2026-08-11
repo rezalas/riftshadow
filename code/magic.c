@@ -1343,7 +1343,7 @@ void spell_bless(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 	CHAR_DATA *victim;
 	AFFECT_DATA af;
 
-	if (target == TARGET_OBJ)
+	if (vo.IsObj())
 	{
 		send_to_char("Uh, what are you thinking?\n\r", ch);
 		return;
@@ -3412,7 +3412,7 @@ void spell_invis(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 		return;
 	}
 
-	if (target == TARGET_OBJ)
+	if (vo.IsObj())
 	{
 		send_to_char("You must be crazy.\n\r", ch);
 		return;
@@ -3805,12 +3805,13 @@ void spell_poison(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 	OBJ_DATA *obj;
 	AFFECT_DATA af;
 
-	// TARGET_OBJ is what do_cast and obj_cast_spell actually set here. This
-	// used to test TAR_OBJ_INV, which belongs to the enum that declares what a
-	// skill may be aimed at rather than the one reporting what it was aimed at,
-	// so the branch never ran and an object fell through to be read as a
-	// character below.
-	if (target == TARGET_OBJ)
+	// The branch is chosen by asking the payload what it holds. It used to test
+	// a separate int that was supposed to describe the payload, written from
+	// four enum families whose values overlap, and the constant it tested came
+	// from the family that declares what a skill may be aimed at rather than
+	// the one reporting what it was aimed at. The branch never ran, and an
+	// object fell through to be read as a character below.
+	if (vo.IsObj())
 	{
 		obj = vo.AsObj();
 
@@ -4037,7 +4038,7 @@ void spell_remove_curse(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int ta
 	bool found = false;
 
 	/* do object cases first */
-	if (target == TARGET_OBJ)
+	if (vo.IsObj())
 	{
 		obj = vo.AsObj();
 		if (is_obj_stat(obj, ITEM_NODROP) || is_obj_stat(obj, ITEM_NOREMOVE))
