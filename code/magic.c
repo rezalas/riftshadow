@@ -1296,7 +1296,7 @@ void obj_cast_spell(int sn, int level, CHAR_DATA *ch, CHAR_DATA *victim, OBJ_DAT
 
 void spell_acid_blast(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	int dam;
 
 	dam = dice(level, 11);
@@ -1309,7 +1309,7 @@ void spell_acid_blast(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int targ
 
 void spell_armor(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
 
 	if (is_affected(victim, sn))
@@ -1350,7 +1350,7 @@ void spell_bless(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 	}
 
 	/* character target */
-	victim = (CHAR_DATA *)vo;
+	victim = vo.AsChar();
 
 	if (victim->position == POS_FIGHTING || is_affected(victim, sn))
 	{
@@ -1394,7 +1394,7 @@ void spell_bless(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 
 void spell_blindness(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
 	int dur;
 
@@ -1444,7 +1444,7 @@ void spell_blindness(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int targe
 
 void spell_burning_hands(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	static const short dam_each[] =
 	{
 		0,  0,  0,  0,  0,  14, 17, 20, 23, 26, 29, 29, 29, 30, 30, 31, 31,
@@ -1470,7 +1470,7 @@ void spell_burning_hands(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int t
 void spell_cancellation(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
 	char arg1[MSL], arg2[MSL];
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA *af;
 	bool found = false;
 	bool commune = false;
@@ -1553,22 +1553,22 @@ void spell_cancellation(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int ta
 
 void spell_cause_light(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	damage_old(ch, (CHAR_DATA *)vo, dice(1, 8) + level / 3, sn, DAM_INTERNAL, true);
+	damage_old(ch, vo.AsChar(), dice(1, 8) + level / 3, sn, DAM_INTERNAL, true);
 }
 
 void spell_cause_critical(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	damage_old(ch, (CHAR_DATA *)vo, dice(3, 8) + level - 6, sn, DAM_INTERNAL, true);
+	damage_old(ch, vo.AsChar(), dice(3, 8) + level - 6, sn, DAM_INTERNAL, true);
 }
 
 void spell_cause_serious(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	damage_old(ch, (CHAR_DATA *)vo, dice(2, 8) + level / 2, sn, DAM_INTERNAL, true);
+	damage_old(ch, vo.AsChar(), dice(2, 8) + level / 2, sn, DAM_INTERNAL, true);
 }
 
 void spell_chain_lightning(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	CHAR_DATA *tmp_vict, *last_vict, *next_vict;
 	bool found;
 	int dam;
@@ -1663,7 +1663,7 @@ void spell_chain_lightning(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int
 
 void spell_change_sex(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
 
 	if (is_affected(victim, sn))
@@ -1698,7 +1698,7 @@ void spell_change_sex(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int targ
 
 void spell_charm_person(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
 	int count;
 
@@ -1766,7 +1766,7 @@ void spell_charm_person(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int ta
 
 void spell_chill_touch(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	static const short dam_each[] =
 	{
 		0,  0,  0,  6,  7,  8,  9,  12, 13, 13, 13, 14, 14, 14, 15, 15, 15,
@@ -1807,7 +1807,7 @@ void spell_chill_touch(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int tar
 
 void spell_color_spray(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	static const short dam_each[] =
 	{
 		0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  30, 35, 40, 45, 50, 55,
@@ -1832,7 +1832,7 @@ void spell_color_spray(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int tar
 
 void spell_wrath(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	int dam = 0;
 
 	if (!is_evil(victim))
@@ -1958,7 +1958,7 @@ void spell_create_spring(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int t
 
 void spell_create_water(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	OBJ_DATA *obj = (OBJ_DATA *)vo;
+	OBJ_DATA *obj = vo.AsObj();
 	int water;
 
 	if (obj->item_type != ITEM_DRINK_CON)
@@ -1996,7 +1996,7 @@ void spell_create_water(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int ta
 
 void spell_cure_blindness(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 
 	if (!is_affected(victim, gsn_blindness)
 		&& !is_affected(victim, gsn_blindness_dust)
@@ -2051,7 +2051,7 @@ void spell_cure_blindness(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int 
 
 void spell_cure_critical(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	int heal;
 
 	heal = dice(3, 8) + level - 6;
@@ -2068,7 +2068,7 @@ void spell_cure_critical(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int t
 /* RT added to cure plague */
 void spell_cure_disease(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 
 	if (ch->Class()->name == "assassin" && victim != ch)
 	{
@@ -2099,7 +2099,7 @@ void spell_cure_disease(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int ta
 
 void spell_cure_light(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	int heal;
 
 	heal = dice(1, 8) + level / 3;
@@ -2114,7 +2114,7 @@ void spell_cure_light(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int targ
 
 void spell_cure_poison(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 
 	if (ch->Class()->name == "assassin" && victim != ch)
 	{
@@ -2156,7 +2156,7 @@ void spell_cure_poison(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int tar
 
 void spell_cure_serious(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	int heal;
 
 	heal = dice(2, 8) + level / 2;
@@ -2227,7 +2227,7 @@ void spell_curse(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 	*/
 
 	/* character curses */
-	victim = (CHAR_DATA *)vo;
+	victim = vo.AsChar();
 
 	if (is_affected_by(victim, AFF_CURSE))
 	{
@@ -2266,7 +2266,7 @@ void spell_curse(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 
 void spell_dark_wrath(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	int dam;
 
 	if (!is_good(victim))
@@ -2294,7 +2294,7 @@ void spell_dark_wrath(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int targ
 
 void spell_demonfire(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	int dam, dam_mod, oldhp;
 
 	oldhp = victim->hit;
@@ -2327,7 +2327,7 @@ void spell_demonfire(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int targe
 
 void spell_detect_evil(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
 
 	if (is_affected_by(victim, AFF_DETECT_EVIL))
@@ -2362,7 +2362,7 @@ void spell_detect_evil(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int tar
 
 void spell_detect_good(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
 
 	if (is_affected_by(victim, AFF_DETECT_GOOD))
@@ -2487,7 +2487,7 @@ void do_detect_movement(CHAR_DATA *ch, char *argument)
 
 void spell_detect_invis(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
 
 	if (is_affected_by(victim, AFF_DETECT_INVIS))
@@ -2522,7 +2522,7 @@ void spell_detect_invis(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int ta
 
 void spell_detect_magic(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
 
 	if (is_affected_by(victim, AFF_DETECT_MAGIC))
@@ -2556,7 +2556,7 @@ void spell_detect_magic(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int ta
 
 void spell_detect_poison(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	OBJ_DATA *obj = (OBJ_DATA *)vo;
+	OBJ_DATA *obj = vo.AsObj();
 
 	if (obj->item_type == ITEM_DRINK_CON || obj->item_type == ITEM_FOOD)
 	{
@@ -2573,7 +2573,7 @@ void spell_detect_poison(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int t
 
 void spell_dispel_evil(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	int dam;
 
 	if (!is_npc(ch) && is_evil(ch))
@@ -2601,7 +2601,7 @@ void spell_dispel_evil(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int tar
 
 void spell_dispel_good(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	int dam;
 
 	if (!is_npc(ch) && is_good(ch))
@@ -2770,7 +2770,7 @@ void spell_fireball(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target
 
 void spell_fireproof(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	OBJ_DATA *obj = (OBJ_DATA *)vo;
+	OBJ_DATA *obj = vo.AsObj();
 	OBJ_AFFECT_DATA oaf;
 
 	if (is_obj_stat(obj, ITEM_BURN_PROOF))
@@ -2796,7 +2796,7 @@ void spell_fireproof(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int targe
 
 void spell_flamestrike(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	int dam;
 
 	dam = dice(6 + level / 2, 8);
@@ -2809,7 +2809,7 @@ void spell_flamestrike(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int tar
 
 void spell_faerie_fire(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
 
 	if (is_affected(victim, sn))
@@ -2890,7 +2890,7 @@ void spell_faerie_fog(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int targ
 
 void spell_fly(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
 
 	if (is_affected_by(victim, AFF_FLYING))
@@ -2931,7 +2931,7 @@ void spell_fly(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 
 void spell_frenzy(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
 
 	if (is_affected(victim, sn) || is_affected_by(victim, AFF_BERSERK))
@@ -3075,7 +3075,7 @@ void spell_gate(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 
 void spell_giant_strength(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
 
 	if (is_affected(victim, sn))
@@ -3103,7 +3103,7 @@ void spell_giant_strength(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int 
 
 void spell_harm(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	int dam;
 
 	dam = dice(level, 5);
@@ -3117,7 +3117,7 @@ void spell_harm(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 
 void spell_haste(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
 
 	if (ch->Class()->name == "assassin" && victim != ch)
@@ -3168,7 +3168,7 @@ void spell_haste(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 
 void spell_heal(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 
 	victim->hit = std::min(victim->hit + 100, (int)victim->max_hit);
 
@@ -3253,7 +3253,7 @@ void spell_holy_word(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int targe
 
 void spell_identify(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	OBJ_DATA *obj = (OBJ_DATA *)vo;
+	OBJ_DATA *obj = vo.AsObj();
 	char buf[MAX_STRING_LENGTH];
 	OBJ_APPLY_DATA *app;
 	int lorebonus = 0;
@@ -3418,7 +3418,7 @@ void spell_invis(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 		return;
 	}
 	/* character invisibility */
-	victim = (CHAR_DATA *)vo;
+	victim = vo.AsChar();
 
 	if (is_affected_by(victim, AFF_INVISIBLE))
 		return;
@@ -3444,7 +3444,7 @@ void spell_invis(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 
 void spell_know_alignment(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	char *msg;
 	int ap;
 
@@ -3475,7 +3475,7 @@ void spell_know_alignment(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int 
 
 void spell_lightning_bolt(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	static const short dam_each[] =
 	{
 		0,  0,  0,  0,  0,  0,  0,  0,  0,  25, 28, 31, 34, 37, 40, 40, 41,
@@ -3585,7 +3585,7 @@ void spell_locate_object(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int t
 
 void spell_magic_missile(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	int dam;
 
 	dam = dice(level, 3);
@@ -3667,7 +3667,7 @@ void spell_null(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 
 void spell_pass_door(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
 
 	if (is_affected_by(victim, AFF_PASS_DOOR))
@@ -3702,7 +3702,7 @@ void spell_pass_door(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int targe
 
 void spell_plague(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
 
 	if (IS_SET(victim->imm_flags, IMM_DISEASE))
@@ -3812,7 +3812,7 @@ void spell_poison(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 	// character below.
 	if (target == TARGET_OBJ)
 	{
-		obj = (OBJ_DATA *)vo;
+		obj = vo.AsObj();
 
 		if (obj->item_type == ITEM_FOOD || obj->item_type == ITEM_DRINK_CON)
 		{
@@ -3832,7 +3832,7 @@ void spell_poison(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 		return;
 	}
 
-	victim = (CHAR_DATA *)vo;
+	victim = vo.AsChar();
 
 	if (is_affected(victim, gsn_poison))
 	{
@@ -3909,7 +3909,7 @@ void spell_protection(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int targ
 
 void spell_ray_of_truth(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	int dam;
 
 	if (is_evil(ch))
@@ -3946,7 +3946,7 @@ void spell_ray_of_truth(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int ta
 
 void spell_recharge(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	OBJ_DATA *obj = (OBJ_DATA *)vo;
+	OBJ_DATA *obj = vo.AsObj();
 	int chance, percent;
 
 	if (obj->item_type != ITEM_WAND && obj->item_type != ITEM_STAFF)
@@ -4017,7 +4017,7 @@ void spell_recharge(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target
 
 void spell_refresh(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 
 	victim->move = std::min(victim->move + level, (int)victim->max_move);
 
@@ -4039,7 +4039,7 @@ void spell_remove_curse(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int ta
 	/* do object cases first */
 	if (target == TARGET_OBJ)
 	{
-		obj = (OBJ_DATA *)vo;
+		obj = vo.AsObj();
 		if (is_obj_stat(obj, ITEM_NODROP) || is_obj_stat(obj, ITEM_NOREMOVE))
 		{
 			if (!is_obj_stat(obj, ITEM_NOUNCURSE) && !saves_dispel(level + 2, obj->level, 0))
@@ -4058,7 +4058,7 @@ void spell_remove_curse(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int ta
 	}
 
 	/* characters */
-	victim = (CHAR_DATA *)vo;
+	victim = vo.AsChar();
 
 	if (is_affected(victim, gsn_curse) && number_percent() > level / 3)
 	{
@@ -4093,7 +4093,7 @@ void spell_remove_curse(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int ta
 
 void spell_sanctuary(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
 
 	if (ch->Class()->GetIndex() == CLASS_ZEALOT && victim != ch)
@@ -4147,7 +4147,7 @@ void spell_sanctuary(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int targe
 
 void spell_shield(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
 
 	if (is_affected(victim, sn))
@@ -4176,7 +4176,7 @@ void spell_shield(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 
 void spell_shocking_grasp(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	static const int dam_each[] =
 	{
 		0,  0,  0,  0,  16, 18, 20, 20, 25, 29, 33, 36, 39, 39, 39, 40, 40,
@@ -4199,7 +4199,7 @@ void spell_shocking_grasp(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int 
 
 void spell_sleep(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
 
 	if (is_affected_by(victim, AFF_SLEEP)
@@ -4236,7 +4236,7 @@ void spell_sleep(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 
 void spell_slow(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
 
 	if (ch->Class()->name == "assassin" && victim != ch)
@@ -4293,7 +4293,7 @@ void spell_slow(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 
 void spell_stone_skin(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
 
 	if (is_affected(victim, sn) || is_affected(victim, gsn_diamondskin) || is_affected(victim, gsn_ironskin))
@@ -4415,7 +4415,7 @@ void summon_char(CHAR_DATA *ch, CHAR_DATA *victim)
 
 void spell_teleport(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	ROOM_INDEX_DATA *pRoomIndex;
 	long nocrash; /* Infinite loops = bad mojo */
 
@@ -4623,7 +4623,7 @@ void spell_ventriloquate(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int t
 
 void spell_weaken(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
 
 	if (victim == ch)
@@ -4656,7 +4656,7 @@ void spell_weaken(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 
 void spell_word_of_recall(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	ROOM_INDEX_DATA *location;
 
 	if (!trusts(ch, victim))
@@ -4744,7 +4744,7 @@ void recall_execute(CHAR_DATA *ch, ROOM_INDEX_DATA *location)
  */
 void spell_acid_breath(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	int dam, hp_dam, dice_dam, hpch;
 
 	act("$n spits acid at $N.", ch, nullptr, victim, TO_NOTVICT);
@@ -4782,7 +4782,7 @@ void spell_acid_breath(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int tar
 
 void spell_fire_breath(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	CHAR_DATA *vch, *vch_next;
 	int dam, hp_dam, dice_dam;
 	int hpch;
@@ -4859,7 +4859,7 @@ void spell_fire_breath(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int tar
 
 void spell_frost_breath(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	CHAR_DATA *vch, *vch_next;
 	int dam, hp_dam, dice_dam, hpch;
 
@@ -4967,7 +4967,7 @@ void spell_gas_breath(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int targ
 
 void spell_nether_breath(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
 	int dam;
 	bool saved = true;
@@ -5007,7 +5007,7 @@ void spell_nether_breath(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int t
 
 void spell_lightning_breath(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	int dam, hp_dam, dice_dam, hpch;
 
 	act("$n breathes a bolt of lightning at $N.", ch, nullptr, victim, TO_NOTVICT);
@@ -5382,7 +5382,7 @@ void spell_blade_barrier(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int t
 
 void spell_old_blade_barrier(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	int dam, spins;
 	int chance, i;
 
@@ -5451,7 +5451,7 @@ void spell_old_blade_barrier(int sn, int level, CHAR_DATA *ch, SpellTarget vo, i
 
 void spell_holy_fire(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	int dam;
 	int chance, dam_mod;
 
@@ -5551,7 +5551,7 @@ useless the old one was.
 */
 void spell_energy_drain(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	int amount;
 
 	if (victim == ch)
@@ -5583,7 +5583,7 @@ void spell_energy_drain(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int ta
 
 void spell_dark_shield(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
 
 	if (is_affected(victim, sn))
@@ -5867,7 +5867,7 @@ void spell_heavenly_sceptre_fire(int sn, int level, CHAR_DATA *ch, SpellTarget v
 
 void spell_lightshield(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
 
 	if (!is_good(victim))
@@ -5916,7 +5916,7 @@ void spell_lightshield(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int tar
 void spell_forget(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
 	AFFECT_DATA af;
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 
 	if (is_affected(victim, sn))
 	{
@@ -5953,7 +5953,7 @@ void spell_forget(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 void spell_earthbind(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
 	AFFECT_DATA af;
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 
 	if (is_affected(victim, sn) || !is_affected_by(victim, AFF_FLYING))
 	{
@@ -5984,7 +5984,7 @@ void spell_earthbind(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int targe
 
 void spell_cremate(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	int dam;
 
 	dam = dice(level, 7);
@@ -6101,7 +6101,7 @@ void spell_transfer_object(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int
 /* Necros use this to keep body parts longer...for lesser golems */
 void spell_preserve(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	OBJ_DATA *obj = (OBJ_DATA *)vo;
+	OBJ_DATA *obj = vo.AsObj();
 	int vnum, chance;
 
 	vnum = obj->pIndexData->vnum;
@@ -6144,7 +6144,7 @@ kill them outright..(Ceran)
 */
 void spell_power_word_fear(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
 	bool bad_fail, utter_fail;
 	int range;
@@ -6247,7 +6247,7 @@ void spell_power_word_fear(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int
    effects of a wither prevent healing spell */
 void spell_imbue_regeneration(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
 
 	if (is_affected(victim, gsn_atrophy))
@@ -6321,7 +6321,7 @@ void spell_imbue_regeneration(int sn, int level, CHAR_DATA *ch, SpellTarget vo, 
 */
 void spell_restoration(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	int sn_forget, sn_wither, sn_drain, sn_prevent_healing;
 	bool success = false;
 
@@ -6374,7 +6374,7 @@ void spell_restoration(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int tar
 
 void spell_prevent_healing(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
 
 	if (is_affected(victim, sn))
@@ -6406,7 +6406,7 @@ void spell_prevent_healing(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int
 
 void spell_atrophy(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
 
 	if (is_affected(victim, sn))
@@ -6447,7 +6447,7 @@ void spell_atrophy(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 */
 void spell_utter_heal(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	int sn_atrophy, sn_poison;
 
 	if (is_evil(ch))
@@ -6492,7 +6492,7 @@ void spell_utter_heal(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int targ
 
 void spell_hold_person(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
 	float chance;
 
@@ -6552,7 +6552,7 @@ void spell_hold_person(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int tar
 
 void spell_crushing_hand(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	int dam;
 	dam = 160;
 
@@ -6578,7 +6578,7 @@ void spell_crushing_hand(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int t
 
 void spell_deafen(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 {
-	CHAR_DATA *victim = (CHAR_DATA *)vo;
+	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
 
 	if (ch == victim)
