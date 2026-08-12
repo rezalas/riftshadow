@@ -259,4 +259,11 @@ void load_race_info (void);
 char intflag_to_char(int i);
 char *bitvector_to_flag (long bitvect[]);
 
+///
+/// Reports every skill number that gsn_list.h says must be wired to a
+/// skill_table row and that no row assigned.  Call once, after LoadGsn.
+/// @note Replaces nothing.  The check did not exist: an unassigned gsn kept
+///       the zero it was born with, which is a valid index into skill_table.
+void check_gsn_registry();
+
 #endif /* DB_H */

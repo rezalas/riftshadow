@@ -117,6 +117,85 @@ RACE_DATA *race_list;
 #include "gsn_list.h"
 #undef GSN
 
+//
+// The same list again, as data this time, so that boot can check the names
+// against what the skill table actually assigned.  LoadGsn walks the table and
+// writes each row's index through its pgsn pointer, which means it can only see
+// the names the table happens to mention: a name no row wires is invisible to
+// it and keeps the zero it was born with.  Zero is skill_table[0], "reserved",
+// so nothing downstream can tell the difference either.
+//
+// The state column is the part no scan could supply.  Whether a name IS wired
+// is observable; whether it SHOULD be is a decision, and it lives with the name
+// in gsn_list.h.
+//
+namespace
+{
+
+enum class GsnState
+{
+	Wired,
+	Pending,
+	Tag
+};
+
+struct GsnEntry
+{
+	const char *name;
+	short *value;
+	GsnState state;
+};
+
+#define GSN(name, state) { #name, &name, GsnState::state },
+const GsnEntry gsn_registry[] =
+{
+#include "gsn_list.h"
+};
+#undef GSN
+
+} // namespace
+
+//
+// Reports names that were supposed to be assigned and were not.  Called once,
+// after LoadGsn.
+//
+// There is no separate "unset" sentinel to write first: skill_table[0] is the
+// reserved row and carries no pgsn, so no row can ever assign zero, and a gsn
+// still holding zero here has therefore never been assigned.  A sentinel was
+// the original design and would have been a bug -- these values are used to
+// index skill_table and are stored in AFFECT_DATA::type, so an out-of-range
+// marker would have been read back as an array subscript.
+//
+void check_gsn_registry()
+{
+	int unassigned = 0;
+
+	for (const GsnEntry &entry : gsn_registry)
+	{
+		if (entry.state == GsnState::Wired && *entry.value == 0)
+		{
+			RS.Logger.Warn("{} is declared Wired but no skill_table row assigned it, so it reads as skill 0 (\"reserved\").", entry.name);
+			unassigned++;
+		}
+	}
+
+	if (unassigned > 0)
+		RS.Logger.Warn("{} skill number(s) are read but never assigned. Give each one a skill_table row, or mark it Pending in gsn_list.h.", unassigned);
+
+	// A Tag names an affect and has no skill of its own, so it needs a value
+	// nothing else uses.  Sharing one means is_affected() cannot tell the two
+	// apart, and zero is the worst value to share: every affect that never sets
+	// a type has it.
+	for (const GsnEntry &entry : gsn_registry)
+	{
+		if (entry.state != GsnState::Tag)
+			continue;
+
+		if (*entry.value == 0)
+			RS.Logger.Warn("{} is an affect tag sharing type 0 with every untyped affect.", entry.name);
+	}
+}
+
 /* GSNS */
 short cabal_members[MAX_CABAL];
 short cabal_max[MAX_CABAL];

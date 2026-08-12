@@ -317,6 +317,10 @@ void CMud::LoadGsn()
 		if ( skill_table[sn].pgsn != nullptr )
 			*skill_table[sn].pgsn = sn;
 
+	// This loop can only see the names the table mentions, so it cannot notice
+	// one that no row wires.  The registry is the other half of the list and
+	// knows which names were meant to be here.
+	check_gsn_registry();
 }
 
 
