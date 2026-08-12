@@ -3761,6 +3761,26 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 		&gsn_mana_sickness, 0, 0, 0,
 		"", "As the last of the mana drains from you, you feel decidedly better.", "", CMD_NONE
 	},
+	//
+	// The two rows below are not skills and cannot be learned or cast.  Each
+	// exists so a prog driven affect has a type of its own.  Without a row the
+	// gsn stays 0, which is the type every affect that never sets one gets, so
+	// is_affected cannot tell them apart and the affect saves as "reserved".
+	// Level 53 is past LEVEL_HERO so no class can reach them, and spell_null
+	// keeps them out of every cast path and skill listing.
+	//
+	{
+		"gking", { 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53 },
+		spell_null, TAR_IGNORE, POS_STANDING,
+		&gsn_gking, 0, 0, 0,
+		"", "", "", CMD_NONE
+	},
+	{
+		"elven down", { 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53 },
+		spell_null, TAR_IGNORE, POS_STANDING,
+		&gsn_rprog_elven_down, 0, 0, 0,
+		"", "", "", CMD_NONE
+	},
 	{
 		"end", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53 },
 		spell_null, TAR_END, POS_FIGHTING,
