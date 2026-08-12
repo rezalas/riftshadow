@@ -2503,7 +2503,7 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 	{
 		"regeneration", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 24 },
 		spell_regeneration, TAR_CHAR_DEFENSIVE, POS_STANDING,
-		nullptr, CAN_DISPEL|CAN_CANCEL, 75, 24,
+		&gsn_regeneration, CAN_DISPEL|CAN_CANCEL, 75, 24,
 		"", "The soothing coolness of your regeneration wanes.", "", CMD_SPELL
 	},
 	{
