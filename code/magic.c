@@ -630,6 +630,7 @@ void do_cast(CHAR_DATA *ch, char *argument)
 	EXIT_DATA *pexit;
 	SpellTarget vo;
 	bool somatic = false;
+	bool offensive_at_char = false;
 	int mana, where;
 	int sn;
 	int encumb;
@@ -992,6 +993,15 @@ void do_cast(CHAR_DATA *ch, char *argument)
 	}
 	*/
 
+	/*
+	 * A TAR_OBJ_CHAR_OFF spell that resolved to a character is an offensive spell aimed at that
+	 * character, and every check below has to treat it as one. Only the retaliation check at the
+	 * end of this function ever did, so the protections were skipped while the retaliation still
+	 * fired. No spell uses TAR_OBJ_CHAR_OFF today, which is why nobody noticed.
+	 */
+	offensive_at_char = targtype == TAR_CHAR_OFFENSIVE
+		|| (targtype == TAR_OBJ_CHAR_OFF && target == TARGET_CHAR);
+
 	if (!is_npc(ch) && ch->mana < mana)
 	{
 		send_to_char("You don't have enough mana.\n\r", ch);
@@ -1005,7 +1015,7 @@ void do_cast(CHAR_DATA *ch, char *argument)
 
 	if (!is_npc(ch) && (number_percent() > get_skill(ch, sn)))
 	{
-		if (targtype == TAR_CHAR_OFFENSIVE)
+		if (offensive_at_char)
 			cast_myell(ch, victim);
 
 		send_to_char("You failed to complete your incantation.\n\r", ch);
@@ -1023,10 +1033,10 @@ void do_cast(CHAR_DATA *ch, char *argument)
 			return;
 		}
 
-		if (targtype == TAR_CHAR_OFFENSIVE && is_safe(ch, victim))
+		if (offensive_at_char && is_safe(ch, victim))
 			return;
 
-		if (targtype == TAR_CHAR_OFFENSIVE)
+		if (offensive_at_char)
 			cast_myell(ch, victim);
 
 		/* Armor encumbrance for mages. */
@@ -1044,7 +1054,7 @@ void do_cast(CHAR_DATA *ch, char *argument)
 			}
 		}
 
-		if (targtype == TAR_CHAR_OFFENSIVE && is_affected(victim, gsn_cloak_of_mist) && number_percent() > 60)
+		if (offensive_at_char && is_affected(victim, gsn_cloak_of_mist) && number_percent() > 60)
 		{
 			act("Your spell dissipates in the mist swirling around $N.", ch, 0, victim, TO_CHAR);
 			act("$n's spell dissipates in the mist swirling around you.", ch, 0, victim, TO_VICT);
@@ -1052,7 +1062,7 @@ void do_cast(CHAR_DATA *ch, char *argument)
 			return;
 		}
 
-		if (targtype == TAR_CHAR_OFFENSIVE && is_affected(victim, gsn_rotating_ward))
+		if (offensive_at_char && is_affected(victim, gsn_rotating_ward))
 		{
 			paf = affect_find(victim->affected, gsn_rotating_ward);
 			paf->modifier--;
@@ -1070,7 +1080,7 @@ void do_cast(CHAR_DATA *ch, char *argument)
 			return;
 		}
 
-		if (targtype == TAR_CHAR_OFFENSIVE
+		if (offensive_at_char
 			&& get_skill(victim, gsn_nullify) > 1
 			&& !(is_npc(victim) && victim->cabal != CABAL_SCION)
 			&& (!is_immortal(ch) || !is_immortal(victim))
@@ -1101,7 +1111,7 @@ void do_cast(CHAR_DATA *ch, char *argument)
 		check_improve(ch, sn, true, 1);
 	}
 
-	if ((targtype == TAR_CHAR_OFFENSIVE || (targtype == TAR_OBJ_CHAR_OFF && target == TARGET_CHAR))
+	if (offensive_at_char
 		&& victim != ch
 		&& Deref(victim->master) != ch
 		&& !(is_affected(victim, gsn_bind_feet) && sn == gsn_bind_feet))

@@ -2141,6 +2141,7 @@ void do_commune(CHAR_DATA *ch, char *argument)
 	int sn, where;
 	AFFECT_DATA af, *paf;
 	int target;
+	bool offensive_at_char = false;
 
 	if (is_npc(ch) && Deref(ch->desc) == nullptr)
 		return;
@@ -2442,6 +2443,14 @@ void do_commune(CHAR_DATA *ch, char *argument)
 			return;
 	}
 
+	/*
+	 * A TAR_OBJ_CHAR_OFF prayer that resolved to a character is an offensive prayer aimed at that
+	 * character. Only the retaliation check at the end of this function ever treated it as one, so
+	 * the protections below were skipped while the retaliation still fired.
+	 */
+	offensive_at_char = skill_table[sn].target == TAR_CHAR_OFFENSIVE
+		|| (skill_table[sn].target == TAR_OBJ_CHAR_OFF && target == TARGET_CHAR);
+
 	if (!is_npc(ch) && ch->mana < mana)
 	{
 		send_to_char("You don't have enough mana.\n\r", ch);
@@ -2466,10 +2475,10 @@ void do_commune(CHAR_DATA *ch, char *argument)
 			return;
 		}
 		*/
-		if (skill_table[sn].target == TAR_CHAR_OFFENSIVE && is_safe(ch, victim))
+		if (offensive_at_char && is_safe(ch, victim))
 			return;
 
-		if (skill_table[sn].target == TAR_CHAR_OFFENSIVE)
+		if (offensive_at_char)
 		{
 			if (!is_npc(ch) && !is_npc(victim) && (Deref(ch->fighting) == nullptr || Deref(victim->fighting) == nullptr))
 			{
@@ -2489,7 +2498,7 @@ void do_commune(CHAR_DATA *ch, char *argument)
 			}
 		}
 
-		if (skill_table[sn].target == TAR_CHAR_OFFENSIVE && victim != ch)
+		if (offensive_at_char && victim != ch)
 		{
 			act("You narrow your eyes and glare in $N's direction.", ch, 0, victim, TO_CHAR);
 			act("$n narrows $s eyes and glares in $N's direction.", ch, 0, victim, TO_NOTVICT);
@@ -2541,9 +2550,7 @@ void do_commune(CHAR_DATA *ch, char *argument)
 		}
 	}
 
-	if ((skill_table[sn].target == TAR_CHAR_OFFENSIVE
-			|| (skill_table[sn].target == TAR_OBJ_CHAR_OFF
-			&& target == TARGET_CHAR))
+	if (offensive_at_char
 		&& victim != ch && Deref(victim->master) != ch)
 	{
 		CHAR_DATA *vch;
@@ -2574,6 +2581,7 @@ void do_call(CHAR_DATA *ch, char *argument)
 	int mana, where;
 	int sn;
 	int target;
+	bool offensive_at_char = false;
 
 	if (is_npc(ch) && Deref(ch->desc) == nullptr)
 		return;
@@ -2792,6 +2800,14 @@ void do_call(CHAR_DATA *ch, char *argument)
 			return;
 	}
 
+	/*
+	 * A TAR_OBJ_CHAR_OFF power that resolved to a character is an offensive power aimed at that
+	 * character. Only the retaliation check at the end of this function ever treated it as one, so
+	 * the protections below were skipped while the retaliation still fired.
+	 */
+	offensive_at_char = skill_table[sn].target == TAR_CHAR_OFFENSIVE
+		|| (skill_table[sn].target == TAR_OBJ_CHAR_OFF && target == TARGET_CHAR);
+
 	if (!is_npc(ch) && ch->mana < mana)
 	{
 		send_to_char("You don't have enough mana.\n\r", ch);
@@ -2813,10 +2829,10 @@ void do_call(CHAR_DATA *ch, char *argument)
 	{
 		ch->mana -= mana;
 
-		if (skill_table[sn].target == TAR_CHAR_OFFENSIVE && is_safe(ch, victim))
+		if (offensive_at_char && is_safe(ch, victim))
 			return;
 
-		if (skill_table[sn].target == TAR_CHAR_OFFENSIVE)
+		if (offensive_at_char)
 		{
 			if (!is_npc(ch) && !is_npc(victim) && (Deref(ch->fighting) == nullptr || Deref(victim->fighting) == nullptr))
 			{
@@ -2849,8 +2865,7 @@ void do_call(CHAR_DATA *ch, char *argument)
 		check_improve(ch, sn, true, 1);
 	}
 
-	if ((skill_table[sn].target == TAR_CHAR_OFFENSIVE
-			|| (skill_table[sn].target == TAR_OBJ_CHAR_OFF && target == TARGET_CHAR))
+	if (offensive_at_char
 		&& victim != ch
 		&& Deref(victim->master) != ch)
 	{
