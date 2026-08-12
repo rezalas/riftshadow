@@ -3068,9 +3068,11 @@ bool do_mob_cast(CHAR_DATA *ch)
 		return false;
 
 	victim = Deref(ch->fighting);
-	// Share the wealth.
+	// Share the wealth. A mob only ever aims at a character here, so an
+	// object-or-character spell counts as offensive without needing to ask
+	// what the payload turned out to be.
 	//
-	if (skill_table[sn].target == TAR_CHAR_OFFENSIVE)
+	if (skill_table[sn].target == TAR_CHAR_OFFENSIVE || skill_table[sn].target == TAR_OBJ_CHAR_OFF)
 	{
 		for (victim = ch->in_room->people; victim != nullptr; victim = victim->next_in_room)
 		{

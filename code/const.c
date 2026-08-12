@@ -829,7 +829,7 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 	},
 	{
 		"poison", { 60, 53, 53, 10, 53, 14, 53, 53, 53, 53, 17, 53 },
-		spell_poison, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
+		spell_poison, TAR_OBJ_CHAR_OFF, POS_FIGHTING,
 		&gsn_poison, CAN_PURIFY|CAN_CLEANSE, 10, 12,
 		"poison", "You feel less sick.", "$n looks less ill.", CMD_BOTH
 	},
