@@ -72,8 +72,9 @@ int main(int argc, char **argv)
 
 	RS.Logger.Info("Riftshadow booted, binding on port {}.", port);
 
-	game_loop_unix(control);
-	close(control);
+	RS.GameEngine.BeginGameLoop(control);
+	RS.GameEngine.GameLoop();
+	RS.GameEngine.EndGameLoop();
 
 	/*
 	 * That's all, folks.

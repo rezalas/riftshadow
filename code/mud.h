@@ -13,6 +13,7 @@
 #include <string>
 
 #include "rift.h"
+#include "gameloop.h"
 #include "stdlibs/clogger.h"
 #include "stdlibs/dbsession.h"
 #include "queue.h"
@@ -33,7 +34,7 @@ class CMud
 public:
 	CMud();
 	virtual ~CMud();
-//	CGameLoop 			GameEngine;
+	CGameLoop			GameEngine;
 	DbSession			Db;		// `rift_core` database connection
 	DbSession			DbRift;	// `rift` database connection
 	CLogger				Logger;

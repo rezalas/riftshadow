@@ -31,6 +31,7 @@ set(RIFT_SOURCE config.cpp
 	alias.c
 	ban.c
 	comm.c
+	gameloop.c
 	const.c
 	db.c
 	db2.c

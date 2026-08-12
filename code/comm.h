@@ -107,7 +107,6 @@ int select (int width, fd_set *readfds, fd_set *writefds, fd_set *exceptfds, str
 //
 
 int init_socket  (int port);
-void game_loop_unix (int control);
 void init_descriptor (int control);
 void close_socket (DESCRIPTOR_DATA *dclose);
 bool read_from_descriptor (DESCRIPTOR_DATA *d);
