@@ -23,23 +23,19 @@
 
 void spell_stasis_wall(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
-	int dir = 0;
+	// Both ways in resolve the direction before dispatching, so it arrives in
+	// the target: do_cast for a TAR_DIR cast, cast_rune for a drawn rune.  The
+	// cast path used to re-parse the global holding the caster's argument
+	// instead, which meant any producer aiming this spell at something other
+	// than a direction quietly used whatever the last command had left there.
+	// Asking the target reports a mismatch and gives a direction of -1.
+	int dir = vo.AsDir();
 	EXIT_DATA *pexit = nullptr;
 
-	 // it's been casted, so we don't get the dir handed straight to us (this is pre TAR_DIR)
-	if (mode != CastMode::Rune)
+	if (dir < 0 || dir >= MAX_DIR)
 	{
-		if ((dir = direction_lookup(target_name)) == -1)
-		{
-			send_to_char("That's not a valid direction.\n\r", ch);
-			return;
-		}
-	}
-	else
-	{
-		// The direction is carried by value now, so this no longer reads
-		// through a pointer into the casting function's stack frame.
-		dir = vo.AsDir();
+		send_to_char("That's not a valid direction.\n\r", ch);
+		return;
 	}
 
 	pexit = ch->in_room->exit[dir];
