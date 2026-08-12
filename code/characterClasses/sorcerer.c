@@ -4442,9 +4442,12 @@ void spell_grounding(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode 
 
 	act("You bind $N to the earth, grounding $M against lightning.", ch, nullptr, victim, TO_CHAR);
 
+	// Grounding suppresses flight for its duration rather than dispelling it:
+	// the flying bit comes off below, and grounding_end puts it back if the fly
+	// spell is still running.  Stripping the affect here would remove the thing
+	// that tells grounding_end there is anything to restore.
 	if (is_affected(victim, gsn_fly))
 	{
-		affect_strip(victim, gsn_fly);
 		act("As $n gestures, you drop heavily to the ground!", ch, nullptr, victim, TO_VICT);
 		act("As $n gestures, $N drops heavily to the ground!", ch, nullptr, victim, TO_NOTVICT);
 	}

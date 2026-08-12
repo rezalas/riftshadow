@@ -722,7 +722,7 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 	{
 		"fly", { 60, 53, 53, 19, 53, 53, 53, 53, 18, 17, 53, 16 },
 		spell_fly, TAR_CHAR_DEFENSIVE, POS_STANDING,
-		nullptr, CAN_DISPEL|CAN_CANCEL, 10, 18,
+		&gsn_fly, CAN_DISPEL|CAN_CANCEL, 10, 18,
 		"", "You slowly float to the ground.", "$n slowly floats to the ground.", CMD_BOTH
 	},
 	{
