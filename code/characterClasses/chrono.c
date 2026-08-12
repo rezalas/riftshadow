@@ -21,13 +21,13 @@
 #include "../interp.h"
 #include "../update.h"
 
-void spell_stasis_wall(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_stasis_wall(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	int dir = 0;
 	EXIT_DATA *pexit = nullptr;
 
 	 // it's been casted, so we don't get the dir handed straight to us (this is pre TAR_DIR)
-	if (target != RUNE_DOOR)
+	if (mode != CastMode::Rune)
 	{
 		if ((dir = direction_lookup(target_name)) == -1)
 		{
@@ -50,8 +50,8 @@ void spell_stasis_wall(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int tar
 		return;
 	}
 
-	// if it's not RUNE_DOOR then it's been casted, not runed, so it's immediate
-	if (target != RUNE_DOOR)
+	// a cast wall goes up now, a drawn one when the rune is finished
+	if (mode != CastMode::Rune)
 	{
 		// apply_rune copies this into a rune of its own, so the template only
 		// has to outlive the call.
@@ -381,7 +381,7 @@ void do_rune(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	(*skill_table[sn].spell_fun)(sn, ch->level * 2, ch, vo, target);
+	(*skill_table[sn].spell_fun)(sn, ch->level * 2, ch, vo, CastMode::Rune);
 	check_improve(ch, sn, true, 1);
 }
 

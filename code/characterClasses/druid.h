@@ -9,9 +9,9 @@
 //
 
 /*
-void spell_imbue_stone(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target);
+void spell_imbue_stone(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode);
 */
 
-void spell_tangleroot(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target);
+void spell_tangleroot(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode);
 
 #endif /* DRUID_H */

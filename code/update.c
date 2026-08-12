@@ -3113,7 +3113,7 @@ bool do_mob_cast(CHAR_DATA *ch)
 		say_spell(ch, sn);
 	}
 
-	(*skill_table[sn].spell_fun)(sn, ch->level, ch, victim, TAR_CHAR_OFFENSIVE);
+	(*skill_table[sn].spell_fun)(sn, ch->level, ch, victim, CastMode::Spell);
 
 	return true;
 }

@@ -98,7 +98,7 @@ void check_leech(CHAR_DATA *ch, CHAR_DATA *victim)
 	check_improve(ch, gsn_leech, true, 6);
 }
 
-void spell_indomitability(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_indomitability(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	AFFECT_DATA af;
 
@@ -165,7 +165,7 @@ void do_taunt(CHAR_DATA *ch, char *argument)
 	WAIT_STATE(ch, PULSE_VIOLENCE * 2);
 }
 
-void spell_wrack(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_wrack(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
@@ -203,7 +203,7 @@ void spell_wrack(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 	affect_to_char(victim, &af);
 }
 
-void spell_radiance(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_radiance(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	AFFECT_DATA af;
 
@@ -238,7 +238,7 @@ void wrack_tick(CHAR_DATA *ch, AFFECT_DATA *af)
 	}
 }
 
-void spell_inspire_lust(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_inspire_lust(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 
 	CHAR_DATA *victim = vo.AsChar();
@@ -351,7 +351,7 @@ void lust_pulse(CHAR_DATA *ch, AFFECT_DATA *af)
 	}
 }
 
-void spell_dispaters(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_dispaters(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	CHAR_DATA *victim;
 	OBJ_DATA *obj;
@@ -440,7 +440,7 @@ void do_consume(CHAR_DATA *ch, char *argument)
 	}
 }
 
-void spell_baals_mastery(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_baals_mastery(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	AFFECT_DATA af;
 	int weapon;
@@ -589,7 +589,7 @@ void check_baals_mastery(CHAR_DATA *ch, CHAR_DATA *victim)
 	return;
 }
 
-void spell_word_of_command(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_word_of_command(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	char arg1[MSL], arg2[MSL], buf[MSL];
 	AFFECT_DATA af;
@@ -729,7 +729,7 @@ void command_execute_delay(CHAR_DATA *ch, char *command)
 	free_pstring(ch->pcdata->command[1]);
 }
 
-void spell_mark_of_wrath(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_mark_of_wrath(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
@@ -777,7 +777,7 @@ void spell_mark_of_wrath(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int t
 	return;
 }
 
-void spell_living_blade(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_living_blade(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	OBJ_DATA *weapon = vo.AsObj();
 	OBJ_AFFECT_DATA oaf;
@@ -981,7 +981,7 @@ void traitor_pulse(CHAR_DATA *ch, AFFECT_DATA *af)
 	}
 }
 
-void spell_dark_familiar(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_dark_familiar(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	CHAR_DATA *fam;
 	AFFECT_DATA af;
@@ -1096,7 +1096,7 @@ void spell_dark_familiar(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int t
 }
 
 /* The spell used to begin the demon-summoning rituals for AP favors. */
-void spell_unholy_communion(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_unholy_communion(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	AFFECT_DATA af;
 
@@ -1756,7 +1756,7 @@ void furcas_vanish(CHAR_DATA *ch, CHAR_DATA *mob)
 	char_to_room(mob, pRoomIndex);
 }
 
-void spell_insanity(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_insanity(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	AFFECT_DATA af;
 
@@ -1827,7 +1827,7 @@ void insanity_pulse(CHAR_DATA *ch, AFFECT_DATA *af)
 				act("$n flashes a quick grin, $s eyes gleaming with a dark madness.", ch, 0, 0, TO_ROOM);
 				act("Coalesced energy erupts from $n's body, covering the area in flames.", ch, 0, 0, TO_ROOM);
 				act("You utter arcane words as a ball of fire erupts from your body.", ch, 0, 0, TO_CHAR);
-				spell_fireball(skill_lookup("fireball"), ch->level, ch, SpellTarget(), TAR_IGNORE);
+				spell_fireball(skill_lookup("fireball"), ch->level, ch, SpellTarget(), CastMode::Spell);
 				break;
 			case 4:
 				insanity_two(ch, room);
@@ -1987,16 +1987,16 @@ void insanity_fight(CHAR_DATA *ch)
 			switch (number_range(0, 3))
 			{
 				case 0:
-					spell_curse(skill_lookup("curse"), ch->level, ch, victim, TAR_CHAR_OFFENSIVE);
+					spell_curse(skill_lookup("curse"), ch->level, ch, victim, CastMode::Spell);
 					break;
 				case 1:
-					spell_blindness(skill_lookup("blindness"), ch->level, ch, victim, TAR_CHAR_OFFENSIVE);
+					spell_blindness(skill_lookup("blindness"), ch->level, ch, victim, CastMode::Spell);
 					break;
 				case 2:
-					spell_energy_drain(skill_lookup("energy drain"), ch->level, ch, victim, TAR_CHAR_OFFENSIVE);
+					spell_energy_drain(skill_lookup("energy drain"), ch->level, ch, victim, CastMode::Spell);
 					break;
 				case 3:
-					spell_iceball(skill_lookup("iceball"), ch->level, ch, SpellTarget(), TAR_IGNORE);
+					spell_iceball(skill_lookup("iceball"), ch->level, ch, SpellTarget(), CastMode::Spell);
 					break;
 			}
 
@@ -2447,7 +2447,7 @@ char *get_insight_line(long where[])
 	return beep;
 }
 
-void spell_dark_insight(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_dark_insight(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	int found = 0;
 	float dammod;

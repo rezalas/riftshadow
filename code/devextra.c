@@ -2501,7 +2501,7 @@ void do_commune(CHAR_DATA *ch, char *argument)
 				act("You reflect $n's spell right back at $m!", ch, 0, victim, TO_VICT);
 				act("$N reflects $n's spell right back at $m!", ch, 0, victim, TO_NOTVICT);
 
-				(*skill_table[sn].spell_fun)(sn, ch->level * 2, victim, ch, target);
+				(*skill_table[sn].spell_fun)(sn, ch->level * 2, victim, ch, CastMode::Spell);
 				return;
 			}
 		}
@@ -2529,7 +2529,7 @@ void do_commune(CHAR_DATA *ch, char *argument)
 			act("$n furrows $s brow as $e looks through $s possessions.", ch, 0, 0, TO_ROOM);
 		}
 
-		(*skill_table[sn].spell_fun)(sn, ch->level, ch, vo, target);
+		(*skill_table[sn].spell_fun)(sn, ch->level, ch, vo, CastMode::Spell);
 
 		if (sn == gsn_rage)
 		{
@@ -2840,12 +2840,12 @@ void do_call(CHAR_DATA *ch, char *argument)
 				act("$N reflects your spell right back at you!", ch, 0, victim, TO_CHAR);
 				act("You reflect $n's spell right back at $m!", ch, 0, victim, TO_VICT);
 				act("$N reflects $n's spell right back at $m!", ch, 0, victim, TO_NOTVICT);
-				(*skill_table[sn].spell_fun)(sn, ch->level * 2, victim, ch, target);
+				(*skill_table[sn].spell_fun)(sn, ch->level * 2, victim, ch, CastMode::Spell);
 				return;
 			}
 		}
 
-		(*skill_table[sn].spell_fun)(sn, ch->level, ch, vo, target);
+		(*skill_table[sn].spell_fun)(sn, ch->level, ch, vo, CastMode::Spell);
 		check_improve(ch, sn, true, 1);
 	}
 

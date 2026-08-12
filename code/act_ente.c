@@ -120,7 +120,7 @@ void do_enter(CHAR_DATA *ch, char *argument)
 	{
 		send_to_char("You enter the portal and find yourself elsewhere.\n\r", ch);
 		act("$n steps into $p.", ch, portal, 0, TO_ROOM);
-		spell_teleport(skill_lookup("teleport"), ch->level, ch, ch, TAR_CHAR_SELF);
+		spell_teleport(skill_lookup("teleport"), ch->level, ch, ch, CastMode::Spell);
 		return;
 	}
 

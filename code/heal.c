@@ -260,5 +260,5 @@ void do_heal(CHAR_DATA *ch, char *argument)
 	if (ch->cabal == CABAL_HORDE)
 		level /= 2;
 
-	spell(sn, level, !cursed ? mob : ch, !cursed ? SpellTarget(ch) : SpellTarget(cursed), !cursed ? TARGET_CHAR : TARGET_OBJ);
+	spell(sn, level, !cursed ? mob : ch, !cursed ? SpellTarget(ch) : SpellTarget(cursed), CastMode::Spell);
 }

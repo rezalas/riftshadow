@@ -1917,14 +1917,14 @@ void verb_prog_twist_two_faced(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 		act("The faces of the statue seem to grin maniacally.", ch, 0, 0, TO_ALL);
 		send_to_char("A stream of acid shoots out of the mouth of the statue at you!\n\r", ch);
 		act("A stream of acid shoots out of the mouth of the statue at $n!", ch, 0, 0, TO_ROOM);
-		spell_acid_stream(gsn_acid_stream, ch->level + 1, ch, ch, TARGET_CHAR);
+		spell_acid_stream(gsn_acid_stream, ch->level + 1, ch, ch, CastMode::Spell);
 
 		if (ch->ghost)
 			return;
 
 		send_to_char("A small dart flies out of the eye of the statue, barely piercing your skin.\n\r", ch);
 		act("A small dart flies out of the eye of the statue, barely piercing $n's skin.", ch, 0, 0, TO_ROOM);
-		spell_plague(gsn_plague, ch->level + 5, ch, ch, TARGET_CHAR);
+		spell_plague(gsn_plague, ch->level + 5, ch, ch, CastMode::Spell);
 	}
 	else
 	{
@@ -2387,7 +2387,6 @@ void fight_prog_essence_darkness(OBJ_DATA *obj, CHAR_DATA *ch)
 void verb_prog_rub_talisman(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 {
 	int sn = skill_lookup("word of recall");
-	int target = TAR_CHAR_DEFENSIVE;
 	SpellTarget vo = ch;
 
 	act("You rub a worn patch of the wooden talisman.", ch, 0, 0, TO_CHAR);
@@ -2404,7 +2403,7 @@ void verb_prog_rub_talisman(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	(*skill_table[sn].spell_fun)(sn, ch->level, ch, vo, target);
+	(*skill_table[sn].spell_fun)(sn, ch->level, ch, vo, CastMode::Spell);
 
 	act("$p crumbles into dust as the magic drains from it.", ch, obj, 0, TO_CHAR);
 

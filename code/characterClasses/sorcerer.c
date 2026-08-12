@@ -118,7 +118,7 @@ int para_compute(int ele1, int ele2)
 	return -1;
 }
 
-void spell_scorch(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_scorch(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 
@@ -132,7 +132,7 @@ void spell_scorch(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 	damage_new(ch, victim, dam, sn, DAM_FIRE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, nullptr);
 }
 
-void spell_gravity_well(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_gravity_well(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	OBJ_DATA *well = get_obj_list(ch, target_name, ch->in_room->contents), *gwell;
 	AFFECT_DATA af;
@@ -274,7 +274,7 @@ void gravity_well_explode(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *af)
 	}
 }
 
-void spell_cyclone(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_cyclone(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	AREA_AFFECT_DATA aaf;
 	AFFECT_DATA af;
@@ -361,7 +361,7 @@ void cyclone_end_fun(AREA_DATA *area, AREA_AFFECT_DATA *af)
 	zone_echo(area, "{cThe cyclone gradually dissipates as the skies lighten and debris settles.{x");
 }
 
-void spell_chill(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_chill(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
@@ -398,7 +398,7 @@ void spell_chill(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 	}
 }
 
-void spell_chillmetal(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_chillmetal(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	CHAR_DATA *victim = nullptr;
 	OBJ_DATA *obj = nullptr;
@@ -459,7 +459,7 @@ void spell_chillmetal(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int targ
 	}
 }
 
-void spell_conflagration(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_conflagration(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	AFFECT_DATA af;
 	ROOM_AFFECT_DATA raf;
@@ -651,7 +651,7 @@ void conflag_burnout(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *af)
 	}
 }
 
-void spell_ultradiffusion(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_ultradiffusion(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	AFFECT_DATA af;
 
@@ -842,7 +842,7 @@ void ultradiffusion_end(CHAR_DATA *ch, AFFECT_DATA *af)
 	WAIT_STATE(ch, 3 * PULSE_VIOLENCE);
 }
 
-void spell_heat_metal(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_heat_metal(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	OBJ_DATA *obj, *obj2;
@@ -923,7 +923,7 @@ void spell_heat_metal(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int targ
 	}
 }
 
-void spell_knock(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_knock(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	ROOM_INDEX_DATA *to_room;
 	EXIT_DATA *pexit;
@@ -1000,7 +1000,7 @@ void spell_knock(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 	send_to_char("There is no door there.\n\r", ch);
 }
 
-void spell_vacuum(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_vacuum(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	ROOM_AFFECT_DATA raf;
 	CHAR_DATA *vch, *vch_next;
@@ -1230,7 +1230,7 @@ void vacuum_end_fun(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *af)
 	}
 }
 
-void spell_incandescense(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_incandescense(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
@@ -1253,7 +1253,7 @@ void spell_incandescense(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int t
 	act("$n begins to glow with a soft white light.", victim, nullptr, nullptr, TO_ROOM);
 }
 
-void spell_infravision(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_infravision(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	AFFECT_DATA af;
 
@@ -1277,7 +1277,7 @@ void spell_infravision(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int tar
 	send_to_char("Your sensitivity to heat sources increases.\n\r", ch);
 }
 
-void spell_diuretic(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_diuretic(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	AFFECT_DATA *af;
 	CHAR_DATA *victim = get_char_room(ch, target_name);
@@ -1340,7 +1340,7 @@ void spell_diuretic(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target
 		multi_hit(victim, ch, TYPE_HIT);
 }
 
-void spell_corona(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_corona(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	AFFECT_DATA af;
 
@@ -1376,7 +1376,7 @@ void spell_corona(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 	affect_to_char(ch, &af);
 }
 
-void spell_heatshield(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_heatshield(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	AFFECT_DATA af;
 
@@ -1401,7 +1401,7 @@ void spell_heatshield(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int targ
 	act("The air around $n ripples with heat.", ch, 0, 0, TO_ROOM);
 }
 
-void spell_immolate(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_immolate(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	OBJ_AFFECT_DATA oaf;
@@ -1458,7 +1458,7 @@ void immolate_end(OBJ_DATA *obj, OBJ_AFFECT_DATA *af)
 		act("$p stops burning.", obj->in_room->people, obj, 0, TO_ALL);
 }
 
-void spell_scathing(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_scathing(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	CHAR_DATA *vch, *vch_next;
 	AFFECT_DATA af;
@@ -1511,7 +1511,7 @@ void spell_scathing(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target
 	}
 }
 
-void spell_earthquake(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_earthquake(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	ROOM_AFFECT_DATA raf;
 	CHAR_DATA *vch, *vch_next;
@@ -1646,7 +1646,7 @@ void spell_earthquake(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int targ
 	}
 }
 
-void spell_electrocute(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_electrocute(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	OBJ_DATA *obj;
@@ -1698,7 +1698,7 @@ void spell_electrocute(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int tar
 	LAG_CHAR(victim, (tconduct / 15) * PULSE_VIOLENCE);
 }
 
-void spell_induce_pain(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_induce_pain(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	int dam = dice(level, 7) + 10;
@@ -1719,7 +1719,7 @@ void spell_induce_pain(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int tar
 	damage_new(ch, victim, dam, sn, DAM_OTHER, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, nullptr);
 }
 
-void spell_disrupt_vision(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_disrupt_vision(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
@@ -1752,7 +1752,7 @@ void spell_disrupt_vision(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int 
 	act("$n appears to be blinded.", victim, nullptr, nullptr, TO_ROOM);
 }
 
-void spell_mana_conduit(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_mana_conduit(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
@@ -1780,7 +1780,7 @@ void spell_mana_conduit(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int ta
 	act("You feel energized, mana flowing more easily through your body.", victim, 0, 0, TO_CHAR);
 }
 
-void spell_synaptic_enhancement(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_synaptic_enhancement(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
@@ -1814,7 +1814,7 @@ void spell_synaptic_enhancement(int sn, int level, CHAR_DATA *ch, SpellTarget vo
 	act("Your mind suddenly feels much clearer and your reflexes sharpen.", victim, 0, 0, TO_CHAR);
 }
 
-void spell_synaptic_impairment(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_synaptic_impairment(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
@@ -1855,7 +1855,7 @@ void spell_synaptic_impairment(int sn, int level, CHAR_DATA *ch, SpellTarget vo,
 	act("Your mind clouds and you find concentration somewhat more difficult.", ch, 0, victim, TO_VICT);
 }
 
-void spell_elecshield(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_elecshield(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	AFFECT_DATA af;
 
@@ -1880,7 +1880,7 @@ void spell_elecshield(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int targ
 	act("A crackling sphere of electricity briefly surrounds $n.", ch, 0, 0, TO_ROOM);
 }
 
-void spell_scramble_neurons(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_scramble_neurons(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
@@ -1913,7 +1913,7 @@ void spell_scramble_neurons(int sn, int level, CHAR_DATA *ch, SpellTarget vo, in
 	act("$n disrupts $N's neurons!", ch, nullptr, victim, TO_NOTVICT);
 }
 
-void spell_mana_leech(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_mana_leech(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	int drain;
@@ -1949,7 +1949,7 @@ void spell_mana_leech(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int targ
 	}
 }
 
-void spell_interference(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_interference(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	AREA_AFFECT_DATA aaf;
 	AREA_DATA *area;
@@ -2005,7 +2005,7 @@ void interference_end(AREA_DATA *area, AREA_AFFECT_DATA *af)
 	zone_echo(area, "{yThe electrical interference in the area subsides.{x");
 }
 
-void spell_hydroperception(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_hydroperception(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	AFFECT_DATA af;
 
@@ -2029,7 +2029,7 @@ void spell_hydroperception(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int
 	send_to_char("You focus your senses on changes in the water around you.\n\r", ch);
 }
 
-void spell_dehydrate(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_dehydrate(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 
@@ -2056,7 +2056,7 @@ void spell_dehydrate(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int targe
 	}
 }
 
-void spell_drown(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_drown(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	int dam = dice(level + 10, 4);
@@ -2073,7 +2073,7 @@ void spell_drown(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 	damage_new(ch, victim, dam, sn, DAM_DROWNING, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, nullptr);
 }
 
-void spell_hydration(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_hydration(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	int heal = 0;
@@ -2175,7 +2175,7 @@ void spell_hydration(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int targe
 	victim->hit = std::min(victim->hit + heal, (int)victim->max_hit);
 }
 
-void spell_regeneration(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_regeneration(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
@@ -2209,7 +2209,7 @@ void spell_regeneration(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int ta
 	send_to_char("A soothing coolness washes over you as you feel a surge of vitality.\n\r", victim);
 }
 
-void spell_watershield(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_watershield(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	AFFECT_DATA af;
 
@@ -2234,7 +2234,7 @@ void spell_watershield(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int tar
 	act("A magical sphere of swirling water briefly surrounds $n.", ch, 0, 0, TO_ROOM);
 }
 
-void spell_flood(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_flood(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	ROOM_INDEX_DATA *to_room;
 	int door, duration;
@@ -2351,7 +2351,7 @@ void flood_recede(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *af)
 		affect_strip_room(room, gsn_riptide);
 }
 
-void spell_tidalwave(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_tidalwave(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	int door, i;
 	ROOM_INDEX_DATA *to_room;
@@ -2511,7 +2511,7 @@ void spell_tidalwave(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int targe
 	affect_to_char(ch, &af);
 }
 
-void spell_riptide(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_riptide(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	ROOM_INDEX_DATA *room, *first_room = nullptr, *second_room = nullptr;
 	AFFECT_DATA af;
@@ -2651,7 +2651,7 @@ int average_ac(CHAR_DATA *ch)
 	return avg / 3;
 }
 
-void spell_watermeld(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_watermeld(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	AFFECT_DATA af;
 
@@ -2685,7 +2685,7 @@ void spell_watermeld(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int targe
 	}
 }
 
-void spell_sense_disturbance(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_sense_disturbance(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	AFFECT_DATA af;
 
@@ -2709,7 +2709,7 @@ void spell_sense_disturbance(int sn, int level, CHAR_DATA *ch, SpellTarget vo, i
 	send_to_char("You attune yourself to notice disturbances in the air around you.\n\r", ch);
 }
 
-void spell_travelease(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_travelease(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	AFFECT_DATA af;
 	CHAR_DATA *gch;
@@ -2739,7 +2739,7 @@ void spell_travelease(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int targ
 	send_to_char("Ok.\n\r", ch);
 }
 
-void spell_diffusion(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_diffusion(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
@@ -2778,7 +2778,7 @@ void spell_diffusion(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int targe
 	}
 }
 
-void spell_disruption(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_disruption(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	int dam = dice(level, 5) + 20;
@@ -2793,7 +2793,7 @@ void spell_disruption(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int targ
 	damage_new(ch, victim, dam, sn, DAM_INTERNAL, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, nullptr);
 }
 
-void spell_anchor(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_anchor(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	CHAR_DATA *anchor, *wch, *wch_next, *oldanchor = nullptr;
 
@@ -2831,7 +2831,7 @@ void spell_anchor(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 	act("$n concentrates intently, and a small funnel cloud begins to spin in place beside $m.", ch, 0, 0, TO_ROOM);
 }
 
-void spell_aerial_transferrence(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_aerial_transferrence(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	CHAR_DATA *anchor = nullptr, *wch, *wch_next;
 	ROOM_INDEX_DATA *pRoomIndex;
@@ -2908,7 +2908,7 @@ void spell_aerial_transferrence(int sn, int level, CHAR_DATA *ch, SpellTarget vo
 	}
 }
 
-void spell_airshield(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_airshield(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	AFFECT_DATA af;
 
@@ -2941,7 +2941,7 @@ void spell_airshield(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int targe
 
 /* Earth spells */
 
-void spell_hardenfist(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_hardenfist(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	AFFECT_DATA af;
 
@@ -2968,7 +2968,7 @@ void spell_hardenfist(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int targ
 	}
 }
 
-void spell_stability(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_stability(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	AFFECT_DATA af;
 
@@ -2993,7 +2993,7 @@ void spell_stability(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int targe
 	send_to_char("You focus on manipulating your own mass, steadying your balance.\n\r", ch);
 }
 
-void spell_crush(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_crush(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	int dam;
@@ -3010,7 +3010,7 @@ void spell_crush(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 	damage_new(ch, victim, dam, sn, DAM_INTERNAL, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "crushing force");
 }
 
-void spell_sensevibrations(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_sensevibrations(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	AFFECT_DATA af;
 
@@ -3037,7 +3037,7 @@ void spell_sensevibrations(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int
 	}
 }
 
-void spell_diamondskin(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_diamondskin(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	AFFECT_DATA af;
 	if (!(ch->hit < ch->max_hit * .75))
@@ -3077,7 +3077,7 @@ void spell_diamondskin(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int tar
 	}
 }
 
-void spell_overbear(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_overbear(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	int str = 0;
@@ -3151,7 +3151,7 @@ void spell_overbear(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target
 	}
 }
 
-void spell_reduce(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_reduce(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
@@ -3209,7 +3209,7 @@ void spell_reduce(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 	}
 }
 
-void spell_earthshield(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_earthshield(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	AFFECT_DATA af;
 
@@ -3234,7 +3234,7 @@ void spell_earthshield(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int tar
 	act("$n's form is suddenly masked by an opaque gray shield that vanishes as quickly as it appeared.", ch, 0, 0, TO_ROOM);
 }
 
-void spell_coldshield(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_coldshield(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	AFFECT_DATA af;
 
@@ -3259,7 +3259,7 @@ void spell_coldshield(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int targ
 	act("The air around $n suddenly turns frigid.", ch, 0, 0, TO_ROOM);
 }
 
-void spell_coagulate(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_coagulate(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	CHAR_DATA *victim = get_char_room(ch, target_name);
 
@@ -3301,7 +3301,7 @@ void spell_coagulate(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int targe
 	}
 }
 
-void spell_hypothermia(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_hypothermia(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
@@ -3343,7 +3343,7 @@ void spell_hypothermia(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int tar
 	}
 }
 
-void spell_imprisonvoice(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_imprisonvoice(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
@@ -3381,7 +3381,7 @@ void spell_imprisonvoice(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int t
 	act_new("Your throat constricts painfully as your vocal cords are frozen solid.", ch, nullptr, victim, TO_VICT, POS_SLEEPING);
 }
 
-void spell_frigidaura(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_frigidaura(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	AFFECT_DATA af;
 
@@ -3416,7 +3416,17 @@ void spell_frigidaura(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int targ
 	act("$n is briefly surrounded by an aura of ice, which rapidly fades away.", ch, 0, 0, TO_ROOM);
 }
 
-void spell_enervate_agitate_helper(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target, int iDir)
+///
+/// Shifts a victim's energy state one step, which is the whole of enervate and agitate.
+/// @param sn The skill number of whichever of the two was cast.
+/// @param level The caster's effective level.
+/// @param ch The caster.
+/// @param vo Unused. The victim is resolved from the command argument, not from the target.
+/// @param iDir The direction to move the energy state in: 1 to agitate, -1 to enervate.
+/// @note Used to take the spell functions' tag parameter as well, and never read it. It is
+///       not a SPELL_FUN itself, so it does not have to mirror that signature.
+///
+void spell_enervate_agitate_helper(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int iDir)
 {
 	CHAR_DATA *victim = get_char_room(ch, target_name);
 	AFFECT_DATA af;
@@ -3602,14 +3612,14 @@ void spell_enervate_agitate_helper(int sn, int level, CHAR_DATA *ch, SpellTarget
 	}
 }
 
-void spell_enervate(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_enervate(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
-	spell_enervate_agitate_helper(sn, level, ch, vo, target, -1);
+	spell_enervate_agitate_helper(sn, level, ch, vo, -1);
 }
 
-void spell_agitate(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_agitate(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
-	spell_enervate_agitate_helper(sn, level, ch, vo, target, 1);
+	spell_enervate_agitate_helper(sn, level, ch, vo, 1);
 }
 
 void agitate_tick(CHAR_DATA *ch, AFFECT_DATA *af)
@@ -3646,7 +3656,7 @@ void agitate_tick(CHAR_DATA *ch, AFFECT_DATA *af)
 	}
 }
 
-void spell_freezemetal(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_freezemetal(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	OBJ_DATA *obj;
@@ -3706,7 +3716,7 @@ void spell_freezemetal(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int tar
 		damage_new(ch, victim, piercedam, sn, DAM_PIERCE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the metal shards*$");
 }
 
-void spell_frostbite(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_frostbite(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
@@ -3842,7 +3852,7 @@ int scramble_sn(CHAR_DATA *ch, int sn)
 	return snarray[number_range(0, found - 1)];
 }
 
-void spell_acid_stream(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_acid_stream(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	OBJ_DATA *armor;
@@ -4023,7 +4033,7 @@ void spell_acid_stream(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int tar
 		damage_new(victim, victim, dam, gsn_acid_stream, DAM_ACID, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "The stream of acid*");
 }
 
-void spell_acid_vein(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_acid_vein(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	char arg[MSL];
 	OBJ_DATA *weapon;
@@ -4084,7 +4094,7 @@ void acid_end(OBJ_DATA *obj, OBJ_AFFECT_DATA *af)
 	extract_obj(obj);
 }
 
-void spell_corrode_lock(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_corrode_lock(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	char arg[MAX_INPUT_LENGTH];
 	OBJ_DATA *obj;
@@ -4228,7 +4238,7 @@ void spell_corrode_lock(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int ta
 	}
 }
 
-void spell_attract(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_attract(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
@@ -4281,7 +4291,7 @@ void attract_tick(CHAR_DATA *ch, AFFECT_DATA *af)
 		ch->position = POS_STANDING;
 }
 
-void spell_absorb(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_absorb(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
@@ -4306,7 +4316,7 @@ void spell_absorb(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 	act("Flashes of light illuminate $N's eyes for a moment as $E completes the spell.", ch, nullptr, victim, TO_ROOM);
 }
 
-void spell_call_lightning(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_call_lightning(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	CHAR_DATA *victim;
 	AFFECT_DATA af;
@@ -4370,7 +4380,7 @@ void spell_call_lightning(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int 
 	damage_new(ch, victim, dice(level, 8), sn, DAM_LIGHTNING, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "The lightning strike*");
 }
 
-void spell_grounding(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_grounding(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	CHAR_DATA *victim = get_char_room(ch, target_name);
 	AFFECT_DATA af;
@@ -4472,7 +4482,7 @@ void grounding_end(CHAR_DATA *ch, AFFECT_DATA *af)
 	}
 }
 
-void spell_thunderclap(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_thunderclap(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	CHAR_DATA *vch, *vch_next;
 	AFFECT_DATA af;
@@ -4514,7 +4524,7 @@ void spell_thunderclap(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int tar
 	}
 }
 
-void spell_neutralize(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_neutralize(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
@@ -4558,7 +4568,7 @@ void spell_neutralize(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int targ
 	affect_to_char(victim, &af);
 }
 
-void spell_caustic_vapor(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_caustic_vapor(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	AFFECT_DATA af;
 	ROOM_AFFECT_DATA raf;
@@ -4619,7 +4629,7 @@ void caustic_vapor_burnout(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *af)
 	}
 }
 
-void spell_smokescreen(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_smokescreen(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	ROOM_AFFECT_DATA raf;
 	AFFECT_DATA af;
@@ -4666,7 +4676,7 @@ void smokescreen_end(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *af)
 		act("The thick smoke in the room clears.", room->people, nullptr, nullptr, TO_ALL);
 }
 
-void spell_smother(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_smother(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
@@ -4696,7 +4706,7 @@ void spell_smother(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 	LAG_CHAR(victim, PULSE_VIOLENCE);
 }
 
-void spell_putrid_air(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_putrid_air(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	CHAR_DATA *vch, *vch_next;
 
@@ -4730,7 +4740,7 @@ void spell_putrid_air(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int targ
 	}
 }
 
-void spell_asphyxiate(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_asphyxiate(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	int dam = dice(level, 5);
@@ -4751,7 +4761,7 @@ void spell_asphyxiate(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int targ
 	damage_new(ch, victim, dam, sn, DAM_INTERNAL, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, nullptr);
 }
 
-void spell_shroud_of_secrecy(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_shroud_of_secrecy(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	AFFECT_DATA af;
 
@@ -4795,7 +4805,7 @@ void shroud_end(CHAR_DATA *ch, AFFECT_DATA *af)
 	act("The shroud of smoke concealing $n dissipates.", ch, 0, 0, TO_ROOM);
 }
 
-void spell_noxious_ward(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_noxious_ward(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	AFFECT_DATA af;
 
@@ -4819,7 +4829,7 @@ void spell_noxious_ward(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int ta
 	act("You feel protected by a noxious ward.", ch, 0, 0, TO_CHAR);
 }
 
-void spell_molten_stones(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_molten_stones(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	int blunt = 0, fire = 0;
@@ -4852,7 +4862,7 @@ void spell_molten_stones(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int t
 	damage_new(ch, victim, fire, sn, DAM_FIRE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the searing heat*");
 }
 
-void spell_heat_earth(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_heat_earth(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	char buf[MSL];
 	CHAR_DATA *vch, *vch_next;
@@ -4892,7 +4902,7 @@ void spell_heat_earth(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int targ
 	}
 }
 
-void spell_blanket(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_blanket(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	AFFECT_DATA af;
 	ROOM_AFFECT_DATA raf;
@@ -4971,7 +4981,7 @@ void blanket_melt(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *af)
 	clear_tracks(room);
 }
 
-void spell_boreal_wind(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_boreal_wind(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	int dam;
@@ -5012,7 +5022,7 @@ void spell_boreal_wind(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int tar
 	damage_new(ch, victim, dam, sn, DAM_COLD, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, nullptr);
 }
 
-void spell_concave_shell(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_concave_shell(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	EXIT_DATA *pexit;
 	int dir;
@@ -5166,7 +5176,7 @@ void concave_shell_move(CHAR_DATA *ch, int dir, ROOM_INDEX_DATA *oldroom)
 		REMOVE_BIT(ch->comm, COMM_BRIEF);
 }
 
-void spell_frost_glaze(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_frost_glaze(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	AFFECT_DATA af;
 	int acmod;
@@ -5218,7 +5228,7 @@ void spell_frost_glaze(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int tar
 	affect_to_char(ch, &af);
 }
 
-void spell_unbreakable(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_unbreakable(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	OBJ_DATA *obj;
@@ -5282,7 +5292,7 @@ void spell_unbreakable(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int tar
 	affect_to_char(victim, &af);
 }
 
-void spell_earthsembrace(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_earthsembrace(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
@@ -5317,7 +5327,7 @@ void spell_earthsembrace(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int t
 	}
 }
 
-void spell_whiteout(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_whiteout(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	AREA_DATA *area;
 	AREA_AFFECT_DATA aaf;
@@ -5392,7 +5402,7 @@ void whiteout_end(AREA_DATA *area, AREA_AFFECT_DATA *af)
 	outdoors_echo(area, "{WThe whipping winds and thick snow suddenly subside as visibility returns.{x");
 }
 
-void spell_frigid_breeze(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_frigid_breeze(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	CHAR_DATA *vch, *vch_next;
 	int chance;
@@ -5446,7 +5456,7 @@ void spell_frigid_breeze(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int t
 	}
 }
 
-void spell_pure_air(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_pure_air(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	CHAR_DATA *vch;
 	bool cleansed;
@@ -5502,7 +5512,7 @@ void spell_pure_air(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target
 	}
 }
 
-void spell_icelance(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_icelance(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
@@ -5543,7 +5553,7 @@ void spell_icelance(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target
 	}
 }
 
-void spell_freeze_door(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_freeze_door(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	int door;
 	ROOM_INDEX_DATA *to_room;
@@ -5616,7 +5626,7 @@ void door_unfreeze(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *af)
 	REMOVE_BIT(pexit->exit_info, EX_JAMMED);
 }
 
-void spell_frost_growth(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_frost_growth(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	ROOM_AFFECT_DATA raf;
 
@@ -5646,7 +5656,7 @@ void ground_thaw(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *af)
 		act("The fine layer of frost coating the ground melts away.", room->people, 0, 0, TO_ALL);
 }
 
-void spell_bind_feet(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_bind_feet(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
@@ -5684,7 +5694,7 @@ void spell_bind_feet(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int targe
 	affect_to_char(victim, &af);
 }
 
-void spell_glaciate(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_glaciate(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	ROOM_INDEX_DATA *room = ch->in_room;
 	ROOM_AFFECT_DATA raf;
@@ -5723,7 +5733,7 @@ void glaciate_melt(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *raf)
 		act("The ice beneath you melts into water as the magic dissipates.", room->people, 0, 0, TO_ALL);
 }
 
-void spell_hailstorm(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_hailstorm(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	char buf[MSL];
 	CHAR_DATA *vch, *vch_next;
@@ -5757,7 +5767,7 @@ void spell_hailstorm(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int targe
 	}
 }
 
-void spell_stalactites(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_stalactites(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	ROOM_AFFECT_DATA raf;
 
@@ -5790,7 +5800,7 @@ void spell_stalactites(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int tar
 	new_affect_to_room(ch->in_room, &raf);
 }
 
-void spell_ice_blast(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_ice_blast(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	OBJ_DATA *obj, *obj_next;
@@ -5855,7 +5865,7 @@ void container_defrost(OBJ_DATA *obj, OBJ_AFFECT_DATA *af)
 		act("The ice sealing $p melts.", carrier, obj, 0, TO_CHAR);
 }
 
-void spell_icy_carapace(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_icy_carapace(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	OBJ_DATA *obj = nullptr;
 	AFFECT_DATA af;
@@ -5927,7 +5937,7 @@ void spell_icy_carapace(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int ta
 	affect_to_char(ch, &af);
 }
 
-void spell_sheath_of_ice(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_sheath_of_ice(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
@@ -5988,7 +5998,7 @@ void ice_sheath_melt(OBJ_DATA *obj, OBJ_AFFECT_DATA *af)
 		act("The ice surrounding $p melts.", carrier, obj, 0, TO_CHAR);
 }
 
-void spell_ironskin(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_ironskin(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	AFFECT_DATA af;
 
@@ -6021,7 +6031,7 @@ void spell_ironskin(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target
 	new_affect_to_char(ch, &af);
 }
 
-void spell_metal_shards(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_metal_shards(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	OBJ_DATA *weapon;
@@ -6070,7 +6080,7 @@ void spell_metal_shards(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int ta
 	}
 }
 
-void spell_burden(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_burden(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
@@ -6107,7 +6117,7 @@ void spell_burden(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 	new_affect_to_char(victim, &af);
 }
 
-void spell_fortify_weapon(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_fortify_weapon(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	OBJ_DATA *weapon = vo.AsObj();
 	OBJ_APPLY_DATA *hitapp = nullptr, *damapp = nullptr;
@@ -6286,7 +6296,7 @@ void spell_fortify_weapon(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int 
 	}
 }
 
-void spell_fortify_armor(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_fortify_armor(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	OBJ_DATA *armor = vo.AsObj();
 	int chance = 50, i, avg_ac = 0;
@@ -6375,7 +6385,7 @@ void spell_fortify_armor(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int t
 	}
 }
 
-void spell_alter_metal(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_alter_metal(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	char arg1[MSL], arg2[MSL];
 	OBJ_DATA *obj;
@@ -6461,7 +6471,7 @@ void spell_alter_metal(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int tar
 	}
 }
 
-void spell_cloak_of_mist(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_cloak_of_mist(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	AFFECT_DATA af;
 
@@ -6488,7 +6498,7 @@ void spell_cloak_of_mist(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int t
 	affect_to_char(ch, &af);
 }
 
-void spell_vigorize(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_vigorize(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	CHAR_DATA *vch;
 	int refresh = 0;
@@ -6517,7 +6527,7 @@ void spell_vigorize(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target
 	}
 }
 
-void spell_creeping_tomb(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_creeping_tomb(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
@@ -6583,7 +6593,7 @@ void creeping_tomb_tick(CHAR_DATA *ch, AFFECT_DATA *af)
 	}
 }
 
-void spell_pass_without_trace(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_pass_without_trace(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	AFFECT_DATA af;
 
@@ -6608,7 +6618,7 @@ void spell_pass_without_trace(int sn, int level, CHAR_DATA *ch, SpellTarget vo, 
 	affect_to_char(ch, &af);
 }
 
-void spell_quicksand(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_quicksand(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	ROOM_AFFECT_DATA raf;
 	AFFECT_DATA af;
@@ -6680,7 +6690,7 @@ void quicksand_pulse_sink(CHAR_DATA *ch, AFFECT_DATA *af)
 	af->modifier++;
 }
 
-void spell_sap_endurance(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_sap_endurance(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 
@@ -6697,7 +6707,7 @@ void spell_sap_endurance(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int t
 	victim->move = std::max(0, victim->move - number_range((int)((float)level * .9), (int)((float)level * 1.1)));
 }
 
-void spell_emulsify(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_emulsify(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	int dam;
@@ -6713,7 +6723,7 @@ void spell_emulsify(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target
 	damage_new(ch, victim, dam, sn, DAM_INTERNAL, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "emulsification");
 }
 
-void spell_rust(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_rust(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	OBJ_DATA *eq;
@@ -6794,7 +6804,7 @@ void spell_rust(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 	}
 }
 
-void spell_airy_water(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_airy_water(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	ROOM_INDEX_DATA *room = ch->in_room;
 	ROOM_AFFECT_DATA raf;
@@ -6828,7 +6838,7 @@ void spell_airy_water(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int targ
 	affect_to_room(room, &raf);
 }
 
-void spell_cooling_mist(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_cooling_mist(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
@@ -6863,7 +6873,7 @@ void spell_cooling_mist(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int ta
 	affect_to_char(victim, &af);
 }
 
-void spell_prismatic_spray(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_prismatic_spray(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
@@ -7019,7 +7029,7 @@ void spell_prismatic_spray(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int
 	}
 }
 
-void spell_earthfade(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_earthfade(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	AFFECT_DATA af;
 
@@ -7078,7 +7088,7 @@ void earthfade_tick(CHAR_DATA *ch, AFFECT_DATA *af)
 	return;
 }
 
-void spell_plasma_arc(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_plasma_arc(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
@@ -7109,7 +7119,7 @@ void spell_plasma_arc(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int targ
 	act("$n's vision is disrupted!", victim, nullptr, nullptr, TO_ROOM);
 }
 
-void spell_plasma_bolt(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_plasma_bolt(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	CHAR_DATA *vch, *vch_next;
 	ROOM_INDEX_DATA *pRoomIndex = nullptr;
@@ -7222,7 +7232,7 @@ void sphere_of_plasma_pulse(CHAR_DATA *ch, AFFECT_DATA *af)
 		affect_remove(ch, af);
 }
 
-void spell_sphere_of_plasma(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_sphere_of_plasma(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	AFFECT_DATA af;
 
@@ -7252,7 +7262,7 @@ void spell_sphere_of_plasma(int sn, int level, CHAR_DATA *ch, SpellTarget vo, in
 	die_follower(ch);
 }
 
-void spell_plasma_cube(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_plasma_cube(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	ROOM_AFFECT_DATA raf;
 
@@ -7277,7 +7287,7 @@ void spell_plasma_cube(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int tar
 	affect_to_room(ch->in_room, &raf);
 }
 
-void spell_essence_of_plasma(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_essence_of_plasma(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	ROOM_INDEX_DATA *room;
 	ROOM_AFFECT_DATA raf;
@@ -7395,7 +7405,7 @@ void plasma_thread_end(CHAR_DATA *ch, AFFECT_DATA *paf)
 		act("The thread of plasma no longer connects you to $N.", ch, nullptr, Deref(paf->owner), TO_CHAR);
 }
 
-void spell_plasma_thread(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_plasma_thread(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	AFFECT_DATA af;
 	CHAR_DATA *victim;
@@ -7533,7 +7543,7 @@ void check_plasma_thread(CHAR_DATA *ch, int direction)
 	}
 }
 
-void spell_accumulate_heat(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_accumulate_heat(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
@@ -7568,7 +7578,7 @@ void spell_accumulate_heat(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int
 	}
 }
 
-void spell_melt_rock(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_melt_rock(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	OBJ_DATA *obj;
@@ -7617,7 +7627,7 @@ void spell_melt_rock(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int targe
 	}
 }
 
-void spell_magma_tunnel(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_magma_tunnel(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	ROOM_INDEX_DATA *to_room = nullptr, *old_room = nullptr;
 	EXIT_DATA *pexit;
@@ -7686,7 +7696,7 @@ void spell_magma_tunnel(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int ta
 	act("$n emerges from the ground.", ch, 0, 0, TO_ROOM);
 }
 
-void spell_fashion_crystal(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_fashion_crystal(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	OBJ_DATA *obj;
 	OBJ_AFFECT_DATA oaf;
@@ -7751,7 +7761,7 @@ void crystal_tick(OBJ_DATA *obj, OBJ_AFFECT_DATA *af)
 	}
 }
 
-void spell_farsee(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_farsee(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	AFFECT_DATA af;
 
@@ -7776,7 +7786,7 @@ void spell_farsee(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
 	affect_to_char(ch, &af);
 }
 
-void spell_mana_beam(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_mana_beam(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	OBJ_AFFECT_DATA *af;
@@ -7817,7 +7827,7 @@ void spell_mana_beam(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int targe
 	}
 }
 
-void spell_detonation(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_detonation(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	CHAR_DATA *vch, *vch_next;
 	OBJ_AFFECT_DATA *af;
@@ -7867,7 +7877,7 @@ void spell_detonation(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int targ
 	extract_obj(obj);
 }
 
-void spell_rotating_ward(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_rotating_ward(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	OBJ_AFFECT_DATA *oaf;
 	AFFECT_DATA af;
@@ -7946,7 +7956,7 @@ void rotating_tick(CHAR_DATA *ch, AFFECT_DATA *af)
 	}
 }
 
-void spell_fortify_crystal(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_fortify_crystal(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	OBJ_DATA *crystal = vo.AsObj();
 	OBJ_AFFECT_DATA *af;
@@ -7985,7 +7995,7 @@ void mana_infusion_helper(CHAR_DATA *ch, CHAR_DATA *victim)
 	affect_to_char(victim, &af);
 }
 
-void spell_mana_infusion(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_mana_infusion(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	int dammod;

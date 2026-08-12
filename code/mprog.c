@@ -2221,7 +2221,7 @@ void pulse_prog_cornogun(CHAR_DATA *mob)
 			act("$n ceases flapping its wings incessantly to let out a mournful screech.", mob, 0, 0, TO_ROOM);
 			break;
 		default:
-			spell_faerie_fog(skill_lookup("faerie fog"), mob->level, mob, SpellTarget(), TAR_IGNORE);
+			spell_faerie_fog(skill_lookup("faerie fog"), mob->level, mob, SpellTarget(), CastMode::Spell);
 			break;
 	}
 }
@@ -2229,7 +2229,7 @@ void pulse_prog_cornogun(CHAR_DATA *mob)
 void entry_prog_cornogun(CHAR_DATA *mob)
 {
 	act("$n flaps in on its tiny wings.", mob, 0, 0, TO_ROOM);
-	spell_faerie_fog(skill_lookup("faerie fog"), mob->level, mob, SpellTarget(), TAR_IGNORE);
+	spell_faerie_fog(skill_lookup("faerie fog"), mob->level, mob, SpellTarget(), CastMode::Spell);
 }
 
 void pulse_prog_imp(CHAR_DATA *mob)
@@ -2287,11 +2287,11 @@ void fight_prog_geulgon(CHAR_DATA *mob, CHAR_DATA *victim)
 	switch (number_range(1, 5))
 	{
 		case 1:
-			spell_energy_drain(skill_lookup("energy drain"), mob->level, mob, victim, TAR_CHAR_OFFENSIVE);
+			spell_energy_drain(skill_lookup("energy drain"), mob->level, mob, victim, CastMode::Spell);
 			break;
 		case 2:
 		case 3:
-			spell_vampiric_touch(skill_lookup("vampiric touch"), mob->level, mob, victim, TAR_CHAR_OFFENSIVE);
+			spell_vampiric_touch(skill_lookup("vampiric touch"), mob->level, mob, victim, CastMode::Spell);
 			break;
 		case 4:
 		case 5:
@@ -2308,7 +2308,7 @@ void fight_prog_geulgon(CHAR_DATA *mob, CHAR_DATA *victim)
 				if (is_safe(ch, vch) && Deref(vch->fighting) != nullptr && Deref(vch->fighting) != ch)
 					continue;
 
-				spell_iceball(skill_lookup("iceball"), mob->level, mob, vch, TAR_IGNORE);
+				spell_iceball(skill_lookup("iceball"), mob->level, mob, vch, CastMode::Spell);
 			}
 
 			break;
@@ -3277,7 +3277,7 @@ void pulse_prog_shade(CHAR_DATA *mob)
 	if ((sn = skill_lookup(spell)) < 0)
 		return;
 
-	(*skill_table[sn].spell_fun)(sn, mob->level + 1, mob, victim, TARGET_CHAR);
+	(*skill_table[sn].spell_fun)(sn, mob->level + 1, mob, victim, CastMode::Spell);
 }
 
 void pulse_prog_banshee(CHAR_DATA *mob)
@@ -3315,7 +3315,7 @@ void pulse_prog_banshee(CHAR_DATA *mob)
 	if (!spell || (sn = skill_lookup(spell)) < 0)
 		return;
 
-	(*skill_table[sn].spell_fun)(sn, mob->level + 1, mob, victim, TARGET_CHAR);
+	(*skill_table[sn].spell_fun)(sn, mob->level + 1, mob, victim, CastMode::Spell);
 }
 
 void pulse_prog_phantasm(CHAR_DATA *mob)
@@ -3358,7 +3358,7 @@ void pulse_prog_phantasm(CHAR_DATA *mob)
 	if (!spell || (sn = skill_lookup(spell)) < 0)
 		return;
 
-	(*skill_table[sn].spell_fun)(sn, mob->level + 1, mob, victim, TARGET_CHAR);
+	(*skill_table[sn].spell_fun)(sn, mob->level + 1, mob, victim, CastMode::Spell);
 }
 
 void pulse_prog_ravghoul(CHAR_DATA *mob)

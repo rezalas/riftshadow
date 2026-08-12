@@ -11,36 +11,36 @@
 
 void check_bloodlust (CHAR_DATA *ch, CHAR_DATA *victim);
 void check_leech (CHAR_DATA *ch, CHAR_DATA *victim);
-void spell_indomitability (int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target);
+void spell_indomitability (int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode);
 void do_taunt (CHAR_DATA *ch, char *argument);
-void spell_wrack (int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target);
-void spell_radiance (int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target);
+void spell_wrack (int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode);
+void spell_radiance (int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode);
 void wrack_tick (CHAR_DATA *ch, AFFECT_DATA *af);
-void spell_inspire_lust (int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target);
+void spell_inspire_lust (int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode);
 void lust_pulse (CHAR_DATA *ch, AFFECT_DATA *af);
-void spell_dispaters (int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target);
+void spell_dispaters (int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode);
 void do_consume (CHAR_DATA *ch, char *argument);
-void spell_baals_mastery (int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target);
+void spell_baals_mastery (int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode);
 void check_baals_mastery (CHAR_DATA *ch, CHAR_DATA *victim);
-void spell_word_of_command (int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target);
+void spell_word_of_command (int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode);
 void command_execute (CHAR_DATA *ch);
 void command_execute_delay (CHAR_DATA *ch, char* command);
-void spell_mark_of_wrath (int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target);
-void spell_living_blade (int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target);
+void spell_mark_of_wrath (int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode);
+void spell_living_blade (int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode);
 /* Note: this is fugly. */
 void living_blade_pulse (OBJ_DATA *obj, OBJ_AFFECT_DATA *af);
 void living_blade_end (OBJ_DATA *obj, OBJ_AFFECT_DATA *af);
 void traitor_pulse (CHAR_DATA *ch, AFFECT_DATA *af);
-void spell_dark_familiar (int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target);
+void spell_dark_familiar (int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode);
 /* The spell used to begin the demon-summoning rituals for AP favors. */
-void spell_unholy_communion (int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target);
+void spell_unholy_communion (int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode);
 void communion_end (CHAR_DATA *ch, AFFECT_DATA *af);
 void check_unholy_communion (CHAR_DATA *ch, char *argument);
 void demon_appear (CHAR_DATA *ch, int demon, int type);
 void lesser_demon_tick (CHAR_DATA *mob, AFFECT_DATA *af);
 void greater_demon_tick (CHAR_DATA *mob, AFFECT_DATA *af);
 void furcas_vanish (CHAR_DATA *ch, CHAR_DATA *mob);
-void spell_insanity (int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target);
+void spell_insanity (int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode);
 void insanity_pulse (CHAR_DATA *ch, AFFECT_DATA *af);
 void insanity_two (CHAR_DATA *ch, int room);
 void insanity_end (CHAR_DATA *ch, AFFECT_DATA *af);
@@ -56,6 +56,6 @@ void do_darksight (CHAR_DATA *ch, char *argument);
 void darksight_end (CHAR_DATA *ch, AFFECT_DATA *af);
 /* Dark Insight -- Completely ripped from assess */
 char *get_insight_line (long where[]);
-void spell_dark_insight (int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target);
+void spell_dark_insight (int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode);
 
 #endif /* AP_H */

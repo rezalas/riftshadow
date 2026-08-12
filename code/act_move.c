@@ -1328,7 +1328,7 @@ void trap_execute(CHAR_DATA *victim, ROOM_INDEX_DATA *room, TRAP_DATA *trap)
 		case TRAP_POISONGAS:
 			break;
 		case TRAP_ACID:
-			spell_acid_stream(gsn_acid_stream, trap->quality * 7, victim, victim, TARGET_CHAR);
+			spell_acid_stream(gsn_acid_stream, trap->quality * 7, victim, victim, CastMode::Spell);
 			break;
 		case TRAP_DRAIN:
 			for (auto vch = room->people; vch; vch = vch->next_in_room)

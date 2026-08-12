@@ -5325,7 +5325,7 @@ void do_bash(CHAR_DATA *ch, char *argument)
 		act("$N attempts to bash you, but is stopped by a wave of freezing air.", victim, 0, ch, TO_CHAR);
 		act("$N attempts to bash $n, but is stopped by a wave of freezing air.", victim, 0, ch, TO_NOTVICT);
 		act("You attempt to bash $n, but are seared by a wave of freezing air.", victim, 0, ch, TO_VICT);
-		(*skill_table[gsn_chill].spell_fun)(gsn_chill, ch->level, victim, ch, TAR_CHAR_OFFENSIVE);
+		(*skill_table[gsn_chill].spell_fun)(gsn_chill, ch->level, victim, ch, CastMode::Spell);
 
 		WAIT_STATE(ch, PULSE_VIOLENCE * 2);
 		return;
@@ -6346,7 +6346,7 @@ void do_slay(CHAR_DATA *ch, char *argument)
 	raw_kill(ch, victim);
 }
 
-void spell_power_word_kill(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int target)
+void spell_power_word_kill(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	int dam, saves, modify;
@@ -6864,7 +6864,7 @@ void do_throw(CHAR_DATA *ch, char *argument)
 		act("$N attempts to throw you, but is stopped by a wave of freezing air.", victim, 0, ch, TO_CHAR);
 		act("$N attempts to throw $n, but is stopped by a wave of freezing air.", victim, 0, ch, TO_NOTVICT);
 		act("You attempt to throw $n, but are seared by a wave of freezing air.", victim, 0, ch, TO_VICT);
-		(*skill_table[gsn_chill].spell_fun)(gsn_chill, ch->level, victim, ch, TAR_CHAR_OFFENSIVE);
+		(*skill_table[gsn_chill].spell_fun)(gsn_chill, ch->level, victim, ch, CastMode::Spell);
 
 		WAIT_STATE(ch, PULSE_VIOLENCE * 2);
 		return;
