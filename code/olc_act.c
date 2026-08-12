@@ -263,10 +263,17 @@ bool show_help(CHAR_DATA *ch, char *argument)
 		{
 			if (help_table[cnt].structure == skill_table)
 			{
+				// One filter per SkillTarget value, so every row of skill_table is
+				// reachable by some filter. The keywords are matched by prefix and
+				// first match wins, so the two objattack/objdefend keywords have to
+				// be spelled past "obj" to get past "object" above them.
+				const char *syntax =
+					"Syntax:  ? spells [ignore/attack/defend/self/object/objattack/\n\r"
+					"                   objdefend/direction/ambiguous/general/all]\n\r";
 
 				if (spell[0] == '\0')
 				{
-					send_to_char("Syntax:  ? spells [ignore/attack/defend/self/object/all]\n\r", ch);
+					send_to_char(syntax, ch);
 					return false;
 				}
 
@@ -282,8 +289,18 @@ bool show_help(CHAR_DATA *ch, char *argument)
 					show_skill_cmds(ch, TAR_CHAR_SELF);
 				else if (!str_prefix(spell, "object"))
 					show_skill_cmds(ch, TAR_OBJ_INV);
+				else if (!str_prefix(spell, "objattack"))
+					show_skill_cmds(ch, TAR_OBJ_CHAR_OFF);
+				else if (!str_prefix(spell, "objdefend"))
+					show_skill_cmds(ch, TAR_OBJ_CHAR_DEF);
+				else if (!str_prefix(spell, "direction"))
+					show_skill_cmds(ch, TAR_DIR);
+				else if (!str_prefix(spell, "ambiguous"))
+					show_skill_cmds(ch, TAR_CHAR_AMBIGUOUS);
+				else if (!str_prefix(spell, "general"))
+					show_skill_cmds(ch, TAR_CHAR_GENERAL);
 				else
-					send_to_char("Syntax:  ? spell [ignore/attack/defend/self/object/all]\n\r", ch);
+					send_to_char(syntax, ch);
 
 				return false;
 			}
