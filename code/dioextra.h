@@ -6,7 +6,7 @@
 
 #include "entity/fwd.h"
 
-#define TEMP_PKTRACK_FILE "../temp/temppktrack.tmp"
+#define TEMP_PKTRACK_FILE rift_path("/temp/temppktrack.tmp")
 
 //
 // LOCAL FUNCTIONS

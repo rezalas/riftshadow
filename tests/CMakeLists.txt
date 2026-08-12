@@ -55,5 +55,8 @@ foreach(testsource ${TEST_SRC_FILES})
 	set_source_files_properties(${filename}.c PROPERTIES LANGUAGE CXX)
 	add_executable(${filename} ${filename}.c)
 	target_link_libraries(${filename} PRIVATE ${TEST_LIB_FLAGS} TestMain)
-	add_test(NAME ${filename} COMMAND ${filename} WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR})
+	# No WORKING_DIRECTORY on purpose. The game resolves its own paths from the
+	# root rather than from the directory it happens to be started in, and a
+	# test that only passes when launched from one place is not testing that.
+	add_test(NAME ${filename} COMMAND ${filename})
 endforeach()

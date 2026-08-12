@@ -18,7 +18,7 @@
 //		`timestamp` int(11) default NULL
 //	) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
-#define NOTE_FILE RIFT_AREA_DIR "/notes.not"
+#define NOTE_FILE rift_path("/area/notes.not")
 
 #define NOTE_NOTE		0
 #define NOTE_IDEA		1

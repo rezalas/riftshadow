@@ -21,7 +21,7 @@
 #include "prof.h"
 #include "config.h"
 
-#define CONFIG_FILE RIFT_ROOT_DIR "/config.json"
+#define CONFIG_FILE rift_path("/config.json")
 
 #include "entity/fwd.h"
 

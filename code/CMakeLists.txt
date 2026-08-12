@@ -32,6 +32,7 @@ set(RIFT_SOURCE config.cpp
 	ban.c
 	comm.c
 	gameloop.c
+	riftpath.c
 	const.c
 	db.c
 	db2.c
@@ -137,6 +138,12 @@ add_executable(rift main.c)
 target_include_directories(RiftCore PUBLIC
 	"${CMAKE_SOURCE_DIR}/code/include"
 	${MYSQL_INCLUDE_DIRS}
+)
+
+# Where the game looks for areas, player files and logs when RIFT_ROOT is not
+# set in the environment. Only riftpath.c reads it.
+target_compile_definitions(RiftCore PRIVATE
+	RIFT_DEFAULT_ROOT="${CMAKE_SOURCE_DIR}"
 )
 
 target_link_libraries(rift PRIVATE RiftCore ${CRYPTOLIB} ${MARIADBLIB} m)

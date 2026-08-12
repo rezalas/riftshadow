@@ -903,7 +903,7 @@ void save_area(AREA_DATA *pArea)
 	long long temp_bit;
 	FILE *fp = nullptr;
 
-	std::string backupPath = std::string(RIFT_AREA_DIR "/backup/") + pArea->file_name + ".bak";
+	std::string backupPath = std::string(RIFT_AREA_DIR) + "/backup/" + pArea->file_name + ".bak";
 	if (!CFileSystem::Move(pArea->file_name, backupPath))
 		RS.Logger.Warn("Failed to move [{}] to [{}]", pArea->file_name, backupPath);
 

@@ -3256,7 +3256,7 @@ char *capitalize(const char *str)
 /*
  * Append a string to a file.
  */
-void append_file(CHAR_DATA *ch, char *file, char *str)
+void append_file(CHAR_DATA *ch, const char *file, char *str)
 {
 	FILE *fp;
 	char buf[MSL];

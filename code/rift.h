@@ -9,6 +9,7 @@
 
 #include "stdlibs/bitvector.h"
 #include "stdlibs/funcptr.h"
+#include "riftpath.h"
 
 // Forward declaration rather than #include "mud.h": mud.h includes this header,
 // so including it back would be circular. `extern CMud RS` below needs only an
@@ -34,50 +35,58 @@ void bug(const char *bugstr, ...); //wraps onto RS.Bug
 // Then we close it whenever we need to open a file (e.g. a save file).
 //
 
-#define RIFT_ROOT_DIR			".."
-#define RIFT_ADMIN_DIR			RIFT_ROOT_DIR "/admin"
-#define RIFT_AREA_DIR			RIFT_ROOT_DIR "/area"
-#define RIFT_CODE_DIR			RIFT_ROOT_DIR "/code"
-#define RIFT_CONFIGS_DIR		RIFT_ROOT_DIR "/configs"
-#define RIFT_DOCS_DIR			RIFT_ROOT_DIR "/docs"
-#define RIFT_GOD_DIR			RIFT_ROOT_DIR "/gods"						// list of gods
-#define RIFT_PLAYER_DIR			RIFT_ROOT_DIR "/player"
-#define RIFT_LOGS_DIR			RIFT_ROOT_DIR "/logs"
-#define RIFT_TEMP_DIR			RIFT_ROOT_DIR "/temp"
+//
+// Every path below is resolved against the game root at run time rather than
+// being a literal relative to whatever directory the process was started in.
+// See riftpath.h for how the root is found and why these are not string
+// literals any more.  They cannot be joined to an adjacent literal: write
+// rift_path("/logs/thing.txt") rather than RIFT_LOGS_DIR "/thing.txt".
+//
+#define RIFT_ROOT_DIR			rift_path("")
+#define RIFT_ADMIN_DIR			rift_path("/admin")
+#define RIFT_AREA_DIR			rift_path("/area")
+#define RIFT_CODE_DIR			rift_path("/code")
+#define RIFT_CONFIGS_DIR		rift_path("/configs")
+#define RIFT_DOCS_DIR			rift_path("/docs")
+#define RIFT_GOD_DIR			rift_path("/gods")							// list of gods
+#define RIFT_PLAYER_DIR			rift_path("/player")
+#define RIFT_LOGS_DIR			rift_path("/logs")
+#define RIFT_TEMP_DIR			rift_path("/temp")
 
-#define AREA_LIST				RIFT_AREA_DIR "/area.lst"					// List of areas
-#define LOGIN_BANNER_FILE		RIFT_CONFIGS_DIR "/login_banner.txt"
-#define CABAL_ITEMS_FILE		RIFT_CONFIGS_DIR "/citems.txt"
-#define IDEAS_FILE				RIFT_DOCS_DIR "/ideas.txt"					// For ideas!
-#define RS_LOG_FILE				RIFT_LOGS_DIR "/rs.log"
-#define DEBUG_LOG_FILE			RIFT_LOGS_DIR "/debug.txt"
-#define GOD_LOG_FILE			RIFT_LOGS_DIR "/glog.txt"
-#define AREA_DUMP_FILE 			RIFT_LOGS_DIR "/area-dump.txt"
-#define LOGIN_LOG_FILE			RIFT_LOGS_DIR "/logins.txt"
-#define BOUNTY_LOG_FILE			RIFT_LOGS_DIR "/bounties.txt"
-#define HISTORY_FILE			RIFT_LOGS_DIR "/history.txt"
-#define PDEATH_LOG_FILE			RIFT_LOGS_DIR "/permdeaths.txt"
-#define DEATH_LOG_FILE			RIFT_LOGS_DIR "/tempdeaths.txt"
-#define MOB_LOG_FILE			RIFT_LOGS_DIR "/mobdeaths.txt"
-#define PRAYER_FILE 			RIFT_LOGS_DIR "/prays.txt"
-#define RACE_DUMP_FILE 			RIFT_LOGS_DIR "/racdump.txt"
-#define CLIMATE_DUMP_FILE 		RIFT_LOGS_DIR "/climate-dump.txt"
-#define INTERP_DUMP_FILE 		RIFT_LOGS_DIR "/interpdump.txt"
-#define CONST_DUMP_FILE 		RIFT_LOGS_DIR "/constdump.txt"
-#define MEM_DUMP_FILE			RIFT_LOGS_DIR "/mem.dmp"
-#define MOB_DUMP_FILE			RIFT_LOGS_DIR "/mob.dmp"
-#define OBJ_DUMP_FILE			RIFT_LOGS_DIR "/obj.dmp"
-#define DEMO_LOG_FILE			RIFT_LOGS_DIR "/demo.txt"
-#define BUG_FILE				RIFT_LOGS_DIR "/bugs.txt"					// For 'bug' and bug()
-#define TYPO_FILE				RIFT_LOGS_DIR "/typos.txt"					// For 'typo'
-#define PLAYER_LIST				RIFT_PLAYER_DIR "/Player.lst"				// Player list for limits
-#define TEMP_GREP_RESULTS 		RIFT_TEMP_DIR "/tempgrepresults.tmp" 		// Temporary grep results
-#define TEMP_GREP_RESULTS_TWO 	RIFT_TEMP_DIR "/tempgrepresults2.tmp"
+#define AREA_LIST				rift_path("/area/area.lst")					// List of areas
+#define LOGIN_BANNER_FILE		rift_path("/configs/login_banner.txt")
+#define CABAL_ITEMS_FILE		rift_path("/configs/citems.txt")
+#define IDEAS_FILE				rift_path("/docs/ideas.txt")				// For ideas!
+#define RS_LOG_FILE				rift_path("/logs/rs.log")
+#define DEBUG_LOG_FILE			rift_path("/logs/debug.txt")
+#define GOD_LOG_FILE			rift_path("/logs/glog.txt")
+#define AREA_DUMP_FILE 			rift_path("/logs/area-dump.txt")
+#define LOGIN_LOG_FILE			rift_path("/logs/logins.txt")
+#define BOUNTY_LOG_FILE			rift_path("/logs/bounties.txt")
+#define HISTORY_FILE			rift_path("/logs/history.txt")
+#define PDEATH_LOG_FILE			rift_path("/logs/permdeaths.txt")
+#define DEATH_LOG_FILE			rift_path("/logs/tempdeaths.txt")
+#define MOB_LOG_FILE			rift_path("/logs/mobdeaths.txt")
+#define PRAYER_FILE 			rift_path("/logs/prays.txt")
+#define RACE_DUMP_FILE 			rift_path("/logs/racdump.txt")
+#define CLIMATE_DUMP_FILE 		rift_path("/logs/climate-dump.txt")
+#define INTERP_DUMP_FILE 		rift_path("/logs/interpdump.txt")
+#define CONST_DUMP_FILE 		rift_path("/logs/constdump.txt")
+#define MEM_DUMP_FILE			rift_path("/logs/mem.dmp")
+#define MOB_DUMP_FILE			rift_path("/logs/mob.dmp")
+#define OBJ_DUMP_FILE			rift_path("/logs/obj.dmp")
+#define DEMO_LOG_FILE			rift_path("/logs/demo.txt")
+#define BUG_FILE				rift_path("/logs/bugs.txt")					// For 'bug' and bug()
+#define TYPO_FILE				rift_path("/logs/typos.txt")				// For 'typo'
+#define PLAYER_LIST				rift_path("/player/Player.lst")				// Player list for limits
+#define TEMP_GREP_RESULTS 		rift_path("/temp/tempgrepresults.tmp") 		// Temporary grep results
+#define TEMP_GREP_RESULTS_TWO 	rift_path("/temp/tempgrepresults2.tmp")
+#define BUGOUT_FILE				rift_path("/logs/bugout.txt")
 
 #ifdef __unix__
 	#define NULL_FILE				"/dev/null"				// To reserve one stream
 #elif _WIN32
-	#define NULL_FILE 				RIFT_ROOT_DIR "/nul"	// win32 equiv to /dev/null
+	#define NULL_FILE 				rift_path("/nul")		// win32 equiv to /dev/null
 #endif
 
 

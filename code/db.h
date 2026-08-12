@@ -245,7 +245,7 @@ bool str_prefix (const char *astr, const char *bstr);
 bool str_infix (const char *astr, const char *bstr);
 bool str_suffix (const char *astr, const char *bstr);
 char *capitalize (const char *str);
-void append_file (CHAR_DATA *ch, char *file, char *str);
+void append_file (CHAR_DATA *ch, const char *file, char *str);
 void tail_chain(void);
 void do_force_reset(CHAR_DATA *ch, char *argument);
 /*
