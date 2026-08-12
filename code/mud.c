@@ -155,7 +155,7 @@ bool CMud::Bootup()
 	return true;
 }
 
-inline bool CMud::RunGame()
+bool CMud::RunGame()
 {
 	return game_up;
 }
