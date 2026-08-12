@@ -5785,9 +5785,12 @@ void spell_heavenly_sceptre_frenzy(int sn, int level, CHAR_DATA *ch, SpellTarget
 		return;
 	}
 
-	af.type = sn;
-
+	// init_affect zeroes the type, so this has to be set after it and not
+	// before.  Assigned first, the affect went out typed 0, which is the
+	// reserved skill slot: the guard above could never match it, and neither
+	// could a dispel.
 	init_affect(&af);
+	af.type = sn;
 	af.where = TO_AFFECTS;
 	af.aftype = AFT_SPELL;
 	af.duration = 10;
