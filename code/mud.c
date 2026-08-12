@@ -28,7 +28,25 @@
 
 CMud RS;
 
+// Constructing the MUD does not start it, and deliberately touches nothing
+// outside itself.  RS is a global in libRiftCore, which every test binary
+// links, so anything done here runs at dynamic-load time in every one of them,
+// before main() and before any test can opt out.  Reading a file or exiting
+// from that position is how a test suite ends up reporting success for a
+// binary that ran no assertions.  Initialize() is where the side effects live.
 CMud::CMud()
+{
+	game_up = false;
+	debug_mode = 0;
+	game_port = 0;
+	build_port = 0;
+}
+
+// Loads the configuration and opens the log.  Both need a working directory
+// and a readable config file, so both are the caller's problem to sequence and
+// the caller's problem to report.  Returns false rather than exiting: this is
+// a library, and the process it would be killing belongs to whoever linked it.
+bool CMud::Initialize()
 {
 	// RIFT_CONFIG is an environment variable used
 	// to override the config file location allowing
@@ -46,8 +64,10 @@ CMud::CMud()
 		// If the settings fail to load because of a pathing issue, then
 		// Logging will fail as well. Using bare console output instead.
 		fprintf(stderr, "FATAL: could not load configuration '%s'\n", configPath);
-		exit(1);
+		return false;
 	}
+
+	return true;
 }
 
 CMud::~CMud()

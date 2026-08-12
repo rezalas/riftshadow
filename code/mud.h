@@ -50,6 +50,7 @@ public:
 //	CInterpreter		Interpreter;
 	CQueue				Queue;
 	Config				Settings;
+	bool				Initialize();
 	bool				Bootup();
 	void				Shutdown();
 

@@ -16,6 +16,12 @@ int main(int argc, char **argv)
 	int port = 0;
 	int control;
 
+	// Nothing below works until the config is read and the log is open, and
+	// this is the first point in the program where a failure can be reported
+	// and acted on rather than taken at load time.
+	if (!RS.Initialize())
+		exit(1);
+
 	RS.Logger.SetLevel(spdlog::level::info);
 
 	/*
