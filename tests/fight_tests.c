@@ -6,6 +6,7 @@
 #include "../code/handler.h"
 #include "../code/db.h"
 #include "../code/recycle.h"
+#include "../code/interp.h"
 
 SCENARIO("testing updating victim position", "[update_pos]")
 {
@@ -286,5 +287,53 @@ SCENARIO("a reference to a freed opponent reads as nothing", "[stop_fighting]")
 		}
 
 		ClearCombatants();
+	}
+}
+static bool CommandExists(const char *name)
+{
+	for (auto cmd = 0; cmd_table[cmd].name[0] != '\0'; cmd++)
+	{
+		if (!str_cmp(cmd_table[cmd].name, name))
+			return true;
+	}
+
+	return false;
+}
+
+SCENARIO("the command names exempted by movement and silence affects", "[interp][whitelist]")
+{
+	// interpret matches what the player typed against cmd_table by prefix, then
+	// compares cmd_table[cmd].name against these literals. A literal naming no
+	// command exempts nothing, and until the comparisons here were string
+	// comparisons rather than pointer comparisons there was no way to notice.
+	GIVEN("the command names the whitelists exempt")
+	{
+		WHEN("each is looked up in the command table")
+		{
+			THEN("the exemptions players rely on name real commands")
+			{
+				REQUIRE(CommandExists("astrip"));
+				REQUIRE(CommandExists("immtalk"));
+				REQUIRE(CommandExists("look"));
+				REQUIRE(CommandExists("who"));
+				REQUIRE(CommandExists("tell"));
+				REQUIRE(CommandExists("reply"));
+				REQUIRE(CommandExists("say"));
+				REQUIRE(CommandExists("cast"));
+				REQUIRE(CommandExists("gtell"));
+				REQUIRE(CommandExists("score"));
+			}
+
+			THEN("the three that name nothing are still inert")
+			{
+				// Not commands. "gt" is harmless because typing it prefix-matches
+				// "gtell", which is exempted in its own right. "examine" is
+				// commented out of the table and "trustall" was never in it. If
+				// any of these becomes a command, revisit the lists that name it.
+				REQUIRE_FALSE(CommandExists("gt"));
+				REQUIRE_FALSE(CommandExists("examine"));
+				REQUIRE_FALSE(CommandExists("trustall"));
+			}
+		}
 	}
 }
