@@ -4567,7 +4567,7 @@ bool is_restricted(CHAR_DATA *ch, OBJ_DATA *obj)
 
 	status= false;
 
-	if (!restricted)
+	if (IS_ZERO_VECTOR(restricted))
 		return false;
 
 	for (i = 0; restrict_table[i].name != nullptr; i++)

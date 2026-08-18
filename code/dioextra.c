@@ -916,7 +916,7 @@ void report_cabal_items(CHAR_DATA *ch, char *argument)
 			}
 		}
 
-		if (guardian != nullptr && pbuf != nullptr && obj != nullptr)
+		if (guardian != nullptr && pbuf[0] != '\0' && obj != nullptr)
 			do_say(guardian, pbuf);
 	}
 }

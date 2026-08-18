@@ -1362,7 +1362,7 @@ void do_credits(CHAR_DATA *ch, char *argument)
 			return;
 		}
 
-		if (buf && buf2[0] == '\0')
+		if (buf2[0] == '\0')
 		{
 			sprintf(buf3, "%s has %i bounty credits.\n\r", victim->name, victim->pcdata->bounty_credits);
 			send_to_char(buf3, ch);
@@ -1479,7 +1479,7 @@ void do_bounty(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (!arg1 || !arg2 || (!is_number(arg2) && !is_immortal(ch)))
+	if (arg1[0] == '\0' || arg2[0] == '\0' || (!is_number(arg2) && !is_immortal(ch)))
 	{
 		send_to_char("Syntax:   bounty <character> <amount>\n\r", ch);
 		send_to_char("Places a bounty of the specified amount on the life of the specified character.\n\r", ch);

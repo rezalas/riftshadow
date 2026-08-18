@@ -550,7 +550,7 @@ void do_devilfavor(CHAR_DATA *ch, char *argument)
 
 	argument = one_argument(argument, devil);
 
-	if (devil == nullptr)
+	if (devil[0] == '\0')
 	{
 		send_to_char("Which devil?\n\r", ch);
 		return;
