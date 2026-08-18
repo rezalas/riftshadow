@@ -2,7 +2,12 @@
 
 #include "catch.hpp"
 #include "../code/magic.h"
+#include "../code/merc.h"
+#include "../code/enums.h"
 #include "../code/const.h"
+#include "../code/handler.h"
+#include "../code/characterClasses/sorcerer.h"
+#include "../code/entity/room_index_data.h"
 
 char* substr(char* arr, int begin, int len = 0)
 {	
@@ -105,5 +110,36 @@ SCENARIO("testing skill lookup","[skill_lookup]")
 				REQUIRE(actual == expected);
 			}
 		}
+	}
+}
+SCENARIO("a conflagration pulses in a room with no exits", "[conflagration_pulse]")
+{
+	GIVEN("a burning, empty room whose six exits are all null")
+	{
+		auto room = new room_index_data();
+		room->sector_type = SECT_CONFLAGRATION;
+		room->people = nullptr;
+
+		for (auto door = 0; door < MAX_DIR; door++)
+			room->exit[door] = nullptr;
+
+		ROOM_AFFECT_DATA af;
+		init_affect_room(&af);
+
+		WHEN("the pulse runs enough times to clear its one-in-three gate")
+		{
+			// The spread step picks a random exit. Choosing by rejection sampling
+			// never terminates when there is nothing to choose from, so the point
+			// of this case is that the calls return at all.
+			for (auto i = 0; i < 200; i++)
+				conflagration_pulse(room, &af);
+
+			THEN("every call returns and the room does not spread")
+			{
+				REQUIRE(room->sector_type == SECT_CONFLAGRATION);
+			}
+		}
+
+		delete room;
 	}
 }

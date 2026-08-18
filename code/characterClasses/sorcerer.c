@@ -587,7 +587,8 @@ void conflagration_pulse(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *af)
 {
 	CHAR_DATA *vch, *vch_next;
 	ROOM_INDEX_DATA *room_next;
-	int dam, exit;
+	int dam, exit, door, count;
+	int candidates[MAX_DIR];
 
 	if (room->sector_type != SECT_CONFLAGRATION)
 		return;
@@ -616,7 +617,21 @@ void conflagration_pulse(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *af)
 		}
 	}
 
-	while (!room->exit[(exit = number_range(0, 5))]);
+	// Pick a random exit that exists. Collecting the candidates first keeps this
+	// bounded. Drawing directions at random until one hits never returns when the
+	// room has no exits at all, which is a reachable state.
+	count = 0;
+
+	for (door = 0; door < MAX_DIR; door++)
+	{
+		if (room->exit[door])
+			candidates[count++] = door;
+	}
+
+	if (count == 0)
+		return;
+
+	exit = candidates[number_range(0, count - 1)];
 
 	if (room->exit[exit]
 		&& (room_next = room->exit[exit]->u1.to_room)

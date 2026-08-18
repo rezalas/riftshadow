@@ -1803,7 +1803,7 @@ char *flags_to_string(CHAR_DATA *ch, const struct flag_type *showflags, int flag
 	char temp_value[MAX_INPUT_LENGTH];
 	temp_value[0] = '\0';
 
-	for (flag = 0; showflags[flag].name != nullptr; flag = flag++)
+	for (flag = 0; showflags[flag].name != nullptr; flag++)
 	{
 		strcat(temp_value, showflags[flag].name);
 

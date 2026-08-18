@@ -4,6 +4,8 @@
 #include "../code/merc.h"
 #include "../code/utility.h"
 #include "../code/db.h"
+#include "../code/devextra.h"
+#include "../code/tables.h"
 
 // TEST_CASE("Test capitalization", "[string]" )
 // {
@@ -1298,3 +1300,33 @@ SCENARIO("retrieve a player character's armor type", "[get_ac]")
 
 // TODO: write tests
 // bool is_switched (CHAR_DATA *ch)
+
+SCENARIO("building a printable string from a flag table", "[flags_to_string]")
+{
+	GIVEN("a flag table with three named entries")
+	{
+		const struct flag_type table[] =
+		{
+			{(char *)"alpha", 1, true},
+			{(char *)"beta", 2, true},
+			{(char *)"gamma", 4, true},
+			{nullptr, 0, false}
+		};
+
+		WHEN("flags_to_string walks the table")
+		{
+			// This returns only if the loop advances. The character argument is
+			// unread by the function, so a null one is safe here.
+			auto result = flags_to_string(nullptr, table, 15);
+
+			THEN("it terminates and names every entry exactly once")
+			{
+				REQUIRE(result != nullptr);
+				REQUIRE(strstr(result, "alpha") != nullptr);
+				REQUIRE(strstr(result, "beta") != nullptr);
+				REQUIRE(strstr(result, "gamma") != nullptr);
+				REQUIRE(strlen(result) < MAX_INPUT_LENGTH);
+			}
+		}
+	}
+}
