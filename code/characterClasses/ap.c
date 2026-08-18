@@ -2164,7 +2164,7 @@ void mephisto_two(CHAR_DATA *ch, CHAR_DATA *victim, char *argument)
 	act("$n opens $s mouth and a plume of deathly cold issues forth!", ch, 0, 0, TO_ROOM);
 	act("You open your mouth and unleash your icy fury!", ch, 0, 0, TO_CHAR);
 
-	damage_new(ch, victim, ch->level * 3, TYPE_UNDEFINED, true, DAM_COLD, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "icy breath");
+	damage_new(ch, victim, ch->level * 3, TYPE_UNDEFINED, DAM_COLD, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "icy breath");
 
 	act("$n freezes in $s tracks under the icy onslaught.", victim, 0, ch, TO_ROOM);
 	act("The intense cold shocks you into temporary immobility!", ch, 0, victim, TO_VICT);

@@ -8068,5 +8068,5 @@ void infusion_tick(CHAR_DATA *ch, AFFECT_DATA *af)
 	// between them.
 	CHAR_DATA *owner = Deref(af->owner);
 
-	damage_new(owner ? owner : ch, ch, owner ? owner->level / 2 : ch->level / 2, gsn_mana_sickness, true, DAM_OTHER, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the escaping mana*");
+	damage_new(owner ? owner : ch, ch, owner ? owner->level / 2 : ch->level / 2, gsn_mana_sickness, DAM_OTHER, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the escaping mana*");
 }

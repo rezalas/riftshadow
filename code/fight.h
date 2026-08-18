@@ -44,6 +44,14 @@ int one_hit_new (CHAR_DATA *ch, CHAR_DATA *victim, int dt, bool specials, bool b
  * Inflict damage from a hit.
  */
 int damage_new (CHAR_DATA *ch, CHAR_DATA *victim, int idam, int dt, int dam_type, bool show, bool blockable, int addition, int multiplier, char *dnoun);
+//
+// The dam_type and show arguments sit next to each other and one is a bool, so
+// swapping them compiles silently and deals DAM_BASH (which is 1, the same as
+// true). Two of the 179 call sites had drifted that way. This overload makes the
+// mistake a compile error instead: a bool is an exact match here and only a
+// promotion for the declaration above, so passing one picks this and fails.
+//
+int damage_new (CHAR_DATA *ch, CHAR_DATA *victim, int idam, int dt, bool dam_type, bool show, bool blockable, int addition, int multiplier, char *dnoun) = delete;
 int damage (CHAR_DATA *ch,CHAR_DATA *victim, int dam,int dt,int dam_type, bool show);
 /*
  * Inflict damage from a hit.
