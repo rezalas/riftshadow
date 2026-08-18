@@ -2928,17 +2928,22 @@ void show_string(struct descriptor_data *d, char *input)
 		{
 			*scan = '\0';
 			write_to_buffer(d, buffer, strlen(buffer));
-			for (chk = d->showstr_point; isspace(*chk); chk++);
+			// Scanning for the first non-space is the whole of this loop. The
+			// empty body is deliberate, and the block below runs once after it
+			// rather than being the body.
+			for (chk = d->showstr_point; isspace(*chk); chk++)
 			{
-				if (!*chk)
+			}
+
+			if (!*chk)
+			{
+				if (d->showstr_head)
 				{
-					if (d->showstr_head)
-					{
-						delete[] d->showstr_head;
-						d->showstr_head = 0;
-					}
-					d->showstr_point = 0;
+					delete[] d->showstr_head;
+					d->showstr_head = 0;
 				}
+
+				d->showstr_point = 0;
 			}
 
 			return;

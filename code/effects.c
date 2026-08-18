@@ -638,6 +638,7 @@ void shock_effect(SpellTarget target, int level, int dam)
 			case ITEM_JEWELRY:
 				chance -= 10;
 				msg = "$p is fused into a worthless lump.";
+				break;
 			default:
 				return;
 		}

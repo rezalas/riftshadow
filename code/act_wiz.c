@@ -2135,7 +2135,7 @@ void do_ostat(CHAR_DATA *ch, char *argument)
 		send_to_char("'\n\r", ch);
 	}
 
-	if (obj->pIndexData->progtypes != 0)
+	if (!IS_ZERO_VECTOR(obj->pIndexData->progtypes))
 	{
 		if (IS_SET(obj->progtypes, IPROG_WEAR))
 		{
@@ -2862,7 +2862,7 @@ void do_mstat(CHAR_DATA *ch, char *argument)
 		send_to_char("\n\r", ch);
 	}
 
-	if (is_npc(victim) && victim->pIndexData->progtypes != 0)
+	if (is_npc(victim) && !IS_ZERO_VECTOR(victim->pIndexData->progtypes))
 	{
 		if (IS_SET(victim->progtypes, MPROG_ATTACK))
 		{

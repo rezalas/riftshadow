@@ -2321,6 +2321,16 @@ void check_orobas_gamygyn(CHAR_DATA *ch, CHAR_DATA *victim)
 
 void burning_pulse(CHAR_DATA *ch, AFFECT_DATA *af)
 {
+	// TODO: owner is null once the character who lit the burn is gone, and
+	// owner->level below is read without a guard, so the pulse dereferences
+	// null. The fix is not mechanical because the owner's level is the only
+	// thing scaling the damage. Ending the burn early is one answer, and it
+	// matches what the mark of wrath and the track listing now do with a
+	// vanished owner. Letting it burn on is the other, and that needs a source
+	// to attribute the damage to, because damage_new reads ch->level itself and
+	// is_npc returns false for null rather than guarding it. The affect already
+	// carries a finite duration, so this decides the ticks in between rather
+	// than whether the burn ever stops. Needs a game design decision.
 	CHAR_DATA *owner = Deref(af->owner);
 	if (number_percent() > 50)
 		return;

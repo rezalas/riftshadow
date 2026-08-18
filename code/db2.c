@@ -1037,6 +1037,18 @@ void load_objs(FILE *fp)
 		newobjs++;
 		pObjIndex->limcount = 0;
 		pObjIndex->limtotal = 0;
+
+		// The allocation above is default-init, so every scalar member starts
+		// indeterminate and this one is read before anything else assigns it.
+		// The reset walker in db.c compares it against a 'P' reset's limit, and
+		// a prototype whose count lands above that limit is skipped totally and
+		// permanently rather than intermittently. Measured over five boots, 29
+		// of 2,677 prototypes came up non-zero, running from 2,608 to 30,066
+		// against a limit that is at most 999, and the values decode as
+		// recycled string bytes. No reset is currently gated off by it, so
+		// zeroing here changes no behaviour today. load_mobiles above does the
+		// same thing for the matching field on a mob prototype.
+		pObjIndex->count = 0;
 		pObjIndex->extra_descr.clear();
 
 		pObjIndex->name = fread_string(fp);

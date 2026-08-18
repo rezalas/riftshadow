@@ -18,20 +18,49 @@ add_compile_options($<$<COMPILE_LANGUAGE:CXX>:-Wno-write-strings>)
 # -Wall -Wextra are on everywhere as *warnings only*
 add_compile_options(-Wall -Wextra)
 
-# Four extra groups that catch expression-level logic errors -Wall -Wextra
-# miss: duplicated conditions and branches, bitwise operators used where
-# logical ones were meant, and dereferences the compiler can prove are null.
-# Warnings only for now. They are promoted to errors once the existing
-# diagnostics they report have been worked through.
-#
-# Only -Wnull-dereference is portable. The other three are GCC only, and the
-# sanitizer build compiles with clang, where an unrecognized warning option is
-# itself a warning. That turns into a hard error on the translation units built
-# with -Werror, so the three are gated on the compiler rather than added
-# everywhere.
-add_compile_options(-Wnull-dereference)
+# Catches expression-level logic errors that -Wall -Wextra miss: branches
+# duplicated within a single if/else chain. It stays a warning rather than an
+# error because its one remaining site is a pair of byte-identical branches in
+# the circle damage ladder, and this diagnostic is the only automated thing
+# still pointing at it.
 if(CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
-	add_compile_options(-Wduplicated-cond -Wduplicated-branches -Wlogical-op)
+	add_compile_options(-Wduplicated-branches)
+endif()
+
+# This is mostly a severity change rather than new diagnostics. Eight of the
+# eleven groups below are already reported by the -Wall -Wextra above, and all
+# that happens here is the build stops when one of them fires. Only
+# -Wnull-dereference, -Wduplicated-cond and -Wlogical-op are groups those two
+# do not already enable.
+#
+# What makes stopping the build safe is that every group here is at zero across
+# a clean build of the whole tree, so a violation cannot appear without
+# reintroducing a defect class that has already been cleared out of this
+# codebase. Each of them has caught a real one. -Wimplicit-fallthrough is a
+# missing `break` that left a whole item class immune to shock. -Wempty-body is
+# the stray `;` after an `if`. -Wtautological-compare is `x == x` and an array
+# tested against 0. -Wsequence-point is `flag = flag++`, which never
+# increments. -Wbool-compare is `10 > level < 15`, which parses but does not
+# mean what it reads like.
+#
+# The split is by which compiler actually emits the diagnostic, not by which
+# one accepts the option, and the two are not the same question. Each group was
+# checked by compiling a planted violation with both compilers at -std=c++17.
+# clang rejects three of the gated options outright, and an unknown -Werror=
+# option is a hard error there whether or not a translation unit opted into
+# -Werror. It accepts the other three and then never fires them: it has no
+# -Wnull-dereference and no -Wint-in-bool-context, and its equivalent of
+# -Wsequence-point is -Wunsequenced, which correctly stays quiet because C++17
+# made `i = i++` well defined. Rejected and inert are grouped together so that
+# the gated list means one thing, which is that the diagnostic is GCC only in
+# practice.
+add_compile_options(-Werror=implicit-fallthrough -Werror=empty-body
+	-Werror=tautological-compare -Werror=missing-field-initializers
+	-Werror=misleading-indentation)
+if(CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
+	add_compile_options(-Werror=null-dereference -Werror=sequence-point
+		-Werror=int-in-bool-context -Werror=bool-compare
+		-Werror=duplicated-cond -Werror=logical-op)
 endif()
 
 # Build option used to turn on a dedicated ASAN+UBSAN build. 

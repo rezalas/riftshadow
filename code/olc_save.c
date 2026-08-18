@@ -667,7 +667,7 @@ void save_progs(FILE *fp, AREA_DATA *pArea)
 			if (pRoomIndex->area != pArea)
 				continue;
 
-			if (pRoomIndex->progtypes)
+			if (!IS_ZERO_VECTOR(pRoomIndex->progtypes))
 			{
 				if (IS_SET(pRoomIndex->progtypes, RPROG_PULSE))
 					fprintf(fp, "R %d pulse_prog %s\n", pRoomIndex->vnum, pRoomIndex->rprogs->pulse_name);
@@ -739,7 +739,7 @@ void save_progs(FILE *fp, AREA_DATA *pArea)
 	{
 		for (pObjIndex = obj_index_hash[iHash]; pObjIndex; pObjIndex = pObjIndex->next)
 		{
-			if (pObjIndex->area != pArea || !pObjIndex->progtypes)
+			if (pObjIndex->area != pArea || IS_ZERO_VECTOR(pObjIndex->progtypes))
 				continue;
 
 			if (IS_SET(pObjIndex->progtypes, IPROG_WEAR))
