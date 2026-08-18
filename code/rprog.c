@@ -135,10 +135,7 @@ void rprog_set(ROOM_INDEX_DATA *room, const char *progtype, const char *name)
 	if (!str_cmp(progtype, "move_prog"))
 	{
 		room->rprogs->move_prog = (RPROG_FUN_MOVE *)rprog_table[i].function;
-
-		if (room->progtypes)
-			free_pstring(room->rprogs->move_name);
-
+		free_pstring(room->rprogs->move_name);
 		room->rprogs->move_name = palloc_string(name);
 		SET_BIT(room->progtypes, RPROG_MOVE);
 		return;
@@ -533,7 +530,7 @@ void speech_prog_elven_down([[maybe_unused]] ROOM_INDEX_DATA *room, CHAR_DATA *c
 			SET_BIT(af.bitvector, AFF_BLIND);
 
 			af.end_fun = rprog_elven_down_end;
-			new_affect_to_char(ch, &af);
+			new_affect_to_char(ich, &af);
 		}
 	}
 }
