@@ -569,7 +569,7 @@ void do_ghetto_bind(CHAR_DATA *ch, char *argument)
 	}
 }
 
-void do_ghetto_unbind(CHAR_DATA *ch, char *argument)
+void do_ghetto_unbind(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	if (!is_affected(ch, gsn_bind))
 	{
@@ -1515,7 +1515,7 @@ void do_disguise(CHAR_DATA *ch, char *argument)
 	WAIT_STATE(ch, PULSE_VIOLENCE * 2);
 }
 
-void disguise_end(CHAR_DATA *ch, AFFECT_DATA *af)
+void disguise_end(CHAR_DATA *ch, [[maybe_unused]] AFFECT_DATA *af)
 {
 	disguise_remove(ch);
 }
@@ -1554,7 +1554,7 @@ void disguise_remove(CHAR_DATA *ch)
 	ch->pcdata->old.reset();
 }
 
-void do_undisguise(CHAR_DATA *ch, char *argument)
+void do_undisguise(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	if (!is_affected(ch, gsn_disguise) || !ch->pcdata->old)
 	{
@@ -1578,7 +1578,7 @@ void do_undisguise(CHAR_DATA *ch, char *argument)
 	WAIT_STATE(ch, PULSE_VIOLENCE * 2);
 }
 
-void do_search(CHAR_DATA *ch, char *argument)
+void do_search(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	OBJ_DATA *obj = nullptr;
 	int chance;
@@ -1712,7 +1712,7 @@ void do_counterfeit(CHAR_DATA *ch, char *argument)
 	WAIT_STATE(ch, PULSE_VIOLENCE * 2);
 }
 
-void counterfeit_end(OBJ_DATA *obj, OBJ_AFFECT_DATA *af)
+void counterfeit_end(OBJ_DATA *obj, [[maybe_unused]] OBJ_AFFECT_DATA *af)
 {
 
 	if (CHAR_DATA *carrier = Deref(obj->carried_by))
@@ -1743,7 +1743,7 @@ void counterfeit_end(OBJ_DATA *obj, OBJ_AFFECT_DATA *af)
 	obj->description = palloc_string(obj->pIndexData->description);
 }
 
-void do_shadow_cloak(CHAR_DATA *ch, char *argument)
+void do_shadow_cloak(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	AFFECT_DATA af;
 	int skill, cost;
@@ -2231,7 +2231,7 @@ void do_bind(CHAR_DATA *ch, char *argument)
 	}
 }
 
-void do_unbind(CHAR_DATA *ch, char *argument)
+void do_unbind(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	AFFECT_DATA *af = check_bind(ch, "arms");
 

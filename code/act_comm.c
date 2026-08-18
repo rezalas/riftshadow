@@ -72,7 +72,7 @@
 #include "./repositories/pklogrepository.h"
 
 /* RT code to delete yourself */
-void do_delet(CHAR_DATA *ch, char *argument)
+void do_delet(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	send_to_char("You must type the full command to delete yourself.\n\r", ch);
 }
@@ -139,7 +139,7 @@ void do_delete(CHAR_DATA *ch, char *argument)
 }
 
 /* RT code to display channel status */
-void do_channels(CHAR_DATA *ch, char *argument)
+void do_channels(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	/* lists all channels and their status */
 	send_to_char("   channel     status\n\r", ch);
@@ -196,7 +196,7 @@ void do_channels(CHAR_DATA *ch, char *argument)
 }
 
 /* RT deaf blocks out all shouts */
-void do_deaf(CHAR_DATA *ch, char *argument)
+void do_deaf(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	if (IS_SET(ch->comm, COMM_DEAF))
 	{
@@ -210,7 +210,7 @@ void do_deaf(CHAR_DATA *ch, char *argument)
 }
 
 /* RT quiet blocks out all communication */
-void do_quiet(CHAR_DATA *ch, char *argument)
+void do_quiet(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	if (IS_SET(ch->comm, COMM_QUIET))
 	{
@@ -223,7 +223,7 @@ void do_quiet(CHAR_DATA *ch, char *argument)
 	SET_BIT(ch->comm, COMM_QUIET);
 }
 
-void do_replay(CHAR_DATA *ch, char *argument)
+void do_replay(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	if (is_npc(ch))
 	{
@@ -368,7 +368,7 @@ void do_cb(CHAR_DATA *ch, char *argument)
 	}
 }
 
-void do_global(CHAR_DATA *ch, char *argument)
+void do_global(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	if (IS_SET(ch->comm, COMM_ALL_CABALS))
 	{
@@ -1305,7 +1305,7 @@ void do_tell_queue (CHAR_DATA *ch, std::string argument)
 	do_tell(ch, argument.data());
 }
 
-void do_noreply(CHAR_DATA *ch, char *argument)
+void do_noreply(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	send_to_char("You concentrate and momentarily close your ears to the replies of others.\n\r", ch);
 
@@ -1738,12 +1738,12 @@ void do_idea(CHAR_DATA *ch, char *argument)
 	send_to_char("Idea logged.  Thanks!\n\r", ch);
 }
 
-void do_rent(CHAR_DATA *ch, char *argument)
+void do_rent(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	send_to_char("There is no rent here.  Just save and quit.\n\r", ch);
 }
 
-void do_qui(CHAR_DATA *ch, char *argument)
+void do_qui(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	send_to_char("If you want to QUIT, you have to spell it out.\n\r", ch);
 }
@@ -1753,7 +1753,7 @@ void do_quit(CHAR_DATA *ch, char *argument)
 	do_quit_new(ch, argument, false);
 }
 
-void do_quit_new(CHAR_DATA *ch, char *argument, bool autoq)
+void do_quit_new(CHAR_DATA *ch, [[maybe_unused]] char *argument, bool autoq)
 {
 	if (is_npc(ch))
 		return;
@@ -1954,7 +1954,7 @@ void do_quit_new(CHAR_DATA *ch, char *argument, bool autoq)
 	}
 }
 
-void do_save(CHAR_DATA *ch, char *argument)
+void do_save(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	send_to_char("Saving. Remember that Riftshadow has automatic saving.\n\r", ch);
 

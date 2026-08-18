@@ -18,6 +18,22 @@ add_compile_options($<$<COMPILE_LANGUAGE:CXX>:-Wno-write-strings>)
 # -Wall -Wextra are on everywhere as *warnings only*
 add_compile_options(-Wall -Wextra)
 
+# Four extra groups that catch expression-level logic errors -Wall -Wextra
+# miss: duplicated conditions and branches, bitwise operators used where
+# logical ones were meant, and dereferences the compiler can prove are null.
+# Warnings only for now. They are promoted to errors once the existing
+# diagnostics they report have been worked through.
+#
+# Only -Wnull-dereference is portable. The other three are GCC only, and the
+# sanitizer build compiles with clang, where an unrecognized warning option is
+# itself a warning. That turns into a hard error on the translation units built
+# with -Werror, so the three are gated on the compiler rather than added
+# everywhere.
+add_compile_options(-Wnull-dereference)
+if(CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
+	add_compile_options(-Wduplicated-cond -Wduplicated-branches -Wlogical-op)
+endif()
+
 # Build option used to turn on a dedicated ASAN+UBSAN build. 
 # Basically a built in Valgrind alternative. This is useful
 # for debugging memory issues, but it is not suitable for

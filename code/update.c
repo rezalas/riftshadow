@@ -2117,7 +2117,7 @@ int get_hours(CHAR_DATA *ch)
  * @param racenumber The race index of the player race (used as an age adjustment)
  * @return char* The "age name", i.e. "young", "old", etc.
  */
-char *get_age_name_new(int age, int racenumber)
+char *get_age_name_new(int age, [[maybe_unused]] int racenumber)
 {
 	char *name;
 	if(age < 0)
@@ -2335,7 +2335,7 @@ void update_handler(void)
 	tail_chain();
 }
 
-void do_forcetick(CHAR_DATA *ch, char *argument)
+void do_forcetick([[maybe_unused]] CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	wiznet("TICK!", nullptr, nullptr, WIZ_TICKS, 0, 0);
 

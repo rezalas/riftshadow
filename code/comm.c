@@ -3421,7 +3421,7 @@ void do_rename(CHAR_DATA *ch, char *argument)
 	act("$n has renamed you to $N!", ch, nullptr, victim, TO_VICT);
 }
 
-void do_renam(CHAR_DATA *ch, char *argument)
+void do_renam(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	send_to_char("If you want to RENAME an existing player your must type rename in full.\n\r", ch);
 	send_to_char("rename <current name> <new name>\n\r", ch);

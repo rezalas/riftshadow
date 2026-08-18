@@ -618,7 +618,7 @@ bool parse_gen_groups(CHAR_DATA *ch,char *argument)
 */
 
 /* shows all groups, or the sub-members of a group */
-void do_groups(CHAR_DATA *ch, char *argument)
+void do_groups(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	if (is_npc(ch))
 		return;
@@ -867,7 +867,7 @@ void gn_remove(CHAR_DATA *ch, int gn)
 }
 
 /* use for processing a skill or group for addition  */
-void group_add(CHAR_DATA *ch, const char *name, bool deduct)
+void group_add(CHAR_DATA *ch, const char *name, [[maybe_unused]] bool deduct)
 {
 	if (is_npc(ch)) /* NPCs do not have skills */
 		return;

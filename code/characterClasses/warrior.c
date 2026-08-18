@@ -183,7 +183,7 @@ void do_style(CHAR_DATA *ch, char *argument)
 	ch->pcdata->style = style;
 }
 
-void do_entrap(CHAR_DATA *ch, char *argument)
+void do_entrap(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	float skill;
 	CHAR_DATA *victim;
@@ -409,7 +409,7 @@ void do_entrap(CHAR_DATA *ch, char *argument)
 	WAIT_STATE(ch, PULSE_VIOLENCE * 2);
 }
 
-void do_hobble(CHAR_DATA *ch, char *argument)
+void do_hobble(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	int skill;
 	CHAR_DATA *victim;
@@ -690,7 +690,7 @@ void do_hobble(CHAR_DATA *ch, char *argument)
 	}
 }
 
-void do_crippling_blow(CHAR_DATA *ch, char *argument)
+void do_crippling_blow(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	int skill;
 	CHAR_DATA *victim;
@@ -952,7 +952,7 @@ void do_crippling_blow(CHAR_DATA *ch, char *argument)
 	WAIT_STATE(ch, PULSE_VIOLENCE * 2);
 }
 
-void do_gouge(CHAR_DATA *ch, char *argument)
+void do_gouge(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	char hit1[MSL], hit2[MSL], hit3[MSL], miss1[MSL], miss2[MSL], miss3[MSL];
 	int dammod, affect;
@@ -1120,7 +1120,7 @@ void do_gouge(CHAR_DATA *ch, char *argument)
 	WAIT_STATE(ch, PULSE_VIOLENCE * 2);
 }
 
-void do_bleed(CHAR_DATA *ch, char *argument)
+void do_bleed(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	char hit1[MSL], hit2[MSL], hit3[MSL], miss1[MSL], miss2[MSL], miss3[MSL];
 	int skill, dammod, affect;
@@ -1356,7 +1356,7 @@ void posture_pulse(CHAR_DATA *ch, AFFECT_DATA *af)
 		affect_remove(ch, af);
 }
 
-void do_unbalance(CHAR_DATA *ch, char *argument)
+void do_unbalance(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	int skill;
 	CHAR_DATA *victim;
@@ -1426,7 +1426,7 @@ void do_unbalance(CHAR_DATA *ch, char *argument)
 	WAIT_STATE(ch, PULSE_VIOLENCE * 2);
 }
 
-void do_uppercut(CHAR_DATA *ch, char *argument)
+void do_uppercut(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	int success = 0, skill, special = 100, duration = ch->level;
 	CHAR_DATA *victim = Deref(ch->fighting);
@@ -1578,7 +1578,7 @@ int skirmisher_max_weapweight(CHAR_DATA *ch)
 	return 10;
 }
 
-void do_dart(CHAR_DATA *ch, char *argument)
+void do_dart(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	OBJ_DATA *weapon;
 	AFFECT_DATA af;
@@ -2323,7 +2323,7 @@ void do_overhead(CHAR_DATA *ch, char *argument)
 	WAIT_STATE(ch, PULSE_VIOLENCE * 2);
 }
 
-void do_extract(CHAR_DATA *ch, char *argument)
+void do_extract(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	CHAR_DATA *owner;
 	int dam;
@@ -2350,7 +2350,7 @@ void do_extract(CHAR_DATA *ch, char *argument)
 	affect_strip(ch, gsn_impale);
 }
 
-void do_exchange(CHAR_DATA *ch, char *argument)
+void do_exchange(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	CHAR_DATA *victim;
 	int AC;
@@ -2573,7 +2573,7 @@ bool check_ease(CHAR_DATA *ch)
 	}
 }
 
-void do_shieldbash(CHAR_DATA *ch, char *argument)
+void do_shieldbash(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	CHAR_DATA *victim;
 	int skill, chance, weight;
@@ -2656,7 +2656,7 @@ void do_shieldbash(CHAR_DATA *ch, char *argument)
 	}
 }
 
-void do_brace(CHAR_DATA *ch, char *arg)
+void do_brace(CHAR_DATA *ch, [[maybe_unused]] char *arg)
 {
 	int skill, ac;
 	float bracemod;
@@ -4179,7 +4179,7 @@ void do_exploit(CHAR_DATA *ch, char *argument)
 	WAIT_STATE(ch, PULSE_VIOLENCE * 2);
 }
 
-void do_offhand(CHAR_DATA *ch, char *arg)
+void do_offhand(CHAR_DATA *ch, [[maybe_unused]] char *arg)
 {
 	int chance;
 	OBJ_DATA *wield, *offhand;
@@ -4874,7 +4874,7 @@ void do_disrupt_formation(CHAR_DATA *ch, char *arg)
 	one_hit(victim, ch, TYPE_UNDEFINED);
 }
 
-void do_leadership(CHAR_DATA *ch, char *argument)
+void do_leadership(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	AFFECT_DATA af;
 	CHAR_DATA *to;

@@ -457,7 +457,7 @@ void sun_prog_glasstower(AREA_DATA *area)
 	}
 }
 
-void myell_prog_lawful_city(AREA_DATA *area, CHAR_DATA *ch, CHAR_DATA *victim)
+void myell_prog_lawful_city([[maybe_unused]] AREA_DATA *area, CHAR_DATA *ch, CHAR_DATA *victim)
 {
 	AFFECT_DATA af;
 

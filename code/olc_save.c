@@ -893,7 +893,7 @@ void save_resets(FILE *fp, AREA_DATA *pArea)
 	fprintf(fp, "S\n\n");
 }
 
-void save_shops(FILE *fp, AREA_DATA *pArea)
+void save_shops([[maybe_unused]] FILE *fp, [[maybe_unused]] AREA_DATA *pArea)
 {
 	return;
 }

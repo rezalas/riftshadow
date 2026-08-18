@@ -18,7 +18,7 @@
 #include "../const.h"
 #include "../utility.h"
 
-void spell_healing_sleep(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_healing_sleep(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
@@ -64,7 +64,7 @@ void spell_healing_sleep(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastM
 	new_affect_to_char(victim, &af);
 }
 
-void healing_sleep_end(CHAR_DATA *ch, AFFECT_DATA *af)
+void healing_sleep_end(CHAR_DATA *ch, [[maybe_unused]] AFFECT_DATA *af)
 {
 	if (is_awake(ch))
 		return;

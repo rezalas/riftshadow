@@ -987,7 +987,7 @@ void build_fire(CHAR_DATA *ch, int dur)
 /// Perform the firestarting proficiency.
 /// @param ch: The character who is attempting to start a fire.
 /// @param argument: (Not used).
-void prof_firestart(CHAR_DATA *ch, char *argument)
+void prof_firestart(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	if (is_affected_prof(ch, "firestarting"))
 	{

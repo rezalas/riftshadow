@@ -265,7 +265,7 @@ char *act_msg(const char *point, CHAR_DATA *ch)
 	return buf;
 }
 
-void do_rngtest(CHAR_DATA *ch, char *argument)
+void do_rngtest(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	long total = 0;
 	int count;
@@ -481,7 +481,7 @@ char *int_to_string(int number)
 	}
 }
 
-void spell_summon_nephilim(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_summon_nephilim(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /* vo */, CastMode /* mode */)
 {
 	CHAR_DATA *nephilim;
 	int vnum = 2948;
@@ -1191,7 +1191,7 @@ char num_to_letter(int coord)
 	}
 }
 
-void do_diku(CHAR_DATA *ch, char *argument)
+void do_diku(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	send_to_char("                    Original game idea, concept, and design:\n\r\n\r", ch);
 	send_to_char("          Katja Nyboe               [Superwoman] (katz@freja.diku.dk)\n\r", ch);
@@ -1210,7 +1210,7 @@ void do_diku(CHAR_DATA *ch, char *argument)
 	send_to_char("                      at the University of Copenhagen.\n\r", ch);
 }
 
-void do_antiidle(CHAR_DATA *ch, char *arg)
+void do_antiidle(CHAR_DATA *ch, [[maybe_unused]] char *arg)
 {
 	AFFECT_DATA af;
 
@@ -1236,7 +1236,7 @@ void do_antiidle(CHAR_DATA *ch, char *arg)
 	send_to_char("Anti-idle enabled.\n\r", ch);
 }
 
-void idle_pulse(CHAR_DATA *ch, AFFECT_DATA *af)
+void idle_pulse(CHAR_DATA *ch, [[maybe_unused]] AFFECT_DATA *af)
 {
 	if (number_percent() < 99)
 		return;

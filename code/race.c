@@ -44,7 +44,7 @@ bool check_silent_movement(CHAR_DATA *ch, ROOM_INDEX_DATA *room)
 		return false;
 }
 
-void do_silent_movement(CHAR_DATA *ch, char *argument)
+void do_silent_movement(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	AFFECT_DATA af;
 	int skill;

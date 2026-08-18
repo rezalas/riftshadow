@@ -1137,7 +1137,7 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 	 */
 }
 
-void do_north(CHAR_DATA *ch, char *argument)
+void do_north(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	if (is_affected(ch, gsn_bind_feet))
 	{
@@ -1148,7 +1148,7 @@ void do_north(CHAR_DATA *ch, char *argument)
 	move_char(ch, Directions::North, false, true);
 }
 
-void do_east(CHAR_DATA *ch, char *argument)
+void do_east(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	if (is_affected(ch, gsn_bind_feet))
 	{
@@ -1159,7 +1159,7 @@ void do_east(CHAR_DATA *ch, char *argument)
 	move_char(ch, Directions::East, false, true);
 }
 
-void do_south(CHAR_DATA *ch, char *argument)
+void do_south(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	if (is_affected(ch, gsn_bind_feet))
 	{
@@ -1170,7 +1170,7 @@ void do_south(CHAR_DATA *ch, char *argument)
 	move_char(ch, Directions::South, false, true);
 }
 
-void do_west(CHAR_DATA *ch, char *argument)
+void do_west(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	if (is_affected(ch, gsn_bind_feet))
 	{
@@ -1181,7 +1181,7 @@ void do_west(CHAR_DATA *ch, char *argument)
 	move_char(ch, Directions::West, false, true);
 }
 
-void do_up(CHAR_DATA *ch, char *argument)
+void do_up(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	if (is_affected(ch, gsn_bind_feet))
 	{
@@ -1192,7 +1192,7 @@ void do_up(CHAR_DATA *ch, char *argument)
 	move_char(ch, Directions::Up, false, true);
 }
 
-void do_down(CHAR_DATA *ch, char *argument)
+void do_down(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	if (is_affected(ch, gsn_bind_feet))
 	{
@@ -2642,7 +2642,7 @@ void do_wake(CHAR_DATA *ch, char *argument)
 	do_stand(victim, "");
 }
 
-void do_sneak(CHAR_DATA *ch, char *argument)
+void do_sneak(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	auto sn_fog = skill_lookup("faerie fog");
 	auto sn_fire = skill_lookup("faerie fire");
@@ -2693,7 +2693,7 @@ void do_sneak(CHAR_DATA *ch, char *argument)
 	affect_to_char(ch, &af);
 }
 
-void do_cloak(CHAR_DATA *ch, char *argument)
+void do_cloak([[maybe_unused]] CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	/*
 	AFFECT_DATA af;
@@ -2839,7 +2839,7 @@ void do_vigilance(CHAR_DATA *ch, char *argument)
 }
 */
 
-void do_acute_vision(CHAR_DATA *ch, char *argument)
+void do_acute_vision(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	if (get_skill(ch, gsn_acute_vision) == 0 ||
 		ch->level < skill_table[gsn_acute_vision].skill_level[ch->Class()->GetIndex()])
@@ -2889,7 +2889,7 @@ void do_acute_vision(CHAR_DATA *ch, char *argument)
 	return;
 }
 
-void do_camp(CHAR_DATA *ch, char *argument)
+void do_camp(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	if (get_skill(ch, gsn_camp) == 0 || ch->level < skill_table[gsn_camp].skill_level[ch->Class()->GetIndex()])
 	{
@@ -2940,7 +2940,7 @@ void do_camp(CHAR_DATA *ch, char *argument)
 	do_sleep(ch, "");
 }
 
-void do_camouflage(CHAR_DATA *ch, char *argument)
+void do_camouflage(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	auto sn_fog = skill_lookup("faerie fog");
 	auto sn_fire = skill_lookup("faerie fire");
@@ -3050,7 +3050,7 @@ void do_creep(CHAR_DATA *ch, char *argument)
 	WAIT_STATE(ch, wait);
 }
 
-void do_hide(CHAR_DATA *ch, char *argument)
+void do_hide(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	auto sn_fog = skill_lookup("faerie fog");
 	auto sn_fire = skill_lookup("faerie fire");
@@ -3094,7 +3094,7 @@ void do_hide(CHAR_DATA *ch, char *argument)
 	check_improve(ch, gsn_hide, false, 3);
 }
 
-void un_camouflage(CHAR_DATA *ch, char *argument)
+void un_camouflage(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	if (!is_affected_by(ch, AFF_CAMOUFLAGE))
 		return;
@@ -3105,19 +3105,19 @@ void un_camouflage(CHAR_DATA *ch, char *argument)
 	send_to_char("You step out from your cover.\n\r", ch);
 }
 
-void un_blackjack(CHAR_DATA *ch, char *argument)
+void un_blackjack(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	if (is_affected(ch, gsn_blackjack))
 		affect_strip(ch, gsn_blackjack);
 }
 
-void un_strangle(CHAR_DATA *ch, char *argument)
+void un_strangle(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	if (is_affected(ch, gsn_strangle))
 		affect_strip(ch, gsn_strangle);
 }
 
-void un_hide(CHAR_DATA *ch, char *argument)
+void un_hide(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	if (!is_affected_by(ch, AFF_HIDE))
 		return;
@@ -3128,7 +3128,7 @@ void un_hide(CHAR_DATA *ch, char *argument)
 	send_to_char("You step out of the shadows.\n\r", ch);
 }
 
-void un_invis(CHAR_DATA *ch, char *argument)
+void un_invis(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	if (!is_affected_by(ch, AFF_INVISIBLE))
 		return;
@@ -3142,7 +3142,7 @@ void un_invis(CHAR_DATA *ch, char *argument)
 	send_to_char("You fade into existence.\n\r", ch);
 }
 
-void un_sneak(CHAR_DATA *ch, char *argument)
+void un_sneak(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	if (IS_SET(race_table[ch->race].aff, AFF_SNEAK))
 		return;
@@ -3164,7 +3164,7 @@ void un_sneak(CHAR_DATA *ch, char *argument)
 	send_to_char("You trample around loudly again.\n\r", ch);
 }
 
-void un_earthfade(CHAR_DATA *ch, char *argument)
+void un_earthfade(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	if (!is_affected(ch, gsn_earthfade))
 		return;
@@ -3177,7 +3177,7 @@ void un_earthfade(CHAR_DATA *ch, char *argument)
 	WAIT_STATE(ch, 3 * PULSE_VIOLENCE);
 }
 
-void un_blade_barrier(CHAR_DATA *ch, char *argument)
+void un_blade_barrier(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	if (!is_affected(ch, gsn_blade_barrier))
 		return;
@@ -3190,7 +3190,7 @@ void un_blade_barrier(CHAR_DATA *ch, char *argument)
 	WAIT_STATE(ch, PULSE_VIOLENCE);
 }
 
-void un_watermeld(CHAR_DATA *ch, char *argument)
+void un_watermeld(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	if (!is_affected(ch, gsn_watermeld))
 		return;
@@ -3200,7 +3200,7 @@ void un_watermeld(CHAR_DATA *ch, char *argument)
 	act("The water swirls around you as your concealment fails you.", ch, 0, 0, TO_CHAR);
 }
 
-void un_shroud(CHAR_DATA *ch, char *argument)
+void un_shroud(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	if (is_affected(ch, gsn_shroud_of_secrecy))
 	{
@@ -3208,7 +3208,7 @@ void un_shroud(CHAR_DATA *ch, char *argument)
 	}
 }
 
-void do_visible(CHAR_DATA *ch, char *argument)
+void do_visible(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	un_camouflage(ch, nullptr);
 	un_hide(ch, nullptr);
@@ -3220,7 +3220,7 @@ void do_visible(CHAR_DATA *ch, char *argument)
 	un_shroud(ch, nullptr);
 }
 
-void do_recall(CHAR_DATA *ch, char *argument)
+void do_recall(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	if (is_npc(ch) && !IS_SET(ch->act, ACT_PET))
 	{
@@ -4063,7 +4063,7 @@ int find_first_step(ROOM_INDEX_DATA *from, ROOM_INDEX_DATA *goal)
 	return solve->dir_from;
 }
 
-void do_aura_of_sustenance(CHAR_DATA *ch, char *argument)
+void do_aura_of_sustenance(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	if (get_skill(ch, gsn_aura_of_sustenance) == 0 || ch->level < skill_table[gsn_aura_of_sustenance].skill_level[ch->Class()->GetIndex()])
 	{
@@ -4102,7 +4102,7 @@ void do_aura_of_sustenance(CHAR_DATA *ch, char *argument)
 	ch->mana -= 40;
 }
 
-void do_vanish(CHAR_DATA *ch, char *argument)
+void do_vanish(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	auto chance = get_skill(ch, gsn_vanish);
 	if (chance == 0 || ch->level < skill_table[gsn_vanish].skill_level[ch->Class()->GetIndex()])

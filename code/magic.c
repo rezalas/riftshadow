@@ -450,7 +450,7 @@ int mana_cost(CHAR_DATA *ch, int min_mana, int level)
 	return std::max(min_mana, (100 / (2 + ch->level - level)));
 }
 
-void do_barkskin(CHAR_DATA *ch, char *argument)
+void do_barkskin(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	AFFECT_DATA af;
 
@@ -1304,7 +1304,7 @@ void obj_cast_spell(int sn, int level, CHAR_DATA *ch, CHAR_DATA *victim, OBJ_DAT
  * Spell functions.
  */
 
-void spell_acid_blast(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_acid_blast(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	int dam;
@@ -1317,7 +1317,7 @@ void spell_acid_blast(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode
 	damage_old(ch, victim, dam, sn, DAM_ACID, true);
 }
 
-void spell_armor(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_armor(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
@@ -1348,7 +1348,7 @@ void spell_armor(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode
 		act("$N is protected by your magic.", ch, nullptr, victim, TO_CHAR);
 }
 
-void spell_bless(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_bless(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	CHAR_DATA *victim;
 	AFFECT_DATA af;
@@ -1402,7 +1402,7 @@ void spell_bless(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode
 		act("You grant $N the favor of your god.", ch, nullptr, victim, TO_CHAR);
 }
 
-void spell_blindness(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_blindness(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
@@ -1452,7 +1452,7 @@ void spell_blindness(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode 
 	act("$n appears to be blinded.", victim, nullptr, nullptr, TO_ROOM);
 }
 
-void spell_burning_hands(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_burning_hands(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	static const short dam_each[] =
@@ -1477,7 +1477,7 @@ void spell_burning_hands(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastM
 
 /* RT calm spell stops all fighting in the room */
 
-void spell_cancellation(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_cancellation(int /* sn */, int level, CHAR_DATA *ch, SpellTarget vo, CastMode /* mode */)
 {
 	char arg1[MSL], arg2[MSL];
 	CHAR_DATA *victim = vo.AsChar();
@@ -1561,22 +1561,22 @@ void spell_cancellation(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMo
 		send_to_char("They aren't affected by anything that can be cancelled.\n\r", ch);
 }
 
-void spell_cause_light(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_cause_light(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	damage_old(ch, vo.AsChar(), dice(1, 8) + level / 3, sn, DAM_INTERNAL, true);
 }
 
-void spell_cause_critical(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_cause_critical(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	damage_old(ch, vo.AsChar(), dice(3, 8) + level - 6, sn, DAM_INTERNAL, true);
 }
 
-void spell_cause_serious(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_cause_serious(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	damage_old(ch, vo.AsChar(), dice(2, 8) + level / 2, sn, DAM_INTERNAL, true);
 }
 
-void spell_chain_lightning(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_chain_lightning(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	CHAR_DATA *tmp_vict, *last_vict, *next_vict;
@@ -1671,7 +1671,7 @@ void spell_chain_lightning(int sn, int level, CHAR_DATA *ch, SpellTarget vo, Cas
 	}
 }
 
-void spell_change_sex(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_change_sex(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
@@ -1706,7 +1706,7 @@ void spell_change_sex(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode
 	act("$n doesn't look like $mself anymore...", victim, nullptr, nullptr, TO_ROOM);
 }
 
-void spell_charm_person(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_charm_person(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
@@ -1774,7 +1774,7 @@ void spell_charm_person(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMo
 		act("$N looks at you with adoring eyes.", ch, nullptr, victim, TO_CHAR);
 }
 
-void spell_chill_touch(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_chill_touch(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	static const short dam_each[] =
@@ -1815,7 +1815,7 @@ void spell_chill_touch(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMod
 	damage_old(ch, victim, dam, sn, DAM_COLD, true);
 }
 
-void spell_color_spray(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_color_spray(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	static const short dam_each[] =
@@ -1840,7 +1840,7 @@ void spell_color_spray(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMod
 	damage_old(ch, victim, dam, sn, DAM_LIGHT, true);
 }
 
-void spell_wrath(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_wrath(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	int dam = 0;
@@ -1881,7 +1881,7 @@ void spell_wrath(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode
 	spell_curse(gsn_curse, level, ch, victim, CastMode::Spell);
 }
 
-void spell_continual_light(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_continual_light(int /* sn */, int /* level */, CHAR_DATA *ch, SpellTarget /* vo */, CastMode /* mode */)
 {
 	OBJ_DATA *light;
 
@@ -1914,12 +1914,12 @@ void spell_continual_light(int sn, int level, CHAR_DATA *ch, SpellTarget vo, Cas
 	act("You twiddle your thumbs and $p appears.", ch, light, nullptr, TO_CHAR);
 }
 
-void spell_control_weather(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_control_weather(int /* sn */, int /* level */, CHAR_DATA * /* ch */, SpellTarget /* vo */, CastMode /* mode */)
 {
 	return;
 }
 
-void spell_create_food(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_create_food(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /* vo */, CastMode /* mode */)
 {
 	OBJ_DATA *mushroom;
 
@@ -1933,7 +1933,7 @@ void spell_create_food(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMod
 	act("$p suddenly appears.", ch, mushroom, nullptr, TO_CHAR);
 }
 
-void spell_create_rose(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_create_rose(int /* sn */, int /* level */, CHAR_DATA *ch, SpellTarget /* vo */, CastMode /* mode */)
 {
 	OBJ_DATA *rose = create_object(get_obj_index(OBJ_VNUM_ROSE), 0);
 
@@ -1942,7 +1942,7 @@ void spell_create_rose(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMod
 	obj_to_char(rose, ch);
 }
 
-void spell_create_spring(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_create_spring(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /* vo */, CastMode /* mode */)
 {
 	OBJ_DATA *spring;
 
@@ -1966,7 +1966,7 @@ void spell_create_spring(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastM
 	act("$p flows from the ground.", ch, spring, nullptr, TO_CHAR);
 }
 
-void spell_create_water(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_create_water(int /* sn */, int level, CHAR_DATA *ch, SpellTarget vo, CastMode /* mode */)
 {
 	OBJ_DATA *obj = vo.AsObj();
 	int water;
@@ -2004,7 +2004,7 @@ void spell_create_water(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMo
 	}
 }
 
-void spell_cure_blindness(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_cure_blindness(int /* sn */, int level, CHAR_DATA *ch, SpellTarget vo, CastMode /* mode */)
 {
 	CHAR_DATA *victim = vo.AsChar();
 
@@ -2059,7 +2059,7 @@ void spell_cure_blindness(int sn, int level, CHAR_DATA *ch, SpellTarget vo, Cast
 	}
 }
 
-void spell_cure_critical(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_cure_critical(int /* sn */, int level, CHAR_DATA *ch, SpellTarget vo, CastMode /* mode */)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	int heal;
@@ -2076,7 +2076,7 @@ void spell_cure_critical(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastM
 }
 
 /* RT added to cure plague */
-void spell_cure_disease(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_cure_disease(int /* sn */, int level, CHAR_DATA *ch, SpellTarget vo, CastMode /* mode */)
 {
 	CHAR_DATA *victim = vo.AsChar();
 
@@ -2107,7 +2107,7 @@ void spell_cure_disease(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMo
 	}
 }
 
-void spell_cure_light(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_cure_light([[maybe_unused]] int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	int heal;
@@ -2122,7 +2122,7 @@ void spell_cure_light(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode
 		send_to_char("Ok.\n\r", ch);
 }
 
-void spell_cure_poison(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_cure_poison(int /* sn */, int level, CHAR_DATA *ch, SpellTarget vo, CastMode /* mode */)
 {
 	CHAR_DATA *victim = vo.AsChar();
 
@@ -2164,7 +2164,7 @@ void spell_cure_poison(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMod
 	}
 }
 
-void spell_cure_serious(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_cure_serious(int /* sn */, int level, CHAR_DATA *ch, SpellTarget vo, CastMode /* mode */)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	int heal;
@@ -2179,7 +2179,7 @@ void spell_cure_serious(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMo
 		send_to_char("Ok.\n\r", ch);
 }
 
-void spell_curse(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_curse(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	CHAR_DATA *victim;
 	OBJ_DATA *obj;
@@ -2274,7 +2274,7 @@ void spell_curse(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode
 		act("$N looks very uncomfortable.", ch, nullptr, victim, TO_CHAR);
 }
 
-void spell_dark_wrath(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_dark_wrath(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	int dam;
@@ -2302,7 +2302,7 @@ void spell_dark_wrath(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode
 
 /* RT replacement demonfire spell */
 
-void spell_demonfire(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_demonfire(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	int dam, dam_mod, oldhp;
@@ -2335,7 +2335,7 @@ void spell_demonfire(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode 
 		spell_curse(gsn_curse, 3 * level / 4, ch, victim, CastMode::Spell);
 }
 
-void spell_detect_evil(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_detect_evil(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
@@ -2370,7 +2370,7 @@ void spell_detect_evil(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMod
 		send_to_char("Ok.\n\r", ch);
 }
 
-void spell_detect_good(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_detect_good(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
@@ -2404,7 +2404,7 @@ void spell_detect_good(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMod
 		send_to_char("Ok.\n\r", ch);
 }
 
-void do_detect_hidden(CHAR_DATA *ch, char *argument)
+void do_detect_hidden(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	AFFECT_DATA af;
 	int number;
@@ -2451,7 +2451,7 @@ void do_detect_hidden(CHAR_DATA *ch, char *argument)
 	check_improve(ch, gsn_detect_hidden, true, 2);
 }
 
-void do_detect_movement(CHAR_DATA *ch, char *argument)
+void do_detect_movement(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	AFFECT_DATA af;
 	int number;
@@ -2495,7 +2495,7 @@ void do_detect_movement(CHAR_DATA *ch, char *argument)
 	send_to_char("You listen intently to your surroundings.\n\r", ch);
 }
 
-void spell_detect_invis(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_detect_invis(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
@@ -2530,7 +2530,7 @@ void spell_detect_invis(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMo
 		send_to_char("Ok.\n\r", ch);
 }
 
-void spell_detect_magic(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_detect_magic(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
@@ -2564,7 +2564,7 @@ void spell_detect_magic(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMo
 		send_to_char("Ok.\n\r", ch);
 }
 
-void spell_detect_poison(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_detect_poison(int /* sn */, int /* level */, CHAR_DATA *ch, SpellTarget vo, CastMode /* mode */)
 {
 	OBJ_DATA *obj = vo.AsObj();
 
@@ -2581,7 +2581,7 @@ void spell_detect_poison(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastM
 	}
 }
 
-void spell_dispel_evil(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_dispel_evil(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	int dam;
@@ -2609,7 +2609,7 @@ void spell_dispel_evil(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMod
 	damage_old(ch, victim, dam, sn, DAM_HOLY, true);
 }
 
-void spell_dispel_good(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_dispel_good(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	int dam;
@@ -2639,7 +2639,7 @@ void spell_dispel_good(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMod
 
 /* modified for enhanced use */
 
-void spell_dispel_magic(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_dispel_magic(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /* vo */, CastMode /* mode */)
 {
 	char arg1[MSL], arg2[MSL];
 	char buf[MSL];
@@ -2725,7 +2725,7 @@ void spell_dispel_magic(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMo
 	return;
 }
 
-void spell_fireball(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_fireball(int sn, int level, CHAR_DATA *ch, [[maybe_unused]] SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	CHAR_DATA *vch;
 	CHAR_DATA *vch_next;
@@ -2778,7 +2778,7 @@ void spell_fireball(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode m
 	}
 }
 
-void spell_fireproof(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_fireproof(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	OBJ_DATA *obj = vo.AsObj();
 	OBJ_AFFECT_DATA oaf;
@@ -2804,7 +2804,7 @@ void spell_fireproof(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode 
 	act("$p is surrounded by a protective aura.", ch, obj, nullptr, TO_ROOM);
 }
 
-void spell_flamestrike(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_flamestrike(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	int dam;
@@ -2817,7 +2817,7 @@ void spell_flamestrike(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMod
 	damage_old(ch, victim, dam, sn, DAM_FIRE, true);
 }
 
-void spell_faerie_fire(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_faerie_fire(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
@@ -2850,7 +2850,7 @@ void spell_faerie_fire(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMod
 	act("$n is surrounded by a pink outline.", victim, nullptr, nullptr, TO_ROOM);
 }
 
-void spell_faerie_fog(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_faerie_fog(int sn, int level, CHAR_DATA *ch, [[maybe_unused]] SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	CHAR_DATA *ich;
 	AFFECT_DATA af;
@@ -2898,7 +2898,7 @@ void spell_faerie_fog(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode
 	}
 }
 
-void spell_fly(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_fly(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
@@ -2939,7 +2939,7 @@ void spell_fly(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 
 /* RT clerical berserking spell */
 
-void spell_frenzy(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_frenzy(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
@@ -2992,7 +2992,7 @@ void spell_frenzy(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mod
 
 /* RT ROM-style gate */
 
-void spell_gate(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_gate(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /* vo */, CastMode /* mode */)
 {
 	CHAR_DATA *victim;
 	bool gate_pet;
@@ -3083,7 +3083,7 @@ void spell_gate(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 	}
 }
 
-void spell_giant_strength(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_giant_strength(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
@@ -3111,7 +3111,7 @@ void spell_giant_strength(int sn, int level, CHAR_DATA *ch, SpellTarget vo, Cast
 	act("$n's muscles surge with heightened power.", victim, nullptr, nullptr, TO_ROOM);
 }
 
-void spell_harm(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_harm(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	int dam;
@@ -3125,7 +3125,7 @@ void spell_harm(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 
 /* RT haste spell */
 
-void spell_haste(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_haste(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
@@ -3176,7 +3176,7 @@ void spell_haste(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode
 		send_to_char("Ok.\n\r", ch);
 }
 
-void spell_heal(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_heal(int /* sn */, int /* level */, CHAR_DATA *ch, SpellTarget vo, CastMode /* mode */)
 {
 	CHAR_DATA *victim = vo.AsChar();
 
@@ -3190,7 +3190,7 @@ void spell_heal(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 }
 
 /* RT really nasty high-level attack spell */
-void spell_holy_word(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_holy_word(int sn, int level, CHAR_DATA *ch, [[maybe_unused]] SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	CHAR_DATA *vch;
 	CHAR_DATA *vch_next;
@@ -3261,7 +3261,7 @@ void spell_holy_word(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode 
 	ch->hit -= 100;
 }
 
-void spell_identify(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_identify(int /* sn */, int /* level */, CHAR_DATA *ch, SpellTarget vo, CastMode /* mode */)
 {
 	OBJ_DATA *obj = vo.AsObj();
 	char buf[MAX_STRING_LENGTH];
@@ -3407,7 +3407,7 @@ void spell_identify(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode m
 	}
 }
 
-void spell_invis(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_invis(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	CHAR_DATA *victim;
 	AFFECT_DATA af;
@@ -3452,7 +3452,7 @@ void spell_invis(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode
 	send_to_char("You fade out of existence.\n\r", victim);
 }
 
-void spell_know_alignment(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_know_alignment(int /* sn */, int /* level */, CHAR_DATA *ch, SpellTarget vo, CastMode /* mode */)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	char *msg;
@@ -3483,7 +3483,7 @@ void spell_know_alignment(int sn, int level, CHAR_DATA *ch, SpellTarget vo, Cast
 	return;
 }
 
-void spell_lightning_bolt(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_lightning_bolt(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	static const short dam_each[] =
@@ -3513,7 +3513,7 @@ void spell_lightning_bolt(int sn, int level, CHAR_DATA *ch, SpellTarget vo, Cast
 	damage_old(ch, victim, (int)dam, sn, DAM_LIGHTNING, true);
 }
 
-void spell_locate_object(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_locate_object(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /* vo */, CastMode /* mode */)
 {
 	char buf[MAX_INPUT_LENGTH];
 	BUFFER buffer;
@@ -3593,7 +3593,7 @@ void spell_locate_object(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastM
 
 }
 
-void spell_magic_missile(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_magic_missile(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	int dam;
@@ -3611,7 +3611,7 @@ void spell_magic_missile(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastM
 	damage_new(ch, victim, dam, sn, DAM_ENERGY, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "magic missiles$");
 }
 
-void spell_mass_healing(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_mass_healing(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /* vo */, CastMode /* mode */)
 {
 	CHAR_DATA *gch;
 	int heal_num, refresh_num;
@@ -3629,7 +3629,7 @@ void spell_mass_healing(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMo
 	}
 }
 
-void spell_mass_invis(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_mass_invis(int sn, int level, CHAR_DATA *ch, [[maybe_unused]] SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	AFFECT_DATA af;
 	CHAR_DATA *gch;
@@ -3670,12 +3670,12 @@ void spell_mass_invis(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode
 	send_to_char("Ok.\n\r", ch);
 }
 
-void spell_null(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_null(int /* sn */, int /* level */, CHAR_DATA *ch, SpellTarget /* vo */, CastMode /* mode */)
 {
 	send_to_char("That's not a spell!\n\r", ch);
 }
 
-void spell_pass_door(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_pass_door(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
@@ -3710,7 +3710,7 @@ void spell_pass_door(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode 
 
 /* RT plague spell, very nasty */
 
-void spell_plague(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_plague([[maybe_unused]] int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
@@ -3809,7 +3809,7 @@ void plague_tick(CHAR_DATA *ch, AFFECT_DATA *af)
 	ch->move -= number_range(af->level / 2, (int)(af->level * 1.5));
 }
 
-void spell_poison(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_poison(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	CHAR_DATA *victim;
 	OBJ_DATA *obj;
@@ -3892,7 +3892,7 @@ void poison_tick(CHAR_DATA *ch, AFFECT_DATA *af)
 	damage_new(Deref(af->owner), ch, af->level, gsn_poison, DAM_POISON, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "poison");
 }
 
-void spell_protection(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_protection(int sn, int level, CHAR_DATA *ch, [[maybe_unused]] SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	AFFECT_DATA af;
 
@@ -3918,7 +3918,7 @@ void spell_protection(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode
 	send_to_char("You feel protected.\n\r", ch);
 }
 
-void spell_ray_of_truth(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_ray_of_truth(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	int dam;
@@ -3955,7 +3955,7 @@ void spell_ray_of_truth(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMo
 	spell_blindness(gsn_blindness, 3 * level / 4, ch, victim, CastMode::Spell);
 }
 
-void spell_recharge(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_recharge([[maybe_unused]] int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	OBJ_DATA *obj = vo.AsObj();
 	int chance, percent;
@@ -4026,7 +4026,7 @@ void spell_recharge(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode m
 	}
 }
 
-void spell_refresh(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_refresh([[maybe_unused]] int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 
@@ -4041,7 +4041,7 @@ void spell_refresh(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mo
 		send_to_char("Ok.\n\r", ch);
 }
 
-void spell_remove_curse(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_remove_curse(int /* sn */, int level, CHAR_DATA *ch, SpellTarget vo, CastMode /* mode */)
 {
 	CHAR_DATA *victim;
 	OBJ_DATA *obj;
@@ -4102,7 +4102,7 @@ void spell_remove_curse(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMo
 	}
 }
 
-void spell_sanctuary(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_sanctuary(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
@@ -4156,7 +4156,7 @@ void spell_sanctuary(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode 
 	affect_to_char(victim, &af);
 }
 
-void spell_shield(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_shield(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
@@ -4185,7 +4185,7 @@ void spell_shield(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mod
 	send_to_char("You are surrounded by a force shield.\n\r", victim);
 }
 
-void spell_shocking_grasp(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_shocking_grasp(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	static const int dam_each[] =
@@ -4208,7 +4208,7 @@ void spell_shocking_grasp(int sn, int level, CHAR_DATA *ch, SpellTarget vo, Cast
 	damage_old(ch, victim, dam, sn, DAM_LIGHTNING, true);
 }
 
-void spell_sleep(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_sleep(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
@@ -4245,7 +4245,7 @@ void spell_sleep(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode
 	}
 }
 
-void spell_slow(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_slow(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
@@ -4302,7 +4302,7 @@ void spell_slow(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 		multi_hit(victim, ch, TYPE_UNDEFINED);
 }
 
-void spell_stone_skin(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_stone_skin(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
@@ -4331,7 +4331,7 @@ void spell_stone_skin(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode
 	send_to_char("Your skin turns to stone.\n\r", victim);
 }
 
-void spell_summon(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_summon(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /* vo */, CastMode /* mode */)
 {
 	CHAR_DATA *victim;
 
@@ -4424,7 +4424,7 @@ void summon_char(CHAR_DATA *ch, CHAR_DATA *victim)
 
 /* Modified teleport -- only within radius of one area now. */
 
-void spell_teleport(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_teleport(int /* sn */, int /* level */, CHAR_DATA *ch, SpellTarget vo, CastMode /* mode */)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	ROOM_INDEX_DATA *pRoomIndex;
@@ -4497,7 +4497,7 @@ void spell_teleport(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode m
 undead, with good aligns getting a bonus. Evil try to either subdue aggro
 undead or control them, depending on the difference in their level.
 */
-void spell_turn_undead(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_turn_undead(int sn, int level, CHAR_DATA *ch, SpellTarget /* vo */, CastMode /* mode */)
 {
 	CHAR_DATA *victim;
 	CHAR_DATA *v_next;
@@ -4614,7 +4614,7 @@ void spell_turn_undead(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMod
 	}
 }
 
-void spell_ventriloquate(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_ventriloquate(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /* vo */, CastMode /* mode */)
 {
 	char speaker[MAX_INPUT_LENGTH];
 	CHAR_DATA *vch;
@@ -4632,7 +4632,7 @@ void spell_ventriloquate(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastM
 	}
 }
 
-void spell_weaken(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_weaken(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
@@ -4665,7 +4665,7 @@ void spell_weaken(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mod
 
 /* RT recall spell is back */
 
-void spell_word_of_recall(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_word_of_recall(int /* sn */, int /* level */, CHAR_DATA *ch, SpellTarget vo, CastMode /* mode */)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	ROOM_INDEX_DATA *location;
@@ -4753,7 +4753,7 @@ void recall_execute(CHAR_DATA *ch, ROOM_INDEX_DATA *location)
 /*
  * NPC spells.
  */
-void spell_acid_breath(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_acid_breath(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	int dam, hp_dam, dice_dam, hpch;
@@ -4791,7 +4791,7 @@ void spell_acid_breath(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMod
 	}
 }
 
-void spell_fire_breath(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_fire_breath(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	CHAR_DATA *vch, *vch_next;
@@ -4868,7 +4868,7 @@ void spell_fire_breath(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMod
 	}
 }
 
-void spell_frost_breath(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_frost_breath(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	CHAR_DATA *vch, *vch_next;
@@ -4940,7 +4940,7 @@ void spell_frost_breath(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMo
 	}
 }
 
-void spell_gas_breath(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_gas_breath(int sn, int level, CHAR_DATA *ch, [[maybe_unused]] SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	CHAR_DATA *vch;
 	CHAR_DATA *vch_next;
@@ -4976,7 +4976,7 @@ void spell_gas_breath(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode
 	}
 }
 
-void spell_nether_breath(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_nether_breath(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
@@ -5016,7 +5016,7 @@ void spell_nether_breath(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastM
 	}
 }
 
-void spell_lightning_breath(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_lightning_breath(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	int dam, hp_dam, dice_dam, hpch;
@@ -5054,7 +5054,7 @@ void spell_lightning_breath(int sn, int level, CHAR_DATA *ch, SpellTarget vo, Ca
 	}
 }
 
-void spell_iceball(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_iceball(int sn, int level, CHAR_DATA *ch, [[maybe_unused]] SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	CHAR_DATA *vch;
 	CHAR_DATA *vch_next;
@@ -5095,7 +5095,7 @@ void spell_iceball(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mo
 	}
 }
 
-void spell_protective_shield(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_protective_shield(int sn, int level, CHAR_DATA *ch, SpellTarget /* vo */, CastMode /* mode */)
 {
 	AFFECT_DATA af;
 
@@ -5165,7 +5165,7 @@ void sanguine_blind(CHAR_DATA *ch, CHAR_DATA *victim)
 	affect_to_char(victim, &af);
 }
 
-void spell_sanguine_ward(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_sanguine_ward(int sn, int level, CHAR_DATA *ch, SpellTarget /* vo */, CastMode /* mode */)
 {
 	AFFECT_DATA af;
 
@@ -5217,7 +5217,7 @@ void spell_sanguine_ward(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastM
 	send_to_char("\n\r", ch);
 }
 
-void spell_consecrate(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_consecrate(int sn, int level, CHAR_DATA *ch, [[maybe_unused]] SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	ROOM_INDEX_DATA *in_room;
 	ROOM_INDEX_DATA *room_check;
@@ -5309,7 +5309,7 @@ void spell_consecrate(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode
 	affect_to_char(ch, &af);
 }
 
-void spell_safety(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_safety(int /* sn */, int /* level */, CHAR_DATA *ch, SpellTarget /* vo */, CastMode /* mode */)
 {
 	CHAR_DATA *gch;
 	CHAR_DATA *gch_next;
@@ -5364,7 +5364,7 @@ void spell_safety(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mod
 	ch->move /= 2;
 }
 
-void spell_blade_barrier(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_blade_barrier(int /* sn */, int /* level */, CHAR_DATA *ch, SpellTarget /* vo */, CastMode /* mode */)
 {
 	AFFECT_DATA af;
 
@@ -5391,7 +5391,7 @@ void spell_blade_barrier(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastM
 	WAIT_STATE(ch, PULSE_VIOLENCE * 2);
 }
 
-void spell_old_blade_barrier(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_old_blade_barrier(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	int dam, spins;
@@ -5460,7 +5460,7 @@ void spell_old_blade_barrier(int sn, int level, CHAR_DATA *ch, SpellTarget vo, C
 	act("Your blade barrier fades away.", ch, 0, 0, TO_CHAR);
 }
 
-void spell_holy_fire(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_holy_fire(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	int dam;
@@ -5515,7 +5515,7 @@ void spell_holy_fire(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode 
 	damage_old(ch, victim, dam, sn, DAM_HOLY, true);
 }
 
-void spell_talk_to_dead(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_talk_to_dead(int /* sn */, int /* level */, CHAR_DATA *ch, SpellTarget /* vo */, CastMode /* mode */)
 {
 	OBJ_DATA *corpse;
 	char *obj_name;
@@ -5560,7 +5560,7 @@ void spell_talk_to_dead(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMo
 useless the old one was.
 -Ceran
 */
-void spell_energy_drain(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_energy_drain(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	int amount;
@@ -5592,7 +5592,7 @@ void spell_energy_drain(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMo
 	victim->move /= 2;
 }
 
-void spell_dark_shield(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_dark_shield(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
@@ -5652,7 +5652,7 @@ int check_spellcraft(CHAR_DATA *ch, int sn)
 	return (int)bonus;
 }
 
-void spell_deathspell(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_deathspell(int sn, int level, CHAR_DATA *ch, [[maybe_unused]] SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	CHAR_DATA *vch;
 	CHAR_DATA *vch_next;
@@ -5719,7 +5719,7 @@ void spell_deathspell(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode
 	}
 }
 
-void spell_lifebane(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_lifebane(int sn, int level, CHAR_DATA *ch, [[maybe_unused]] SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	CHAR_DATA *vch;
 	CHAR_DATA *vch_next;
@@ -5785,7 +5785,7 @@ void spell_lifebane(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode m
 /* Green tower obj progs */
 
 /* sceptre of heavens...say 'i am the wrath of god' */
-void spell_heavenly_sceptre_frenzy(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_heavenly_sceptre_frenzy(int sn, int level, CHAR_DATA *ch, SpellTarget /* vo */, CastMode /* mode */)
 {
 	AFFECT_DATA af;
 	if (is_affected(ch, sn) || (!is_good(ch) && !is_evil(ch)))
@@ -5830,7 +5830,7 @@ void spell_heavenly_sceptre_frenzy(int sn, int level, CHAR_DATA *ch, SpellTarget
 }
 
 /* sceptre of heavens, say 'Feel the force of god' */
-void spell_heavenly_sceptre_fire(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_heavenly_sceptre_fire(int sn, int /* level */, CHAR_DATA *ch, SpellTarget /* vo */, CastMode /* mode */)
 {
 	AFFECT_DATA af;
 	OBJ_DATA *sceptre = nullptr;
@@ -5879,7 +5879,7 @@ void spell_heavenly_sceptre_fire(int sn, int level, CHAR_DATA *ch, SpellTarget v
 	affect_to_char(ch, &af);
 }
 
-void spell_lightshield(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_lightshield(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
@@ -5927,7 +5927,7 @@ void spell_lightshield(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMod
 		act("$N is surrounded by a glowing afflatus of purity.", ch, nullptr, victim, TO_CHAR);
 }
 
-void spell_forget(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_forget(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	AFFECT_DATA af;
 	CHAR_DATA *victim = vo.AsChar();
@@ -5964,7 +5964,7 @@ void spell_forget(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mod
 	act("$n suddenly looks disoriented.", victim, 0, 0, TO_ROOM);
 }
 
-void spell_earthbind(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_earthbind(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	AFFECT_DATA af;
 	CHAR_DATA *victim = vo.AsChar();
@@ -5996,7 +5996,7 @@ void spell_earthbind(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode 
 	act("$n suddenly drops to the ground.", victim, 0, 0, TO_ROOM);
 }
 
-void spell_cremate(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_cremate(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	int dam;
@@ -6012,7 +6012,7 @@ void spell_cremate(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mo
 	damage_old(ch, victim, dam, sn, DAM_FIRE, true);
 }
 
-void spell_divine_touch(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_divine_touch(int sn, int level, CHAR_DATA *ch, SpellTarget /* vo */, CastMode /* mode */)
 {
 	AFFECT_DATA af;
 
@@ -6033,7 +6033,7 @@ void spell_divine_touch(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMo
 	act("$n's hands seem to glow with an inner energy.", ch, 0, 0, TO_ROOM);
 }
 
-void spell_transfer_object(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_transfer_object(int /* sn */, int /* level */, CHAR_DATA *ch, SpellTarget /* vo */, CastMode /* mode */)
 {
 	CHAR_DATA *victim;
 	OBJ_DATA *obj;
@@ -6113,7 +6113,7 @@ void spell_transfer_object(int sn, int level, CHAR_DATA *ch, SpellTarget vo, Cas
 }
 
 /* Necros use this to keep body parts longer...for lesser golems */
-void spell_preserve(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_preserve(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	OBJ_DATA *obj = vo.AsObj();
 	int vnum, chance;
@@ -6156,7 +6156,7 @@ void spell_preserve(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode m
 /* Make a victim flee...if they really fail their saves big time it can
 kill them outright..(Ceran)
 */
-void spell_power_word_fear(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_power_word_fear(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
@@ -6259,7 +6259,7 @@ void spell_power_word_fear(int sn, int level, CHAR_DATA *ch, SpellTarget vo, Cas
 
 /* Causes a target's hp to regenerate at a constant rate, plus removes the
    effects of a wither prevent healing spell */
-void spell_imbue_regeneration(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_imbue_regeneration(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
@@ -6333,7 +6333,7 @@ void spell_imbue_regeneration(int sn, int level, CHAR_DATA *ch, SpellTarget vo, 
 	Restores forget, wither, prevent healing, atrophy.
 	Also restores lost levels due to energy drain by powerful undead
 */
-void spell_restoration(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_restoration(int /* sn */, int level, CHAR_DATA *ch, SpellTarget vo, CastMode /* mode */)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	int sn_forget, sn_wither, sn_drain, sn_prevent_healing;
@@ -6386,7 +6386,7 @@ void spell_restoration(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMod
 		send_to_char("Spell had no effect.\n\r", ch);
 }
 
-void spell_prevent_healing(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_prevent_healing(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
@@ -6418,7 +6418,7 @@ void spell_prevent_healing(int sn, int level, CHAR_DATA *ch, SpellTarget vo, Cas
 	affect_to_char(victim, &af);
 }
 
-void spell_atrophy(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_atrophy(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
@@ -6459,7 +6459,7 @@ void spell_atrophy(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mo
 	Can stop wasting, but no heal benefit is gained if used this way. Won't
 	restore undead_drains or wither etc.
 */
-void spell_utter_heal(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_utter_heal(int /* sn */, int /* level */, CHAR_DATA *ch, SpellTarget vo, CastMode /* mode */)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	int sn_atrophy, sn_poison;
@@ -6504,7 +6504,7 @@ void spell_utter_heal(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode
 		send_to_char("Ok.\n\r", ch);
 }
 
-void spell_hold_person(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_hold_person(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
@@ -6564,7 +6564,7 @@ void spell_hold_person(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMod
 	WAIT_STATE(ch, PULSE_VIOLENCE * 2);
 }
 
-void spell_crushing_hand(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_crushing_hand(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	int dam;
@@ -6590,7 +6590,7 @@ void spell_crushing_hand(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastM
 	damage_old(ch, victim, dam, sn, DAM_BASH, true);
 }
 
-void spell_deafen(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_deafen(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
@@ -6628,7 +6628,7 @@ void spell_deafen(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mod
 	send_to_char("The world around you fades to silence.\n\r", victim);
 }
 
-void spell_talismanic_aura(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_talismanic_aura(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /* vo */, CastMode /* mode */)
 {
 	AFFECT_DATA af;
 	float reduction;
@@ -6700,7 +6700,7 @@ void talismanic_end(CHAR_DATA *ch, AFFECT_DATA *af)
 		send_to_char("The multihued aura flickers and fades.\n\r", ch);
 }
 
-void puddle_evaporate(OBJ_DATA *obj, OBJ_AFFECT_DATA *af)
+void puddle_evaporate(OBJ_DATA *obj, [[maybe_unused]] OBJ_AFFECT_DATA *af)
 {
 	if (obj->in_room && obj->in_room->people)
 		act("The last traces of the puddle fade, as it seeps into the ground and evaporates.", obj->in_room->people, 0, 0, TO_ALL);
@@ -6734,17 +6734,17 @@ bool check_somatic(CHAR_DATA *ch)
 	return true;
 }
 
-void mana_drain_pulse(CHAR_DATA *ch, AFFECT_DATA *af)
+void mana_drain_pulse(CHAR_DATA *ch, [[maybe_unused]] AFFECT_DATA *af)
 {
 	ch->mana = 0;
 }
 
-void colorful_end(CHAR_DATA *ch, AFFECT_DATA *af)
+void colorful_end(CHAR_DATA *ch, [[maybe_unused]] AFFECT_DATA *af)
 {
 	REMOVE_BIT(ch->comm, COMM_LOTS_O_COLOR);
 }
 
-void spell_colorful(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_colorful(int sn, int /* level */, CHAR_DATA *ch, SpellTarget /* vo */, CastMode /* mode */)
 {
 	AFFECT_DATA af;
 	char *parg, arg1[500], arg[500];

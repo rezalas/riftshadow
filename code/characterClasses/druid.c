@@ -92,7 +92,7 @@ void spell_imbue_stone(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMod
 }
 */
 
-void spell_tangleroot(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_tangleroot([[maybe_unused]] int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	int dam = (int)((float)((float)ch->level * 0.60f) + (dice(10, level / 4)));

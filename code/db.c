@@ -2729,7 +2729,7 @@ void do_areas(CHAR_DATA *ch, char *argument)
 	}
 }
 
-void do_memory(CHAR_DATA *ch, char *argument)
+void do_memory(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	char buf[MAX_STRING_LENGTH];
 
@@ -2776,7 +2776,7 @@ void do_memory(CHAR_DATA *ch, char *argument)
 	send_to_char(buf, ch);
 }
 
-void do_dump(CHAR_DATA *ch, char *argument)
+void do_dump([[maybe_unused]] CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	int count, count2, num_pcs, aff_count;
 	MOB_INDEX_DATA *pMobIndex;
@@ -3300,7 +3300,7 @@ void tail_chain(void)
 	return;
 }
 
-void do_force_reset(CHAR_DATA *ch, char *argument)
+void do_force_reset(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	AREA_DATA *pArea;
 	char buf[MAX_STRING_LENGTH];
@@ -3403,7 +3403,7 @@ void do_alist(CHAR_DATA *ch,char *argument)
 }
 */
 
-void do_llimit(CHAR_DATA *ch, char *argument)
+void do_llimit(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	FILE *fpChar;
 	char strPlr[MAX_INPUT_LENGTH];

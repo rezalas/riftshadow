@@ -350,7 +350,7 @@ void show_olc_cmds(CHAR_DATA *ch, const struct olc_cmd_type *olc_table)
  Purpose:	Display all olc commands.
  Called by:	olc interpreters.
  ****************************************************************************/
-bool show_commands(CHAR_DATA *ch, char *argument)
+bool show_commands(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	switch (Deref(ch->desc)->editor)
 	{

@@ -173,7 +173,7 @@ void do_delhelp(CHAR_DATA *ch, char *argument)
 	send_to_char(buf, ch);
 }
 
-void addhelp_end_fun(CHAR_DATA *ch, char *argument)
+void addhelp_end_fun(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	send_to_char("Help text modified.\n\r", ch);
 	send_to_char("Use addhelp to specify the rest of your helpfiles settings and add it.\n\r", ch);

@@ -152,7 +152,7 @@ void do_gold(CHAR_DATA *ch, char *argument)
 	send_to_char(buf, ch);
 }
 
-void do_clean(CHAR_DATA *ch, char *argument)
+void do_clean(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	send_to_char("Cleaning logins...\n\r", ch);
 	send_to_char("Cleaning notes...\n\r", ch);
@@ -656,7 +656,7 @@ void show_database_info(CHAR_DATA *ch, char *argument)
 	}
 }
 
-void do_demo(CHAR_DATA *ch, char *name)
+void do_demo(CHAR_DATA *ch, [[maybe_unused]] char *name)
 {
 	FILE *fp;
 	char tempbuf[MSL], buf[MSL];
@@ -1431,7 +1431,7 @@ void bounty_cb(char *string)
 		do_cb(guardian, string);
 }
 
-void do_topbounties(CHAR_DATA *ch, char *argument)
+void do_topbounties(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	int i, pnum = 0, plus = 0;
 	char buf[MAX_STRING_LENGTH];
@@ -1621,7 +1621,7 @@ void pay_bounty(CHAR_DATA *ch, CHAR_DATA *victim)
 	victim->pcdata->bounty = 0;
 }
 
-void do_rchanges(CHAR_DATA *ch, char *argument)
+void do_rchanges([[maybe_unused]] CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	/*
 	char arg1[MAX_STRING_LENGTH], buf[MAX_STRING_LENGTH], list[2000][110], nlist[110];
@@ -2886,7 +2886,7 @@ void do_call(CHAR_DATA *ch, char *argument)
 	}
 }
 
-void do_snare(CHAR_DATA *ch, char *argument)
+void do_snare(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	ROOM_AFFECT_DATA af;
 	AFFECT_DATA snaretimer;
@@ -3148,7 +3148,7 @@ OBJ_DATA *make_cosmetic(char *name, char *wearloc, char *underloc, char *cosmeti
 	return obj;
 }
 
-void pulse_prog_repop_container(OBJ_DATA *obj, bool isTick)
+void pulse_prog_repop_container(OBJ_DATA *obj, [[maybe_unused]] bool isTick)
 {
 	if (obj->contains)
 		return;

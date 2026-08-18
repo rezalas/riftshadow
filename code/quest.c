@@ -732,7 +732,7 @@ void talismanic_reward(CHAR_DATA *ch)
 	}
 }
 
-void pulse_prog_talismanic_page(OBJ_DATA *obj, bool isTick)
+void pulse_prog_talismanic_page(OBJ_DATA *obj, [[maybe_unused]] bool isTick)
 {
 	OBJ_DATA *scrap;
 	CHAR_DATA *ch;
@@ -756,7 +756,7 @@ void pulse_prog_talismanic_page(OBJ_DATA *obj, bool isTick)
 	obj_to_char(scrap, ch);
 }
 
-void pulse_prog_talismanic_scrap(OBJ_DATA *obj, bool isTick)
+void pulse_prog_talismanic_scrap(OBJ_DATA *obj, [[maybe_unused]] bool isTick)
 {
 	OBJ_DATA *page;
 	CHAR_DATA *ch;

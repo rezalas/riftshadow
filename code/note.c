@@ -77,7 +77,7 @@ int count_spool(CHAR_DATA *ch, int type)
 /// Sends the number of unread notes a character has to the player.
 /// @param ch: The character being sent the message.
 /// @param arg: unused
-void do_unread(CHAR_DATA *ch, char *arg)
+void do_unread(CHAR_DATA *ch, [[maybe_unused]] char *arg)
 {
 	char buf[MAX_STRING_LENGTH];
 

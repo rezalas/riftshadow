@@ -22,7 +22,7 @@ namespace
 	}
 }
 
-void testQueueFunction(char_data *qChar) {
+void testQueueFunction([[maybe_unused]] char_data *qChar) {
     return;
 }
 
@@ -89,14 +89,14 @@ void reentrantRequeueFunction(char_data *qChar)
 
 static int inertCallCount = 0;
 
-void inertQueueFunction(char_data *qChar)
+void inertQueueFunction([[maybe_unused]] char_data *qChar)
 {
 	inertCallCount++;
 	return;
 }
 
 // Reproduces a re-entrant erase bug found in the code.
-void wideArgQueueFunction(char_data *qChar, long a, long b, long c)
+void wideArgQueueFunction(char_data * /* qChar */, long /* a */, long /* b */, long /* c */)
 {
 	inertCallCount++;
 	return;
@@ -174,7 +174,7 @@ SCENARIO("Testing a queued function that requeues itself", "[ProcessQueue]")
 // Same-tick execution order that must run in the order they were added.
 static std::vector<int> executionOrder;
 
-void recordOrderFunction(char_data *qChar, long tag)
+void recordOrderFunction([[maybe_unused]] char_data *qChar, long tag)
 {
 	executionOrder.push_back(static_cast<int>(tag));
 }
@@ -261,7 +261,7 @@ SCENARIO("Testing execution order of queued events", "[ProcessQueue]")
 static int capturedInt = 0;
 static float capturedFloat = 0.0f;
 
-void recordScalarsFunction(char_data *qChar, int i, float f)
+void recordScalarsFunction([[maybe_unused]] char_data *qChar, int i, float f)
 {
 	capturedInt = i;
 	capturedFloat = f;

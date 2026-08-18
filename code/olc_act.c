@@ -123,7 +123,7 @@ const struct wear_type wear_table[] =
 	{NO_FLAG, NO_FLAG}
 };
 
-bool show_version(CHAR_DATA *ch, char *argument)
+bool show_version(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	send_to_char(SHOW_VERSION, ch);
 	send_to_char("\n\r", ch);
@@ -1667,7 +1667,7 @@ bool aedit_security(CHAR_DATA *ch, char *argument)
 	return true;
 }
 
-bool aedit_show(CHAR_DATA *ch, char *argument)
+bool aedit_show(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	AREA_DATA *pArea;
 	char buf[MAX_STRING_LENGTH];
@@ -1752,7 +1752,7 @@ bool aedit_show(CHAR_DATA *ch, char *argument)
 	return false;
 }
 
-bool aedit_reset(CHAR_DATA *ch, char *argument)
+bool aedit_reset(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	AREA_DATA *pArea;
 
@@ -1764,7 +1764,7 @@ bool aedit_reset(CHAR_DATA *ch, char *argument)
 	return false;
 }
 
-bool aedit_create(CHAR_DATA *ch, char *argument)
+bool aedit_create(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	AREA_DATA *pArea;
 
@@ -2225,7 +2225,7 @@ bool redit_owner(CHAR_DATA *ch, char *argument)
 	return true;
 }
 
-bool redit_show(CHAR_DATA *ch, char *argument)
+bool redit_show(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	ROOM_INDEX_DATA *pRoom;
 	char buf[MAX_STRING_LENGTH];
@@ -3080,7 +3080,7 @@ bool redit_mana(CHAR_DATA *ch, char *argument)
 	return false;
 }
 
-bool redit_clan(CHAR_DATA *ch, char *argument)
+bool redit_clan(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	ROOM_INDEX_DATA *pRoom;
 
@@ -3090,7 +3090,7 @@ bool redit_clan(CHAR_DATA *ch, char *argument)
 	return true;
 }
 
-bool redit_format(CHAR_DATA *ch, char *argument)
+bool redit_format(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	ROOM_INDEX_DATA *pRoom;
 
@@ -3923,7 +3923,7 @@ bool set_obj_values(CHAR_DATA *ch, OBJ_INDEX_DATA *pObj, int value_num, char *ar
 	return true;
 }
 
-bool oedit_show(CHAR_DATA *ch, char *argument)
+bool oedit_show(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	OBJ_INDEX_DATA *pObj;
 	char buf[MAX_STRING_LENGTH];
@@ -4577,7 +4577,7 @@ bool oedit_restrict(CHAR_DATA *ch, char *argument)
 	return true;
 }
 
-bool oedit_notes(CHAR_DATA *ch, char *argument)
+bool oedit_notes(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	OBJ_INDEX_DATA *pObj;
 
@@ -5486,7 +5486,7 @@ bool medit_yell(CHAR_DATA *ch, char *argument)
 	return true;
 }
 
-bool medit_notes(CHAR_DATA *ch, char *argument)
+bool medit_notes(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	MOB_INDEX_DATA *pMob;
 
@@ -5602,7 +5602,7 @@ bool medit_class(CHAR_DATA *ch, char *argument)
 	}
 }
 
-bool medit_show(CHAR_DATA *ch, char *argument)
+bool medit_show(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	MOB_INDEX_DATA *pMob;
 	char buf[MAX_STRING_LENGTH], msg_type[MSL], comparison[MSL];
@@ -6522,7 +6522,7 @@ bool medit_vuln(CHAR_DATA *ch, char *argument)
 	return false;
 }
 
-bool medit_material(CHAR_DATA *ch, char *argument)
+bool medit_material([[maybe_unused]] CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	return false;
 }
@@ -6909,7 +6909,7 @@ bool medit_hitroll(CHAR_DATA *ch, char *argument)
 	return true;
 }
 
-bool oedit_liqlist(CHAR_DATA *ch, char *argument)
+bool oedit_liqlist(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	BUFFER buffer;
 	char buf[MAX_STRING_LENGTH];

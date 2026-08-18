@@ -17,7 +17,7 @@
 #include "../db.h"
 #include "../lookup.h"
 
-void spell_infidels_weight(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_infidels_weight(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
@@ -70,7 +70,7 @@ int get_bv_stage(CHAR_DATA *ch)
 	return ((20 - af->duration) / af->modifier);
 }
 
-void spell_burning_vision(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_burning_vision(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af, *maf;
@@ -126,7 +126,7 @@ void spell_burning_vision(int sn, int level, CHAR_DATA *ch, SpellTarget vo, Cast
 	}
 }
 
-void burning_vision_tick(CHAR_DATA *ch, AFFECT_DATA *af)
+void burning_vision_tick(CHAR_DATA *ch, [[maybe_unused]] AFFECT_DATA *af)
 {
 	AFFECT_DATA *caf;
 
@@ -150,7 +150,7 @@ void burning_vision_tick(CHAR_DATA *ch, AFFECT_DATA *af)
 	}
 }
 
-void spell_divine_malison(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_divine_malison(int /* sn */, int level, CHAR_DATA *ch, SpellTarget vo, CastMode /* mode */)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af, *paf;

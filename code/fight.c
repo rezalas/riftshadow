@@ -5025,7 +5025,7 @@ void disarm(CHAR_DATA *ch, CHAR_DATA *victim)
 	}
 }
 
-void do_berserk(CHAR_DATA *ch, char *argument)
+void do_berserk(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	float chance;
 	int hp_percent;
@@ -5848,7 +5848,7 @@ void do_kill(CHAR_DATA *ch, char *argument)
 	multi_hit(ch, victim, TYPE_UNDEFINED);
 }
 
-void do_murde(CHAR_DATA *ch, char *argument)
+void do_murde(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	send_to_char("If you want to MURDER, spell it out.\n\r", ch);
 }
@@ -6128,7 +6128,7 @@ void do_rescue(CHAR_DATA *ch, char *argument)
 	set_fighting(fch, ch);
 }
 
-void do_kick(CHAR_DATA *ch, char *argument)
+void do_kick(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	CHAR_DATA *victim;
 	int dam, skill;
@@ -6187,7 +6187,7 @@ void do_kick(CHAR_DATA *ch, char *argument)
 	}
 }
 
-void do_disarm(CHAR_DATA *ch, char *argument)
+void do_disarm(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	CHAR_DATA *victim;
 	OBJ_DATA *obj;
@@ -6286,7 +6286,7 @@ void do_disarm(CHAR_DATA *ch, char *argument)
 	}
 }
 
-void do_surrender(CHAR_DATA *ch, char *argument)
+void do_surrender(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	CHAR_DATA *mob = Deref(ch->fighting);
 
@@ -6302,7 +6302,7 @@ void do_surrender(CHAR_DATA *ch, char *argument)
 	stop_fighting(ch, true);
 }
 
-void do_sla(CHAR_DATA *ch, char *argument)
+void do_sla(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	send_to_char("If you want to SLAY, spell it out.\n\r", ch);
 }
@@ -6346,7 +6346,7 @@ void do_slay(CHAR_DATA *ch, char *argument)
 	raw_kill(ch, victim);
 }
 
-void spell_power_word_kill(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_power_word_kill(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	int dam, saves, modify;
@@ -7017,7 +7017,7 @@ void do_nerve(CHAR_DATA *ch, char *argument)
 	}
 }
 
-void do_endure(CHAR_DATA *ch, char *argument)
+void do_endure(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	AFFECT_DATA af;
 
@@ -7063,7 +7063,7 @@ void do_endure(CHAR_DATA *ch, char *argument)
 	ch->mana -= 30;
 }
 
-void do_blindness_dust(CHAR_DATA *ch, char *argument)
+void do_blindness_dust(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	CHAR_DATA *vch;
 	CHAR_DATA *vch_next;
@@ -7149,7 +7149,7 @@ void do_blindness_dust(CHAR_DATA *ch, char *argument)
 	}
 }
 
-void do_poison_dust(CHAR_DATA *ch, char *argument)
+void do_poison_dust(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	CHAR_DATA *vch;
 	CHAR_DATA *vch_next;
@@ -7238,7 +7238,7 @@ void do_poison_dust(CHAR_DATA *ch, char *argument)
 	}
 }
 
-void do_warcry(CHAR_DATA *ch, char *argument)
+void do_warcry(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	AFFECT_DATA af;
 
@@ -7587,7 +7587,7 @@ void do_tame(CHAR_DATA *ch, char *argument)
 	REMOVE_BIT(victim->off_flags, SPAM_MURDER);
 }
 
-void do_find_water(CHAR_DATA *ch, char *argument)
+void do_find_water(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	OBJ_DATA *spring;
 
@@ -7637,7 +7637,7 @@ void do_find_water(CHAR_DATA *ch, char *argument)
 	obj_to_room(spring, ch->in_room);
 }
 
-void do_track(CHAR_DATA *ch, char *argument)
+void do_track([[maybe_unused]] CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	return;
 }
@@ -7820,7 +7820,7 @@ void age_death(CHAR_DATA *ch)
 	send_to_char("You have died and become a permanent ghost, awaiting your final departure.\n\r", ch);
 }
 
-void do_forage(CHAR_DATA *ch, char *argument)
+void do_forage(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	OBJ_DATA *berry_1;
 	OBJ_DATA *berry_2;
@@ -8552,7 +8552,7 @@ void do_pugil(CHAR_DATA *ch, char *argument)
 	WAIT_STATE(ch, 20);
 }
 
-void do_protection_heat_cold(CHAR_DATA *ch, char *argument)
+void do_protection_heat_cold(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	AFFECT_DATA af;
 	int chance;
@@ -8596,7 +8596,7 @@ void do_protection_heat_cold(CHAR_DATA *ch, char *argument)
 	check_improve(ch, gsn_protection_heat_cold, true, 1);
 }
 
-void do_call_to_arms(CHAR_DATA *ch, char *arguement)
+void do_call_to_arms(CHAR_DATA *ch, [[maybe_unused]] char *arguement)
 {
 	CHAR_DATA *target;
 	CHAR_DATA *target_next;
@@ -8685,7 +8685,7 @@ void do_call_to_arms(CHAR_DATA *ch, char *arguement)
 	WAIT_STATE(ch, 12);
 }
 
-void do_iron_resolve(CHAR_DATA *ch, char *argument)
+void do_iron_resolve(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	AFFECT_DATA af;
 
@@ -8725,7 +8725,7 @@ void do_iron_resolve(CHAR_DATA *ch, char *argument)
 	WAIT_STATE(ch, 12);
 }
 
-void do_quiet_movement(CHAR_DATA *ch, char *argument)
+void do_quiet_movement(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	AFFECT_DATA af;
 	int chance;
@@ -9340,7 +9340,7 @@ void do_gore(CHAR_DATA *ch, char *argument)
 	}
 }
 
-void do_headbutt(CHAR_DATA *ch, char *argument)
+void do_headbutt(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	CHAR_DATA *victim;
 	AFFECT_DATA af;
@@ -9443,7 +9443,7 @@ void do_headbutt(CHAR_DATA *ch, char *argument)
 	WAIT_STATE(ch, 2 * PULSE_VIOLENCE);
 }
 
-void do_disengage(CHAR_DATA *ch, char *argument)
+void do_disengage(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	CHAR_DATA *opponent;
 

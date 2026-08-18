@@ -1073,7 +1073,7 @@ void do_scroll(CHAR_DATA *ch, char *argument)
 }
 
 /* RT does socials */
-void do_socials(CHAR_DATA *ch, char *argument)
+void do_socials(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	auto col = 0;
 	for (auto iSocial = 0; social_table[iSocial].name[0] != '\0'; iSocial++)
@@ -1095,33 +1095,33 @@ void do_socials(CHAR_DATA *ch, char *argument)
 
 /* RT Commands to replace news, motd, imotd, etc from ROM */
 
-void do_motd(CHAR_DATA *ch, char *argument)
+void do_motd(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	do_help(ch, "motd");
 }
 
-void do_imotd(CHAR_DATA *ch, char *argument)
+void do_imotd(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	do_help(ch, "imotd");
 }
 
-void do_rules(CHAR_DATA *ch, char *argument)
+void do_rules(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	do_help(ch, "rules");
 }
 
-void do_story(CHAR_DATA *ch, char *argument)
+void do_story(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	do_help(ch, "story");
 }
 
-void do_wizlist(CHAR_DATA *ch, char *argument)
+void do_wizlist(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	do_help(ch, "wizlist");
 }
 
 /* RT this following section holds all the auto commands from ROM, as well as replacements for config */
-void do_autolist(CHAR_DATA *ch, char *argument)
+void do_autolist(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	/* lists most player flags */
 	if (is_npc(ch))
@@ -1281,7 +1281,7 @@ void do_color(CHAR_DATA *ch, char *argument)
 	send_to_char(buf, ch);
 }
 
-void do_autoabort(CHAR_DATA *ch, char *argument)
+void do_autoabort(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	if (is_npc(ch))
 		return;
@@ -1298,7 +1298,7 @@ void do_autoabort(CHAR_DATA *ch, char *argument)
 	}
 }
 
-void do_autoassist(CHAR_DATA *ch, char *argument)
+void do_autoassist(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	if (is_npc(ch))
 		return;
@@ -1315,7 +1315,7 @@ void do_autoassist(CHAR_DATA *ch, char *argument)
 	}
 }
 
-void do_autoexit(CHAR_DATA *ch, char *argument)
+void do_autoexit(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	if (is_npc(ch))
 		return;
@@ -1332,7 +1332,7 @@ void do_autoexit(CHAR_DATA *ch, char *argument)
 	}
 }
 
-void do_autogold(CHAR_DATA *ch, char *argument)
+void do_autogold(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	if (is_npc(ch))
 		return;
@@ -1349,7 +1349,7 @@ void do_autogold(CHAR_DATA *ch, char *argument)
 	}
 }
 
-void do_autoloot(CHAR_DATA *ch, char *argument)
+void do_autoloot(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	if (is_npc(ch))
 		return;
@@ -1366,7 +1366,7 @@ void do_autoloot(CHAR_DATA *ch, char *argument)
 	}
 }
 
-void do_autosac(CHAR_DATA *ch, char *argument)
+void do_autosac(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	if (is_npc(ch))
 		return;
@@ -1383,7 +1383,7 @@ void do_autosac(CHAR_DATA *ch, char *argument)
 	}
 }
 
-void do_autosplit(CHAR_DATA *ch, char *argument)
+void do_autosplit(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	if (is_npc(ch))
 		return;
@@ -1400,7 +1400,7 @@ void do_autosplit(CHAR_DATA *ch, char *argument)
 	}
 }
 
-void do_brief(CHAR_DATA *ch, char *argument)
+void do_brief(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	if (IS_SET(ch->comm, COMM_BRIEF))
 	{
@@ -1414,7 +1414,7 @@ void do_brief(CHAR_DATA *ch, char *argument)
 	}
 }
 
-void do_compact(CHAR_DATA *ch, char *argument)
+void do_compact(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	if (IS_SET(ch->comm, COMM_COMPACT))
 	{
@@ -1428,7 +1428,7 @@ void do_compact(CHAR_DATA *ch, char *argument)
 	}
 }
 
-void do_show(CHAR_DATA *ch, char *argument)
+void do_show(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	if (IS_SET(ch->comm, COMM_SHOW_AFFECTS))
 	{
@@ -1516,7 +1516,7 @@ void do_prompt(CHAR_DATA *ch, char *argument)
 	send_to_char(buf, ch);
 }
 
-void do_combine(CHAR_DATA *ch, char *argument)
+void do_combine(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	if (IS_SET(ch->comm, COMM_COMBINE))
 	{
@@ -1530,7 +1530,7 @@ void do_combine(CHAR_DATA *ch, char *argument)
 	}
 }
 
-void do_nofollow(CHAR_DATA *ch, char *argument)
+void do_nofollow(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	if (is_npc(ch))
 		return;
@@ -1554,7 +1554,7 @@ void do_nofollow(CHAR_DATA *ch, char *argument)
 	}
 }
 
-void do_nosummon(CHAR_DATA *ch, char *argument)
+void do_nosummon(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	if (is_npc(ch))
 	{
@@ -2396,7 +2396,7 @@ void do_exits(CHAR_DATA *ch, char *argument)
 	send_to_char(buf, ch);
 }
 
-void do_worth(CHAR_DATA *ch, char *argument)
+void do_worth(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	char buf[MAX_STRING_LENGTH];
 
@@ -2415,7 +2415,7 @@ void do_worth(CHAR_DATA *ch, char *argument)
 	send_to_char(buf, ch);
 }
 
-void do_score(CHAR_DATA *ch, char *argument)
+void do_score(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	if (is_npc(ch))
 	{
@@ -2714,7 +2714,7 @@ void do_score(CHAR_DATA *ch, char *argument)
 		do_affects(ch, "");
 }
 
-void do_affects(CHAR_DATA *ch, char *argument)
+void do_affects(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	if (ch->affected.empty() || !(ch->affected.front().aftype != AFT_INVIS || ch->affected.size() > 1))
 	{
@@ -2799,7 +2799,7 @@ void do_affects(CHAR_DATA *ch, char *argument)
 	}
 }
 
-void do_time(CHAR_DATA *ch, char *argument)
+void do_time(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	char buf[MAX_STRING_LENGTH];
 	char *suf;
@@ -2848,7 +2848,7 @@ void do_time(CHAR_DATA *ch, char *argument)
 	send_to_char(buf, ch);
 }
 
-void do_weather(CHAR_DATA *ch, char *argument)
+void do_weather(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	char buf[MAX_STRING_LENGTH], buf2[MAX_STRING_LENGTH];
 
@@ -3512,7 +3512,7 @@ void do_who(CHAR_DATA *ch, char *argument)
 	page_to_char(output.str(), ch);
 }
 
-void do_count(CHAR_DATA *ch, char *argument)
+void do_count(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	auto not_seen = 0;
 	auto count = 0;
@@ -3538,13 +3538,13 @@ void do_count(CHAR_DATA *ch, char *argument)
 	send_to_char(buf, ch);
 }
 
-void do_inventory(CHAR_DATA *ch, char *argument)
+void do_inventory(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	send_to_char("You are carrying:\n\r", ch);
 	show_list_to_char(ch->carrying, ch, true, true);
 }
 
-void do_equipment(CHAR_DATA *ch, char *argument)
+void do_equipment(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	send_to_char("You are using:\n\r", ch);
 
@@ -4195,7 +4195,7 @@ void do_description(CHAR_DATA *ch, char *argument)
 	send_to_char(ch->description ? ch->description : "(None)\n\r", ch);
 }
 
-void do_report(CHAR_DATA *ch, char *argument)
+void do_report(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	char buf[MAX_STRING_LENGTH], buf2[MAX_STRING_LENGTH], buf3[MAX_STRING_LENGTH];
 
@@ -4651,7 +4651,7 @@ CHAR_DATA *get_char_from_room(CHAR_DATA *ch, ROOM_INDEX_DATA *room, char *argume
 	return nullptr;
 }
 
-void do_balance(CHAR_DATA *ch, char *argument)
+void do_balance(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	auto banker = ch->in_room->people;
 	for (; banker != nullptr; banker = banker->next_in_room)
@@ -4909,7 +4909,7 @@ void do_deposit(CHAR_DATA *ch, char *argument)
 	extract_obj(deposited);
 }
 
-void do_records(CHAR_DATA *ch, char *argument)
+void do_records(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	if (!is_immortal(ch))
 	{
@@ -5292,7 +5292,7 @@ char *get_where_name(int iWear)
 	return where_name[iWear];
 }
 
-void do_trustgroup(CHAR_DATA *ch, char *argument)
+void do_trustgroup(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	if (is_npc(ch))
 		return;
@@ -5306,7 +5306,7 @@ void do_trustgroup(CHAR_DATA *ch, char *argument)
 		send_to_char("You no longer trust your group with questionable actions.\n\r", ch);
 }
 
-void do_trustcabal(CHAR_DATA *ch, char *argument)
+void do_trustcabal(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	if (is_npc(ch))
 		return;

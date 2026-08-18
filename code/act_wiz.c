@@ -535,7 +535,7 @@ void do_induct(CHAR_DATA *ch, char *argument)
 }
 
 /* equips a character */
-void do_outfit(CHAR_DATA *ch, char *argument)
+void do_outfit(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	OBJ_DATA *obj;
 	int i, body, arms, legs, hands, feet, shield, sn, vnum;
@@ -2336,7 +2336,7 @@ void do_ostat(CHAR_DATA *ch, char *argument)
 	}
 }
 
-void do_astat(CHAR_DATA *ch, char *argument)
+void do_astat(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	char buf[MSL];
 	int count = 0;
@@ -3372,7 +3372,7 @@ void do_mwhere(CHAR_DATA *ch, char *argument)
 		page_to_char(buffer.str(), ch);
 }
 
-void do_reboo(CHAR_DATA *ch, char *argument)
+void do_reboo(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	send_to_char("If you want to REBOOT, spell it out.\n\r", ch);
 	send_to_char("Use: 'reboot nosave', if you don't want players saved at reboot.\n\r", ch);
@@ -3748,7 +3748,7 @@ void do_switch(CHAR_DATA *ch, char *argument)
 	send_to_char("Ok.\n\r", victim);
 }
 
-void do_return(CHAR_DATA *ch, char *argument)
+void do_return(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	char buf[MAX_STRING_LENGTH];
 
@@ -4644,7 +4644,7 @@ void do_notell(CHAR_DATA *ch, char *argument)
 	}
 }
 
-void do_peace(CHAR_DATA *ch, char *argument)
+void do_peace(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	for (CHAR_DATA *rch = ch->in_room->people; rch != nullptr; rch = rch->next_in_room)
 	{
@@ -4661,7 +4661,7 @@ void do_peace(CHAR_DATA *ch, char *argument)
 	send_to_char("Ok.\n\r", ch);
 }
 
-void do_wizlock(CHAR_DATA *ch, char *argument)
+void do_wizlock(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	wizlock = !wizlock;
 
@@ -4679,7 +4679,7 @@ void do_wizlock(CHAR_DATA *ch, char *argument)
 
 /* RT anti-newbie code */
 
-void do_newlock(CHAR_DATA *ch, char *argument)
+void do_newlock(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	newlock = !newlock;
 
@@ -5922,7 +5922,7 @@ int host_comp(MULTDATA *d1, MULTDATA *d2)
 	return strcmp(get_end_host(d1->des->host), get_end_host(d2->des->host));
 }
 
-void do_multicheck(CHAR_DATA *ch, char *argument)
+void do_multicheck(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	char buf[2 * MAX_STRING_LENGTH];
 	char buf2[MAX_STRING_LENGTH];
@@ -6276,7 +6276,7 @@ void do_incognito(CHAR_DATA *ch, char *argument)
 	}
 }
 
-void do_holylight(CHAR_DATA *ch, char *argument)
+void do_holylight(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	if (is_npc(ch))
 		return;
@@ -6295,7 +6295,7 @@ void do_holylight(CHAR_DATA *ch, char *argument)
 
 /* prefix command: it will put the string typed on each line typed */
 
-void do_prefi(CHAR_DATA *ch, char *argument)
+void do_prefi(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	send_to_char("You cannot abbreviate the prefix command.\r\n", ch);
 }
@@ -6399,7 +6399,7 @@ void do_limcounter(CHAR_DATA *ch, char *argument)
 	send_to_char("\n\r", ch);
 }
 
-void do_classes(CHAR_DATA *ch, char *argument)
+void do_classes(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	char buf[MAX_STRING_LENGTH];
 	int iRace;
@@ -7178,7 +7178,7 @@ void do_empower(CHAR_DATA *ch, char *argument)
 	}
 }
 
-void do_raffects(CHAR_DATA *ch, char *argument)
+void do_raffects(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	RUNE_DATA *rune;
 	char buf[MAX_STRING_LENGTH];
@@ -7286,7 +7286,7 @@ void do_rastrip(CHAR_DATA *ch, char *argument)
 	act("All affects stripped from '$t'.", ch, location->name, 0, TO_CHAR);
 }
 
-void do_aastrip(CHAR_DATA *ch, char *argument)
+void do_aastrip(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	AREA_DATA *area = ch->in_room->area;
 
@@ -7468,7 +7468,7 @@ void do_clearfavors(CHAR_DATA *ch, char *argument)
 	act("$N's favors cleared.", ch, 0, victim, TO_CHAR);
 }
 
-void do_gsnlist(CHAR_DATA *ch, char *argument)
+void do_gsnlist(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	int sn, col = 0;
 	char buf[MSL];
@@ -7494,7 +7494,7 @@ void do_ccl(CHAR_DATA *ch, char *argument)
 	clear_cabal_leaders(ch, cabal_lookup(argument), "You are gone.");
 }
 
-void do_noskills(CHAR_DATA *ch, char *argument)
+void do_noskills(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	if (!IS_SET(ch->comm, COMM_SWITCHSKILLS))
 	{
@@ -7646,7 +7646,7 @@ void buglist_end_fun(CHAR_DATA *ch, char *argument)
 	free_pstring(ch->pcdata->temp_str);
 }
 
-void do_constdump(CHAR_DATA *ch, char *argument)
+void do_constdump(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	FILE *fp = fopen(CONST_DUMP_FILE, "w"), *fp2;
 	if (fp == nullptr)
@@ -7724,7 +7724,7 @@ void do_constdump(CHAR_DATA *ch, char *argument)
 	send_to_char("Const.c dump completed and successful.\n\r", ch);
 }
 
-void do_interpdump(CHAR_DATA *ch, char *argument)
+void do_interpdump([[maybe_unused]] CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	FILE *fp = fopen(INTERP_DUMP_FILE, "w");
 	if (fp == nullptr)
@@ -7797,7 +7797,7 @@ void do_interpdump(CHAR_DATA *ch, char *argument)
 	fclose(fp);
 }
 
-void do_racedump(CHAR_DATA *ch, char *argument)
+void do_racedump(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	FILE *fp = fopen(RACE_DUMP_FILE, "w");
 	if (fp == nullptr)

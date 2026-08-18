@@ -24,7 +24,7 @@
 #include "../devextra.h"
 #include "../pstring.h"
 
-void spell_dark_vessel(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_dark_vessel(int /* sn */, int /* level */, CHAR_DATA *ch, SpellTarget /* vo */, CastMode /* mode */)
 {
 	OBJ_DATA *urn, *corpse;
 
@@ -192,7 +192,7 @@ void power_urn(CHAR_DATA *ch, int charges)
 	send_to_char(buf, ch);
 }
 
-void spell_siphon(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_siphon([[maybe_unused]] int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	int dam, blood;
@@ -229,7 +229,7 @@ void spell_siphon(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mod
 	}
 }
 
-void spell_hex(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_hex(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA hex;
@@ -329,7 +329,7 @@ void spell_hex(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
 	ch->hit -= drain;
 }
 
-void spell_animate_dead(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_animate_dead(int sn, int level, CHAR_DATA *ch, SpellTarget /* vo */, CastMode /* mode */)
 {
 	OBJ_DATA *corpse;
 	char *obj_name;
@@ -574,7 +574,7 @@ void animate_four(CHAR_DATA *ch, OBJ_DATA *corpse)
 	check_bond(ch, zombie);
 }
 
-void spell_vampiric_touch(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_vampiric_touch(int /* sn */, int level, CHAR_DATA *ch, SpellTarget vo, CastMode /* mode */)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	int dam;
@@ -595,7 +595,7 @@ void spell_vampiric_touch(int sn, int level, CHAR_DATA *ch, SpellTarget vo, Cast
 	ch->hit += dam;
 }
 
-void spell_black_circle(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_black_circle(int sn, int /* level */, CHAR_DATA *ch, SpellTarget /* vo */, CastMode /* mode */)
 {
 	AFFECT_DATA af;
 	bool found= false;
@@ -644,7 +644,7 @@ void spell_black_circle(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMo
 	new_affect_to_char(ch, &af);
 }
 
-void spell_visceral(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_visceral(int sn, int /* level */, CHAR_DATA *ch, SpellTarget /* vo */, CastMode /* mode */)
 {
 	OBJ_DATA *corpse, *ccorpses[5];
 	int corpses = 0, i;
@@ -781,7 +781,7 @@ void visceral_four(CHAR_DATA *ch)
 	}
 }
 
-void spell_ritual_soul(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_ritual_soul(int /* sn */, int /* level */, CHAR_DATA *ch, SpellTarget vo, CastMode /* mode */)
 {
 	CHAR_DATA *search, *victim = vo.AsChar();
 
@@ -913,7 +913,7 @@ void ritual_four(CHAR_DATA *ch, CHAR_DATA *victim)
 	//TODO: no affect_to_char or similar
 }
 
-void spell_ritual_flesh(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_ritual_flesh(int /* sn */, int /* level */, CHAR_DATA *ch, SpellTarget vo, CastMode /* mode */)
 {
 	CHAR_DATA *search, *victim = vo.AsChar();
 
@@ -1041,7 +1041,7 @@ void flesh_four(CHAR_DATA *ch, CHAR_DATA *victim)
 	}
 }
 
-void spell_decrepify(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_decrepify(int sn, [[maybe_unused]] int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
@@ -1073,7 +1073,7 @@ void spell_decrepify(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode 
 	affect_to_char(victim, &af);
 }
 
-void spell_corrupt_flesh(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_corrupt_flesh(int sn, int /* level */, CHAR_DATA *ch, SpellTarget /* vo */, CastMode /* mode */)
 {
 	char arg1[MSL], arg2[MSL];
 	OBJ_DATA *obj;
@@ -1257,7 +1257,7 @@ void spell_corrupt_flesh(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastM
 	}
 }
 
-void spell_corpse_trap(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_corpse_trap(int sn, int /* level */, CHAR_DATA *ch, SpellTarget /* vo */, CastMode /* mode */)
 {
 	OBJ_DATA *corpse;
 	OBJ_DATA *trap;
@@ -1338,7 +1338,7 @@ void spell_corpse_trap(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMod
 	affect_to_char(ch, &af);
 }
 
-void spell_lesser_golem(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_lesser_golem(int sn, int /* level */, CHAR_DATA *ch, SpellTarget /* vo */, CastMode /* mode */)
 {
 	CHAR_DATA *mob;
 	int vnum = 0;
@@ -1452,7 +1452,7 @@ void spell_lesser_golem(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMo
 	act("You pour some blood on the floor.  It begins shifting and changing, finally forming $N!", ch, 0, mob, TO_CHAR);
 }
 
-void spell_greater_golem(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMode mode)
+void spell_greater_golem(int sn, int /* level */, CHAR_DATA *ch, SpellTarget /* vo */, CastMode /* mode */)
 {
 	CHAR_DATA *mob;
 	AFFECT_DATA af;

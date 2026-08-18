@@ -103,7 +103,7 @@ void spell_stasis_wall(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMod
 	RS.Queue.AddToQueue(9, "spell_stasis_wall", "draw_rune_queue", draw_rune_queue, rune.release(), ch);
 }
 
-bool trigger_stasis_wall(void *vo, void *vo2, void *vo3, void *vo4)
+bool trigger_stasis_wall(void *vo, void *vo2, void *vo3, [[maybe_unused]] void *vo4)
 {
 	RUNE_DATA *rune = (RUNE_DATA *)vo;
 	CHAR_DATA *victim = (CHAR_DATA *)vo2, *ch = Deref(rune->owner);
@@ -121,7 +121,7 @@ bool trigger_stasis_wall(void *vo, void *vo2, void *vo3, void *vo4)
 	return true;
 }
 
-bool activate_stasis_wall(void *vo, void *vo2, void *vo3, void *vo4)
+bool activate_stasis_wall(void *vo, void *vo2, void *vo3, [[maybe_unused]] void *vo4)
 {
 	// Zero-initialized, like the sibling template in spell_stasis_wall: this sets
 	// nine of the twelve fields and apply_rune copies the whole struct, so
@@ -198,7 +198,7 @@ void draw_rune(std::unique_ptr<RUNE_DATA> rune)
 // CQueue::GetCharacterData scrapes the argument list for CHAR_DATA pointers to
 // build the cancellation index, so dropping it would make this entry
 // uncancellable by DeleteQueuedEventsInvolving.
-void draw_rune_queue(RUNE_DATA *rune, CHAR_DATA *ch)
+void draw_rune_queue(RUNE_DATA *rune, [[maybe_unused]] CHAR_DATA *ch)
 {
 	draw_rune(std::unique_ptr<RUNE_DATA>(rune));
 }

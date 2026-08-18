@@ -236,7 +236,7 @@ void entry_prog_ilopheth_flute(ROOM_INDEX_DATA *room, CHAR_DATA *ch)
 	}
 }
 
-void entry_prog_sidhe_ankle(ROOM_INDEX_DATA *room, CHAR_DATA *ch)
+void entry_prog_sidhe_ankle([[maybe_unused]] ROOM_INDEX_DATA *room, CHAR_DATA *ch)
 {
 	AFFECT_DATA af;
 
@@ -275,7 +275,7 @@ void entry_prog_sidhe_ankle(ROOM_INDEX_DATA *room, CHAR_DATA *ch)
 	}
 }
 
-bool open_prog_mudschool_key(ROOM_INDEX_DATA *room, CHAR_DATA *ch, EXIT_DATA *exit)
+bool open_prog_mudschool_key([[maybe_unused]] ROOM_INDEX_DATA *room, CHAR_DATA *ch, EXIT_DATA *exit)
 {
 	OBJ_DATA *obj, *obj2;
 	bool found= false;
@@ -402,7 +402,7 @@ void pulse_prog_mudschool_snake(ROOM_INDEX_DATA *room)
 	affect_to_char(ch, &paf);
 }
 
-bool open_prog_bust_room(ROOM_INDEX_DATA *room, CHAR_DATA *ch, EXIT_DATA *exit)
+bool open_prog_bust_room([[maybe_unused]] ROOM_INDEX_DATA *room, CHAR_DATA *ch, [[maybe_unused]] EXIT_DATA *exit)
 {
 	send_to_char("You see no door south here.\n\r", ch);
 	return false;
@@ -424,7 +424,7 @@ bool open_prog_nodoor(ROOM_INDEX_DATA *room, CHAR_DATA *ch, EXIT_DATA *exit)
 	return false;
 }
 
-bool move_prog_stone_roll(ROOM_INDEX_DATA *room, CHAR_DATA *ch, int dir)
+bool move_prog_stone_roll(ROOM_INDEX_DATA *room, CHAR_DATA *ch, [[maybe_unused]] int dir)
 {
 	ROOM_INDEX_DATA *room2 = get_room_index(24559);
 	EXIT_DATA *exit = room2->exit[Directions::East];
@@ -463,7 +463,7 @@ bool move_prog_stone_roll(ROOM_INDEX_DATA *room, CHAR_DATA *ch, int dir)
 	return true;
 }
 
-bool move_prog_horde_shrine(ROOM_INDEX_DATA *room, CHAR_DATA *ch, int dir)
+bool move_prog_horde_shrine([[maybe_unused]] ROOM_INDEX_DATA *room, CHAR_DATA *ch, int dir)
 {
 	if (dir == Directions::South && !is_affected(ch, gsn_horde_communion))
 	{
@@ -480,13 +480,13 @@ bool move_prog_horde_shrine(ROOM_INDEX_DATA *room, CHAR_DATA *ch, int dir)
 	return true;
 }
 
-void entry_prog_iseldheim_lift(ROOM_INDEX_DATA *room, CHAR_DATA *ch)
+void entry_prog_iseldheim_lift([[maybe_unused]] ROOM_INDEX_DATA *room, CHAR_DATA *ch)
 {
 	send_to_char("You step onto the swaying lift.\n\r", ch);
 	act("$n steps onto the lift, causing it to sway momentarily.", ch, 0, 0, TO_ROOM);
 }
 
-void drop_prog_elven_star(ROOM_INDEX_DATA *room, CHAR_DATA *ch, OBJ_DATA *obj)
+void drop_prog_elven_star([[maybe_unused]] ROOM_INDEX_DATA *room, CHAR_DATA *ch, OBJ_DATA *obj)
 {
 	if (obj->pIndexData->vnum != (4637 || 4638 || 4639 || 4640 || 4641))
 		return;
@@ -494,7 +494,7 @@ void drop_prog_elven_star(ROOM_INDEX_DATA *room, CHAR_DATA *ch, OBJ_DATA *obj)
 	act("As $p falls to the ground, it is immediately drawn to it's place in the star of the Chilliad.", ch, obj, 0, TO_ROOM);
 }
 
-void speech_prog_elven_down(ROOM_INDEX_DATA *room, CHAR_DATA *ch, char *speech)
+void speech_prog_elven_down([[maybe_unused]] ROOM_INDEX_DATA *room, CHAR_DATA *ch, char *speech)
 {
 	AFFECT_DATA af;
 	ROOM_AFFECT_DATA raf;
@@ -534,7 +534,7 @@ void speech_prog_elven_down(ROOM_INDEX_DATA *room, CHAR_DATA *ch, char *speech)
 	}
 }
 
-void rprog_elven_down_end(CHAR_DATA *ch, AFFECT_DATA *af)
+void rprog_elven_down_end(CHAR_DATA *ch, [[maybe_unused]] AFFECT_DATA *af)
 {
 	ROOM_INDEX_DATA *to_room = nullptr;
 
@@ -547,7 +547,7 @@ void rprog_elven_down_end(CHAR_DATA *ch, AFFECT_DATA *af)
 	act("$n appears out of thin air, crumpling in to the ground with a thud.", ch, 0, 0, TO_ROOM);
 }
 
-void pulse_prog_elven_star(ROOM_INDEX_DATA *room)
+void pulse_prog_elven_star([[maybe_unused]] ROOM_INDEX_DATA *room)
 {
 	/*
 	OBJ_DATA *obj;

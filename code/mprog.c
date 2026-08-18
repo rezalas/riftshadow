@@ -651,7 +651,7 @@ void greet_prog_ruins_spirit(CHAR_DATA *mob, CHAR_DATA *ch)
 	}
 }
 
-void greet_prog_ruins_mouth(CHAR_DATA *mob, CHAR_DATA *ch)
+void greet_prog_ruins_mouth(CHAR_DATA *mob, [[maybe_unused]] CHAR_DATA *ch)
 {
 	do_say(mob, "Welcome to the Ministry of Magic.  Shall I direct you to the Room of Testing, the Office of the "\
 				"Master of the Art, or the Room of Inventory?");
@@ -663,7 +663,7 @@ void speech_prog_testmob(CHAR_DATA *mob, CHAR_DATA *ch, char *speech)
 		execute_speech(ch, mob, mob->pIndexData->speech.empty() ? nullptr : &mob->pIndexData->speech.front());
 }
 
-void speech_prog_ruins_mouth(CHAR_DATA *mob, CHAR_DATA *ch, char *speech)
+void speech_prog_ruins_mouth([[maybe_unused]] CHAR_DATA *mob, CHAR_DATA *ch, char *speech)
 {
 	ROOM_INDEX_DATA *to_room = nullptr;
 
@@ -789,7 +789,7 @@ void greet_prog_knight(CHAR_DATA *mob, CHAR_DATA *ch)
 	do_murder(mob, ch->name);
 }
 
-void fight_prog_priest(CHAR_DATA *mob, CHAR_DATA *ch)
+void fight_prog_priest(CHAR_DATA *mob, [[maybe_unused]] CHAR_DATA *ch)
 {
 	switch (number_bits(6))
 	{
@@ -882,7 +882,7 @@ void pulse_prog_formian_queen(CHAR_DATA *mob)
 
 /* Not really an mprog, but hey, it MAKES a mob, so.... */
 
-void formian_egg_hatch(OBJ_DATA *obj, OBJ_AFFECT_DATA *af)
+void formian_egg_hatch(OBJ_DATA *obj, [[maybe_unused]] OBJ_AFFECT_DATA *af)
 {
 	int egg_vnum = obj->pIndexData->vnum;
 
@@ -1328,7 +1328,7 @@ void pulse_prog_tahlu_mist_ward(CHAR_DATA *mob)
 	}
 }
 
-bool move_prog_horde_shrine_ward(CHAR_DATA *ch, CHAR_DATA *mob, ROOM_INDEX_DATA *from, int direction)
+bool move_prog_horde_shrine_ward(CHAR_DATA *ch, CHAR_DATA * /* mob */, ROOM_INDEX_DATA * /* from */, int direction)
 {
 	if (direction != Directions::South)
 		return true;
@@ -1357,7 +1357,7 @@ bool aggress_prog_anchor(CHAR_DATA *mob, CHAR_DATA *attacker)
 	return true;
 }
 
-bool death_prog_glass(CHAR_DATA *mob, CHAR_DATA *killer)
+bool death_prog_glass(CHAR_DATA *mob, [[maybe_unused]] CHAR_DATA *killer)
 {
 
 	CHAR_DATA *ch, *vch, *vch_next;
@@ -1494,7 +1494,7 @@ void pulse_prog_shopkeeper(CHAR_DATA *mob)
 	mob->exp = 10;
 }
 
-bool move_prog_theatre_guard(CHAR_DATA *ch, CHAR_DATA *mob, ROOM_INDEX_DATA *from, int direction)
+bool move_prog_theatre_guard(CHAR_DATA *ch, CHAR_DATA *mob, [[maybe_unused]] ROOM_INDEX_DATA *from, int direction)
 {
 	if (direction != Directions::South || is_immortal(ch))
 		return true;
@@ -1532,7 +1532,7 @@ void greet_prog_necro_skull(CHAR_DATA *mob, CHAR_DATA *ch)
 	act(buf, master, 0, 0, TO_CHAR);
 }
 
-bool death_prog_necro_skull(CHAR_DATA *mob, CHAR_DATA *killer)
+bool death_prog_necro_skull(CHAR_DATA *mob, [[maybe_unused]] CHAR_DATA *killer)
 {
 	act("$n crumbles into dust.", mob, 0, 0, TO_ROOM);
 	extract_char(mob, true);
@@ -2438,7 +2438,7 @@ void pulse_prog_diurnal_mob(CHAR_DATA *mob)
 	}
 }
 
-bool death_prog_cim(CHAR_DATA *mob, CHAR_DATA *killer)
+bool death_prog_cim(CHAR_DATA *mob, [[maybe_unused]] CHAR_DATA *killer)
 {
 	CHAR_DATA *extract;
 
@@ -3566,7 +3566,7 @@ void pulse_prog_night_creeps(CHAR_DATA *mob)
 	}
 }
 
-void sucker_pulse(CHAR_DATA *ch, AFFECT_DATA *af)
+void sucker_pulse(CHAR_DATA *ch, [[maybe_unused]] AFFECT_DATA *af)
 {
 	CHAR_DATA *owner;
 

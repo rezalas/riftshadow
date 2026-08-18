@@ -3055,7 +3055,7 @@ void do_recite(CHAR_DATA *ch, char *argument)
 	extract_obj(scroll);
 }
 
-void do_brandish(CHAR_DATA *ch, char *argument)
+void do_brandish(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	CHAR_DATA *vch;
 	CHAR_DATA *vch_next;

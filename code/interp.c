@@ -1383,7 +1383,7 @@ char *one_argument(char *argument, char *arg_first)
 /*
  * Contributed by Alander.
  */
-void do_commands(CHAR_DATA *ch, char *argument)
+void do_commands(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	char buf[MAX_STRING_LENGTH];
 	int cmd;
