@@ -1180,6 +1180,7 @@ void char_update(void)
 		bool charm_gone;
 
 		master = nullptr;
+		charm_gone = false;
 
 		if (is_npc(ch)
 			&& (sun == SolarPosition::Sunrise || sun == SolarPosition::Daylight)
@@ -1372,7 +1373,6 @@ void char_update(void)
 				auto next = std::next(it);
 				AFFECT_DATA *paf = &*it;
 				AFFECT_DATA *paf_next = (next != ch->affected.end()) ? &*next : nullptr;
-				charm_gone= false;
 
 				if (!ghost && ch->ghost > 0)
 					break;
@@ -1456,11 +1456,32 @@ void char_update(void)
 						if (paf->type && str_cmp(skill_table[paf->type].room_msg_off, "") && is_awake(ch))
 							act(skill_table[paf->type].room_msg_off, ch, 0, 0, TO_ROOM);
 					}
+
+					// A charm running out has to release the following as well
+					// as the affect. affect_remove only clears the bit, and
+					// stop_follower is the only thing that ends the follow and
+					// tells both sides. It cannot be called from here, because
+					// it strips the character's charm affects and would
+					// invalidate the iterator this loop is holding, so the
+					// break is recorded and carried out once the walk is done.
+					if (IS_SET(paf->bitvector, AFF_CHARM))
+					{
+						master = Deref(ch->master);
+						charm_gone = true;
+					}
+
 					affect_remove(ch, paf);
 				}
 
 				it = next;
 			}
+
+			// Deferred from the loop above. Only if the tick did not free the
+			// character, and only if it is still following the same master it
+			// was charmed by, so that a follow changed in the meantime is left
+			// alone.
+			if (charm_gone && master != nullptr && Deref(ticking) == ch && Deref(ch->master) == master)
+				stop_follower(ch);
 		}
 
 		if (!ch)
