@@ -283,6 +283,14 @@ void do_circle_stab(CHAR_DATA *ch, char *argument)
 		dam = dice(obj->value[1], obj->value[2]);
 		dam += 40;
 
+		// TODO: Each fraction below is an integer division that evaluates on its
+		// own before it is applied, so 3 / 2 is 1 and 7 / 3 is 2. The bands
+		// actually run 1, 1, 2, 2, 2, 3, 3, 3 rather than the values written.
+		// Restoring the written numbers literally is not right either, because
+		// they are not monotonic. 7 / 2 at level 49 is larger than 10 / 3 at
+		// level 50, so a thief would lose damage on reaching 50. Truncation has
+		// hidden that because both fractions come out as 3. This needs a damage
+		// curve decision rather than a mechanical fix.
 		if (ch->level <= 15)
 			dam *= 1;
 		else if (ch->level <= 20)

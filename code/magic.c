@@ -5812,6 +5812,11 @@ void spell_heavenly_sceptre_frenzy(int sn, int level, CHAR_DATA *ch, SpellTarget
 	af.location = APPLY_HITROLL;
 	affect_to_char(ch, &af);
 
+	// TODO: this third affect is built and never applied. No affect_to_char
+	// follows it, so the saving throw location and the modifier are both dead,
+	// and the modifier is assigned outside the level test as well. Either the
+	// call is missing or these lines are. Deciding which needs a view on what
+	// the spell is meant to grant, so it is recorded rather than guessed at.
 	if (ch->level > 40)
 		af.location = APPLY_SAVING_SPELL;
 
@@ -5864,6 +5869,13 @@ void spell_heavenly_sceptre_fire(int sn, int /* level */, CHAR_DATA *ch, SpellTa
 	{
 		act("Your sceptre of heavenly orders crumbles to dust.", ch, 0, 0, TO_ROOM);
 		send_to_char("Your sceptre of heavenly orders crumbles to dust.\n\r", ch);
+
+		// TODO: sceptre is still the nullptr it was declared as, because nothing
+		// between there and here ever finds the object. extract_obj dereferences
+		// it without a null check, so this crashes. The branch is taken about
+		// 100 - 2 * level percent of the time, which is roughly 40 percent at the
+		// level 30 minimum. Nothing reaches this function today because its only
+		// dispatcher is commented out, so re-enabling that turns this live.
 		extract_obj(sceptre);
 		return;
 	}

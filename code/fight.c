@@ -683,6 +683,13 @@ void mob_hit(CHAR_DATA *ch, CHAR_DATA *victim, int dt)
 	if (Deref(ch->fighting) != victim || dt == gsn_backstab)
 		return;
 
+	// TODO: The dual_chance multipliers further down are integer divisions that
+	// evaluate on their own before they are applied. 6 / 4 and 3 / 2 are both 1,
+	// so haste does nothing to either off-hand attack, and 2 / 3 is 0, so the
+	// second off-hand attack can never fire. This is the NPC path only. The
+	// player path in multi_hit keeps dual_chance as a float and is correct.
+	// Correcting the arithmetic raises mob damage, so it needs a balance
+	// decision on the intended curve rather than a mechanical fix.
 	chance = std::max(70, get_skill(ch, gsn_second_attack));
 	dual_chance = ch->level * 2 / 3;
 

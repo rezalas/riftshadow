@@ -1658,6 +1658,12 @@ void spell_crimson_martyr(int sn, int level, CHAR_DATA *ch, SpellTarget /* vo */
 		if (is_good(vch) && vch != ch)
 		{
 			affect_to_char(vch, &af);
+
+			// TODO: ch->hit / ch->max_hit is an integer division, so it is 0 for a
+			// martyr below full health and 1 at exactly full health. The heal is
+			// all or nothing rather than scaled by the martyr's remaining health.
+			// Correcting it turns on healing that has never applied to anyone
+			// short of full, so the magnitude needs a balance decision first.
 			vch->hit = std::min((int)vch->max_hit, vch->hit + (level * 10 * (ch->hit / ch->max_hit)));
 			act("$n's sacrifice infuses you with newfound vigor!", ch, 0, vch, TO_VICT);
 		}
