@@ -185,7 +185,7 @@ char *act_msg(const char *point, CHAR_DATA *ch)
 	for (i = 0; i < MSL; i++)
 		buf[i] = '\0';
 
-	for (i = 0; *point && *point != '\0'; i++)
+	for (i = 0; *point != '\0'; i++)
 	{
 		if (*point == '$')
 		{

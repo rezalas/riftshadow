@@ -2437,7 +2437,7 @@ void do_score(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 		ch->pcdata->birth_date);
 	send_to_char(buf, ch);
 
-	auto tmp = get_hours(ch) / ch->pcdata->death_time * 100.001f;
+	auto tmp = get_hours(ch) * 100.001f / ch->pcdata->death_time;
 	auto i = (int)tmp;
 	char *state;
 

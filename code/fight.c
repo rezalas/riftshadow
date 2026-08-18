@@ -1383,10 +1383,7 @@ int damage_new(CHAR_DATA *ch, CHAR_DATA *victim, int idam, int dt, int dam_type,
 			dam = 0;
 			break;
 		case IS_RESISTANT:
-			if (is_npc(victim))
-				dam -= dam / 3;
-			else
-				dam -= dam / 3;
+			dam -= dam / 3;
 
 			break;
 		case IS_VULNERABLE:

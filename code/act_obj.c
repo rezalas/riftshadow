@@ -125,7 +125,7 @@ bool can_loot(CHAR_DATA *ch, OBJ_DATA *obj)
 	if (is_npc(ch))
 		return false;
 
-	if (!obj->owner || obj->owner == nullptr)
+	if (obj->owner == nullptr)
 		return true;
 
 	if (!str_cmp(ch->true_name, obj->owner))

@@ -287,7 +287,7 @@ char *munch(char *str)
 
 	copy = str;
 
-	for (i = 0; *copy && *copy != '\0'; i++)
+	for (i = 0; *copy != '\0'; i++)
 	{
 		if (*copy == '\r')
 		{

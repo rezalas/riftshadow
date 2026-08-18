@@ -2603,7 +2603,7 @@ void speech_handler(CHAR_DATA *ch, CHAR_DATA *mob, SPEECH_DATA *speech)
 	auto copy = palloc_string(line->text);
 	auto point = copy;
 
-	for (auto i = 0; *point && *point != '\0'; i++)
+	for (auto i = 0; *point != '\0'; i++)
 	{
 		if (*point == '$')
 		{

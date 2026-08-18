@@ -2294,7 +2294,7 @@ void do_ostat(CHAR_DATA *ch, char *argument)
 
 	for (auto &paf2 : obj->charaffs)
 	{
-		if (paf2.bitvector)
+		if (!IS_ZERO_VECTOR(paf2.bitvector))
 		{
 			sprintf(buf, "Imbues wearer with %s.\n\r", affect_bit_name(paf2.bitvector));
 			send_to_char(buf, ch);
@@ -2750,7 +2750,7 @@ void do_mstat(CHAR_DATA *ch, char *argument)
 		send_to_char(buf, ch);
 	}
 
-	if (is_npc(victim) && victim->off_flags)
+	if (is_npc(victim) && !IS_ZERO_VECTOR(victim->off_flags))
 	{
 		sprintf(buf, "Offense: %s\n\r", off_bit_name(victim->off_flags));
 		send_to_char(buf, ch);
@@ -6465,7 +6465,7 @@ void do_rinfo(CHAR_DATA *ch, char *argument)
 		}
 	}
 
-	if (location->room_flags == 0 && location->area->area_flags == 0)
+	if (IS_ZERO_VECTOR(location->room_flags) && IS_ZERO_VECTOR(location->area->area_flags))
 		strcat(buf, "(no flags)\n\r");
 
 	send_to_char(buf, ch);

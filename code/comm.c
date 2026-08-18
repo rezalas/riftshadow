@@ -716,10 +716,7 @@ void bust_a_prompt(CHAR_DATA *ch)
 				i = buf2;
 				break;
 			case 'h':
-				if (!IS_SET(ch->comm, COMM_ANSI))
-					sprintf(buf2, "%d", ch->hit);
-				else
-					sprintf(buf2, "%d", ch->hit);
+				sprintf(buf2, "%d", ch->hit);
 
 				i = buf2;
 				break;

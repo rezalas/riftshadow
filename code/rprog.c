@@ -488,7 +488,11 @@ void entry_prog_iseldheim_lift([[maybe_unused]] ROOM_INDEX_DATA *room, CHAR_DATA
 
 void drop_prog_elven_star([[maybe_unused]] ROOM_INDEX_DATA *room, CHAR_DATA *ch, OBJ_DATA *obj)
 {
-	if (obj->pIndexData->vnum != (4637 || 4638 || 4639 || 4640 || 4641))
+	// The chained ors here used to collapse to 1, so this compared the vnum
+	// against 1 and returned for every object in the game.
+	auto vnum = obj->pIndexData->vnum;
+
+	if (vnum != 4637 && vnum != 4638 && vnum != 4639 && vnum != 4640 && vnum != 4641)
 		return;
 
 	act("As $p falls to the ground, it is immediately drawn to it's place in the star of the Chilliad.", ch, obj, 0, TO_ROOM);

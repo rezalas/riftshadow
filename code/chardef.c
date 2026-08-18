@@ -11,10 +11,13 @@
 const	struct	pc_race_type	pc_race_table	[]	=
 {
      {
+	// The reserved slot. It stopped short of racePulse, racialDam and status,
+	// which the compiler was zero-filling. They are written out here so that
+	// giving any of them a non-zero default cannot silently change this row.
 	"null race", 	"", 	"",	"", 0, 0, 0, 0,
 	{ "" },
 	{0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,},
-	{ 18, 18, 18, 18, 18 }, 0
+	{ 18, 18, 18, 18, 18 }, 0, 0, 0, 0
      },
 
 /*

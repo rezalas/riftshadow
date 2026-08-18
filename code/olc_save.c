@@ -694,9 +694,7 @@ void save_progs(FILE *fp, AREA_DATA *pArea)
 			if (mIndex->area != pArea)
 				continue;
 
-			if (!mIndex->progtypes)
-				continue;
-			if (mIndex->progtypes)
+			if (!IS_ZERO_VECTOR(mIndex->progtypes))
 			{
 				if (IS_SET(mIndex->progtypes, MPROG_BRIBE))
 					fprintf(fp, "M %d bribe_prog %s\n", mIndex->vnum, mIndex->mprogs->bribe_name);
