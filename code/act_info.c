@@ -1892,21 +1892,29 @@ void do_look(CHAR_DATA *ch, char *argument)
 		if (is_affected(ch, gsn_mark_of_wrath))
 		{
 			auto af = affect_find(ch->affected, gsn_mark_of_wrath);
+			CHAR_DATA *owner = Deref(af->owner);
 
-			for (i = 0; i < MAX_TRACKS; i++)
+			// An unused track slot holds a null prey, and an owner who can no
+			// longer be resolved is null too, so the two used to match each other
+			// and the name below was read through the null. Matching equal is not
+			// the same as being alive.
+			if (owner != nullptr)
 			{
-				if (ch->in_room->tracks[i].prey != Deref(af->owner))
-					continue;
+				for (i = 0; i < MAX_TRACKS; i++)
+				{
+					if (ch->in_room->tracks[i].prey != owner)
+						continue;
 
-				direction = (char *)flag_name_lookup(ch->in_room->tracks[i].direction, direction_table);
+					direction = (char *)flag_name_lookup(ch->in_room->tracks[i].direction, direction_table);
 
-				sprintf(buf, "%sThrough the veil of your rage, you sense %s's tracks leading %s.%s\n\r",
-					get_char_color(ch, "lightred"),
-					Deref(af->owner)->name,
-					direction,
-					END_COLOR(ch));
+					sprintf(buf, "%sThrough the veil of your rage, you sense %s's tracks leading %s.%s\n\r",
+						get_char_color(ch, "lightred"),
+						owner->name,
+						direction,
+						END_COLOR(ch));
 
-				send_to_char(buf, ch);
+					send_to_char(buf, ch);
+				}
 			}
 		}
 

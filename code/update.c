@@ -1999,7 +1999,12 @@ void aggr_update(void)
 			{
 				vch_next = vch->next_in_room;
 
-				if (Deref(paf->owner)->ghost > 0)
+				CHAR_DATA *owner = Deref(paf->owner);
+
+				// An owner who can no longer be resolved has been destroyed, which
+				// ends the mark for the same reason a dead owner does. Deref hands
+				// back a null in that case and reading through it crashes the tick.
+				if (owner == nullptr || owner->ghost > 0)
 				{
 					affect_remove(wch, paf);
 					break;		// paf is gone; nothing further reads the mark
