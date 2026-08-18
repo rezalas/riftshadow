@@ -944,21 +944,29 @@ void load_mobs(FILE *fp)
 	}
 }
 
-void bugout(char *reason)
+[[noreturn]] void bugout(char *reason)
 {
 	//TODO: Tie this into the logging system
 
 	RS.Logger.Warn(reason);
 
 	auto fp = fopen(BUGOUT_FILE, "a");
+
+	// Every caller of this treats it as a halt, so the exit has to happen whether
+	// or not the log file can be opened. Returning early instead left the callers
+	// running on into code written on the assumption that they would not, and two
+	// of them in the area loader go straight into a SET_BIT with NO_FLAG, which
+	// indexes before the start of the field.
 	if (fp == nullptr)
 	{
 		RS.Logger.Warn("Unable to open bug file: fopen {}: {}", BUGOUT_FILE, std::strerror(errno));
-		return;
+	}
+	else
+	{
+		fprintf(fp, "%s\n", reason);
+		fclose(fp);
 	}
 
-	fprintf(fp, "%s\n", reason);
-	fclose(fp);
 	exit(3);
 }
 

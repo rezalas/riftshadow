@@ -43,7 +43,7 @@ void load_socials (FILE *fp);
 void load_improgs (FILE *fp);
 void load_specs (FILE *fp);
 void load_mobs (FILE *fp);
-void bugout (char *reason);
+[[noreturn]] void bugout (char *reason);
 void bug_exit (char *file, int nLine);
 
 
