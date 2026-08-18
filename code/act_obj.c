@@ -1100,8 +1100,8 @@ void do_give(CHAR_DATA *ch, char *argument)
 
 	if (IS_SET(obj->progtypes, IPROG_GIVE))
 	{
-		if ((obj->pIndexData->iprogs->give_prog)(obj, ch, victim) == true);
-		return;
+		if ((obj->pIndexData->iprogs->give_prog)(obj, ch, victim) == true)
+			return;
 	}
 
 	obj_from_char(obj);

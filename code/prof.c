@@ -817,7 +817,7 @@ void add_prof_affect(CHAR_DATA *ch, char *name, int duration, bool fInvis = true
 	af.type = gsn_timer;
 	af.name = palloc_string(name);
 	af.duration = duration;
-	af.aftype == fInvis ? AFT_INVIS : AFT_SKILL;
+	af.aftype = fInvis ? AFT_INVIS : AFT_SKILL;
 	affect_to_char(ch, &af);
 }
 

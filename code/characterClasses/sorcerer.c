@@ -1581,7 +1581,10 @@ void spell_earthquake(int sn, int level, CHAR_DATA *ch, [[maybe_unused]] SpellTa
 			break;
 		case SECT_HILLS:
 			act("Loose rocks and earth tumbles down from the hills around you!", ch, 0, 0, TO_ALL);
-			// meant to fall through
+
+			// The cave case below re-guards on the sector, so hills gets the
+			// shared damage loop without the cave message.
+			[[fallthrough]];
 		case SECT_CAVE:
 			if (ch->in_room->sector_type != SECT_HILLS)
 				act("Loose rocks and earth tumbles down from the cave around you!", ch, 0, 0, TO_ALL);
@@ -2148,6 +2151,7 @@ void spell_hydration(int /* sn */, int /* level */, CHAR_DATA *ch, SpellTarget v
 			break;
 		case SECT_SWAMP:
 			heal = dice(12, 10);
+			break;
 		case SECT_WATER:
 			heal = dice(16, 10);
 			break;
@@ -3857,7 +3861,7 @@ int scramble_sn(CHAR_DATA *ch, int sn)
 			continue;
 		}
 
-		if (skill_table[gsn].target == skill_table[sn].target && skill_table[gsn].ctype == skill_table[gsn].ctype)
+		if (skill_table[gsn].target == skill_table[sn].target && skill_table[gsn].ctype == skill_table[sn].ctype)
 		{
 			snarray[found] = gsn;
 			found++;
@@ -6809,8 +6813,10 @@ void spell_rust([[maybe_unused]] int sn, int level, CHAR_DATA *ch, SpellTarget v
 			case WEAR_LEGS:
 			case WEAR_ABOUT:
 				oaf.modifier = -3;
+				break;
 			case WEAR_BODY:
 				oaf.modifier = -4;
+				break;
 			default:
 				continue;
 		}
@@ -8027,7 +8033,7 @@ void spell_mana_infusion(int /* sn */, int level, CHAR_DATA *ch, SpellTarget vo,
 
 	if (ch->level < 10)
 		dammod = 300;
-	else if (10 > ch->level < 15)
+	else if (ch->level < 15)
 		dammod = 200;
 	else
 		dammod = 120;

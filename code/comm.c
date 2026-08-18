@@ -2412,6 +2412,8 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
 
 			write_to_buffer(d, "\n\r", 2);
 			d->connected = CON_NEW_CHAR;
+
+			[[fallthrough]];
 		case CON_NEW_CHAR:
 			// motd
 			do_help(ch, "motd");

@@ -1954,10 +1954,11 @@ void do_assess_old(CHAR_DATA *ch, char *argument)
 	{
 		buf[0] = '\0';
 
-		if (skill < 91);
+		if (skill < 91)
+		{
 			sprintf(buf, "%s seems to be affected by %s.\n\r", is_npc(victim) ? victim->short_descr : victim->name, skill_table[paf.type].name);
-
-		if (skill >= 91);
+		}
+		else
 		{
 			fuzzy = number_range(0, 2);
 			// Let's fuz up the duration a bit if it's not permanent.

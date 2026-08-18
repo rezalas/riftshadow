@@ -1199,7 +1199,7 @@ bool redit_trap(CHAR_DATA *ch, char *argument)
 		{
 			num = atoi(argument);
 
-			if (num > 0 || num < 101)
+			if (num > 0 && num < 101)
 			{
 				pRoom->trap->complexity = num;
 				send_to_char("Trap complexity updated.\n\r", ch);

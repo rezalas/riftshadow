@@ -1888,13 +1888,13 @@ void equip_char(CHAR_DATA *ch, OBJ_DATA *obj, int iWear, bool show)
 	}
 
 	if (!is_npc(ch)
-		&& (is_obj_stat(obj, ITEM_ANTI_EVIL) && palign < 0)
-		|| (is_obj_stat(obj, ITEM_ANTI_GOOD) && palign > 0)
-		|| (is_obj_stat(obj, ITEM_ANTI_NEUTRAL) && palign == 0)
-		|| (is_obj_stat(obj, ITEM_ANTI_LAWFUL) && pethos > 0)
-		|| (is_obj_stat(obj, ITEM_ANTI_NEUT) && pethos == 0)
-		|| (is_obj_stat(obj, ITEM_ANTI_CHAOTIC) && pethos < 0)
-		|| is_restricted(ch, obj))
+		&& ((is_obj_stat(obj, ITEM_ANTI_EVIL) && palign < 0)
+			|| (is_obj_stat(obj, ITEM_ANTI_GOOD) && palign > 0)
+			|| (is_obj_stat(obj, ITEM_ANTI_NEUTRAL) && palign == 0)
+			|| (is_obj_stat(obj, ITEM_ANTI_LAWFUL) && pethos > 0)
+			|| (is_obj_stat(obj, ITEM_ANTI_NEUT) && pethos == 0)
+			|| (is_obj_stat(obj, ITEM_ANTI_CHAOTIC) && pethos < 0)
+			|| is_restricted(ch, obj)))
 	{
 		/*
 		 * Thanks to Morgenes for the bug fix here!

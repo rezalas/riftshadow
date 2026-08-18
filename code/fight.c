@@ -3196,6 +3196,10 @@ void death_cry(CHAR_DATA *ch, bool infidels)
 					msg = "$n splatters blood on your armor.";
 					break;
 				}
+
+				// A corpse that is not flesh has no blood to splatter, so it
+				// takes the guts message below instead.
+				[[fallthrough]];
 			case 2:
 				if (IS_SET(ch->parts, PART_GUTS))
 				{
@@ -9384,7 +9388,7 @@ void do_headbutt(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 
 		damage_new(ch, victim, dam, gsn_headbutt, DAM_BASH, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "headbutt");
 
-		if (number_percent() < 3 && !IS_SET(victim->imm_flags, IMM_BASH && !IS_SET(victim->imm_flags, IMM_SLEEP)))
+		if (number_percent() < 3 && !IS_SET(victim->imm_flags, IMM_BASH) && !IS_SET(victim->imm_flags, IMM_SLEEP))
 		{
 			act("With the impact, everything suddenly goes black....", victim, 0, 0, TO_CHAR);
 			act("$n staggers back from the collision and then collapses in a heap!", victim, 0, 0, TO_ROOM);

@@ -1730,3 +1730,36 @@ SCENARIO("Attempt to bandage a character", "[prof_bandage]")
 		}
 	}
 }
+
+SCENARIO("typing a proficiency affect as visible or invisible", "[add_prof_affect]")
+{
+	GIVEN("a player character")
+	{
+		auto player = new char_data();
+		player->Profs()->SetChar(player);
+
+		WHEN("a proficiency affect is added as invisible")
+		{
+			add_prof_affect(player, (char *)"testprof", 5, true);
+
+			THEN("the affect carries AFT_INVIS rather than whatever init_affect left")
+			{
+				REQUIRE(player->affected.size() == 1);
+				REQUIRE(player->affected.back().aftype == AFT_INVIS);
+			}
+		}
+
+		WHEN("a proficiency affect is added as visible")
+		{
+			add_prof_affect(player, (char *)"testprof", 5, false);
+
+			THEN("the affect carries AFT_SKILL")
+			{
+				REQUIRE(player->affected.size() == 1);
+				REQUIRE(player->affected.back().aftype == AFT_SKILL);
+			}
+		}
+
+		TestHelperCleanupPlayerObject(player);
+	}
+}

@@ -1426,8 +1426,8 @@ void do_wizhelp(CHAR_DATA *ch, char *argument)
 
 	for (cmd = 0; cmd_table[cmd].name[0] != '\0'; cmd++)
 	{
-		if ((!showlevel && cmd_table[cmd].level >= LEVEL_HERO && cmd_table[cmd].level <= get_trust(ch))
-			|| (showlevel && cmd_table[cmd].level == showval)
+		if (((!showlevel && cmd_table[cmd].level >= LEVEL_HERO && cmd_table[cmd].level <= get_trust(ch))
+				|| (showlevel && cmd_table[cmd].level == showval))
 			&& cmd_table[cmd].level == arrangeListLooper)
 		{
 			if (!showlevel && argument[0] != '\0' && str_prefix(argument, cmd_table[cmd].name))

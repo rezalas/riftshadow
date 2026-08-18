@@ -414,7 +414,7 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 			if (well == nullptr)
 				return;
 
-			for (auto distance = 0; distance <= get_grav_distance(well); distance++)
+			for (distance = 0; distance <= get_grav_distance(well); distance++)
 			{
 				if (!gravroom->exit[oppdir] || !gravroom->exit[oppdir]->u1.to_room)
 					break;

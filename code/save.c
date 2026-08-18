@@ -704,7 +704,7 @@ void fwrite_pet(CHAR_DATA *pet, FILE *fp)
 	if (!IS_ZERO_VECTOR(pet->comm))
 		fprintf(fp, "Comm %s\n", print_flags(pet->comm));
 
-	fprintf(fp, "Pos  %d\n", pet->position = POS_FIGHTING ? POS_STANDING : pet->position);
+	fprintf(fp, "Pos  %d\n", pet->position == POS_FIGHTING ? POS_STANDING : pet->position);
 
 	if (pet->saving_throw != 0)
 		fprintf(fp, "Save %d\n", pet->saving_throw);

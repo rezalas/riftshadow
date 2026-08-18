@@ -1420,8 +1420,8 @@ void char_update(void)
 					CHAR_DATA *owner = Deref(paf->owner);
 
 					if (((owner && owner->Class()->GetIndex() == CLASS_PALADIN)
-							|| (!owner && ch->Class()->GetIndex() == CLASS_PALADIN)
-							&& trusts(ch, owner ? owner : ch))
+							|| (!owner && ch->Class()->GetIndex() == CLASS_PALADIN))
+						&& trusts(ch, owner ? owner : ch)
 						&& paf->aftype == AFT_COMMUNE)
 					{
 						if (number_percent() < (get_skill(owner ? owner : ch, gsn_channeling) * .85)
