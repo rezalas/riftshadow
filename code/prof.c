@@ -208,7 +208,7 @@ CProficiencies::~CProficiencies()
 /// Assigns each proficiency in the proficiency table with their associated psn.
 void CProficiencies::AssignPsns()
 {
-	auto prof_table_size = std::size(prof_table);
+	const int prof_table_size = std::size(prof_table);
 	for (auto i = 0; i < prof_table_size; i++)
 	{
 		*(prof_table[i].ppsn) = i;
@@ -223,7 +223,7 @@ short CProficiencies::ProfIndexLookup(const char *profname)
 	if (profname == nullptr)
 		return -1;
 
-	auto prof_table_size = std::size(prof_table);
+	const int prof_table_size = std::size(prof_table);
 	for (int i = 0; i < prof_table_size; i++)
 	{
 		if (!str_cmp(profname, prof_table[i].name))
@@ -238,8 +238,8 @@ short CProficiencies::ProfIndexLookup(const char *profname)
 /// @returns true if the given psn has a correlated proficiency; otherwise false.
 bool CProficiencies::HasProf(int psn)
 {
-	auto profs_size = std::size(profs);
-	if (psn < 0 || psn > profs_size - 1)
+	const int profs_size = std::size(profs);
+	if (psn < 0 || psn >= profs_size)
 		return false;
 
 	return profs[psn] > -1;
@@ -263,8 +263,8 @@ bool CProficiencies::HasProf(char *profname)
 /// @returns The level of the retrieved proficiency. (Default: -1)
 int CProficiencies::GetProf(int psn)
 {
-	auto profs_size = std::size(profs);
-	if (psn < 0 || psn > profs_size - 1)
+	const int profs_size = std::size(profs);
+	if (psn < 0 || psn >= profs_size)
 		return -1;
 
 	auto prof = profs[psn];
@@ -303,8 +303,8 @@ void CProficiencies::GetProfsTaughtByTrainer(char_data* ch, char_data* trainer)
 
 	act("You may learn the following proficiencies from $N:", ch, 0, trainer, TO_CHAR);
 
-	auto prof_table_size = std::size(prof_table);
-	auto profs_taught_size = std::size(trainer->pIndexData->profs_taught);
+	const int prof_table_size = std::size(prof_table);
+	const int profs_taught_size = std::size(trainer->pIndexData->profs_taught);
 	for (auto i = 0; i < prof_table_size; i++)
 	{
 		for (auto j = 0; j < profs_taught_size; j++)
@@ -349,7 +349,7 @@ void CProficiencies::TrainProficiency(char_data* ch, char_data* trainer, char* a
 
 	int i;
 	auto found = false;
-	auto profs_taught_size = std::size(trainer->pIndexData->profs_taught);
+	const int profs_taught_size = std::size(trainer->pIndexData->profs_taught);
 	for (i = 0; i < profs_taught_size; i++)
 	{
 		if (trainer->pIndexData->profs_taught[i] == prof)
@@ -423,8 +423,8 @@ proficiency_type CProficiencies::GetProficiency(int psn)
 {
 	proficiency_type result = { &psn_none, "", 0, 0, nullptr, PFLAGS_NONE };
 
-	auto prof_table_size = std::size(prof_table);
-	if (psn < 0 || psn > prof_table_size - 1)
+	const int prof_table_size = std::size(prof_table);
+	if (psn < 0 || psn >= prof_table_size)
 		return result;
 
 	return prof_table[psn];
@@ -489,8 +489,8 @@ float CProficiencies::ProfEffect(char *profname, float nArg)
 /// @returns TBD
 float CProficiencies::ProfEffect(int psn)
 {
-	auto prof_table_size = std::size(prof_table);
-	if (psn < 0 || psn > prof_table_size - 1)
+	const int prof_table_size = std::size(prof_table);
+	if (psn < 0 || psn >= prof_table_size)
 		return 0;
 
 	return ProfEffect(prof_table[psn].name);
@@ -508,7 +508,7 @@ void CProficiencies::ListKnownProficiencies(char_data* player)
 
 	std::vector<std::string> responseList;
 
-	auto limit = std::size(profs);
+	const int limit = std::size(profs);
 	for (int i = 0; i < limit ; i++)
 	{
 		if(profs[i] < 0)
@@ -547,7 +547,7 @@ void CProficiencies::ListBasicProficiencies(char_data* player)
 
 	send_to_char("The basic proficiencies available to adventurers are:\n\r", player);
 
-	auto prof_table_size = std::size(prof_table);
+	const int prof_table_size = std::size(prof_table);
 	for (auto i = 0; i < prof_table_size; i++)
 	{
 		if (prof_table[i].flags & PFLAGS_BASIC)
@@ -583,8 +583,8 @@ void CProficiencies::SetChar(char_data *nch)
 /// @param proflevel: The level of the proficiency to assign.
 void CProficiencies::SetProf(int profindex, int proflevel)
 {
-	auto profs_size = std::size(profs);
-	if (profindex < 0 || profindex > profs_size - 1)
+	const int profs_size = std::size(profs);
+	if (profindex < 0 || profindex >= profs_size)
 	{
 		RS.Logger.Warn("CProficiencies::SetProf : profindex out of bounds [{}]", profindex);
 		return;
@@ -603,7 +603,7 @@ void CProficiencies::WriteProfs(void *vfp)
 	FILE *fp = static_cast<FILE *>(vfp);
 	fprintf(fp,"ProfPoints %d %ld\n", points, pawardedtime);
 
-	auto prof_table_size = std::size(prof_table);
+	const int prof_table_size = std::size(prof_table);
 	for (int i = 0; i < prof_table_size; i++)
 	{
 		if (profs[i] > -1)
@@ -636,7 +636,7 @@ void CProficiencies::DisplayProfsForStat(CHAR_DATA *imm)
 	char buf[MSL], buf2[MSL];
 	int i;
 	sprintf(buf, "Proficiencies (%d pts left): ", GetPoints());
-	auto prof_table_size = std::size(prof_table);
+	const int prof_table_size = std::size(prof_table);
 	for(i = 0; i < prof_table_size; i++)
 	{
 		if(profs[i] == -1)
@@ -655,15 +655,15 @@ void CProficiencies::DisplayProfsForStat(CHAR_DATA *imm)
 /// @returns The name of the skill mastery that correlates with the specific level.
 const char* CProficiencies::GetSkillLevelName(int ind)
 {
-	auto profs_size = std::size(profs);
-	if(ind < 0 || ind > profs_size - 1)
+	const int profs_size = std::size(profs);
+	if(ind < 0 || ind >= profs_size)
 	{
 		RS.Logger.Warn("CProficiencies::GetSkillLevelName : index out of bounds [{}]", ind);
 		return "";
 	}
 
 	auto slevel = profs[ind];
-	auto prof_level_table_size = std::size(prof_level_table);
+	const int prof_level_table_size = std::size(prof_level_table);
 	for (int i = prof_level_table_size - 1; i >= 0; i--)
 	{
 		if (prof_level_table[i].level <= slevel)
@@ -676,7 +676,7 @@ const char* CProficiencies::GetSkillLevelName(int ind)
 /// Sends a list of proficiencies and at what skill mastery the character has learned.
 void CProficiencies::ShowProfsToChar()
 {
-	auto prof_table_size = std::size(prof_table);
+	const int prof_table_size = std::size(prof_table);
 	for (auto i = 0; i < prof_table_size; i++)
 	{
 		if (profs[i] > -1)
@@ -786,7 +786,7 @@ bool CProficiencies::InterpCommand(char *command, char *argument)
 	if (strlen(command) == 0)
 		return false;
 
-	auto prof_cmd_table_size = std::size(prof_cmd_table);
+	const int prof_cmd_table_size = std::size(prof_cmd_table);
 	for (auto i = 0; i < prof_cmd_table_size; i++)
 	{
 		auto cmd = prof_cmd_table[i];

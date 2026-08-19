@@ -852,7 +852,7 @@ void fix_exits(void)
 		{
 			bool fexit = false;
 
-			auto pRoomIndex_exit_size = std::size(pRoomIndex->exit);
+			const int pRoomIndex_exit_size = std::size(pRoomIndex->exit);
 			for (door = 0; door < pRoomIndex_exit_size; door++)
 			{
 				pexit = pRoomIndex->exit[door];
@@ -3052,7 +3052,8 @@ long number_mm(void)
 	if(rgiState[0] == 0) // check if they're all zero, if so call init_mm()
 	{
 		bool isAnyrgiStateNumberNotZero = false;
-		for(auto i = 0; i < std::size(rgiState); i++)
+		const int rgiState_size = std::size(rgiState);
+		for(auto i = 0; i < rgiState_size; i++)
 		{
 			if(rgiState[i] != 0)
 			{
@@ -3593,7 +3594,7 @@ void load_rooms(FILE *fp)
 			SET_BIT(pRoomIndex->room_flags, ROOM_NO_GATE);
 		}
 
-		auto pRoomIndex_exit_size = std::size(pRoomIndex->exit);
+		const int pRoomIndex_exit_size = std::size(pRoomIndex->exit);
 		for (door = 0; door < pRoomIndex_exit_size; door++)
 		{
 			pRoomIndex->exit[door] = nullptr;

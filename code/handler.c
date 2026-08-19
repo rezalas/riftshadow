@@ -187,8 +187,10 @@ int weapon_lookup(const char *name)
 /// @returns The type of the given weapon. (Default: WEAPON_EXOTIC)
 int weapon_type_lookup(const char *name)
 {
-	auto idx = weapon_lookup(name);
-	return idx > -1 || idx < weapon_table.size()
+	const int idx = weapon_lookup(name);
+	const int weapon_table_size = weapon_table.size();
+
+	return idx > -1 && idx < weapon_table_size
 		? weapon_table[idx].type
 		: WEAPON_EXOTIC;
 }

@@ -22,7 +22,7 @@ char* AllUpper(char* arr)
 {
 	auto len = strlen(arr);
 	char* res = new char[len + 1];
-	for(auto i = 0; i < len; i++)
+	for(size_t i = 0; i < len; i++)
 	{
 		if(arr[i] == '\0')
 			break;
@@ -33,7 +33,8 @@ char* AllUpper(char* arr)
 }
 char* AllLower(char* arr)
 {
-	for(auto i = 0; i < strlen(arr); i++)
+	const size_t len = strlen(arr);
+	for(size_t i = 0; i < len; i++)
 	{
 		if(arr[i] == '\0')
 			break;

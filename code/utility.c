@@ -261,8 +261,13 @@ bool is_awake(CHAR_DATA *ch)
 /// @returns The armor class of the piece of armor the character is wearing.
 short get_ac (CHAR_DATA *ch, short type)
 {
-	if (ch == nullptr || type > std::size(ch->armor))
-		return false;
+	if (ch == nullptr)
+		return 0;
+
+	const int armor_size = std::size(ch->armor);
+
+	if (type < 0 || type >= armor_size)
+		return 0;
 
 	return ch->armor[type];
 }

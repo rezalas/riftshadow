@@ -676,14 +676,14 @@ void load_mobs(FILE *fp)
 			}
 		}
 
-		auto pMobIndex_affect_sn_size = std::size(pMobIndex->affect_sn);
+		const int pMobIndex_affect_sn_size = std::size(pMobIndex->affect_sn);
 		for (i = 0; i < pMobIndex_affect_sn_size; i++)
 		{
 			pMobIndex->affect_sn[i] = -1;
 		}
 
 		/* Morg - Valgrind fix */
-		auto pMobIndex_cast_spell_size = std::size(pMobIndex->cast_spell);
+		const int pMobIndex_cast_spell_size = std::size(pMobIndex->cast_spell);
 		for (i = 0; i < pMobIndex_cast_spell_size; i++)
 		{
 			pMobIndex->cast_spell[i] = nullptr;

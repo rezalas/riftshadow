@@ -1020,7 +1020,7 @@ void do_sing(CHAR_DATA *ch, char *argument)
 		buf2[i] = '\0';
 	}
 
-	auto length = !is_npc(ch)
+	const int length = !is_npc(ch)
 					  ? strlen(ch->name)
 					  : strlen(ch->short_descr);
 

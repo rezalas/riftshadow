@@ -27,8 +27,8 @@ if(CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
 	add_compile_options(-Wduplicated-branches)
 endif()
 
-# This is mostly a severity change rather than new diagnostics. Eight of the
-# eleven groups below are already reported by the -Wall -Wextra above, and all
+# This is mostly a severity change rather than new diagnostics. Nine of the
+# twelve groups below are already reported by the -Wall -Wextra above, and all
 # that happens here is the build stops when one of them fires. Only
 # -Wnull-dereference, -Wduplicated-cond and -Wlogical-op are groups those two
 # do not already enable.
@@ -41,7 +41,11 @@ endif()
 # the stray `;` after an `if`. -Wtautological-compare is `x == x` and an array
 # tested against 0. -Wsequence-point is `flag = flag++`, which never
 # increments. -Wbool-compare is `10 > level < 15`, which parses but does not
-# mean what it reads like.
+# mean what it reads like. -Wsign-compare is a bounds check written as
+# `idx > -1 || idx < table.size()`, where the `||` should have been `&&` and the
+# only thing hiding it was `-1` converting to a huge unsigned value. That last
+# one is worth reading twice. Casting the size to silence the warning would have
+# turned a function that worked into an out of bounds read.
 #
 # The split is by which compiler actually emits the diagnostic, not by which
 # one accepts the option, and the two are not the same question. Each group was
@@ -56,7 +60,7 @@ endif()
 # practice.
 add_compile_options(-Werror=implicit-fallthrough -Werror=empty-body
 	-Werror=tautological-compare -Werror=missing-field-initializers
-	-Werror=misleading-indentation)
+	-Werror=misleading-indentation -Werror=sign-compare)
 if(CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
 	add_compile_options(-Werror=null-dereference -Werror=sequence-point
 		-Werror=int-in-bool-context -Werror=bool-compare

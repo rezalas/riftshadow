@@ -126,7 +126,7 @@ void do_listvotes(CHAR_DATA *ch, char *argument)
 	{
 		// TODO: make hold and holdi into a std::map<char*, int>
 		// NOTE: hold and holdi are the same size.
-		auto hold_size = std::size(hold);
+		const int hold_size = std::size(hold);
 		for (j = 0; j < hold_size; j++)
 		{
 			hold[j].clear();
