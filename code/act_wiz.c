@@ -365,7 +365,7 @@ void do_induct(CHAR_DATA *ch, char *argument)
 	
 	if ((ch->level < 54 && ch->pcdata->induct != CABAL_LEADER)
 		|| is_npc(ch)
-		|| ch->cabal == CABAL_HORDE && !is_immortal(ch))
+		|| (ch->cabal == CABAL_HORDE && !is_immortal(ch)))
 	{
 		send_to_char("Huh?\n\r", ch);
 		return;
@@ -1826,6 +1826,22 @@ void do_rstat(CHAR_DATA *ch, char *argument)
 	{
 		if (location->tracks[i].prey)
 		{
+			// TODO: this hours-ago figure is wrong whenever the hour or the day
+			// borrows. Addition binds tighter than the conditional operator, so the
+			// second and third conditions below are not the comparisons they look
+			// like. The second one parses as
+			// (24 + time_info.hour - tracks[i].time.hour) + (day >= tracks[i].day),
+			// which lands between 1 and 24 every time this branch is reached, so it
+			// is always true and the else beneath it can never run. A borrowing day
+			// prints a negative number of hours.
+			//
+			// Bracketing it is not the fix. The grouping this wants is a borrow and
+			// sum across hour, day, month and year, which is a different expression
+			// rather than this one parenthesised. Writing it changes a number
+			// immortals have been reading for years, so the intended formula needs a
+			// decision before the code moves.
+			//
+			// clang reports this under -Wparentheses. GCC does not.
 			time = (time_info.hour >= location->tracks[i].time.hour)
 					   ? (time_info.hour - location->tracks[i].time.hour)
 					   : (24 + time_info.hour - location->tracks[i].time.hour) +

@@ -1575,23 +1575,23 @@ bool can_live_in(CHAR_DATA *ch, int hometown)
 		return false;
 
 	if (hometown_table[hometown].align == ALIGN_NONE
-		|| hometown_table[hometown].align == ALIGN_GN && is_evil(ch)
-		|| hometown_table[hometown].align == ALIGN_NE && is_good(ch)
-		|| hometown_table[hometown].align == ALIGN_G && !is_good(ch)
-		|| hometown_table[hometown].align == ALIGN_N && !is_neutral(ch)
-		|| hometown_table[hometown].align == ALIGN_E && !is_evil(ch)
-		|| hometown_table[hometown].align == ALIGN_GE && is_neutral(ch))
+		|| (hometown_table[hometown].align == ALIGN_GN && is_evil(ch))
+		|| (hometown_table[hometown].align == ALIGN_NE && is_good(ch))
+		|| (hometown_table[hometown].align == ALIGN_G && !is_good(ch))
+		|| (hometown_table[hometown].align == ALIGN_N && !is_neutral(ch))
+		|| (hometown_table[hometown].align == ALIGN_E && !is_evil(ch))
+		|| (hometown_table[hometown].align == ALIGN_GE && is_neutral(ch)))
 	{
 		return false;
 	}
 
 	if (hometown_table[hometown].ethos == ETHOS_NONE
-		|| hometown_table[hometown].ethos == ETHOS_LN && is_chaotic(ch)
-		|| hometown_table[hometown].ethos == ETHOS_NC && is_lawful(ch)
-		|| hometown_table[hometown].ethos == ETHOS_L && !is_lawful(ch)
-		|| hometown_table[hometown].ethos == ETHOS_N && !is_eneutral(ch)
-		|| hometown_table[hometown].ethos == ETHOS_C && !is_chaotic(ch)
-		|| hometown_table[hometown].ethos == ETHOS_LC && is_eneutral(ch))
+		|| (hometown_table[hometown].ethos == ETHOS_LN && is_chaotic(ch))
+		|| (hometown_table[hometown].ethos == ETHOS_NC && is_lawful(ch))
+		|| (hometown_table[hometown].ethos == ETHOS_L && !is_lawful(ch))
+		|| (hometown_table[hometown].ethos == ETHOS_N && !is_eneutral(ch))
+		|| (hometown_table[hometown].ethos == ETHOS_C && !is_chaotic(ch))
+		|| (hometown_table[hometown].ethos == ETHOS_LC && is_eneutral(ch)))
 	{
 		return false;
 	}

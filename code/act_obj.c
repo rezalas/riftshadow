@@ -2248,7 +2248,7 @@ void wear_obj(CHAR_DATA *ch, OBJ_DATA *obj, bool fReplace)
 		weapon = get_eq_char(ch, WEAR_WIELD);
 
 		if (weapon != nullptr
-			&& (ch->size < SIZE_LARGE && is_weapon_stat(weapon, WEAPON_TWO_HANDS)
+			&& ((ch->size < SIZE_LARGE && is_weapon_stat(weapon, WEAPON_TWO_HANDS))
 				|| weapon->value[0] == WEAPON_STAFF
 				|| weapon->value[0] == WEAPON_POLEARM
 				|| weapon->value[0] == WEAPON_SPEAR))
@@ -2555,7 +2555,7 @@ void wear_obj(CHAR_DATA *ch, OBJ_DATA *obj, bool fReplace)
 			return;
 		}
 
-		if (ch->size < SIZE_LARGE && is_weapon_stat(obj, WEAPON_TWO_HANDS)
+		if ((ch->size < SIZE_LARGE && is_weapon_stat(obj, WEAPON_TWO_HANDS))
 			|| obj->value[0] == WEAPON_SPEAR
 			|| obj->value[0] == WEAPON_STAFF
 			|| obj->value[0] == WEAPON_POLEARM)
