@@ -3562,14 +3562,17 @@ void pulse_prog_night_creeps(CHAR_DATA *mob)
 
 void sucker_pulse(CHAR_DATA *ch, [[maybe_unused]] AFFECT_DATA *af)
 {
-	CHAR_DATA *owner;
+	CHAR_DATA *owner = nullptr;
 
 	for (OwningListWalk<CHAR_DATA> walk(char_list); !walk.Done(); walk.Step())
 	{
-		CHAR_DATA *owner = walk.Current();
+		CHAR_DATA *wch = walk.Current();
 
-		if (is_npc(owner) && owner->pIndexData->vnum == 3002 && Deref(owner->hunting) == ch)
+		if (is_npc(wch) && wch->pIndexData->vnum == 3002 && Deref(wch->hunting) == ch)
+		{
+			owner = wch;
 			break;
+		}
 	}
 
 	if (!owner)

@@ -1236,14 +1236,17 @@ void get_prog_bad_idea(OBJ_DATA *obj, CHAR_DATA *ch)
 
 void greet_prog_corpse_explode(OBJ_DATA *obj, CHAR_DATA *ch)
 {
-	CHAR_DATA *owner;
+	CHAR_DATA *owner = nullptr;
 
 	for (OwningListWalk<CHAR_DATA> walk(char_list); !walk.Done(); walk.Step())
 	{
-		CHAR_DATA *owner = walk.Current();
+		CHAR_DATA *wch = walk.Current();
 
-		if (!is_npc(owner) && (!str_cmp(owner->true_name, obj->owner)))
+		if (!is_npc(wch) && !str_cmp(wch->true_name, obj->owner))
+		{
+			owner = wch;
 			break;
+		}
 	}
 
 	if (owner == nullptr)
@@ -3287,12 +3290,12 @@ void trapdoor_end(ROOM_INDEX_DATA *room, [[maybe_unused]] ROOM_AFFECT_DATA *af)
 
 bool open_prog_beef_balls([[maybe_unused]] OBJ_DATA *obj, CHAR_DATA *ch)
 {
-	CHAR_DATA *mob;
+	CHAR_DATA *mob = nullptr;
 	bool found= false;
 
 	for (OwningListWalk<CHAR_DATA> walk(char_list); !walk.Done(); walk.Step())
 	{
-		CHAR_DATA *mob = walk.Current();
+		mob = walk.Current();
 
 		if (is_npc(mob))
 		{

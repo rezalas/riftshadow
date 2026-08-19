@@ -65,7 +65,6 @@ void TestHelperLoadCClass()
 	cclass->name = "ANTI_PALADIN";
 	cclass->index = 5;
 	CClass::first = cclass;
-	CClass::first->name;
 }
 
 char_data* TestHelperCreatePlayer(char *name, obj_data *item = nullptr)

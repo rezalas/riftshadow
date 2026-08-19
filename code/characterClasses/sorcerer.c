@@ -1070,7 +1070,7 @@ void spell_vacuum(int sn, int level, CHAR_DATA *ch, [[maybe_unused]] SpellTarget
 
 		if (!is_npc(vch) && !is_same_group(vch, ch))
 		{
-			std:snprintf(buf, static_cast<int>(MSL), "Die, %s you sorcerous dog!", pers(ch, vch));
+			std::snprintf(buf, static_cast<int>(MSL), "Die, %s you sorcerous dog!", pers(ch, vch));
 			do_myell(vch, buf, ch);
 		}
 
@@ -2814,7 +2814,7 @@ void spell_disruption(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_
 
 void spell_anchor(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /* vo */, CastMode /* mode */)
 {
-	CHAR_DATA *anchor, *wch, *wch_next, *oldanchor = nullptr;
+	CHAR_DATA *anchor, *oldanchor = nullptr;
 
 	if (ch->in_room->sector_type == SECT_INSIDE
 		|| ch->in_room->sector_type == SECT_UNDERWATER
@@ -3445,7 +3445,7 @@ void spell_frigidaura(int sn, int level, CHAR_DATA *ch, [[maybe_unused]] SpellTa
 /// @note Used to take the spell functions' tag parameter as well, and never read it. It is
 ///       not a SPELL_FUN itself, so it does not have to mirror that signature.
 ///
-void spell_enervate_agitate_helper(int sn, int level, CHAR_DATA *ch, SpellTarget vo, int iDir)
+void spell_enervate_agitate_helper(int sn, int level, CHAR_DATA *ch, [[maybe_unused]] SpellTarget vo, int iDir)
 {
 	CHAR_DATA *victim = get_char_room(ch, target_name);
 	AFFECT_DATA af;

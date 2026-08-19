@@ -950,8 +950,8 @@ void plug_graveyard(CHAR_DATA *ch, int type)
 	//  this insert must go through the repositories, not the deleted raw
 	//  one_fquery/open_fconn helpers.
 	// auto buf = fmt::sprintf(
-	// 		"insert into gabe20010201051916(zposter,zposter_email,zsubject,zmessage,zdatetime,zaddress,zunique,"\
-	// 		"zthreadid,zdelete,zmod) values('Death_Wizard','immortals@riftshadow.com','%s','%s',"\
+	// 		"insert into gabe20010201051916(zposter,zposter_email,zsubject,zmessage,zdatetime,zaddress,zunique,"
+	// 		"zthreadid,zdelete,zmod) values('Death_Wizard','immortals@riftshadow.com','%s','%s',"
 	// 		"'%s','localhost',%s,'%s',0,'Death_Wizard')",
 	// 		name, message, cur_date, unique, stid);
 }
@@ -3111,15 +3111,18 @@ void do_createcosmetic(CHAR_DATA *ch, char *argument)
 
 OBJ_DATA *make_cosmetic(char *name, char *wearloc, char *underloc, char *cosmeticloc)
 {
-	CHAR_DATA *ch;
+	CHAR_DATA *ch = nullptr;
 	OBJ_DATA *obj;
 
 	for (OwningListWalk<CHAR_DATA> walk(char_list); !walk.Done(); walk.Step())
 	{
-		CHAR_DATA *ch = walk.Current();
+		CHAR_DATA *wch = walk.Current();
 
-		if (is_npc(ch))
+		if (is_npc(wch))
+		{
+			ch = wch;
 			break;
+		}
 	}
 
 	char buf[MSL];
