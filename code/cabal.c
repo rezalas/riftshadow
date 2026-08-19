@@ -1448,7 +1448,6 @@ void do_exile(CHAR_DATA *ch, char *argument)
 void spell_piety(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /* vo */, CastMode /* mode */)
 {
 	AFFECT_DATA af;
-	char buf[MSL];
 
 	if (is_npc(ch))
 		return;

@@ -1732,9 +1732,8 @@ void verb_prog_sidhe_climb_vine([[maybe_unused]] OBJ_DATA *obj, CHAR_DATA *ch, c
 
 void verb_prog_listen_conversation([[maybe_unused]] OBJ_DATA *obj, CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
-	int i = 0, rand, inc = 2, tc = 0, ccount[MAX_CABAL];
+	int rand, inc = 2;
 	CHAR_DATA *fat, *minotaur, *violet;
-	char buf[MSL];
 	std::string temp;
 
 	rand = dice(1, 4);
@@ -3967,7 +3966,6 @@ void verb_prog_turn_wyntran([[maybe_unused]] OBJ_DATA *obj, CHAR_DATA *ch, [[may
 {
 	MOB_INDEX_DATA *pMobIndex;
 	CHAR_DATA *victim;
-	char buf[MAX_STRING_LENGTH];
 
 	if ((pMobIndex = get_mob_index(4627)) == nullptr)
 	{

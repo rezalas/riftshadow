@@ -92,7 +92,7 @@ int isAftSpell(int aftype)
  */
 void save_char_obj(CHAR_DATA *ch)
 {
-	char strsave[MAX_INPUT_LENGTH], filenm[MSL], query[MSL * 2];
+	char strsave[MAX_INPUT_LENGTH];
 	FILE *fp;
 
 	if (is_npc(ch) || mPort == 4000) // do not save, sir!!!

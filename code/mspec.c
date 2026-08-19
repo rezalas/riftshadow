@@ -111,7 +111,7 @@ static int horde_tanner_give(CHAR_DATA *ch, CHAR_DATA *mob, OBJ_DATA *obj)
 		{
 			OBJ_DATA *venison = nullptr;
 			int i, num;
-			char give[MSL], buf2[MSL];
+			char give[MSL];
 
 			num = dice(3, 4);
 			sprintf(give, "venison %s", ch->true_name);
@@ -284,8 +284,6 @@ void create_academy_pet(CHAR_DATA *ch)
 
 void apet_force(CHAR_DATA *ch, const char *cmd, int delay)
 {
-	char *tcmd;
-
 	auto buffer = fmt::format("You feel the irresistible urge to '{}}'.\n\r", cmd);
 
 	RS.Queue.AddToQueue(delay, "apet_force", "interpret_queue", interpret_queue, ch, std::string(cmd));

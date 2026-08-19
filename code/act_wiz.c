@@ -221,7 +221,6 @@ void do_leader(CHAR_DATA *ch, char *argument)
 	char arg1[MAX_INPUT_LENGTH];
 	char buf[MAX_STRING_LENGTH];
 	CHAR_DATA *victim;
-	int cres = 0;
 
 	if (ch->level < 54 || is_npc(ch))
 	{
@@ -6784,13 +6783,13 @@ void do_vmstat(CHAR_DATA *ch, char *argument)
 void do_vostat(CHAR_DATA *ch, char *argument)
 {
 	char buf[MAX_STRING_LENGTH];
-	char arg1[MAX_INPUT_LENGTH];
 	OBJ_INDEX_DATA *pObjIndex = nullptr;
 	OBJ_DATA *obj;
 	bool found = false;
 	int vnum, nMatch = 0;
-	char *blah;
-	blah = one_argument(argument, arg1);
+
+	char arg1[MAX_INPUT_LENGTH];
+	one_argument(argument, arg1);
 
 	if (arg1[0] == '\0')
 	{
@@ -6850,7 +6849,6 @@ void do_vostat(CHAR_DATA *ch, char *argument)
 
 void do_history(CHAR_DATA *ch, char *argument)
 {
-	char buf[MAX_STRING_LENGTH];
 	char arg1[MAX_STRING_LENGTH];
 	char arg2[MAX_STRING_LENGTH];
 	char obuf[MAX_STRING_LENGTH];
@@ -7648,7 +7646,7 @@ void buglist_end_fun(CHAR_DATA *ch, char *argument)
 
 void do_constdump(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
-	FILE *fp = fopen(CONST_DUMP_FILE, "w"), *fp2;
+	FILE *fp = fopen(CONST_DUMP_FILE, "w");
 	if (fp == nullptr)
 	{
 		RS.Logger.Warn("Unable to open const dump file: fopen {}: {}", CONST_DUMP_FILE, std::strerror(errno));

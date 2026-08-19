@@ -1793,8 +1793,6 @@ void track_attack(CHAR_DATA *mob, CHAR_DATA *victim)
 
 void track_update(void)
 {
-	char buf[MAX_STRING_LENGTH];
-
 	for (OwningListWalk<CHAR_DATA> walk(char_list); !walk.Done(); walk.Step())
 	{
 		CHAR_DATA *tch = walk.Current();
@@ -2496,7 +2494,7 @@ void room_affect_update(void)
 {
 	ROOM_INDEX_DATA *room, *to_room;
 	CHAR_DATA *victim, *v_next, *vch;
-	int i, dam, chance, roomcount = 0;
+	int dam, chance, roomcount = 0;
 	AREA_AFFECT_DATA *aaf;
 	ROOM_AFFECT_DATA *af, *af2;
 	AFFECT_DATA *paf, cvaf, cvaf2;

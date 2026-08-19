@@ -1025,7 +1025,6 @@ void reset_room(ROOM_INDEX_DATA *pRoom)
 	EXIT_DATA *pexit = nullptr;
 	bool last;
 	int level = 0;
-	char buf[MSL];
 	CHAR_DATA *rch;
 	bool found;
 
@@ -1807,7 +1806,6 @@ void clone_mobile(CHAR_DATA *parent, CHAR_DATA *clone)
 OBJ_DATA *create_object(OBJ_INDEX_DATA *pObjIndex, int level)
 {
 	OBJ_DATA *obj;
-	int i;
 
 	if (pObjIndex == nullptr)
 	{

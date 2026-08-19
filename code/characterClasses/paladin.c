@@ -790,7 +790,6 @@ void do_group_retreat(CHAR_DATA *ch, char *argument)
 	CHAR_DATA *vch, *vch_next;
 	CHAR_DATA *victim = Deref(ch->fighting);
 	ROOM_INDEX_DATA *to_room = nullptr;
-	char buf[MAX_INPUT_LENGTH];
 	EXIT_DATA *pexit;
 	int dir;
 	int skill;
@@ -911,7 +910,6 @@ void do_valiant_charge(CHAR_DATA *ch, char *argument)
 	char arg[MAX_INPUT_LENGTH];
 	CHAR_DATA *victim;
 	CHAR_DATA *to;
-	char buf[MAX_INPUT_LENGTH];
 	int count = 0;
 
 	one_argument(argument, arg);

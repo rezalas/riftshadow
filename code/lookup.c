@@ -125,7 +125,6 @@ std::string get_demon_names(CHAR_DATA *ch)
 {
 	int favor, i;
 	char buf[MSL], buf2[MSL], buf3[MSL];
-	bool dFound= false;
 
 	sprintf(buf, "Lesser: ");
 	buf2[0] = '\0';

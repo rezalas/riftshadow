@@ -52,7 +52,7 @@ SCENARIO("testing skill lookup","[skill_lookup]")
 			auto actual = skill_lookup(nullptr);
 			THEN("it should return negative 1")
 			{
-				REQUIRE(expected == -1);
+				REQUIRE(actual == expected);
 			}
 		}
 	}
@@ -64,7 +64,7 @@ SCENARIO("testing skill lookup","[skill_lookup]")
 			auto actual = skill_lookup("");
 			THEN("it should return negative 1")
 			{
-				REQUIRE(expected == -1);
+				REQUIRE(actual == expected);
 			}
 		}
 	}
@@ -76,7 +76,7 @@ SCENARIO("testing skill lookup","[skill_lookup]")
 			auto actual = skill_lookup("Jimmy dean sausage");
 			THEN("it should return negative 1")
 			{
-				REQUIRE(expected == -1);
+				REQUIRE(actual == expected);
 			}
 		}
 	}

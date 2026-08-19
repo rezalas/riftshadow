@@ -176,8 +176,6 @@ void mprog_emote(int inc, char *arg, CHAR_DATA *mob, CHAR_DATA *ch)
 
 int mprog_drop(int inc, char *arg, OBJ_DATA *obj, CHAR_DATA *mob, CHAR_DATA *ch)
 {
-	char buf[MSL];
-
 	if (arg)
 	{
 		auto buffer = fmt::format("{} says '{}{}{}'", mob->short_descr, get_char_color(ch, "speech"), arg, END_COLOR(ch));
@@ -194,8 +192,6 @@ int mprog_drop(int inc, char *arg, OBJ_DATA *obj, CHAR_DATA *mob, CHAR_DATA *ch)
 
 int mprog_give(int inc, char *arg, OBJ_DATA *obj, CHAR_DATA *mob, CHAR_DATA *ch)
 {
-	char buf[MSL];
-
 	if (arg)
 	{
 		auto buffer = fmt::format("{} says '{}{}{}'", mob->short_descr, get_char_color(ch, "speech"), arg, END_COLOR(ch));
@@ -1989,7 +1985,6 @@ void speech_prog_oze(CHAR_DATA *mob, CHAR_DATA *ch, char *speech)
 void speech_prog_gamygyn(CHAR_DATA *mob, CHAR_DATA *ch, char *speech)
 {
 	AFFECT_DATA *paf = affect_find(mob->affected, gsn_greater_demon), af;
-	char buf[MSL];
 	std::string buffer;
 
 	if (!paf || !Deref(paf->owner))
@@ -2043,7 +2038,6 @@ void speech_prog_gamygyn(CHAR_DATA *mob, CHAR_DATA *ch, char *speech)
 void speech_prog_orobas(CHAR_DATA *mob, CHAR_DATA *ch, char *speech)
 {
 	AFFECT_DATA *paf = affect_find(mob->affected, gsn_greater_demon), af;
-	char buf[MSL];
 	std::string buffer;
 
 	if (!paf || !Deref(paf->owner))

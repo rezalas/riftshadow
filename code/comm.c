@@ -3331,7 +3331,7 @@ void announce_logout(CHAR_DATA *ch)
 
 void do_rename(CHAR_DATA *ch, char *argument)
 {
-	char old_name[MAX_INPUT_LENGTH], new_name[MAX_INPUT_LENGTH], strsave[MAX_INPUT_LENGTH], pbuf[MSL], *cname;
+	char old_name[MAX_INPUT_LENGTH], new_name[MAX_INPUT_LENGTH], strsave[MAX_INPUT_LENGTH], *cname;
 	CHAR_DATA *victim;
 
 	argument = one_argument(argument, old_name);

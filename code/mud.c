@@ -209,7 +209,6 @@ void CMud::LoadObjLimits()
 	char strPlr[MAX_INPUT_LENGTH];
 	char chkbuf[MAX_STRING_LENGTH];
 	char temp_player_name[MSL];
-	char pbuf[100];
 	int i;
 	long temp_bounty;
 	long min_bounty = 0;

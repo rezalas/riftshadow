@@ -368,7 +368,6 @@ void save_object(FILE *fp, OBJ_INDEX_DATA *pObjIndex)
 {
 	long i;
 	long dummy[MAX_BITVECTOR];
-	OBJ_APPLY_DATA *app;
 
 	zero_vector(dummy);
 
@@ -806,7 +805,7 @@ void save_progs(FILE *fp, AREA_DATA *pArea)
 
 void save_specs(FILE *fp, AREA_DATA *pArea)
 {
-	int iHash, i;
+	int iHash;
 	OBJ_INDEX_DATA *pObjIndex;
 	MOB_INDEX_DATA *pMob;
 
@@ -941,11 +940,8 @@ void do_asave(CHAR_DATA *ch, char *argument)
 {
 	char arg1[MAX_INPUT_LENGTH], buf[MSL];
 	AREA_DATA *pArea;
-	FILE *fp;
 	int value;
 	bool found = false;
-
-	fp = nullptr;
 
 	if (!check_security(ch))
 		return;

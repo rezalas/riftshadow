@@ -621,7 +621,6 @@ void cast_myell(CHAR_DATA *ch, CHAR_DATA *victim)
  */
 void do_cast(CHAR_DATA *ch, char *argument)
 {
-	char buf[MAX_STRING_LENGTH];
 	char arg1[MAX_INPUT_LENGTH];
 	char arg2[MAX_INPUT_LENGTH];
 	CHAR_DATA *victim;
@@ -3265,7 +3264,6 @@ void spell_identify(int /* sn */, int /* level */, CHAR_DATA *ch, SpellTarget vo
 {
 	OBJ_DATA *obj = vo.AsObj();
 	char buf[MAX_STRING_LENGTH];
-	OBJ_APPLY_DATA *app;
 	int lorebonus = 0;
 
 	if (!is_npc(ch) && (lorebonus = ch->Profs()->GetProf("forgotten lore") > -1))

@@ -4,8 +4,6 @@
 #include "entity/fwd.h"
 #include "spec.h"
 
-DO_FUN(do_give);
-
 // Handlers defined in quest.c. The program table in mspec.c refers to them.
 int academy_smith_greet(CHAR_DATA *ch, CHAR_DATA *mob);
 int academy_smith_speech(CHAR_DATA *ch, CHAR_DATA *mob, char *argument);

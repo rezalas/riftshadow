@@ -1728,7 +1728,6 @@ void greater_demon_tick(CHAR_DATA *mob, AFFECT_DATA *af)
 
 void furcas_vanish(CHAR_DATA *ch, CHAR_DATA *mob)
 {
-	char buf[MSL];
 	ROOM_INDEX_DATA *pRoomIndex;
 	long nocrash;
 

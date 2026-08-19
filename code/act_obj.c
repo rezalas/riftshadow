@@ -75,8 +75,6 @@
 
 bool check_arms(CHAR_DATA *ch, OBJ_DATA *obj)
 {
-	char buf[MSL];
-
 	if (is_affected_obj(obj, gsn_arms_of_light)
 		|| is_affected_obj(obj, gsn_arms_of_wrath)
 		|| is_affected_obj(obj, gsn_arms_of_purity)
@@ -4066,7 +4064,6 @@ void do_list(CHAR_DATA *ch, char *argument)
 void do_sell(CHAR_DATA *ch, char *objName)
 {
 	char buf[MAX_STRING_LENGTH];
-	char arg[MAX_INPUT_LENGTH];
 	CHAR_DATA *keeper;
 	OBJ_DATA *obj;
 	int cost,roll,haggleSkillLevel;

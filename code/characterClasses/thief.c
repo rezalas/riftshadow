@@ -1204,7 +1204,6 @@ void do_sign(CHAR_DATA *ch, char *argument)
 
 void do_slash(CHAR_DATA *ch, char *argument)
 {
-	char buf[MAX_STRING_LENGTH];
 	char arg1[MAX_INPUT_LENGTH];
 	char arg2[MAX_INPUT_LENGTH];
 	CHAR_DATA *victim;
@@ -2151,8 +2150,6 @@ void do_bind(CHAR_DATA *ch, char *argument)
 
 	if (number_percent() < skill)
 	{
-		char buf[50];
-
 		init_affect(&af);
 		af.aftype = AFT_SKILL;
 		af.where = TO_AFFECTS;
