@@ -54,7 +54,19 @@ TEST_CASE("an all-zero handle is null, so zeroing a struct clears it", "[handle]
 	auto handle = map.Add(&widget);
 	REQUIRE(!handle.IsNull());
 
-	std::memset(&handle, 0, sizeof(handle));
+	// Handle's default member initializers make it a non-trivial type, so a
+	// plain memset here draws -Wclass-memaccess. Casting the destination to
+	// void * is the documented way to say the byte write is deliberate.
+	//
+	// That cast silences the diagnostic unconditionally though, including for a
+	// Handle that had gained a vtable or a member owning heap memory. In either
+	// of those cases this test would be memsetting something it must not, and
+	// nothing would say so. The assertion states the property the test actually
+	// depends on, so it fails loudly instead.
+	static_assert(std::is_trivially_copyable_v<Handle<Widget>>,
+		"These tests pin Handle's byte representation, so it must stay trivially copyable.");
+
+	std::memset(static_cast<void *>(&handle), 0, sizeof(handle));
 
 	REQUIRE(handle.IsNull());
 	REQUIRE(map.Deref(handle) == nullptr);
@@ -213,7 +225,12 @@ TEST_CASE("a handle with an out-of-range slot derefs to nothing", "[handle]")
 	auto handle = map.Add(&widget);
 	auto garbage = handle;
 
-	std::memset(&garbage, 0xFF, sizeof(garbage));
+	// Same reasoning as the all-zero test above: the cast is what silences
+	// -Wclass-memaccess, and the assertion is what keeps the cast honest.
+	static_assert(std::is_trivially_copyable_v<Handle<Widget>>,
+		"These tests pin Handle's byte representation, so it must stay trivially copyable.");
+
+	std::memset(static_cast<void *>(&garbage), 0xFF, sizeof(garbage));
 
 	REQUIRE(map.Deref(garbage) == nullptr);
 	REQUIRE(!map.IsLive(garbage));
