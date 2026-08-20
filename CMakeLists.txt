@@ -27,11 +27,42 @@ if(CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
 	add_compile_options(-Wduplicated-branches)
 endif()
 
+# Reports a pointer the optimizer can prove reaches a dereference while
+# possibly null. It stays a warning for a reason specific to how it works. The
+# diagnostic is driven by value range propagation, so it emits nothing at -O0
+# and can only appear in an optimized build. A Debug tree cannot establish a
+# baseline for it, which means the zero that the gated list below rests on is
+# not something this group is able to supply. It was gated as an error in
+# 1f05371 on the strength of a clean Debug build, where it is structurally
+# silent, and the first optimized build to run afterward stopped on it.
+#
+# At -O3 across the whole tree it reports 71 distinct in repo sites in 25
+# translation units, plus two more that resolve to inlined libstdc++ headers.
+# Count these as warnings, not as errors. A translation unit that errors stops
+# before the later passes run, so the same tree gated reports only 58 sites in
+# 21 units. Fixing toward a zero measured under -Werror would have been chasing
+# a number that grows as it is approached.
+#
+# The largest concentration is the OLC editor, 28 of the 71, where descriptor
+# handles are arrowed off Deref with no null check, both directly as in
+# `switch (Deref(ch->desc)->editor)` and through the EDIT_MOB, EDIT_OBJ and
+# EDIT_AREA macros in olc.h. The remainder divide into two shapes. Some
+# re-Deref a handle already proven non null a few lines up, where the repair is
+# to use the local that already holds the proof. Others never had a guard at
+# all, and predate the gating commit rather than arriving with it.
+#
+# All of it is worth fixing. None of it is something this group can hold a line
+# against in the meantime, because the build type that would catch a new one is
+# not the build type anyone develops in.
+if(CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
+	add_compile_options(-Wnull-dereference)
+endif()
+
 # This is mostly a severity change rather than new diagnostics. Nine of the
-# twelve groups below are already reported by the -Wall -Wextra above, and all
+# eleven groups below are already reported by the -Wall -Wextra above, and all
 # that happens here is the build stops when one of them fires. Only
-# -Wnull-dereference, -Wduplicated-cond and -Wlogical-op are groups those two
-# do not already enable.
+# -Wduplicated-cond and -Wlogical-op are groups those two do not already
+# enable.
 #
 # What makes stopping the build safe is that every group here is at zero across
 # a clean build of the whole tree, so a violation cannot appear without
@@ -52,17 +83,16 @@ endif()
 # checked by compiling a planted violation with both compilers at -std=c++17.
 # clang rejects three of the gated options outright, and an unknown -Werror=
 # option is a hard error there whether or not a translation unit opted into
-# -Werror. It accepts the other three and then never fires them: it has no
-# -Wnull-dereference and no -Wint-in-bool-context, and its equivalent of
-# -Wsequence-point is -Wunsequenced, which correctly stays quiet because C++17
-# made `i = i++` well defined. Rejected and inert are grouped together so that
-# the gated list means one thing, which is that the diagnostic is GCC only in
-# practice.
+# -Werror. It accepts the other two and then never fires them: it has no
+# -Wint-in-bool-context, and its equivalent of -Wsequence-point is
+# -Wunsequenced, which correctly stays quiet because C++17 made `i = i++` well
+# defined. Rejected and inert are grouped together so that the gated list means
+# one thing, which is that the diagnostic is GCC only in practice.
 add_compile_options(-Werror=implicit-fallthrough -Werror=empty-body
 	-Werror=tautological-compare -Werror=missing-field-initializers
 	-Werror=misleading-indentation -Werror=sign-compare)
 if(CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
-	add_compile_options(-Werror=null-dereference -Werror=sequence-point
+	add_compile_options(-Werror=sequence-point
 		-Werror=int-in-bool-context -Werror=bool-compare
 		-Werror=duplicated-cond -Werror=logical-op)
 endif()
