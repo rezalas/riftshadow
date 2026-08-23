@@ -657,6 +657,12 @@ void bust_a_prompt(CHAR_DATA *ch)
 	const char *dir_name[] = {"N", "E", "S", "W", "U", "D"};
 	int door;
 	point = buf;
+	bool truncated = false;
+
+	// Nothing below bounds a write into buf. The prompt is player authored and the
+	// substitutions splice in room names, exit lists and cabal names, so a long
+	// enough prompt runs off the end. Stop one byte short so the terminator fits.
+	char *const limit = buf + sizeof(buf) - 1;
 
 	if (is_npc(ch)
 		|| !str_cmp(ch->prompt, "")
@@ -676,10 +682,16 @@ void bust_a_prompt(CHAR_DATA *ch)
 	orig = &buf3[0];
 	str = orig;
 
-	while (*str != '\0')
+	while (*str != '\0' && !truncated)
 	{
 		if (*str != '%')
 		{
+			if (point >= limit)
+			{
+				truncated = true;
+				break;
+			}
+
 			*point++ = *str++;
 			continue;
 		}
@@ -924,11 +936,20 @@ void bust_a_prompt(CHAR_DATA *ch)
 
 		++str;
 
-		while ((*point = *i) != '\0')
+		while (*i != '\0')
 		{
-			++point, ++i;
+			if (point >= limit)
+			{
+				truncated = true;
+				break;
+			}
+
+			*point++ = *i++;
 		}
 	}
+
+	if (truncated)
+		RS.Logger.Warn("Bust_a_prompt: prompt truncated to {} bytes for {}.", (int)(point - buf), ch->name);
 
 	// The literal-character branch above advances point without terminating, so a
 	// prompt that does not end in a % substitution leaves buf unterminated. We
@@ -2983,6 +3004,11 @@ void act_area(const char *format, CHAR_DATA *ch, CHAR_DATA *victim)
 	const char *i;
 	char *point;
 
+	// Same unbounded write as act_new below. get_descr_form output and the format
+	// itself are both arbitrary length, so stop one byte short of the end and
+	// leave room for the terminator.
+	char *const limit = buf + sizeof(buf) - 1;
+
 	/*
 	 * Discard null and zero-length messages.
 	 */
@@ -3015,11 +3041,18 @@ void act_area(const char *format, CHAR_DATA *ch, CHAR_DATA *victim)
 
 			point = buf;
 			str = format;
+			bool truncated = false;
 
-			while (*str != '\0')
+			while (*str != '\0' && !truncated)
 			{
 				if (*str != '$')
 				{
+					if (point >= limit)
+					{
+						truncated = true;
+						break;
+					}
+
 					*point++ = *str++;
 					continue;
 				}
@@ -3057,11 +3090,20 @@ void act_area(const char *format, CHAR_DATA *ch, CHAR_DATA *victim)
 
 				++str;
 
-				while ((*point = *i) != '\0')
+				while (*i != '\0')
 				{
-					++point, ++i;
+					if (point >= limit)
+					{
+						truncated = true;
+						break;
+					}
+
+					*point++ = *i++;
 				}
 			}
+
+			if (truncated)
+				RS.Logger.Warn("Act_area: message truncated to {} bytes for {}. -- {}", (int)(point - buf), to->name, format);
 
 			*point = '\0';
 
@@ -3104,6 +3146,12 @@ void act_new(const char *format, CHAR_DATA *ch, const void *arg1, const void *ar
 	const char *str;
 	const char *i;
 	char *point;
+
+	// Neither the format nor the substituted text is bounded by anything. Object
+	// short descriptions, get_descr_form output and the caller strings spliced in
+	// by $t and $T are all arbitrary length, so a long enough one runs off the end
+	// of buf. Stop three bytes short so the "\n\r\0" tail below always fits.
+	char *const limit = buf + sizeof(buf) - 3;
 
 	/*
 	 * Discard null and zero-length messages.
@@ -3163,11 +3211,18 @@ void act_new(const char *format, CHAR_DATA *ch, const void *arg1, const void *ar
 
 		point = buf;
 		str = format;
+		bool truncated = false;
 
-		while (*str != '\0')
+		while (*str != '\0' && !truncated)
 		{
 			if (*str != '$')
 			{
+				if (point >= limit)
+				{
+					truncated = true;
+					break;
+				}
+
 				*point++ = *str++;
 				continue;
 			}
@@ -3273,11 +3328,20 @@ void act_new(const char *format, CHAR_DATA *ch, const void *arg1, const void *ar
 
 			++str;
 
-			while ((*point = *i) != '\0')
+			while (*i != '\0')
 			{
-				++point, ++i;
+				if (point >= limit)
+				{
+					truncated = true;
+					break;
+				}
+
+				*point++ = *i++;
 			}
 		}
+
+		if (truncated)
+			RS.Logger.Warn("Act: message truncated to {} bytes for {}. -- {}", (int)(point - buf), to->name, format);
 
 		*point++ = '\n';
 		*point++ = '\r';

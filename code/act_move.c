@@ -4451,7 +4451,7 @@ bool bar_entry(CHAR_DATA *ch, CHAR_DATA *blocker, ROOM_INDEX_DATA *to_room)
 	char buf[MAX_STRING_LENGTH];
 	auto str = palloc_string(blocker->pIndexData->barred_entry->message);
 
-	parse_bar(buf, str, ch, blocker, to_room);
+	parse_bar(buf, sizeof(buf), str, ch, blocker, to_room);
 
 	if (blocker->pIndexData->barred_entry->msg_type == BAR_SAY)
 		do_say(blocker, buf);
@@ -4470,7 +4470,7 @@ bool bar_entry(CHAR_DATA *ch, CHAR_DATA *blocker, ROOM_INDEX_DATA *to_room)
 		{
 			char buf2[MAX_STRING_LENGTH];
 			auto strtwo = palloc_string(blocker->pIndexData->barred_entry->message_two);
-			parse_bar(buf2, strtwo, ch, blocker, to_room);
+			parse_bar(buf2, sizeof(buf2), strtwo, ch, blocker, to_room);
 
 			buf2[0] = UPPER(buf2[0]);
 
@@ -4485,17 +4485,31 @@ bool bar_entry(CHAR_DATA *ch, CHAR_DATA *blocker, ROOM_INDEX_DATA *to_room)
 	return true;
 }
 
-void parse_bar(char *buf, const char *str, CHAR_DATA *ch, CHAR_DATA *blocker, ROOM_INDEX_DATA *to_room)
+void parse_bar(char *buf, size_t size, const char *str, CHAR_DATA *ch, CHAR_DATA *blocker, ROOM_INDEX_DATA *to_room)
 {
 	const char *i = nullptr;
 	char *point;
 	char buf2[MAX_STRING_LENGTH];
 	point = buf;
+	bool truncated = false;
+	const char *const original = str;
 
-	while (*str != '\0')
+	// The message comes from area data and the substitutions splice in room and
+	// mob names, none of which is bounded. The destination size has to be passed
+	// in because this function writes into the caller's buffer. Stop one byte
+	// short so the terminator fits.
+	char *const limit = buf + size - 1;
+
+	while (*str != '\0' && !truncated)
 	{
 		if (*str != '$')
 		{
+			if (point >= limit)
+			{
+				truncated = true;
+				break;
+			}
+
 			*point++ = *str++;
 			continue;
 		}
@@ -4526,11 +4540,20 @@ void parse_bar(char *buf, const char *str, CHAR_DATA *ch, CHAR_DATA *blocker, RO
 
 		++str;
 
-		while ((*point = *i) != '\0')
+		while (*i != '\0')
 		{
-			++point, ++i;
+			if (point >= limit)
+			{
+				truncated = true;
+				break;
+			}
+
+			*point++ = *i++;
 		}
 	}
+
+	if (truncated)
+		RS.Logger.Warn("Parse_bar: message truncated to {} bytes. -- {}", (int)(point - buf), original);
 
 	*point = '\0';
 }

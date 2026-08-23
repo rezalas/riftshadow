@@ -77,7 +77,7 @@ void do_door_bash (CHAR_DATA *ch,char *argument);
 void do_hometown (CHAR_DATA *ch, char *argument);
 bool check_barred (CHAR_DATA *ch, ROOM_INDEX_DATA *to_room);
 bool bar_entry (CHAR_DATA *ch, CHAR_DATA *blocker, ROOM_INDEX_DATA *to_room);
-void parse_bar (char *buf, const char *str, CHAR_DATA *ch, CHAR_DATA *blocker, ROOM_INDEX_DATA *to_room);
+void parse_bar (char *buf, size_t size, const char *str, CHAR_DATA *ch, CHAR_DATA *blocker, ROOM_INDEX_DATA *to_room);
 bool is_land (ROOM_INDEX_DATA *room);
 void add_tracks (ROOM_INDEX_DATA *room, CHAR_DATA *ch, int direction);
 void clear_tracks (ROOM_INDEX_DATA *room);
