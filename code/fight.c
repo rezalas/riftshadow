@@ -1204,18 +1204,10 @@ int damage_new(CHAR_DATA *ch, CHAR_DATA *victim, int idam, int dt, int dam_type,
 	}
 
 	/* empathy */
-	if (is_affected(victim, gsn_empathy))
-	{
-		laf = nullptr;
-		for (auto &laf_elem : victim->affected)
-		{
-			if (laf_elem.type == gsn_empathy)
-			{
-				laf = &laf_elem;
-				break;
-			}
-		}
+	laf = affect_find(victim->affected, gsn_empathy);
 
+	if (laf != nullptr)
+	{
 		if (ch != victim)
 			damage_new(ch, Deref(laf->owner), (int)(dam * 0.25f), gsn_empathy, DAM_INTERNAL, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "spiritual link");
 

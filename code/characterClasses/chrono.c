@@ -354,7 +354,10 @@ void do_rune(CHAR_DATA *ch, char *argument)
 	{
 		vo = (ROOM_INDEX_DATA *)ch->in_room;
 		act("$n moves $s hands slowly, tracing a glowing rune in midair.", ch, nullptr, nullptr, TO_ROOM);
-		act("Slowly tracing a glowing pattern in front of you, you create a rune in midair.", ch, pexit->keyword, nullptr, TO_CHAR);
+		// A room rune has no door, so pexit is still null on this path. The
+		// message carries no $t either, so the argument was only ever read and
+		// discarded, which is why the crash was in the read rather than the act.
+		act("Slowly tracing a glowing pattern in front of you, you create a rune in midair.", ch, nullptr, nullptr, TO_CHAR);
 	}
 	else
 	{

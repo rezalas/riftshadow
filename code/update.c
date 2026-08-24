@@ -2648,18 +2648,32 @@ void room_affect_update(void)
 			}
 		}
 
-		if (is_affected_room(room, gsn_tidalwave))
+		// The wave is stored as a pair: one affect at APPLY_ROOM_NONE carrying the
+		// countdown, and one at APPLY_ROOM_NOPE carrying the damage dice. Asking
+		// is_affected_room for the wave is satisfied by either half on its own, so
+		// finding both is the condition, and the searches below are that test.
+		af = nullptr;
+		for (auto &r : room->affected)
 		{
-			af = nullptr;
-			for (auto &r : room->affected)
+			if (r.type == gsn_tidalwave && r.location == APPLY_ROOM_NONE)
 			{
-				if (r.type == gsn_tidalwave && r.location == APPLY_ROOM_NONE)
-				{
-					af = &r;
-					break;
-				}
+				af = &r;
+				break;
 			}
+		}
 
+		af2 = nullptr;
+		for (auto &r : room->affected)
+		{
+			if (r.type == gsn_tidalwave && r.location == APPLY_ROOM_NOPE)
+			{
+				af2 = &r;
+				break;
+			}
+		}
+
+		if (af != nullptr && af2 != nullptr)
+		{
 			if (af->modifier == 1)
 			{
 				for (vch = room->people; vch != nullptr; vch = vch->next_in_room)
@@ -2674,16 +2688,6 @@ void room_affect_update(void)
 			}
 			else if (af->modifier == 0)
 			{
-				af2 = nullptr;
-				for (auto &r : room->affected)
-				{
-					if (r.type == gsn_tidalwave && r.location == APPLY_ROOM_NOPE)
-					{
-						af2 = &r;
-						break;
-					}
-				}
-
 				for (vch = room->people; vch != nullptr; vch = vch->next_in_room)
 				{
 					sprintf(buf, "%sA massive tidal wave rolls in, engulfing the area!%s\n\r",
@@ -2783,18 +2787,13 @@ void room_affect_update(void)
 							new_affect_to_char(vch, &cvaf);
 						}
 
-						paf = nullptr;
-						for (auto &paf_elem : vch->affected)
-						{
-							if (paf_elem.type == gsn_noxious_fumes)
-							{
-								paf = &paf_elem;
-								break;
-							}
-						}
+						paf = affect_find(vch->affected, gsn_noxious_fumes);
 
-						paf->modifier = URANGE(0, paf->modifier, 5);
-						paf->modifier++;
+						if (paf != nullptr)
+						{
+							paf->modifier = URANGE(0, paf->modifier, 5);
+							paf->modifier++;
+						}
 
 						init_affect(&cvaf2);
 						cvaf2.where = TO_AFFECTS;

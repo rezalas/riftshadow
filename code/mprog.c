@@ -1571,7 +1571,7 @@ void attack_prog_lesser_demon(CHAR_DATA *mob, CHAR_DATA *attacker)
 		char_to_room(mob, get_room_index(3));
 
 		RS.Queue.AddToQueue(1, "attack_prog_lesser_demon", "delay_extract", delay_extract, mob);
-		Deref(af->owner)->pcdata->lesserdata[LESSER_BARBAS] = FAVOR_NONE;
+		set_pact_favor(af, false, LESSER_BARBAS, FAVOR_NONE);
 		return;
 	}
 
@@ -1583,19 +1583,19 @@ void attack_prog_lesser_demon(CHAR_DATA *mob, CHAR_DATA *attacker)
 		switch (mob->pIndexData->vnum)
 		{
 			case MOB_VNUM_BARBAS:
-				Deref(af->owner)->pcdata->lesserdata[LESSER_BARBAS] = FAVOR_FAILED;
+				set_pact_favor(af, false, LESSER_BARBAS, FAVOR_FAILED);
 				break;
 			case MOB_VNUM_FURCAS:
-				Deref(af->owner)->pcdata->lesserdata[LESSER_FURCAS] = FAVOR_FAILED;
+				set_pact_favor(af, false, LESSER_FURCAS, FAVOR_FAILED);
 				break;
 			case MOB_VNUM_MALAPHAR:
-				Deref(af->owner)->pcdata->lesserdata[LESSER_MALAPHAR] = FAVOR_FAILED;
+				set_pact_favor(af, false, LESSER_MALAPHAR, FAVOR_FAILED);
 				break;
 			case MOB_VNUM_AAMON:
-				Deref(af->owner)->pcdata->lesserdata[LESSER_AAMON] = FAVOR_FAILED;
+				set_pact_favor(af, false, LESSER_AAMON, FAVOR_FAILED);
 				break;
 			case MOB_VNUM_IPOS:
-				Deref(af->owner)->pcdata->lesserdata[LESSER_IPOS] = FAVOR_FAILED;
+				set_pact_favor(af, false, LESSER_IPOS, FAVOR_FAILED);
 				break;
 			default:
 				return;
@@ -1619,19 +1619,19 @@ void attack_prog_lesser_demon(CHAR_DATA *mob, CHAR_DATA *attacker)
 		switch (mob->pIndexData->vnum)
 		{
 			case MOB_VNUM_BARBAS:
-				Deref(af->owner)->pcdata->lesserdata[LESSER_BARBAS] = FAVOR_NONE;
+				set_pact_favor(af, false, LESSER_BARBAS, FAVOR_NONE);
 				break;
 			case MOB_VNUM_FURCAS:
-				Deref(af->owner)->pcdata->lesserdata[LESSER_FURCAS] = FAVOR_NONE;
+				set_pact_favor(af, false, LESSER_FURCAS, FAVOR_NONE);
 				break;
 			case MOB_VNUM_MALAPHAR:
-				Deref(af->owner)->pcdata->lesserdata[LESSER_MALAPHAR] = FAVOR_NONE;
+				set_pact_favor(af, false, LESSER_MALAPHAR, FAVOR_NONE);
 				break;
 			case MOB_VNUM_AAMON:
-				Deref(af->owner)->pcdata->lesserdata[LESSER_AAMON] = FAVOR_NONE;
+				set_pact_favor(af, false, LESSER_AAMON, FAVOR_NONE);
 				break;
 			case MOB_VNUM_IPOS:
-				Deref(af->owner)->pcdata->lesserdata[LESSER_IPOS] = FAVOR_NONE;
+				set_pact_favor(af, false, LESSER_IPOS, FAVOR_NONE);
 				break;
 			default:
 				return;

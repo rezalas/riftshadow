@@ -37,6 +37,7 @@ void spell_unholy_communion (int sn, int level, CHAR_DATA *ch, SpellTarget vo, C
 void communion_end (CHAR_DATA *ch, AFFECT_DATA *af);
 void check_unholy_communion (CHAR_DATA *ch, char *argument);
 void demon_appear (CHAR_DATA *ch, int demon, int type);
+void set_pact_favor (AFFECT_DATA *af, bool greater, int demon, int favor);
 void lesser_demon_tick (CHAR_DATA *mob, AFFECT_DATA *af);
 void greater_demon_tick (CHAR_DATA *mob, AFFECT_DATA *af);
 void furcas_vanish (CHAR_DATA *ch, CHAR_DATA *mob);

@@ -1529,6 +1529,23 @@ void demon_appear(CHAR_DATA *ch, int demon, int type)
 	}
 }
 
+// A pact's owner can be a mob, and pcdata is null for every NPC, so there is no
+// favor record to write to. The owner is resolved here rather than once at the
+// top of the callers because do_tell and act reach write_to_buffer, which can
+// close the socket and take the character with it.
+void set_pact_favor(AFFECT_DATA *af, bool greater, int demon, int favor)
+{
+	CHAR_DATA *owner = Deref(af->owner);
+
+	if (owner == nullptr || is_npc(owner))
+		return;
+
+	if (greater)
+		owner->pcdata->greaterdata[demon] = favor;
+	else
+		owner->pcdata->lesserdata[demon] = favor;
+}
+
 void lesser_demon_tick(CHAR_DATA *mob, AFFECT_DATA *af)
 {
 	char buf[MSL];
@@ -1555,7 +1572,7 @@ void lesser_demon_tick(CHAR_DATA *mob, AFFECT_DATA *af)
 
 				act("$n vanishes in a crimson flash!", mob, nullptr, nullptr, TO_ROOM);
 
-				Deref(af->owner)->pcdata->lesserdata[LESSER_FURCAS] = FAVOR_FAILED;
+				set_pact_favor(af, false, LESSER_FURCAS, FAVOR_FAILED);
 				extract_char(mob, true);
 			}
 
@@ -1587,7 +1604,7 @@ void lesser_demon_tick(CHAR_DATA *mob, AFFECT_DATA *af)
 				do_say(mob, "My friend, I have better things to do with my time.  A pity.");
 				act("$n vanishes in a crimson flash!", mob, nullptr, nullptr, TO_ROOM);
 
-				Deref(af->owner)->pcdata->lesserdata[LESSER_MALAPHAR] = FAVOR_FAILED;
+				set_pact_favor(af, false, LESSER_MALAPHAR, FAVOR_FAILED);
 				extract_char(mob, true);
 			}
 			break;
@@ -1597,7 +1614,7 @@ void lesser_demon_tick(CHAR_DATA *mob, AFFECT_DATA *af)
 				do_say(mob, "I've better things to do with my time, than wait for you to mumble a rhyme!");
 				act("$n vanishes in a crimson flash!", mob, nullptr, nullptr, TO_ROOM);
 
-				Deref(af->owner)->pcdata->lesserdata[LESSER_IPOS] = FAVOR_FAILED;
+				set_pact_favor(af, false, LESSER_IPOS, FAVOR_FAILED);
 				extract_char(mob, true);
 			}
 			break;
@@ -1634,7 +1651,7 @@ void greater_demon_tick(CHAR_DATA *mob, AFFECT_DATA *af)
 				do_whisper(mob, buf);
 
 				act("The puddle of gore before you which was once a greater demon seeps downward.", mob, nullptr, nullptr, TO_ROOM);
-				Deref(af->owner)->pcdata->greaterdata[GREATER_OZE] = FAVOR_FAILED;
+				set_pact_favor(af, true, GREATER_OZE, FAVOR_FAILED);
 
 				extract_char(mob, true);
 				break;
@@ -1697,7 +1714,7 @@ void greater_demon_tick(CHAR_DATA *mob, AFFECT_DATA *af)
 
 				act("Turning coldly and melting into a cool mist, $n wafts away on a breeze.", mob, nullptr, nullptr, TO_ALL);
 
-				Deref(af->owner)->pcdata->greaterdata[GREATER_GERYON] = FAVOR_FAILED;
+				set_pact_favor(af, true, GREATER_GERYON, FAVOR_FAILED);
 
 				extract_char(mob, true);
 				break;
@@ -1722,7 +1739,7 @@ void greater_demon_tick(CHAR_DATA *mob, AFFECT_DATA *af)
 				act("In disgust, $n rips his claws free and moves his massive frame back.", mob, nullptr, nullptr, TO_ROOM);
 				act("Slowly, the monstrous demon fades into shadows and dissipates.", mob, nullptr, nullptr, TO_ROOM);
 
-				Deref(af->owner)->pcdata->greaterdata[GREATER_CIMERIES] = FAVOR_FAILED;
+				set_pact_favor(af, true, GREATER_CIMERIES, FAVOR_FAILED);
 				extract_char(mob, true);
 			}
 			break;
@@ -2325,17 +2342,18 @@ void check_orobas_gamygyn(CHAR_DATA *ch, CHAR_DATA *victim)
 
 void burning_pulse(CHAR_DATA *ch, AFFECT_DATA *af)
 {
-	// TODO: owner is null once the character who lit the burn is gone, and
-	// owner->level below is read without a guard, so the pulse dereferences
-	// null. The fix is not mechanical because the owner's level is the only
-	// thing scaling the damage. Ending the burn early is one answer, and it
-	// matches what the mark of wrath and the track listing now do with a
-	// vanished owner. Letting it burn on is the other, and that needs a source
-	// to attribute the damage to, because damage_new reads ch->level itself and
-	// is_npc returns false for null rather than guarding it. The affect already
-	// carries a finite duration, so this decides the ticks in between rather
-	// than whether the burn ever stops. Needs a game design decision.
 	CHAR_DATA *owner = Deref(af->owner);
+
+	// The owner is gone once the character who lit the burn has been extracted,
+	// and everything below needs them. Their level is the only thing scaling
+	// the damage, and damage_new reads the source's own level besides, so there
+	// is no attacker to attribute a hit to. The burn stops doing anything and
+	// runs out its remaining duration quietly, which is what a mark of wrath
+	// with a vanished owner does in the track listing. Removing the affect here
+	// instead would mean mutating the list this tick is being walked from.
+	if (owner == nullptr)
+		return;
+
 	if (number_percent() > 50)
 		return;
 

@@ -3058,7 +3058,11 @@ void communion_handler(CHAR_DATA *ch)
 
 			cabal_members[CABAL_HORDE]++;
 
-			if (is_immortal(Deref(af->owner)) && is_immortal(ch))
+			// is_immortal only tests level, and plenty of mobs are levelled past
+			// LEVEL_IMMORTAL, so it does not establish either side is a player.
+			// The record reads pcdata from both, and that is null for an NPC.
+			if (is_immortal(Deref(af->owner)) && is_immortal(ch)
+				&& !is_npc(Deref(af->owner)) && !is_npc(ch))
 			{
 				Induction record;
 				record.ch = Deref(af->owner)->true_name;

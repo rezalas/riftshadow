@@ -52,20 +52,10 @@ void spell_infidels_weight(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[m
 
 int get_bv_stage(CHAR_DATA *ch)
 {
-	AFFECT_DATA *af;
+	AFFECT_DATA *af = affect_find(ch->affected, gsn_burning_vision);
 
-	if (!is_affected(ch, gsn_burning_vision) /*|| is_immortal(ch)*/)
+	if (af == nullptr /*|| is_immortal(ch)*/)
 		return -1;
-
-	af = nullptr;
-	for (auto &af_elem : ch->affected)
-	{
-		if (af_elem.type == gsn_burning_vision)
-		{
-			af = &af_elem;
-			break;
-		}
-	}
 
 	return ((20 - af->duration) / af->modifier);
 }
@@ -76,18 +66,10 @@ void spell_burning_vision(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[ma
 	AFFECT_DATA af, *maf;
 	int mod;
 
-	if (is_affected(victim, gsn_burning_vision))
-	{
-		maf = nullptr;
-		for (auto &maf_elem : victim->affected)
-		{
-			if (maf_elem.type == gsn_burning_vision)
-			{
-				maf = &maf_elem;
-				break;
-			}
-		}
+	maf = affect_find(victim->affected, gsn_burning_vision);
 
+	if (maf != nullptr)
+	{
 		mod = maf->modifier;
 		mod--;
 
@@ -135,18 +117,13 @@ void burning_vision_tick(CHAR_DATA *ch, [[maybe_unused]] AFFECT_DATA *af)
 		act("You are blinded!", ch, nullptr, nullptr, TO_CHAR);
 		act("$n appears to be blinded.", ch, nullptr, nullptr, TO_ROOM);
 
-		caf = nullptr;
-		for (auto &caf_elem : ch->affected)
-		{
-			if (caf_elem.type == gsn_burning_vision)
-			{
-				caf = &caf_elem;
-				break;
-			}
-		}
+		caf = affect_find(ch->affected, gsn_burning_vision);
 
-		SET_BIT(caf->bitvector, AFF_BLIND);
-		SET_BIT(ch->affected_by, AFF_BLIND);
+		if (caf != nullptr)
+		{
+			SET_BIT(caf->bitvector, AFF_BLIND);
+			SET_BIT(ch->affected_by, AFF_BLIND);
+		}
 	}
 }
 

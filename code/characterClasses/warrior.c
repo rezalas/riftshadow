@@ -3560,6 +3560,14 @@ void do_uncoil(CHAR_DATA *ch, char *argument)
 		}
 	}
 
+	// check_entwine above asks exactly what the search asks, so a miss means the
+	// two have drifted rather than that the character is loose.
+	if (af == nullptr)
+	{
+		send_to_char("You aren't entwined!\n\r", ch);
+		return;
+	}
+
 	guy = Deref(af->owner);
 
 	if (guy != nullptr)
@@ -3579,7 +3587,9 @@ void do_uncoil(CHAR_DATA *ch, char *argument)
 	{
 		if (type == 0)
 		{
-			if (str_cmp(argument, "automagic"))
+			// af2 is the coiler's half of the pair and stays null when the coiler
+			// is gone, so there is no limb to name and nobody to name it to.
+			if (af2 != nullptr && str_cmp(argument, "automagic"))
 			{
 				act("With a sudden jerk of your wrist, you uncoil your whip, freeing $N's $t!", ch, af2->modifier == 1 ? "arm" : af2->location == APPLY_DEX ? "leg" : "", guy, TO_CHAR);
 				act("With a sudden jerk of $n's wrist, $e uncoils $s whip, freeing your $t!", ch, af2->modifier == 1 ? "arm" : af2->location == APPLY_DEX ? "leg" : "", guy, TO_VICT);
@@ -3665,7 +3675,15 @@ void do_pull(CHAR_DATA *ch, char *argument)
 			}
 		}
 
-		guy = Deref(af->owner);
+		// The whip is still on, but the warrior holding the other end can have
+		// been extracted, and pulling needs both ends.
+		guy = af != nullptr ? Deref(af->owner) : nullptr;
+
+		if (guy == nullptr)
+		{
+			send_to_char("There is nobody on the other end of it.\n\r", ch);
+			return;
+		}
 
 		af2 = nullptr;
 		for (auto &af2_elem : guy->affected)
@@ -3675,6 +3693,12 @@ void do_pull(CHAR_DATA *ch, char *argument)
 				af2 = &af2_elem;
 				break;
 			}
+		}
+
+		if (af2 == nullptr)
+		{
+			send_to_char("There is nobody on the other end of it.\n\r", ch);
+			return;
 		}
 
 		WAIT_STATE(ch, PULSE_VIOLENCE * 2);

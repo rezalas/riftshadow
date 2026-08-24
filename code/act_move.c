@@ -687,6 +687,9 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 
 	if (is_affected_room(in_room, gsn_tripwire) && is_affected_room(to_room, gsn_tripwire))
 	{
+		// The guard above only proves each room carries a tripwire somewhere. It
+		// says nothing about the direction, and a wire strung across a different
+		// exit does not match, so both searches can come back empty.
 		ROOM_AFFECT_DATA *raf = nullptr;
 		for (auto &r : in_room->affected)
 		{
@@ -697,38 +700,47 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 			}
 		}
 
+		// This tested raf->type rather than r.type. That read raf before anything
+		// had checked it, and because raf is a tripwire by construction the test
+		// was always true once it survived, so the match rested on the direction
+		// alone and could return a room affect of any other kind.
 		ROOM_AFFECT_DATA *raf_two = nullptr;
 		for (auto &r : to_room->affected)
 		{
-			if (r.modifier == reverse_d(door) && raf->type == gsn_tripwire)
+			if (r.modifier == reverse_d(door) && r.type == gsn_tripwire)
 			{
 				raf_two = &r;
 				break;
 			}
 		}
 
-		if (is_affected_by(ch, AFF_FLYING))
-			return;
-
-		if (Deref(raf->owner) == ch)
+		// Nothing is strung across this exit, so there is nothing to trip over and
+		// the move carries on. Returning here would stop the character instead.
+		if (raf != nullptr && raf_two != nullptr)
 		{
-			act("You gracefully step over your tripwire.", ch, nullptr, nullptr, TO_CHAR);
-		}
-		else
-		{
-			twchance = (get_skill(ch, gsn_tripwire) / 5);
-			twchance += (get_curr_stat(ch, STAT_DEX) + get_curr_stat(ch, STAT_INT) - 30) * 2;
+			if (is_affected_by(ch, AFF_FLYING))
+				return;
 
-			if (!is_safe(Deref(raf->owner), ch) && (number_percent() > twchance))
+			if (Deref(raf->owner) == ch)
 			{
-				act("You trip over a wire and fall flat on your face!", ch, nullptr, nullptr, TO_CHAR);
-				act("$n trips over a wire and falls flat on $s face!", ch, nullptr, nullptr, TO_ROOM);
+				act("You gracefully step over your tripwire.", ch, nullptr, nullptr, TO_CHAR);
+			}
+			else
+			{
+				twchance = (get_skill(ch, gsn_tripwire) / 5);
+				twchance += (get_curr_stat(ch, STAT_DEX) + get_curr_stat(ch, STAT_INT) - 30) * 2;
 
-				ch->position = POS_RESTING;
-				WAIT_STATE(ch, PULSE_VIOLENCE * 2);
+				if (!is_safe(Deref(raf->owner), ch) && (number_percent() > twchance))
+				{
+					act("You trip over a wire and fall flat on your face!", ch, nullptr, nullptr, TO_CHAR);
+					act("$n trips over a wire and falls flat on $s face!", ch, nullptr, nullptr, TO_ROOM);
 
-				affect_remove_room(in_room, raf);
-				affect_remove_room(to_room, raf_two);
+					ch->position = POS_RESTING;
+					WAIT_STATE(ch, PULSE_VIOLENCE * 2);
+
+					affect_remove_room(in_room, raf);
+					affect_remove_room(to_room, raf_two);
+				}
 			}
 		}
 	}
@@ -925,19 +937,13 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 				new_affect_to_char(ch, &cvaf);
 			}
 
-			AFFECT_DATA *paf = nullptr;
-			for (auto &paf_elem : ch->affected)
+			AFFECT_DATA *paf = affect_find(ch->affected, gsn_noxious_fumes);
+
+			if (paf != nullptr)
 			{
-				if (paf_elem.type == gsn_noxious_fumes)
-				{
-					paf = &paf_elem;
-					break;
-				}
+				paf->modifier = URANGE(0, paf->modifier, 5);
+				paf->modifier++;
 			}
-
-			paf->modifier = URANGE(0, paf->modifier, 5);
-
-			paf->modifier++;
 
 			init_affect(&cvaf2);
 			cvaf2.where = TO_AFFECTS;

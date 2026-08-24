@@ -1909,21 +1909,10 @@ void do_quit_new(CHAR_DATA *ch, [[maybe_unused]] char *argument, bool autoq)
 	{
 		CHAR_DATA *wch = walk.Current();
 
-		if (is_affected(wch, gsn_empathy))
-		{
-			AFFECT_DATA *laf = nullptr;
-			for (auto &laf_elem : wch->affected)
-			{
-				if (laf_elem.type == gsn_empathy)
-				{
-					laf = &laf_elem;
-					break;
-				}
-			}
+		AFFECT_DATA *laf = affect_find(wch->affected, gsn_empathy);
 
-			if (Deref(laf->owner) == ch)
-				affect_strip(wch, gsn_empathy);
-		}
+		if (laf != nullptr && Deref(laf->owner) == ch)
+			affect_strip(wch, gsn_empathy);
 
 		if (!is_npc(wch))
 			continue;
@@ -2835,7 +2824,12 @@ void mob_death_log(CHAR_DATA *killer, CHAR_DATA *dead)
 /* type 0 = create, 1 = login, 2 = logout */
 void login_log(CHAR_DATA *ch, int type)
 {
-	if (!ch->pcdata->host && !Deref(ch->desc))
+	// Read once. The guard below proves the descriptor is there when the stored
+	// host is not, but only if both reads see the same descriptor, and resolving
+	// the handle twice is two separate lookups.
+	DESCRIPTOR_DATA *connection = Deref(ch->desc);
+
+	if (!ch->pcdata->host && !connection)
 		return;
 
 	if (IS_SET(ch->comm, COMM_NOSOCKET))
@@ -2843,7 +2837,7 @@ void login_log(CHAR_DATA *ch, int type)
 
 	Login login;
 	login.name = ch->true_name;
-	login.site = ch->pcdata->host ? ch->pcdata->host : Deref(ch->desc)->host;
+	login.site = ch->pcdata->host ? ch->pcdata->host : connection->host;
 	login.time = log_time();
 	login.ctime = current_time;
 	login.played = type == 2 ? (int)((current_time - ch->logon) / 60) : -1;
