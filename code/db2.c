@@ -410,7 +410,6 @@ void load_mobs(FILE *fp)
 	int i = 0, pos = 0;
 	std::string aword, bword;
 	char *temp_wealth;
-	char bugtext[250];
 	short wealth;
 
 	for (;;)
@@ -766,13 +765,13 @@ void load_mobs(FILE *fp)
 			}
 			else if (letter == 'C')
 			{
-				char *word, letter, *discard;
+				char *word, letter;
 				int i;
 
 				/* Mob casts - dev */
 				if ((letter = fread_letter(fp)) == 'A')
 				{
-					discard = fread_word(fp);
+					fread_word(fp);
 					pMobIndex->cabal = cabal_lookup(fread_word(fp));
 					continue;
 				}
@@ -849,19 +848,19 @@ void load_mobs(FILE *fp)
 			}
 			else if (letter == 'N')
 			{
-				char *discard = fread_word(fp);
+				fread_word(fp);
 				pMobIndex->notes = fread_string(fp);
 			}
 			else if (letter == 'L')
 			{
-				char *discard = fread_word(fp);
+				fread_word(fp);
 				pMobIndex->restrict_low = fread_number(fp);
 				pMobIndex->restrict_high = fread_number(fp);
 			}
 			else if (letter == 'S')
 			{
 				SHOP_DATA *pShop;
-				char *discard = fread_word(fp);
+				fread_word(fp);
 				pShop = new SHOP_DATA;
 				fread_word(fp); // open
 				pShop->open_hour = fread_number(fp);
@@ -897,7 +896,7 @@ void load_mobs(FILE *fp)
 			}
 			else if (letter == 'T')
 			{
-				char *discard = fread_word(fp);
+				fread_word(fp);
 				int opennum;
 
 				for (opennum = 0; opennum < MAX_PROFS_TAUGHT_BY_MOB; opennum++)
@@ -915,7 +914,7 @@ void load_mobs(FILE *fp)
 			}
 			else if (letter == 'Y')
 			{
-				char *discard = fread_word(fp);
+				fread_word(fp);
 				pMobIndex->attack_yell = fread_string(fp);
 			}
 			else
@@ -1201,8 +1200,8 @@ void load_objs(FILE *fp)
 			}
 			else if (letter == 'F')
 			{
-				char *discard, *word;
-				discard = fread_word(fp);
+				char *word;
+				fread_word(fp);
 				word = fread_word(fp);
 
 				if (!str_cmp(word, "AFF"))

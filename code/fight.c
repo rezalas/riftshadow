@@ -86,7 +86,6 @@ void violence_update(void)
 {
 	CHAR_DATA *victim;
 	CHAR_DATA *opponent;
-	int regen = 0;
 	OBJ_DATA *obj;
 	AFFECT_DATA *af;
 
@@ -356,7 +355,7 @@ void multi_hit(CHAR_DATA *ch, CHAR_DATA *victim, int dt)
 {
 	float chance;
 	float dual_chance;
-	int i, attacks;
+	int i;
 	char buf[500];
 	bool noprimary = false;
 
@@ -828,9 +827,9 @@ int one_hit(CHAR_DATA *ch, CHAR_DATA *victim, int dt)
  * return of -1 = Death			*/
 int one_hit_new(CHAR_DATA *ch, CHAR_DATA *victim, int dt, bool specials, bool blockable, int addition, int multiplier, char *dnoun)
 {
-	OBJ_DATA *wield = nullptr, *dualw = nullptr;
+	OBJ_DATA *wield = nullptr;
 	AFFECT_DATA *af;
-	int mdam, diceroll, diceroll2 = 0, sn, skill, dam_type, tmp_dt, result, rdt;
+	int mdam, sn, skill, dam_type, result, rdt;
 	float dam;
 	bool truestrike = false;
 
@@ -2882,7 +2881,6 @@ void check_analyze(CHAR_DATA *ch, CHAR_DATA *victim)
  */
 void update_pos(CHAR_DATA *victim)
 {
-	int diff = 0;
 
 	if (victim->hit > 0)
 	{
@@ -3181,7 +3179,6 @@ void death_cry(CHAR_DATA *ch, bool infidels)
 {
 	ROOM_INDEX_DATA *was_in_room;
 	char *msg;
-	int door;
 	int vnum;
 
 	vnum = 0;
@@ -3308,7 +3305,7 @@ void raw_kill(CHAR_DATA *ch, CHAR_DATA *victim)
 	AFFECT_DATA af;
 	ROOM_AFFECT_DATA raf;
 	AREA_AFFECT_DATA aaf;
-	OBJ_DATA *obj, *obj2, *corpse;
+	OBJ_DATA *obj, *obj2;
 	char wizbuf[MSL], *cname, buf[MSL], buf2[MSL];
 	bool infidels = false;
 
@@ -3934,7 +3931,6 @@ int xp_compute(CHAR_DATA *gch, CHAR_DATA *victim, int group_amount, int glevel)
 	float xp, base_exp;
 	int level_range;
 	float mult, peer_factor = BASE_PEER_FACTOR, gavg = glevel / group_amount;
-	CHAR_DATA *cPeers = nullptr;
 	mult = (100 - (gavg > gch->level ? gavg - gch->level : gch->level - gavg) * 6) / 100;
 	level_range = victim->level - gch->level;
 
@@ -8483,7 +8479,6 @@ void do_pugil(CHAR_DATA *ch, char *argument)
 	CHAR_DATA *victim;
 	OBJ_DATA *obj;
 	int chance;
-	int dam;
 
 	one_argument(argument, arg);
 

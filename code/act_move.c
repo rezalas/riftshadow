@@ -3800,7 +3800,6 @@ void track_char(CHAR_DATA *ch, CHAR_DATA *mob)
 	if (IS_SET(mob->off_flags, STATIC_TRACKING) || track_dir == -1)
 		return;
 
-	auto pexit = mob->in_room->exit[track_dir];
 
 	move_char(mob, track_dir, false, true);
 }

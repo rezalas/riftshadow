@@ -1019,7 +1019,6 @@ void spell_vacuum(int sn, int level, CHAR_DATA *ch, [[maybe_unused]] SpellTarget
 {
 	ROOM_AFFECT_DATA raf;
 	CHAR_DATA *vch, *vch_next;
-	EXIT_DATA *pexit;
 	ROOM_INDEX_DATA *to_room;
 	char *direction;
 	char buf[MAX_STRING_LENGTH];
@@ -2534,7 +2533,7 @@ void spell_riptide(int sn, int level, CHAR_DATA *ch, [[maybe_unused]] SpellTarge
 {
 	ROOM_INDEX_DATA *room, *first_room = nullptr, *second_room = nullptr;
 	AFFECT_DATA af;
-	ROOM_AFFECT_DATA *raf, *fraf = nullptr, nraf;
+	ROOM_AFFECT_DATA *fraf = nullptr, nraf;
 
 	if (is_affected(ch, sn))
 	{
@@ -2852,7 +2851,7 @@ void spell_anchor(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /* vo */, 
 
 void spell_aerial_transferrence(int sn, int /* level */, CHAR_DATA *ch, SpellTarget /* vo */, CastMode /* mode */)
 {
-	CHAR_DATA *anchor = nullptr, *wch, *wch_next;
+	CHAR_DATA *anchor = nullptr;
 	ROOM_INDEX_DATA *pRoomIndex;
 
 	if (IS_SET(ch->in_room->room_flags, ROOM_NO_RECALL)
@@ -5482,7 +5481,6 @@ void spell_pure_air(int /* sn */, int /* level */, CHAR_DATA *ch, SpellTarget /*
 {
 	CHAR_DATA *vch;
 	bool cleansed;
-	ROOM_AFFECT_DATA *raf;
 
 	if (ch->in_room->sector_type && ch->in_room->sector_type == SECT_UNDERWATER)
 	{

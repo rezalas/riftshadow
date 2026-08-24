@@ -645,7 +645,6 @@ void interpret(CHAR_DATA *ch, char *argument)
 	char command[MAX_INPUT_LENGTH], arg_dup[MSL], object[MSL];
 	char logline[MAX_INPUT_LENGTH];
 	char skill_name[MSL];
-	char buf[MSL];
 	int cmd, gn, skill_num, cmd2;
 	int trust, sn = 0, where, mana = 0;
 	bool found, is_social= false, vprog= false;

@@ -2778,7 +2778,6 @@ void do_dump([[maybe_unused]] CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	int count, count2, num_pcs, aff_count;
 	MOB_INDEX_DATA *pMobIndex;
-	OBJ_DATA *obj;
 	OBJ_INDEX_DATA *pObjIndex;
 	ROOM_INDEX_DATA *room;
 	EXIT_DATA *exit;
@@ -3728,7 +3727,6 @@ void load_newresets(FILE *fp)
 {
 	RESET_DATA *pReset;
 	int iLastRoom = 0;
-	int iLastObj = 0;
 
 	if (area_last == nullptr)
 	{
@@ -3815,7 +3813,6 @@ void load_newresets(FILE *fp)
 				if (pRoomIndex)
 				{
 					new_reset(pRoomIndex, pReset);
-					iLastObj = pReset->arg3;
 				}
 
 				if (area_last->area_type == ARE_UNOPENED)
@@ -3854,7 +3851,6 @@ void load_newresets(FILE *fp)
 				if (pRoomIndex)
 				{
 					new_reset(pRoomIndex, pReset);
-					iLastObj = iLastRoom;
 				}
 
 				break;
@@ -3874,7 +3870,6 @@ void load_newresets(FILE *fp)
 				if (pRoomIndex)
 				{
 					new_reset(pRoomIndex, pReset);
-					iLastObj = iLastRoom;
 				}
 
 				break;

@@ -942,9 +942,7 @@ int get_curr_stat(CHAR_DATA *ch, int stat)
 int get_max_train(CHAR_DATA *ch, int stat)
 {
 	int max;
-	int iClass;
 
-	iClass = (ch->Class()->GetIndex() + 1);
 
 	if (is_npc(ch) || ch->level > LEVEL_IMMORTAL)
 		return 25;
@@ -1168,10 +1166,8 @@ void init_affect(AFFECT_DATA *paf)
 void affect_modify(CHAR_DATA *ch, AFFECT_DATA *paf, bool fAdd)
 {
 	OBJ_DATA *wield;
-	int mod;
 	bool disarmed= false;
 
-	mod = paf->modifier;
 
 	if (fAdd)
 	{
@@ -1862,9 +1858,7 @@ bool is_worn(OBJ_DATA *obj)
 void equip_char(CHAR_DATA *ch, OBJ_DATA *obj, int iWear, bool show)
 {
 	int i;
-	bool status;
 
-	status= false;
 	if (iWear != WEAR_COSMETIC && get_eq_char(ch, iWear) != nullptr)
 	{
 		RS.Logger.Warn("Equip_char: already equipped ({}) -- {} -- {}.", iWear, ch->name, ch->in_room->area->file_name);

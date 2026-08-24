@@ -211,7 +211,6 @@ void CMud::LoadObjLimits()
 	char temp_player_name[MSL];
 	int i;
 	long temp_bounty;
-	long min_bounty = 0;
 	float tempfloat;
 
 	Logger.Info("Loading object counts off players now...");
@@ -248,7 +247,6 @@ void CMud::LoadObjLimits()
 		for (; ;)
 		{
 			int vnum, lastlogin = 0, plevel = 0;
-			bool breakout;
 			char letter;
 			char *word;
 			OBJ_INDEX_DATA *pObjIndex;
@@ -287,7 +285,6 @@ void CMud::LoadObjLimits()
 			if(lastlogin && plevel && plevel < 52 && lastlogin + 3456000 < current_time)
 			{
 				Logger.Info("Autodeleting {}.", temp_player_name);
-				breakout = true;
 				delete_char(temp_player_name, true);
 				break;
 			}
@@ -346,9 +343,7 @@ void CMud::LoadGsn()
 // Sets the time and weather
 void CMud::LoadTime()
 {
-	long lhour;
 
-	lhour = (current_time - 650336715) / (PULSE_TICK / PULSE_PER_SECOND);
 	time_info.hour = ((current_time - RS_EPOCH) % (60 * 24)) / (60);
 	time_info.day = ((current_time - RS_EPOCH) % (60 * 60 * 12)) / (60 * 24);
 	time_info.month = ((current_time - RS_EPOCH) % (60 * 60 * 24 * 6)) / (60 * 60 * 12);

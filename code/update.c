@@ -1160,11 +1160,9 @@ void calabren_update(void)
  */
 void char_update(void)
 {
-	CHAR_DATA *ch_quit;
 	int hgain;
 	bool ghost= false;
 
-	ch_quit = nullptr;
 
 	/* update save counter */
 	save_number++;
@@ -1523,7 +1521,6 @@ void char_update(void)
 void obj_update(void)
 {
 	OBJ_DATA *obj;
-	OBJ_DATA *obj_next;
 	CHAR_DATA *cguard;
 
 	for (OwningListWalk<OBJ_DATA> walk(object_list); !walk.Done(); walk.Step())
@@ -2380,7 +2377,7 @@ void do_forcetick([[maybe_unused]] CHAR_DATA *ch, [[maybe_unused]] char *argumen
 
 void affect_update(void)
 {
-	OBJ_DATA *obj, *obj_next;
+	OBJ_DATA *obj;
 	ROOM_INDEX_DATA *room;
 	AREA_DATA *area;
 
@@ -2529,7 +2526,6 @@ void room_affect_update(void)
 			if (well == nullptr)
 				continue;
 
-			auto room_exit_size = std::size(room->exit);
 			auto well_grav_distance = get_grav_distance(well);
 
 			direction = 0;
@@ -2960,7 +2956,7 @@ void ayell_update(void)
 void iprog_pulse_update(bool isTick)
 {
 	char *direction;
-	OBJ_DATA *obj, *obj_next;
+	OBJ_DATA *obj;
 	ROOM_INDEX_DATA *to_room;
 	EXIT_DATA *pexit;
 	int door;

@@ -1894,7 +1894,6 @@ void fread_pet(CHAR_DATA *ch, FILE *fp)
 
 				if (!str_cmp(word, "Affc"))
 				{
-					CHAR_DATA *wch = nullptr;
 					char *owner;
 					char *afname;
 					AFFECT_DATA paf;

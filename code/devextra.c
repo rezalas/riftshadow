@@ -3014,7 +3014,7 @@ void do_forceremove(CHAR_DATA *ch, char *argument)
 
 void do_createcosmetic(CHAR_DATA *ch, char *argument)
 {
-	char arg1[MSL], arg2[MSL], wlname[MSL], *wearname;
+	char arg1[MSL], arg2[MSL], wlname[MSL];
 	OBJ_DATA *obj;
 	int value = 0;
 	bool under= false, wear= false;

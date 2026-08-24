@@ -915,7 +915,7 @@ void ritual_four(CHAR_DATA *ch, CHAR_DATA *victim)
 
 void spell_ritual_flesh(int /* sn */, int /* level */, CHAR_DATA *ch, SpellTarget vo, CastMode /* mode */)
 {
-	CHAR_DATA *search, *victim = vo.AsChar();
+	CHAR_DATA *victim = vo.AsChar();
 
 	for (OwningListWalk<CHAR_DATA> walk(char_list); !walk.Done(); walk.Step())
 	{

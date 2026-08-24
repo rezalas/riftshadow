@@ -3643,7 +3643,6 @@ void do_pull(CHAR_DATA *ch, char *argument)
 	AFFECT_DATA *af, *af2, taf;
 	int dir, skill;
 	char *direction;
-	ROOM_INDEX_DATA *to_room;
 	EXIT_DATA *pexit;
 
 	skill = get_skill(ch, gsn_entwine);
@@ -3732,7 +3731,6 @@ void do_pull(CHAR_DATA *ch, char *argument)
 				affect_to_char(ch, &taf);
 				affect_to_char(guy, &taf);
 
-				to_room = pexit->u1.to_room;
 
 				stop_fighting(ch, true);
 				move_char(ch, dir, true, false);
@@ -4287,7 +4285,6 @@ void do_offhand(CHAR_DATA *ch, [[maybe_unused]] char *arg)
 void do_drive(CHAR_DATA *ch, char *argument)
 {
 	int where, skill;
-	ROOM_INDEX_DATA *to_room;
 	EXIT_DATA *pexit;
 	CHAR_DATA *victim = nullptr;
 	char *direction;
@@ -4427,7 +4424,6 @@ void do_drive(CHAR_DATA *ch, char *argument)
 		act("$n surges at $N, pressing $M towards the $t!", ch, dir, victim, TO_NOTVICT);
 
 		/* Set the direction room */
-		to_room = pexit->u1.to_room;
 
 		/* stop and move driver */
 		stop_fighting(ch, true);

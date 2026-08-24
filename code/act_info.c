@@ -3138,7 +3138,6 @@ void do_whois(CHAR_DATA *ch, char *argument)
 void do_who(CHAR_DATA *ch, char *argument)
 {
 	std::string buffer;
-	char buf[MAX_STRING_LENGTH];
 	char buf2[MAX_STRING_LENGTH];
 	char rbuf[MAX_STRING_LENGTH];
 	char disp[MAX_STRING_LENGTH];
@@ -3315,7 +3314,6 @@ void do_who(CHAR_DATA *ch, char *argument)
 	/*
 	 * Now show matching chars.
 	 */
-	buf[0] = '\0';
 
 	auto nMatch = 0;
 	BUFFER output;
@@ -5368,14 +5366,13 @@ void do_trustchar(CHAR_DATA *ch, char *argument)
 
 void do_role(CHAR_DATA *ch, char *argument)
 {
-	char buf[MAX_BUF], arg1[MAX_BUF], obuf[MAX_BUF];
+	char arg1[MAX_BUF], obuf[MAX_BUF];
 
 	if (is_npc(ch))
 		return;
 
 	if (argument[0] != '\0')
 	{
-		buf[0] = '\0';
 		smash_tilde(argument);
 		argument = one_argument(argument, arg1);
 

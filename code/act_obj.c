@@ -1963,7 +1963,6 @@ void wear_obj(CHAR_DATA *ch, OBJ_DATA *obj, bool fReplace)
 	bool wield_primary;
 	OBJ_DATA *primary;
 	OBJ_DATA *weapon;
-	OBJ_DATA *oldobj;
 	int sn, skill;
 
 	if (can_wear(obj, ITEM_WEAR_COSMETIC))
@@ -2067,7 +2066,6 @@ void wear_obj(CHAR_DATA *ch, OBJ_DATA *obj, bool fReplace)
 			return send_to_char(buf, ch);
 		}
 
-		oldobj = (get_eq_char(ch, WEAR_HEAD));
 
 		if (!remove_obj(ch, WEAR_HEAD, fReplace))
 			return;
@@ -4541,8 +4539,6 @@ bool cabal_down_new(CHAR_DATA *ch, int cabal, bool show)
 
 bool cant_carry(CHAR_DATA *ch, OBJ_DATA *obj)
 {
-	bool status;
-	status= false;
 	return false;
 }
 
@@ -4550,8 +4546,6 @@ bool is_restricted(CHAR_DATA *ch, OBJ_DATA *obj)
 {
 	int i;
 	long restricted[MAX_BITVECTOR];
-	bool status;
-	char *race;
 
 	if (is_npc(ch) && !is_affected_by(ch, AFF_CHARM))
 		return false;
@@ -4559,10 +4553,8 @@ bool is_restricted(CHAR_DATA *ch, OBJ_DATA *obj)
 	if (str_cmp(obj->owner, "none") && !is_owner(ch, obj))
 		return true;
 
-	race = race_table[ch->race].name;
 	copy_vector(restricted, obj->pIndexData->restrict_flags);
 
-	status= false;
 
 	if (IS_ZERO_VECTOR(restricted))
 		return false;

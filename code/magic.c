@@ -494,7 +494,6 @@ void do_laying_hands(CHAR_DATA *ch, char *argument)
 	CHAR_DATA *victim; /* Well not really victim, but keeping it standard varibale anmes */
 	AFFECT_DATA af;
 	int heal;
-	int chance;
 
 	if ((get_skill(ch, gsn_laying_hands) == 0) ||
 		(ch->level < skill_table[gsn_laying_hands].skill_level[ch->Class()->GetIndex()]))
@@ -2181,7 +2180,6 @@ void spell_cure_serious(int /* sn */, int level, CHAR_DATA *ch, SpellTarget vo, 
 void spell_curse(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
 {
 	CHAR_DATA *victim;
-	OBJ_DATA *obj;
 	AFFECT_DATA af;
 
 	/* deal with the object case first
@@ -4501,9 +4499,8 @@ void spell_turn_undead(int sn, int level, CHAR_DATA *ch, SpellTarget /* vo */, C
 	CHAR_DATA *v_next;
 	int dam = 0;
 	int value, count, num;
-	CHAR_DATA *follower;
 
-	follower = nullptr; /* follower, count and num used for evil clerics */
+	/* count and num are used for evil clerics */
 	count = 0;
 	num = 0;
 

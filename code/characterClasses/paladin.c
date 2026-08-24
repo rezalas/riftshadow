@@ -138,7 +138,6 @@ void do_turn_undead(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 	int dam;
 	int difference = 0;
 	CHAR_DATA *victim, *v_next;
-	OBJ_DATA *corpse;
 	AFFECT_DATA af;
 	bool forceflee= false;
 
@@ -787,7 +786,7 @@ void do_group_retreat(CHAR_DATA *ch, char *argument)
 {
 	char arg[MAX_INPUT_LENGTH];
 	CHAR_DATA *to = nullptr;
-	CHAR_DATA *vch, *vch_next;
+	CHAR_DATA *vch_next;
 	CHAR_DATA *victim = Deref(ch->fighting);
 	ROOM_INDEX_DATA *to_room = nullptr;
 	EXIT_DATA *pexit;
@@ -1188,10 +1187,9 @@ void empathy_end(CHAR_DATA *ch, AFFECT_DATA *af)
 		act("You feel pained as your spiritual link with $n is severed!", Deref(af->owner), nullptr, ch, TO_VICT);
 }
 
-void spell_tower_of_fortitude(int /* level */, int /* sn */, CHAR_DATA *ch, SpellTarget vo, CastMode /* mode */)
+void spell_tower_of_fortitude(int /* level */, int /* sn */, CHAR_DATA *ch, SpellTarget /* vo */, CastMode /* mode */)
 {
 	AFFECT_DATA af;
-	CHAR_DATA *vict = vo.AsChar();
 
 	if (is_affected(ch, gsn_tower_of_fortitude))
 	{
@@ -1215,10 +1213,9 @@ void spell_tower_of_fortitude(int /* level */, int /* sn */, CHAR_DATA *ch, Spel
 	affect_to_char(ch, &af);
 }
 
-void spell_indomitable_spirit(int /* level */, int /* sn */, CHAR_DATA *ch, SpellTarget vo, CastMode /* mode */)
+void spell_indomitable_spirit(int /* level */, int /* sn */, CHAR_DATA *ch, SpellTarget /* vo */, CastMode /* mode */)
 {
 	AFFECT_DATA af;
-	CHAR_DATA *vict = vo.AsChar();
 
 	if (is_affected(ch, gsn_indomitable_spirit))
 	{
