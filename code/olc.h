@@ -65,10 +65,18 @@ typedef	bool OLC_FUN (CHAR_DATA *ch, char *argument);
 
 
 /* Return pointers to what is being edited. */
-#define EDIT_MOB(ch, mob)		(mob = (MOB_INDEX_DATA *)Deref(ch->desc)->pEdit)
-#define EDIT_OBJ(ch, obj)		(obj = (OBJ_INDEX_DATA *)Deref(ch->desc)->pEdit)
+//
+// These used to arrow straight off Deref(ch->desc), so a character with no
+// descriptor dereferenced null before the editor command had done anything.
+// olc_edit_target yields nullptr in that case instead, and every caller checks
+// it. There is no descriptor to report the failure to, so the callers return
+// without changing anything.
+#define EDIT_MOB(ch, mob)		(mob = (MOB_INDEX_DATA *)olc_edit_target(ch))
+#define EDIT_OBJ(ch, obj)		(obj = (OBJ_INDEX_DATA *)olc_edit_target(ch))
 #define EDIT_ROOM(ch, room)		(room = ch->in_room)
-#define EDIT_AREA(ch, area)		(area = (AREA_DATA *)Deref(ch->desc)->pEdit)
+#define EDIT_AREA(ch, area)		(area = (AREA_DATA *)olc_edit_target(ch))
+
+void *olc_edit_target(CHAR_DATA *ch);
 
 
 /*

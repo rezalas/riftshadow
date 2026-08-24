@@ -1124,6 +1124,9 @@ void do_asave(CHAR_DATA *ch, char *argument)
 		{
 			DESCRIPTOR_DATA *d = Deref(ch->desc);
 
+			if (d == nullptr)
+				return;
+
 			/* Is character currently editing. */
 			if (d->editor == 0)
 			{

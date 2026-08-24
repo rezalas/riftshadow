@@ -815,12 +815,16 @@ void pulse_prog_ilopheth_hermit(CHAR_DATA *mob)
 	for (OwningListWalk<DESCRIPTOR_DATA> walk(descriptor_list); !walk.Done(); walk.Step())
 	{
 		DESCRIPTOR_DATA *d = walk.Current();
+		CHAR_DATA *wch = Deref(d->character);
 
-		if (d->connected == CON_PLAYING && !is_npc(Deref(d->character)) && Deref(d->character)->in_room != nullptr &&
-			Deref(d->character)->in_room->area != nullptr && Deref(d->character)->in_room->area == mob->in_room->area &&
-			Deref(d->character)->pcdata->quests[TALISMANIC_QUEST] == 5 && number_percent() < 5)
+		if (wch == nullptr)
+			continue;
+
+		if (d->connected == CON_PLAYING && !is_npc(wch) && wch->in_room != nullptr &&
+			wch->in_room->area != nullptr && wch->in_room->area == mob->in_room->area &&
+			wch->pcdata->quests[TALISMANIC_QUEST] == 5 && number_percent() < 5)
 		{
-			sprintf(buf, "%s You!  Coming again to grub, eh?  You'll pay, oh yes yes, you will!", Deref(d->character)->name);
+			sprintf(buf, "%s You!  Coming again to grub, eh?  You'll pay, oh yes yes, you will!", wch->name);
 			do_tell(mob, buf);
 
 			act("A bolt of lightning streaks down from the clouds above!", Deref(d->character), nullptr, nullptr, TO_ALL);

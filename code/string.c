@@ -47,7 +47,12 @@ void string_edit(CHAR_DATA *ch, char **pString)
 	else
 		**pString = '\0';
 
-	Deref(ch->desc)->pString = pString;
+	DESCRIPTOR_DATA *connection = Deref(ch->desc);
+
+	if (connection == nullptr)
+		return;
+
+	connection->pString = pString;
 }
 
 /*****************************************************************************
@@ -70,7 +75,12 @@ void string_append(CHAR_DATA *ch, char **pString)
 	if (*(*pString + strlen(*pString) - 1) != '\r')
 		send_to_char("\n\r", ch);
 
-	Deref(ch->desc)->pString = pString;
+	DESCRIPTOR_DATA *connection = Deref(ch->desc);
+
+	if (connection == nullptr)
+		return;
+
+	connection->pString = pString;
 }
 
 /*****************************************************************************

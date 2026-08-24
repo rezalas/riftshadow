@@ -1214,11 +1214,16 @@ void check_unholy_communion(CHAR_DATA *ch, char *argument)
 	{
 		DESCRIPTOR_DATA *d = walk.Current();
 
+		CHAR_DATA *wch = Deref(d->character);
+
+		if (wch == nullptr)
+			continue;
+
 		if (d->connected == CON_PLAYING 
-			&& !is_immortal(Deref(d->character))
-			&& !is_npc(Deref(d->character))
-			&& Deref(d->character)->in_room->area == ch->in_room->area
-			&& Deref(d->character) != ch)
+			&& !is_immortal(wch)
+			&& !is_npc(wch)
+			&& wch->in_room->area == ch->in_room->area
+			&& wch != ch)
 		{
 			send_to_char("A voice hisses in your mind: 'Ssssolitude, mortal.  There are othersss near...'\n\r", ch);
 			return;

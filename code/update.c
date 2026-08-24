@@ -1829,9 +1829,11 @@ void track_update(void)
 		// has already gone back on the free list -- the exact failure this
 		// field stopped being a raw pointer to avoid. Re-reading costs an
 		// array index and an integer compare, and yields null instead.
-		if (tch->in_room == Deref(tch->last_fought)->in_room)
+		CHAR_DATA *quarry = Deref(tch->last_fought);
+
+		if (quarry != nullptr && tch->in_room == quarry->in_room)
 		{
-			track_attack(tch, Deref(tch->last_fought));
+			track_attack(tch, quarry);
 			continue;
 		}
 
@@ -2706,9 +2708,11 @@ void room_affect_update(void)
 
 					if (!is_npc(vch))
 					{
-						if (vch->in_room == Deref(af->owner)->in_room)
+						CHAR_DATA *owner = Deref(af->owner);
+
+						if (owner != nullptr && vch->in_room == owner->in_room)
 						{
-							sprintf(buf, "Help! I'm being drowned by %s's tidal wave!", pers(Deref(af->owner), vch));
+							sprintf(buf, "Help! I'm being drowned by %s's tidal wave!", pers(owner, vch));
 							do_myell(vch, buf, nullptr);
 						}
 						else

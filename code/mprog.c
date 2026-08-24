@@ -1304,13 +1304,17 @@ void pulse_prog_tahlu_mist_ward(CHAR_DATA *mob)
 	for (OwningListWalk<DESCRIPTOR_DATA> walk(descriptor_list); !walk.Done(); walk.Step())
 	{
 		DESCRIPTOR_DATA *d = walk.Current();
+		CHAR_DATA *wch = Deref(d->character);
+
+		if (wch == nullptr)
+			continue;
 
 		if (d->connected == CON_PLAYING
-			&& Deref(d->character)->in_room != nullptr
-			&& Deref(d->character)->in_room->area == mob->in_room->area
-			&& is_evil(Deref(d->character)))
+			&& wch->in_room != nullptr
+			&& wch->in_room->area == mob->in_room->area
+			&& is_evil(wch))
 		{
-			ch = Deref(d->character);
+			ch = wch;
 			mist = create_mobile(get_mob_index(1616));
 
 			char_to_room(mist, ch->in_room);
@@ -3226,12 +3230,16 @@ void pulse_prog_area_echo_ward(CHAR_DATA *mob)
 	for (OwningListWalk<DESCRIPTOR_DATA> walk(descriptor_list); !walk.Done(); walk.Step())
 	{
 		DESCRIPTOR_DATA *d = walk.Current();
+		CHAR_DATA *wch = Deref(d->character);
+
+		if (wch == nullptr)
+			continue;
 
 		if (d->connected != CON_PLAYING
-			|| !Deref(d->character)->in_room
-			|| Deref(d->character)->in_room->area != mob->in_room->area
-			|| Deref(d->character)->in_room->vnum < mob->armor[0]
-			|| Deref(d->character)->in_room->vnum > mob->armor[1])
+			|| !wch->in_room
+			|| wch->in_room->area != mob->in_room->area
+			|| wch->in_room->vnum < mob->armor[0]
+			|| wch->in_room->vnum > mob->armor[1])
 		{
 			continue;
 		}

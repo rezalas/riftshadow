@@ -235,9 +235,28 @@ bool run_olc_editor(DESCRIPTOR_DATA *d)
 	return true;
 }
 
+///
+/// What the character is currently editing, or nullptr when there is no
+/// descriptor to be editing through.
+///
+void *olc_edit_target(CHAR_DATA *ch)
+{
+	DESCRIPTOR_DATA *connection = Deref(ch->desc);
+
+	if (connection == nullptr)
+		return nullptr;
+
+	return connection->pEdit;
+}
+
 bool is_editing(CHAR_DATA *ch)
 {
-	switch (Deref(ch->desc)->editor)
+	DESCRIPTOR_DATA *connection = Deref(ch->desc);
+
+	if (connection == nullptr)
+		return false;
+
+	switch (connection->editor)
 	{
 		case ED_AREA:
 		case ED_ROOM:
@@ -257,7 +276,12 @@ char *olc_ed_name(CHAR_DATA *ch)
 
 	buf[0] = '\0';
 
-	switch (Deref(ch->desc)->editor)
+	DESCRIPTOR_DATA *connection = Deref(ch->desc);
+
+	if (connection == nullptr)
+		return buf;
+
+	switch (connection->editor)
 	{
 		case ED_AREA:
 			sprintf(buf, "AEdit");
@@ -290,6 +314,9 @@ char *olc_ed_vnum(CHAR_DATA *ch)
 	buf[0] = '\0';
 
 	DESCRIPTOR_DATA *d = Deref(ch->desc);
+
+	if (d == nullptr)
+		return buf;
 
 	switch (d->editor)
 	{
@@ -352,7 +379,12 @@ void show_olc_cmds(CHAR_DATA *ch, const struct olc_cmd_type *olc_table)
  ****************************************************************************/
 bool show_commands(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
-	switch (Deref(ch->desc)->editor)
+	DESCRIPTOR_DATA *connection = Deref(ch->desc);
+
+	if (connection == nullptr)
+		return false;
+
+	switch (connection->editor)
 	{
 		case ED_AREA:
 			show_olc_cmds(ch, aedit_table);
@@ -398,6 +430,9 @@ bool edit_done(CHAR_DATA *ch)
 {
 	DESCRIPTOR_DATA *d = Deref(ch->desc);
 
+	if (d == nullptr)
+		return false;
+
 	d->pEdit = nullptr;
 	d->editor = 0;
 
@@ -419,6 +454,9 @@ void aedit(CHAR_DATA *ch, char *argument)
 	int value;
 
 	EDIT_AREA(ch, pArea);
+
+	if (pArea == nullptr)
+		return;
 
 	smash_tilde(argument);
 	snprintf(arg, sizeof(arg), "%s", argument);
@@ -586,6 +624,10 @@ void oedit(CHAR_DATA *ch, char *argument)
 	argument = one_argument(argument, command);
 
 	EDIT_OBJ(ch, pObj);
+
+	if (pObj == nullptr)
+		return;
+
 	pArea = pObj->area;
 
 	if (!IS_BUILDER(ch, pArea))
@@ -649,6 +691,10 @@ void medit(CHAR_DATA *ch, char *argument)
 	argument = one_argument(argument, command);
 
 	EDIT_MOB(ch, pMob);
+
+	if (pMob == nullptr)
+		return;
+
 	pArea = pMob->area;
 
 	if (!IS_BUILDER(ch, pArea))
@@ -819,6 +865,9 @@ void do_aedit(CHAR_DATA *ch, char *argument)
 
 	DESCRIPTOR_DATA *d = Deref(ch->desc);
 
+	if (d == nullptr)
+		return;
+
 	d->pEdit = (void *)pArea;
 	d->editor = ED_AREA;
 
@@ -863,8 +912,13 @@ void do_redit(CHAR_DATA *ch, char *argument)
 
 		if (redit_create(ch, argument))
 		{
+			DESCRIPTOR_DATA *connection = Deref(ch->desc);
+
+			if (connection == nullptr)
+				return;
+
 			char_from_room(ch);
-			char_to_room(ch, (ROOM_INDEX_DATA *)Deref(ch->desc)->pEdit);
+			char_to_room(ch, (ROOM_INDEX_DATA *)connection->pEdit);
 			SET_BIT(pRoom->area->area_flags, AREA_CHANGED);
 			pRoom = ch->in_room;
 		}
@@ -892,7 +946,12 @@ void do_redit(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	Deref(ch->desc)->editor = ED_ROOM;
+	DESCRIPTOR_DATA *connection = Deref(ch->desc);
+
+	if (connection == nullptr)
+		return;
+
+	connection->editor = ED_ROOM;
 	redit_show(ch, "");
 }
 
@@ -934,6 +993,9 @@ void do_oedit(CHAR_DATA *ch, char *argument)
 
 		DESCRIPTOR_DATA *d = Deref(ch->desc);
 
+		if (d == nullptr)
+			return;
+
 		d->pEdit = (void *)pObj;
 		ch->pcdata->editing_item = value;
 		d->editor = ED_OBJECT;
@@ -970,7 +1032,12 @@ void do_oedit(CHAR_DATA *ch, char *argument)
 			if (oedit_create(ch, argument))
 			{
 				SET_BIT(pArea->area_flags, AREA_CHANGED);
-				Deref(ch->desc)->editor = ED_OBJECT;
+				DESCRIPTOR_DATA *connection = Deref(ch->desc);
+
+				if (connection == nullptr)
+					return;
+
+				connection->editor = ED_OBJECT;
 				oedit_show(ch, "");
 			}
 
@@ -1011,6 +1078,9 @@ void do_medit(CHAR_DATA *ch, char *argument)
 
 		DESCRIPTOR_DATA *d = Deref(ch->desc);
 
+		if (d == nullptr)
+			return;
+
 		d->pEdit = (void *)pMob;
 		d->editor = ED_MOBILE;
 
@@ -1046,7 +1116,12 @@ void do_medit(CHAR_DATA *ch, char *argument)
 			if (medit_create(ch, argument))
 			{
 				SET_BIT(pArea->area_flags, AREA_CHANGED);
-				Deref(ch->desc)->editor = ED_MOBILE;
+				DESCRIPTOR_DATA *connection = Deref(ch->desc);
+
+				if (connection == nullptr)
+					return;
+
+				connection->editor = ED_MOBILE;
 			}
 
 			return;

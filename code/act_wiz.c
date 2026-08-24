@@ -3743,8 +3743,8 @@ void do_switch(CHAR_DATA *ch, char *argument)
 	sprintf(buf, "$N switches into %s.", victim->short_descr);
 	wiznet(buf, ch, nullptr, WIZ_SWITCHES, WIZ_SECURE, get_trust(ch));
 
-	Deref(ch->desc)->character = victim->self;
-	Deref(ch->desc)->original = ch->self;
+	connection->character = victim->self;
+	connection->original = ch->self;
 	victim->desc = ch->desc;
 	// The possessed mob borrows the immortal's pcdata (it's an NPC, so its own
 	// pcdata is null). Ownership stays with the original body; do_return calls
@@ -3793,7 +3793,12 @@ void do_return(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 	ch->pcdata.release();		// relinquish the borrowed pcdata WITHOUT freeing it
 	connection->character = connection->original;
 	connection->original = nullptr;
-	Deref(connection->character)->desc = ch->desc;
+
+	CHAR_DATA *body = Deref(connection->character);
+
+	if (body != nullptr)
+		body->desc = ch->desc;
+
 	ch->desc = nullptr;
 }
 

@@ -1971,7 +1971,14 @@ void verb_prog_energize_tattoo(OBJ_DATA *obj, CHAR_DATA *ch, [[maybe_unused]] ch
 	if (!saves_spell(ch->level, Deref(ch->fighting), DAM_NEGATIVE))
 	{
 		damage_new(ch, Deref(ch->fighting), dice(1, 10), TYPE_UNDEFINED, DAM_NEGATIVE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "energy sapping");
-		Deref(ch->fighting)->mana -= (int)(2.8 * ch->level);
+
+		// Re-read rather than hoist: damage_new can kill the target, which clears
+		// this handle. It yields null then instead of a freed character.
+		CHAR_DATA *victim = Deref(ch->fighting);
+
+		if (victim != nullptr)
+			victim->mana -= (int)(2.8 * ch->level);
+
 		obj->value[0]++;
 
 		init_affect_obj(&oaf);

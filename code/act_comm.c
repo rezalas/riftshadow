@@ -1141,6 +1141,9 @@ void do_pray(CHAR_DATA *ch, char *argument)
 
 		auto victim = Deref(d->original) ? Deref(d->original) : Deref(d->character);
 
+		if (victim == nullptr)
+			continue;
+
 		if (d->connected == CON_PLAYING && Deref(d->character) != ch && !IS_SET(victim->comm, COMM_SHOUTSOFF) && !IS_SET(victim->comm, COMM_QUIET) && victim->level >= 52)
 		{
 			sprintf(buf, "%s%s [%d] is PRAYing for: %s%s\n\r",
@@ -1485,6 +1488,9 @@ void do_yell(CHAR_DATA *ch, char *argument)
 		// Read once: command_execute below can extract the listener, but it is
 		// the last thing this iteration does with it.
 		CHAR_DATA *listener = Deref(d->character);
+
+		if (listener == nullptr)
+			continue;
 
 		if (d->connected == CON_PLAYING && listener != ch && listener->in_room != nullptr && listener->in_room->area == ch->in_room->area && !IS_SET(listener->comm, COMM_QUIET))
 		{

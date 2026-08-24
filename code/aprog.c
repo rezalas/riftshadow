@@ -391,20 +391,24 @@ void pulse_prog_ruins_shark(AREA_DATA *area)
 	for (OwningListWalk<DESCRIPTOR_DATA> walk(descriptor_list); !walk.Done(); walk.Step())
 	{
 		DESCRIPTOR_DATA *d = walk.Current();
+		CHAR_DATA *wch = Deref(d->character);
+
+		if (wch == nullptr)
+			continue;
 
 		if (d->connected == CON_PLAYING
-			&& Deref(d->character)->in_room != nullptr
-			&& Deref(d->character)->in_room->area == area
+			&& wch->in_room != nullptr
+			&& wch->in_room->area == area
 			&& number_percent() > 90)
 		{
-			ch = Deref(d->character);
+			ch = wch;
 
-			if ((Deref(d->character)->hit * 2) > Deref(d->character)->max_hit)
+			if ((wch->hit * 2) > wch->max_hit)
 				continue;
 
-			if (Deref(d->character)->in_room->vnum < 20100
-				|| (Deref(d->character)->in_room->vnum > 20150 && Deref(d->character)->in_room->vnum < 20181)
-				|| Deref(d->character)->in_room->vnum > 20219)
+			if (wch->in_room->vnum < 20100
+				|| (wch->in_room->vnum > 20150 && wch->in_room->vnum < 20181)
+				|| wch->in_room->vnum > 20219)
 			{
 				continue;
 			}
