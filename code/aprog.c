@@ -174,7 +174,7 @@ void tick_prog_academy_reset(AREA_DATA *area)
 			char buf[MSL];
 
 			send_to_char("A small contingent of guards rapidly marches up to you.\n\r", ch);
-			act("A small contingent of guards rapidly marches up to $n, marching $m off.", ch, 0, 0, TO_ROOM);
+			act("A small contingent of guards rapidly marches up to $n, marching $m off.", ch, nullptr, nullptr, TO_ROOM);
 
 			sprintf(buf, "A Royal Academy Guard says '%sBy the orders of the King, you have completed your training and must depart.%s'\n\r",
 				get_char_color(ch, "speech"),
@@ -273,7 +273,7 @@ void tick_prog_ilopheth(AREA_DATA *area)
 				sprintf(buf, "%sAs the afternoon sun drops lower in the sky a single shaft of sunlight shines through a gap in the stones, coming to rest directly on the white marble pedestal.%s",
 					get_char_color(pedroom->people, "yellow"),
 					END_COLOR(pedroom->people));
-				act(buf, pedroom->people, 0, 0, TO_ALL);
+				act(buf, pedroom->people, nullptr, nullptr, TO_ALL);
 			}
 		}
 		else
@@ -283,7 +283,7 @@ void tick_prog_ilopheth(AREA_DATA *area)
 				sprintf(buf, "%sAs the afternoon sun drops lower in the sky a single shaft of sunlight shines through a gap in the stones, coming to rest directly on the white marble pedestal.%s",
 					get_char_color(pedroom->people, "yellow"),
 					END_COLOR(pedroom->people));
-				act(buf, pedroom->people, 0, 0, TO_ALL);
+				act(buf, pedroom->people, nullptr, nullptr, TO_ALL);
 
 				RS.Queue.AddToQueue(4, "tick_prog_ilopheth", "act_queue", act_queue, "The opacity of the crystal sphere appears to fade, and it begins to glow a brilliant white!", pedroom->people, nullptr, nullptr, TO_ALL);
 				RS.Queue.AddToQueue(7, "tick_prog_ilopheth", "act_queue", act_queue, "To the northwest, an immense pillar of light ascends from the forest into the heavens!", pedroom->people, nullptr, nullptr, TO_ALL);
@@ -307,7 +307,7 @@ void tick_prog_ilopheth(AREA_DATA *area)
 				if (portroom->people)
 				{
 					sprintf(buf, "The mass of energy begins to glow a brilliant white, and releases an immense pillar of energy which streaks into the heavens.  The disturbance seems to stabilize into an arched, opalescent portal.");
-					act(buf, portroom->people, 0, 0, TO_ALL);
+					act(buf, portroom->people, nullptr, nullptr, TO_ALL);
 				}
 
 				obj_from_room(old_portal);
@@ -323,7 +323,7 @@ void tick_prog_ilopheth(AREA_DATA *area)
 	if (time_info.hour == 17)
 	{
 		if (pedroom->people)
-			act("As the sun descends toward the horizon, the shaft of light illuminating the pedestal fades to a spot, and disappears.", pedroom->people, 0, 0, TO_ALL);
+			act("As the sun descends toward the horizon, the shaft of light illuminating the pedestal fades to a spot, and disappears.", pedroom->people, nullptr, nullptr, TO_ALL);
 
 		for (obj = portroom->contents; obj; obj = obj->next_content)
 		{
@@ -341,7 +341,7 @@ void tick_prog_ilopheth(AREA_DATA *area)
 		else
 		{
 			if (portroom->people)
-				act("The opalescent gateway begins to break down, its edges flexing and twisting wildly.", portroom->people, 0, 0, TO_ALL);
+				act("The opalescent gateway begins to break down, its edges flexing and twisting wildly.", portroom->people, nullptr, nullptr, TO_ALL);
 
 			obj_from_room(new_portal);
 			extract_obj(new_portal);
@@ -412,7 +412,7 @@ void pulse_prog_ruins_shark(AREA_DATA *area)
 			shark = create_mobile(get_mob_index(20111));
 
 			char_to_room(shark, ch->in_room);
-			act("Drawn by the scent of blood in the water, a fierce shark swims in and attacks!", ch, 0, 0, TO_ALL);
+			act("Drawn by the scent of blood in the water, a fierce shark swims in and attacks!", ch, nullptr, nullptr, TO_ALL);
 
 			do_murder(shark, ch->name);
 			return;

@@ -133,7 +133,7 @@ void do_scan(CHAR_DATA *ch, char *argument)
 
 			if (af)
 			{
-				act("Your vision sharpens as you peer through your multifaceted crystal.", ch, 0, 0, TO_CHAR);
+				act("Your vision sharpens as you peer through your multifaceted crystal.", ch, nullptr, nullptr, TO_CHAR);
 				depth += af->modifier / 100;
 			}
 		}

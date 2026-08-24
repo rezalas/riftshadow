@@ -119,7 +119,7 @@ void do_enter(CHAR_DATA *ch, char *argument)
 		|| (IS_SET_OLD(portal->value[2], GATE_BUGGY) && number_percent() < 5))
 	{
 		send_to_char("You enter the portal and find yourself elsewhere.\n\r", ch);
-		act("$n steps into $p.", ch, portal, 0, TO_ROOM);
+		act("$n steps into $p.", ch, portal, nullptr, TO_ROOM);
 		spell_teleport(skill_lookup("teleport"), ch->level, ch, ch, CastMode::Spell);
 		return;
 	}

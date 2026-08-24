@@ -28,10 +28,10 @@ static int torture_flail_fight(CHAR_DATA *ch, OBJ_DATA *)
 	AFFECT_DATA af;
 	init_affect(&af);
 
-	act("A scream escapes your flail as a shadow tears at $N's eyes!", ch, 0, Deref(ch->fighting), TO_CHAR);
-	act("A scream escapes $n's flail as a shadow tears at $N's eyes!", ch, 0, Deref(ch->fighting), TO_NOTVICT);
-	act("A scream escapes $n's flail as a shadow tears at your eyes!", ch, 0, Deref(ch->fighting), TO_VICT);
-	act("$n appears to be blinded.", Deref(ch->fighting), 0, 0, TO_ROOM);
+	act("A scream escapes your flail as a shadow tears at $N's eyes!", ch, nullptr, Deref(ch->fighting), TO_CHAR);
+	act("A scream escapes $n's flail as a shadow tears at $N's eyes!", ch, nullptr, Deref(ch->fighting), TO_NOTVICT);
+	act("A scream escapes $n's flail as a shadow tears at your eyes!", ch, nullptr, Deref(ch->fighting), TO_VICT);
+	act("$n appears to be blinded.", Deref(ch->fighting), nullptr, nullptr, TO_ROOM);
 
 	af.type = gsn_blindness;
 	af.aftype = AFT_MALADY;
@@ -50,7 +50,7 @@ static int torture_flail_fight(CHAR_DATA *ch, OBJ_DATA *)
 /// @note Body taken from the EVENT_IWEAR block of ispec_g_money.
 static int g_money_wear(CHAR_DATA *ch, OBJ_DATA *)
 {
-	act("J00 gonna wear me!? J00 GONNA WEAR ME?!?!?", ch, 0, 0, TO_CHAR);
+	act("J00 gonna wear me!? J00 GONNA WEAR ME?!?!?", ch, nullptr, nullptr, TO_CHAR);
 	return 0;
 }
 
@@ -61,7 +61,7 @@ static int g_money_wear(CHAR_DATA *ch, OBJ_DATA *)
 /// @note Body taken from the EVENT_IREMOVE block of ispec_g_money.
 static int g_money_remove(CHAR_DATA *ch, OBJ_DATA *obj)
 {
-	act("You feel vary vary stoopid as you remove $p.", ch, obj, 0, TO_CHAR);
+	act("You feel vary vary stoopid as you remove $p.", ch, obj, nullptr, TO_CHAR);
 	do_say(ch, "Duuuuuuuuh.");
 
 	return 0;
@@ -77,7 +77,7 @@ static int qwhip_one_hit(CHAR_DATA *ch, CHAR_DATA *, OBJ_DATA *, float &, int &,
 {
 	if (number_percent() > 96 && Deref(ch->fighting))
 	{
-		act("Sadistic urges compel you to lash out viciously at $N!", ch, 0, Deref(ch->fighting), TO_CHAR);
+		act("Sadistic urges compel you to lash out viciously at $N!", ch, nullptr, Deref(ch->fighting), TO_CHAR);
 		//dam = dam * 1.3;
 		//dt = 42;
 		//ch->hit = std::min(ch->max_hit, ch->hit + ((int)dam / 4));
@@ -97,9 +97,9 @@ static int qwhip_fight(CHAR_DATA *ch, OBJ_DATA *)
 
 	CHAR_DATA *victim = Deref(ch->fighting);
 
-	act("$n wraps $s whip around $N's legs, sending $M staggering!", ch, 0, victim, TO_NOTVICT);
-	act("You wrap your whip around $N's legs, sending $M staggering.", ch, 0, victim, TO_CHAR);
-	act("$n wraps $s whip around your legs, sending you staggering!", ch, 0, victim, TO_VICT);
+	act("$n wraps $s whip around $N's legs, sending $M staggering!", ch, nullptr, victim, TO_NOTVICT);
+	act("You wrap your whip around $N's legs, sending $M staggering.", ch, nullptr, victim, TO_CHAR);
+	act("$n wraps $s whip around your legs, sending you staggering!", ch, nullptr, victim, TO_VICT);
 
 	WAIT_STATE(victim, PULSE_VIOLENCE + 2);
 

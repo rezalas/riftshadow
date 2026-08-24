@@ -130,12 +130,12 @@ void do_gold(CHAR_DATA *ch, char *argument)
 	{
 		gold_constant = atoi(argument);
 		total_gold = num_pfiles * gold_constant;
-		act("Global gold constant rate is now set to $t.", ch, argument, 0, TO_CHAR);
+		act("Global gold constant rate is now set to $t.", ch, argument, nullptr, TO_CHAR);
 		return;
 	}
 
-	act("Riftshadow Gold System", ch, 0, 0, TO_CHAR);
-	act("----------------------", ch, 0, 0, TO_CHAR);
+	act("Riftshadow Gold System", ch, nullptr, nullptr, TO_CHAR);
+	act("----------------------", ch, nullptr, nullptr, TO_CHAR);
 
 	sprintf(buf, "Total gold in world  : %ld (%d players)\n\r", total_gold, num_pfiles);
 	send_to_char(buf, ch);
@@ -1926,7 +1926,7 @@ void do_assess_old(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	act("You study $N intently, searching for signs of affliction.", ch, 0, victim, TO_CHAR);
+	act("You study $N intently, searching for signs of affliction.", ch, nullptr, victim, TO_CHAR);
 
 	if (number_percent() > skill)
 	{
@@ -2471,7 +2471,7 @@ void do_commune(CHAR_DATA *ch, char *argument)
 		/*
 		if (IS_SET(ch->in_room->room_flags,ROOM_NO_MAGIC) && !(ch->level > LEVEL_HERO))
 		{
-			act("$n's spell fizzles.",ch,0,0,TO_ROOM);
+			act("$n's spell fizzles.",ch,nullptr,nullptr,TO_ROOM);
 			send_to_char("Your prayer fizzles and dies.\n\r",ch);
 			return;
 		}
@@ -2501,15 +2501,15 @@ void do_commune(CHAR_DATA *ch, char *argument)
 
 		if (offensive_at_char && victim != ch)
 		{
-			act("You narrow your eyes and glare in $N's direction.", ch, 0, victim, TO_CHAR);
-			act("$n narrows $s eyes and glares in $N's direction.", ch, 0, victim, TO_NOTVICT);
-			act("$n narrows $s eyes and glares in your direction.", ch, 0, victim, TO_VICT);
+			act("You narrow your eyes and glare in $N's direction.", ch, nullptr, victim, TO_CHAR);
+			act("$n narrows $s eyes and glares in $N's direction.", ch, nullptr, victim, TO_NOTVICT);
+			act("$n narrows $s eyes and glares in your direction.", ch, nullptr, victim, TO_VICT);
 
 			if (check_volley(ch, victim))
 			{
-				act("$N reflects your spell right back at you!", ch, 0, victim, TO_CHAR);
-				act("You reflect $n's spell right back at $m!", ch, 0, victim, TO_VICT);
-				act("$N reflects $n's spell right back at $m!", ch, 0, victim, TO_NOTVICT);
+				act("$N reflects your spell right back at you!", ch, nullptr, victim, TO_CHAR);
+				act("You reflect $n's spell right back at $m!", ch, nullptr, victim, TO_VICT);
+				act("$N reflects $n's spell right back at $m!", ch, nullptr, victim, TO_NOTVICT);
 
 				(*skill_table[sn].spell_fun)(sn, ch->level * 2, victim, ch, CastMode::Spell);
 				return;
@@ -2522,21 +2522,21 @@ void do_commune(CHAR_DATA *ch, char *argument)
 			|| skill_table[sn].target == TAR_OBJ_CHAR_OFF
 			|| (skill_table[sn].target == TAR_CHAR_DEFENSIVE && victim == ch))
 		{
-			act("You close your eyes and concentrate for a moment.", ch, 0, 0, TO_CHAR);
-			act("$n closes $s eyes with a look of concentration for a moment.", ch, 0, 0, TO_ROOM);
+			act("You close your eyes and concentrate for a moment.", ch, nullptr, nullptr, TO_CHAR);
+			act("$n closes $s eyes with a look of concentration for a moment.", ch, nullptr, nullptr, TO_ROOM);
 		}
 
 		if (skill_table[sn].target == TAR_CHAR_DEFENSIVE && victim != ch)
 		{
-			act("You close your eyes for a moment and nod at $N.", ch, 0, victim, TO_CHAR);
-			act("$n closes $s eyes for a moment and nods at $N.", ch, 0, victim, TO_NOTVICT);
-			act("$n closes $s eyes for a moment and nods at you.", ch, 0, victim, TO_VICT);
+			act("You close your eyes for a moment and nod at $N.", ch, nullptr, victim, TO_CHAR);
+			act("$n closes $s eyes for a moment and nods at $N.", ch, nullptr, victim, TO_NOTVICT);
+			act("$n closes $s eyes for a moment and nods at you.", ch, nullptr, victim, TO_VICT);
 		}
 
 		if (skill_table[sn].target == TAR_OBJ_INV)
 		{
-			act("You furrow your brow as you look through your possessions.", ch, 0, 0, TO_CHAR);
-			act("$n furrows $s brow as $e looks through $s possessions.", ch, 0, 0, TO_ROOM);
+			act("You furrow your brow as you look through your possessions.", ch, nullptr, nullptr, TO_CHAR);
+			act("$n furrows $s brow as $e looks through $s possessions.", ch, nullptr, nullptr, TO_ROOM);
 		}
 
 		(*skill_table[sn].spell_fun)(sn, ch->level, ch, vo, CastMode::Spell);
@@ -2854,9 +2854,9 @@ void do_call(CHAR_DATA *ch, char *argument)
 
 			if (check_volley(ch, victim))
 			{
-				act("$N reflects your spell right back at you!", ch, 0, victim, TO_CHAR);
-				act("You reflect $n's spell right back at $m!", ch, 0, victim, TO_VICT);
-				act("$N reflects $n's spell right back at $m!", ch, 0, victim, TO_NOTVICT);
+				act("$N reflects your spell right back at you!", ch, nullptr, victim, TO_CHAR);
+				act("You reflect $n's spell right back at $m!", ch, nullptr, victim, TO_VICT);
+				act("$N reflects $n's spell right back at $m!", ch, nullptr, victim, TO_NOTVICT);
 				(*skill_table[sn].spell_fun)(sn, ch->level * 2, victim, ch, CastMode::Spell);
 				return;
 			}
@@ -2946,7 +2946,7 @@ void do_snare(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 	affect_to_char(ch, &snaretimer);
 
 	send_to_char("You lay down vines and plants in a cunningly concealed snare to trap the unwary.\n\r", ch);
-	act("$n lays down vines and plants in a cunningly concealed snare to trap the unwary.\n\r", ch, 0, 0, TO_ROOM);
+	act("$n lays down vines and plants in a cunningly concealed snare to trap the unwary.\n\r", ch, nullptr, nullptr, TO_ROOM);
 
 	WAIT_STATE(ch, PULSE_VIOLENCE * 4);
 }
@@ -3106,7 +3106,7 @@ void do_createcosmetic(CHAR_DATA *ch, char *argument)
 		obj->wear_loc_name = palloc_string(wlname);
 	}
 
-	act("You create $p.", ch, obj, 0, TO_CHAR);
+	act("You create $p.", ch, obj, nullptr, TO_CHAR);
 }
 
 OBJ_DATA *make_cosmetic(char *name, char *wearloc, char *underloc, char *cosmeticloc)

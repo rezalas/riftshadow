@@ -604,7 +604,7 @@ void fight_prog_drow_talisman(OBJ_DATA *obj, CHAR_DATA *ch)
 	if (!is_worn(obj) || number_percent() > 7 || !Deref(ch->fighting))
 		return;
 
-	act("$p pulses and glows a sickly shade of green!", ch, obj, 0, TO_ALL);
+	act("$p pulses and glows a sickly shade of green!", ch, obj, nullptr, TO_ALL);
 
 	if (number_percent() > 50)
 		obj_cast_spell(skill_lookup("frost breath"), ch->level, ch, Deref(ch->fighting), obj);
@@ -619,8 +619,8 @@ void fight_prog_devils_eye(OBJ_DATA *obj, CHAR_DATA *ch)
 
 	if (number_percent() < 5)
 	{
-		act("The Devil's Eye suddenly pivots and stares directly into $n's face!", ch, 0, Deref(ch->fighting), TO_NOTVICT);
-		act("The Devil's Eye suddenly pivots and stares directly into your face!", ch, 0, Deref(ch->fighting), TO_VICT);
+		act("The Devil's Eye suddenly pivots and stares directly into $n's face!", ch, nullptr, Deref(ch->fighting), TO_NOTVICT);
+		act("The Devil's Eye suddenly pivots and stares directly into your face!", ch, nullptr, Deref(ch->fighting), TO_VICT);
 		damage_new(ch, Deref(ch->fighting), dice(12, 12), TYPE_UNDEFINED, DAM_SLASH, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "heartquake");
 	}
 }
@@ -638,8 +638,8 @@ void fight_prog_skean(OBJ_DATA *obj, CHAR_DATA *ch)
 		percent = number_percent();
 		if (Deref(ch->fighting)->Class()->ctype == CLASS_COMMUNER && !is_affected(Deref(ch->fighting), gsn_severed))
 		{
-			act("An enchanted obsidian skean blazes through the air, leaving a trail of fire!", ch, 0, Deref(ch->fighting), TO_ROOM);
-			act("Your vital ties to the gods' empowerment have been severed!", ch, 0, Deref(ch->fighting), TO_VICT);
+			act("An enchanted obsidian skean blazes through the air, leaving a trail of fire!", ch, nullptr, Deref(ch->fighting), TO_ROOM);
+			act("Your vital ties to the gods' empowerment have been severed!", ch, nullptr, Deref(ch->fighting), TO_VICT);
 
 			init_affect(&af);
 			af.where = TO_AFFECTS;
@@ -655,8 +655,8 @@ void fight_prog_skean(OBJ_DATA *obj, CHAR_DATA *ch)
 
 		if (!IS_SET(ch->affected_by, AFF_BLIND))
 		{
-			act("An enchanted obsidian skean darts toward your eyes, gouging you painfully!", ch, 0, Deref(ch->fighting), TO_VICT);
-			act("An enchanted obsidian skean darts toward $N's eyes, gouging $M painfully!", ch, 0, Deref(ch->fighting), TO_NOTVICT);
+			act("An enchanted obsidian skean darts toward your eyes, gouging you painfully!", ch, nullptr, Deref(ch->fighting), TO_VICT);
+			act("An enchanted obsidian skean darts toward $N's eyes, gouging $M painfully!", ch, nullptr, Deref(ch->fighting), TO_NOTVICT);
 
 			init_affect(&af);
 			af.where = TO_AFFECTS;
@@ -673,7 +673,7 @@ void fight_prog_skean(OBJ_DATA *obj, CHAR_DATA *ch)
 
 		if (is_good(Deref(ch->fighting)))
 		{
-			act("You swoon for a moment, and the world goes slightly hazy...", Deref(ch->fighting), 0, 0, TO_CHAR);
+			act("You swoon for a moment, and the world goes slightly hazy...", Deref(ch->fighting), nullptr, nullptr, TO_CHAR);
 			WAIT_STATE(Deref(ch->fighting), PULSE_VIOLENCE * 2);
 			return;
 		}
@@ -690,8 +690,8 @@ void fight_prog_cankerworm(OBJ_DATA *obj, CHAR_DATA *ch)
 	if (number_percent() < 10)
 	{
 		dam = dice((ch->level), 3);
-		act("The Cankerworm leaps from your hands momentarily!", ch, 0, 0, TO_CHAR);
-		act("The Cankerworm seems to leap from $n's hands momentarily!", ch, 0, 0, TO_ROOM);
+		act("The Cankerworm leaps from your hands momentarily!", ch, nullptr, nullptr, TO_CHAR);
+		act("The Cankerworm seems to leap from $n's hands momentarily!", ch, nullptr, nullptr, TO_ROOM);
 		damage_new(ch, Deref(ch->fighting), dam, TYPE_UNDEFINED, DAM_SLASH, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "burrowing axe");
 	}
 }
@@ -705,8 +705,8 @@ void fight_prog_axe_trelaran(OBJ_DATA *obj, CHAR_DATA *ch)
 
 	if (str_cmp(race_table[ch->race].name, "duergar"))
 	{
-		act("Your hand twists in agony as $p glows midnight black!", ch, obj, 0, TO_CHAR);
-		act("$n's hand twists in agony as $p tries to writhe free!", ch, obj, 0, TO_ROOM);
+		act("Your hand twists in agony as $p glows midnight black!", ch, obj, nullptr, TO_CHAR);
+		act("$n's hand twists in agony as $p tries to writhe free!", ch, obj, nullptr, TO_ROOM);
 
 		obj_cast_spell(skill_lookup("curse"), 60, ch, ch, obj);
 		obj_cast_spell(skill_lookup("plague"), 60, ch, ch, obj);
@@ -716,7 +716,7 @@ void fight_prog_axe_trelaran(OBJ_DATA *obj, CHAR_DATA *ch)
 	{
 		if (number_percent() < 6 && (crown->pIndexData->vnum == 21825))
 		{
-			act("$p suddenly shifts to the likeness of a gaping dragon head, as it spits out a blast of acid!", ch, obj, 0, TO_ALL);
+			act("$p suddenly shifts to the likeness of a gaping dragon head, as it spits out a blast of acid!", ch, obj, nullptr, TO_ALL);
 			obj_cast_spell(skill_lookup("acid blast"), ch->level, ch, Deref(ch->fighting), obj);
 		}
 	}
@@ -726,8 +726,8 @@ void fight_prog_cure_critical(OBJ_DATA *obj, CHAR_DATA *ch)
 {
 	if (number_percent() < 8 && is_worn(obj))
 	{
-		act("$n's $p glows bright blue!", ch, obj, 0, TO_ROOM);
-		act("$p glows bright blue!", ch, obj, 0, TO_CHAR);
+		act("$n's $p glows bright blue!", ch, obj, nullptr, TO_ROOM);
+		act("$p glows bright blue!", ch, obj, nullptr, TO_CHAR);
 		obj_cast_spell(skill_lookup("cure critical"), obj->level, ch, ch, obj);
 	}
 }
@@ -787,8 +787,8 @@ void invoke_prog_tattoo_dioxide(OBJ_DATA *obj, CHAR_DATA *ch, [[maybe_unused]] c
 	return;
 
 	obj = get_eq_char(ch, WEAR_BRAND);
-	act("$n's $p glows blue.", ch, obj, 0, TO_ROOM);
-	act("Your $p glows blue.", ch, obj, 0, TO_CHAR);
+	act("$n's $p glows blue.", ch, obj, nullptr, TO_ROOM);
+	act("Your $p glows blue.", ch, obj, nullptr, TO_CHAR);
 
 	ch->hit += (ch->level * 2) * 8;
 	ch->hit = std::min(ch->hit, (int)ch->max_hit);
@@ -841,8 +841,8 @@ void invoke_prog_tattoo_dioxide(OBJ_DATA *obj, CHAR_DATA *ch, [[maybe_unused]] c
 void invoke_prog_tattoo_jackass(OBJ_DATA *obj, CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	obj = get_eq_char(ch, WEAR_BRAND);
-	act("$n's $p doesn't glow much due to $s stupidity.", ch, obj, 0, TO_ROOM);
-	act("Your $p doesn't glow much, probably because you're a jackass.", ch, obj, 0, TO_CHAR);
+	act("$n's $p doesn't glow much due to $s stupidity.", ch, obj, nullptr, TO_ROOM);
+	act("Your $p doesn't glow much, probably because you're a jackass.", ch, obj, nullptr, TO_CHAR);
 
 	send_to_char("You smite yourself! What a jackass!\n\r", ch);
 
@@ -918,7 +918,7 @@ void invoke_prog_tattoo_sceptre(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 	}
 
 	send_to_char("Your body heals at great cost to your abilities.\n\r", ch);
-	act("$n looks better, but weakened.", ch, 0, 0, TO_ROOM);
+	act("$n looks better, but weakened.", ch, nullptr, nullptr, TO_ROOM);
 
 	ch->hit = ch->hit + 500;
 
@@ -961,14 +961,14 @@ void invoke_prog_tattoo_zethus(OBJ_DATA *obj, CHAR_DATA *ch, [[maybe_unused]] ch
 		return;
 	}
 
-	act("$n concentrates intently for a moment.", ch, 0, 0, TO_ROOM);
+	act("$n concentrates intently for a moment.", ch, nullptr, nullptr, TO_ROOM);
 	obj->value[0] -= 1;
 
 	if (!saves_spell(ch->level + dice(1, 5), Deref(ch->fighting), DAM_NEGATIVE))
 	{
-		act("A flash of darkness arcs between $n and $N, leaving $N looking hopeless!", ch, 0, Deref(ch->fighting), TO_NOTVICT);
-		act("A flash of darkness arcs between you and $N as you sever $N's link with $S god.", ch, 0, Deref(ch->fighting), TO_CHAR);
-		act("Negative energy crackles in the air around you, temporarily severing your link with your god!", ch, 0, Deref(ch->fighting), TO_VICT);
+		act("A flash of darkness arcs between $n and $N, leaving $N looking hopeless!", ch, nullptr, Deref(ch->fighting), TO_NOTVICT);
+		act("A flash of darkness arcs between you and $N as you sever $N's link with $S god.", ch, nullptr, Deref(ch->fighting), TO_CHAR);
+		act("Negative energy crackles in the air around you, temporarily severing your link with your god!", ch, nullptr, Deref(ch->fighting), TO_VICT);
 		damage_new(ch, Deref(ch->fighting), ch->level + 15, TYPE_UNDEFINED, DAM_NEGATIVE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "energy wave");
 		damage_new(ch, ch, ch->level - 15, TYPE_UNDEFINED, DAM_INTERNAL, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "exertion");
 
@@ -1028,21 +1028,21 @@ void invoke_prog_explosives(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 		{
 			if (fuse == 0)
 			{
-				act("$n sets $p and stuffs it in $s mouth!", ch, obj, 0, TO_ROOM);
-				act("You set $p and stuff it in your mouth!", ch, obj, 0, TO_CHAR);
+				act("$n sets $p and stuffs it in $s mouth!", ch, obj, nullptr, TO_ROOM);
+				act("You set $p and stuff it in your mouth!", ch, obj, nullptr, TO_CHAR);
 
 				unequip_char(ch, obj, true);
 				bag_explode(ch, obj, 3);
 				return;
 			}
 
-			act("$n fumbles awkwardly with $p, and it begins to tick.", ch, obj, 0, TO_ROOM);
-			act("You fumble awkwardly with $p, and it begins to tick.", ch, obj, 0, TO_CHAR);
+			act("$n fumbles awkwardly with $p, and it begins to tick.", ch, obj, nullptr, TO_ROOM);
+			act("You fumble awkwardly with $p, and it begins to tick.", ch, obj, nullptr, TO_CHAR);
 		}
 		else
 		{
-			act("$n sets the fuse of $p, and it begins to tick.", ch, obj, 0, TO_ROOM);
-			act("You set the fuse of $p, and it begins to tick.", ch, obj, 0, TO_CHAR);
+			act("$n sets the fuse of $p, and it begins to tick.", ch, obj, nullptr, TO_ROOM);
+			act("You set the fuse of $p, and it begins to tick.", ch, obj, nullptr, TO_CHAR);
 
 			obj->timer = fuse;
 			return;
@@ -1050,8 +1050,8 @@ void invoke_prog_explosives(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 	}
 	else
 	{
-		act("$n fumbles awkwardly with $p, and it begins to tick.", ch, obj, 0, TO_ROOM);
-		act("You fumble awkwardly with $p, and it begins to tick.", ch, obj, 0, TO_CHAR);
+		act("$n fumbles awkwardly with $p, and it begins to tick.", ch, obj, nullptr, TO_ROOM);
+		act("You fumble awkwardly with $p, and it begins to tick.", ch, obj, nullptr, TO_CHAR);
 	}
 
 	fuse = number_range(2, 48);
@@ -1080,7 +1080,7 @@ void speech_prog_ice_dragon_statue(OBJ_DATA *obj, CHAR_DATA *ch, char *speech)
 		return;
 	}
 
-	act("$p shatters violently in a cloud of ice. As it clears, a dragon of pure ice hovers over you.", dragon, obj, 0, TO_ROOM);
+	act("$p shatters violently in a cloud of ice. As it clears, a dragon of pure ice hovers over you.", dragon, obj, nullptr, TO_ROOM);
 	add_follower(dragon, ch);
 
 	dragon->leader = ch->self;
@@ -1121,8 +1121,8 @@ void fight_prog_scales(OBJ_DATA *obj, CHAR_DATA *ch)
 		case 2:
 			if (number_percent() > 85)
 			{
-				act("$p throbs momentarily, and you feel invigorated!", ch, obj, 0, TO_CHAR);
-				act("$n looks a bit more refreshed.", ch, obj, 0, TO_ROOM);
+				act("$p throbs momentarily, and you feel invigorated!", ch, obj, nullptr, TO_CHAR);
+				act("$n looks a bit more refreshed.", ch, obj, nullptr, TO_ROOM);
 
 				if (number_percent() > 50)
 					ch->hit += ch->level;
@@ -1142,8 +1142,8 @@ void fight_prog_amber_medallion(OBJ_DATA *obj, CHAR_DATA *ch)
 
 	intel = get_curr_stat(ch, STAT_INT);
 
-	act("$p glows softly and you feel refreshed.", ch, obj, 0, TO_CHAR);
-	act("$p glows softly.", ch, obj, 0, TO_ROOM);
+	act("$p glows softly and you feel refreshed.", ch, obj, nullptr, TO_CHAR);
+	act("$p glows softly.", ch, obj, nullptr, TO_ROOM);
 
 	ch->mana = std::min(ch->mana + number_range(intel, intel * 2), (int)ch->max_mana);
 }
@@ -1178,12 +1178,12 @@ void get_prog_bad_idea(OBJ_DATA *obj, CHAR_DATA *ch)
 	EXIT_DATA *pexit = ch->in_room->exit[Directions::Up];
 	CHAR_DATA *vch;
 
-	act("As you pick up $p, a booming voice can be heard.", ch, obj, 0, TO_CHAR);
-	act("As $n picks up $p, a booming voice can be heard.", ch, obj, 0, TO_ROOM);
-	act("'Stealing from the Gods, are we?  Ah, yes.  I like that.  Very daring.  Good taste.  Pity I like $p.'\n\r", ch, obj, 0, TO_CHAR);
-	act("'Stealing from the Gods, are we?  Ah, yes.  I like that.  Very daring.  Good taste.  Pity I like $p.'", ch, obj, 0, TO_ROOM);
-	act("$p grows searing hot and you are forced to drop it!", ch, obj, 0, TO_CHAR);
-	act("$p glows searing white and $n is forced to drop it!", ch, obj, 0, TO_ROOM);
+	act("As you pick up $p, a booming voice can be heard.", ch, obj, nullptr, TO_CHAR);
+	act("As $n picks up $p, a booming voice can be heard.", ch, obj, nullptr, TO_ROOM);
+	act("'Stealing from the Gods, are we?  Ah, yes.  I like that.  Very daring.  Good taste.  Pity I like $p.'\n\r", ch, obj, nullptr, TO_CHAR);
+	act("'Stealing from the Gods, are we?  Ah, yes.  I like that.  Very daring.  Good taste.  Pity I like $p.'", ch, obj, nullptr, TO_ROOM);
+	act("$p grows searing hot and you are forced to drop it!", ch, obj, nullptr, TO_CHAR);
+	act("$p glows searing white and $n is forced to drop it!", ch, obj, nullptr, TO_ROOM);
 
 	obj_from_char(obj);
 	obj_to_room(obj, ch->in_room);
@@ -1207,11 +1207,11 @@ void get_prog_bad_idea(OBJ_DATA *obj, CHAR_DATA *ch)
 		affect_to_char(ch, &af);
 
 		send_to_char("You feel very sick.  Clearly you've made someone angry.\n\r", ch);
-		act("$n looks extremely ill.", ch, 0, 0, TO_ROOM);
+		act("$n looks extremely ill.", ch, nullptr, nullptr, TO_ROOM);
 	}
 	else
 	{
-		act("'I believe you've earned a rest from your hard exertions, and a chance to enjoy the spoils of your victory.'", ch, 0, 0, TO_ALL);
+		act("'I believe you've earned a rest from your hard exertions, and a chance to enjoy the spoils of your victory.'", ch, nullptr, nullptr, TO_ALL);
 		pexit->u1.to_room = nullptr;
 
 		init_affect(&af);
@@ -1258,8 +1258,8 @@ void greet_prog_corpse_explode(OBJ_DATA *obj, CHAR_DATA *ch)
 	if (is_safe_new(ch, owner, false))
 		return;
 
-	act("As $n enters, $p starts to shudder violently, then explodes!", ch, obj, 0, TO_NOTVICT);
-	act("As you enter, $p starts to shudder violently, then explodes!", ch, obj, 0, TO_CHAR);
+	act("As $n enters, $p starts to shudder violently, then explodes!", ch, obj, nullptr, TO_NOTVICT);
+	act("As you enter, $p starts to shudder violently, then explodes!", ch, obj, nullptr, TO_CHAR);
 
 	damage_new(owner, ch, dice(obj->level, 2), TYPE_UNDEFINED, DAM_ENERGY, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the exploding corpse*");
 	extract_obj(obj);
@@ -1274,7 +1274,7 @@ void fight_prog_horde_bull([[maybe_unused]] OBJ_DATA *obj, CHAR_DATA *ch)
 		return;
 
 	send_to_char("The fortitude of the Bull fills you, inspiring you to ignore your pain and fight on.\n\r", ch);
-	act("$n's muscles ripple with fresh vigor as $s eyes harden with new resolve.", ch, 0, 0, TO_ROOM);
+	act("$n's muscles ripple with fresh vigor as $s eyes harden with new resolve.", ch, nullptr, nullptr, TO_ROOM);
 
 	ch->hit = std::min((int)ch->max_hit, ch->hit + number_range(ch->level * (short)1.2, ch->level * (short)2.2));
 }
@@ -1284,9 +1284,9 @@ void fight_prog_horde_bear([[maybe_unused]] OBJ_DATA *obj, CHAR_DATA *ch)
 	if (!is_affected(ch, gsn_rage) || !Deref(ch->fighting) || number_percent() > (.15 * get_skill(ch, gsn_rage)))
 		return;
 
-	act("The rage of the Bear roars through you as you charge into $N, sending $m sprawling!", ch, 0, Deref(ch->fighting), TO_CHAR);
-	act("$n gets a wild look in $s eyes, charging into you and sending you sprawling!", ch, 0, Deref(ch->fighting), TO_VICT);
-	act("$n gets a wild look in $s eyes, charging into $N and sending $m sprawling!", ch, 0, Deref(ch->fighting), TO_NOTVICT);
+	act("The rage of the Bear roars through you as you charge into $N, sending $m sprawling!", ch, nullptr, Deref(ch->fighting), TO_CHAR);
+	act("$n gets a wild look in $s eyes, charging into you and sending you sprawling!", ch, nullptr, Deref(ch->fighting), TO_VICT);
+	act("$n gets a wild look in $s eyes, charging into $N and sending $m sprawling!", ch, nullptr, Deref(ch->fighting), TO_NOTVICT);
 
 	WAIT_STATE(Deref(ch->fighting), (int)(PULSE_VIOLENCE * 1.9));
 
@@ -1300,9 +1300,9 @@ void fight_prog_horde_lion([[maybe_unused]] OBJ_DATA *obj, CHAR_DATA *ch)
 	if (!is_affected(ch, gsn_rage) || !Deref(ch->fighting) || number_percent() > (.18 * get_skill(ch, gsn_rage)))
 		return;
 
-	act("The spirit of the Lion surges through you as you claw at $N's flesh!", ch, 0, Deref(ch->fighting), TO_CHAR);
-	act("$n gets a wild look in $s eyes, clawing viciously at $N!", ch, 0, Deref(ch->fighting), TO_NOTVICT);
-	act("$n gets a wild look in $s eyes, clawing viciously at you!", ch, 0, Deref(ch->fighting), TO_VICT);
+	act("The spirit of the Lion surges through you as you claw at $N's flesh!", ch, nullptr, Deref(ch->fighting), TO_CHAR);
+	act("$n gets a wild look in $s eyes, clawing viciously at $N!", ch, nullptr, Deref(ch->fighting), TO_NOTVICT);
+	act("$n gets a wild look in $s eyes, clawing viciously at you!", ch, nullptr, Deref(ch->fighting), TO_VICT);
 
 	damage_new(ch, Deref(ch->fighting), dice(ch->level - 2, 4), TYPE_UNDEFINED, DAM_BASH, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "raking claws$");
 
@@ -1323,7 +1323,7 @@ void fight_prog_horde_lion([[maybe_unused]] OBJ_DATA *obj, CHAR_DATA *ch)
 	new_affect_to_char(Deref(ch->fighting), &af);
 
 	send_to_char("Blood begins to gush from your vicious wounds.\n\r", Deref(ch->fighting));
-	act("Bright red blood begins to gush from $n's wounds.", Deref(ch->fighting), 0, 0, TO_ROOM);
+	act("Bright red blood begins to gush from $n's wounds.", Deref(ch->fighting), nullptr, nullptr, TO_ROOM);
 }
 
 void fight_prog_horde_wolf([[maybe_unused]] OBJ_DATA *obj, CHAR_DATA *ch)
@@ -1333,9 +1333,9 @@ void fight_prog_horde_wolf([[maybe_unused]] OBJ_DATA *obj, CHAR_DATA *ch)
 	if (!is_affected(ch, gsn_rage) || !Deref(ch->fighting) || number_percent() > (.18 * get_skill(ch, gsn_rage)))
 		return;
 
-	act("The spirit of the Wolf enrages you as you leap at $N and sink your fangs into $S throat!", ch, 0, Deref(ch->fighting), TO_CHAR);
-	act("$n gets a wild look in $s eyes and leaps at $N, sinking $s teeth into $S throat!", ch, 0, Deref(ch->fighting), TO_NOTVICT);
-	act("$n gets a wild look in $s eyes and leaps at you, sinking $s teeth into your throat!", ch, 0, Deref(ch->fighting), TO_VICT);
+	act("The spirit of the Wolf enrages you as you leap at $N and sink your fangs into $S throat!", ch, nullptr, Deref(ch->fighting), TO_CHAR);
+	act("$n gets a wild look in $s eyes and leaps at $N, sinking $s teeth into $S throat!", ch, nullptr, Deref(ch->fighting), TO_NOTVICT);
+	act("$n gets a wild look in $s eyes and leaps at you, sinking $s teeth into your throat!", ch, nullptr, Deref(ch->fighting), TO_VICT);
 	damage_new(ch, Deref(ch->fighting), dice(ch->level, 2), TYPE_UNDEFINED, DAM_BASH, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "bite");
 
 	if (!Deref(ch->fighting))
@@ -1370,9 +1370,9 @@ void fight_prog_horde_wolf([[maybe_unused]] OBJ_DATA *obj, CHAR_DATA *ch)
 		af.end_fun = nullptr;
 		new_affect_to_char(Deref(ch->fighting), &af);
 
-		act("You hear the satisfying crunch of bone as you tear deeply into $N's throat.", ch, 0, Deref(ch->fighting), TO_CHAR);
-		act("You hear the crunch of bone as $n tears deeply into your throat.", ch, 0, Deref(ch->fighting), TO_VICT);
-		act("You hear the crunch of bone as $n tears deeply into $N's throat.", ch, 0, Deref(ch->fighting), TO_NOTVICT);
+		act("You hear the satisfying crunch of bone as you tear deeply into $N's throat.", ch, nullptr, Deref(ch->fighting), TO_CHAR);
+		act("You hear the crunch of bone as $n tears deeply into your throat.", ch, nullptr, Deref(ch->fighting), TO_VICT);
+		act("You hear the crunch of bone as $n tears deeply into $N's throat.", ch, nullptr, Deref(ch->fighting), TO_NOTVICT);
 	}
 }
 
@@ -1381,9 +1381,9 @@ void fight_prog_horde_hawk([[maybe_unused]] OBJ_DATA *obj, CHAR_DATA *ch)
 	if (!is_affected(ch, gsn_rage) || !Deref(ch->fighting) || number_percent() > (.2 * get_skill(ch, gsn_rage)))
 		return;
 
-	act("The spirit of the Hawk flows through you as you sense a weakness in $N's defenses and strike!", ch, 0, Deref(ch->fighting), TO_CHAR);
-	act("$n pauses for a moment before unleashing a well aimed blow at you.", ch, 0, Deref(ch->fighting), TO_VICT);
-	act("$n pauses for a moment before unleashing a well aimed blow at $N.", ch, 0, Deref(ch->fighting), TO_NOTVICT);
+	act("The spirit of the Hawk flows through you as you sense a weakness in $N's defenses and strike!", ch, nullptr, Deref(ch->fighting), TO_CHAR);
+	act("$n pauses for a moment before unleashing a well aimed blow at you.", ch, nullptr, Deref(ch->fighting), TO_VICT);
+	act("$n pauses for a moment before unleashing a well aimed blow at $N.", ch, nullptr, Deref(ch->fighting), TO_NOTVICT);
 
 	one_hit_new(ch, Deref(ch->fighting), TYPE_TRUESTRIKE, HIT_NOSPECIALS, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, nullptr);
 }
@@ -1487,8 +1487,8 @@ void verb_prog_check_bounties([[maybe_unused]] OBJ_DATA *obj, CHAR_DATA *ch, [[m
 
 	ch->gold -= 50;
 
-	act("You hand $N 50 gold pieces.", ch, 0, mob, TO_CHAR);
-	act("$n hands $N some gold.", ch, 0, mob, TO_ROOM);
+	act("You hand $N 50 gold pieces.", ch, nullptr, mob, TO_CHAR);
+	act("$n hands $N some gold.", ch, nullptr, mob, TO_ROOM);
 	do_emote(mob, "slips the gold into his pouch.");
 	do_say(mob, "Now then..");
 	do_emote(mob, "studies his list of bounties.");
@@ -1599,7 +1599,7 @@ void verb_prog_ilopheth_bush([[maybe_unused]] OBJ_DATA *obj, CHAR_DATA *ch, [[ma
 	}
 
 	send_to_char("With a mighty effort, you duck your head and push through the bushes to the west.\n\r", ch);
-	act("With a mighty effort, $n ducks $s head and pushes through the bushes to the west.", ch, 0, 0, TO_ROOM);
+	act("With a mighty effort, $n ducks $s head and pushes through the bushes to the west.", ch, nullptr, nullptr, TO_ROOM);
 
 	room = get_room_index(9096);
 
@@ -1626,8 +1626,8 @@ void verb_prog_ilopheth_climb_tree([[maybe_unused]] OBJ_DATA *obj, CHAR_DATA *ch
 		return;
 	}
 
-	act("You pull yourself up into the branches of the massive tree and ascend.", ch, 0, 0, TO_CHAR);
-	act("$n carefully climbs the massive tree, disappearing into the canopy.", ch, 0, 0, TO_ROOM);
+	act("You pull yourself up into the branches of the massive tree and ascend.", ch, nullptr, nullptr, TO_CHAR);
+	act("$n carefully climbs the massive tree, disappearing into the canopy.", ch, nullptr, nullptr, TO_ROOM);
 
 	char_from_room(ch);
 	char_to_room(ch, to_room);
@@ -1653,9 +1653,9 @@ void verb_prog_antava_touch_hand([[maybe_unused]] OBJ_DATA *obj, CHAR_DATA *ch, 
 		return;
 	}
 
-	act("You touch the hand of the decaying statue.", ch, 0, 0, TO_CHAR);
-	act("$n reaches up and touches the hand of the decaying statue.", ch, 0, 0, TO_ROOM);
-	act("A rusty clicking noise begins to sound from within the statue.", 0, 0, 0, TO_ROOM);
+	act("You touch the hand of the decaying statue.", ch, nullptr, nullptr, TO_CHAR);
+	act("$n reaches up and touches the hand of the decaying statue.", ch, nullptr, nullptr, TO_ROOM);
+	act("A rusty clicking noise begins to sound from within the statue.", 0, nullptr, nullptr, TO_ROOM);
 
 	if (ch->in_room->vnum != 462)
 		return;
@@ -1702,8 +1702,8 @@ void verb_prog_sidhe_climb_vine([[maybe_unused]] OBJ_DATA *obj, CHAR_DATA *ch, c
 
 	if (ch->in_room->vnum == 4101)
 	{
-		act("You slowly lower yourself down the vines, descending halfway down the tree.", ch, 0, 0, TO_CHAR);
-		act("$n carefully climbs up the vines hanging here, disappearing into the foliage.", ch, 0, 0, TO_ROOM);
+		act("You slowly lower yourself down the vines, descending halfway down the tree.", ch, nullptr, nullptr, TO_CHAR);
+		act("$n carefully climbs up the vines hanging here, disappearing into the foliage.", ch, nullptr, nullptr, TO_ROOM);
 		char_from_room(ch);
 		char_to_room(ch, down_room);
 		do_look(ch, "auto");
@@ -1712,16 +1712,16 @@ void verb_prog_sidhe_climb_vine([[maybe_unused]] OBJ_DATA *obj, CHAR_DATA *ch, c
 
 	if (!str_cmp(argument, "up"))
 	{
-		act("You test the vines, and then climb carefully upward into the tree.", ch, 0, 0, TO_CHAR);
-		act("$n carefully climbs up the vines hanging here, disappearing into the foliage.", ch, 0, 0, TO_ROOM);
+		act("You test the vines, and then climb carefully upward into the tree.", ch, nullptr, nullptr, TO_CHAR);
+		act("$n carefully climbs up the vines hanging here, disappearing into the foliage.", ch, nullptr, nullptr, TO_ROOM);
 		char_from_room(ch);
 		char_to_room(ch, up_room);
 		do_look(ch, "auto");
 	}
 	else if (!str_cmp(argument, "down"))
 	{
-		act("You slowly lower yourself down the vines, descending to the floor below.", ch, 0, 0, TO_CHAR);
-		act("$n slowly lowers $mself down the vines, descending to the floor below.", ch, 0, 0, TO_ROOM);
+		act("You slowly lower yourself down the vines, descending to the floor below.", ch, nullptr, nullptr, TO_CHAR);
+		act("$n slowly lowers $mself down the vines, descending to the floor below.", ch, nullptr, nullptr, TO_ROOM);
 		char_from_room(ch);
 		char_to_room(ch, down_room);
 		do_look(ch, "auto");
@@ -1870,8 +1870,8 @@ void verb_prog_listen_conversation([[maybe_unused]] OBJ_DATA *obj, CHAR_DATA *ch
 
 void verb_prog_rub_ball(OBJ_DATA *obj, CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
-	act("You rub the BALL OF DEATH.", ch, obj, 0, TO_CHAR);
-	act("$n rubs the BALL OF DEATH.", ch, obj, 0, TO_ROOM);
+	act("You rub the BALL OF DEATH.", ch, obj, nullptr, TO_CHAR);
+	act("$n rubs the BALL OF DEATH.", ch, obj, nullptr, TO_ROOM);
 
 	raw_kill(ch, ch);
 }
@@ -1884,8 +1884,8 @@ void verb_prog_twist_ring(OBJ_DATA *obj, CHAR_DATA *ch, [[maybe_unused]] char *a
 		return;
 	}
 
-	act("As you twist a tarnished gold ring on your finger, you feel lighter on your feet.", ch, 0, 0, TO_CHAR);
-	act("$n twists $p on his finger.", ch, obj, 0, TO_ROOM);
+	act("As you twist a tarnished gold ring on your finger, you feel lighter on your feet.", ch, nullptr, nullptr, TO_CHAR);
+	act("$n twists $p on his finger.", ch, obj, nullptr, TO_ROOM);
 	obj_cast_spell(skill_lookup("refresh"), obj->level, ch, ch, nullptr);
 
 	WAIT_STATE(ch, PULSE_VIOLENCE);
@@ -1904,28 +1904,28 @@ void verb_prog_twist_two_faced([[maybe_unused]] OBJ_DATA *obj, CHAR_DATA *ch, ch
 	if (!strcmp(argument, "clockwise"))
 	{
 		send_to_char("You twist the sundial clockwise.\n\r", ch);
-		act("$n twists the sundial clockwise.", ch, 0, 0, TO_ROOM);
+		act("$n twists the sundial clockwise.", ch, nullptr, nullptr, TO_ROOM);
 		nChance = 35;
 	}
 	else
 	{
 		send_to_char("You twist the sundial counterclockwise.\n\r", ch);
-		act("$n twists the sundial counterclockwise.", ch, 0, 0, TO_ROOM);
+		act("$n twists the sundial counterclockwise.", ch, nullptr, nullptr, TO_ROOM);
 		nChance = 65;
 	}
 
 	if (number_percent() > nChance)
 	{
-		act("The faces of the statue seem to grin maniacally.", ch, 0, 0, TO_ALL);
+		act("The faces of the statue seem to grin maniacally.", ch, nullptr, nullptr, TO_ALL);
 		send_to_char("A stream of acid shoots out of the mouth of the statue at you!\n\r", ch);
-		act("A stream of acid shoots out of the mouth of the statue at $n!", ch, 0, 0, TO_ROOM);
+		act("A stream of acid shoots out of the mouth of the statue at $n!", ch, nullptr, nullptr, TO_ROOM);
 		spell_acid_stream(gsn_acid_stream, ch->level + 1, ch, ch, CastMode::Spell);
 
 		if (ch->ghost)
 			return;
 
 		send_to_char("A small dart flies out of the eye of the statue, barely piercing your skin.\n\r", ch);
-		act("A small dart flies out of the eye of the statue, barely piercing $n's skin.", ch, 0, 0, TO_ROOM);
+		act("A small dart flies out of the eye of the statue, barely piercing $n's skin.", ch, nullptr, nullptr, TO_ROOM);
 		spell_plague(gsn_plague, ch->level + 5, ch, ch, CastMode::Spell);
 	}
 	else
@@ -1965,8 +1965,8 @@ void verb_prog_energize_tattoo(OBJ_DATA *obj, CHAR_DATA *ch, [[maybe_unused]] ch
 		return;
 	}
 
-	act("You attempt to siphon some energy from $N to power your tattoo.", ch, 0, Deref(ch->fighting), TO_CHAR);
-	act("You feel a cold sensation run through your body.", ch, 0, Deref(ch->fighting), TO_VICT);
+	act("You attempt to siphon some energy from $N to power your tattoo.", ch, nullptr, Deref(ch->fighting), TO_CHAR);
+	act("You feel a cold sensation run through your body.", ch, nullptr, Deref(ch->fighting), TO_VICT);
 
 	if (!saves_spell(ch->level, Deref(ch->fighting), DAM_NEGATIVE))
 	{
@@ -2059,8 +2059,8 @@ void verb_prog_harness_crystal(OBJ_DATA *obj, CHAR_DATA *ch, [[maybe_unused]] ch
 		efficiency = number_range(5, 20);
 	}
 
-	act("Focusing intently on the charged crystal, you harness the energy stored within.", ch, 0, 0, TO_CHAR);
-	act("$n focuses intently on a glowing crystal in $s hands.", ch, 0, 0, TO_ROOM);
+	act("Focusing intently on the charged crystal, you harness the energy stored within.", ch, nullptr, nullptr, TO_CHAR);
+	act("$n focuses intently on a glowing crystal in $s hands.", ch, nullptr, nullptr, TO_ROOM);
 
 	mana = oaf->modifier;
 
@@ -2068,11 +2068,11 @@ void verb_prog_harness_crystal(OBJ_DATA *obj, CHAR_DATA *ch, [[maybe_unused]] ch
 
 	if (efficiency <= 20 && number_percent() > 50)
 	{
-		act("The crystal crumbles into dust and the energy dissipates as your focus falters.", ch, 0, 0, TO_CHAR);
+		act("The crystal crumbles into dust and the energy dissipates as your focus falters.", ch, nullptr, nullptr, TO_CHAR);
 		return;
 	}
 
-	act("The crystal crumbles to dust as you harness the mana stored within.", ch, 0, 0, TO_CHAR);
+	act("The crystal crumbles to dust as you harness the mana stored within.", ch, nullptr, nullptr, TO_CHAR);
 
 	mana *= efficiency;
 	mana /= 100;
@@ -2184,13 +2184,13 @@ void verb_prog_fire_pistol(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 
 	if (ch == victim)
 	{
-		act("Oh no!  $n puts $p in $s mouth and pulls the trigger!", ch, obj, 0, TO_ROOM);
+		act("Oh no!  $n puts $p in $s mouth and pulls the trigger!", ch, obj, nullptr, TO_ROOM);
 		send_to_char("Don't do it, man!\n\r", ch);
-		act("You put $p in your mouth and pull the trigger!", ch, obj, 0, TO_CHAR);
+		act("You put $p in your mouth and pull the trigger!", ch, obj, nullptr, TO_CHAR);
 	}
 	else
 	{
-		act("You pull the trigger and bust a cap in $N's ass!", ch, 0, victim, TO_CHAR);
+		act("You pull the trigger and bust a cap in $N's ass!", ch, nullptr, victim, TO_CHAR);
 		act("$n turns $p sideways and busts a cap in yo ass!", ch, obj, victim, TO_VICT);
 		act("$n turns $p sideways and busts a cap in $N's ass!", ch, obj, victim, TO_NOTVICT);
 	}
@@ -2204,11 +2204,11 @@ void verb_prog_kneel_guillotine([[maybe_unused]] OBJ_DATA *obj, CHAR_DATA *ch, [
 {
 	ROOM_INDEX_DATA *old_room = ch->in_room;
 
-	act("You place your neck across the wooden bar of the guillotine.", ch, 0, 0, TO_CHAR);
-	act("$n places $s neck across the wooden bar of the guillotine.", ch, 0, 0, TO_ROOM);
+	act("You place your neck across the wooden bar of the guillotine.", ch, nullptr, nullptr, TO_CHAR);
+	act("$n places $s neck across the wooden bar of the guillotine.", ch, nullptr, nullptr, TO_ROOM);
 
-	act("The whistle of metal slicing through the air is the last thing you hear.", ch, 0, 0, TO_CHAR);
-	act("The razor-sharp blade drops rapidly, slicing $n's head clean from $s body!", ch, 0, 0, TO_ROOM);
+	act("The whistle of metal slicing through the air is the last thing you hear.", ch, nullptr, nullptr, TO_CHAR);
+	act("The razor-sharp blade drops rapidly, slicing $n's head clean from $s body!", ch, nullptr, nullptr, TO_ROOM);
 
 	raw_kill(ch, ch);
 
@@ -2229,7 +2229,7 @@ void hit_prog_blade_truth(OBJ_DATA *obj, CHAR_DATA *ch, CHAR_DATA *victim, [[may
 	if ((get_eq_char(ch, WEAR_DUAL_WIELD)) == obj)
 		dual = true;
 
-	act("$p blurs into motion as it whistles through the air.", ch, obj, 0, TO_ALL);
+	act("$p blurs into motion as it whistles through the air.", ch, obj, nullptr, TO_ALL);
 
 	if (dual)
 		one_hit(ch, victim, gsn_dual_wield);
@@ -2276,8 +2276,8 @@ void hit_prog_essence_light(OBJ_DATA *obj, CHAR_DATA *ch, CHAR_DATA *victim, int
 				{
 					case 1:
 					case 2:
-						act("You reel in agony as the raw energy engulfs you!", victim, 0, ch, TO_CHAR);
-						act("$n staggers as the raw energy engulfs $m!", victim, 0, ch, TO_ROOM);
+						act("You reel in agony as the raw energy engulfs you!", victim, nullptr, ch, TO_CHAR);
+						act("$n staggers as the raw energy engulfs $m!", victim, nullptr, ch, TO_ROOM);
 						LAG_CHAR(victim, PULSE_VIOLENCE);
 						break;
 				}
@@ -2311,8 +2311,8 @@ void hit_prog_essence_darkness(OBJ_DATA *obj, CHAR_DATA *ch, CHAR_DATA *victim, 
 
 	if (!is_affected(victim, gsn_curse) && number_percent() <= 25)
 	{
-		act("A black aura briefly envelops $n as the darkness touches $s flesh.", victim, 0, ch, TO_ROOM);
-		act("You feel a taint wash over you as the darkness touches your flesh.", victim, 0, ch, TO_CHAR);
+		act("A black aura briefly envelops $n as the darkness touches $s flesh.", victim, nullptr, ch, TO_ROOM);
+		act("You feel a taint wash over you as the darkness touches your flesh.", victim, nullptr, ch, TO_CHAR);
 
 		init_affect(&af);
 		af.where = TO_AFFECTS;
@@ -2340,8 +2340,8 @@ void hit_prog_essence_darkness(OBJ_DATA *obj, CHAR_DATA *ch, CHAR_DATA *victim, 
 			dual = true;
 
 		act("$p writhes in your hands and strikes anew, thirsty for blood!", ch, obj, victim, TO_CHAR);
-		act("A mournful wail is audible as $n's black hands lash out at $N!", ch, 0, victim, TO_NOTVICT);
-		act("A mournful wail is audible as $n's black hands lash out at you!", ch, 0, victim, TO_VICT);
+		act("A mournful wail is audible as $n's black hands lash out at $N!", ch, nullptr, victim, TO_NOTVICT);
+		act("A mournful wail is audible as $n's black hands lash out at you!", ch, nullptr, victim, TO_VICT);
 
 		if (dual)
 			one_hit(ch, victim, gsn_dual_wield);
@@ -2368,19 +2368,19 @@ void fight_prog_essence_darkness(OBJ_DATA *obj, CHAR_DATA *ch)
 	switch (number_range(1, 3))
 	{
 		case 1:
-			act("A cloud of putrefaction issues forth from your hands!", ch, 0, victim, TO_CHAR);
-			act("A cloud of putrefaction issues forth from $n's hands!", ch, 0, victim, TO_ROOM);
+			act("A cloud of putrefaction issues forth from your hands!", ch, nullptr, victim, TO_CHAR);
+			act("A cloud of putrefaction issues forth from $n's hands!", ch, nullptr, victim, TO_ROOM);
 			obj_cast_spell(skill_lookup("plague"), ch->level, ch, victim, obj);
 			break;
 		case 2:
-			act("Your eyes cloud suddenly with a black haze!", victim, 0, ch, TO_CHAR);
-			act("A swirling black cloud encircles $n's face!", victim, 0, ch, TO_ROOM);
+			act("Your eyes cloud suddenly with a black haze!", victim, nullptr, ch, TO_CHAR);
+			act("A swirling black cloud encircles $n's face!", victim, nullptr, ch, TO_ROOM);
 			obj_cast_spell(skill_lookup("blindness"), ch->level, ch, victim, obj);
 			break;
 		case 3:
-			act("Darkness lashes out from $N's hands to engulf you!", victim, 0, ch, TO_CHAR);
-			act("Darkness lashes out from $N's hands to engulf $n!", victim, 0, ch, TO_NOTVICT);
-			act("Darkness lashes out from your hands to engulf $n!", victim, 0, ch, TO_VICT);
+			act("Darkness lashes out from $N's hands to engulf you!", victim, nullptr, ch, TO_CHAR);
+			act("Darkness lashes out from $N's hands to engulf $n!", victim, nullptr, ch, TO_NOTVICT);
+			act("Darkness lashes out from your hands to engulf $n!", victim, nullptr, ch, TO_VICT);
 			obj_cast_spell(skill_lookup("energy drain"), ch->level, ch, victim, obj);
 			break;
 	}
@@ -2391,8 +2391,8 @@ void verb_prog_rub_talisman(OBJ_DATA *obj, CHAR_DATA *ch, [[maybe_unused]] char 
 	int sn = skill_lookup("word of recall");
 	SpellTarget vo = ch;
 
-	act("You rub a worn patch of the wooden talisman.", ch, 0, 0, TO_CHAR);
-	act("$n vigorously rubs $p.", ch, obj, 0, TO_ROOM);
+	act("You rub a worn patch of the wooden talisman.", ch, nullptr, nullptr, TO_CHAR);
+	act("$n vigorously rubs $p.", ch, obj, nullptr, TO_ROOM);
 
 	WAIT_STATE(ch, PULSE_VIOLENCE);
 
@@ -2407,7 +2407,7 @@ void verb_prog_rub_talisman(OBJ_DATA *obj, CHAR_DATA *ch, [[maybe_unused]] char 
 
 	(*skill_table[sn].spell_fun)(sn, ch->level, ch, vo, CastMode::Spell);
 
-	act("$p crumbles into dust as the magic drains from it.", ch, obj, 0, TO_CHAR);
+	act("$p crumbles into dust as the magic drains from it.", ch, obj, nullptr, TO_CHAR);
 
 	extract_obj(obj);
 }
@@ -2433,7 +2433,7 @@ void verb_prog_gate_talisman([[maybe_unused]] OBJ_DATA *obj, CHAR_DATA *ch, char
 
 	send_to_char("The talisman flickers and feels warm for a moment, and you are elsewhere.\n\r", ch);
 
-	act("A rift opens in midair beside $n and $e steps in and vanishes.", ch, 0, 0, TO_ROOM);
+	act("A rift opens in midair beside $n and $e steps in and vanishes.", ch, nullptr, nullptr, TO_ROOM);
 
 	char_from_room(ch);
 	char_to_room(ch, to_room);
@@ -2479,7 +2479,7 @@ void pulse_prog_pillar_zap(OBJ_DATA *obj, [[maybe_unused]] bool isTick)
 
 	sprintf(buf, "\x01B[1;34mThe pillars crackle suddenly with raw energy and emit a beam of blinding light!\x01B[0m");
 
-	act(buf, room->people, 0, 0, TO_ALL);
+	act(buf, room->people, nullptr, nullptr, TO_ALL);
 
 	for (mob = room->people; mob; mob = mob_next)
 	{
@@ -2487,7 +2487,7 @@ void pulse_prog_pillar_zap(OBJ_DATA *obj, [[maybe_unused]] bool isTick)
 
 		if (is_npc(mob) && (IS_SET(mob->act, ACT_UNDEAD) || IS_SET(mob->form, FORM_UNDEAD)))
 		{
-			act("$n dissolves into dust as the shining blue light sweeps over it!", mob, 0, 0, TO_ROOM);
+			act("$n dissolves into dust as the shining blue light sweeps over it!", mob, nullptr, nullptr, TO_ROOM);
 			extract_char(mob, true);
 		}
 	}
@@ -2555,14 +2555,14 @@ bool open_prog_sewer_casket(OBJ_DATA *obj, CHAR_DATA *ch)
 	REMOVE_BIT_OLD(obj->value[1], CONT_CLOSED);
 
 	send_to_char("You slide the heavy lid off the stone burial casket.\n\r", ch);
-	act("$n slides the heavy lid off the stone burial casket.", ch, 0, 0, TO_ROOM);
+	act("$n slides the heavy lid off the stone burial casket.", ch, nullptr, nullptr, TO_ROOM);
 
 	skeleton = create_mobile(get_mob_index(2200));
 
 	char_to_room(skeleton, ch->in_room);
-	act("Dust fills the burial chamber, and as it clears....", ch, 0, 0, TO_ALL);
-	act("$N rises out of the casket and lunges at you!", ch, 0, skeleton, TO_CHAR);
-	act("$N rises out of the casket and lunges at $n!", ch, 0, skeleton, TO_ROOM);
+	act("Dust fills the burial chamber, and as it clears....", ch, nullptr, nullptr, TO_ALL);
+	act("$N rises out of the casket and lunges at you!", ch, nullptr, skeleton, TO_CHAR);
+	act("$N rises out of the casket and lunges at $n!", ch, nullptr, skeleton, TO_ROOM);
 
 	do_murder(skeleton, ch->name);
 
@@ -2579,8 +2579,8 @@ void verb_prog_pull_hook([[maybe_unused]] OBJ_DATA *obj, CHAR_DATA *ch, [[maybe_
 
 	if (!IS_SET(pexit->exit_info, EX_CLOSED) || !IS_SET(pexit->exit_info, EX_LOCKED))
 	{
-		act("You tug on a metal hook inside a notch in the marble and nothing happens.", ch, 0, 0, TO_CHAR);
-		act("$n tugs on a metal hook inside a notch in the marble.", ch, 0, 0, TO_ROOM);
+		act("You tug on a metal hook inside a notch in the marble and nothing happens.", ch, nullptr, nullptr, TO_CHAR);
+		act("$n tugs on a metal hook inside a notch in the marble.", ch, nullptr, nullptr, TO_ROOM);
 		return;
 	}
 
@@ -2589,7 +2589,7 @@ void verb_prog_pull_hook([[maybe_unused]] OBJ_DATA *obj, CHAR_DATA *ch, [[maybe_
 
 	send_to_char("You tug on a hook of metal inside this notch.\n\r", ch);
 	act("$n tugs on a small metal hook inside a notch in the marble.", ch, nullptr, pexit->keyword, TO_ROOM);
-	act("A soft click is audible and then the southern wall slides noisily open!", ch, 0, 0, TO_ALL);
+	act("A soft click is audible and then the southern wall slides noisily open!", ch, nullptr, nullptr, TO_ALL);
 
 	if ((to_room = pexit->u1.to_room) != nullptr
 		&& (pexit_rev = to_room->exit[0]) != nullptr
@@ -2624,21 +2624,21 @@ void verb_prog_turn_spindle(OBJ_DATA *obj, CHAR_DATA *ch, [[maybe_unused]] char 
 			dir = Directions::Up;
 			break;
 		default:
-			act("You turn the wheel and it spins rapidly, seemingly unattached to anything.", ch, 0, 0, TO_CHAR);
-			act("$n turns the wheel and it spins rapidly, seemingly unattached to anything.", ch, 0, 0, TO_ROOM);
+			act("You turn the wheel and it spins rapidly, seemingly unattached to anything.", ch, nullptr, nullptr, TO_CHAR);
+			act("$n turns the wheel and it spins rapidly, seemingly unattached to anything.", ch, nullptr, nullptr, TO_ROOM);
 			return;
 	}
 
 	pexit = room->exit[dir];
 
-	act("The spindle wheel creaks loudly as you turn it....", ch, 0, 0, TO_CHAR);
-	act("The spindle wheel creaks loudly as $n turns it....", ch, 0, 0, TO_ROOM);
+	act("The spindle wheel creaks loudly as you turn it....", ch, nullptr, nullptr, TO_CHAR);
+	act("The spindle wheel creaks loudly as $n turns it....", ch, nullptr, nullptr, TO_ROOM);
 
 	direction = flag_name_lookup(dir, direction_table);
 
 	if (IS_SET(pexit->exit_info, EX_CLOSED))
 	{
-		act("A massive rusted grate slides noisily open, revealing a tunnel $tward!", ch, direction, 0, TO_ALL);
+		act("A massive rusted grate slides noisily open, revealing a tunnel $tward!", ch, direction, nullptr, TO_ALL);
 
 		REMOVE_BIT(pexit->exit_info, EX_CLOSED);
 		REMOVE_BIT(pexit->exit_info, EX_LOCKED);
@@ -2648,12 +2648,12 @@ void verb_prog_turn_spindle(OBJ_DATA *obj, CHAR_DATA *ch, [[maybe_unused]] char 
 		if (pexit->u1.to_room->people)
 		{
 			revdir = flag_name_lookup(reverse_d(dir), direction_table);
-			act("A massive rusted grate slides noisily open, revealing a tunnel $tward!", ch, revdir, 0, TO_ALL);
+			act("A massive rusted grate slides noisily open, revealing a tunnel $tward!", ch, revdir, nullptr, TO_ALL);
 		}
 	}
 	else
 	{
-		act("A massive rusted grates slides noisily shut, barring the tunnel $tward!", ch, direction, 0, TO_ALL);
+		act("A massive rusted grates slides noisily shut, barring the tunnel $tward!", ch, direction, nullptr, TO_ALL);
 
 		SET_BIT(pexit->exit_info, EX_CLOSED);
 		SET_BIT(pexit->exit_info, EX_LOCKED);
@@ -2663,7 +2663,7 @@ void verb_prog_turn_spindle(OBJ_DATA *obj, CHAR_DATA *ch, [[maybe_unused]] char 
 		if (pexit->u1.to_room->people)
 		{
 			revdir = flag_name_lookup(reverse_d(dir), direction_table);
-			act("A massive rusted grate slides noisily shut, revealing a tunnel $tward!", ch, revdir, 0, TO_ALL);
+			act("A massive rusted grate slides noisily shut, revealing a tunnel $tward!", ch, revdir, nullptr, TO_ALL);
 		}
 	}
 }
@@ -3161,8 +3161,8 @@ void pulse_prog_cimar_babies(OBJ_DATA *obj, [[maybe_unused]] bool isTick)
 	if (number_percent() <= 98 || is_affected_obj(obj, gsn_bash))
 		return;
 
-	act("$p begins wailing, its squalling face turning bright red.", ch, obj, 0, TO_CHAR);
-	act("$n's baby begins wailing...", ch, obj, 0, TO_ROOM);
+	act("$p begins wailing, its squalling face turning bright red.", ch, obj, nullptr, TO_CHAR);
+	act("$n's baby begins wailing...", ch, obj, nullptr, TO_ROOM);
 }
 
 void verb_prog_feed_baby(OBJ_DATA *obj, CHAR_DATA *ch, [[maybe_unused]] char *argument)
@@ -3192,8 +3192,8 @@ void verb_prog_feed_baby(OBJ_DATA *obj, CHAR_DATA *ch, [[maybe_unused]] char *ar
 		return;
 	}
 
-	act("$p greedily begins to feed from a bladder of milk.", ch, obj, 0, TO_CHAR);
-	act("$n's baby greedily begins to feed.", ch, 0, 0, TO_ROOM);
+	act("$p greedily begins to feed from a bladder of milk.", ch, obj, nullptr, TO_CHAR);
+	act("$n's baby greedily begins to feed.", ch, nullptr, nullptr, TO_ROOM);
 	milk->value[1] = 0;
 
 	RS.Queue.AddToQueue(12, "verb_prog_feed_baby", "act_queue", act_queue, "$p drifts off to sleep.", ch, obj, nullptr, TO_CHAR);
@@ -3224,8 +3224,8 @@ void baby_end(OBJ_DATA *obj, [[maybe_unused]] OBJ_AFFECT_DATA *af)
 	if (ch == nullptr)
 		return;
 
-	act("$p suddenly wakens and looks around curiously.", ch, obj, 0, TO_CHAR);
-	act("$n's baby wakes up.", ch, 0, 0, TO_ROOM);
+	act("$p suddenly wakens and looks around curiously.", ch, obj, nullptr, TO_CHAR);
+	act("$n's baby wakes up.", ch, nullptr, nullptr, TO_ROOM);
 }
 
 void baby_burp(OBJ_DATA *obj, [[maybe_unused]] OBJ_AFFECT_DATA *af)
@@ -3235,8 +3235,8 @@ void baby_burp(OBJ_DATA *obj, [[maybe_unused]] OBJ_AFFECT_DATA *af)
 	if (ch == nullptr)
 		return;
 
-	act("$p burps loudly.", ch, obj, 0, TO_CHAR);
-	act("$n's baby burps loudly.", ch, 0, 0, TO_ROOM);
+	act("$p burps loudly.", ch, obj, nullptr, TO_CHAR);
+	act("$n's baby burps loudly.", ch, nullptr, nullptr, TO_ROOM);
 }
 
 void verb_prog_pull_book([[maybe_unused]] OBJ_DATA *obj, CHAR_DATA *ch, [[maybe_unused]] char *argument)
@@ -3246,7 +3246,7 @@ void verb_prog_pull_book([[maybe_unused]] OBJ_DATA *obj, CHAR_DATA *ch, [[maybe_
 
 	if (!IS_SET(pexit->exit_info, EX_CLOSED))
 	{
-		act("The book snaps back into the shelf.", ch, 0, 0, TO_ALL);
+		act("The book snaps back into the shelf.", ch, nullptr, nullptr, TO_ALL);
 		return;
 	}
 
@@ -3254,10 +3254,10 @@ void verb_prog_pull_book([[maybe_unused]] OBJ_DATA *obj, CHAR_DATA *ch, [[maybe_
 	REMOVE_BIT(pexit->exit_info, EX_CLOSED);
 	REMOVE_BIT(pexit->exit_info, EX_NONOBVIOUS);
 
-	act("You pull The Tome of the Caverns from the shelf.", ch, 0, 0, TO_CHAR);
-	act("$n pulls a book from the shelf.", ch, 0, 0, TO_ROOM);
-	act("The book snaps back into the shelf, and a creaking sound fills the air!", ch, 0, 0, TO_ALL);
-	act("A trap door in the floor swings open.", ch, 0, 0, TO_ALL);
+	act("You pull The Tome of the Caverns from the shelf.", ch, nullptr, nullptr, TO_CHAR);
+	act("$n pulls a book from the shelf.", ch, nullptr, nullptr, TO_ROOM);
+	act("The book snaps back into the shelf, and a creaking sound fills the air!", ch, nullptr, nullptr, TO_ALL);
+	act("A trap door in the floor swings open.", ch, nullptr, nullptr, TO_ALL);
 
 	init_affect_room(&raf);
 	raf.where = TO_ROOM_AFFECTS;
@@ -3284,7 +3284,7 @@ void trapdoor_end(ROOM_INDEX_DATA *room, [[maybe_unused]] ROOM_AFFECT_DATA *af)
 		CHAR_DATA *ch = walk.Current();
 
 		if (ch->in_room == room)
-			act("A creaking sound fills the air, and a trap door in the floor swings shut.", ch, 0, 0, TO_CHAR);
+			act("A creaking sound fills the air, and a trap door in the floor swings shut.", ch, nullptr, nullptr, TO_CHAR);
 	}
 }
 
@@ -3307,11 +3307,11 @@ bool open_prog_beef_balls([[maybe_unused]] OBJ_DATA *obj, CHAR_DATA *ch)
 		}
 	}
 
-	act("The trapped aroma of the beef balls wafts through the air like a brick.", ch, 0, 0, TO_CHAR);
+	act("The trapped aroma of the beef balls wafts through the air like a brick.", ch, nullptr, nullptr, TO_CHAR);
 
 	if (found && ch->pcdata->quests[PETE_QUEST] == 1)
 	{
-		act("$N's eyes go wild at the odor, and he leaps to his feet!", ch, 0, mob, TO_ALL);
+		act("$N's eyes go wild at the odor, and he leaps to his feet!", ch, nullptr, mob, TO_ALL);
 		mprog_say(2, "Please!  Please, please, please, Pete must have that bag, please!  Will please give you information you like!", mob, ch);
 		ch->pcdata->quests[PETE_QUEST] = 2;
 	}
@@ -3408,7 +3408,7 @@ void verb_prog_attach_weapon(OBJ_DATA *obj, CHAR_DATA *ch, [[maybe_unused]] char
 		return;
 	}
 
-	act("You attach $p to a long wooden pole.", ch, obj, 0, TO_CHAR);
+	act("You attach $p to a long wooden pole.", ch, obj, nullptr, TO_CHAR);
 
 	switch (obj->pIndexData->vnum)
 	{
@@ -3520,8 +3520,8 @@ void verb_prog_pull_lever(OBJ_DATA *obj, CHAR_DATA *ch, [[maybe_unused]] char *a
 
 	mob = create_mobile(get_mob_index(vnum));
 	char_to_room(mob, ch->in_room);
-	act(buf2, ch, 0, 0, TO_ROOM);
-	act(buf, ch, 0, 0, TO_CHAR);
+	act(buf2, ch, nullptr, nullptr, TO_ROOM);
+	act(buf, ch, nullptr, nullptr, TO_CHAR);
 	one_hit(ch, mob, TYPE_UNDEFINED);
 
 	WAIT_STATE(ch, PULSE_VIOLENCE);
@@ -3550,8 +3550,8 @@ void verb_prog_tie_rope(OBJ_DATA *obj, CHAR_DATA *ch, [[maybe_unused]] char *arg
 		return;
 	}
 
-	act("You tie a length of rope between the wheel and the metal plate.", ch, 0, 0, TO_CHAR);
-	act("$n ties a length of rope between the wheel and the metal plate.", ch, 0, 0, TO_ROOM);
+	act("You tie a length of rope between the wheel and the metal plate.", ch, nullptr, nullptr, TO_CHAR);
+	act("$n ties a length of rope between the wheel and the metal plate.", ch, nullptr, nullptr, TO_ROOM);
 
 	init_affect_obj(&oaf);
 	oaf.where = TO_OBJ_AFFECTS;
@@ -3579,8 +3579,8 @@ void verb_prog_turn_wheel(OBJ_DATA *obj, CHAR_DATA *ch, [[maybe_unused]] char *a
 	REMOVE_BIT(exit->exit_info, EX_NOPASS);
 	REMOVE_BIT(exit->exit_info, EX_CLOSED);
 
-	act("You spin the wheel like a crank, and the rope hauls the metal plate up easily!", ch, 0, 0, TO_CHAR);
-	act("$n spins the wheel and a metal plate in the floor opens!", ch, 0, 0, TO_ROOM);
+	act("You spin the wheel like a crank, and the rope hauls the metal plate up easily!", ch, nullptr, nullptr, TO_CHAR);
+	act("$n spins the wheel and a metal plate in the floor opens!", ch, nullptr, nullptr, TO_ROOM);
 }
 
 void rope_end(OBJ_DATA *obj, [[maybe_unused]] OBJ_AFFECT_DATA *af)
@@ -3596,7 +3596,7 @@ void rope_end(OBJ_DATA *obj, [[maybe_unused]] OBJ_AFFECT_DATA *af)
 	if (!room->people)
 		return;
 
-	act("As the rope breaks, the metal plate slams back into the floor.", room->people, 0, 0, TO_ALL);
+	act("As the rope breaks, the metal plate slams back into the floor.", room->people, nullptr, nullptr, TO_ALL);
 }
 
 void verb_prog_tilt_bust([[maybe_unused]] OBJ_DATA *obj, CHAR_DATA *ch, [[maybe_unused]] char *argument)
@@ -3605,14 +3605,14 @@ void verb_prog_tilt_bust([[maybe_unused]] OBJ_DATA *obj, CHAR_DATA *ch, [[maybe_
 
 	if (!IS_SET(exit->exit_info, EX_CLOSED))
 	{
-		act("$n tilts the bust backwards.", ch, 0, 0, TO_ROOM);
-		act("You tilt the bust backwards.", ch, 0, 0, TO_CHAR);
+		act("$n tilts the bust backwards.", ch, nullptr, nullptr, TO_ROOM);
+		act("You tilt the bust backwards.", ch, nullptr, nullptr, TO_CHAR);
 		return;
 	}
 
-	act("You tilt the bust backwards.", ch, 0, 0, TO_CHAR);
-	act("$n tilts the bust backwards.", ch, 0, 0, TO_ROOM);
-	act("The south wall slides back silently, revealing a doorway!", ch, 0, 0, TO_ALL);
+	act("You tilt the bust backwards.", ch, nullptr, nullptr, TO_CHAR);
+	act("$n tilts the bust backwards.", ch, nullptr, nullptr, TO_ROOM);
+	act("The south wall slides back silently, revealing a doorway!", ch, nullptr, nullptr, TO_ALL);
 
 	REMOVE_BIT(exit->exit_info, EX_LOCKED);
 	REMOVE_BIT(exit->exit_info, EX_CLOSED);
@@ -3639,7 +3639,7 @@ void verb_prog_roll_tablet([[maybe_unused]] OBJ_DATA *obj, CHAR_DATA *ch, [[mayb
 	REMOVE_BIT(exit->exit_info, EX_CLOSED);
 	REMOVE_BIT(exit->exit_info, EX_LOCKED);
 
-	act("Grunting with the effort, you slowly roll the huge stone tablet to the side of the tunnel.", ch, 0, 0, TO_CHAR);
+	act("Grunting with the effort, you slowly roll the huge stone tablet to the side of the tunnel.", ch, nullptr, nullptr, TO_CHAR);
 }
 
 void close_elevator(ROOM_INDEX_DATA *pRoom)
@@ -3652,8 +3652,8 @@ void close_elevator(ROOM_INDEX_DATA *pRoom)
 	{
 		if (pRoom->exit[i] && pRoom->exit[i]->u1.to_room)
 		{
-			act(mmsg, pRoom->exit[i]->u1.to_room->people, 0, 0, TO_ALL);
-			act(mmsg, pRoom->people, 0, 0, TO_ALL);
+			act(mmsg, pRoom->exit[i]->u1.to_room->people, nullptr, nullptr, TO_ALL);
+			act(mmsg, pRoom->people, nullptr, nullptr, TO_ALL);
 
 			toRoom = pRoom->exit[i]->u1.to_room;
 
@@ -3670,8 +3670,8 @@ void open_elevator(ROOM_INDEX_DATA *eleRoom, ROOM_INDEX_DATA *toRoom)
 	int i;
 	const char omsg[] = "The doors to the lift slide open with a loud clang.";
 
-	act(omsg, eleRoom->people, 0, 0, TO_ALL);
-	act(omsg, toRoom->people, 0, 0, TO_ALL);
+	act(omsg, eleRoom->people, nullptr, nullptr, TO_ALL);
+	act(omsg, toRoom->people, nullptr, nullptr, TO_ALL);
 
 	eleRoom->mana_rate = 100;
 
@@ -3698,7 +3698,7 @@ void act_to_room(void *vo1, void *vo2)
 	if (!pRoom->people)
 		return;
 
-	act((char *)vo1, pRoom->people, 0, 0, TO_ALL);
+	act((char *)vo1, pRoom->people, nullptr, nullptr, TO_ALL);
 }
 
 void act_to_room_queue(std::string format, ROOM_INDEX_DATA *room)
@@ -3733,7 +3733,7 @@ void verb_prog_iseldheim_lever_pull(OBJ_DATA *obj, CHAR_DATA *ch, [[maybe_unused
 	if (elInTransit || eleRoom->mana_rate == 101)
 	{
 		send_to_char("You pull the lever, but nothing seems to happen.\n\r", ch);
-		act("$n pulls the lever, but nothing seems to happen.", ch, 0, 0, TO_ROOM);
+		act("$n pulls the lever, but nothing seems to happen.", ch, nullptr, nullptr, TO_ROOM);
 		return;
 	}
 
@@ -3756,8 +3756,8 @@ void verb_prog_iseldheim_lever_pull(OBJ_DATA *obj, CHAR_DATA *ch, [[maybe_unused
 		RS.Queue.AddToQueue(9, "verb_prog_iseldheim_lever_pull", "act_to_room_queue", act_to_room_queue, "The lift shudders as it slowly comes to a halt.", eleRoom);
 		RS.Queue.AddToQueue(10, "verb_prog_iseldheim_lever_pull", "open_elevator", open_elevator, eleRoom, lRoom);
 
-		act("You pull the lever into the down position.", ch, 0, 0, TO_CHAR);
-		act("$n pulls the lever into the down position.", ch, 0, 0, TO_ROOM);
+		act("You pull the lever into the down position.", ch, nullptr, nullptr, TO_CHAR);
+		act("$n pulls the lever into the down position.", ch, nullptr, nullptr, TO_ROOM);
 	}
 	else if (lRoom->exit[eDir]->u1.to_room)
 	{ // elevator is here, we can send it back up
@@ -3770,8 +3770,8 @@ void verb_prog_iseldheim_lever_pull(OBJ_DATA *obj, CHAR_DATA *ch, [[maybe_unused
 		RS.Queue.AddToQueue(9, "verb_prog_iseldheim_lever_pull", "act_to_room_queue", act_to_room_queue, "The lift shudders as it slowly comes to a halt.", eleRoom);
 		RS.Queue.AddToQueue(10, "verb_prog_iseldheim_lever_pull", "open_elevator", open_elevator, eleRoom, tRoom);
 
-		act("You pull the lever into the up position.", ch, 0, 0, TO_CHAR);
-		act("$n pulls the lever into the up position.", ch, 0, 0, TO_ROOM);
+		act("You pull the lever into the up position.", ch, nullptr, nullptr, TO_CHAR);
+		act("$n pulls the lever into the up position.", ch, nullptr, nullptr, TO_ROOM);
 	}
 }
 
@@ -3782,9 +3782,9 @@ void fight_prog_bugzapper(OBJ_DATA *obj, CHAR_DATA *ch)
 	if (!victim || !is_npc(victim) || victim->pIndexData->vnum < 3000 || victim->pIndexData->vnum > 3010 || !is_worn(obj))
 		return;
 
-	act("$n shrinks back suddenly at the sight of $p.", victim, obj, 0, TO_ROOM);
-	act("Imbued with newfound vigor, you hack mercilessly at $n.", victim, 0, ch, TO_VICT);
-	act("$N suddenly strikes $n with a brutal blow.", victim, 0, ch, TO_NOTVICT);
+	act("$n shrinks back suddenly at the sight of $p.", victim, obj, nullptr, TO_ROOM);
+	act("Imbued with newfound vigor, you hack mercilessly at $n.", victim, nullptr, ch, TO_VICT);
+	act("$N suddenly strikes $n with a brutal blow.", victim, nullptr, ch, TO_NOTVICT);
 	one_hit_new(ch, victim, TYPE_UNDEFINED, HIT_NOSPECIALS, HIT_UNBLOCKABLE, HIT_NOADD, 700, nullptr);
 }
 
@@ -3801,12 +3801,12 @@ void fight_prog_arms_light(OBJ_DATA *obj, CHAR_DATA *ch)
 
 	if (number_percent() > 90)
 	{
-		act("$p suddenly flares brightly!", victim, obj, 0, TO_ROOM);
+		act("$p suddenly flares brightly!", victim, obj, nullptr, TO_ROOM);
 
 		if (!saves_spell(ch->level, victim, DAM_LIGHT))
 		{
-			act("$n appears to be blinded.", victim, obj, 0, TO_ROOM);
-			act("You are blinded!", ch, 0, victim, TO_VICT);
+			act("$n appears to be blinded.", victim, obj, nullptr, TO_ROOM);
+			act("You are blinded!", ch, nullptr, victim, TO_VICT);
 
 			init_affect(&af);
 			af.where = TO_AFFECTS;
@@ -3829,7 +3829,7 @@ void drop_prog_elven_gem(OBJ_DATA *obj, CHAR_DATA *ch)
 	{
 		if (obj->pIndexData->vnum == obj2->pIndexData->vnum)
 		{
-			act("As $p falls to the floor, it disintegrates and becomes a cloud of dust.", ch, obj, 0, TO_ROOM);
+			act("As $p falls to the floor, it disintegrates and becomes a cloud of dust.", ch, obj, nullptr, TO_ROOM);
 			extract_obj(obj);
 			break;
 		}
@@ -3953,7 +3953,7 @@ void speech_prog_elven_mirror(OBJ_DATA *obj, CHAR_DATA *ch, char *speech)
 	{
 		act("$p forms into a hazy image of $N.", ch, obj, victim, TO_CHAR);
 		sprintf(buf, "Peering into the mirror, you see $N %s.", sect);
-		act(buf, ch, 0, victim, TO_CHAR);
+		act(buf, ch, nullptr, victim, TO_CHAR);
 
 		free_pstring(obj->description);
 		sprintf(buf, "A curious mirror lies here, humming softly.  Peering into the glass, you see %s %s.", victim->name, sect);
@@ -3962,7 +3962,7 @@ void speech_prog_elven_mirror(OBJ_DATA *obj, CHAR_DATA *ch, char *speech)
 	}
 
 	if (rand > 89)
-		act("$p fails to form into a coherent image.", ch, obj, 0, TO_CHAR);
+		act("$p fails to form into a coherent image.", ch, obj, nullptr, TO_CHAR);
 }
 
 void verb_prog_turn_wyntran([[maybe_unused]] OBJ_DATA *obj, CHAR_DATA *ch, [[maybe_unused]] char *argument)
@@ -3978,8 +3978,8 @@ void verb_prog_turn_wyntran([[maybe_unused]] OBJ_DATA *obj, CHAR_DATA *ch, [[may
 
 	victim = create_mobile(pMobIndex);
 
-	act("The temperature in the room drops rapidly as a darkened portal opens overhead.", ch, 0, 0, TO_ROOM);
-	act("The temperature in the room drops rapidly as a darkened portal opens overhead.", ch, 0, 0, TO_CHAR);
+	act("The temperature in the room drops rapidly as a darkened portal opens overhead.", ch, nullptr, nullptr, TO_ROOM);
+	act("The temperature in the room drops rapidly as a darkened portal opens overhead.", ch, nullptr, nullptr, TO_CHAR);
 
 	RS.Queue.AddToQueue(3, "verb_prog_turn_wyntran", "act_queue", act_queue, "Accompanied by peals of thunder a shrouded being descends from the portal.", ch, nullptr, nullptr, TO_CHAR);
 	RS.Queue.AddToQueue(3, "verb_prog_turn_wyntran", "act_queue", act_queue, "Accompanied by peals of thunder a shrouded being descends from the portal.", ch, nullptr, nullptr, TO_ROOM);
@@ -4025,15 +4025,15 @@ void verb_prog_place_star(OBJ_DATA *obj, CHAR_DATA *ch, [[maybe_unused]] char *a
 		}
 	}
 
-	act("You set $p on the surface of the symbol.", ch, obj, 0, TO_CHAR);
-	act("$n sets $p on the surface of the symbol.", ch, obj, 0, TO_ROOM);
+	act("You set $p on the surface of the symbol.", ch, obj, nullptr, TO_CHAR);
+	act("$n sets $p on the surface of the symbol.", ch, obj, nullptr, TO_ROOM);
 
 	sprintf(buf, "%s$p rotates rapidly before flying into %s in the symbol with an audible click!%s",
 		get_char_color(ch, "yellow"),
 		iStars >= 4 ? "the last indentation" : "one of the indentations",
 		END_COLOR(ch));
 
-	act(buf, ch, obj, 0, TO_ALL);
+	act(buf, ch, obj, nullptr, TO_ALL);
 	obj_from_char(obj);
 	obj_to_obj(obj, pContainer);
 
@@ -4050,7 +4050,7 @@ void verb_prog_place_star(OBJ_DATA *obj, CHAR_DATA *ch, [[maybe_unused]] char *a
 		get_char_color(ch, "white"),
 		END_COLOR(ch));
 
-	act(buf, ch, 0, 0, TO_ALL);
+	act(buf, ch, nullptr, nullptr, TO_ALL);
 
 	if (!(nroom = get_room_index(4649)))
 		return;
@@ -4102,8 +4102,8 @@ void verb_prog_fallendesert_climb_ladder([[maybe_unused]] OBJ_DATA *obj, CHAR_DA
 		return;
 	}
 
-	act("The ladder gives slightly from your weight as you climb into the tent.", ch, 0, 0, TO_CHAR);
-	act("The ladder gives slightly from $n's weight as $e climbs into the tent.", ch, 0, 0, TO_ROOM);
+	act("The ladder gives slightly from your weight as you climb into the tent.", ch, nullptr, nullptr, TO_CHAR);
+	act("The ladder gives slightly from $n's weight as $e climbs into the tent.", ch, nullptr, nullptr, TO_ROOM);
 
 	char_from_room(ch);
 	char_to_room(ch, to_room);
@@ -4147,8 +4147,8 @@ void verb_prog_fallendesert_(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	act("The ladder gives slightly from your weight as you climb into the tent.", ch, 0, 0, TO_CHAR);
-	act("The ladder gives slightly from $n's weight as $e climbs into the tent.", ch, 0, 0, TO_ROOM);
+	act("The ladder gives slightly from your weight as you climb into the tent.", ch, nullptr, nullptr, TO_CHAR);
+	act("The ladder gives slightly from $n's weight as $e climbs into the tent.", ch, nullptr, nullptr, TO_ROOM);
 
 	char_from_room(ch);
 	char_to_room(ch, to_room);

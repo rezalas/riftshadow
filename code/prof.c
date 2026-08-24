@@ -301,7 +301,7 @@ void CProficiencies::GetProfsTaughtByTrainer(char_data* ch, char_data* trainer)
 		return;
 	}
 
-	act("You may learn the following proficiencies from $N:", ch, 0, trainer, TO_CHAR);
+	act("You may learn the following proficiencies from $N:", ch, nullptr, trainer, TO_CHAR);
 
 	const int prof_table_size = std::size(prof_table);
 	const int profs_taught_size = std::size(trainer->pIndexData->profs_taught);
@@ -923,7 +923,7 @@ void prof_tracking(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	act("$n begins to poke and prod at the ground, clearly searching for something.", ch, 0, 0, TO_ROOM);
+	act("$n begins to poke and prod at the ground, clearly searching for something.", ch, nullptr, nullptr, TO_ROOM);
 	auto buffer = std::string("You were unable to find any sign of $N here.");
 
 	char *direction = nullptr;
@@ -965,8 +965,8 @@ void build_fire(CHAR_DATA *ch, int dur)
 {
 	if (number_percent() > 60 + ch->Profs()->GetProf("firestarting") * 3)
 	{
-		act("$n's fire dies out despite $s best attempts to kindle it.", ch, 0, 0, TO_ROOM);
-		act("Your fire dies out despite your best attempts to kindle it.", ch, 0, 0, TO_CHAR);
+		act("$n's fire dies out despite $s best attempts to kindle it.", ch, nullptr, nullptr, TO_ROOM);
+		act("Your fire dies out despite your best attempts to kindle it.", ch, nullptr, nullptr, TO_CHAR);
 		ch->Profs()->CheckImprove("firestarting", 300);
 		return;
 	}
@@ -974,7 +974,7 @@ void build_fire(CHAR_DATA *ch, int dur)
 	auto buffer = fmt::format("{}The spark is caught by some dried brush, and it quickly erupts into a blazing campfire!{}",
 		get_char_color(ch, "lightred"),
 		END_COLOR(ch));
-	act(buffer.c_str(), ch, 0, 0, TO_ALL);
+	act(buffer.c_str(), ch, nullptr, nullptr, TO_ALL);
 
 	auto fire = create_object(get_obj_index(OBJ_VNUM_CAMPFIRE), ch->level);
 	fire->value[0] = ch->Profs()->GetProf("firestarting") + 1;
@@ -1018,8 +1018,8 @@ void prof_firestart(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 	}
 
 	auto dur = 12;
-	act("You begin to build a campfire, gathering sticks and twigs from your surroundings.", ch, 0, 0, TO_CHAR);
-	act("$n begins to build a campfire, gathering sticks and twigs from $s surroundings.", ch, 0, 0, TO_ROOM);
+	act("You begin to build a campfire, gathering sticks and twigs from your surroundings.", ch, nullptr, nullptr, TO_CHAR);
+	act("$n begins to build a campfire, gathering sticks and twigs from $s surroundings.", ch, nullptr, nullptr, TO_ROOM);
 	ch->move -= ch->level;
 
 	RS.Queue.AddToQueue(1, "prof_firestart", "send_to_char_queue", send_to_char_queue, "You rub two sticks together, trying to produce a flame.\n\r", ch);
@@ -1062,7 +1062,7 @@ void prof_appraise(CHAR_DATA *ch, char *argument)
 		: std::max((float)0, obj->cost - (mcost * obj->cost));
 
 	auto buffer = fmt::format("You estimate the value of $p to be approximately {} gold.", (int)tcost);
-	act(buffer.c_str(), ch, obj, 0, TO_CHAR);
+	act(buffer.c_str(), ch, obj, nullptr, TO_CHAR);
 	ch->Profs()->CheckImprove("appraising", 80);
 
 	WAIT_STATE(ch, PULSE_VIOLENCE);
@@ -1093,13 +1093,13 @@ void prof_butcher(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	act("$n butchers $p, carefully gutting it, extracting the edible portions and slicing them into rough chunks.", ch, obj, 0, TO_ROOM);
-	act("You butcher $p, carefully gutting it, extracting the edible portions and slicing them into rough chunks.", ch, obj, 0, TO_CHAR);
+	act("$n butchers $p, carefully gutting it, extracting the edible portions and slicing them into rough chunks.", ch, obj, nullptr, TO_ROOM);
+	act("You butcher $p, carefully gutting it, extracting the edible portions and slicing them into rough chunks.", ch, obj, nullptr, TO_CHAR);
 
 	extract_obj(obj);
 
 	int nummeat = std::max(1, (ch->Profs()->GetProf("butchery") + 2) / 3);
-	act("After the butchering process, you are left with $i pieces of meat.", ch, &nummeat, 0, TO_CHAR);
+	act("After the butchering process, you are left with $i pieces of meat.", ch, &nummeat, nullptr, TO_CHAR);
 
 	for (auto i = 0; i < nummeat; i++)
 	{
@@ -1157,13 +1157,13 @@ void prof_bandage(CHAR_DATA *ch, char *argument)
 	if (victim == ch)
 	{
 		send_to_char("You bandage your wounds, staunching the worst of the bleeding.\n\r", ch);
-		act("$n bandages $s wounds, staunching the worst of $s bleeding.", ch, 0, 0, TO_ROOM);
+		act("$n bandages $s wounds, staunching the worst of $s bleeding.", ch, nullptr, nullptr, TO_ROOM);
 	}
 	else
 	{
-		act("You bandage $N's wounds, staunching the worst of $S bleeding.", ch, 0, victim, TO_CHAR);
-		act("$n bandages your wounds, staunching the worst of the bleeding.", ch, 0, victim, TO_VICT);
-		act("$n bandages $N's wounds, staunching the worst of $S bleeding.", ch, 0, victim, TO_NOTVICT);
+		act("You bandage $N's wounds, staunching the worst of $S bleeding.", ch, nullptr, victim, TO_CHAR);
+		act("$n bandages your wounds, staunching the worst of the bleeding.", ch, nullptr, victim, TO_VICT);
+		act("$n bandages $N's wounds, staunching the worst of $S bleeding.", ch, nullptr, victim, TO_NOTVICT);
 	}
 
 	float hadd = (std::max(ch->Profs()->GetProf("bandaging") * 0.4, (double)1) * victim->level) + victim->hit;

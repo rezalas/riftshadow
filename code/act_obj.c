@@ -89,8 +89,8 @@ bool check_arms(CHAR_DATA *ch, OBJ_DATA *obj)
 					|| paf.type == gsn_arms_of_judgement)
 				&& Deref(paf.owner) != ch)
 			{
-				act("$p shocks you, falling from your numb hands.", ch, obj, 0, TO_CHAR);
-				act("$n drops $p.", ch, obj, 0, TO_ROOM);
+				act("$p shocks you, falling from your numb hands.", ch, obj, nullptr, TO_CHAR);
+				act("$n drops $p.", ch, obj, nullptr, TO_ROOM);
 				return true;
 			}
 		}
@@ -180,7 +180,7 @@ void get_obj(CHAR_DATA *ch, OBJ_DATA *obj, OBJ_DATA *container, bool pcheck)
 
 	if (ch->carry_number + get_obj_number(obj) > can_carry_n(ch))
 	{
-		act("$p: you can't carry that many items.", ch, obj, 0, TO_CHAR);
+		act("$p: you can't carry that many items.", ch, obj, nullptr, TO_CHAR);
 		return;
 	}
 
@@ -190,7 +190,7 @@ void get_obj(CHAR_DATA *ch, OBJ_DATA *obj, OBJ_DATA *container, bool pcheck)
 	if ((!heldIn || heldIn->carried_by != ch->self)
 		&& (get_carry_weight(ch) + get_obj_weight(obj) > can_carry_w(ch)))
 	{
-		act("$p: you can't carry that much weight.", ch, obj, 0, TO_CHAR);
+		act("$p: you can't carry that much weight.", ch, obj, nullptr, TO_CHAR);
 		return;
 	}
 
@@ -366,8 +366,8 @@ void do_get(CHAR_DATA *ch, char *argument)
 
 			if (cant_carry(ch, obj))
 			{
-				act("$n is burnt by $p and drops it.", ch, obj, 0, TO_ROOM);
-				act("You are burnt by $p and drop it.", ch, obj, 0, TO_CHAR);
+				act("$n is burnt by $p and drops it.", ch, obj, nullptr, TO_ROOM);
+				act("You are burnt by $p and drop it.", ch, obj, nullptr, TO_CHAR);
 
 				obj_from_char(obj);
 				obj_to_room(obj, ch->in_room);
@@ -392,8 +392,8 @@ void do_get(CHAR_DATA *ch, char *argument)
 
 					if (cant_carry(ch, obj))
 					{
-						act("$n is burnt by $p and drops it.", ch, obj, 0, TO_ROOM);
-						act("You are burnt by $p and drop it.", ch, obj, 0, TO_CHAR);
+						act("$n is burnt by $p and drops it.", ch, obj, nullptr, TO_ROOM);
+						act("You are burnt by $p and drop it.", ch, obj, nullptr, TO_CHAR);
 
 						obj_from_char(obj);
 						obj_to_room(obj, ch->in_room);
@@ -454,7 +454,7 @@ void do_get(CHAR_DATA *ch, char *argument)
 
 		if (is_affected_obj(container, gsn_ice_blast))
 		{
-			act("$p is frozen shut!", ch, container, 0, TO_CHAR);
+			act("$p is frozen shut!", ch, container, nullptr, TO_CHAR);
 			return;
 		}
 
@@ -498,8 +498,8 @@ void do_get(CHAR_DATA *ch, char *argument)
 
 			if (cant_carry(ch, obj))
 			{
-				act("$n is burnt by $p and drops it.", ch, obj, 0, TO_ROOM);
-				act("You are burnt by $p and drop it.", ch, obj, 0, TO_CHAR);
+				act("$n is burnt by $p and drops it.", ch, obj, nullptr, TO_ROOM);
+				act("You are burnt by $p and drop it.", ch, obj, nullptr, TO_CHAR);
 
 				obj_from_char(obj);
 				obj_to_room(obj, ch->in_room);
@@ -537,8 +537,8 @@ void do_get(CHAR_DATA *ch, char *argument)
 
 					if (cant_carry(ch, obj))
 					{
-						act("$n is burnt by $p and drops it.", ch, obj, 0, TO_ROOM);
-						act("You are burnt by $p and drop it.", ch, obj, 0, TO_CHAR);
+						act("$n is burnt by $p and drops it.", ch, obj, nullptr, TO_ROOM);
+						act("You are burnt by $p and drop it.", ch, obj, nullptr, TO_CHAR);
 
 						obj_from_char(obj);
 						obj_to_room(obj, ch->in_room);
@@ -599,7 +599,7 @@ void do_put(CHAR_DATA *ch, char *argument)
 
 	if (is_affected_obj(container, gsn_ice_blast))
 	{
-		act("$p is frozen shut!", ch, container, 0, TO_CHAR);
+		act("$p is frozen shut!", ch, container, nullptr, TO_CHAR);
 		return;
 	}
 
@@ -1056,7 +1056,7 @@ void do_give(CHAR_DATA *ch, char *argument)
 
 	if ((is_npc(victim) && victim->pIndexData->pShop != nullptr) && !IS_SET(victim->progtypes, MPROG_GIVE))
 	{
-		act("$E wouldn't want that.", ch, 0, victim, TO_CHAR);
+		act("$E wouldn't want that.", ch, nullptr, victim, TO_CHAR);
 		return;
 	}
 
@@ -1292,8 +1292,8 @@ void do_butcher(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	act("$n butchers $p.", ch, corpse, 0, TO_ROOM);
-	act("You butcher $p.", ch, corpse, 0, TO_CHAR);
+	act("$n butchers $p.", ch, corpse, nullptr, TO_ROOM);
+	act("You butcher $p.", ch, corpse, nullptr, TO_CHAR);
 
 	name = corpse->short_descr;
 
@@ -1568,7 +1568,7 @@ void do_pour(CHAR_DATA *ch, char *argument)
 		if (out->value[2] != LIQ_WATER)
 		{
 			sprintf(buf, "%s evaporates rapidly and is gone.", liq_table[out->value[2]].liq_name);
-			act(buf, ch, 0, 0, TO_ALL);
+			act(buf, ch, nullptr, nullptr, TO_ALL);
 		}
 		else if (is_ground(ch->in_room))
 		{
@@ -1588,7 +1588,7 @@ void do_pour(CHAR_DATA *ch, char *argument)
 			affect_to_obj(puddle, &oaf);
 
 			sprintf(buf, "The water forms a puddle on the ground.");
-			act(buf, ch, 0, 0, TO_ALL);
+			act(buf, ch, nullptr, nullptr, TO_ALL);
 		}
 
 		return;
@@ -1620,7 +1620,7 @@ void do_pour(CHAR_DATA *ch, char *argument)
 
 	if (is_affected_by(on, AFF_OBJ_BURNING))
 	{
-		act("$p fizzles and is extinguished.", ch, on, 0, TO_ALL);
+		act("$p fizzles and is extinguished.", ch, on, nullptr, TO_ALL);
 
 		if (is_affected_obj(on, gsn_immolate))
 			affect_strip_obj(on, gsn_immolate);
@@ -1824,7 +1824,7 @@ void do_eat(CHAR_DATA *ch, char *argument)
 				/* The food was poisoned! */
 				AFFECT_DATA af;
 
-				act("$n chokes and gags.", ch, 0, 0, TO_ROOM);
+				act("$n chokes and gags.", ch, nullptr, nullptr, TO_ROOM);
 				send_to_char("You choke and gag.\n\r", ch);
 
 				if (!is_affected(ch, gsn_poison))
@@ -1880,7 +1880,7 @@ bool remove_obj(CHAR_DATA *ch, int iWear, bool fReplace)
 
 	if (is_affected_obj(obj, gsn_rust))
 	{
-		act("$p is covered with rust and can't be pried off!", ch, obj, 0, TO_CHAR);
+		act("$p is covered with rust and can't be pried off!", ch, obj, nullptr, TO_CHAR);
 		return false;
 	}
 
@@ -1910,8 +1910,8 @@ bool remove_obj(CHAR_DATA *ch, int iWear, bool fReplace)
 
 	if (iWear == WEAR_DUAL_WIELD)
 	{
-		act("$n stops dual wielding $p.", ch, obj, 0, TO_ROOM);
-		act("You stop dual wielding $p.", ch, obj, 0, TO_CHAR);
+		act("$n stops dual wielding $p.", ch, obj, nullptr, TO_ROOM);
+		act("You stop dual wielding $p.", ch, obj, nullptr, TO_CHAR);
 		return true;
 	}
 
@@ -2221,8 +2221,8 @@ void wear_obj(CHAR_DATA *ch, OBJ_DATA *obj, bool fReplace)
 			return;
 		}
 
-		act("$n holds $p in $s hands.", ch, obj, 0, TO_ROOM);
-		act("You hold $p in your hands.", ch, obj, 0, TO_CHAR);
+		act("$n holds $p in $s hands.", ch, obj, nullptr, TO_ROOM);
+		act("You hold $p in your hands.", ch, obj, nullptr, TO_CHAR);
 		equip_char(ch, obj, WEAR_HOLD, true);
 		return;
 	}
@@ -2257,8 +2257,8 @@ void wear_obj(CHAR_DATA *ch, OBJ_DATA *obj, bool fReplace)
 			return;
 		}
 
-		act("$n wears $p as a shield.", ch, obj, 0, TO_ROOM);
-		act("You wear $p as a shield.", ch, obj, 0, TO_CHAR);
+		act("$n wears $p as a shield.", ch, obj, nullptr, TO_ROOM);
+		act("You wear $p as a shield.", ch, obj, nullptr, TO_CHAR);
 		equip_char(ch, obj, WEAR_SHIELD, true);
 		return;
 	}
@@ -2295,8 +2295,8 @@ void wear_obj(CHAR_DATA *ch, OBJ_DATA *obj, bool fReplace)
 			return;
 		}
 
-		act("$n lights $p and holds it.", ch, obj, 0, TO_ROOM);
-		act("You light $p and hold it.", ch, obj, 0, TO_CHAR);
+		act("$n lights $p and holds it.", ch, obj, nullptr, TO_ROOM);
+		act("You light $p and hold it.", ch, obj, nullptr, TO_CHAR);
 		equip_char(ch, obj, WEAR_LIGHT, true);
 		return;
 	}
@@ -2363,8 +2363,8 @@ void wear_obj(CHAR_DATA *ch, OBJ_DATA *obj, bool fReplace)
 			{
 				if (obj->weight <= primary->weight || obj->weight < 5)
 				{
-					act("$n wields $p in $s offhand.", ch, obj, 0, TO_ROOM);
-					act("You wield $p in your offhand.", ch, obj, 0, TO_CHAR);
+					act("$n wields $p in $s offhand.", ch, obj, nullptr, TO_ROOM);
+					act("You wield $p in your offhand.", ch, obj, nullptr, TO_CHAR);
 					equip_char(ch, obj, WEAR_DUAL_WIELD, true);
 
 					switch (obj->value[0])
@@ -2404,19 +2404,19 @@ void wear_obj(CHAR_DATA *ch, OBJ_DATA *obj, bool fReplace)
 					skill = get_weapon_skill(ch, sn);
 
 					if (skill >= 100)
-						act("$p feels like a part of you!", ch, obj, 0, TO_CHAR);
+						act("$p feels like a part of you!", ch, obj, nullptr, TO_CHAR);
 					else if (skill > 85)
-						act("You feel quite confident with $p.", ch, obj, 0, TO_CHAR);
+						act("You feel quite confident with $p.", ch, obj, nullptr, TO_CHAR);
 					else if (skill > 70)
-						act("You are skilled with $p.", ch, obj, 0, TO_CHAR);
+						act("You are skilled with $p.", ch, obj, nullptr, TO_CHAR);
 					else if (skill > 50)
-						act("Your skill with $p is adequate.", ch, obj, 0, TO_CHAR);
+						act("Your skill with $p is adequate.", ch, obj, nullptr, TO_CHAR);
 					else if (skill > 25)
-						act("$p feels a little clumsy in your hands.", ch, obj, 0, TO_CHAR);
+						act("$p feels a little clumsy in your hands.", ch, obj, nullptr, TO_CHAR);
 					else if (skill > 1)
-						act("You fumble and almost drop $p.", ch, obj, 0, TO_CHAR);
+						act("You fumble and almost drop $p.", ch, obj, nullptr, TO_CHAR);
 					else
-						act("You don't even know which end is up on $p.", ch, obj, 0, TO_CHAR);
+						act("You don't even know which end is up on $p.", ch, obj, nullptr, TO_CHAR);
 
 					return;
 				}
@@ -2426,8 +2426,8 @@ void wear_obj(CHAR_DATA *ch, OBJ_DATA *obj, bool fReplace)
 				if (!remove_obj(ch, WEAR_DUAL_WIELD, fReplace))
 					return;
 
-				act("$n wields $p in $s offhand.", ch, obj, 0, TO_ROOM);
-				act("You wield $p in your offhand.", ch, obj, 0, TO_CHAR);
+				act("$n wields $p in $s offhand.", ch, obj, nullptr, TO_ROOM);
+				act("You wield $p in your offhand.", ch, obj, nullptr, TO_CHAR);
 				equip_char(ch, obj, WEAR_DUAL_WIELD, true);
 
 				switch (obj->value[0])
@@ -2467,19 +2467,19 @@ void wear_obj(CHAR_DATA *ch, OBJ_DATA *obj, bool fReplace)
 				skill = get_weapon_skill(ch, sn);
 
 				if (skill >= 100)
-					act("$p feels like a part of you!", ch, obj, 0, TO_CHAR);
+					act("$p feels like a part of you!", ch, obj, nullptr, TO_CHAR);
 				else if (skill > 85)
-					act("You feel quite confident with $p.", ch, obj, 0, TO_CHAR);
+					act("You feel quite confident with $p.", ch, obj, nullptr, TO_CHAR);
 				else if (skill > 70)
-					act("You are skilled with $p.", ch, obj, 0, TO_CHAR);
+					act("You are skilled with $p.", ch, obj, nullptr, TO_CHAR);
 				else if (skill > 50)
-					act("Your skill with $p is adequate.", ch, obj, 0, TO_CHAR);
+					act("Your skill with $p is adequate.", ch, obj, nullptr, TO_CHAR);
 				else if (skill > 25)
-					act("$p feels a little clumsy in your hands.", ch, obj, 0, TO_CHAR);
+					act("$p feels a little clumsy in your hands.", ch, obj, nullptr, TO_CHAR);
 				else if (skill > 1)
-					act("You fumble and almost drop $p.", ch, obj, 0, TO_CHAR);
+					act("You fumble and almost drop $p.", ch, obj, nullptr, TO_CHAR);
 				else
-					act("You don't even know which end is up on $p.", ch, obj, 0, TO_CHAR);
+					act("You don't even know which end is up on $p.", ch, obj, nullptr, TO_CHAR);
 
 				return;
 			}
@@ -2507,8 +2507,8 @@ void wear_obj(CHAR_DATA *ch, OBJ_DATA *obj, bool fReplace)
 						return;
 					}
 
-					act("$n wields $p.", ch, obj, 0, TO_ROOM);
-					act("You wield $p.", ch, obj, 0, TO_CHAR);
+					act("$n wields $p.", ch, obj, nullptr, TO_ROOM);
+					act("You wield $p.", ch, obj, nullptr, TO_CHAR);
 					unequip_char(ch, secondary, true);
 
 					if (secondary == nullptr)
@@ -2523,24 +2523,24 @@ void wear_obj(CHAR_DATA *ch, OBJ_DATA *obj, bool fReplace)
 
 					skill = get_weapon_skill(ch, sn);
 					if (skill >= 100)
-						act("$p feels like a part of you!", ch, obj, 0, TO_CHAR);
+						act("$p feels like a part of you!", ch, obj, nullptr, TO_CHAR);
 					else if (skill > 85)
-						act("You feel quite confident with $p.", ch, obj, 0, TO_CHAR);
+						act("You feel quite confident with $p.", ch, obj, nullptr, TO_CHAR);
 					else if (skill > 70)
-						act("You are skilled with $p.", ch, obj, 0, TO_CHAR);
+						act("You are skilled with $p.", ch, obj, nullptr, TO_CHAR);
 					else if (skill > 50)
-						act("Your skill with $p is adequate.", ch, obj, 0, TO_CHAR);
+						act("Your skill with $p is adequate.", ch, obj, nullptr, TO_CHAR);
 					else if (skill > 25)
-						act("$p feels a little clumsy in your hands.", ch, obj, 0, TO_CHAR);
+						act("$p feels a little clumsy in your hands.", ch, obj, nullptr, TO_CHAR);
 					else if (skill > 1)
-						act("You fumble and almost drop $p.", ch, obj, 0, TO_CHAR);
+						act("You fumble and almost drop $p.", ch, obj, nullptr, TO_CHAR);
 					else
-						act("You don't even know which end is up on $p.", ch, obj, 0, TO_CHAR);
+						act("You don't even know which end is up on $p.", ch, obj, nullptr, TO_CHAR);
 
 					return;
 				}
 
-				act("$p is too heavy to dual wield,", ch, obj, 0, TO_CHAR);
+				act("$p is too heavy to dual wield,", ch, obj, nullptr, TO_CHAR);
 				return;
 			}
 		}
@@ -2570,8 +2570,8 @@ void wear_obj(CHAR_DATA *ch, OBJ_DATA *obj, bool fReplace)
 			}
 		}
 
-		act("$n wields $p.", ch, obj, 0, TO_ROOM);
-		act("You wield $p.", ch, obj, 0, TO_CHAR);
+		act("$n wields $p.", ch, obj, nullptr, TO_ROOM);
+		act("You wield $p.", ch, obj, nullptr, TO_CHAR);
 		equip_char(ch, obj, WEAR_WIELD, true);
 
 		sn = get_weapon_sn(ch);
@@ -2580,19 +2580,19 @@ void wear_obj(CHAR_DATA *ch, OBJ_DATA *obj, bool fReplace)
 
 		skill = get_weapon_skill(ch, sn);
 		if (skill >= 100)
-			act("$p feels like a part of you!", ch, obj, 0, TO_CHAR);
+			act("$p feels like a part of you!", ch, obj, nullptr, TO_CHAR);
 		else if (skill > 85)
-			act("You feel quite confident with $p.", ch, obj, 0, TO_CHAR);
+			act("You feel quite confident with $p.", ch, obj, nullptr, TO_CHAR);
 		else if (skill > 70)
-			act("You are skilled with $p.", ch, obj, 0, TO_CHAR);
+			act("You are skilled with $p.", ch, obj, nullptr, TO_CHAR);
 		else if (skill > 50)
-			act("Your skill with $p is adequate.", ch, obj, 0, TO_CHAR);
+			act("Your skill with $p is adequate.", ch, obj, nullptr, TO_CHAR);
 		else if (skill > 25)
-			act("$p feels a little clumsy in your hands.", ch, obj, 0, TO_CHAR);
+			act("$p feels a little clumsy in your hands.", ch, obj, nullptr, TO_CHAR);
 		else if (skill > 1)
-			act("You fumble and almost drop $p.", ch, obj, 0, TO_CHAR);
+			act("You fumble and almost drop $p.", ch, obj, nullptr, TO_CHAR);
 		else
-			act("You don't even know which end is up on $p.", ch, obj, 0, TO_CHAR);
+			act("You don't even know which end is up on $p.", ch, obj, nullptr, TO_CHAR);
 
 		return;
 	}
@@ -2800,7 +2800,7 @@ void do_sacrifice(CHAR_DATA *ch, char *argument)
 
 	if (!can_wear(obj, ITEM_TAKE) || is_obj_stat(obj, ITEM_NO_SAC))
 	{
-		act("$p is not an acceptable sacrifice.", ch, obj, 0, TO_CHAR);
+		act("$p is not an acceptable sacrifice.", ch, obj, nullptr, TO_CHAR);
 		return;
 	}
 
@@ -2818,7 +2818,7 @@ void do_sacrifice(CHAR_DATA *ch, char *argument)
 
 	if (isCabalItem(obj) == true)
 	{
-		act("You can't do that!", ch, obj, 0, TO_CHAR);
+		act("You can't do that!", ch, obj, nullptr, TO_CHAR);
 		return;
 	}
 
@@ -3904,9 +3904,9 @@ void do_buy(CHAR_DATA *ch, char *argument)
 			check_improve(ch, gsn_haggle, true, 4);
 		}
 
-		act("$n hands some gold to $N.", ch, 0, keeper, TO_ROOM);
+		act("$n hands some gold to $N.", ch, nullptr, keeper, TO_ROOM);
 		sprintf(buf, "You hand $N %ld gold.", cost * number);
-		act(buf, ch, 0, keeper, TO_CHAR);
+		act(buf, ch, nullptr, keeper, TO_CHAR);
 
 		for (i = 0; i < number; i++)
 		{
@@ -4324,13 +4324,13 @@ void do_request(CHAR_DATA *ch, char *argument)
 
 	if (ch->carry_weight + get_obj_weight(obj) > can_carry_w(ch))
 	{
-		act("$N tells you, 'You can't carry the weight $n.'", ch, 0, victim, TO_CHAR);
+		act("$N tells you, 'You can't carry the weight $n.'", ch, nullptr, victim, TO_CHAR);
 		return;
 	}
 
 	if (ch->carry_number + 1 > can_carry_n(ch))
 	{
-		act("$N tells you, 'You can't carry that many items $n.'", ch, 0, victim, TO_CHAR);
+		act("$N tells you, 'You can't carry that many items $n.'", ch, nullptr, victim, TO_CHAR);
 		return;
 	}
 
@@ -4340,7 +4340,7 @@ void do_request(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	act("$n requests off $N.", ch, 0, victim, TO_ROOM);
+	act("$n requests off $N.", ch, nullptr, victim, TO_ROOM);
 
 	if (obj->wear_loc != WEAR_NONE)
 	{
@@ -4446,7 +4446,7 @@ void do_embalm(CHAR_DATA *ch, char *argument)
 
 	if (corpse->item_type != ITEM_CORPSE_NPC)
 	{
-		act("$p isn't a corpse you can embalm.\n\r", ch, corpse, 0, TO_CHAR);
+		act("$p isn't a corpse you can embalm.\n\r", ch, corpse, nullptr, TO_CHAR);
 		return;
 	}
 
@@ -4458,15 +4458,15 @@ void do_embalm(CHAR_DATA *ch, char *argument)
 
 	if (number_percent() > ch->pcdata->learned[gsn_embalm])
 	{
-		act("You spill your embalming fluids all over $p, ruining it.", ch, corpse, 0, TO_CHAR);
-		act("$n spills embalming fluids over $p and ruins it.", ch, corpse, 0, TO_ROOM);
+		act("You spill your embalming fluids all over $p, ruining it.", ch, corpse, nullptr, TO_CHAR);
+		act("$n spills embalming fluids over $p and ruins it.", ch, corpse, nullptr, TO_ROOM);
 		check_improve(ch, gsn_embalm, false, 4);
 		extract_obj(corpse);
 		return;
 	}
 
-	act("$n embalms $p!", ch, corpse, 0, TO_ROOM);
-	act("You succeed in embalming $p.", ch, corpse, 0, TO_CHAR);
+	act("$n embalms $p!", ch, corpse, nullptr, TO_ROOM);
+	act("You succeed in embalming $p.", ch, corpse, nullptr, TO_CHAR);
 
 	corpse->timer += ch->level / 2;
 	corpse->value[4] = 1;
@@ -4703,13 +4703,13 @@ void do_demand(CHAR_DATA *ch, char *argument)
 
 	if (!can_see(victim, ch))
 	{
-		act("$N tells you, 'I can't give to those i can't see.'", ch, 0, victim, TO_CHAR);
+		act("$N tells you, 'I can't give to those i can't see.'", ch, nullptr, victim, TO_CHAR);
 		return;
 	}
 
 	if (!can_see_obj(victim, obj))
 	{
-		act("$N tells you, 'I can't see such an object.'", ch, 0, victim, TO_CHAR);
+		act("$N tells you, 'I can't see such an object.'", ch, nullptr, victim, TO_CHAR);
 		return;
 	}
 
@@ -4726,7 +4726,7 @@ void do_demand(CHAR_DATA *ch, char *argument)
 
 	if (ch->move < obj->level)
 	{
-		act("$N tells you, 'Hah! You couldn't even get away if i chased you!'.", ch, 0, victim, TO_CHAR);
+		act("$N tells you, 'Hah! You couldn't even get away if i chased you!'.", ch, nullptr, victim, TO_CHAR);
 
 		sprintf(buf1, "Help! I'm being attacked by %s!", victim->short_descr);
 		do_yell(ch, buf1);
@@ -4755,32 +4755,32 @@ void do_demand(CHAR_DATA *ch, char *argument)
 	if (obj->wear_loc != WEAR_NONE && IS_SET(obj->extra_flags, ITEM_NOREMOVE))
 	{
 		act("$N tells you, 'I'm unable to release $p'.", ch, obj, victim, TO_CHAR);
-		act("$N cowers back from you in fright.", ch, 0, victim, TO_CHAR);
-		act("$N cowers back from $n in fright.", ch, 0, victim, TO_NOTVICT);
+		act("$N cowers back from you in fright.", ch, nullptr, victim, TO_CHAR);
+		act("$N cowers back from $n in fright.", ch, nullptr, victim, TO_NOTVICT);
 		return;
 	}
 	if (IS_SET(obj->extra_flags, ITEM_NODROP))
 	{
 		act("$N tells you, 'I'm unable to release $p'.", ch, obj, victim, TO_CHAR);
-		act("$N cowers back from you in fright.", ch, 0, victim, TO_CHAR);
-		act("$N cowers back from $n in fright.", ch, 0, victim, TO_NOTVICT);
+		act("$N cowers back from you in fright.", ch, nullptr, victim, TO_CHAR);
+		act("$N cowers back from $n in fright.", ch, nullptr, victim, TO_NOTVICT);
 		return;
 	}
 
 	if (ch->carry_weight + get_obj_weight(obj) > can_carry_w(ch))
 	{
-		act("$N tells you, 'You can't carry the weight $n.'", ch, 0, victim, TO_CHAR);
+		act("$N tells you, 'You can't carry the weight $n.'", ch, nullptr, victim, TO_CHAR);
 		return;
 	}
 
 	if (ch->carry_number + 1 > can_carry_n(ch))
 	{
-		act("$N tells you, 'You can't carry that many items $n.'", ch, 0, victim, TO_CHAR);
+		act("$N tells you, 'You can't carry that many items $n.'", ch, nullptr, victim, TO_CHAR);
 		return;
 	}
 
-	act("$N caves in to the bully tactics of $n.", ch, 0, victim, TO_NOTVICT);
-	act("$N shivers in fright and caves in to your bully tactics.", ch, 0, victim, TO_CHAR);
+	act("$N caves in to the bully tactics of $n.", ch, nullptr, victim, TO_NOTVICT);
+	act("$N shivers in fright and caves in to your bully tactics.", ch, nullptr, victim, TO_CHAR);
 
 	if (obj->wear_loc != WEAR_NONE)
 	{
@@ -4862,24 +4862,24 @@ void report_weapon_skill(CHAR_DATA *ch, OBJ_DATA *obj)
 	if (skill >= 100)
 		act("$p feels like a part of you!", ch, obj, nullptr, TO_CHAR);
 	else if (skill > 85)
-		act("You feel quite confident with $p.", ch, obj, 0, TO_CHAR);
+		act("You feel quite confident with $p.", ch, obj, nullptr, TO_CHAR);
 	else if (skill > 70)
-		act("You are skilled with $p.", ch, obj, 0, TO_CHAR);
+		act("You are skilled with $p.", ch, obj, nullptr, TO_CHAR);
 	else if (skill > 50)
-		act("Your skill with $p is adequate.", ch, obj, 0, TO_CHAR);
+		act("Your skill with $p is adequate.", ch, obj, nullptr, TO_CHAR);
 	else if (skill > 25)
-		act("$p feels a little clumsy in your hands.", ch, obj, 0, TO_CHAR);
+		act("$p feels a little clumsy in your hands.", ch, obj, nullptr, TO_CHAR);
 	else if (skill > 1)
-		act("You fumble and almost drop $p.", ch, obj, 0, TO_CHAR);
+		act("You fumble and almost drop $p.", ch, obj, nullptr, TO_CHAR);
 	else
-		act("You don't even know which end is up on $p.", ch, obj, 0, TO_CHAR);
+		act("You don't even know which end is up on $p.", ch, obj, nullptr, TO_CHAR);
 }
 
 void wear_obj_fallen_wings(CHAR_DATA *ch, OBJ_DATA *obj)
 {
 	AFFECT_DATA af;
 
-	act("$n's shredded wings slowly beat and $s feet rise of the ground.", ch, 0, 0, TO_ROOM);
+	act("$n's shredded wings slowly beat and $s feet rise of the ground.", ch, nullptr, nullptr, TO_ROOM);
 	send_to_char("Your shredded angel wings slowly beat and your feet rise off the ground.\n\r", ch);
 
 	affect_strip(ch, skill_lookup("fly"));
@@ -4905,7 +4905,7 @@ void remove_obj_fallen_wings(CHAR_DATA *ch, OBJ_DATA *obj)
 	if (!is_affected(ch, sn_fly))
 		return;
 
-	act("$n slowly floats back to the ground.", ch, 0, 0, TO_ROOM);
+	act("$n slowly floats back to the ground.", ch, nullptr, nullptr, TO_ROOM);
 	send_to_char("Your feet slowly float back to the ground.\n\r", ch);
 	affect_strip(ch, sn_fly);
 }
@@ -4967,8 +4967,8 @@ void do_roll(CHAR_DATA *ch, char *argument)
 
 	if (argument[0] == '\0')
 	{
-		act("You roll your eyes in disgust.", ch, 0, 0, TO_CHAR);
-		act("$n rolls $s eyes, disgusted.", ch, 0, 0, TO_ROOM);
+		act("You roll your eyes in disgust.", ch, nullptr, nullptr, TO_CHAR);
+		act("$n rolls $s eyes, disgusted.", ch, nullptr, nullptr, TO_ROOM);
 		return;
 	}
 
@@ -5015,7 +5015,7 @@ void do_roll(CHAR_DATA *ch, char *argument)
 	act("You cup your hands, rattle $p around, and roll $T.", ch, obj, buf, TO_CHAR);
 	act("$n cups $s hands, rattles $p around, and rolls $T.", ch, obj, buf, TO_ROOM);
 
-	act(".\n\r.\n\r.", ch, 0, 0, TO_ALL);
+	act(".\n\r.\n\r.", ch, nullptr, nullptr, TO_ALL);
 
 	if (number == 1)
 	{
@@ -5034,7 +5034,7 @@ void do_roll(CHAR_DATA *ch, char *argument)
 		strcat(buf, ".");
 	}
 
-	act(buf, ch, 0, 0, TO_ALL);
+	act(buf, ch, nullptr, nullptr, TO_ALL);
 
 	obj_from_char(obj);
 	obj_to_room(obj, ch->in_room);
@@ -5060,16 +5060,16 @@ void do_flip(CHAR_DATA *ch, char *argument)
 		}
 		if (number_percent() < ((get_curr_stat(ch, STAT_DEX) * 10) - 150))
 		{
-			act("You perform an agile backflip, landing solidly on your feet!", ch, 0, 0, TO_CHAR);
-			act("$n suddenly performs an agile backflip, landing solidly on $s feet!", ch, 0, 0, TO_ROOM);
+			act("You perform an agile backflip, landing solidly on your feet!", ch, nullptr, nullptr, TO_CHAR);
+			act("$n suddenly performs an agile backflip, landing solidly on $s feet!", ch, nullptr, nullptr, TO_ROOM);
 
 			WAIT_STATE(ch, PULSE_VIOLENCE);
 			return;
 		}
 		else
 		{
-			act("You attempt an ill-advised backflip, and crash awkwardly to the ground!", ch, 0, 0, TO_CHAR);
-			act("$n looks foolish as $e attempts a backflip and crashes awkwardly to the ground!", ch, 0, 0, TO_ROOM);
+			act("You attempt an ill-advised backflip, and crash awkwardly to the ground!", ch, nullptr, nullptr, TO_CHAR);
+			act("$n looks foolish as $e attempts a backflip and crashes awkwardly to the ground!", ch, nullptr, nullptr, TO_ROOM);
 
 			WAIT_STATE(ch, 3 * PULSE_VIOLENCE);
 
@@ -5091,9 +5091,9 @@ void do_flip(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	act("You flip a single gold coin high in the air, and it tumbles rapidly.", ch, 0, 0, TO_CHAR);
-	act("$n flips a single gold coin high in the air, and it tumbles rapidly.", ch, 0, 0, TO_ROOM);
-	act(".\n\r.\n\r.", ch, 0, 0, TO_ALL);
+	act("You flip a single gold coin high in the air, and it tumbles rapidly.", ch, nullptr, nullptr, TO_CHAR);
+	act("$n flips a single gold coin high in the air, and it tumbles rapidly.", ch, nullptr, nullptr, TO_ROOM);
+	act(".\n\r.\n\r.", ch, nullptr, nullptr, TO_ALL);
 
 	if (number_percent() > 50)
 		sprintf(buf, "Heads");
@@ -5102,20 +5102,20 @@ void do_flip(CHAR_DATA *ch, char *argument)
 
 	if (number_range(1, 25) <= get_curr_stat(ch, STAT_DEX))
 	{
-		act("You catch the coin in your palm and turn it over... $T!", ch, 0, buf, TO_CHAR);
-		act("$n catches the coin in $s palm and turns it over... $T!", ch, 0, buf, TO_ROOM);
+		act("You catch the coin in your palm and turn it over... $T!", ch, nullptr, buf, TO_CHAR);
+		act("$n catches the coin in $s palm and turns it over... $T!", ch, nullptr, buf, TO_ROOM);
 	}
 	else
 	{
 		if (number_range(1, 1000) == 1)
 		{
-			act("You fumble trying to catch the coin and it hits the ground. . . \n\rOh my, it landed on its EDGE!  What are the odds??", ch, 0, 0, TO_CHAR);
-			act("$n fumbles trying to catch the coin and it hits the ground. . .\n\rOh my, it landed on its EDGE!  What are the odds??", ch, 0, 0, TO_ROOM);
+			act("You fumble trying to catch the coin and it hits the ground. . . \n\rOh my, it landed on its EDGE!  What are the odds??", ch, nullptr, nullptr, TO_CHAR);
+			act("$n fumbles trying to catch the coin and it hits the ground. . .\n\rOh my, it landed on its EDGE!  What are the odds??", ch, nullptr, nullptr, TO_ROOM);
 		}
 		else
 		{
-			act("You fumble trying to catch the coin and it hits the ground, showing... $T!", ch, 0, buf, TO_CHAR);
-			act("$n fumbles trying to catch the coin and it hits the ground, showing... $T!", ch, 0, buf, TO_ROOM);
+			act("You fumble trying to catch the coin and it hits the ground, showing... $T!", ch, nullptr, buf, TO_CHAR);
+			act("$n fumbles trying to catch the coin and it hits the ground, showing... $T!", ch, nullptr, buf, TO_ROOM);
 		}
 
 		coin = create_object(get_obj_index(2), 0);

@@ -137,7 +137,7 @@ void do_style(CHAR_DATA *ch, char *argument)
 		}
 
 		if (ch->pcdata->style)
-			act("You are fighting in the style of the $t.", ch, style_table[ch->pcdata->style].name, 0, TO_CHAR);
+			act("You are fighting in the style of the $t.", ch, style_table[ch->pcdata->style].name, nullptr, TO_CHAR);
 
 		return;
 	}
@@ -175,9 +175,9 @@ void do_style(CHAR_DATA *ch, char *argument)
 	}
 
 	if (style == ch->pcdata->style)
-		act("You are already fighting in the $t style.", ch, style_table[style].name, 0, TO_CHAR);
+		act("You are already fighting in the $t style.", ch, style_table[style].name, nullptr, TO_CHAR);
 	else
-		act("You fluidly shift your fighting methods into the $t style.", ch, style_table[style].name, 0, TO_CHAR);
+		act("You fluidly shift your fighting methods into the $t style.", ch, style_table[style].name, nullptr, TO_CHAR);
 
 	WAIT_STATE(ch, PULSE_VIOLENCE);
 	ch->pcdata->style = style;
@@ -256,18 +256,18 @@ void do_entrap(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 				sprintf(buf, "You entrap $N's %s beneath the haft of your %s but it won't budge!",
 					weapon_name_lookup(weapon->value[0]),
 					weapon_name_lookup(wield->value[0]));
-				act(buf, ch, 0, victim, TO_CHAR);
+				act(buf, ch, nullptr, victim, TO_CHAR);
 
 				sprintf(buf, "$n entraps your %s beneath the haft of $s %s but it won't budge!",
 					weapon_name_lookup(weapon->value[0]),
 					weapon_name_lookup(wield->value[0]));
-				act(buf, ch, 0, victim, TO_VICT);
+				act(buf, ch, nullptr, victim, TO_VICT);
 
 				sprintf(buf, "$n entraps $N's %s beneath the haft of $s %s but it won't budge!",
 					weapon_name_lookup(weapon->value[0]),
 					weapon_name_lookup(wield->value[0]));
 
-				act(buf, ch, 0, victim, TO_NOTVICT);
+				act(buf, ch, nullptr, victim, TO_NOTVICT);
 				WAIT_STATE(ch, PULSE_VIOLENCE * 2);
 				return;
 			}
@@ -276,21 +276,21 @@ void do_entrap(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 				sprintf(buf, "You entrap $N's %s beneath the haft of your %s and knock it to the ground!",
 					weapon_name_lookup(weapon->value[0]),
 					weapon_name_lookup(wield->value[0]));
-				act(buf, ch, 0, victim, TO_CHAR);
+				act(buf, ch, nullptr, victim, TO_CHAR);
 
 				sprintf(buf, "$n entraps your %s beneath the haft of $s %s and knocks it to the ground!",
 					weapon_name_lookup(weapon->value[0]),
 					weapon_name_lookup(wield->value[0]));
-				act(buf, ch, 0, victim, TO_VICT);
+				act(buf, ch, nullptr, victim, TO_VICT);
 
 				sprintf(buf, "$n entraps $N's %s beneath the haft of $s %s and knocks it to the ground!",
 					weapon_name_lookup(weapon->value[0]),
 					weapon_name_lookup(wield->value[0]));
-				act(buf, ch, 0, victim, TO_NOTVICT);
+				act(buf, ch, nullptr, victim, TO_NOTVICT);
 			}
 			else
 			{
-				act("You fail to entrap $N's weapon.", ch, 0, victim, TO_CHAR);
+				act("You fail to entrap $N's weapon.", ch, nullptr, victim, TO_CHAR);
 				act("$n attempts to entrap your weapon with $s $t, but fails.", ch, weapon_name_lookup(wield->value[0]), victim, TO_VICT);
 				act("$n attempts to entrap $N's weapon with $s $t, but fails.", ch, weapon_name_lookup(wield->value[0]), victim, TO_NOTVICT);
 				WAIT_STATE(ch, PULSE_VIOLENCE * 2);
@@ -363,9 +363,9 @@ void do_entrap(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 			}
 			else
 			{
-				act("You fail to entrap $N's weapon.", ch, 0, victim, TO_CHAR);
-				act("$n attempts to entrap your weapon with $s two weapons, but fails.", ch, 0, victim, TO_VICT);
-				act("$n attempts to entrap $N's weapon with $s two weapons, but fails.", ch, 0, victim, TO_NOTVICT);
+				act("You fail to entrap $N's weapon.", ch, nullptr, victim, TO_CHAR);
+				act("$n attempts to entrap your weapon with $s two weapons, but fails.", ch, nullptr, victim, TO_VICT);
+				act("$n attempts to entrap $N's weapon with $s two weapons, but fails.", ch, nullptr, victim, TO_NOTVICT);
 				WAIT_STATE(ch, PULSE_VIOLENCE * 2);
 				return;
 			}
@@ -401,8 +401,8 @@ void do_entrap(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 	if (dual != nullptr)
 	{
 		unequip_char(victim, dual, false);
-		act("You quickly swap $p into your primary hand.", victim, dual, 0, TO_CHAR);
-		act("$n quickly swaps $p into $s primary hand.", victim, dual, 0, TO_ROOM);
+		act("You quickly swap $p into your primary hand.", victim, dual, nullptr, TO_CHAR);
+		act("$n quickly swaps $p into $s primary hand.", victim, dual, nullptr, TO_ROOM);
 		equip_char(victim, dual, WEAR_WIELD, false);
 	}
 
@@ -460,39 +460,39 @@ void do_hobble(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 		switch (weapon->value[0])
 		{
 			case WEAPON_MACE:
-				act("You lower your mace near the ground and sweep at $N's legs!", ch, 0, victim, TO_CHAR);
-				act("$n lowers $s mace near the ground and sweeps at your legs!", ch, 0, victim, TO_VICT);
-				act("$n lowers $s mace near the ground and sweeps at $N's legs!", ch, 0, victim, TO_NOTVICT);
+				act("You lower your mace near the ground and sweep at $N's legs!", ch, nullptr, victim, TO_CHAR);
+				act("$n lowers $s mace near the ground and sweeps at your legs!", ch, nullptr, victim, TO_VICT);
+				act("$n lowers $s mace near the ground and sweeps at $N's legs!", ch, nullptr, victim, TO_NOTVICT);
 				break;
 			case WEAPON_AXE:
-				act("Pivoting suddenly, you bring your axe down in an arc towards $N's feet!", ch, 0, victim, TO_CHAR);
-				act("Pivoting suddenly, $n brings $s axe down in an arc towards your feet!", ch, 0, victim, TO_VICT);
-				act("Pivoting suddenly, $n brings $s axe down in an arc towards $N's feet!", ch, 0, victim, TO_NOTVICT);
+				act("Pivoting suddenly, you bring your axe down in an arc towards $N's feet!", ch, nullptr, victim, TO_CHAR);
+				act("Pivoting suddenly, $n brings $s axe down in an arc towards your feet!", ch, nullptr, victim, TO_VICT);
+				act("Pivoting suddenly, $n brings $s axe down in an arc towards $N's feet!", ch, nullptr, victim, TO_NOTVICT);
 				break;
 			case WEAPON_SWORD:
-				act("You drop your blade under $N's guard and strike at $S legs!", ch, 0, victim, TO_CHAR);
-				act("$n drops $s blade under your guard and strikes at your legs!", ch, 0, victim, TO_VICT);
-				act("$n drops $s blade under $N's guard and strikes at $S legs!", ch, 0, victim, TO_NOTVICT);
+				act("You drop your blade under $N's guard and strike at $S legs!", ch, nullptr, victim, TO_CHAR);
+				act("$n drops $s blade under your guard and strikes at your legs!", ch, nullptr, victim, TO_VICT);
+				act("$n drops $s blade under $N's guard and strikes at $S legs!", ch, nullptr, victim, TO_NOTVICT);
 				break;
 			case WEAPON_FLAIL:
-				act("Lashing out with your flail, you aim a sweeping blow at $N's legs!", ch, 0, victim, TO_CHAR);
-				act("Lashing out with $s flail, $n aims a sweeping blow at your legs!", ch, 0, victim, TO_VICT);
-				act("Lashing out with $s flail, $n aims a sweeping blow at $N's legs!", ch, 0, victim, TO_NOTVICT);
+				act("Lashing out with your flail, you aim a sweeping blow at $N's legs!", ch, nullptr, victim, TO_CHAR);
+				act("Lashing out with $s flail, $n aims a sweeping blow at your legs!", ch, nullptr, victim, TO_VICT);
+				act("Lashing out with $s flail, $n aims a sweeping blow at $N's legs!", ch, nullptr, victim, TO_NOTVICT);
 				break;
 			case WEAPON_STAFF:
-				act("Twirling your staff rapidly, you unleash a snapping strike at $N's feet!", ch, 0, victim, TO_CHAR);
-				act("Twirling $s staff rapidly, $n unleashes a snapping strike at your feet!", ch, 0, victim, TO_VICT);
-				act("Twirling $s staff rapidly, $n unleashes a snapping strike at $N's feet!", ch, 0, victim, TO_NOTVICT);
+				act("Twirling your staff rapidly, you unleash a snapping strike at $N's feet!", ch, nullptr, victim, TO_CHAR);
+				act("Twirling $s staff rapidly, $n unleashes a snapping strike at your feet!", ch, nullptr, victim, TO_VICT);
+				act("Twirling $s staff rapidly, $n unleashes a snapping strike at $N's feet!", ch, nullptr, victim, TO_NOTVICT);
 				break;
 			case WEAPON_SPEAR:
-				act("Stabbing suddenly, you aim a precise strike at $N's calf!", ch, 0, victim, TO_CHAR);
-				act("Stabbing suddenly, $n aims a precise strike at your calf!", ch, 0, victim, TO_VICT);
-				act("Stabbing suddenly, $n aims a precise strike at $N's calf!", ch, 0, victim, TO_NOTVICT);
+				act("Stabbing suddenly, you aim a precise strike at $N's calf!", ch, nullptr, victim, TO_CHAR);
+				act("Stabbing suddenly, $n aims a precise strike at your calf!", ch, nullptr, victim, TO_VICT);
+				act("Stabbing suddenly, $n aims a precise strike at $N's calf!", ch, nullptr, victim, TO_NOTVICT);
 				break;
 			case WEAPON_DAGGER:
-				act("You circle around $N and make a sweeping slash at $S calves!", ch, 0, victim, TO_CHAR);
-				act("$n circles around you and makes a sweeping slash at your calves!", ch, 0, victim, TO_VICT);
-				act("$n circles around $N and makes a sweeping slash at $S calves!", ch, 0, victim, TO_NOTVICT);
+				act("You circle around $N and make a sweeping slash at $S calves!", ch, nullptr, victim, TO_CHAR);
+				act("$n circles around you and makes a sweeping slash at your calves!", ch, nullptr, victim, TO_VICT);
+				act("$n circles around $N and makes a sweeping slash at $S calves!", ch, nullptr, victim, TO_NOTVICT);
 				break;
 			default:
 				send_to_char("You cannot properly strike your opponent's legs with that.\n\r", ch);
@@ -519,8 +519,8 @@ void do_hobble(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 			switch (weapon->value[0])
 			{
 				case WEAPON_MACE:
-					act("You hear the chilling sound of snapping bone as you land a solid blow.", ch, 0, victim, TO_CHAR);
-					act("You hear the chilling sound of snapping bone as $n lands a solid blow.", ch, 0, victim, TO_ROOM);
+					act("You hear the chilling sound of snapping bone as you land a solid blow.", ch, nullptr, victim, TO_CHAR);
+					act("You hear the chilling sound of snapping bone as $n lands a solid blow.", ch, nullptr, victim, TO_ROOM);
 
 					af.location = APPLY_DEX;
 					af.modifier = -(ch->level / 6);
@@ -530,9 +530,9 @@ void do_hobble(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 					victim->move = std::max(victim->move / 2, 0);
 					break;
 				case WEAPON_AXE:
-					act("$N's leg buckles beneath $m as your slash tears deep into muscle!", ch, 0, victim, TO_CHAR);
-					act("Your leg buckles beneath you as $n's slash tears deep into muscle.", ch, 0, victim, TO_VICT);
-					act("$N's leg buckles beneath $m as $n's slash tears deep into muscle.", ch, 0, victim, TO_NOTVICT);
+					act("$N's leg buckles beneath $m as your slash tears deep into muscle!", ch, nullptr, victim, TO_CHAR);
+					act("Your leg buckles beneath you as $n's slash tears deep into muscle.", ch, nullptr, victim, TO_VICT);
+					act("$N's leg buckles beneath $m as $n's slash tears deep into muscle.", ch, nullptr, victim, TO_NOTVICT);
 
 					af.location = APPLY_DEX;
 					af.modifier = -(ch->level / 8);
@@ -553,9 +553,9 @@ void do_hobble(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 					new_affect_to_char(victim, &af2);
 					break;
 				case WEAPON_SWORD:
-					act("$N's leg buckles beneath $m as your slash tears deep into muscle!", ch, 0, victim, TO_CHAR);
-					act("Your leg buckles beneath you as $n's slash tears deep into muscle.", ch, 0, victim, TO_VICT);
-					act("$N's leg buckles beneath $m as $n's slash tears deep into muscle.", ch, 0, victim, TO_NOTVICT);
+					act("$N's leg buckles beneath $m as your slash tears deep into muscle!", ch, nullptr, victim, TO_CHAR);
+					act("Your leg buckles beneath you as $n's slash tears deep into muscle.", ch, nullptr, victim, TO_VICT);
+					act("$N's leg buckles beneath $m as $n's slash tears deep into muscle.", ch, nullptr, victim, TO_NOTVICT);
 
 					af.location = APPLY_DEX;
 					af.modifier = -(ch->level / 8);
@@ -576,8 +576,8 @@ void do_hobble(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 					new_affect_to_char(victim, &af2);
 					break;
 				case WEAPON_FLAIL:
-					act("You hear the chilling sound of snapping bone as you land a solid blow.", ch, 0, victim, TO_CHAR);
-					act("You hear the chilling sound of snapping bone as $n lands a solid blow.", ch, 0, victim, TO_ROOM);
+					act("You hear the chilling sound of snapping bone as you land a solid blow.", ch, nullptr, victim, TO_CHAR);
+					act("You hear the chilling sound of snapping bone as $n lands a solid blow.", ch, nullptr, victim, TO_ROOM);
 
 					af.location = APPLY_DEX;
 					af.modifier = -(ch->level / 6);
@@ -587,8 +587,8 @@ void do_hobble(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 					victim->move = std::max(victim->move / 2, 0);
 					break;
 				case WEAPON_STAFF:
-					act("You hear the chilling sound of snapping bone as you land a solid blow.", ch, 0, victim, TO_CHAR);
-					act("You hear the chilling sound of snapping bone as $n lands a solid blow.", ch, 0, victim, TO_ROOM);
+					act("You hear the chilling sound of snapping bone as you land a solid blow.", ch, nullptr, victim, TO_CHAR);
+					act("You hear the chilling sound of snapping bone as $n lands a solid blow.", ch, nullptr, victim, TO_ROOM);
 
 					af.location = APPLY_DEX;
 					af.modifier = -(ch->level / 6);
@@ -598,9 +598,9 @@ void do_hobble(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 					victim->move = std::max(victim->move / 2, 0);
 					break;
 				case WEAPON_SPEAR:
-					act("$N falters, clutching $S leg in agony as your spear pierces $M clean through!", ch, 0, victim, TO_CHAR);
-					act("You falter, clutching your leg in agony as $n's spear pierces you clean through!", ch, 0, victim, TO_VICT);
-					act("$N falters, clutching $S leg in agony as $n's spear pierces $M clean through!", ch, 0, victim, TO_NOTVICT);
+					act("$N falters, clutching $S leg in agony as your spear pierces $M clean through!", ch, nullptr, victim, TO_CHAR);
+					act("You falter, clutching your leg in agony as $n's spear pierces you clean through!", ch, nullptr, victim, TO_VICT);
+					act("$N falters, clutching $S leg in agony as $n's spear pierces $M clean through!", ch, nullptr, victim, TO_NOTVICT);
 
 					af.location = APPLY_DEX;
 					af.modifier = -(ch->level / 7);
@@ -611,9 +611,9 @@ void do_hobble(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 					LAG_CHAR(victim, PULSE_VIOLENCE * 2);
 					break;
 				case WEAPON_DAGGER:
-					act("$N collapses to the ground in agony as you sever a tendon!", ch, 0, victim, TO_CHAR);
-					act("You collapse to the ground in agony as $n severs a tendon!", ch, 0, victim, TO_VICT);
-					act("$N collapses to the ground in agony as $n severs a tendon!", ch, 0, victim, TO_NOTVICT);
+					act("$N collapses to the ground in agony as you sever a tendon!", ch, nullptr, victim, TO_CHAR);
+					act("You collapse to the ground in agony as $n severs a tendon!", ch, nullptr, victim, TO_VICT);
+					act("$N collapses to the ground in agony as $n severs a tendon!", ch, nullptr, victim, TO_NOTVICT);
 
 					af.location = APPLY_DEX;
 					af.modifier = -(ch->level / 5);
@@ -746,29 +746,29 @@ void do_crippling_blow(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 		switch (weapon->value[0])
 		{
 			case WEAPON_MACE:
-				act("You take a measured swing at $N's exposed offhand arm with your mace!", ch, 0, victim, TO_CHAR);
-				act("$n takes a measured swing at your exposed offhand arm with $s mace!", ch, 0, victim, TO_VICT);
-				act("$n takes a measured swing at $N's exposed offhand arm with $s mace!", ch, 0, victim, TO_NOTVICT);
+				act("You take a measured swing at $N's exposed offhand arm with your mace!", ch, nullptr, victim, TO_CHAR);
+				act("$n takes a measured swing at your exposed offhand arm with $s mace!", ch, nullptr, victim, TO_VICT);
+				act("$n takes a measured swing at $N's exposed offhand arm with $s mace!", ch, nullptr, victim, TO_NOTVICT);
 				break;
 			case WEAPON_AXE:
-				act("Cleaving through $N's defenses, you strike at $N's vulnerable arm!", ch, 0, victim, TO_CHAR);
-				act("Cleaving through your defenses, $n strikes at your vulnerable arm!", ch, 0, victim, TO_VICT);
-				act("Cleaving through $N's defenses, $n strikes at $N's vulnerable arm!", ch, 0, victim, TO_NOTVICT);
+				act("Cleaving through $N's defenses, you strike at $N's vulnerable arm!", ch, nullptr, victim, TO_CHAR);
+				act("Cleaving through your defenses, $n strikes at your vulnerable arm!", ch, nullptr, victim, TO_VICT);
+				act("Cleaving through $N's defenses, $n strikes at $N's vulnerable arm!", ch, nullptr, victim, TO_NOTVICT);
 				break;
 			case WEAPON_SWORD:
-				act("With a compact horizontal slice, you strike at $N's exposed arm!", ch, 0, victim, TO_CHAR);
-				act("With a compact horizontal slice, $n strikes at your exposed arm!", ch, 0, victim, TO_VICT);
-				act("With a compact horizontal slice, $n strikes at $N's exposed arm!", ch, 0, victim, TO_NOTVICT);
+				act("With a compact horizontal slice, you strike at $N's exposed arm!", ch, nullptr, victim, TO_CHAR);
+				act("With a compact horizontal slice, $n strikes at your exposed arm!", ch, nullptr, victim, TO_VICT);
+				act("With a compact horizontal slice, $n strikes at $N's exposed arm!", ch, nullptr, victim, TO_NOTVICT);
 				break;
 			case WEAPON_FLAIL:
-				act("With a sidearm sweep, you bring the head of your flail about to strike $N's arm!", ch, 0, victim, TO_CHAR);
-				act("With a sidearm sweep, $n brings the head of $s flail about to strike your arm!", ch, 0, victim, TO_VICT);
-				act("With a sidearm sweep, $n brings the head of $s flail about to strike $N's arm!", ch, 0, victim, TO_NOTVICT);
+				act("With a sidearm sweep, you bring the head of your flail about to strike $N's arm!", ch, nullptr, victim, TO_CHAR);
+				act("With a sidearm sweep, $n brings the head of $s flail about to strike your arm!", ch, nullptr, victim, TO_VICT);
+				act("With a sidearm sweep, $n brings the head of $s flail about to strike $N's arm!", ch, nullptr, victim, TO_NOTVICT);
 				break;
 			case WEAPON_STAFF:
-				act("Using your right hand as a fulcrum, you swat suddenly at $N's exposed arm!", ch, 0, victim, TO_CHAR);
-				act("Using $s right hand as a fulcrum, $n swats suddenly at your exposed arm!", ch, 0, victim, TO_VICT);
-				act("Using $s right hand as a fulcrum, $n swats suddenly at $N's exposed arm!", ch, 0, victim, TO_NOTVICT);
+				act("Using your right hand as a fulcrum, you swat suddenly at $N's exposed arm!", ch, nullptr, victim, TO_CHAR);
+				act("Using $s right hand as a fulcrum, $n swats suddenly at your exposed arm!", ch, nullptr, victim, TO_VICT);
+				act("Using $s right hand as a fulcrum, $n swats suddenly at $N's exposed arm!", ch, nullptr, victim, TO_NOTVICT);
 				break;
 			default:
 				send_to_char("You cannot perform a crippling blow with that.\n\r", ch);
@@ -795,9 +795,9 @@ void do_crippling_blow(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 			switch (weapon->value[0])
 			{
 				case WEAPON_MACE:
-					act("You hear the sharp crack of splintering bone as $N's arm dangles loosely at $S side!", ch, 0, victim, TO_CHAR);
-					act("You hear the sharp crack of splintering bone as your arm dangles loosely at your side!", ch, 0, victim, TO_VICT);
-					act("You hear the sharp crack of splintering bone as $N's arm dangles loosely at $S side!", ch, 0, victim, TO_NOTVICT);
+					act("You hear the sharp crack of splintering bone as $N's arm dangles loosely at $S side!", ch, nullptr, victim, TO_CHAR);
+					act("You hear the sharp crack of splintering bone as your arm dangles loosely at your side!", ch, nullptr, victim, TO_VICT);
+					act("You hear the sharp crack of splintering bone as $N's arm dangles loosely at $S side!", ch, nullptr, victim, TO_NOTVICT);
 
 					af.location = APPLY_STR;
 					af.modifier = -(ch->level / 7);
@@ -815,9 +815,9 @@ void do_crippling_blow(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 					affect_to_char(victim, &af);
 					break;
 				case WEAPON_AXE:
-					act("Your axe rends through flesh and muscle, biting deep into $N's arm!", ch, 0, victim, TO_CHAR);
-					act("$n's axe rends through flesh and muscle, biting deep into your arm!", ch, 0, victim, TO_VICT);
-					act("$n's axe rends through flesh and muscle, biting deep into $N's arm!", ch, 0, victim, TO_NOTVICT);
+					act("Your axe rends through flesh and muscle, biting deep into $N's arm!", ch, nullptr, victim, TO_CHAR);
+					act("$n's axe rends through flesh and muscle, biting deep into your arm!", ch, nullptr, victim, TO_VICT);
+					act("$n's axe rends through flesh and muscle, biting deep into $N's arm!", ch, nullptr, victim, TO_NOTVICT);
 
 					af.location = APPLY_DEX;
 					af.modifier = -(ch->level / 8);
@@ -838,9 +838,9 @@ void do_crippling_blow(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 					new_affect_to_char(victim, &af2);
 					break;
 				case WEAPON_SWORD:
-					act("Your blade sinks deep into $N's flesh as blood runs down $S forearm!", ch, 0, victim, TO_CHAR);
-					act("$n's blade sinks deep into your flesh as blood runs down your forearm!", ch, 0, victim, TO_VICT);
-					act("$n's blade sinks deep into $N's flesh as blood runs down $S forearm!", ch, 0, victim, TO_NOTVICT);
+					act("Your blade sinks deep into $N's flesh as blood runs down $S forearm!", ch, nullptr, victim, TO_CHAR);
+					act("$n's blade sinks deep into your flesh as blood runs down your forearm!", ch, nullptr, victim, TO_VICT);
+					act("$n's blade sinks deep into $N's flesh as blood runs down $S forearm!", ch, nullptr, victim, TO_NOTVICT);
 
 					af.location = APPLY_DEX;
 					af.modifier = -(ch->level / 8);
@@ -861,9 +861,9 @@ void do_crippling_blow(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 					new_affect_to_char(victim, &af2);
 					break;
 				case WEAPON_FLAIL:
-					act("You hear the sharp crack of splintering bone as $N's arm dangles loosely at $S side!", ch, 0, victim, TO_CHAR);
-					act("You hear the sharp crack of splintering bone as your arm dangles loosely at your side!", ch, 0, victim, TO_VICT);
-					act("You hear the sharp crack of splintering bone as $N's arm dangles loosely at $S side!", ch, 0, victim, TO_NOTVICT);
+					act("You hear the sharp crack of splintering bone as $N's arm dangles loosely at $S side!", ch, nullptr, victim, TO_CHAR);
+					act("You hear the sharp crack of splintering bone as your arm dangles loosely at your side!", ch, nullptr, victim, TO_VICT);
+					act("You hear the sharp crack of splintering bone as $N's arm dangles loosely at $S side!", ch, nullptr, victim, TO_NOTVICT);
 
 					af.location = APPLY_STR;
 					af.modifier = -(ch->level / 7);
@@ -881,9 +881,9 @@ void do_crippling_blow(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 					affect_to_char(victim, &af);
 					break;
 				case WEAPON_STAFF:
-					act("You hear the sharp crack of splintering bone as $N's arm dangles loosely at $S side!", ch, 0, victim, TO_CHAR);
-					act("You hear the sharp crack of splintering bone as your arm dangles loosely at your side!", ch, 0, victim, TO_VICT);
-					act("You hear the sharp crack of splintering bone as $N's arm dangles loosely at $S side!", ch, 0, victim, TO_NOTVICT);
+					act("You hear the sharp crack of splintering bone as $N's arm dangles loosely at $S side!", ch, nullptr, victim, TO_CHAR);
+					act("You hear the sharp crack of splintering bone as your arm dangles loosely at your side!", ch, nullptr, victim, TO_VICT);
+					act("You hear the sharp crack of splintering bone as $N's arm dangles loosely at $S side!", ch, nullptr, victim, TO_NOTVICT);
 
 					af.location = APPLY_STR;
 					af.modifier = -(ch->level / 7);
@@ -1083,9 +1083,9 @@ void do_gouge(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 	if (number_percent() < skill)
 	{
 
-		act(hit1, ch, 0, victim, TO_CHAR);
-		act(hit2, ch, 0, victim, TO_VICT);
-		act(hit3, ch, 0, victim, TO_NOTVICT);
+		act(hit1, ch, nullptr, victim, TO_CHAR);
+		act(hit2, ch, nullptr, victim, TO_VICT);
+		act(hit3, ch, nullptr, victim, TO_NOTVICT);
 
 		if (!is_affected_by(victim, AFF_BLIND))
 		{
@@ -1109,9 +1109,9 @@ void do_gouge(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 	}
 	else
 	{
-		act(miss1, ch, 0, victim, TO_CHAR);
-		act(miss2, ch, 0, victim, TO_VICT);
-		act(miss3, ch, 0, victim, TO_NOTVICT);
+		act(miss1, ch, nullptr, victim, TO_CHAR);
+		act(miss2, ch, nullptr, victim, TO_VICT);
+		act(miss3, ch, nullptr, victim, TO_NOTVICT);
 
 		damage(ch, victim, 0, gsn_gouge, DAM_NONE, true);
 		check_improve(ch, gsn_gouge, false, 1);
@@ -1208,9 +1208,9 @@ void do_bleed(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 	if (number_percent() < .65 * skill)
 	{
 
-		act(hit1, ch, 0, victim, TO_CHAR);
-		act(hit2, ch, 0, victim, TO_VICT);
-		act(hit3, ch, 0, victim, TO_NOTVICT);
+		act(hit1, ch, nullptr, victim, TO_CHAR);
+		act(hit2, ch, nullptr, victim, TO_VICT);
+		act(hit3, ch, nullptr, victim, TO_NOTVICT);
 
 		if (!is_affected(victim, gsn_bleeding))
 		{
@@ -1233,9 +1233,9 @@ void do_bleed(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 	}
 	else
 	{
-		act(miss1, ch, 0, victim, TO_CHAR);
-		act(miss2, ch, 0, victim, TO_VICT);
-		act(miss3, ch, 0, victim, TO_NOTVICT);
+		act(miss1, ch, nullptr, victim, TO_CHAR);
+		act(miss2, ch, nullptr, victim, TO_VICT);
+		act(miss3, ch, nullptr, victim, TO_NOTVICT);
 
 		damage(ch, victim, 0, gsn_bleed, DAM_NONE, true);
 		check_improve(ch, gsn_bleed, false, 1);
@@ -1379,26 +1379,26 @@ void do_unbalance(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 
 	if (is_affected(victim, gsn_unbalance))
 	{
-		act("$N is already unbalanced.", ch, 0, victim, TO_CHAR);
+		act("$N is already unbalanced.", ch, nullptr, victim, TO_CHAR);
 		return;
 	}
 
 	if (number_percent() < .9 * skill)
 	{
-		act("You lunge at $N and suddenly withdraw, throwing $M off balance!", ch, 0, victim, TO_CHAR);
-		act("$n lunges at you and suddenly withdraws, throwing you off balance!", ch, 0, victim, TO_VICT);
-		act("$n lunges at $N and suddenly withdraws, throwing $M off balance!", ch, 0, victim, TO_NOTVICT);
+		act("You lunge at $N and suddenly withdraw, throwing $M off balance!", ch, nullptr, victim, TO_CHAR);
+		act("$n lunges at you and suddenly withdraws, throwing you off balance!", ch, nullptr, victim, TO_VICT);
+		act("$n lunges at $N and suddenly withdraws, throwing $M off balance!", ch, nullptr, victim, TO_NOTVICT);
 
 		if (victim->balance >= 40)
 		{
-			act("You stumble awkwardly and topple to the ground!", victim, 0, 0, TO_CHAR);
-			act("$n stumbles awkwardly and topples to the ground!", victim, 0, 0, TO_ROOM);
+			act("You stumble awkwardly and topple to the ground!", victim, nullptr, nullptr, TO_CHAR);
+			act("$n stumbles awkwardly and topples to the ground!", victim, nullptr, nullptr, TO_ROOM);
 			LAG_CHAR(victim, PULSE_VIOLENCE * 2);
 		}
 		else if (victim->balance >= 30)
 		{
-			act("You wobble unsteadily, struggling to stay on your feet.", victim, 0, 0, TO_CHAR);
-			act("$n wobbles unsteadily, struggling to stay on $s feet.", victim, 0, 0, TO_ROOM);
+			act("You wobble unsteadily, struggling to stay on your feet.", victim, nullptr, nullptr, TO_CHAR);
+			act("$n wobbles unsteadily, struggling to stay on $s feet.", victim, nullptr, nullptr, TO_ROOM);
 			LAG_CHAR(victim, PULSE_VIOLENCE);
 		}
 
@@ -1417,9 +1417,9 @@ void do_unbalance(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 	}
 	else
 	{
-		act("You lunge at $N and suddenly withdraw, but $E doesn't fall for your feint.", ch, 0, victim, TO_CHAR);
-		act("$n lunges at you and suddenly withdraws, but you don't fall for $s feint.", ch, 0, victim, TO_VICT);
-		act("$n lunges at $N and suddenly withdraws, but $E doesn't fall for $s feint.", ch, 0, victim, TO_NOTVICT);
+		act("You lunge at $N and suddenly withdraw, but $E doesn't fall for your feint.", ch, nullptr, victim, TO_CHAR);
+		act("$n lunges at you and suddenly withdraws, but you don't fall for $s feint.", ch, nullptr, victim, TO_VICT);
+		act("$n lunges at $N and suddenly withdraws, but $E doesn't fall for $s feint.", ch, nullptr, victim, TO_NOTVICT);
 		check_improve(ch, gsn_unbalance, false, 1);
 	}
 
@@ -1517,16 +1517,16 @@ void do_uppercut(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 	if (number_percent() < .8 * skill)
 	{
 		success = 1;
-		act(ch1, ch, 0, victim, TO_CHAR);
-		act(vict1, ch, 0, victim, TO_VICT);
-		act(nv1, ch, 0, victim, TO_NOTVICT);
+		act(ch1, ch, nullptr, victim, TO_CHAR);
+		act(vict1, ch, nullptr, victim, TO_VICT);
+		act(nv1, ch, nullptr, victim, TO_NOTVICT);
 
 		if (success == 1
 			&& number_percent() < (.4 * skill * (1 + weapon->weight / 200) * (1 + (get_curr_stat(ch, STAT_STR) - 20) / 10)))
 		{
-			act(chspecial, ch, 0, victim, TO_CHAR);
-			act(victspecial, ch, 0, victim, TO_VICT);
-			act(nvspecial, ch, 0, victim, TO_NOTVICT);
+			act(chspecial, ch, nullptr, victim, TO_CHAR);
+			act(victspecial, ch, nullptr, victim, TO_VICT);
+			act(nvspecial, ch, nullptr, victim, TO_NOTVICT);
 
 			if (!is_affected(victim, gsn_uppercut))
 			{
@@ -1547,9 +1547,9 @@ void do_uppercut(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 	}
 	else
 	{
-		act(ch1, ch, 0, victim, TO_CHAR);
-		act(vict1, ch, 0, victim, TO_VICT);
-		act(nv1, ch, 0, victim, TO_NOTVICT);
+		act(ch1, ch, nullptr, victim, TO_CHAR);
+		act(vict1, ch, nullptr, victim, TO_VICT);
+		act(nv1, ch, nullptr, victim, TO_NOTVICT);
 
 		damage(ch, victim, 0, gsn_uppercut, DAM_NONE, true);
 		check_improve(ch, gsn_uppercut, false, 1);
@@ -1662,11 +1662,11 @@ void do_dart(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 
 	if (number_percent() < (get_curr_stat(ch, STAT_DEX) + skill) * .80)
 	{
-		act("Moving nimbly, you dart in under $N's guard and strike!", ch, 0, victim, TO_CHAR);
-		act("$n nimbly darts under your guard and strikes!", ch, 0, victim, TO_VICT);
-		act(cha, ch, 0, victim, TO_CHAR);
-		act(vict, ch, 0, victim, TO_VICT);
-		act(nv, ch, 0, victim, TO_NOTVICT);
+		act("Moving nimbly, you dart in under $N's guard and strike!", ch, nullptr, victim, TO_CHAR);
+		act("$n nimbly darts under your guard and strikes!", ch, nullptr, victim, TO_VICT);
+		act(cha, ch, nullptr, victim, TO_CHAR);
+		act(vict, ch, nullptr, victim, TO_VICT);
+		act(nv, ch, nullptr, victim, TO_NOTVICT);
 
 		af.where = TO_AFFECTS;
 		af.level = ch->level;
@@ -1681,8 +1681,8 @@ void do_dart(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 	}
 	else
 	{
-		act("Moving nimbly, you dart in under $N's guard and strike!", ch, 0, victim, TO_CHAR);
-		act("$n nimbly darts under your guard and strikes!", ch, 0, victim, TO_VICT);
+		act("Moving nimbly, you dart in under $N's guard and strike!", ch, nullptr, victim, TO_CHAR);
+		act("$n nimbly darts under your guard and strikes!", ch, nullptr, victim, TO_VICT);
 		damage(ch, victim, 0, gsn_dart, DAM_NONE, true);
 		check_improve(ch, gsn_dart, false, 1);
 	}
@@ -1777,12 +1777,12 @@ void do_impale(CHAR_DATA *ch, char *argument)
 		if (!is_affected(victim, gsn_impale) &&
 			number_percent() < 20 - (material_table[weapon->pIndexData->material_index].mat_hardness * 5))
 		{
-			act(cha, ch, 0, victim, TO_CHAR);
-			act(vict, ch, 0, victim, TO_VICT);
-			act(nv, ch, 0, victim, TO_NOTVICT);
-			act(break1, ch, 0, victim, TO_NOTVICT);
-			act(break1, ch, 0, victim, TO_CHAR);
-			act(break2, ch, 0, victim, TO_VICT);
+			act(cha, ch, nullptr, victim, TO_CHAR);
+			act(vict, ch, nullptr, victim, TO_VICT);
+			act(nv, ch, nullptr, victim, TO_NOTVICT);
+			act(break1, ch, nullptr, victim, TO_NOTVICT);
+			act(break1, ch, nullptr, victim, TO_CHAR);
+			act(break2, ch, nullptr, victim, TO_VICT);
 			one_hit_new(ch, victim, TYPE_UNDEFINED, HIT_NOSPECIALS, HIT_UNBLOCKABLE, HIT_NOADD, 300, "impalement");
 
 			if (!is_affected(victim, gsn_bleeding))
@@ -1816,9 +1816,9 @@ void do_impale(CHAR_DATA *ch, char *argument)
 		}
 		else
 		{
-			act(cha, ch, 0, victim, TO_CHAR);
-			act(vict, ch, 0, victim, TO_VICT);
-			act(nv, ch, 0, victim, TO_NOTVICT);
+			act(cha, ch, nullptr, victim, TO_CHAR);
+			act(vict, ch, nullptr, victim, TO_VICT);
+			act(nv, ch, nullptr, victim, TO_NOTVICT);
 			one_hit_new(ch, victim, TYPE_UNDEFINED, HIT_NOSPECIALS, HIT_UNBLOCKABLE, HIT_NOADD, 200, "impalement");
 
 			if (!is_affected(victim, gsn_bleeding))
@@ -1844,9 +1844,9 @@ void do_impale(CHAR_DATA *ch, char *argument)
 	}
 	else
 	{
-		act("You make a ferocious lunge at $N with your weapon, but miss!", ch, 0, victim, TO_CHAR);
-		act("$n makes a ferocious lunge at you with $s weapon, but misses!", ch, 0, victim, TO_VICT);
-		act("$n makes a ferocious lunge at $N with $s weapon, but misses!", ch, 0, victim, TO_NOTVICT);
+		act("You make a ferocious lunge at $N with your weapon, but miss!", ch, nullptr, victim, TO_CHAR);
+		act("$n makes a ferocious lunge at you with $s weapon, but misses!", ch, nullptr, victim, TO_VICT);
+		act("$n makes a ferocious lunge at $N with $s weapon, but misses!", ch, nullptr, victim, TO_NOTVICT);
 
 		damage_new(ch, victim, 0, TYPE_UNDEFINED, DAM_NONE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "impalement");
 		check_improve(ch, gsn_impale, false, 1);
@@ -1881,7 +1881,7 @@ void do_hurl(CHAR_DATA *ch, char *argument)
 
 	if (weapon->weight > skirmisher_max_weapweight(ch))
 	{
-		act("That $t is too heavy to be hurled properly.", ch, weapon_name_lookup(weapon->value[0]), 0, TO_CHAR);
+		act("That $t is too heavy to be hurled properly.", ch, weapon_name_lookup(weapon->value[0]), nullptr, TO_CHAR);
 		return;
 	}
 
@@ -1929,14 +1929,14 @@ void do_hurl(CHAR_DATA *ch, char *argument)
 		if (pexit == nullptr)
 		{
 			dirname = flag_name_lookup(direction, direction_table);
-			act("You can't hurl your weapon $t.", ch, dirname, 0, TO_CHAR);
+			act("You can't hurl your weapon $t.", ch, dirname, nullptr, TO_CHAR);
 			return;
 		}
 
 		if (IS_SET(pexit->exit_info, EX_CLOSED))
 		{
 			dirname = flag_name_lookup(direction, direction_table);
-			act("You can't hurl your weapon $t.", ch, dirname, 0, TO_CHAR);
+			act("You can't hurl your weapon $t.", ch, dirname, nullptr, TO_CHAR);
 			return;
 		}
 
@@ -1947,7 +1947,7 @@ void do_hurl(CHAR_DATA *ch, char *argument)
 		if (victim == nullptr)
 		{
 			dirname = flag_name_lookup(direction, direction_table);
-			act("You can't see them $t.", ch, dirname, 0, TO_CHAR);
+			act("You can't see them $t.", ch, dirname, nullptr, TO_CHAR);
 			return;
 		}
 	}
@@ -1959,7 +1959,7 @@ void do_hurl(CHAR_DATA *ch, char *argument)
 
 	if (is_affected(victim, gsn_hurl))
 	{
-		act("$N has taken cover and you can't get a clear shot at $M.", ch, 0, victim, TO_CHAR);
+		act("$N has taken cover and you can't get a clear shot at $M.", ch, nullptr, victim, TO_CHAR);
 		return;
 	}
 
@@ -1968,15 +1968,15 @@ void do_hurl(CHAR_DATA *ch, char *argument)
 		dirname = flag_name_lookup(direction, direction_table);
 
 		sprintf(buf, "Sighting $N in the distance %sward, you hurl your %s at $M!", dirname, weapon_name_lookup(weapon->value[0]));
-		act(buf, ch, 0, victim, TO_CHAR);
+		act(buf, ch, nullptr, victim, TO_CHAR);
 
 		sprintf(buf, "$n suddenly hurls $s %s %sward!", weapon_name_lookup(weapon->value[0]), dirname);
-		act(buf, ch, 0, victim, TO_ROOM);
+		act(buf, ch, nullptr, victim, TO_ROOM);
 
 		dirname = flag_name_lookup(reverse_d(direction), direction_table);
 
 		sprintf(buf, "A %s comes hurtling in from the %s, flipping end over end!", weapon_name_lookup(weapon->value[0]), dirname);
-		act(buf, victim, 0, 0, TO_ALL);
+		act(buf, victim, nullptr, nullptr, TO_ALL);
 
 		if (!is_npc(victim) && Deref(victim->fighting) == nullptr)
 		{
@@ -2050,8 +2050,8 @@ void do_hurl(CHAR_DATA *ch, char *argument)
 	if (dual != nullptr)
 	{
 		unequip_char(ch, dual, false);
-		act("You quickly swap $p into your primary hand.", ch, dual, 0, TO_CHAR);
-		act("$n quickly swaps $p into $s primary hand.", ch, dual, 0, TO_ROOM);
+		act("You quickly swap $p into your primary hand.", ch, dual, nullptr, TO_CHAR);
+		act("$n quickly swaps $p into $s primary hand.", ch, dual, nullptr, TO_ROOM);
 		equip_char(ch, dual, WEAR_WIELD, false);
 	}
 
@@ -2137,29 +2137,29 @@ void do_overhead(CHAR_DATA *ch, char *argument)
 	switch (weapon->value[0])
 	{
 		case WEAPON_MACE:
-			act("You swing your mace overhead and bring it down toward $N with terrible force!", ch, 0, victim, TO_CHAR);
-			act("$n swings $s mace overhead and brings it down toward you with terrible force!", ch, 0, victim, TO_VICT);
-			act("$n swings $s mace overhead and brings it down toward $N with terrible force!", ch, 0, victim, TO_NOTVICT);
+			act("You swing your mace overhead and bring it down toward $N with terrible force!", ch, nullptr, victim, TO_CHAR);
+			act("$n swings $s mace overhead and brings it down toward you with terrible force!", ch, nullptr, victim, TO_VICT);
+			act("$n swings $s mace overhead and brings it down toward $N with terrible force!", ch, nullptr, victim, TO_NOTVICT);
 			break;
 		case WEAPON_STAFF:
-			act("You let loose a vicious longarm strike, your staff arcing toward $N's head!", ch, 0, victim, TO_CHAR);
-			act("$n lets loose a vicious longarm strike, $s staff arcing toward your head!", ch, 0, victim, TO_VICT);
-			act("$n lets loose a vicious longarm strike, $s staff arcing towards $N's head!", ch, 0, victim, TO_NOTVICT);
+			act("You let loose a vicious longarm strike, your staff arcing toward $N's head!", ch, nullptr, victim, TO_CHAR);
+			act("$n lets loose a vicious longarm strike, $s staff arcing toward your head!", ch, nullptr, victim, TO_VICT);
+			act("$n lets loose a vicious longarm strike, $s staff arcing towards $N's head!", ch, nullptr, victim, TO_NOTVICT);
 			break;
 		case WEAPON_FLAIL:
-			act("The head of your flail whistles through the air, arcing towards $N's head!", ch, 0, victim, TO_CHAR);
-			act("The head of $n's flail whistles through the air, arcing towards your head!", ch, 0, victim, TO_VICT);
-			act("The head of $n's flail whistles through the air, arcing towards $N's head!", ch, 0, victim, TO_NOTVICT);
+			act("The head of your flail whistles through the air, arcing towards $N's head!", ch, nullptr, victim, TO_CHAR);
+			act("The head of $n's flail whistles through the air, arcing towards your head!", ch, nullptr, victim, TO_VICT);
+			act("The head of $n's flail whistles through the air, arcing towards $N's head!", ch, nullptr, victim, TO_NOTVICT);
 			break;
 		case WEAPON_AXE:
-			act("With a surge of brute force, you bring your axe arcing down towards $N's head!", ch, 0, victim, TO_CHAR);
-			act("With a surge of brute force, $n brings $s axe arcing down towards your head!", ch, 0, victim, TO_VICT);
-			act("With a surge of brute force, $n brings $s axe arcing down towards $N's head!", ch, 0, victim, TO_NOTVICT);
+			act("With a surge of brute force, you bring your axe arcing down towards $N's head!", ch, nullptr, victim, TO_CHAR);
+			act("With a surge of brute force, $n brings $s axe arcing down towards your head!", ch, nullptr, victim, TO_VICT);
+			act("With a surge of brute force, $n brings $s axe arcing down towards $N's head!", ch, nullptr, victim, TO_NOTVICT);
 			break;
 		case WEAPON_SWORD:
-			act("You raise your sword and attempt a vicious overhead slice at $N!", ch, 0, victim, TO_CHAR);
-			act("$n raises $s sword and attempts a vicious overhead slice at you!", ch, 0, victim, TO_VICT);
-			act("$n raises $s sword and attempts a vicious overhead slice at $N!", ch, 0, victim, TO_NOTVICT);
+			act("You raise your sword and attempt a vicious overhead slice at $N!", ch, nullptr, victim, TO_CHAR);
+			act("$n raises $s sword and attempts a vicious overhead slice at you!", ch, nullptr, victim, TO_VICT);
+			act("$n raises $s sword and attempts a vicious overhead slice at $N!", ch, nullptr, victim, TO_NOTVICT);
 			break;
 		default:
 			send_to_char("You cannot perform an overhead strike with that weapon.\n\r", ch);
@@ -2190,9 +2190,9 @@ void do_overhead(CHAR_DATA *ch, char *argument)
 				switch (weapon->value[0])
 				{
 					case WEAPON_MACE:
-						act("$N collapses in a heap as your mace comes down solidly on top of $S head!", ch, 0, victim, TO_CHAR);
-						act("The world goes black as $n's mace crashes into your head.", ch, 0, victim, TO_VICT);
-						act("$N collapses in a heap as the mace comes down solidly on top of $S head!", ch, 0, victim, TO_NOTVICT);
+						act("$N collapses in a heap as your mace comes down solidly on top of $S head!", ch, nullptr, victim, TO_CHAR);
+						act("The world goes black as $n's mace crashes into your head.", ch, nullptr, victim, TO_VICT);
+						act("$N collapses in a heap as the mace comes down solidly on top of $S head!", ch, nullptr, victim, TO_NOTVICT);
 
 						affect_to_char(victim, &af);
 						stop_fighting(victim, true);
@@ -2203,9 +2203,9 @@ void do_overhead(CHAR_DATA *ch, char *argument)
 						WAIT_STATE(ch, 2 * PULSE_VIOLENCE);
 						return;
 					case WEAPON_STAFF:
-						act("$N collapses in a heap as your staff comes down solidly on top of $S head!", ch, 0, victim, TO_CHAR);
-						act("The world goes black as $n's staff crashes into your head.", ch, 0, victim, TO_VICT);
-						act("$N collapses in a heap as the staff comes down solidly on top of $S head!", ch, 0, victim, TO_NOTVICT);
+						act("$N collapses in a heap as your staff comes down solidly on top of $S head!", ch, nullptr, victim, TO_CHAR);
+						act("The world goes black as $n's staff crashes into your head.", ch, nullptr, victim, TO_VICT);
+						act("$N collapses in a heap as the staff comes down solidly on top of $S head!", ch, nullptr, victim, TO_NOTVICT);
 
 						affect_to_char(victim, &af);
 						stop_fighting(victim, true);
@@ -2216,9 +2216,9 @@ void do_overhead(CHAR_DATA *ch, char *argument)
 						WAIT_STATE(ch, 2 * PULSE_VIOLENCE);
 						return;
 					case WEAPON_FLAIL:
-						act("$N collapses in a heap as your flail comes down solidly on top of $S head!", ch, 0, victim, TO_CHAR);
-						act("The world goes black as $n's flail crashes into your head.", ch, 0, victim, TO_VICT);
-						act("$N collapses in a heap as the flail comes down solidly on top of $S head!", ch, 0, victim, TO_NOTVICT);
+						act("$N collapses in a heap as your flail comes down solidly on top of $S head!", ch, nullptr, victim, TO_CHAR);
+						act("The world goes black as $n's flail crashes into your head.", ch, nullptr, victim, TO_VICT);
+						act("$N collapses in a heap as the flail comes down solidly on top of $S head!", ch, nullptr, victim, TO_NOTVICT);
 
 						affect_to_char(victim, &af);
 						stop_fighting(victim, true);
@@ -2248,33 +2248,33 @@ void do_overhead(CHAR_DATA *ch, char *argument)
 			switch (weapon->value[0])
 			{
 				case WEAPON_MACE:
-					act("$N staggers and looks stunned as your mace crashes into $S head!", ch, 0, victim, TO_CHAR);
-					act("You stagger in a daze as $n's mace crashes into your head!", ch, 0, victim, TO_VICT);
-					act("$N staggers and looks stunned as the mace crashes into $S head!", ch, 0, victim, TO_NOTVICT);
+					act("$N staggers and looks stunned as your mace crashes into $S head!", ch, nullptr, victim, TO_CHAR);
+					act("You stagger in a daze as $n's mace crashes into your head!", ch, nullptr, victim, TO_VICT);
+					act("$N staggers and looks stunned as the mace crashes into $S head!", ch, nullptr, victim, TO_NOTVICT);
 
 					LAG_CHAR(victim, 2 * PULSE_VIOLENCE);
 					dammod = 150;
 					break;
 				case WEAPON_STAFF:
-					act("$N staggers and looks stunned as your staff crashes into $S head!", ch, 0, victim, TO_CHAR);
-					act("You stagger in a daze as $n's staff crashes into your head!", ch, 0, victim, TO_VICT);
-					act("$N staggers and looks stunned as the staff crashes into $S head!", ch, 0, victim, TO_NOTVICT);
+					act("$N staggers and looks stunned as your staff crashes into $S head!", ch, nullptr, victim, TO_CHAR);
+					act("You stagger in a daze as $n's staff crashes into your head!", ch, nullptr, victim, TO_VICT);
+					act("$N staggers and looks stunned as the staff crashes into $S head!", ch, nullptr, victim, TO_NOTVICT);
 
 					LAG_CHAR(victim, 2 * PULSE_VIOLENCE);
 					dammod = 150;
 					break;
 				case WEAPON_FLAIL:
-					act("$N staggers and looks stunned as your flail crashes into $S head!", ch, 0, victim, TO_CHAR);
-					act("You stagger in a daze as $n's flail crashes into your head!", ch, 0, victim, TO_VICT);
-					act("$N staggers and looks stunned as the flail crashes into $S head!", ch, 0, victim, TO_NOTVICT);
+					act("$N staggers and looks stunned as your flail crashes into $S head!", ch, nullptr, victim, TO_CHAR);
+					act("You stagger in a daze as $n's flail crashes into your head!", ch, nullptr, victim, TO_VICT);
+					act("$N staggers and looks stunned as the flail crashes into $S head!", ch, nullptr, victim, TO_NOTVICT);
 
 					LAG_CHAR(victim, 2 * PULSE_VIOLENCE);
 					dammod = 150;
 					break;
 				case WEAPON_AXE:
-					act("$N is enshrouded in a fine mist of blood as your mighty blow strikes true!", ch, 0, victim, TO_CHAR);
-					act("You are enshrouded in a fine mist of blood as $n's axe strikes true!", ch, 0, victim, TO_VICT);
-					act("$N is enshrouded in a fine mist of blood as the mighty blow strikes true!", ch, 0, victim, TO_NOTVICT);
+					act("$N is enshrouded in a fine mist of blood as your mighty blow strikes true!", ch, nullptr, victim, TO_CHAR);
+					act("You are enshrouded in a fine mist of blood as $n's axe strikes true!", ch, nullptr, victim, TO_VICT);
+					act("$N is enshrouded in a fine mist of blood as the mighty blow strikes true!", ch, nullptr, victim, TO_NOTVICT);
 
 					af.duration = ch->level / 8;
 
@@ -2284,9 +2284,9 @@ void do_overhead(CHAR_DATA *ch, char *argument)
 
 					break;
 				case WEAPON_SWORD:
-					act("Your massive blade cleaves deeply into $N's flesh, striking bone!", ch, 0, victim, TO_CHAR);
-					act("$n's massive blade cleaves deeply into your flesh, striking bone!", ch, 0, victim, TO_VICT);
-					act("The massive blade cleaves deeply into $N's flesh, striking bone!", ch, 0, victim, TO_NOTVICT);
+					act("Your massive blade cleaves deeply into $N's flesh, striking bone!", ch, nullptr, victim, TO_CHAR);
+					act("$n's massive blade cleaves deeply into your flesh, striking bone!", ch, nullptr, victim, TO_VICT);
+					act("The massive blade cleaves deeply into $N's flesh, striking bone!", ch, nullptr, victim, TO_NOTVICT);
 
 					dammod = 200;
 					af.duration = ch->level / 12;
@@ -2338,7 +2338,7 @@ void do_extract(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 	dam = (int)((float)ch->max_hit * .2);
 
 	send_to_char("You rip the broken shaft out of your wound and blood gushes forth!\n\r", ch);
-	act("$n rips the broken shaft out of his wound!", ch, 0, 0, TO_ROOM);
+	act("$n rips the broken shaft out of his wound!", ch, nullptr, nullptr, TO_ROOM);
 
 	owner = ch;
 	af = affect_find(ch->affected, gsn_impale);
@@ -2398,9 +2398,9 @@ void do_exchange(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 
 	AC = 100 - AC;
 
-	act("Ignoring $N's onslaught, you close the ground between you and strike!", ch, 0, victim, TO_CHAR);
-	act("Ignoring your onslaught, $n closes the ground between you and strikes!", ch, 0, victim, TO_VICT);
-	act("Ignoring $N's onslaught, $n closes the ground between them and strikes!", ch, 0, victim, TO_NOTVICT);
+	act("Ignoring $N's onslaught, you close the ground between you and strike!", ch, nullptr, victim, TO_CHAR);
+	act("Ignoring your onslaught, $n closes the ground between you and strikes!", ch, nullptr, victim, TO_VICT);
+	act("Ignoring $N's onslaught, $n closes the ground between them and strikes!", ch, nullptr, victim, TO_NOTVICT);
 
 	one_hit_new(victim, ch, TYPE_UNDEFINED, HIT_NOSPECIALS, HIT_UNBLOCKABLE, HIT_NOADD, AC, nullptr);
 
@@ -2503,9 +2503,9 @@ void do_charge(CHAR_DATA *ch, char *argument)
 
 	if (number_percent() < avoid)
 	{
-		act("You deftly avoid $N's charge and $E topples to the ground.", victim, 0, ch, TO_CHAR);
-		act("$n deftly avoids $N's charge and $E topples to the ground.", victim, 0, ch, TO_NOTVICT);
-		act("Your charge is deftly avoided by $n, and you go crashing to the ground.", victim, 0, ch, TO_VICT);
+		act("You deftly avoid $N's charge and $E topples to the ground.", victim, nullptr, ch, TO_CHAR);
+		act("$n deftly avoids $N's charge and $E topples to the ground.", victim, nullptr, ch, TO_NOTVICT);
+		act("Your charge is deftly avoided by $n, and you go crashing to the ground.", victim, nullptr, ch, TO_VICT);
 		WAIT_STATE(ch, 3 * PULSE_VIOLENCE);
 		return;
 	}
@@ -2525,9 +2525,9 @@ void do_charge(CHAR_DATA *ch, char *argument)
 
 	if (number_percent() < 0.7 * skill)
 	{
-		act("You lower your shoulder and barrel into $N, sending $M flying!", ch, 0, victim, TO_CHAR);
-		act("$n lowers $s shoulder and barrels into you, sending you flying!", ch, 0, victim, TO_VICT);
-		act("$n lowers $s shoulder and barrels into $N, sending $M flying!", ch, 0, victim, TO_NOTVICT);
+		act("You lower your shoulder and barrel into $N, sending $M flying!", ch, nullptr, victim, TO_CHAR);
+		act("$n lowers $s shoulder and barrels into you, sending you flying!", ch, nullptr, victim, TO_VICT);
+		act("$n lowers $s shoulder and barrels into $N, sending $M flying!", ch, nullptr, victim, TO_NOTVICT);
 
 		lag = 1 + (armor_weight(ch) / 150);
 		dam = 10 + dice(armor_weight(ch) / 15, (int)(0.4 * (float)ch->level));
@@ -2540,9 +2540,9 @@ void do_charge(CHAR_DATA *ch, char *argument)
 	}
 	else
 	{
-		act("You charge toward $N but miss, crashing awkwardly to the ground!", ch, 0, victim, TO_CHAR);
-		act("$n charges toward you but misses, crashing awkwardly to the ground!", ch, 0, victim, TO_VICT);
-		act("$n charges toward $N but misses, crashing awkwardly to the ground!", ch, 0, victim, TO_NOTVICT);
+		act("You charge toward $N but miss, crashing awkwardly to the ground!", ch, nullptr, victim, TO_CHAR);
+		act("$n charges toward you but misses, crashing awkwardly to the ground!", ch, nullptr, victim, TO_VICT);
+		act("$n charges toward $N but misses, crashing awkwardly to the ground!", ch, nullptr, victim, TO_NOTVICT);
 
 		damage(ch, victim, 0, gsn_charge, DAM_NONE, true);
 		WAIT_STATE(ch, PULSE_VIOLENCE * 3);
@@ -2628,9 +2628,9 @@ void do_shieldbash(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 
 	if (number_percent() < chance)
 	{
-		act("You smash your shield into $N's chest, bearing down upon it with your weight!", ch, 0, victim, TO_CHAR);
-		act("$n smashes $s shield into your chest, bearing down upon you with $s weight!", ch, 0, victim, TO_VICT);
-		act("$n smashes $s shield into $N's chest, bearing down upon it with $s weight!", ch, 0, victim, TO_NOTVICT);
+		act("You smash your shield into $N's chest, bearing down upon it with your weight!", ch, nullptr, victim, TO_CHAR);
+		act("$n smashes $s shield into your chest, bearing down upon you with $s weight!", ch, nullptr, victim, TO_VICT);
+		act("$n smashes $s shield into $N's chest, bearing down upon it with $s weight!", ch, nullptr, victim, TO_NOTVICT);
 
 		dam = (int)((float)dice(ch->level / 4, 4) + ((float)weight / (float)20));
 
@@ -2645,9 +2645,9 @@ void do_shieldbash(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 	}
 	else
 	{
-		act("You thrust your shield towards $N, but $E avoids it.", ch, 0, victim, TO_CHAR);
-		act("$n thrusts $s shield towards you, but you avoid it.", ch, 0, victim, TO_VICT);
-		act("$n thrusts $s shield towards $N, but $E avoids it.", ch, 0, victim, TO_NOTVICT);
+		act("You thrust your shield towards $N, but $E avoids it.", ch, nullptr, victim, TO_CHAR);
+		act("$n thrusts $s shield towards you, but you avoid it.", ch, nullptr, victim, TO_VICT);
+		act("$n thrusts $s shield towards $N, but $E avoids it.", ch, nullptr, victim, TO_NOTVICT);
 
 		WAIT_STATE(ch, PULSE_VIOLENCE * 2);
 
@@ -2680,18 +2680,18 @@ void do_brace(CHAR_DATA *ch, [[maybe_unused]] char *arg)
 
 	if (number_percent() > .95 * skill)
 	{
-		act("You fail to position yourself properly to ward off incoming blows.", ch, 0, victim, TO_CHAR);
-		act("$n crouches awkwardly for a moment, and then straightens $mself out.", ch, 0, victim, TO_VICT);
-		act("$n crouches awkwardly for a moment, and then straightens $mself out.", ch, 0, victim, TO_NOTVICT);
+		act("You fail to position yourself properly to ward off incoming blows.", ch, nullptr, victim, TO_CHAR);
+		act("$n crouches awkwardly for a moment, and then straightens $mself out.", ch, nullptr, victim, TO_VICT);
+		act("$n crouches awkwardly for a moment, and then straightens $mself out.", ch, nullptr, victim, TO_NOTVICT);
 		WAIT_STATE(ch, PULSE_VIOLENCE * 2);
 		check_improve(ch, gsn_brace, false, 3);
 		return;
 	}
 	else
 	{
-		act("You brace yourself against incoming blows.", ch, 0, victim, TO_CHAR);
-		act("$n crouches slightly, steeling $mself against incoming blows.", ch, 0, victim, TO_VICT);
-		act("$n crouches slightly, steeling $mself against incoming blows.", ch, 0, victim, TO_NOTVICT);
+		act("You brace yourself against incoming blows.", ch, nullptr, victim, TO_CHAR);
+		act("$n crouches slightly, steeling $mself against incoming blows.", ch, nullptr, victim, TO_VICT);
+		act("$n crouches slightly, steeling $mself against incoming blows.", ch, nullptr, victim, TO_NOTVICT);
 		WAIT_STATE(ch, PULSE_VIOLENCE * 2);
 		ac = average_ac(ch);
 
@@ -3171,8 +3171,8 @@ void do_shatter(CHAR_DATA *ch, char *argument)
 	if (secondary != nullptr)
 	{
 		unequip_char(victim, secondary, false);
-		act("You quickly swap $p into your primary hand.", victim, secondary, 0, TO_CHAR);
-		act("$n quickly swaps $p into $s primary hand.", victim, secondary, 0, TO_ROOM);
+		act("You quickly swap $p into your primary hand.", victim, secondary, nullptr, TO_CHAR);
+		act("$n quickly swaps $p into $s primary hand.", victim, secondary, nullptr, TO_ROOM);
 		equip_char(victim, secondary, WEAR_WIELD, false);
 	}
 
@@ -3246,9 +3246,9 @@ void do_whirlwind(CHAR_DATA *ch, char *argument)
 		do_myell(victim, buf, ch);
 	}
 
-	act("You leap at $N, spinning and striking rapidly in all directions!", ch, 0, victim, TO_CHAR);
-	act("$n leaps at you, spinning and striking rapidly in all directions!", ch, 0, victim, TO_VICT);
-	act("$n leaps at $N, spinning and striking rapidly in all directions!", ch, 0, victim, TO_NOTVICT);
+	act("You leap at $N, spinning and striking rapidly in all directions!", ch, nullptr, victim, TO_CHAR);
+	act("$n leaps at you, spinning and striking rapidly in all directions!", ch, nullptr, victim, TO_VICT);
+	act("$n leaps at $N, spinning and striking rapidly in all directions!", ch, nullptr, victim, TO_NOTVICT);
 
 	chdex = get_curr_stat(ch, STAT_DEX);
 	chance -= 5 * (25 - chdex);
@@ -3620,8 +3620,8 @@ void do_uncoil(CHAR_DATA *ch, char *argument)
 				if (dual != nullptr)
 				{
 					unequip_char(guy, dual, false);
-					act("You quickly swap $p into your primary hand.", guy, dual, 0, TO_CHAR);
-					act("$n quickly swaps $p into $s primary hand.", guy, dual, 0, TO_ROOM);
+					act("You quickly swap $p into your primary hand.", guy, dual, nullptr, TO_CHAR);
+					act("$n quickly swaps $p into $s primary hand.", guy, dual, nullptr, TO_ROOM);
 					equip_char(guy, dual, WEAR_WIELD, false);
 				}
 			}
@@ -3629,9 +3629,9 @@ void do_uncoil(CHAR_DATA *ch, char *argument)
 	}
 	else
 	{
-		act("You struggle to free yourself from $N's grasp, but the whip holds firm!", ch, 0, guy, TO_CHAR);
-		act("$n struggles to free $mself from your grasp, but the whip holds firm!", ch, 0, guy, TO_VICT);
-		act("$n struggles to free $mself from $N's grasp, but the whip holds firm!", ch, 0, guy, TO_NOTVICT);
+		act("You struggle to free yourself from $N's grasp, but the whip holds firm!", ch, nullptr, guy, TO_CHAR);
+		act("$n struggles to free $mself from your grasp, but the whip holds firm!", ch, nullptr, guy, TO_VICT);
+		act("$n struggles to free $mself from $N's grasp, but the whip holds firm!", ch, nullptr, guy, TO_NOTVICT);
 	}
 
 	WAIT_STATE(ch, PULSE_VIOLENCE);
@@ -3684,17 +3684,17 @@ void do_pull(CHAR_DATA *ch, char *argument)
 		{
 			if (number_percent() < (skill * 0.8))
 			{
-				act("You draw your whip taut, pulling $N's legs out from under $M!", ch, 0, guy, TO_CHAR);
-				act("$n draws $s whip taut, pulling your legs out from under you!", ch, 0, guy, TO_VICT);
-				act("$n draws $s whip taut, pulling $N's legs out from under $M!", ch, 0, guy, TO_NOTVICT);
+				act("You draw your whip taut, pulling $N's legs out from under $M!", ch, nullptr, guy, TO_CHAR);
+				act("$n draws $s whip taut, pulling your legs out from under you!", ch, nullptr, guy, TO_VICT);
+				act("$n draws $s whip taut, pulling $N's legs out from under $M!", ch, nullptr, guy, TO_NOTVICT);
 				WAIT_STATE(guy, PULSE_VIOLENCE * 2);
 				check_improve(ch, gsn_pull, true, 1);
 			}
 			else
 			{
-				act("$N staggers slightly as you jerk your whip back, but remains standing.", ch, 0, guy, TO_CHAR);
-				act("You stagger slightly as $n jerks $s whip back, but remain standing.", ch, 0, guy, TO_VICT);
-				act("$N staggers slightly as $n jerks $s whip back, but remains standing.", ch, 0, guy, TO_NOTVICT);
+				act("$N staggers slightly as you jerk your whip back, but remains standing.", ch, nullptr, guy, TO_CHAR);
+				act("You stagger slightly as $n jerks $s whip back, but remain standing.", ch, nullptr, guy, TO_VICT);
+				act("$N staggers slightly as $n jerks $s whip back, but remains standing.", ch, nullptr, guy, TO_NOTVICT);
 				check_improve(ch, gsn_pull, false, 1);
 			}
 		}
@@ -3834,9 +3834,9 @@ void do_assess(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	act("You examine $N closely, using your keen eye to assess $S weaknesses.", ch, 0, victim, TO_CHAR);
-	act("$n examines you closely, using $S keen eye to assess your weaknesses.", ch, 0, victim, TO_VICT);
-	act("$n examines $N closely, sizing $M up.", ch, 0, victim, TO_NOTVICT);
+	act("You examine $N closely, using your keen eye to assess $S weaknesses.", ch, nullptr, victim, TO_CHAR);
+	act("$n examines you closely, using $S keen eye to assess your weaknesses.", ch, nullptr, victim, TO_VICT);
+	act("$n examines $N closely, sizing $M up.", ch, nullptr, victim, TO_NOTVICT);
 
 	if (skill >= 60)
 	{
@@ -3876,19 +3876,19 @@ void do_assess(CHAR_DATA *ch, char *argument)
 			dammod *= 1.3;
 
 		if (victim->dam_mod < 20)
-			act("$N is virtually impervious to harm!", ch, 0, victim, TO_CHAR);
+			act("$N is virtually impervious to harm!", ch, nullptr, victim, TO_CHAR);
 		else if (victim->dam_mod <= 40)
-			act("$N has extensive protection from all sorts of harm.", ch, 0, victim, TO_CHAR);
+			act("$N has extensive protection from all sorts of harm.", ch, nullptr, victim, TO_CHAR);
 		else if (victim->dam_mod <= 60)
-			act("$N is well protected from all sorts of harm.", ch, 0, victim, TO_CHAR);
+			act("$N is well protected from all sorts of harm.", ch, nullptr, victim, TO_CHAR);
 		else if (victim->dam_mod <= 80)
-			act("$N is somewhat protected from all sorts of harm.", ch, 0, victim, TO_CHAR);
+			act("$N is somewhat protected from all sorts of harm.", ch, nullptr, victim, TO_CHAR);
 		else if (victim->dam_mod <= 99)
-			act("$N's susceptibility to damage is slightly reduced.", ch, 0, victim, TO_CHAR);
+			act("$N's susceptibility to damage is slightly reduced.", ch, nullptr, victim, TO_CHAR);
 		else if (victim->dam_mod <= 100)
-			act("$N does not appear to have any special protections.", ch, 0, victim, TO_CHAR);
+			act("$N does not appear to have any special protections.", ch, nullptr, victim, TO_CHAR);
 		else
-			act("$N is highly susceptible to all damage.", ch, 0, victim, TO_CHAR);
+			act("$N is highly susceptible to all damage.", ch, nullptr, victim, TO_CHAR);
 
 		found++;
 	}
@@ -3928,7 +3928,7 @@ bool check_exploit_armor_break(CHAR_DATA *ch, CHAR_DATA *victim, OBJ_DATA *expos
 
 	if (number_percent() < (int)chance) // destroy
 	{
-		act("You land a calculated blow upon $p, damaging it beyond repair!", ch, exposed, 0, TO_CHAR);
+		act("You land a calculated blow upon $p, damaging it beyond repair!", ch, exposed, nullptr, TO_CHAR);
 		act("$n lands a calculated blow upon $N's $p, damaging it beyond repair!", ch, exposed, victim, TO_NOTVICT);
 		act("$n lands a calculated blow upon your $p, damaging it beyond repair!", ch, exposed, victim, TO_VICT);
 
@@ -3947,7 +3947,7 @@ bool check_exploit_armor_break(CHAR_DATA *ch, CHAR_DATA *victim, OBJ_DATA *expos
 
 	if (number_percent() < (int)chance) // damage
 	{
-		act("You land a calculated blow upon $p, weakening it significantly.", ch, exposed, 0, TO_CHAR);
+		act("You land a calculated blow upon $p, weakening it significantly.", ch, exposed, nullptr, TO_CHAR);
 		act("$n lands a calculated blow upon $N's $p, weakening it.", ch, exposed, victim, TO_NOTVICT);
 		act("$n lands a calculated blow upon your $p, weakening it.", ch, exposed, victim, TO_VICT);
 
@@ -3959,7 +3959,7 @@ bool check_exploit_armor_break(CHAR_DATA *ch, CHAR_DATA *victim, OBJ_DATA *expos
 		return true;
 	}
 
-	act("Your blow fails to do any lasting damage to $p.", ch, exposed, 0, TO_CHAR);
+	act("Your blow fails to do any lasting damage to $p.", ch, exposed, nullptr, TO_CHAR);
 	return false;
 }
 
@@ -4167,12 +4167,12 @@ void do_exploit(CHAR_DATA *ch, char *argument)
 	}
 	else if (!anatomy)
 	{
-		act(anfail, ch, 0, victim, TO_CHAR);
+		act(anfail, ch, nullptr, victim, TO_CHAR);
 		check_improve(ch, gsn_exploit, false, 1);
 	}
 	else
 	{
-		act(chfail, ch, 0, victim, TO_CHAR);
+		act(chfail, ch, nullptr, victim, TO_CHAR);
 		check_improve(ch, gsn_exploit, false, 1);
 	}
 
@@ -4414,7 +4414,7 @@ void do_drive(CHAR_DATA *ch, char *argument)
 	{
 		if (pexit->u1.to_room->vnum < victim->pIndexData->restrict_low ||
 			pexit->u1.to_room->vnum > victim->pIndexData->restrict_high)
-			return act("$N will not budge that direction!", ch, 0, victim, TO_CHAR);
+			return act("$N will not budge that direction!", ch, nullptr, victim, TO_CHAR);
 	}
 
 	if (is_npc(victim) && IS_SET(victim->act, ACT_SENTINEL))
@@ -4445,9 +4445,9 @@ void do_drive(CHAR_DATA *ch, char *argument)
 	}
 	else
 	{
-		act("You surge at $N, but $E doesn't budge!", ch, 0, victim, TO_CHAR);
-		act("$n surges at you, but you don't budge!", ch, 0, victim, TO_VICT);
-		act("$n surges at $N, but $E doesn't budge!", ch, 0, victim, TO_NOTVICT);
+		act("You surge at $N, but $E doesn't budge!", ch, nullptr, victim, TO_CHAR);
+		act("$n surges at you, but you don't budge!", ch, nullptr, victim, TO_VICT);
+		act("$n surges at $N, but $E doesn't budge!", ch, nullptr, victim, TO_NOTVICT);
 		check_improve(ch, gsn_drive, false, 1);
 	}
 
@@ -4549,7 +4549,7 @@ void do_dash(CHAR_DATA *ch, char *argument)
 
 		ch->wait = 0;
 
-		act("$n dashes in from the $t!", ch, dir, 0, TO_ROOM);
+		act("$n dashes in from the $t!", ch, dir, nullptr, TO_ROOM);
 		interpret(ch, command);
 		WAIT_STATE(ch, PULSE_VIOLENCE);
 		check_improve(ch, gsn_dash, true, 5);
@@ -4560,7 +4560,7 @@ void do_dash(CHAR_DATA *ch, char *argument)
 
 		/* stop and move driver */
 		move_char(ch, where, true, false);
-		act("$n stumbles in from the $t!", ch, dir, 0, TO_ROOM);
+		act("$n stumbles in from the $t!", ch, dir, nullptr, TO_ROOM);
 		WAIT_STATE(ch, PULSE_VIOLENCE * 2);
 		check_improve(ch, gsn_dash, false, 5);
 	}
@@ -4677,9 +4677,9 @@ void do_concuss(CHAR_DATA *ch, char *argument)
 	}
 	else
 	{
-		act("You fail to connect with $N's temple.", ch, 0, victim, TO_CHAR);
-		act("$n fails to connect with $N's temple.", ch, 0, victim, TO_NOTVICT);
-		act("$n fails to hit you in the temple.", ch, 0, victim, TO_VICT);
+		act("You fail to connect with $N's temple.", ch, nullptr, victim, TO_CHAR);
+		act("$n fails to connect with $N's temple.", ch, nullptr, victim, TO_NOTVICT);
+		act("$n fails to hit you in the temple.", ch, nullptr, victim, TO_VICT);
 		damage(ch, victim, 0, gsn_concuss, DAM_NONE, true);
 		check_improve(ch, gsn_concuss, false, 1);
 	}
@@ -4725,7 +4725,7 @@ void do_retreat(CHAR_DATA *ch, char *arg)
 		return;
 	}
 
-	act("You begin plotting a retreat.", ch, 0, 0, TO_CHAR);
+	act("You begin plotting a retreat.", ch, nullptr, nullptr, TO_CHAR);
 
 	RS.Queue.AddToQueue(3, "do_retreat", "execute_retreat", execute_retreat, ch, direction);
 
@@ -4746,8 +4746,8 @@ void execute_retreat(CHAR_DATA *ch, int dir)
 	}
 
 	dirname = flag_name_lookup(dir, direction_table);
-	act("You make a hasty retreat $t.", ch, dirname, 0, TO_CHAR);
-	act("$n makes a hasty retreat $t.", ch, dirname, 0, TO_ROOM);
+	act("You make a hasty retreat $t.", ch, dirname, nullptr, TO_CHAR);
+	act("$n makes a hasty retreat $t.", ch, dirname, nullptr, TO_ROOM);
 
 	move_char(ch, dir, true, false);
 
@@ -4799,7 +4799,7 @@ void do_disrupt_formation(CHAR_DATA *ch, char *arg)
 
 	if (is_npc(victim))
 	{
-		act("$N does not have a group to disrupt!", ch, 0, victim, TO_CHAR);
+		act("$N does not have a group to disrupt!", ch, nullptr, victim, TO_CHAR);
 		return;
 	}
 
@@ -4821,9 +4821,9 @@ void do_disrupt_formation(CHAR_DATA *ch, char *arg)
 
 	if (number_percent() < skill)
 	{
-		act("You dart in to strike $N, weaving chaotically around $M!", ch, 0, victim, TO_CHAR);
-		act("$n darts in to strike you, weaving around chaotically!", ch, 0, victim, TO_VICT);
-		act("$n darts in to strike $N, weaving around chaotically!", ch, 0, victim, TO_NOTVICT);
+		act("You dart in to strike $N, weaving chaotically around $M!", ch, nullptr, victim, TO_CHAR);
+		act("$n darts in to strike you, weaving around chaotically!", ch, nullptr, victim, TO_VICT);
+		act("$n darts in to strike $N, weaving around chaotically!", ch, nullptr, victim, TO_NOTVICT);
 
 		for (vch = ch->in_room->people; vch != nullptr; vch = vch_next)
 		{
@@ -4851,24 +4851,24 @@ void do_disrupt_formation(CHAR_DATA *ch, char *arg)
 
 			if (number_percent() > percent)
 			{
-				act("$n's assault drives you out of formation and separates you from your group!", ch, 0, vch, TO_VICT);
-				act("Your assault drives $N out of formation and separates $M from the group.", ch, 0, vch, TO_CHAR);
-				act("$n's assault drives $N out of formation and separates $M from the group!", ch, 0, vch, TO_NOTVICT);
+				act("$n's assault drives you out of formation and separates you from your group!", ch, nullptr, vch, TO_VICT);
+				act("Your assault drives $N out of formation and separates $M from the group.", ch, nullptr, vch, TO_CHAR);
+				act("$n's assault drives $N out of formation and separates $M from the group!", ch, nullptr, vch, TO_NOTVICT);
 				vch->leader = nullptr;
 			}
 			else
 			{
-				act("$N retains $S composure amidst $n's onslaught, remaining with $S group.", ch, 0, vch, TO_NOTVICT);
-				act("$N retains $S composure amidst your onslaught, remaining with $S group.", ch, 0, vch, TO_CHAR);
-				act("You retain your composure amidst $n's onslaught, remaining with your group.", ch, 0, vch, TO_VICT);
+				act("$N retains $S composure amidst $n's onslaught, remaining with $S group.", ch, nullptr, vch, TO_NOTVICT);
+				act("$N retains $S composure amidst your onslaught, remaining with $S group.", ch, nullptr, vch, TO_CHAR);
+				act("You retain your composure amidst $n's onslaught, remaining with your group.", ch, nullptr, vch, TO_VICT);
 			}
 		}
 	}
 	else
 	{
-		act("Darting in to strike $N, you stumble into the midst of $S group.", ch, 0, victim, TO_CHAR);
-		act("Darting in to strike $N, $n stumbles and fails his ploy.", ch, 0, victim, TO_NOTVICT);
-		act("Darting in to strike you, $n stumbles into the midst of your group.", ch, 0, victim, TO_VICT);
+		act("Darting in to strike $N, you stumble into the midst of $S group.", ch, nullptr, victim, TO_CHAR);
+		act("Darting in to strike $N, $n stumbles and fails his ploy.", ch, nullptr, victim, TO_NOTVICT);
+		act("Darting in to strike you, $n stumbles into the midst of your group.", ch, nullptr, victim, TO_VICT);
 	}
 
 	one_hit(victim, ch, TYPE_UNDEFINED);
@@ -4914,17 +4914,17 @@ void do_leadership(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 
 	if (number_percent() > chance)
 	{
-		act("$n tries to explain combat tactics to you, but he just becomes frustrated at himself.", ch, 0, 0, TO_GROUP);
-		act("You try to explain combat tactics to your group, but they just do not understand.", ch, 0, 0, TO_CHAR);
+		act("$n tries to explain combat tactics to you, but he just becomes frustrated at himself.", ch, nullptr, nullptr, TO_GROUP);
+		act("You try to explain combat tactics to your group, but they just do not understand.", ch, nullptr, nullptr, TO_CHAR);
 		check_improve(ch, gsn_leadership, false, 2);
 		ch->mana -= 25;
 		WAIT_STATE(ch, PULSE_VIOLENCE * 2);
 	}
 	else
 	{
-		act("You organize your group into an efficient combat formation.", ch, 0, 0, TO_CHAR);
-		act("$n organizes the group into an efficient combat formation.", ch, 0, 0, TO_GROUP);
-		act("$n gives some instructions to $s group as they listen intently.", ch, 0, 0, TO_NOTGROUP);
+		act("You organize your group into an efficient combat formation.", ch, nullptr, nullptr, TO_CHAR);
+		act("$n organizes the group into an efficient combat formation.", ch, nullptr, nullptr, TO_GROUP);
+		act("$n gives some instructions to $s group as they listen intently.", ch, nullptr, nullptr, TO_NOTGROUP);
 		check_improve(ch, gsn_leadership, true, 2);
 
 		init_affect(&af);
@@ -5075,8 +5075,8 @@ void do_outflank(CHAR_DATA *ch, char *argument)
 	WAIT_STATE(ch, PULSE_VIOLENCE * 2);
 
 	direction = flag_name_lookup(type, direction_table);
-	act("You position yourself so as to obstruct the $t egress.", ch, direction, 0, TO_CHAR);
-	act("$n positions $mself so as to obstruct the $t egress.", ch, direction, 0, TO_ROOM);
+	act("You position yourself so as to obstruct the $t egress.", ch, direction, nullptr, TO_CHAR);
+	act("$n positions $mself so as to obstruct the $t egress.", ch, direction, nullptr, TO_ROOM);
 
 	affect_strip(ch, gsn_outflank);
 
@@ -5157,8 +5157,8 @@ bool outflank_me(CHAR_DATA *ch, int dir)
 				else
 				{
 					act("$N slips past you, escaping $t!", victim, direction, ch, TO_CHAR);
-					act("You slip past $n as $e attempts to block your path!", victim, 0, ch, TO_VICT);
-					act("$N slips past $n as $e attempts to block $S path!", victim, 0, ch, TO_NOTVICT);
+					act("You slip past $n as $e attempts to block your path!", victim, nullptr, ch, TO_VICT);
+					act("$N slips past $n as $e attempts to block $S path!", victim, nullptr, ch, TO_NOTVICT);
 					check_improve(victim, gsn_outflank, false, 2);
 				}
 			}

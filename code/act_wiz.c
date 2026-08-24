@@ -493,7 +493,7 @@ void do_induct(CHAR_DATA *ch, char *argument)
 	}
 
 	sprintf(buf, "%s has been inducted into the %s.", victim->name, cabal_table[cabal].long_name);
-	act(buf, victim, 0, ch, TO_NOTVICT);
+	act(buf, victim, nullptr, ch, TO_NOTVICT);
 
 	strcat(buf, "\n\r");
 	send_to_char(buf, ch);
@@ -3413,7 +3413,7 @@ void reboot_now(CHAR_DATA *ch)
 
 				for (t_obj = obj->contains; t_obj != nullptr; t_obj = t_obj->next_content)
 				{
-					act_new("$p returns to you.",owner,t_obj,0,TO_CHAR,POS_DEAD);
+					act_new("$p returns to you.",owner,t_obj,nullptr,TO_CHAR,POS_DEAD);
 
 					if(t_obj->item_type==ITEM_MONEY)
 					{
@@ -4133,7 +4133,7 @@ void do_purge(CHAR_DATA *ch, char *argument)
 			return;
 		}
 
-		act("$n disintegrates $N!", ch, 0, victim, TO_NOTVICT);
+		act("$n disintegrates $N!", ch, nullptr, victim, TO_NOTVICT);
 
 		if (victim->level > 1)
 			save_char_obj(victim);
@@ -6377,7 +6377,7 @@ void do_astrip(CHAR_DATA *ch, char *argument)
 	}
 
 	if (victim != ch)
-		act("All affects stripped from $N.", ch, 0, victim, TO_CHAR);
+		act("All affects stripped from $N.", ch, nullptr, victim, TO_CHAR);
 	else
 		send_to_char("All affects stripped from yourself.\n\r", ch);
 }
@@ -6625,7 +6625,7 @@ void do_addapply(CHAR_DATA *ch, char *argument)
 
 		obj->apply.clear();
 
-		act("All affects removed from $p.", ch, obj, 0, TO_CHAR);
+		act("All affects removed from $p.", ch, obj, nullptr, TO_CHAR);
 		return;
 	}
 
@@ -7147,7 +7147,7 @@ void do_empower(CHAR_DATA *ch, char *argument)
 			REMOVE_BIT(victim->act, PLR_EMPOWERED);
 
 			send_to_char("The Immortals have revoked your empowerment!\n\r", victim);
-			act("You have UNEMPOWERED $N, until you notify $M, $E doesn't know.", ch, 0, victim, TO_CHAR);
+			act("You have UNEMPOWERED $N, until you notify $M, $E doesn't know.", ch, nullptr, victim, TO_CHAR);
 
 			sprintf(buf, "$N revokes %s's empowerment.", victim->name);
 			wiznet(buf, ch, nullptr, WIZ_PENALTIES, 0, 0);
@@ -7169,7 +7169,7 @@ void do_empower(CHAR_DATA *ch, char *argument)
 		{
 			SET_BIT(victim->act, PLR_EMPOWERED);
 
-			act("You have EMPOWERED $N, until you notify $M, $E doesn't know.", ch, 0, victim, TO_CHAR);
+			act("You have EMPOWERED $N, until you notify $M, $E doesn't know.", ch, nullptr, victim, TO_CHAR);
 
 			sprintf(buf, "$N empowers %s.", victim->name);
 			wiznet(buf, ch, nullptr, WIZ_PENALTIES, 0, 0);
@@ -7297,7 +7297,7 @@ void do_rastrip(CHAR_DATA *ch, char *argument)
 		it = next;
 	}
 
-	act("All affects stripped from '$t'.", ch, location->name, 0, TO_CHAR);
+	act("All affects stripped from '$t'.", ch, location->name, nullptr, TO_CHAR);
 }
 
 void do_aastrip(CHAR_DATA *ch, [[maybe_unused]] char *argument)
@@ -7311,7 +7311,7 @@ void do_aastrip(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 		it = next;
 	}
 
-	act("All affects stripped from '$t'.", ch, area->name, 0, TO_CHAR);
+	act("All affects stripped from '$t'.", ch, area->name, nullptr, TO_CHAR);
 }
 
 void do_oastrip(CHAR_DATA *ch, char *argument)
@@ -7347,7 +7347,7 @@ void do_oastrip(CHAR_DATA *ch, char *argument)
 		it = next;
 	}
 
-	act("All affects stripped from $p.", ch, obj, 0, TO_CHAR);
+	act("All affects stripped from $p.", ch, obj, nullptr, TO_CHAR);
 }
 
 void do_givexp(CHAR_DATA *ch, char *argument)
@@ -7479,7 +7479,7 @@ void do_clearfavors(CHAR_DATA *ch, char *argument)
 		victim->pcdata->lesserdata[i] = FAVOR_NONE;
 	}
 
-	act("$N's favors cleared.", ch, 0, victim, TO_CHAR);
+	act("$N's favors cleared.", ch, nullptr, victim, TO_CHAR);
 }
 
 void do_gsnlist(CHAR_DATA *ch, [[maybe_unused]] char *argument)

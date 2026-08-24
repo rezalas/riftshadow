@@ -80,7 +80,7 @@ void spell_enlarge([[maybe_unused]] int sn, int level, CHAR_DATA *ch, SpellTarge
 	if (is_affected(victim, gsn_reduce))
 	{
 		send_to_char("You grow to your normal size.\n\r", ch);
-		act("$n grows to $s normal size!", victim, 0, ch, TO_ROOM);
+		act("$n grows to $s normal size!", victim, nullptr, ch, TO_ROOM);
 		affect_strip(victim, gsn_reduce);
 		return;
 	}
@@ -101,7 +101,7 @@ void spell_enlarge([[maybe_unused]] int sn, int level, CHAR_DATA *ch, SpellTarge
 	affect_to_char(victim, &af);
 
 	send_to_char("Your entire body and gear rapidly grow in size, but you feel somewhat more frail afterward.\n\r", victim);
-	act("$n suddenly swells in all directions, expanding to half again $s normal size!", victim, 0, 0, TO_ROOM);
+	act("$n suddenly swells in all directions, expanding to half again $s normal size!", victim, nullptr, nullptr, TO_ROOM);
 
 	if (!is_npc(victim) && !trusts(ch, victim) && (!Deref(ch->fighting) || !Deref(victim->fighting)))
 	{
@@ -148,14 +148,14 @@ void spell_sunray(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unus
 		dam *= 1;
 
 	// Fuzz it up.
-	act("$n burns $N with the light of the sun!", ch, 0, victim, TO_NOTVICT);
-	act("$n burns you with the light of the sun!", ch, 0, victim, TO_VICT);
-	act("You burn $N with the light of the sun!", ch, 0, victim, TO_CHAR);
+	act("$n burns $N with the light of the sun!", ch, nullptr, victim, TO_NOTVICT);
+	act("$n burns you with the light of the sun!", ch, nullptr, victim, TO_VICT);
+	act("You burn $N with the light of the sun!", ch, nullptr, victim, TO_CHAR);
 
 	if (dam > 120 && number_percent() > 80)
 	{
-		act("$n appears to be blinded by the sun in $s eyes!", victim, 0, 0, TO_ROOM);
-		act("You are blinded by the sun in your eyes!", victim, 0, 0, TO_CHAR);
+		act("$n appears to be blinded by the sun in $s eyes!", victim, nullptr, nullptr, TO_ROOM);
+		act("You are blinded by the sun in your eyes!", victim, nullptr, nullptr, TO_CHAR);
 
 		init_affect(&af);
 		af.where = TO_AFFECTS;
@@ -185,7 +185,7 @@ void spell_cleanse(int sn, [[maybe_unused]] int level, CHAR_DATA *ch, SpellTarge
 	if (is_affected(victim, sn) && cleansed(ch, victim, 1, sn))
 	{
 		if (victim != ch)
-			act("$n is no longer blinded.", victim, 0, ch, TO_ROOM);
+			act("$n is no longer blinded.", victim, nullptr, ch, TO_ROOM);
 
 		send_to_char(skill_table[sn].msg_off, victim);
 		send_to_char("\n\r", victim);
@@ -197,7 +197,7 @@ void spell_cleanse(int sn, [[maybe_unused]] int level, CHAR_DATA *ch, SpellTarge
 	if (is_affected(victim, sn) && cleansed(ch, victim, 2, sn))
 	{
 		if (victim != ch)
-			act("$n looks less ill.", victim, 0, ch, TO_ROOM);
+			act("$n looks less ill.", victim, nullptr, ch, TO_ROOM);
 
 		send_to_char(skill_table[sn].msg_off, victim);
 		send_to_char("\n\r", victim);
@@ -209,7 +209,7 @@ void spell_cleanse(int sn, [[maybe_unused]] int level, CHAR_DATA *ch, SpellTarge
 	if (is_affected(victim, sn) && cleansed(ch, victim, 1, sn))
 	{
 		if (victim != ch)
-			act("$n looks stronger.", victim, 0, ch, TO_ROOM);
+			act("$n looks stronger.", victim, nullptr, ch, TO_ROOM);
 
 		send_to_char(skill_table[sn].msg_off, victim);
 		send_to_char("\n\r", victim);
@@ -221,7 +221,7 @@ void spell_cleanse(int sn, [[maybe_unused]] int level, CHAR_DATA *ch, SpellTarge
 	if (is_affected(victim, sn) && cleansed(ch, victim, 2, sn))
 	{
 		if (victim != ch)
-			act("$n looks less diseased.", victim, 0, ch, TO_ROOM);
+			act("$n looks less diseased.", victim, nullptr, ch, TO_ROOM);
 		send_to_char(skill_table[sn].msg_off, victim);
 		send_to_char("\n\r", victim);
 		affect_strip(victim, sn);
@@ -232,7 +232,7 @@ void spell_cleanse(int sn, [[maybe_unused]] int level, CHAR_DATA *ch, SpellTarge
 	if (is_affected(victim, sn) && cleansed(ch, victim, 2, sn))
 	{
 		if (victim != ch)
-			act("$n starts moving at normal speed again.", victim, 0, ch, TO_ROOM);
+			act("$n starts moving at normal speed again.", victim, nullptr, ch, TO_ROOM);
 
 		send_to_char(skill_table[sn].msg_off, victim);
 		send_to_char("\n\r", victim);
@@ -244,7 +244,7 @@ void spell_cleanse(int sn, [[maybe_unused]] int level, CHAR_DATA *ch, SpellTarge
 	if (is_affected(victim, sn) && cleansed(ch, victim, 4, sn))
 	{
 		if (victim != ch)
-			act("$n looks like $e's just had a rush of memory.", victim, 0, ch, TO_ROOM);
+			act("$n looks like $e's just had a rush of memory.", victim, nullptr, ch, TO_ROOM);
 		send_to_char(skill_table[sn].msg_off, victim);
 		send_to_char("\n\r", victim);
 		affect_strip(victim, sn);
@@ -255,7 +255,7 @@ void spell_cleanse(int sn, [[maybe_unused]] int level, CHAR_DATA *ch, SpellTarge
 	if (is_affected(victim, sn) && cleansed(ch, victim, 3, sn))
 	{
 		if (victim != ch)
-			act("$n's body stops wasting away.", victim, 0, ch, TO_ROOM);
+			act("$n's body stops wasting away.", victim, nullptr, ch, TO_ROOM);
 
 		send_to_char(skill_table[sn].msg_off, victim);
 		send_to_char("\n\r", victim);
@@ -267,7 +267,7 @@ void spell_cleanse(int sn, [[maybe_unused]] int level, CHAR_DATA *ch, SpellTarge
 	if (is_affected(victim, sn) && cleansed(ch, victim, 2, sn))
 	{
 		if (victim != ch)
-			act("$n's curse wears off.", victim, 0, ch, TO_ROOM);
+			act("$n's curse wears off.", victim, nullptr, ch, TO_ROOM);
 
 		send_to_char(skill_table[sn].msg_off, victim);
 		send_to_char("\n\r", victim);
@@ -279,7 +279,7 @@ void spell_cleanse(int sn, [[maybe_unused]] int level, CHAR_DATA *ch, SpellTarge
 	if (is_affected(victim, sn) && cleansed(ch, victim, 4, sn))
 	{
 		if (victim != ch)
-			act("$n stops bleeding.", victim, 0, ch, TO_ROOM);
+			act("$n stops bleeding.", victim, nullptr, ch, TO_ROOM);
 
 		send_to_char(skill_table[sn].msg_off, victim);
 		send_to_char("\n\r", victim);
@@ -669,7 +669,7 @@ void spell_soften(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unus
 	af.duration = 1;
 	affect_to_char(victim, &af);
 
-	act("$n looks frail.", victim, 0, 0, TO_ROOM);
+	act("$n looks frail.", victim, nullptr, nullptr, TO_ROOM);
 	send_to_char("You feel more frail.\n\r", victim);
 }
 
@@ -697,8 +697,8 @@ void spell_fatigue(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unu
 	}
 	else
 	{
-		act("$n looks fatigued.", victim, 0, 0, TO_ROOM);
-		act("You feel very fatigued.", victim, 0, 0, TO_CHAR);
+		act("$n looks fatigued.", victim, nullptr, nullptr, TO_ROOM);
+		act("You feel very fatigued.", victim, nullptr, nullptr, TO_CHAR);
 		victim->move -= dam / 2;
 	}
 
@@ -730,7 +730,7 @@ void spell_strength(int sn, int level, CHAR_DATA *ch, [[maybe_unused]] SpellTarg
 	affect_to_char(ch, &af);
 
 	send_to_char("You fast for a period of time, building up your absolute faith in the strength of your Deity.\n\r", ch);
-	act("$n meditates for a period of time, building up $s faith in $s Deity.", ch, 0, 0, TO_ROOM);
+	act("$n meditates for a period of time, building up $s faith in $s Deity.", ch, nullptr, nullptr, TO_ROOM);
 }
 
 void spell_remove_taint(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
@@ -774,13 +774,13 @@ void spell_worldbind(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_u
 
 	if (saves_spell(level - 5, victim, DAM_NEGATIVE))
 	{
-		act("You failed to bind $N to this world.", ch, 0, victim, TO_CHAR);
+		act("You failed to bind $N to this world.", ch, nullptr, victim, TO_CHAR);
 		return;
 	}
 
-	act("You sever $N's ties to the spiritual world!", ch, 0, victim, TO_CHAR);
-	act("$n severs $N's ties to the spiritual world!", ch, 0, victim, TO_NOTVICT);
-	act_new("$n severs your ties to the spiritual world!", ch, 0, victim, TO_VICT, POS_DEAD);
+	act("You sever $N's ties to the spiritual world!", ch, nullptr, victim, TO_CHAR);
+	act("$n severs $N's ties to the spiritual world!", ch, nullptr, victim, TO_NOTVICT);
+	act_new("$n severs your ties to the spiritual world!", ch, nullptr, victim, TO_VICT, POS_DEAD);
 
 	init_affect(&af);
 	af.where = TO_AFFECTS;
@@ -811,8 +811,8 @@ void spell_waterbreath(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe
 
 	if (is_affected(victim, gsn_drowning))
 	{
-		act("You feel relieved as you begin breathing water like you would air.", victim, 0, 0, TO_CHAR);
-		act("$n looks relieved as $e begins breathing water like $e would air.", victim, 0, 0, TO_ROOM);
+		act("You feel relieved as you begin breathing water like you would air.", victim, nullptr, nullptr, TO_CHAR);
+		act("$n looks relieved as $e begins breathing water like $e would air.", victim, nullptr, nullptr, TO_ROOM);
 		affect_strip(victim, gsn_drowning);
 	}
 
@@ -833,5 +833,5 @@ void spell_waterbreath(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe
 	send_to_char("You feel more adept at breathing underwater.\n\r", victim);
 
 	if (ch != victim)
-		act("You give $N the ability to breathe underwater.", ch, 0, victim, TO_CHAR);
+		act("You give $N the ability to breathe underwater.", ch, nullptr, victim, TO_CHAR);
 }

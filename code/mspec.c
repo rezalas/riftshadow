@@ -39,8 +39,8 @@ static int fallendesert_spirits_death(CHAR_DATA *ch, CHAR_DATA *mob)
 		REMOVE_BIT(pexit->exit_info, EX_LOCKED);
 		REMOVE_BIT(pexit->exit_info, EX_CLOSED);
 
-		act("With a last wail of anguish, the spirits explode causing a shadow to engulf the cave....", mob, 0, 0, TO_ROOM);
-		act("As the bright light recedes a pinpoint of light coming through a hole to the north.", mob, 0, 0, TO_ROOM);
+		act("With a last wail of anguish, the spirits explode causing a shadow to engulf the cave....", mob, nullptr, nullptr, TO_ROOM);
+		act("As the bright light recedes a pinpoint of light coming through a hole to the north.", mob, nullptr, nullptr, TO_ROOM);
 
 		return 0;
 }
@@ -390,7 +390,7 @@ static int academy_pet_pulse(CHAR_DATA *mob)
 		if (player->level > 22 && !is_immortal(player))
 		{
 			do_say(mob, "You are strong enough to stand on your own now.  Perhaps we shall meet again.");
-			act("$n fades into the shadows.", mob, 0, 0, TO_ROOM);
+			act("$n fades into the shadows.", mob, nullptr, nullptr, TO_ROOM);
 
 			player->pet = nullptr;
 			mob->leader = nullptr;
@@ -404,14 +404,14 @@ static int academy_pet_pulse(CHAR_DATA *mob)
 		{
 			if (Deref(mob->fighting))
 			{
-				act("$n seems to fade into the shadows.", mob, 0, 0, TO_ROOM);
+				act("$n seems to fade into the shadows.", mob, nullptr, nullptr, TO_ROOM);
 				stop_fighting(mob, true);
 			}
 
 			char_from_room(mob);
 			char_to_room(mob, player->in_room);
 
-			act("$n emerges from the shadows behind you.", mob, 0, player, TO_VICT);
+			act("$n emerges from the shadows behind you.", mob, nullptr, player, TO_VICT);
 			return 0;
 		}
 

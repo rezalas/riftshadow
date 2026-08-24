@@ -342,7 +342,7 @@ bool check_dispel(int dis_level, CHAR_DATA *victim, int sn)
 					}
 
 					if (str_cmp(skill_table[sn].room_msg_off, ""))
-						act(skill_table[sn].room_msg_off, victim, 0, 0, TO_ROOM);
+						act(skill_table[sn].room_msg_off, victim, nullptr, nullptr, TO_ROOM);
 
 					return true;
 				}
@@ -382,13 +382,13 @@ bool check_dispel_cancellation(int dis_level, CHAR_DATA *victim, CHAR_DATA *ch, 
 						if (ch != victim)
 						{
 							sprintf(buf, "The magic of $N's %s spell unravels.", skill_table[sn].name);
-							act(buf, ch, 0, victim, TO_CHAR);
+							act(buf, ch, nullptr, victim, TO_CHAR);
 						}
 
 						if (sn == gsn_diamondskin)
 						{
-							act("Unspeakable agony wracks your entire frame as your very skin shatters!", victim, 0, 0, TO_CHAR);
-							act("$n howls in agony as the diamond shell that was once $s skin shatters!", victim, 0, 0, TO_ROOM);
+							act("Unspeakable agony wracks your entire frame as your very skin shatters!", victim, nullptr, nullptr, TO_CHAR);
+							act("$n howls in agony as the diamond shell that was once $s skin shatters!", victim, nullptr, nullptr, TO_ROOM);
 							damage_new(victim, victim, victim->max_hit / 2, gsn_diamondskin, DAM_TRUESTRIKE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, nullptr);
 						}
 
@@ -402,7 +402,7 @@ bool check_dispel_cancellation(int dis_level, CHAR_DATA *victim, CHAR_DATA *ch, 
 						if (ch != victim)
 						{
 							sprintf(buf, "The magic of $N's %s spell is unaffected.", skill_table[sn].name);
-							act(buf, ch, 0, victim, TO_CHAR);
+							act(buf, ch, nullptr, victim, TO_CHAR);
 						}
 					}
 				}
@@ -417,7 +417,7 @@ bool check_dispel_cancellation(int dis_level, CHAR_DATA *victim, CHAR_DATA *ch, 
 						if (ch != victim)
 						{
 							sprintf(buf, "The power of $N's %s supplication unravels.", skill_table[sn].name);
-							act(buf, ch, 0, victim, TO_CHAR);
+							act(buf, ch, nullptr, victim, TO_CHAR);
 						}
 
 						return true;
@@ -430,7 +430,7 @@ bool check_dispel_cancellation(int dis_level, CHAR_DATA *victim, CHAR_DATA *ch, 
 						if (ch != victim)
 						{
 							sprintf(buf, "The power of $N's %s supplication is unaffected.", skill_table[sn].name);
-							act(buf, ch, 0, victim, TO_CHAR);
+							act(buf, ch, nullptr, victim, TO_CHAR);
 						}
 					}
 				}
@@ -1027,7 +1027,7 @@ void do_cast(CHAR_DATA *ch, char *argument)
 
 		if (IS_SET(ch->in_room->room_flags, ROOM_NO_MAGIC) && !(ch->level > LEVEL_HERO))
 		{
-			act("$n's spell fizzles.", ch, 0, 0, TO_ROOM);
+			act("$n's spell fizzles.", ch, nullptr, nullptr, TO_ROOM);
 			send_to_char("Your spell fizzles and dies.\n\r", ch);
 			return;
 		}
@@ -1055,9 +1055,9 @@ void do_cast(CHAR_DATA *ch, char *argument)
 
 		if (offensive_at_char && is_affected(victim, gsn_cloak_of_mist) && number_percent() > 60)
 		{
-			act("Your spell dissipates in the mist swirling around $N.", ch, 0, victim, TO_CHAR);
-			act("$n's spell dissipates in the mist swirling around you.", ch, 0, victim, TO_VICT);
-			act("$n's spell dissipates in the mist swirling around $N.", ch, 0, victim, TO_NOTVICT);
+			act("Your spell dissipates in the mist swirling around $N.", ch, nullptr, victim, TO_CHAR);
+			act("$n's spell dissipates in the mist swirling around you.", ch, nullptr, victim, TO_VICT);
+			act("$n's spell dissipates in the mist swirling around $N.", ch, nullptr, victim, TO_NOTVICT);
 			return;
 		}
 
@@ -1066,14 +1066,14 @@ void do_cast(CHAR_DATA *ch, char *argument)
 			paf = affect_find(victim->affected, gsn_rotating_ward);
 			paf->modifier--;
 
-			act("A crystal rotating around $N's body absorbs your spell!", ch, 0, victim, TO_CHAR);
-			act("A crystal rotating around your body absorbs $n's spell!", ch, 0, victim, TO_VICT);
-			act("$n's spell is absorbed by a crystal rotating around $N's body!", ch, 0, victim, TO_NOTVICT);
+			act("A crystal rotating around $N's body absorbs your spell!", ch, nullptr, victim, TO_CHAR);
+			act("A crystal rotating around your body absorbs $n's spell!", ch, nullptr, victim, TO_VICT);
+			act("$n's spell is absorbed by a crystal rotating around $N's body!", ch, nullptr, victim, TO_NOTVICT);
 
 			if (paf->modifier <= 0)
 			{
 				affect_remove(victim, paf);
-				act("The crystal crumbles under the stress!", ch, 0, 0, TO_ROOM);
+				act("The crystal crumbles under the stress!", ch, nullptr, nullptr, TO_ROOM);
 			}
 
 			return;
@@ -1089,9 +1089,9 @@ void do_cast(CHAR_DATA *ch, char *argument)
 			{
 				if (number_percent() < (get_skill(victim, gsn_nullify) - 10))
 				{
-					act("Your magic fizzles out before it reaches $N!", ch, 0, victim, TO_CHAR);
-					act("$n's magic fizzles out before it reaches you!", ch, 0, victim, TO_VICT);
-					act("$n's magic fizzles out before it reaches $N!", ch, 0, victim, TO_NOTVICT);
+					act("Your magic fizzles out before it reaches $N!", ch, nullptr, victim, TO_CHAR);
+					act("$n's magic fizzles out before it reaches you!", ch, nullptr, victim, TO_VICT);
+					act("$n's magic fizzles out before it reaches $N!", ch, nullptr, victim, TO_NOTVICT);
 					check_improve(victim, gsn_nullify, true, 5);
 					return;
 				}
@@ -1148,7 +1148,7 @@ void obj_cast_spell(int sn, int level, CHAR_DATA *ch, CHAR_DATA *victim, OBJ_DAT
 
 	if (IS_SET(ch->in_room->room_flags, ROOM_NO_MAGIC))
 	{
-		act("$n's spell fizzles.", ch, 0, 0, TO_ROOM);
+		act("$n's spell fizzles.", ch, nullptr, nullptr, TO_ROOM);
 		send_to_char("Your spell fizzles and dies.\n\r", ch);
 		return;
 	}
@@ -1409,7 +1409,7 @@ void spell_blindness(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_u
 
 	if (is_affected_by(victim, AFF_BLIND))
 	{
-		act("$N is already blind!", ch, 0, victim, TO_CHAR);
+		act("$N is already blind!", ch, nullptr, victim, TO_CHAR);
 		return;
 	}
 
@@ -1417,7 +1417,7 @@ void spell_blindness(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_u
 		|| (is_npc(victim) && IS_SET(victim->act, ACT_UNDEAD))
 		|| IS_SET(victim->form, FORM_UNDEAD))
 	{
-		act("You failed to blind $N.", ch, 0, victim, TO_CHAR);
+		act("You failed to blind $N.", ch, nullptr, victim, TO_CHAR);
 		return;
 	}
 
@@ -1586,7 +1586,7 @@ void spell_chain_lightning(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[m
 	if (is_affected(ch, gsn_grounding))
 	{
 		send_to_char("The electricity fizzles at your feet.\n\r", ch);
-		act("A lightning bolt leaps from $n's hand but fizzles into the ground.", ch, 0, 0, TO_ROOM);
+		act("A lightning bolt leaps from $n's hand but fizzles into the ground.", ch, nullptr, nullptr, TO_ROOM);
 		return;
 	}
 
@@ -1868,9 +1868,9 @@ void spell_wrath(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unuse
 	if (saves_spell(level, victim, DAM_HOLY) || saves_spell(level, victim, DAM_HOLY))
 		dam /= 2;
 
-	act("You call down the wrath of god upon $N.", ch, 0, victim, TO_CHAR);
-	act("$n calls down the wrath of god upon $N.", ch, 0, victim, TO_NOTVICT);
-	act("$n calls down the wrath of god upon you.", ch, 0, victim, TO_VICT);
+	act("You call down the wrath of god upon $N.", ch, nullptr, victim, TO_CHAR);
+	act("$n calls down the wrath of god upon $N.", ch, nullptr, victim, TO_NOTVICT);
+	act("$n calls down the wrath of god upon you.", ch, nullptr, victim, TO_VICT);
 
 	damage_old(ch, victim, dam, sn, DAM_HOLY, true);
 
@@ -2023,7 +2023,7 @@ void spell_cure_blindness(int /* sn */, int level, CHAR_DATA *ch, SpellTarget vo
 	{
 		if (check_dispel(level, victim, gsn_blindness_dust))
 		{
-			act("The dust in $n's eyes fades away.", victim, 0, 0, TO_ROOM);
+			act("The dust in $n's eyes fades away.", victim, nullptr, nullptr, TO_ROOM);
 
 			if (!is_affected(victim, gsn_blindness))
 				return;
@@ -2146,7 +2146,7 @@ void spell_cure_poison(int /* sn */, int level, CHAR_DATA *ch, SpellTarget vo, C
 		if (check_dispel(level, victim, gsn_poison_dust))
 			send_to_char("A warm feelings runs through you as the poison dust vanishes.\n\r", victim);
 
-		act("$n looks much better.", victim, 0, 0, TO_ROOM);
+		act("$n looks much better.", victim, nullptr, nullptr, TO_ROOM);
 
 		if (!is_affected(victim, gsn_poison))
 			return;
@@ -2246,7 +2246,7 @@ void spell_curse(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unuse
 
 	if (saves_spell(level, victim, DAM_NEGATIVE))
 	{
-		act("You failed to curse $N.", ch, 0, victim, TO_CHAR);
+		act("You failed to curse $N.", ch, nullptr, victim, TO_CHAR);
 		return;
 	}
 
@@ -2823,14 +2823,14 @@ void spell_faerie_fire(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe
 
 	if (is_affected(victim, sn))
 	{
-		act("$N is already glowing with faerie fire.", ch, 0, victim, TO_CHAR);
+		act("$N is already glowing with faerie fire.", ch, nullptr, victim, TO_CHAR);
 		return;
 	}
 
 	if (saves_spell(level + 15, victim, DAM_OTHER))
 	{
-		act("$N resists your magical faerie fire.", ch, 0, victim, TO_CHAR);
-		act("You resist $n's magical faerie fire.", ch, 0, victim, TO_VICT);
+		act("$N resists your magical faerie fire.", ch, nullptr, victim, TO_CHAR);
+		act("You resist $n's magical faerie fire.", ch, nullptr, victim, TO_VICT);
 		return;
 	}
 
@@ -3602,9 +3602,9 @@ void spell_magic_missile(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[may
 	if (saves_spell(level, victim, DAM_ENERGY))
 		dam /= 2;
 
-	act("Missiles of pure mana streak from $n's hands to strike $N!", ch, 0, victim, TO_NOTVICT);
-	act("Missiles of pure mana streak from $n's hands to strike you!", ch, 0, victim, TO_VICT);
-	act("Missiles of pure mana streak from your hands to strike $N!", ch, 0, victim, TO_CHAR);
+	act("Missiles of pure mana streak from $n's hands to strike $N!", ch, nullptr, victim, TO_NOTVICT);
+	act("Missiles of pure mana streak from $n's hands to strike you!", ch, nullptr, victim, TO_VICT);
+	act("Missiles of pure mana streak from your hands to strike $N!", ch, nullptr, victim, TO_CHAR);
 
 	damage_new(ch, victim, dam, sn, DAM_ENERGY, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "magic missiles$");
 }
@@ -3722,14 +3722,14 @@ void spell_plague([[maybe_unused]] int sn, int level, CHAR_DATA *ch, SpellTarget
 	{
 		if (ch == victim)
 		{
-			act("A sudden fever washes over you, but it passes.", ch, 0, 0, TO_CHAR);
-			act("$n looks flushed for a moment, but it passes.", ch, 0, 0, TO_ROOM);
+			act("A sudden fever washes over you, but it passes.", ch, nullptr, nullptr, TO_CHAR);
+			act("$n looks flushed for a moment, but it passes.", ch, nullptr, nullptr, TO_ROOM);
 		}
 		else
 		{
 			act("$N resists the disease.", ch, nullptr, victim, TO_CHAR);
-			act("A sudden fever washes over you, but it passes.", ch, 0, victim, TO_VICT);
-			act("$N looks flushed for a moment, but it passes.", ch, 0, victim, TO_NOTVICT);
+			act("A sudden fever washes over you, but it passes.", ch, nullptr, victim, TO_VICT);
+			act("$N looks flushed for a moment, but it passes.", ch, nullptr, victim, TO_NOTVICT);
 		}
 
 		return;
@@ -3764,8 +3764,8 @@ void plague_tick(CHAR_DATA *ch, AFFECT_DATA *af)
 	if (!ch->in_room)
 		return;
 
-	act("$n writhes in agony, consumed by a debilitating plague.", ch, 0, 0, TO_ROOM);
-	act("You writhe in agony from the plague.", ch, 0, 0, TO_CHAR);
+	act("$n writhes in agony, consumed by a debilitating plague.", ch, nullptr, nullptr, TO_ROOM);
+	act("You writhe in agony from the plague.", ch, nullptr, nullptr, TO_CHAR);
 
 	if (af->level == 1)
 		return;
@@ -3792,8 +3792,8 @@ void plague_tick(CHAR_DATA *ch, AFFECT_DATA *af)
 			&& (!is_npc(vch) || !IS_SET(vch->act, ACT_UNDEAD))
 			&& !is_affected_by(vch, AFF_PLAGUE) && number_bits(4) == 0)
 		{
-			act("You feel hot and feverish.", vch, 0, 0, TO_CHAR);
-			act("$n shivers and looks very ill.", vch, 0, 0, TO_ROOM);
+			act("You feel hot and feverish.", vch, nullptr, nullptr, TO_CHAR);
+			act("$n shivers and looks very ill.", vch, nullptr, nullptr, TO_ROOM);
 			new_affect_join(vch, &plague);
 		}
 	}
@@ -4147,8 +4147,8 @@ void spell_sanctuary(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_u
 	}
 	else
 	{
-		act("$n is surrounded by a dark aura.", victim, 0, 0, TO_ROOM);
-		act("You are surrounded by a dark aura.", victim, 0, 0, TO_CHAR);
+		act("$n is surrounded by a dark aura.", victim, nullptr, nullptr, TO_ROOM);
+		act("You are surrounded by a dark aura.", victim, nullptr, nullptr, TO_CHAR);
 	}
 
 	affect_to_char(victim, &af);
@@ -4217,7 +4217,7 @@ void spell_sleep(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unuse
 		|| saves_spell(level - 1, victim, DAM_CHARM)
 		|| IS_SET(victim->imm_flags, IMM_SLEEP))
 	{
-		act("$N resisted your sleep spell.", ch, 0, victim, TO_CHAR);
+		act("$N resisted your sleep spell.", ch, nullptr, victim, TO_CHAR);
 		return;
 	}
 
@@ -4373,7 +4373,7 @@ void spell_summon(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /* vo */, 
 
 	if (saves_spell(level + 1, victim, DAM_OTHER))
 	{
-		act("$N resisted your summoning.", ch, 0, victim, TO_CHAR);
+		act("$N resisted your summoning.", ch, nullptr, victim, TO_CHAR);
 
 		if (saves_spell(level - 1, victim, DAM_OTHER))
 			send_to_char("You feel a strange wrenching sensation, but it passes.\n\r", victim);
@@ -4383,7 +4383,7 @@ void spell_summon(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /* vo */, 
 
 	RS.Queue.AddToQueue(3, "spell_summon", "summon_char", summon_char, ch, victim);
 
-	act("You begin the summoning of $N.", ch, 0, victim, TO_CHAR);
+	act("You begin the summoning of $N.", ch, nullptr, victim, TO_CHAR);
 
 	if (saves_spell(level, victim, DAM_OTHER))
 		send_to_char("You feel a strange wrenching sensation at the very core of your being.\n\r", victim);
@@ -4417,7 +4417,7 @@ void summon_char(CHAR_DATA *ch, CHAR_DATA *victim)
 		return;
 	}
 
-	act("The summoning of $N fails as $E escapes your grasp.", ch, 0, victim, TO_CHAR);
+	act("The summoning of $N fails as $E escapes your grasp.", ch, nullptr, victim, TO_CHAR);
 }
 
 /* Modified teleport -- only within radius of one area now. */
@@ -4517,7 +4517,7 @@ void spell_turn_undead(int sn, int level, CHAR_DATA *ch, SpellTarget /* vo */, C
 	}
 	else
 	{
-		act("$n turns $s unholy influence upon the room.", ch, 0, 0, TO_ROOM);
+		act("$n turns $s unholy influence upon the room.", ch, nullptr, nullptr, TO_ROOM);
 		send_to_char("You turn your unholy influence upon those in the room.\n\r", ch);
 	}
 
@@ -4589,12 +4589,12 @@ void spell_turn_undead(int sn, int level, CHAR_DATA *ch, SpellTarget /* vo */, C
 				|| saves_spell(ch->level, victim, DAM_OTHER)
 				|| !is_npc(victim))
 			{
-				act("You attempt to control $N but do not have the influence.", ch, 0, victim, TO_CHAR);
+				act("You attempt to control $N but do not have the influence.", ch, nullptr, victim, TO_CHAR);
 				continue;
 			}
 			else
 			{
-				act("$n stares in hatred for a moment then suddenly becomes very subdued.", victim, 0, 0, TO_NOTVICT);
+				act("$n stares in hatred for a moment then suddenly becomes very subdued.", victim, nullptr, nullptr, TO_NOTVICT);
 				stop_fighting(victim, true);
 
 				victim->master = ch->self;
@@ -4603,7 +4603,7 @@ void spell_turn_undead(int sn, int level, CHAR_DATA *ch, SpellTarget /* vo */, C
 				SET_BIT(victim->affected_by, AFF_CHARM);
 				REMOVE_BIT(victim->act, ACT_AGGRESSIVE);
 
-				act("$N now follows you.", ch, 0, victim, TO_CHAR);
+				act("$N now follows you.", ch, nullptr, victim, TO_CHAR);
 
 				num++;
 				count += victim->level;
@@ -4643,7 +4643,7 @@ void spell_weaken(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unus
 
 	if (is_affected(victim, sn) || saves_spell(level, victim, DAM_OTHER))
 	{
-		act("$N's muscles wither slightly then regain their vigor.", ch, 0, victim, TO_CHAR);
+		act("$N's muscles wither slightly then regain their vigor.", ch, nullptr, victim, TO_CHAR);
 		return;
 	}
 
@@ -4702,7 +4702,7 @@ void spell_word_of_recall(int /* sn */, int /* level */, CHAR_DATA *ch, SpellTar
 	}
 
 	if (ch != victim)
-		act("You prepare to send $N home.", ch, 0, victim, TO_CHAR);
+		act("You prepare to send $N home.", ch, nullptr, victim, TO_CHAR);
 
 	RS.Queue.AddToQueue(6, "spell_word_of_recall", "recall_execute", recall_execute, victim, location);
 
@@ -4730,13 +4730,13 @@ void recall_execute(CHAR_DATA *ch, ROOM_INDEX_DATA *location)
 	if (is_affected(ch, gsn_camouflage))
 	{
 		affect_strip(ch, gsn_camouflage);
-		act("$n steps out from $s cover.", ch, 0, 0, TO_ROOM);
+		act("$n steps out from $s cover.", ch, nullptr, nullptr, TO_ROOM);
 		send_to_char("You step out from your cover.\n\r", ch);
 	}
 
 	un_watermeld(ch, nullptr);
 
-	act("As the magic takes effect, a black haze clouds your mind.\n\rWhen it passes, you find yourself elsewhere.", ch, 0, 0, TO_CHAR);
+	act("As the magic takes effect, a black haze clouds your mind.\n\rWhen it passes, you find yourself elsewhere.", ch, nullptr, nullptr, TO_CHAR);
 	act("$n suddenly disappears.", ch, nullptr, nullptr, TO_ROOM);
 
 	char_from_room(ch);
@@ -4981,8 +4981,8 @@ void spell_nether_breath(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[may
 	int dam;
 	bool saved = true;
 
-	act("$n opens $s mouth and unleashes a blast of pure darkness at you!", ch, 0, victim, TO_VICT);
-	act("$n opens $s mouth and unleashes a blast of pure darkness at $N!", ch, 0, victim, TO_NOTVICT);
+	act("$n opens $s mouth and unleashes a blast of pure darkness at you!", ch, nullptr, victim, TO_VICT);
+	act("$n opens $s mouth and unleashes a blast of pure darkness at $N!", ch, nullptr, victim, TO_NOTVICT);
 
 	dam = std::max(100, ch->hit / 10);
 
@@ -5010,7 +5010,7 @@ void spell_nether_breath(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[may
 		affect_to_char(victim, &af);
 
 		send_to_char("You feel unclean.\n\r", victim);
-		act("$n looks very uncomfortable.", victim, 0, 0, TO_ROOM);
+		act("$n looks very uncomfortable.", victim, nullptr, nullptr, TO_ROOM);
 	}
 }
 
@@ -5120,7 +5120,7 @@ void spell_protective_shield(int sn, int level, CHAR_DATA *ch, SpellTarget /* vo
 	af.mod_name = MOD_PROTECTION;
 	affect_to_char(ch, &af);
 
-	act("$n is surrounded by a protective shield.", ch, 0, 0, TO_ROOM);
+	act("$n is surrounded by a protective shield.", ch, nullptr, nullptr, TO_ROOM);
 	send_to_char("You are surrounded by a protective shield.\n\r", ch);
 }
 
@@ -5142,9 +5142,9 @@ void sanguine_blind(CHAR_DATA *ch, CHAR_DATA *victim)
 	if (is_affected(victim, gsn_blindness))
 		return;
 
-	act("You force your way through $n's undulating ward of blood to strike at $m.", ch, 0, victim, TO_VICT);
-	act("$N struggles through $n's ward to strike at $m before stumbling away clawing at his eyes!", ch, 0, victim, TO_NOTVICT);
-	act("$N struggles through your ward to strike at you before stumbling away clawing at his eyes!", ch, 0, victim, TO_CHAR);
+	act("You force your way through $n's undulating ward of blood to strike at $m.", ch, nullptr, victim, TO_VICT);
+	act("$N struggles through $n's ward to strike at $m before stumbling away clawing at his eyes!", ch, nullptr, victim, TO_NOTVICT);
+	act("$N struggles through your ward to strike at you before stumbling away clawing at his eyes!", ch, nullptr, victim, TO_CHAR);
 	send_to_char("Your vision fades to blackness as the coagulated blood flows hungrily over your eyes!\n\r", victim);
 
 	af.where = TO_AFFECTS;
@@ -5197,19 +5197,19 @@ void spell_sanguine_ward(int sn, int level, CHAR_DATA *ch, SpellTarget /* vo */,
 	send_to_char("Using the blood from your urn, you trace a symbol upon your forehead.\n\r", ch);
 	send_to_char("A translucent red shield flickers into existence around you.\n\r", ch);
 
-	act("$n dips a finger into $s urn and traces a symbol onto $s forehead.", ch, 0, 0, TO_ROOM);
-	act("A translucent red shield flickers into existence around $n.", ch, 0, 0, TO_ROOM);
+	act("$n dips a finger into $s urn and traces a symbol onto $s forehead.", ch, nullptr, nullptr, TO_ROOM);
+	act("A translucent red shield flickers into existence around $n.", ch, nullptr, nullptr, TO_ROOM);
 
 	if (charges > 2 && charges != 5)
 	{
 		send_to_char("The strong ward seems nearly solid for a moment before fading back to translucence.\n\r", ch);
-		act("The ward around $n seems nearly solid for a moment before fading back to translucence.", ch, 0, 0, TO_ROOM);
+		act("The ward around $n seems nearly solid for a moment before fading back to translucence.", ch, nullptr, nullptr, TO_ROOM);
 	}
 
 	if (charges == 5)
 	{
 		send_to_char("Your surroundings seem to blur momentarily as the powerful ward coalesces around you.\n\r", ch);
-		act("$n seems to flicker out of existence momentarily as the powerful ward coalesces around $m.", ch, 0, 0, TO_ROOM);
+		act("$n seems to flicker out of existence momentarily as the powerful ward coalesces around $m.", ch, nullptr, nullptr, TO_ROOM);
 	}
 
 	send_to_char("\n\r", ch);
@@ -5270,17 +5270,17 @@ void spell_consecrate(int sn, int level, CHAR_DATA *ch, [[maybe_unused]] SpellTa
 
 	chance -= count * 10;
 
-	act("$n gestures around the room and utters a blessing of holy rights.", ch, 0, 0, TO_ROOM);
+	act("$n gestures around the room and utters a blessing of holy rights.", ch, nullptr, nullptr, TO_ROOM);
 	send_to_char("You chant a blessing and give the divine somatic motions of consecration.\n\r", ch);
 
 	if (number_percent() > chance)
 	{
-		act("You feel the atmosphere lighten for a moment but it passes.", ch, 0, 0, TO_ROOM);
+		act("You feel the atmosphere lighten for a moment but it passes.", ch, nullptr, nullptr, TO_ROOM);
 		send_to_char("Your holy rights are invoked but fail to affect the room's evil.\n\r", ch);
 		return;
 	}
 
-	act("The atmosphere in the room lightens.", ch, 0, 0, TO_ROOM);
+	act("The atmosphere in the room lightens.", ch, nullptr, nullptr, TO_ROOM);
 	send_to_char("You succeed in consecrating the ground for a brief period!\n\r", ch);
 
 	init_affect_room(&raf);
@@ -5336,7 +5336,7 @@ void spell_safety(int /* sn */, int /* level */, CHAR_DATA *ch, SpellTarget /* v
 		}
 		else
 		{
-			act("$n suddenly vanishes!", gch, 0, 0, TO_ROOM);
+			act("$n suddenly vanishes!", gch, nullptr, nullptr, TO_ROOM);
 		}
 	}
 
@@ -5355,7 +5355,7 @@ void spell_safety(int /* sn */, int /* level */, CHAR_DATA *ch, SpellTarget /* v
 
 		char_from_room(gch);
 		char_to_room(gch, pRoomIndex);
-		act("$n suddenly appears in the room.", gch, 0, 0, TO_ROOM);
+		act("$n suddenly appears in the room.", gch, nullptr, nullptr, TO_ROOM);
 		do_look(gch, "auto");
 	}
 
@@ -5384,7 +5384,7 @@ void spell_blade_barrier(int /* sn */, int /* level */, CHAR_DATA *ch, SpellTarg
 	affect_to_char(ch, &af);
 
 	send_to_char("A barrier of deadly whirling blades comes into existence around you.\n\r", ch);
-	act("A barrier of deadly whirling blades comes into existence around $n.", ch, 0, 0, TO_ROOM);
+	act("A barrier of deadly whirling blades comes into existence around $n.", ch, nullptr, nullptr, TO_ROOM);
 
 	WAIT_STATE(ch, PULSE_VIOLENCE * 2);
 }
@@ -5404,8 +5404,8 @@ void spell_old_blade_barrier(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [
 
 	if (number_percent() > chance || victim == ch)
 	{
-		act("$n creates a whirlwind of spinning blades which turn and strike $m down!", ch, 0, 0, TO_ROOM);
-		act("Your blade barrier turns and strikes you down!", ch, 0, 0, TO_CHAR);
+		act("$n creates a whirlwind of spinning blades which turn and strike $m down!", ch, nullptr, nullptr, TO_ROOM);
+		act("Your blade barrier turns and strikes you down!", ch, nullptr, nullptr, TO_CHAR);
 
 		dam /= 2;
 
@@ -5422,16 +5422,16 @@ void spell_old_blade_barrier(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [
 			dam *= 3;
 			dam /= 2;
 
-			act("The blades spin and slice away at $n.", ch, 0, 0, TO_ROOM);
-			act("The blades spin and slice away at you.", ch, 0, 0, TO_CHAR);
+			act("The blades spin and slice away at $n.", ch, nullptr, nullptr, TO_ROOM);
+			act("The blades spin and slice away at you.", ch, nullptr, nullptr, TO_CHAR);
 			damage_old(ch, ch, dam, sn, DAM_SLASH, true);
 		}
 	}
 	else
 	{
-		act("You create a whirlwind of spinning blades to strike down $N!", ch, 0, victim, TO_CHAR);
-		act("$n creates a deadly blade barrier that tears into $N!", ch, 0, victim, TO_NOTVICT);
-		act("$n creates a deadly blade barrier that tears into you!", ch, 0, victim, TO_VICT);
+		act("You create a whirlwind of spinning blades to strike down $N!", ch, nullptr, victim, TO_CHAR);
+		act("$n creates a deadly blade barrier that tears into $N!", ch, nullptr, victim, TO_NOTVICT);
+		act("$n creates a deadly blade barrier that tears into you!", ch, nullptr, victim, TO_VICT);
 		damage_old(ch, victim, dam, sn, DAM_SLASH, true);
 
 		for (i = 0; i < spins; i++)
@@ -5444,8 +5444,8 @@ void spell_old_blade_barrier(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [
 
 			dam *= 3;
 			dam /= 4;
-			act("The blades spin and slice away at $n.", victim, 0, 0, TO_ROOM);
-			act("The blades spin and slice away at you.", victim, 0, 0, TO_CHAR);
+			act("The blades spin and slice away at $n.", victim, nullptr, nullptr, TO_ROOM);
+			act("The blades spin and slice away at you.", victim, nullptr, nullptr, TO_CHAR);
 
 			if (victim->ghost > 0)
 				return;
@@ -5454,8 +5454,8 @@ void spell_old_blade_barrier(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [
 		}
 	}
 
-	act("The blade barrier fades away.", ch, 0, 0, TO_ROOM);
-	act("Your blade barrier fades away.", ch, 0, 0, TO_CHAR);
+	act("The blade barrier fades away.", ch, nullptr, nullptr, TO_ROOM);
+	act("Your blade barrier fades away.", ch, nullptr, nullptr, TO_CHAR);
 }
 
 void spell_holy_fire(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
@@ -5491,8 +5491,8 @@ void spell_holy_fire(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_u
 
 	if (number_percent() > chance)
 	{
-		act("$n's heavenly fire turns on $m!", ch, 0, 0, TO_ROOM);
-		act("Your heavenly fire turns on you for your sins!", ch, 0, 0, TO_CHAR);
+		act("$n's heavenly fire turns on $m!", ch, nullptr, nullptr, TO_ROOM);
+		act("Your heavenly fire turns on you for your sins!", ch, nullptr, nullptr, TO_CHAR);
 
 		dam *= dam_mod;
 		dam /= 10;
@@ -5504,8 +5504,8 @@ void spell_holy_fire(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_u
 		return;
 	}
 
-	act("$n calls down fire from the heavens!", ch, 0, 0, TO_ROOM);
-	act("You call down fire from the heavens!", ch, 0, 0, TO_CHAR);
+	act("$n calls down fire from the heavens!", ch, nullptr, nullptr, TO_ROOM);
+	act("You call down fire from the heavens!", ch, nullptr, nullptr, TO_CHAR);
 
 	dam *= dam_mod;
 	dam /= 10;
@@ -5542,16 +5542,16 @@ void spell_talk_to_dead(int /* sn */, int /* level */, CHAR_DATA *ch, SpellTarge
 
 	if (IS_SET(corpse->extra_flags, CORPSE_NO_ANIMATE))
 	{
-		act("$p shudders slightly and a soft moan reaches your ears before it goes silent.", ch, corpse, 0, TO_CHAR);
+		act("$p shudders slightly and a soft moan reaches your ears before it goes silent.", ch, corpse, nullptr, TO_CHAR);
 		return;
 	}
 
-	act("You draw back the spirit of the fallen and $p speaks briefly to you.", ch, corpse, 0, TO_CHAR);
+	act("You draw back the spirit of the fallen and $p speaks briefly to you.", ch, corpse, nullptr, TO_CHAR);
 
 	sprintf(buf, "The spirit tells you 'I was slain by %s, now allow me my peace.'\n\r", corpse->talked);
 	send_to_char(buf, ch);
 
-	act("A faint glow surrounds $p and then fades away.", ch, corpse, 0, TO_ROOM);
+	act("A faint glow surrounds $p and then fades away.", ch, corpse, nullptr, TO_ROOM);
 }
 
 /* New energy drain spell due to anti-paladin's always complaining how
@@ -5572,15 +5572,15 @@ void spell_energy_drain(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[mayb
 	if (saves_spell(level - 3, victim, DAM_NEGATIVE))
 	{
 		send_to_char("You feel a cold chill wash over you, but it passes.\n\r", victim);
-		act("You were unable to drain energy from $N.", ch, 0, victim, TO_CHAR);
+		act("You were unable to drain energy from $N.", ch, nullptr, victim, TO_CHAR);
 		return;
 	}
 
 	amount = dice(level / 3, 2);
 
-	act("You drain $N's life away!", ch, 0, victim, TO_CHAR);
-	act("$n drains $N's life away!", ch, 0, victim, TO_NOTVICT);
-	act("You feel your life slipping away!", ch, 0, victim, TO_VICT);
+	act("You drain $N's life away!", ch, nullptr, victim, TO_CHAR);
+	act("$n drains $N's life away!", ch, nullptr, victim, TO_NOTVICT);
+	act("You feel your life slipping away!", ch, nullptr, victim, TO_VICT);
 
 	damage_old(ch, victim, amount, sn, DAM_NEGATIVE, true);
 
@@ -5607,7 +5607,7 @@ void spell_dark_shield(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe
 
 	if (is_good(victim))
 	{
-		act("$N is too pure for such a spell.", ch, 0, victim, TO_CHAR);
+		act("$N is too pure for such a spell.", ch, nullptr, victim, TO_CHAR);
 		return;
 	}
 
@@ -5621,7 +5621,7 @@ void spell_dark_shield(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe
 	af.location = APPLY_AC;
 	affect_to_char(victim, &af);
 
-	act("$n is surrounded by a darkened shield.", victim, 0, 0, TO_ROOM);
+	act("$n is surrounded by a darkened shield.", victim, nullptr, nullptr, TO_ROOM);
 	send_to_char("You are surrounded by a darkened shield.\n\r", victim);
 }
 
@@ -5658,7 +5658,7 @@ void spell_deathspell(int sn, int level, CHAR_DATA *ch, [[maybe_unused]] SpellTa
 	char buf[MAX_STRING_LENGTH];
 	klevel = level - 7;
 
-	act("$n utters a word of power and the negative energy explodes in the room!", ch, 0, 0, TO_ROOM);
+	act("$n utters a word of power and the negative energy explodes in the room!", ch, nullptr, nullptr, TO_ROOM);
 	send_to_char("You utter a word of power and negative energy explodes into the room!\n\r", ch);
 
 	bonus = 0;
@@ -5689,8 +5689,8 @@ void spell_deathspell(int sn, int level, CHAR_DATA *ch, [[maybe_unused]] SpellTa
 
 		if (vch->level > klevel || IS_SET(vch->act, ACT_UNDEAD) || IS_SET(vch->imm_flags, IMM_NEGATIVE))
 		{
-			act("$n is unaffected by the negative energy field.", vch, 0, 0, TO_ROOM);
-			act("You are unaffected by the negative energy field.", vch, 0, 0, TO_CHAR);
+			act("$n is unaffected by the negative energy field.", vch, nullptr, nullptr, TO_ROOM);
+			act("You are unaffected by the negative energy field.", vch, nullptr, nullptr, TO_CHAR);
 		}
 		else if (vch == ch)
 		{
@@ -5710,7 +5710,7 @@ void spell_deathspell(int sn, int level, CHAR_DATA *ch, [[maybe_unused]] SpellTa
 		}
 		else
 		{
-			act("$n gets a horrible look in $s eye's then keels over dead!", vch, 0, 0, TO_ROOM);
+			act("$n gets a horrible look in $s eye's then keels over dead!", vch, nullptr, nullptr, TO_ROOM);
 			send_to_char("You feel your an intense pain in your head as the energy ruptures your skull!\n\r", vch);
 			raw_kill(ch, vch);
 		}
@@ -5788,8 +5788,8 @@ void spell_heavenly_sceptre_frenzy(int sn, int level, CHAR_DATA *ch, SpellTarget
 	AFFECT_DATA af;
 	if (is_affected(ch, sn) || (!is_good(ch) && !is_evil(ch)))
 	{
-		act("$n's sceptre hums softly but nothing seems to happen.", ch, 0, 0, TO_ROOM);
-		act("Your sceptre hums softly but nothing seems to happen.", ch, 0, 0, TO_CHAR);
+		act("$n's sceptre hums softly but nothing seems to happen.", ch, nullptr, nullptr, TO_ROOM);
+		act("Your sceptre hums softly but nothing seems to happen.", ch, nullptr, nullptr, TO_CHAR);
 		return;
 	}
 
@@ -5822,12 +5822,12 @@ void spell_heavenly_sceptre_frenzy(int sn, int level, CHAR_DATA *ch, SpellTarget
 
 	if (is_good(ch))
 	{
-		act("$n's sceptre glows white and a look of righteous anger in $s eyes.", ch, 0, 0, TO_ROOM);
+		act("$n's sceptre glows white and a look of righteous anger in $s eyes.", ch, nullptr, nullptr, TO_ROOM);
 		send_to_char("Your sceptre glows white and you feel a surge of righteous anger!\n\r", ch);
 	}
 	else if (is_evil(ch))
 	{
-		act("$n's sceptre darkens and a look of righteous anger enters $s eyes.", ch, 0, 0, TO_ROOM);
+		act("$n's sceptre darkens and a look of righteous anger enters $s eyes.", ch, nullptr, nullptr, TO_ROOM);
 		send_to_char("Your sceptre darkens and you feel a surge of righteous anger!\n\r", ch);
 	}
 }
@@ -5844,7 +5844,7 @@ void spell_heavenly_sceptre_fire(int sn, int /* level */, CHAR_DATA *ch, SpellTa
 
 	if (is_affected(ch, sn) || victim == nullptr || ch->level < 30)
 	{
-		act("$n's sceptre hums softly but nothing seems to happen.", ch, 0, 0, TO_ROOM);
+		act("$n's sceptre hums softly but nothing seems to happen.", ch, nullptr, nullptr, TO_ROOM);
 		send_to_char("Your sceptre hums softly but nothing seems to happen.\n\r", ch);
 		WAIT_STATE(ch, 12);
 		return;
@@ -5865,7 +5865,7 @@ void spell_heavenly_sceptre_fire(int sn, int /* level */, CHAR_DATA *ch, SpellTa
 
 	if (number_percent() > ch->level * 2)
 	{
-		act("Your sceptre of heavenly orders crumbles to dust.", ch, 0, 0, TO_ROOM);
+		act("Your sceptre of heavenly orders crumbles to dust.", ch, nullptr, nullptr, TO_ROOM);
 		send_to_char("Your sceptre of heavenly orders crumbles to dust.\n\r", ch);
 
 		// TODO: sceptre is still the nullptr it was declared as, because nothing
@@ -5971,7 +5971,7 @@ void spell_forget(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unus
 	affect_to_char(victim, &af);
 
 	send_to_char("You feel your memories slip away.\n\r", victim);
-	act("$n suddenly looks disoriented.", victim, 0, 0, TO_ROOM);
+	act("$n suddenly looks disoriented.", victim, nullptr, nullptr, TO_ROOM);
 }
 
 void spell_earthbind(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
@@ -6003,7 +6003,7 @@ void spell_earthbind(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_u
 	affect_to_char(victim, &af);
 
 	send_to_char("Your feet suddenly become heavy and earthbound.\n\r", victim);
-	act("$n suddenly drops to the ground.", victim, 0, 0, TO_ROOM);
+	act("$n suddenly drops to the ground.", victim, nullptr, nullptr, TO_ROOM);
 }
 
 void spell_cremate(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
@@ -6013,7 +6013,7 @@ void spell_cremate(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unu
 
 	dam = dice(level, 7);
 
-	act("$n is engulfed in raging fire!", victim, 0, 0, TO_ROOM);
+	act("$n is engulfed in raging fire!", victim, nullptr, nullptr, TO_ROOM);
 	send_to_char("You are engulfed in raging fire!\n\r", victim);
 
 	if (saves_spell(level, victim, DAM_FIRE))
@@ -6040,7 +6040,7 @@ void spell_divine_touch(int sn, int level, CHAR_DATA *ch, SpellTarget /* vo */, 
 	affect_to_char(ch, &af);
 
 	send_to_char("Your hands are surrounded in holy energy.\n\r", ch);
-	act("$n's hands seem to glow with an inner energy.", ch, 0, 0, TO_ROOM);
+	act("$n's hands seem to glow with an inner energy.", ch, nullptr, nullptr, TO_ROOM);
 }
 
 void spell_transfer_object(int /* sn */, int /* level */, CHAR_DATA *ch, SpellTarget /* vo */, CastMode /* mode */)
@@ -6101,8 +6101,8 @@ void spell_transfer_object(int /* sn */, int /* level */, CHAR_DATA *ch, SpellTa
 		|| victim->carry_weight >= can_carry_w(victim)
 		|| isCabalItem(obj))
 	{
-		act("$p glows softly but nothing happens.", ch, obj, 0, TO_CHAR);
-		act("$p glows softly but nothing happens.", ch, obj, 0, TO_ROOM);
+		act("$p glows softly but nothing happens.", ch, obj, nullptr, TO_CHAR);
+		act("$p glows softly but nothing happens.", ch, obj, nullptr, TO_ROOM);
 		return;
 	}
 
@@ -6112,14 +6112,14 @@ void spell_transfer_object(int /* sn */, int /* level */, CHAR_DATA *ch, SpellTa
 		return;
 	}
 
-	act("$p glows softly and vanishes!", ch, obj, 0, TO_CHAR);
-	act("$p glows softly and vanishes!", ch, obj, 0, TO_ROOM);
+	act("$p glows softly and vanishes!", ch, obj, nullptr, TO_CHAR);
+	act("$p glows softly and vanishes!", ch, obj, nullptr, TO_ROOM);
 
 	obj_from_char(obj);
 	obj_to_char(obj, victim);
 
-	act("You suddenly feel heavier as $p pops into your inventory!", victim, obj, 0, TO_CHAR);
-	act("$p suddenly appears from nowhere and pops into $n's possession!", victim, obj, 0, TO_ROOM);
+	act("You suddenly feel heavier as $p pops into your inventory!", victim, obj, nullptr, TO_CHAR);
+	act("$p suddenly appears from nowhere and pops into $n's possession!", victim, obj, nullptr, TO_ROOM);
 }
 
 /* Necros use this to keep body parts longer...for lesser golems */
@@ -6182,13 +6182,13 @@ void spell_power_word_fear(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[m
 		return;
 	}
 
-	act("$n points at $N and utters the word 'Fear!'", ch, 0, victim, TO_NOTVICT);
-	act("$n points at you and utters the word 'Fear!'", ch, 0, victim, TO_VICT);
-	act("You point at $N and utter the word 'Fear!'", ch, 0, victim, TO_CHAR);
+	act("$n points at $N and utters the word 'Fear!'", ch, nullptr, victim, TO_NOTVICT);
+	act("$n points at you and utters the word 'Fear!'", ch, nullptr, victim, TO_VICT);
+	act("You point at $N and utter the word 'Fear!'", ch, nullptr, victim, TO_CHAR);
 
 	if (!is_awake(victim))
 	{
-		act("$n shivers momentarily but it passes.", victim, 0, 0, TO_ROOM);
+		act("$n shivers momentarily but it passes.", victim, nullptr, nullptr, TO_ROOM);
 		send_to_char("You feel a brief terror, but it passes away in your dreams.\n\r", victim);
 		return;
 	}
@@ -6202,7 +6202,7 @@ void spell_power_word_fear(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[m
 
 	if (saves_spell(level, victim, DAM_OTHER))
 	{
-		act("$n shivers momentarily but it passes.", victim, 0, 0, TO_ROOM);
+		act("$n shivers momentarily but it passes.", victim, nullptr, nullptr, TO_ROOM);
 		send_to_char("You feel a brief terror, but it passes.\n\r", victim);
 		return;
 	}
@@ -6217,7 +6217,7 @@ void spell_power_word_fear(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[m
 
 	if (utter_fail)
 	{
-		act("$n's eyes widen and $s heart ruptures from shock!", victim, 0, 0, TO_ROOM);
+		act("$n's eyes widen and $s heart ruptures from shock!", victim, nullptr, nullptr, TO_ROOM);
 		send_to_char("You feel a terror so intense your heart stops dead!\n\r", victim);
 		raw_kill(ch, victim);
 		return;
@@ -6276,7 +6276,7 @@ void spell_imbue_regeneration(int sn, int level, CHAR_DATA *ch, SpellTarget vo, 
 
 	if (is_affected(victim, gsn_atrophy))
 	{
-		act("$n's body stops wasting away.", victim, 0, 0, TO_ROOM);
+		act("$n's body stops wasting away.", victim, nullptr, nullptr, TO_ROOM);
 		send_to_char("Your body stops wasting away.\n\r", victim);
 		affect_strip(victim, gsn_atrophy);
 		return;
@@ -6284,7 +6284,7 @@ void spell_imbue_regeneration(int sn, int level, CHAR_DATA *ch, SpellTarget vo, 
 
 	if (is_affected(victim, skill_lookup("prevent healing")))
 	{
-		act("$n's sickly looking complexion clears up.", victim, 0, 0, TO_ROOM);
+		act("$n's sickly looking complexion clears up.", victim, nullptr, nullptr, TO_ROOM);
 		send_to_char("You no longer feel so sick and weary.\n\r", victim);
 		affect_strip(victim, skill_lookup("prevent healing"));
 		return;
@@ -6294,14 +6294,14 @@ void spell_imbue_regeneration(int sn, int level, CHAR_DATA *ch, SpellTarget vo, 
 	{
 		if (victim != ch)
 		{
-			act("$N's emaciated body heals up with your touch.", ch, 0, victim, TO_CHAR);
-			act("Your emaciated body heals up with $n's touch.", ch, 0, victim, TO_VICT);
-			act("$N's emaciated body heals up with $n's touch.", ch, 0, victim, TO_NOTVICT);
+			act("$N's emaciated body heals up with your touch.", ch, nullptr, victim, TO_CHAR);
+			act("Your emaciated body heals up with $n's touch.", ch, nullptr, victim, TO_VICT);
+			act("$N's emaciated body heals up with $n's touch.", ch, nullptr, victim, TO_NOTVICT);
 		}
 		else
 		{
 			send_to_char("Your emaciated body parts heal up.\n\r", ch);
-			act("$n's emaciated body heals up.", ch, 0, 0, TO_ROOM);
+			act("$n's emaciated body heals up.", ch, nullptr, nullptr, TO_ROOM);
 		}
 
 		affect_strip(victim, skill_lookup("wither"));
@@ -6357,7 +6357,7 @@ void spell_restoration(int /* sn */, int level, CHAR_DATA *ch, SpellTarget vo, C
 	if (is_affected(victim, sn_forget))
 	{
 		send_to_char("You feel your mind becoming clearer.\n\r", victim);
-		act("$n looks less confused.", victim, 0, 0, TO_ROOM);
+		act("$n looks less confused.", victim, nullptr, nullptr, TO_ROOM);
 		affect_strip(victim, sn_forget);
 		success = true;
 	}
@@ -6365,7 +6365,7 @@ void spell_restoration(int /* sn */, int level, CHAR_DATA *ch, SpellTarget vo, C
 	if (is_affected(victim, sn_wither))
 	{
 		send_to_char("Your emaciated body is restored.\n\r", victim);
-		act("$n's emaciated body looks healthier.", victim, 0, 0, TO_ROOM);
+		act("$n's emaciated body looks healthier.", victim, nullptr, nullptr, TO_ROOM);
 		affect_strip(victim, sn_wither);
 		success = true;
 	}
@@ -6380,7 +6380,7 @@ void spell_restoration(int /* sn */, int level, CHAR_DATA *ch, SpellTarget vo, C
 
 	if (is_affected(victim, gsn_atrophy))
 	{
-		act("$n's body stops wasting away.", victim, 0, 0, TO_ROOM);
+		act("$n's body stops wasting away.", victim, nullptr, nullptr, TO_ROOM);
 		send_to_char("Your body stops wasting away.\n\r", victim);
 		affect_strip(victim, gsn_atrophy);
 	}
@@ -6414,7 +6414,7 @@ void spell_prevent_healing(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[m
 	}
 
 	send_to_char("You feel your body losing it's ability to heal.\n\r", victim);
-	act("$n looks very sick.", victim, 0, 0, TO_ROOM);
+	act("$n looks very sick.", victim, nullptr, nullptr, TO_ROOM);
 
 	init_affect(&af);
 	af.where = TO_AFFECTS;
@@ -6487,13 +6487,13 @@ void spell_utter_heal(int /* sn */, int /* level */, CHAR_DATA *ch, SpellTarget 
 	{
 		affect_strip(victim, sn_atrophy);
 		send_to_char("Your body stops wasting away.\n\r", victim);
-		act("$n's body stops wasting away.", victim, 0, 0, TO_ROOM);
+		act("$n's body stops wasting away.", victim, nullptr, nullptr, TO_ROOM);
 		return;
 	}
 
 	if (is_affected(ch, sn_poison) || is_affected(ch, gsn_poison_dust))
 	{
-		act("$n looks better.", victim, 0, 0, TO_ROOM);
+		act("$n looks better.", victim, nullptr, nullptr, TO_ROOM);
 		send_to_char("You feel a warm sensation running through you.\n\r", victim);
 		affect_strip(victim, sn_poison);
 		affect_strip(victim, gsn_poison_dust);
@@ -6501,7 +6501,7 @@ void spell_utter_heal(int /* sn */, int /* level */, CHAR_DATA *ch, SpellTarget 
 
 	if (is_affected(ch, gsn_plague))
 	{
-		act("The sores on $n's body disappear.", victim, 0, 0, TO_ROOM);
+		act("The sores on $n's body disappear.", victim, nullptr, nullptr, TO_ROOM);
 		send_to_char("The sores on your body disappear.\n\r", victim);
 		affect_strip(victim, gsn_plague);
 	}
@@ -6585,15 +6585,15 @@ void spell_crushing_hand(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[may
 	if (saves_spell(level + 1, victim, DAM_OTHER))
 		dam -= 60;
 
-	act("$n creates a huge spectral hand to brutally pummel $N!", ch, 0, victim, TO_NOTVICT);
-	act("$n creates a huge spectral hand to brutally pummel you!", ch, 0, victim, TO_VICT);
-	act("You create a huge spectral hand to brutally pummel $N!", ch, 0, victim, TO_CHAR);
+	act("$n creates a huge spectral hand to brutally pummel $N!", ch, nullptr, victim, TO_NOTVICT);
+	act("$n creates a huge spectral hand to brutally pummel you!", ch, nullptr, victim, TO_VICT);
+	act("You create a huge spectral hand to brutally pummel $N!", ch, nullptr, victim, TO_CHAR);
 
 	if (number_percent() < 60)
 	{
-		act("$N appears to be stunned by the blow.", ch, 0, victim, TO_NOTVICT);
-		act("You feel stunned by the brutal blow.", ch, 0, victim, TO_VICT);
-		act("$N appears to be stunned by the blow.", ch, 0, victim, TO_CHAR);
+		act("$N appears to be stunned by the blow.", ch, nullptr, victim, TO_NOTVICT);
+		act("You feel stunned by the brutal blow.", ch, nullptr, victim, TO_VICT);
+		act("$N appears to be stunned by the blow.", ch, nullptr, victim, TO_CHAR);
 		LAG_CHAR(victim, PULSE_VIOLENCE * 2);
 	}
 
@@ -6619,7 +6619,7 @@ void spell_deafen(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unus
 
 	if (saves_spell(level - 2, victim, DAM_CHARM))
 	{
-		act("You fail to deafen $N.", ch, 0, victim, TO_CHAR);
+		act("You fail to deafen $N.", ch, nullptr, victim, TO_CHAR);
 		return;
 	}
 
@@ -6713,7 +6713,7 @@ void talismanic_end(CHAR_DATA *ch, AFFECT_DATA *af)
 void puddle_evaporate(OBJ_DATA *obj, [[maybe_unused]] OBJ_AFFECT_DATA *af)
 {
 	if (obj->in_room && obj->in_room->people)
-		act("The last traces of the puddle fade, as it seeps into the ground and evaporates.", obj->in_room->people, 0, 0, TO_ALL);
+		act("The last traces of the puddle fade, as it seeps into the ground and evaporates.", obj->in_room->people, nullptr, nullptr, TO_ALL);
 
 	extract_obj(obj);
 }
@@ -6731,13 +6731,13 @@ bool check_somatic(CHAR_DATA *ch)
 
 	if (number_percent() > skill)
 	{
-		act("$n gestures and focuses intently for a moment, but nothing happens.", ch, 0, 0, TO_ROOM);
+		act("$n gestures and focuses intently for a moment, but nothing happens.", ch, nullptr, nullptr, TO_ROOM);
 		send_to_char("You fail to complete the incantation by using somatic gestures.\n\r", ch);
 		return false;
 	}
 
-	act("$n concentrates intently as $e gestures with $s hands.", ch, 0, 0, TO_ROOM);
-	act("You focus intently, using somatic gestures to complete the incantation.", ch, 0, 0, TO_CHAR);
+	act("$n concentrates intently as $e gestures with $s hands.", ch, nullptr, nullptr, TO_ROOM);
+	act("You focus intently, using somatic gestures to complete the incantation.", ch, nullptr, nullptr, TO_CHAR);
 
 	check_improve(ch, gsn_somatic_casting, true, 6);
 

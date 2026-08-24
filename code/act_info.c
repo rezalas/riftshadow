@@ -676,7 +676,7 @@ void show_char_to_char_1(CHAR_DATA *victim, CHAR_DATA *ch)
 			get_char_color(ch, "white"),
 			END_COLOR(ch));
 
-		act(buf, ch, 0, victim, TO_CHAR);
+		act(buf, ch, nullptr, victim, TO_CHAR);
 	}
 
 	if (is_affected(victim, gsn_corona))
@@ -685,7 +685,7 @@ void show_char_to_char_1(CHAR_DATA *victim, CHAR_DATA *ch)
 			get_char_color(ch, "lightred"),
 			END_COLOR(ch));
 
-		act(buf, ch, 0, victim, TO_CHAR);
+		act(buf, ch, nullptr, victim, TO_CHAR);
 	}
 
 	if (is_affected(victim, gsn_frigidaura))
@@ -694,7 +694,7 @@ void show_char_to_char_1(CHAR_DATA *victim, CHAR_DATA *ch)
 			get_char_color(ch, "lightblue"),
 			END_COLOR(ch));
 
-		act(buf, ch, 0, victim, TO_CHAR);
+		act(buf, ch, nullptr, victim, TO_CHAR);
 	}
 
 	if (is_affected(victim, gsn_rotating_ward))
@@ -714,7 +714,7 @@ void show_char_to_char_1(CHAR_DATA *victim, CHAR_DATA *ch)
 				: "Multifaceted crystals are",
 			END_COLOR(ch));
 
-		act(buf, ch, 0, victim, TO_CHAR);
+		act(buf, ch, nullptr, victim, TO_CHAR);
 	}
 
 	if (is_affected(victim, gsn_cloak_form) && !is_immortal(ch))
@@ -789,7 +789,7 @@ void show_char_to_char_1(CHAR_DATA *victim, CHAR_DATA *ch)
 		&& belt->pIndexData->vnum == OBJ_VNUM_TROPHY_BELT
 		&& !victim->pcdata->trophy.empty() && belt->value[4] >= 1)
 	{
-		act("\n\r$p catches your eye, meriting closer examination.", ch, belt, 0, TO_CHAR);
+		act("\n\r$p catches your eye, meriting closer examination.", ch, belt, nullptr, TO_CHAR);
 
 		if (!belt->extra_descr.empty())
 			send_to_char(belt->extra_descr.front().description, ch);
@@ -846,35 +846,35 @@ void show_char_to_char_1(CHAR_DATA *victim, CHAR_DATA *ch)
 
 		if (!is_npc(victim))
 		{
-			act("\n\rYou check for gold coins on $N's person:", ch, 0, victim, TO_CHAR);
+			act("\n\rYou check for gold coins on $N's person:", ch, nullptr, victim, TO_CHAR);
 
 			if (victim->gold <= 0)
 			{
-				act("$N does not seem to be carrying any gold.", ch, 0, victim, TO_CHAR);
+				act("$N does not seem to be carrying any gold.", ch, nullptr, victim, TO_CHAR);
 			}
 			else if (victim->gold < 10)
 			{
-				act("Scant few gold pieces jingle softly in $N's purse.", ch, 0, victim, TO_CHAR);
+				act("Scant few gold pieces jingle softly in $N's purse.", ch, nullptr, victim, TO_CHAR);
 			}
 			else if (victim->gold < 100)
 			{
-				act("$N's coinpurse appears fairly empty.", ch, 0, victim, TO_CHAR);
+				act("$N's coinpurse appears fairly empty.", ch, nullptr, victim, TO_CHAR);
 			}
 			else if (victim->gold < 1000)
 			{
-				act("$N's coinpurse has a healthy bulge to it.", ch, 0, victim, TO_CHAR);
+				act("$N's coinpurse has a healthy bulge to it.", ch, nullptr, victim, TO_CHAR);
 			}
 			else if (victim->gold < 10000)
 			{
-				act("$N's coinpurse hangs heavily at $S waist, laden with gold.", ch, 0, victim, TO_CHAR);
+				act("$N's coinpurse hangs heavily at $S waist, laden with gold.", ch, nullptr, victim, TO_CHAR);
 			}
 			else if (victim->gold < 100000)
 			{
-				act("$N's coinpurse bulges at the seams, overflowing with gold!", ch, 0, victim, TO_CHAR);
+				act("$N's coinpurse bulges at the seams, overflowing with gold!", ch, nullptr, victim, TO_CHAR);
 			}
 			else
 			{
-				act("Not only does $N have the largest coinpurse you've ever laid eyes upon, but it can scarcely contain the veritable motherlode $E is toting around.  Thieves the world over are having wet dreams about $N at this very moment.", ch, 0, victim, TO_CHAR);
+				act("Not only does $N have the largest coinpurse you've ever laid eyes upon, but it can scarcely contain the veritable motherlode $E is toting around.  Thieves the world over are having wet dreams about $N at this very moment.", ch, nullptr, victim, TO_CHAR);
 			}
 		}
 	}
@@ -2009,7 +2009,7 @@ void do_look(CHAR_DATA *ch, char *argument)
 
 				if (is_affected_obj(obj, gsn_ice_blast))
 				{
-					act("$p is frozen shut!", ch, obj, 0, TO_CHAR);
+					act("$p is frozen shut!", ch, obj, nullptr, TO_CHAR);
 					break;
 				}
 
@@ -2073,7 +2073,7 @@ void do_look(CHAR_DATA *ch, char *argument)
 		}
 
 		if (is_immortal(victim))
-			act("$n looks at you.", ch, 0, victim, TO_VICT);
+			act("$n looks at you.", ch, nullptr, victim, TO_VICT);
 
 		show_char_to_char_1(victim, ch);
 		return;
@@ -2701,9 +2701,9 @@ void do_score(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 		for (i = 0; demon_table[i].name; i++)
 		{
 			if (demon_table[i].type == LESSER_DEMON && ch->pcdata->lesserdata[i] >= FAVOR_GRANTED)
-				act("You have been granted the favor of the lesser demon $t.", ch, capitalize(demon_table[i].name), 0, TO_CHAR);
+				act("You have been granted the favor of the lesser demon $t.", ch, capitalize(demon_table[i].name), nullptr, TO_CHAR);
 			if (demon_table[i].type == GREATER_DEMON && i >= MAX_LESSER && ch->pcdata->greaterdata[i - MAX_LESSER] >= FAVOR_GRANTED)
-				act("You have been granted the favor of the greater demon $t.", ch, capitalize(demon_table[i].name), 0, TO_CHAR);
+				act("You have been granted the favor of the greater demon $t.", ch, capitalize(demon_table[i].name), nullptr, TO_CHAR);
 		}
 	}
 
@@ -3848,34 +3848,34 @@ void do_consider(CHAR_DATA *ch, char *argument)
 
 	auto diff = victim->level - ch->level;
 	if (diff <= -10)
-		act("Your sneeze would kill $N.", ch, 0, victim, TO_CHAR);
+		act("Your sneeze would kill $N.", ch, nullptr, victim, TO_CHAR);
 	else if (diff <= -5)
-		act("$N wouldn't last long against you.", ch, 0, victim, TO_CHAR);
+		act("$N wouldn't last long against you.", ch, nullptr, victim, TO_CHAR);
 	else if (diff <= -2)
-		act("$N looks like an easy kill.", ch, 0, victim, TO_CHAR);
+		act("$N looks like an easy kill.", ch, nullptr, victim, TO_CHAR);
 	else if (diff <= 1)
-		act("$N is about a perfect match for you!", ch, 0, victim, TO_CHAR);
+		act("$N is about a perfect match for you!", ch, nullptr, victim, TO_CHAR);
 	else if (diff <= 4)
-		act("$N looks a little tough.", ch, 0, victim, TO_CHAR);
+		act("$N looks a little tough.", ch, nullptr, victim, TO_CHAR);
 	else if (diff <= 9)
-		act("You wouldn't last too long against $N by yourself.", ch, 0, victim, TO_CHAR);
+		act("You wouldn't last too long against $N by yourself.", ch, nullptr, victim, TO_CHAR);
 	else
-		act("You must have a fascination with death.", ch, 0, victim, TO_CHAR);
+		act("You must have a fascination with death.", ch, nullptr, victim, TO_CHAR);
 
 	diff = victim->size - ch->size;
 	if (diff > 1)
-		act("$N easily towers over you.", ch, 0, victim, TO_CHAR);
+		act("$N easily towers over you.", ch, nullptr, victim, TO_CHAR);
 	else if (diff == 1)
-		act("$N is considerably larger than you.", ch, 0, victim, TO_CHAR);
+		act("$N is considerably larger than you.", ch, nullptr, victim, TO_CHAR);
 	else if (!diff)
-		act("$N is about the same size as you.", ch, 0, victim, TO_CHAR);
+		act("$N is about the same size as you.", ch, nullptr, victim, TO_CHAR);
 	else if (diff == -1)
-		act("$N is considerably smaller than you.", ch, 0, victim, TO_CHAR);
+		act("$N is considerably smaller than you.", ch, nullptr, victim, TO_CHAR);
 	else if (diff < -1)
-		act("You tower over $N.  Be careful not to step on $M.", ch, 0, victim, TO_CHAR);
+		act("You tower over $N.  Be careful not to step on $M.", ch, nullptr, victim, TO_CHAR);
 
 	if (victim->alignment >= 1)
-		act("$N seems relatively benign.", ch, 0, victim, TO_CHAR);
+		act("$N seems relatively benign.", ch, nullptr, victim, TO_CHAR);
 }
 
 void set_title(CHAR_DATA *ch, char *title)
@@ -4432,14 +4432,14 @@ void do_practice(CHAR_DATA *ch, char *argument)
 	}
 	else if (skill_table[sn].ctype == CMD_COMMUNE || (skill_table[sn].ctype == CMD_BOTH && ch->Class()->ctype == CLASS_COMMUNER))
 	{
-		act("$n recites the prayer of $t.", mob, skill_table[sn].name, 0, TO_ROOM);
+		act("$n recites the prayer of $t.", mob, skill_table[sn].name, nullptr, TO_ROOM);
 		send_to_char("You try to memorize the fundamentals of the holy recitation.\n\r", ch);
 		act("$N watches studiously as $n demonstrates the $t prayer.", mob, skill_table[sn].name, ch, TO_NOTVICT);
 	}
 	else // if(skill_table[sn].ctype == CMD_NONE)
 	{
-		act("$n demonstrates the usage of the $t skill.", mob, skill_table[sn].name, 0, TO_ROOM);
-		act("You study the fundamental aspects of $t.", ch, skill_table[sn].name, 0, TO_CHAR);
+		act("$n demonstrates the usage of the $t skill.", mob, skill_table[sn].name, nullptr, TO_ROOM);
+		act("You study the fundamental aspects of $t.", ch, skill_table[sn].name, nullptr, TO_CHAR);
 		act("$N studiously watches $n's demonstration of the $t skill.", mob, skill_table[sn].name, ch, TO_NOTVICT);
 	}
 	if (ch->pcdata->learned[sn] >= adept)
@@ -4712,7 +4712,7 @@ void do_withdraw(CHAR_DATA *ch, char *argument)
 			if (ch->pcdata->deposited_items[i] > 0)
 			{
 				if (!bFound)
-					act("$n hands you a slip of paper with a listing of your assets.", banker, 0, ch, TO_VICT);
+					act("$n hands you a slip of paper with a listing of your assets.", banker, nullptr, ch, TO_VICT);
 
 				pIndex = get_obj_index(ch->pcdata->deposited_items[i]);
 				if (!pIndex)
@@ -4752,9 +4752,9 @@ void do_withdraw(CHAR_DATA *ch, char *argument)
 			return;
 		}
 
-		act("$n nods briefly before scurrying away.", banker, 0, ch, TO_VICT);
-		act("$n soon returns, followed by two guards hauling a heavy chest.", banker, 0, ch, TO_VICT);
-		act("$n gets out a large set of keys and unlocks the chest.", banker, 0, ch, TO_VICT);
+		act("$n nods briefly before scurrying away.", banker, nullptr, ch, TO_VICT);
+		act("$n soon returns, followed by two guards hauling a heavy chest.", banker, nullptr, ch, TO_VICT);
+		act("$n gets out a large set of keys and unlocks the chest.", banker, nullptr, ch, TO_VICT);
 
 		auto pObj = create_object(pIndex, 0);
 		if (!pObj)
@@ -4762,12 +4762,12 @@ void do_withdraw(CHAR_DATA *ch, char *argument)
 
 		if (!can_see_obj(ch, pObj))
 		{
-			act("You are unable to find what you're looking for in the chest.", ch, 0, 0, TO_CHAR);
+			act("You are unable to find what you're looking for in the chest.", ch, nullptr, nullptr, TO_CHAR);
 			extract_obj(pObj);
 			return;
 		}
 
-		act("You retrieve $p from the storage chest.", ch, pObj, 0, TO_CHAR);
+		act("You retrieve $p from the storage chest.", ch, pObj, nullptr, TO_CHAR);
 		obj_to_char(pObj, ch);
 		ch->pcdata->deposited_items[amount - 1] = 0;
 
@@ -5032,7 +5032,7 @@ void do_lore(CHAR_DATA *ch, char *argument) /* Lore by Detlef */
 
 	lorebonus = std::max(lorebonus, 0);
 
-	act("You examine $p intently.", ch, obj, 0, TO_CHAR);
+	act("You examine $p intently.", ch, obj, nullptr, TO_CHAR);
 
 	if (number_percent() < get_skill(ch, gsn_lore) + lorebonus * 15)
 	{
@@ -5153,7 +5153,7 @@ void do_lore(CHAR_DATA *ch, char *argument) /* Lore by Detlef */
 	}
 	else
 	{
-		act("You examine $p closely but fail to gain any insight into it.", ch, obj, 0, TO_CHAR);
+		act("You examine $p closely but fail to gain any insight into it.", ch, obj, nullptr, TO_CHAR);
 		check_improve(ch, gsn_lore, false, 2);
 	}
 
@@ -5357,13 +5357,13 @@ void do_trustchar(CHAR_DATA *ch, char *argument)
 			return;
 		}
 
-		act("You no longer trust $N with questionable actions.", ch, 0, trusted, TO_CHAR);
+		act("You no longer trust $N with questionable actions.", ch, nullptr, trusted, TO_CHAR);
 		ch->pcdata->trusting = nullptr;
 		return;
 	}
 
 	ch->pcdata->trusting = victim->self;
-	act("You now trust $N with questionable actions.", ch, 0, victim, TO_CHAR);
+	act("You now trust $N with questionable actions.", ch, nullptr, victim, TO_CHAR);
 }
 
 void do_role(CHAR_DATA *ch, char *argument)

@@ -667,10 +667,10 @@ void check_style_improve(CHAR_DATA *ch, int style, int multiplier)
 							get_char_color(ch, "lightyellow"),
 							style_table[style].name,
 							END_COLOR(ch));
-						act(test, ch, 0, 0, TO_CHAR);
+						act(test, ch, nullptr, nullptr, TO_CHAR);
 
 						sprintf(test, "You feel ready to learn the %s skill.", style_percent[i].name);
-						act(test, ch, 0, 0, TO_CHAR);
+						act(test, ch, nullptr, nullptr, TO_CHAR);
 					}
 				}
 			}

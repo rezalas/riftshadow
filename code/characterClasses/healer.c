@@ -37,14 +37,14 @@ void spell_healing_sleep(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[may
 
 	if (ch != victim)
 	{
-		act("You put $N into a deep healing sleep.", ch, 0, victim, TO_CHAR);
-		act("You fall into a deep healing sleep.", ch, 0, victim, TO_VICT);
-		act("$N falls into a deep healing sleep.", ch, 0, victim, TO_NOTVICT);
+		act("You put $N into a deep healing sleep.", ch, nullptr, victim, TO_CHAR);
+		act("You fall into a deep healing sleep.", ch, nullptr, victim, TO_VICT);
+		act("$N falls into a deep healing sleep.", ch, nullptr, victim, TO_NOTVICT);
 	}
 	else
 	{
-		act("You put yourself into a deep healing sleep.", ch, 0, 0, TO_CHAR);
-		act("$n falls into a deep healing sleep.", ch, 0, 0, TO_ROOM);
+		act("You put yourself into a deep healing sleep.", ch, nullptr, nullptr, TO_CHAR);
+		act("$n falls into a deep healing sleep.", ch, nullptr, nullptr, TO_ROOM);
 	}
 
 	victim->position = POS_SLEEPING;
@@ -82,6 +82,6 @@ void healing_sleep_end(CHAR_DATA *ch, [[maybe_unused]] AFFECT_DATA *af)
 	ch->mana = ch->max_mana;
 	ch->move = ch->max_move;
 
-	act("You wake up feeling completely healed and cured of all ailments.", ch, 0, 0, TO_CHAR);
-	act("$n wakes and looks to be completely healed.", ch, 0, 0, TO_ROOM);
+	act("You wake up feeling completely healed and cured of all ailments.", ch, nullptr, nullptr, TO_CHAR);
+	act("$n wakes and looks to be completely healed.", ch, nullptr, nullptr, TO_ROOM);
 }

@@ -486,8 +486,8 @@ void spell_summon_nephilim(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /
 	CHAR_DATA *nephilim;
 	int vnum = 2948;
 
-	act("$n calls upon the forces of Hell for a servitor!", ch, 0, 0, TO_ALL);
-	act("You call upon the forces of Hell for a servitor.\n\rA gigantic Nephilim appears at your bidding.", ch, 0, 0, TO_CHAR);
+	act("$n calls upon the forces of Hell for a servitor!", ch, nullptr, nullptr, TO_ALL);
+	act("You call upon the forces of Hell for a servitor.\n\rA gigantic Nephilim appears at your bidding.", ch, nullptr, nullptr, TO_CHAR);
 
 	nephilim = create_mobile(get_mob_index(vnum));
 	nephilim->level = level + 3;
@@ -525,7 +525,7 @@ void do_damdice(CHAR_DATA *ch, char *argument)
 	damdice = (x + x * y) / 2;
 
 	sprintf(buf, "%d", damdice);
-	act(buf, ch, 0, 0, TO_CHAR);
+	act(buf, ch, nullptr, nullptr, TO_CHAR);
 }
 
 void do_devilfavor(CHAR_DATA *ch, char *argument)
@@ -596,8 +596,8 @@ void do_devilfavor(CHAR_DATA *ch, char *argument)
 
 	victim->pcdata->devildata[dev]++;
 
-	act("You grant $N another level of unholy favor.", ch, 0, victim, TO_CHAR);
-	act("You feel a piece of your soul torn away as new power surges through your veins!", ch, 0, victim, TO_VICT);
+	act("You grant $N another level of unholy favor.", ch, nullptr, victim, TO_CHAR);
+	act("You feel a piece of your soul torn away as new power surges through your veins!", ch, nullptr, victim, TO_VICT);
 }
 
 void do_chess(CHAR_DATA *ch, char *argument)
@@ -650,7 +650,7 @@ void do_chess(CHAR_DATA *ch, char *argument)
 	if (!str_cmp(arg1, "reset"))
 	{
 		send_to_char("You sweep the pieces off the board and restore them to their starting positions.\n\r", ch);
-		act("$n clears the pieces off the board and restores them to their original positions.", ch, 0, 0, TO_ROOM);
+		act("$n clears the pieces off the board and restores them to their original positions.", ch, nullptr, nullptr, TO_ROOM);
 
 		reset_chessboard();
 		return;
@@ -664,9 +664,9 @@ void do_chess(CHAR_DATA *ch, char *argument)
 			return;
 		}
 
-		act("You challenge $N to a game of chess!", ch, 0, victim, TO_CHAR);
-		act("$n challenges you to a game of chess!", ch, 0, victim, TO_VICT);
-		act("$n challenges $N to a game of chess!", ch, 0, victim, TO_NOTVICT);
+		act("You challenge $N to a game of chess!", ch, nullptr, victim, TO_CHAR);
+		act("$n challenges you to a game of chess!", ch, nullptr, victim, TO_VICT);
+		act("$n challenges $N to a game of chess!", ch, nullptr, victim, TO_NOTVICT);
 		return;
 	}
 
@@ -931,10 +931,10 @@ void do_chess(CHAR_DATA *ch, char *argument)
 			}
 
 			auto buffer = fmt::format("You place a {} {} on the board at {}.", arg2, arg3, arg4);
-			act(buffer.c_str(), ch, 0, 0, TO_CHAR);
+			act(buffer.c_str(), ch, nullptr, nullptr, TO_CHAR);
 
 			buffer = fmt::format("$n places a {} {} on the board at {}.", arg2, arg3, arg4);
-			act(buffer.c_str(), ch, 0, 0, TO_ROOM);
+			act(buffer.c_str(), ch, nullptr, nullptr, TO_ROOM);
 
 			chessboard[col_to][row_to] = piece;
 			return;
@@ -1143,7 +1143,7 @@ void move_piece(CHAR_DATA *ch, int col_from, int row_from, int col_to, int row_t
 		num_to_letter(col_to),
 		row_to + 1);
 
-	act(buf, ch, 0, 0, TO_ROOM);
+	act(buf, ch, nullptr, nullptr, TO_ROOM);
 
 	if (piece_to == PIECE_NONE)
 		return;
@@ -1152,7 +1152,7 @@ void move_piece(CHAR_DATA *ch, int col_from, int row_from, int col_to, int row_t
 	send_to_char(buf, ch);
 
 	sprintf(buf, "$n captures the %s %s.", (is_white(piece_to)) ? "white" : "black", piece_name(piece_to));
-	act(buf, ch, 0, 0, TO_ROOM);
+	act(buf, ch, nullptr, nullptr, TO_ROOM);
 }
 
 char *piece_name(int piece)

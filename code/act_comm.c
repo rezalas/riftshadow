@@ -422,11 +422,11 @@ void do_newbie(CHAR_DATA *ch, char *argument)
 	if (IS_SET(ch->comm, COMM_ANSI))
 	{
 		sprintf(buf2, "%s[NEWBIE] $n$t%s", get_char_color(ch, "newbie"), END_COLOR(ch));
-		act_new(buf2, ch, buf, 0, TO_CHAR, POS_DEAD);
+		act_new(buf2, ch, buf, nullptr, TO_CHAR, POS_DEAD);
 	}
 	else
 	{
-		act_new("[NEWBIE] $n$t", ch, buf, 0, TO_CHAR, POS_DEAD);
+		act_new("[NEWBIE] $n$t", ch, buf, nullptr, TO_CHAR, POS_DEAD);
 	}
 
 	for (OwningListWalk<CHAR_DATA> walk(char_list); !walk.Done(); walk.Step())
@@ -494,11 +494,11 @@ void do_builder(CHAR_DATA *ch, char *argument)
 	if (IS_SET(ch->comm, COMM_ANSI))
 	{
 		sprintf(buf2, "%s[BUILDER] $n$t%s", get_char_color(ch, "builder"), END_COLOR(ch));
-		act_new(buf2, ch, buf, 0, TO_CHAR, POS_DEAD);
+		act_new(buf2, ch, buf, nullptr, TO_CHAR, POS_DEAD);
 	}
 	else
 	{
-		act_new("[BUILDER] $n$t", ch, buf, 0, TO_CHAR, POS_DEAD);
+		act_new("[BUILDER] $n$t", ch, buf, nullptr, TO_CHAR, POS_DEAD);
 	}
 
 	for (OwningListWalk<CHAR_DATA> walk(char_list); !walk.Done(); walk.Step())
@@ -587,11 +587,11 @@ void do_immtalk(CHAR_DATA *ch, char *argument)
 	if (IS_SET(ch->comm, COMM_ANSI))
 	{
 		sprintf(buf2, "%s[IMM] $n$t%s", get_char_color(ch, "immtalk"), END_COLOR(ch));
-		act_new(buf2, ch, buffer.data(), 0, TO_CHAR, POS_DEAD);
+		act_new(buf2, ch, buffer.data(), nullptr, TO_CHAR, POS_DEAD);
 	}
 	else
 	{
-		act_new("[IMM] $n$t", ch, buffer.data(), 0, TO_CHAR, POS_DEAD);
+		act_new("[IMM] $n$t", ch, buffer.data(), nullptr, TO_CHAR, POS_DEAD);
 	}
 
 	for (OwningListWalk<CHAR_DATA> walk(char_list); !walk.Done(); walk.Step())
@@ -753,7 +753,7 @@ void do_say(CHAR_DATA *ch, char *argument)
 		{
 			if (!(is_immortal(ch)) && is_affected(victim, gsn_deafen))
 			{
-				act("$n says something you can't quite hear.", ch, 0, victim, TO_VICT);
+				act("$n says something you can't quite hear.", ch, nullptr, victim, TO_VICT);
 			}
 			else
 			{
@@ -867,7 +867,7 @@ void say_to(CHAR_DATA *ch, CHAR_DATA *victim, char *argument, char *extra)
 	{
 		if (!(is_immortal(ch)) && is_affected(victim, gsn_deafen))
 		{
-			act("$n says something you can't quite hear.", ch, 0, victim, TO_VICT);
+			act("$n says something you can't quite hear.", ch, nullptr, victim, TO_VICT);
 		}
 		else
 		{
@@ -939,12 +939,12 @@ void do_whisper(CHAR_DATA *ch, char *argument) /* whisper -- dioxide */
 		{
 			if (!is_immortal(ch) && is_affected(victim, gsn_deafen))
 			{
-				act("$n says something you can't quite hear.", ch, 0, victim, TO_VICT);
+				act("$n says something you can't quite hear.", ch, nullptr, victim, TO_VICT);
 			}
 			else
 			{
 				sprintf(buf, "$n whispers '%s%s%s'", get_char_color(victim, "red"), argument, END_COLOR(victim));
-				act(buf, ch, 0, victim, TO_VICT);
+				act(buf, ch, nullptr, victim, TO_VICT);
 
 				if (IS_SET(victim->progtypes, MPROG_SPEECH) && victim != ch)
 					victim->pIndexData->mprogs->speech_prog(victim, ch, argument);
@@ -1086,12 +1086,12 @@ void do_sing(CHAR_DATA *ch, char *argument)
 		{
 			if (!is_immortal(ch) && is_affected(victim, gsn_deafen))
 			{
-				act("$n sings something you can't quite hear.", ch, 0, victim, TO_VICT);
+				act("$n sings something you can't quite hear.", ch, nullptr, victim, TO_VICT);
 			}
 			else
 			{
 				buffer3 = fmt::format("$n sings '{}{}{}'", get_char_color(victim, "song"), buf, END_COLOR(victim));
-				act(buffer3.c_str(), ch, 0, victim, TO_VICT);
+				act(buffer3.c_str(), ch, nullptr, victim, TO_VICT);
 
 				if (is_affected(victim, gsn_word_of_command) && strstr(argument, victim->pcdata->command[0]))
 					command_execute(victim);
@@ -1100,7 +1100,7 @@ void do_sing(CHAR_DATA *ch, char *argument)
 	}
 
 	buffer3 = fmt::format("You sing '{}{}{}'", get_char_color(ch, "song"), buf2, END_COLOR(ch));
-	act(buffer3.c_str(), ch, 0, 0, TO_CHAR);
+	act(buffer3.c_str(), ch, nullptr, nullptr, TO_CHAR);
 }
 
 void do_pray(CHAR_DATA *ch, char *argument)
@@ -1257,13 +1257,13 @@ void do_tell(CHAR_DATA *ch, char *argument)
 
 	if (!(is_immortal(ch) && ch->level > LEVEL_IMMORTAL) && (!is_awake(victim) || is_affected(victim, gsn_deafen)))
 	{
-		act("$E can't hear you.", ch, 0, victim, TO_CHAR);
+		act("$E can't hear you.", ch, nullptr, victim, TO_CHAR);
 		return;
 	}
 
 	if ((IS_SET(victim->comm, COMM_QUIET) || IS_SET(victim->comm, COMM_DEAF)) && !is_immortal(ch)) /* Let Imms send tells to deaf players */
 	{
-		act("$E is not receiving tells.", ch, 0, victim, TO_CHAR);
+		act("$E is not receiving tells.", ch, nullptr, victim, TO_CHAR);
 		return;
 	}
 
@@ -1345,13 +1345,13 @@ void do_reply(CHAR_DATA *ch, char *argument)
 
 	if (!is_immortal(ch) && (!is_awake(victim) || is_affected(victim, gsn_deafen)))
 	{
-		act("$E can't hear you.", ch, 0, victim, TO_CHAR);
+		act("$E can't hear you.", ch, nullptr, victim, TO_CHAR);
 		return;
 	}
 
 	if ((IS_SET(victim->comm, COMM_QUIET) || IS_SET(victim->comm, COMM_DEAF)) && !is_immortal(ch) && !is_immortal(victim))
 	{
-		act_new("$E is not receiving tells.", ch, 0, victim, TO_CHAR, POS_DEAD);
+		act_new("$E is not receiving tells.", ch, nullptr, victim, TO_CHAR, POS_DEAD);
 		return;
 	}
 
@@ -1831,7 +1831,7 @@ void do_quit_new(CHAR_DATA *ch, [[maybe_unused]] char *argument, bool autoq)
 			{
 				if (obj->carried_by == ch->self)
 				{
-					act("You cannot quit with cabal items in your inventory!", ch, 0, 0, TO_CHAR);
+					act("You cannot quit with cabal items in your inventory!", ch, nullptr, nullptr, TO_CHAR);
 					return;
 				}
 			}
@@ -1926,7 +1926,7 @@ void do_quit_new(CHAR_DATA *ch, [[maybe_unused]] char *argument, bool autoq)
 
 		if (wch->pIndexData->vnum == MOB_VNUM_DECOY && is_name(ch->name, wch->name))
 		{
-			act("$n crumbles to dust.", wch, 0, 0, TO_ROOM);
+			act("$n crumbles to dust.", wch, nullptr, nullptr, TO_ROOM);
 			extract_char(wch, true);
 		}
 	}
@@ -2726,7 +2726,7 @@ void do_release(CHAR_DATA *ch, char *argument)
 
 	if (is_npc(victim))
 	{
-		act("$n slowly fades away.", victim, 0, 0, TO_ROOM);
+		act("$n slowly fades away.", victim, nullptr, nullptr, TO_ROOM);
 		extract_char(victim, true);
 	}
 	else

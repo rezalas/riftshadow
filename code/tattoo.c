@@ -198,8 +198,8 @@ void do_invoke_jackass(CHAR_DATA *ch)
 
 	obj = get_eq_char(ch, WEAR_BRAND);
 
-	act("$n's $p doesn't glow much due to $s stupidity.", ch, obj, 0, TO_ROOM);
-	act("Your $p doesn't glow much, probably because you're a jackass.", ch, obj, 0, TO_CHAR);
+	act("$n's $p doesn't glow much due to $s stupidity.", ch, obj, nullptr, TO_ROOM);
+	act("Your $p doesn't glow much, probably because you're a jackass.", ch, obj, nullptr, TO_CHAR);
 
 	send_to_char("You smite yourself! What a jackass!\n\r", ch);
 
@@ -221,8 +221,8 @@ void do_invoke_detlef(CHAR_DATA *ch)
 
 	obj = get_eq_char(ch, WEAR_BRAND);
 
-	act("$n's $p glows green.",ch,obj,0,TO_ROOM);
-	act("Your $p glows green.",ch,obj,0,TO_CHAR);
+	act("$n's $p glows green.",ch,obj,nullptr,TO_ROOM);
+	act("Your $p glows green.",ch,obj,nullptr,TO_CHAR);
 
 	ch->hit += (ch->level*2) * 10;
 	ch->hit = std::min(ch->hit,ch->max_hit);
@@ -265,12 +265,12 @@ void do_invoke_gabe(CHAR_DATA *ch)
 
 	if (ch->position == POS_FIGHTING)
 	{
-		act("You can not invoke your lords power during a fight!", ch, 0, 0, TO_CHAR);
+		act("You can not invoke your lords power during a fight!", ch, nullptr, nullptr, TO_CHAR);
 		return;
 	}
 
 	obj = get_eq_char(ch, WEAR_BRAND);
 
-	act("$n's $p glows a bright gold.", ch, obj, 0, TO_ROOM);
-	act("Your $p glows a bright gold.", ch, obj, 0, TO_CHAR);
+	act("$n's $p glows a bright gold.", ch, obj, nullptr, TO_ROOM);
+	act("Your $p glows a bright gold.", ch, obj, nullptr, TO_CHAR);
 }

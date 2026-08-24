@@ -611,7 +611,7 @@ void pulse_prog_arangird_patrol(CHAR_DATA *mob)
 	if (mob->in_room->exit[dir_next]->u1.to_room->people)
 	{
 		act("You hear the heavy footsteps of an approaching patrol echo through the caves.",
-			mob->in_room->exit[dir_next]->u1.to_room->people, 0, 0, TO_ALL);
+			mob->in_room->exit[dir_next]->u1.to_room->people, nullptr, nullptr, TO_ALL);
 	}
 }
 
@@ -674,7 +674,7 @@ void speech_prog_ruins_mouth([[maybe_unused]] CHAR_DATA *mob, CHAR_DATA *ch, cha
 		return;
 
 	send_to_char("A magic mouth impossibly beckons for you to follow and strange magicks force you through the shimmering portal.\n\r", ch);
-	act("The magic mouth impossibly beckons for $n to follow and $e vanishes into the portal.", ch, 0, 0, TO_ROOM);
+	act("The magic mouth impossibly beckons for $n to follow and $e vanishes into the portal.", ch, nullptr, nullptr, TO_ROOM);
 
 	char_from_room(ch);
 	char_to_room(ch, to_room);
@@ -912,7 +912,7 @@ void pulse_prog_demon(CHAR_DATA *mob)
 			do_tell(mob, buf);
 		}
 
-		act("$n returns to the Hells.", elemental, 0, 0, TO_ALL);
+		act("$n returns to the Hells.", elemental, nullptr, nullptr, TO_ALL);
 		extract_char(mob, true);
 		return;
 	}
@@ -928,17 +928,17 @@ void pulse_prog_demon(CHAR_DATA *mob)
 
 	if (victim->in_room->vnum != elemental->in_room->vnum)
 	{
-		act("$n steps through a portal, seeking $s prey.", elemental, 0, 0, TO_ALL);
+		act("$n steps through a portal, seeking $s prey.", elemental, nullptr, nullptr, TO_ALL);
 
 		char_from_room(elemental);
 		char_to_room(elemental, victim->in_room);
 
-		act("$n arrives through a portal, seeking $N's blood!", elemental, 0, victim, TO_NOTVICT);
-		act("$n arrives through a portal, seeking your blood!", elemental, 0, victim, TO_VICT);
+		act("$n arrives through a portal, seeking $N's blood!", elemental, nullptr, victim, TO_NOTVICT);
+		act("$n arrives through a portal, seeking your blood!", elemental, nullptr, victim, TO_VICT);
 	}
 
-	act("$n gestures at $N, uttering curses.", elemental, 0, victim, TO_NOTVICT);
-	act("$n gestures at you, uttering curses.", elemental, 0, victim, TO_VICT);
+	act("$n gestures at $N, uttering curses.", elemental, nullptr, victim, TO_NOTVICT);
+	act("$n gestures at you, uttering curses.", elemental, nullptr, victim, TO_VICT);
 
 	multi_hit(elemental, victim, TYPE_UNDEFINED);
 }
@@ -949,8 +949,8 @@ bool aggress_prog_arangird_demon(CHAR_DATA *mob, CHAR_DATA *attacker)
 
 	if ((regthor = get_char_room(mob, "regthor")) != nullptr)
 	{
-		act("An invisible barrier flares around $n, protecting $m from harm.", mob, 0, attacker, TO_VICT);
-		act("An invisible barrier flares around $n as $N approaches.", mob, 0, attacker, TO_NOTVICT);
+		act("An invisible barrier flares around $n, protecting $m from harm.", mob, nullptr, attacker, TO_VICT);
+		act("An invisible barrier flares around $n as $N approaches.", mob, nullptr, attacker, TO_NOTVICT);
 
 		if (Deref(attacker->fighting) == mob)
 			stop_fighting(attacker, mob);
@@ -968,14 +968,14 @@ bool aggress_prog_arangird_regthor(CHAR_DATA *mob, CHAR_DATA *attacker)
 	if ((demon = get_char_room(mob, "ertruza")) == nullptr)
 		return false;
 
-	act("A look of horror crosses $n's face as $s concentration falters.", mob, 0, demon, TO_ALL);
-	act("The barrier surrounding $N flickers and fades, and $n shrieks!", mob, 0, demon, TO_ALL);
-	act("Roaring with anger, $n grabs his former captor and devours $M whole!", demon, 0, mob, TO_ALL);
+	act("A look of horror crosses $n's face as $s concentration falters.", mob, nullptr, demon, TO_ALL);
+	act("The barrier surrounding $N flickers and fades, and $n shrieks!", mob, nullptr, demon, TO_ALL);
+	act("Roaring with anger, $n grabs his former captor and devours $M whole!", demon, nullptr, mob, TO_ALL);
 
 	extract_char(mob, true);
 
-	act("$n then turns you and strikes!", demon, 0, attacker, TO_CHAR);
-	act("$n then turns to $N and strikes!", demon, 0, attacker, TO_ROOM);
+	act("$n then turns you and strikes!", demon, nullptr, attacker, TO_CHAR);
+	act("$n then turns to $N and strikes!", demon, nullptr, attacker, TO_ROOM);
 	do_murder(demon, attacker->name);
 
 	return true;
@@ -990,12 +990,12 @@ void fight_prog_ilopheth_druid(CHAR_DATA *mob, CHAR_DATA *victim)
 	if (rand > 10)
 		return;
 
-	act("With a wave of $s hand, the druid summons a gale that batters the area!", mob, 0, 0, TO_ROOM);
+	act("With a wave of $s hand, the druid summons a gale that batters the area!", mob, nullptr, nullptr, TO_ROOM);
 
 	if (rand == 1)
 	{
-		act("The powerful winds send you tumbling headlong through the bushes!", victim, 0, 0, TO_CHAR);
-		act("The powerful winds send $n tumbling headlong through the bushes!", victim, 0, 0, TO_ROOM);
+		act("The powerful winds send you tumbling headlong through the bushes!", victim, nullptr, nullptr, TO_CHAR);
+		act("The powerful winds send $n tumbling headlong through the bushes!", victim, nullptr, nullptr, TO_ROOM);
 
 		LAG_CHAR(victim, 2 * PULSE_VIOLENCE);
 
@@ -1008,8 +1008,8 @@ void fight_prog_ilopheth_druid(CHAR_DATA *mob, CHAR_DATA *victim)
 	}
 	else
 	{
-		act("The powerful winds send you sprawling in a heap!", victim, 0, 0, TO_CHAR);
-		act("The powerful winds send $n sprawling in a heap!", victim, 0, 0, TO_ROOM);
+		act("The powerful winds send you sprawling in a heap!", victim, nullptr, nullptr, TO_CHAR);
+		act("The powerful winds send $n sprawling in a heap!", victim, nullptr, nullptr, TO_ROOM);
 
 		victim->position = POS_RESTING;
 
@@ -1055,7 +1055,7 @@ void pulse_prog_ilopheth_piranha(CHAR_DATA *mob)
 	char_from_room(mob);
 	char_to_room(mob, surface);
 
-	act("$n leaps from the water, razor teeth flashing!", mob, 0, 0, TO_ROOM);
+	act("$n leaps from the water, razor teeth flashing!", mob, nullptr, nullptr, TO_ROOM);
 
 	damage_new(mob, victim, (20 + dice(5, 6)), TYPE_UNDEFINED, DAM_PIERCE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "chomp");
 
@@ -1090,7 +1090,7 @@ void pulse_prog_ilopheth_piranha(CHAR_DATA *mob)
 			walk_to_room(adjmob, room);
 
 			if (adjmob->in_room == room)
-				act("The water here ripples, and there appears to be increased movement below the surface.", victim, 0, 0, TO_ALL);
+				act("The water here ripples, and there appears to be increased movement below the surface.", victim, nullptr, nullptr, TO_ALL);
 		}
 	}
 }
@@ -1108,7 +1108,7 @@ void pulse_prog_ilopheth_weatherbeaten(CHAR_DATA *mob)
 
 	if (sun == SolarPosition::Sunset && mob->in_room->vnum == 9121)
 	{
-		act("The old man glances up at the darkening sky, and trudges off into the forest to the south.", mob, 0, 0, TO_ROOM);
+		act("The old man glances up at the darkening sky, and trudges off into the forest to the south.", mob, nullptr, nullptr, TO_ROOM);
 		char_from_room(mob);
 		char_to_room(mob, limbo);
 	}
@@ -1116,7 +1116,7 @@ void pulse_prog_ilopheth_weatherbeaten(CHAR_DATA *mob)
 	{
 		char_from_room(mob);
 		char_to_room(mob, forest);
-		act("An aged man trudges in from the south, and sits down heavily on a large rock.", mob, 0, 0, TO_ROOM);
+		act("An aged man trudges in from the south, and sits down heavily on a large rock.", mob, nullptr, nullptr, TO_ROOM);
 	}
 }
 
@@ -1134,13 +1134,13 @@ void pulse_prog_alstea_ehrlouge(CHAR_DATA *mob)
 
 	if (rnd < 4)
 	{
-		act("Ehrlouge scribbles something down violently, his teeth gritting and chattering.", mob, 0, 0, TO_ROOM);
+		act("Ehrlouge scribbles something down violently, his teeth gritting and chattering.", mob, nullptr, nullptr, TO_ROOM);
 		return;
 	}
 
 	if (rnd > 97)
 	{
-		act("The skeletal figure of Ehrlouge begins to shudder and tremble as he dryly and raspily whimpers.", mob, 0, 0, TO_ROOM);
+		act("The skeletal figure of Ehrlouge begins to shudder and tremble as he dryly and raspily whimpers.", mob, nullptr, nullptr, TO_ROOM);
 		return;
 	}
 }
@@ -1228,7 +1228,7 @@ bool death_prog_outer_guardian(CHAR_DATA *mob, CHAR_DATA *killer)
 					obj_from_char(obj);
 					obj_to_char(obj, othercabalguardian);
 
-					act(buf, mob, 0, 0, TO_ALL);
+					act(buf, mob, nullptr, nullptr, TO_ALL);
 					cabal_shudder(obj->pIndexData->cabal, false);
 				}
 			}
@@ -1272,7 +1272,7 @@ bool death_prog_inner_guardian(CHAR_DATA *mob, CHAR_DATA *killer)
 
 				found = true;
 
-				act(buf, mob, 0, 0, TO_ALL);
+				act(buf, mob, nullptr, nullptr, TO_ALL);
 				cabal_shudder(obj->pIndexData->cabal, false);
 			}
 		}
@@ -1315,8 +1315,8 @@ void pulse_prog_tahlu_mist_ward(CHAR_DATA *mob)
 
 			char_to_room(mist, ch->in_room);
 
-			act("A strange cloud of mist rises from the floor, stretching tendrils towards you!", ch, 0, 0, TO_CHAR);
-			act("A strange cloud of mist rises from the floor, stretching tendrils towards $n.", ch, 0, 0, TO_ROOM);
+			act("A strange cloud of mist rises from the floor, stretching tendrils towards you!", ch, nullptr, nullptr, TO_CHAR);
+			act("A strange cloud of mist rises from the floor, stretching tendrils towards $n.", ch, nullptr, nullptr, TO_ROOM);
 
 			multi_hit(mist, ch, TYPE_UNDEFINED);
 			return;
@@ -1344,7 +1344,7 @@ bool move_prog_horde_shrine_ward(CHAR_DATA *ch, CHAR_DATA * /* mob */, ROOM_INDE
 
 bool aggress_prog_anchor(CHAR_DATA *mob, CHAR_DATA *attacker)
 {
-	act("$n dissipates harmlessly as you turn your attention towards it.", mob, 0, 0, TO_ROOM);
+	act("$n dissipates harmlessly as you turn your attention towards it.", mob, nullptr, nullptr, TO_ROOM);
 
 	stop_fighting(mob, true);
 
@@ -1369,7 +1369,7 @@ bool death_prog_glass(CHAR_DATA *mob, [[maybe_unused]] CHAR_DATA *killer)
 		if (is_safe(ch, vch) || ch == vch)
 			continue;
 
-		act("Some of the exploding glass from $n strikes you!", mob, 0, vch, TO_VICT);
+		act("Some of the exploding glass from $n strikes you!", mob, nullptr, vch, TO_VICT);
 		damage_new(ch, vch, dice(mob->level, 6), TYPE_UNDEFINED, DAM_PIERCE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the shattered glass*");
 
 		if ((vch != nullptr) && (number_percent() > 60))
@@ -1417,7 +1417,7 @@ void pulse_prog_shopkeeper(CHAR_DATA *mob)
 		char_from_room(mob);
 		char_to_room(mob, exit->u1.to_room);
 
-		act("$n unlocks the door to the $T and opens for business.", mob, 0, direction_table[reverse_d(pShop->direction)].name, TO_ROOM);
+		act("$n unlocks the door to the $T and opens for business.", mob, nullptr, direction_table[reverse_d(pShop->direction)].name, TO_ROOM);
 
 		if ((exit = exit->u1.to_room->exit[reverse_d(pShop->direction)]))
 		{
@@ -1442,7 +1442,7 @@ void pulse_prog_shopkeeper(CHAR_DATA *mob)
 		char_from_room(mob);
 		char_to_room(mob, exit->u1.to_room);
 
-		act("$n locks the door to the $T as $e closes $s business.", mob, 0, direction_table[reverse_d(pShop->direction)].name, TO_ROOM);
+		act("$n locks the door to the $T as $e closes $s business.", mob, nullptr, direction_table[reverse_d(pShop->direction)].name, TO_ROOM);
 
 		char_from_room(mob);
 		char_to_room(mob, room);
@@ -1473,13 +1473,13 @@ void pulse_prog_shopkeeper(CHAR_DATA *mob)
 		if (is_npc(vch) && IS_SET(vch->act, ACT_SENTINEL))
 			continue;
 
-		act("$n hustles you out the door.", mob, 0, vch, TO_VICT);
-		act("$n hustles $N out the door.", mob, 0, vch, TO_NOTVICT);
+		act("$n hustles you out the door.", mob, nullptr, vch, TO_VICT);
+		act("$n hustles $N out the door.", mob, nullptr, vch, TO_NOTVICT);
 
 		char_from_room(vch);
 		char_to_room(vch, exit->u1.to_room);
 
-		act("$t tosses $n out of $s shop.", vch, mob->short_descr, 0, TO_ROOM);
+		act("$t tosses $n out of $s shop.", vch, mob->short_descr, nullptr, TO_ROOM);
 
 		if (Deref(mob->fighting))
 			stop_fighting(mob, Deref(mob->fighting));
@@ -1497,8 +1497,8 @@ bool move_prog_theatre_guard(CHAR_DATA *ch, CHAR_DATA *mob, [[maybe_unused]] ROO
 
 	if (ch->pause)
 	{
-		act("$n moves to block $N.", mob, 0, ch, TO_ROOM);
-		act("$n moves to block you.", mob, 0, ch, TO_VICT);
+		act("$n moves to block $N.", mob, nullptr, ch, TO_ROOM);
+		act("$n moves to block you.", mob, nullptr, ch, TO_VICT);
 		do_say(mob, "You'd better clean yourself up a little before you go in.");
 		return false;
 	}
@@ -1520,17 +1520,17 @@ void greet_prog_necro_skull(CHAR_DATA *mob, CHAR_DATA *ch)
 	if (is_npc(ch))
 		return;
 
-	act("$n rises into the air and opens its mouth in a silent shriek!", mob, 0, ch, TO_ROOM);
+	act("$n rises into the air and opens its mouth in a silent shriek!", mob, nullptr, ch, TO_ROOM);
 	sprintf(buf, "A skull-sentinel whispers to you '%sMaster, %s has arrived at my location.%s'",
 		get_char_color(ch, "lightred"),
 		palloc_string(ch->name),
 		END_COLOR(ch));
-	act(buf, master, 0, 0, TO_CHAR);
+	act(buf, master, nullptr, nullptr, TO_CHAR);
 }
 
 bool death_prog_necro_skull(CHAR_DATA *mob, [[maybe_unused]] CHAR_DATA *killer)
 {
-	act("$n crumbles into dust.", mob, 0, 0, TO_ROOM);
+	act("$n crumbles into dust.", mob, nullptr, nullptr, TO_ROOM);
 	extract_char(mob, true);
 	return true;
 }
@@ -1539,7 +1539,7 @@ void pulse_prog_necro_skull(CHAR_DATA *mob)
 {
 	if (Deref(mob->leader) == nullptr)
 	{
-		act("$n crumbles into a pile of dust.", mob, 0, 0, TO_ROOM);
+		act("$n crumbles into a pile of dust.", mob, nullptr, nullptr, TO_ROOM);
 		extract_char(mob, true);
 	}
 }
@@ -1559,7 +1559,7 @@ void attack_prog_lesser_demon(CHAR_DATA *mob, CHAR_DATA *attacker)
 		sprintf(buf, "%s I'll be back for ye another time, weakling.", Deref(af->owner)->name);
 		do_tell(mob, buf);
 
-		act("$n vanishes in a crimson flash!", mob, 0, 0, TO_ROOM);
+		act("$n vanishes in a crimson flash!", mob, nullptr, nullptr, TO_ROOM);
 
 		stop_fighting(mob, true);
 
@@ -1600,7 +1600,7 @@ void attack_prog_lesser_demon(CHAR_DATA *mob, CHAR_DATA *attacker)
 		do_emote(mob, "shakes his head angrily.");
 		do_say(mob, "You could have had powers beyond your dreams, fool.  Beyond your dreams....");
 
-		act("$n vanishes in a crimson flash!", mob, 0, 0, TO_ROOM);
+		act("$n vanishes in a crimson flash!", mob, nullptr, nullptr, TO_ROOM);
 		stop_fighting(mob, true);
 
 		char_from_room(mob);
@@ -1639,7 +1639,7 @@ void attack_prog_lesser_demon(CHAR_DATA *mob, CHAR_DATA *attacker)
 		sprintf(buf, "%s I'll be back for ye another time, weakling.", Deref(af->owner)->name);
 		do_tell(mob, buf);
 
-		act("$n vanishes in a crimson flash!", mob, 0, 0, TO_ROOM);
+		act("$n vanishes in a crimson flash!", mob, nullptr, nullptr, TO_ROOM);
 
 		stop_fighting(mob, true);
 
@@ -1692,7 +1692,7 @@ void beat_prog_barbas(CHAR_DATA *mob)
 		{
 			char_from_room(mob);
 			char_to_room(mob, ch->in_room);
-			act("$n has arrived through a gate.", mob, 0, 0, TO_ROOM);
+			act("$n has arrived through a gate.", mob, nullptr, nullptr, TO_ROOM);
 		}
 
 		return;
@@ -1710,7 +1710,7 @@ bool death_prog_barbas(CHAR_DATA *mob, CHAR_DATA *killer)
 	if (!af)
 		return false;
 
-	act("Emitting a ghastly grunt, Barbas falls to the ground in a heap and disappears.", mob, 0, 0, TO_ROOM);
+	act("Emitting a ghastly grunt, Barbas falls to the ground in a heap and disappears.", mob, nullptr, nullptr, TO_ROOM);
 
 	if (killer != Deref(af->owner))
 		return false;
@@ -1797,14 +1797,14 @@ void give_prog_malaphar(CHAR_DATA *mob, CHAR_DATA *ch, OBJ_DATA *obj)
 		do_say(mob, "Surely, friend, you do not believe me to be a pauper?");
 		do_say(mob, "Entirely unacceptable, I'm afraid.");
 
-		act("$n wraps his cloak around him and vanishes into the shadows.", ch, 0, 0, TO_ROOM);
+		act("$n wraps his cloak around him and vanishes into the shadows.", ch, nullptr, nullptr, TO_ROOM);
 
 		extract_char(mob, true);
 		ch->pcdata->lesserdata[LESSER_MALAPHAR] = FAVOR_FAILED;
 		return;
 	}
 
-	act("A thin smile crosses Malaphar's face as he tips his hat to you and vanishes.", mob, 0, 0, TO_ROOM);
+	act("A thin smile crosses Malaphar's face as he tips his hat to you and vanishes.", mob, nullptr, nullptr, TO_ROOM);
 
 	extract_char(mob, true);
 
@@ -1826,12 +1826,12 @@ void bribe_prog_malaphar(CHAR_DATA *mob, CHAR_DATA *ch, int amount)
 		do_say(mob, "Surely, friend, you do not believe me to be a pauper?");
 		do_say(mob, "Entirely unacceptable, I'm afraid.");
 
-		act("$n wraps his cloak around him and vanishes into the shadows.", ch, 0, 0, TO_ROOM);
+		act("$n wraps his cloak around him and vanishes into the shadows.", ch, nullptr, nullptr, TO_ROOM);
 		ch->pcdata->lesserdata[LESSER_MALAPHAR] = FAVOR_FAILED;
 		return;
 	}
 
-	act("A thin smile crosses Malaphar's face as he tips his hat to you and vanishes.", ch, 0, 0, TO_ROOM);
+	act("A thin smile crosses Malaphar's face as he tips his hat to you and vanishes.", ch, nullptr, nullptr, TO_ROOM);
 	send_to_char("A wave of greed flashes over you as your fingers seem somehow more nimble.\n\r", ch);
 
 	ch->pcdata->lesserdata[LESSER_MALAPHAR] = FAVOR_GRANTED;
@@ -1848,8 +1848,8 @@ void greet_prog_furcas(CHAR_DATA *mob, CHAR_DATA *ch)
 	if (ch != Deref(af->owner))
 		return;
 
-	act("Eyes wide with amazement and fear, $n leaps backward away from you!", mob, 0, ch, TO_VICT);
-	act("Eyes wide with amazement and fear, $n leaps backward away from $N!", mob, 0, ch, TO_NOTVICT);
+	act("Eyes wide with amazement and fear, $n leaps backward away from you!", mob, nullptr, ch, TO_VICT);
+	act("Eyes wide with amazement and fear, $n leaps backward away from $N!", mob, nullptr, ch, TO_NOTVICT);
 
 	do_say(mob, "Do not harm us, we hope it will not!  Here!  Here, take it!");
 
@@ -1857,7 +1857,7 @@ void greet_prog_furcas(CHAR_DATA *mob, CHAR_DATA *ch)
 	ch->pcdata->learned[skill_lookup("darksight")] = 1;
 
 	send_to_char("Your eyes burn for a moment, and your vision seems somehow sharper.\n\r", ch);
-	act("$n shrinks back into nearby shadows and is gone.", mob, 0, 0, TO_ROOM);
+	act("$n shrinks back into nearby shadows and is gone.", mob, nullptr, nullptr, TO_ROOM);
 	extract_char(mob, true);
 }
 
@@ -1888,10 +1888,10 @@ void speech_prog_ipos(CHAR_DATA *mob, CHAR_DATA *ch, char *speech)
 	{
 		do_emote(mob, "nearly loses his balance, doubled over with laughter.");
 
-		act("Ipos recites: $t", mob, mob->speechbuf[0], 0, TO_ROOM);
-		act("              $t", mob, mob->speechbuf[1], 0, TO_ROOM);
-		act("              $t", mob, mob->speechbuf[2], 0, TO_ROOM);
-		act("              $t", mob, mob->speechbuf[3], 0, TO_ROOM);
+		act("Ipos recites: $t", mob, mob->speechbuf[0], nullptr, TO_ROOM);
+		act("              $t", mob, mob->speechbuf[1], nullptr, TO_ROOM);
+		act("              $t", mob, mob->speechbuf[2], nullptr, TO_ROOM);
+		act("              $t", mob, mob->speechbuf[3], nullptr, TO_ROOM);
 
 		RS.Queue.AddToQueue(2, "speech_prog_ipos", "do_say_queue", do_say_queue, mob, "Quite the worst bit of garbage I've ever had the joyless task of committing to memory.  Good day,  my rhythmless friend.");
 
@@ -1948,7 +1948,7 @@ void speech_prog_oze(CHAR_DATA *mob, CHAR_DATA *ch, char *speech)
 	{
 		WAIT_STATE(ch, 3 * PULSE_VIOLENCE);
 
-		act("Eyes flickering with nearly extinguished flame, Oze incants a phrase.", mob, 0, 0, TO_ROOM);
+		act("Eyes flickering with nearly extinguished flame, Oze incants a phrase.", mob, nullptr, nullptr, TO_ROOM);
 
 		sprintf(buf, "'siphon' %s", ch->name);
 		do_cast(mob, buf);
@@ -1997,7 +1997,7 @@ void speech_prog_gamygyn(CHAR_DATA *mob, CHAR_DATA *ch, char *speech)
 	{
 		WAIT_STATE(ch, PULSE_VIOLENCE);
 
-		act("Roaring suddenly with a thunder not unlike a thousand horses, $n rises.", mob, 0, 0, TO_ROOM);
+		act("Roaring suddenly with a thunder not unlike a thousand horses, $n rises.", mob, nullptr, nullptr, TO_ROOM);
 
 		RS.Queue.AddToQueue(2, "speech_prog_gamygyn", "act_queue", act_queue, "Plunging suddenly headlong, the demon dissolves into your midsection as you scream involuntarily.", mob, nullptr, ch, TO_VICT);
 		RS.Queue.AddToQueue(2, "speech_prog_gamygyn", "act_queue", act_queue, "Plunging suddenly headlong, the demon dissolves into $N's midsection as $E screams.", mob, nullptr, ch, TO_NOTVICT);
@@ -2024,7 +2024,7 @@ void speech_prog_gamygyn(CHAR_DATA *mob, CHAR_DATA *ch, char *speech)
 	{
 		WAIT_STATE(ch, PULSE_VIOLENCE);
 
-		act("With a flourishing fanfare which seems nonetheless foreboding, $n rises.", mob, 0, 0, TO_ROOM);
+		act("With a flourishing fanfare which seems nonetheless foreboding, $n rises.", mob, nullptr, nullptr, TO_ROOM);
 
 		buffer = fmt::format("{} You may yet live to regret your rash decision.  Doubtless the seeds of realization sprout within you now.", ch->name);
 		RS.Queue.AddToQueue(1, "speech_prog_gamygyn", "do_tell_queue", do_tell_queue, mob, buffer);
@@ -2084,7 +2084,7 @@ void speech_prog_orobas(CHAR_DATA *mob, CHAR_DATA *ch, char *speech)
 	{
 		WAIT_STATE(ch, PULSE_VIOLENCE);
 
-		act("Shrieks of outrage rise up from $n, arms and legs kicking out toward you.", mob, 0, 0, TO_ROOM);
+		act("Shrieks of outrage rise up from $n, arms and legs kicking out toward you.", mob, nullptr, nullptr, TO_ROOM);
 
 		RS.Queue.AddToQueue(1, "speech_prog_orobas", "do_say_queue", do_say_queue, mob, "I expected nothing else.");
 		RS.Queue.AddToQueue(2, "speech_prog_orobas", "act_queue",  act_queue, "With a fierce snarl and many assorted whispers, $n streaks into the darkness.", mob, nullptr, nullptr, TO_ROOM);
@@ -2206,13 +2206,13 @@ void pulse_prog_cornogun(CHAR_DATA *mob)
 	switch (number_range(0, 10))
 	{
 		case 0:
-			act("$n chitters annoyingly at everyone in the room.", mob, 0, 0, TO_ROOM);
+			act("$n chitters annoyingly at everyone in the room.", mob, nullptr, nullptr, TO_ROOM);
 			break;
 		case 1:
-			act("$n pauses momentarily to spit, leaving a disgusting substance all over the floor.", mob, 0, 0, TO_ROOM);
+			act("$n pauses momentarily to spit, leaving a disgusting substance all over the floor.", mob, nullptr, nullptr, TO_ROOM);
 			break;
 		case 2:
-			act("$n ceases flapping its wings incessantly to let out a mournful screech.", mob, 0, 0, TO_ROOM);
+			act("$n ceases flapping its wings incessantly to let out a mournful screech.", mob, nullptr, nullptr, TO_ROOM);
 			break;
 		default:
 			spell_faerie_fog(skill_lookup("faerie fog"), mob->level, mob, SpellTarget(), CastMode::Spell);
@@ -2222,7 +2222,7 @@ void pulse_prog_cornogun(CHAR_DATA *mob)
 
 void entry_prog_cornogun(CHAR_DATA *mob)
 {
-	act("$n flaps in on its tiny wings.", mob, 0, 0, TO_ROOM);
+	act("$n flaps in on its tiny wings.", mob, nullptr, nullptr, TO_ROOM);
 	spell_faerie_fog(skill_lookup("faerie fog"), mob->level, mob, SpellTarget(), CastMode::Spell);
 }
 
@@ -2399,18 +2399,18 @@ void fight_prog_gking(CHAR_DATA *mob, CHAR_DATA *victim)
 		gar1 = create_mobile(get_mob_index(2233));
 		gar2 = create_mobile(get_mob_index(2233));
 
-		act("$n gestures slightly animating the two mithril statues next to the throne!", mob, 0, 0, TO_ROOM);
+		act("$n gestures slightly animating the two mithril statues next to the throne!", mob, nullptr, nullptr, TO_ROOM);
 
 		char_to_room(gar1, mob->in_room);
 		char_to_room(gar2, mob->in_room);
 
-		act("$n screams and attacks you!", gar1, 0, victim, TO_VICT);
-		act("$n screams and attacks $N!", gar1, 0, victim, TO_NOTVICT);
+		act("$n screams and attacks you!", gar1, nullptr, victim, TO_VICT);
+		act("$n screams and attacks $N!", gar1, nullptr, victim, TO_NOTVICT);
 
 		do_murder(gar1, victim->name);
 
-		act("$n screams and attacks you!", gar2, 0, victim, TO_VICT);
-		act("$n screams and attacks $N!", gar2, 0, victim, TO_NOTVICT);
+		act("$n screams and attacks you!", gar2, nullptr, victim, TO_VICT);
+		act("$n screams and attacks $N!", gar2, nullptr, victim, TO_NOTVICT);
 
 		do_murder(gar2, victim->name);
 	}
@@ -2465,8 +2465,8 @@ void greet_prog_tower_shopkeeper(CHAR_DATA *mob, CHAR_DATA *ch)
 
 	affect_to_char(mob, &af);
 
-	act("$N glances over his shoulder at $n and grumbles.", ch, 0, mob, TO_ROOM);
-	act("$n glances over his shoulder at you and grumbles.", mob, 0, ch, TO_VICT);
+	act("$N glances over his shoulder at $n and grumbles.", ch, nullptr, mob, TO_ROOM);
+	act("$n glances over his shoulder at you and grumbles.", mob, nullptr, ch, TO_VICT);
 	RS.Queue.AddToQueue(4, "greet_prog_tower_shopkeeper", "do_say_queue", do_say_queue, mob, "Well,  are ye goin' to buy somethin' or are ye just going t'stand there and stare at me!?");
 	RS.Queue.AddToQueue(24, "greet_prog_tower_shopkeeper", "do_astrip_queue", do_astrip_queue, mob, "");
 }
@@ -2518,8 +2518,8 @@ void pulse_prog_wizard_summon(CHAR_DATA *mob)
 				char_from_room(vch);
 				char_to_room(vch, room2);
 
-				act("$n has summoned you!", mob, 0, vch, TO_VICT);
-				act("$N arrives suddenly.", mob, 0, vch, TO_NOTVICT);
+				act("$n has summoned you!", mob, nullptr, vch, TO_VICT);
+				act("$N arrives suddenly.", mob, nullptr, vch, TO_NOTVICT);
 
 				do_look(vch, "auto");
 
@@ -2800,7 +2800,7 @@ void pulse_prog_fisherman(CHAR_DATA *mob)
 		return;
 	}
 
-	act("$n calmly reels in his catch and deposits it into the basket at his side.", mob, 0, 0, TO_ROOM);
+	act("$n calmly reels in his catch and deposits it into the basket at his side.", mob, nullptr, nullptr, TO_ROOM);
 	obj_to_obj(fish, obj);
 
 	init_affect(&af);
@@ -2817,7 +2817,7 @@ void greet_prog_guild_recruiter(CHAR_DATA *mob, CHAR_DATA *ch)
 	if (ch->level != 1)
 		return;
 
-	act("$N smiles warmly at you.", ch, 0, mob, TO_CHAR);
+	act("$N smiles warmly at you.", ch, nullptr, mob, TO_CHAR);
 	mprog_say(1, "Take the time to read the sign here, friend Shalaran... and if you should decide you would like to join me in the Guild, take heed of its advice.", mob, ch);
 }
 
@@ -2959,14 +2959,14 @@ void fight_prog_law_subdue(CHAR_DATA *mob, CHAR_DATA *ch)
 		mob->tracktimer = 0;
 
 		if (number_range(1, 2) == 1)
-			act("The Hydra trooper dives at your legs, binding you, and you topple to the ground!", mob, 0, ch, TO_VICT);
+			act("The Hydra trooper dives at your legs, binding you, and you topple to the ground!", mob, nullptr, ch, TO_VICT);
 		else
-			act("You crumple as the Dragon trooper lands a hefty blow on the side of your head!", mob, 0, ch, TO_VICT);
+			act("You crumple as the Dragon trooper lands a hefty blow on the side of your head!", mob, nullptr, ch, TO_VICT);
 
-		act("The troopers leap on top of you, and you find yourself quickly immobilized!", mob, 0, ch, TO_VICT);
-		act("The troopers leap on top of $N, and $N finds $Mself quickly immobilized!", mob, 0, ch, TO_NOTVICT);
-		act("You hear the wet sounds of impact against your skull, and everything goes black.", mob, 0, ch, TO_VICT);
-		act("$N's inert form is dragged away toward the gates.", mob, 0, ch, TO_NOTVICT);
+		act("The troopers leap on top of you, and you find yourself quickly immobilized!", mob, nullptr, ch, TO_VICT);
+		act("The troopers leap on top of $N, and $N finds $Mself quickly immobilized!", mob, nullptr, ch, TO_NOTVICT);
+		act("You hear the wet sounds of impact against your skull, and everything goes black.", mob, nullptr, ch, TO_VICT);
+		act("$N's inert form is dragged away toward the gates.", mob, nullptr, ch, TO_NOTVICT);
 
 		ch->position = POS_SLEEPING;
 
@@ -3189,8 +3189,8 @@ void fight_prog_law_subdue(CHAR_DATA *mob, CHAR_DATA *ch)
 	}
 	else
 	{
-		act("The troopers maneuver around you, waiting for an opening.", mob, 0, ch, TO_VICT);
-		act("The troopers maneuver around $N, waiting for an opening.", mob, 0, ch, TO_NOTVICT);
+		act("The troopers maneuver around you, waiting for an opening.", mob, nullptr, ch, TO_VICT);
+		act("The troopers maneuver around $N, waiting for an opening.", mob, nullptr, ch, TO_NOTVICT);
 	}
 }
 
@@ -3200,7 +3200,7 @@ void pulse_prog_troopers(CHAR_DATA *mob)
 
 	if ((gryphon = get_char_room(mob, "gryphon trooper soldier")) == nullptr)
 	{
-		act("$n looks around hurriedly then retreats to call in reinforcements.", mob, 0, 0, TO_ROOM);
+		act("$n looks around hurriedly then retreats to call in reinforcements.", mob, nullptr, nullptr, TO_ROOM);
 		extract_char(mob, true);
 	}
 }
@@ -3257,14 +3257,14 @@ void pulse_prog_shade(CHAR_DATA *mob)
 
 	if (number_percent() > 80)
 	{
-		act("$n plunges an icy hand into the $N's heart!", mob, 0, victim, TO_NOTVICT);
-		act("$n plunges an icy hand into your heart!", mob, 0, victim, TO_VICT);
+		act("$n plunges an icy hand into the $N's heart!", mob, nullptr, victim, TO_NOTVICT);
+		act("$n plunges an icy hand into your heart!", mob, nullptr, victim, TO_VICT);
 		spell = "chill";
 	}
 	else
 	{
-		act("$n creates a conduit into $N's soul and siphons $S life away!", mob, 0, victim, TO_NOTVICT);
-		act("$n creates a conduit into your soul and siphons your life away!!", mob, 0, victim, TO_VICT);
+		act("$n creates a conduit into $N's soul and siphons $S life away!", mob, nullptr, victim, TO_NOTVICT);
+		act("$n creates a conduit into your soul and siphons your life away!!", mob, nullptr, victim, TO_VICT);
 		spell = "vampiric touch";
 	}
 
@@ -3285,8 +3285,8 @@ void pulse_prog_banshee(CHAR_DATA *mob)
 
 	if (number_percent() > 70)
 	{
-		act("$n lets out a terrible wail that forces you to cover your ears in pain!", mob, 0, victim, TO_VICT);
-		act("$n lets out a terrible wail as $e draws near to $N.", mob, 0, victim, TO_NOTVICT);
+		act("$n lets out a terrible wail that forces you to cover your ears in pain!", mob, nullptr, victim, TO_VICT);
+		act("$n lets out a terrible wail as $e draws near to $N.", mob, nullptr, victim, TO_NOTVICT);
 
 		dam = dice(20, 7) + 20;
 
@@ -3294,15 +3294,15 @@ void pulse_prog_banshee(CHAR_DATA *mob)
 	}
 	else if (number_percent() > 40)
 	{
-		act("$n screeches gleefully, mimicking a laugh.", mob, 0, victim, TO_ALL);
-		act("$n's face contorts in terror.", victim, 0, mob, TO_ALL);
-		act("$N's wailing causes your muscles to contort wildly in pain!", mob, 0, victim, TO_CHAR);
+		act("$n screeches gleefully, mimicking a laugh.", mob, nullptr, victim, TO_ALL);
+		act("$n's face contorts in terror.", victim, nullptr, mob, TO_ALL);
+		act("$N's wailing causes your muscles to contort wildly in pain!", mob, nullptr, victim, TO_CHAR);
 
 		spell = "weaken";
 	}
 	else
 	{
-		act("$n begins to howl mournfully, the unnatural notes piercing your mind.", mob, 0, victim, TO_ALL);
+		act("$n begins to howl mournfully, the unnatural notes piercing your mind.", mob, nullptr, victim, TO_ALL);
 		spell = "deafen";
 	}
 
@@ -3324,26 +3324,26 @@ void pulse_prog_phantasm(CHAR_DATA *mob)
 	switch (number_range(0, 5))
 	{
 		case 0:
-			act("$n shows you the face of your worst nightmare, paralyzing you with fear!", mob, 0, victim, TO_VICT);
-			act("$n's ghostly form flickers briefly as $N flinches away in terror.", mob, 0, victim, TO_NOTVICT);
+			act("$n shows you the face of your worst nightmare, paralyzing you with fear!", mob, nullptr, victim, TO_VICT);
+			act("$n's ghostly form flickers briefly as $N flinches away in terror.", mob, nullptr, victim, TO_NOTVICT);
 
 			LAG_CHAR(victim, PULSE_VIOLENCE * 3);
 			break;
 		case 1:
 		case 2:
 		case 3:
-			act("Your death flashes before your eyes.", 0, 0, victim, TO_VICT);
-			act("You feel hope slip away.", 0, 0, victim, TO_VICT);
-			act("$N gets a look of hopelessness on $S face.", mob, 0, victim, TO_NOTVICT);
+			act("Your death flashes before your eyes.", 0, nullptr, victim, TO_VICT);
+			act("You feel hope slip away.", 0, nullptr, victim, TO_VICT);
+			act("$N gets a look of hopelessness on $S face.", mob, nullptr, victim, TO_NOTVICT);
 
 			spell = "curse";
 			break;
 		case 4:
 		case 5:
-			act("$n runs $s fingers down $N's face gently.", mob, 0, victim, TO_NOTVICT);
-			act("$n runs $s fingers down your face gently.", mob, 0, victim, TO_VICT);
-			act("$n plunges $s spectral hand into $N's head, leaving $M looking confused.", mob, 0, victim, TO_NOTVICT);
-			act("$n plunges $s spectral hand into your head, leaving you feeling confused.", mob, 0, victim, TO_VICT);
+			act("$n runs $s fingers down $N's face gently.", mob, nullptr, victim, TO_NOTVICT);
+			act("$n runs $s fingers down your face gently.", mob, nullptr, victim, TO_VICT);
+			act("$n plunges $s spectral hand into $N's head, leaving $M looking confused.", mob, nullptr, victim, TO_NOTVICT);
+			act("$n plunges $s spectral hand into your head, leaving you feeling confused.", mob, nullptr, victim, TO_VICT);
 
 			spell = "forget";
 			break;
@@ -3369,8 +3369,8 @@ void pulse_prog_ravghoul(CHAR_DATA *mob)
 			if (is_affected(victim, gsn_abite))
 				return;
 
-			act("$n grabs $N's arm and takes a bite out of it!", mob, 0, victim, TO_NOTVICT);
-			act("$n grabs your arm and takes a bite out of it!", mob, 0, victim, TO_VICT);
+			act("$n grabs $N's arm and takes a bite out of it!", mob, nullptr, victim, TO_NOTVICT);
+			act("$n grabs your arm and takes a bite out of it!", mob, nullptr, victim, TO_VICT);
 
 			one_hit_new(mob, victim, TYPE_UNDEFINED, HIT_NOSPECIALS, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "bite");
 
@@ -3389,8 +3389,8 @@ void pulse_prog_ravghoul(CHAR_DATA *mob)
 			if (is_affected(victim, gsn_lbite))
 				return;
 
-			act("$n grabs $N's leg and takes a bite out of it!", mob, 0, victim, TO_NOTVICT);
-			act("$n grabs your leg and takes a bite out of it!", mob, 0, victim, TO_VICT);
+			act("$n grabs $N's leg and takes a bite out of it!", mob, nullptr, victim, TO_NOTVICT);
+			act("$n grabs your leg and takes a bite out of it!", mob, nullptr, victim, TO_VICT);
 
 			one_hit_new(mob, victim, TYPE_UNDEFINED, HIT_NOSPECIALS, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "bite");
 
@@ -3406,8 +3406,8 @@ void pulse_prog_ravghoul(CHAR_DATA *mob)
 
 			break;
 		case 2:
-			act("$n moves to $N's flank and takes a bite from the back of $S head!", mob, 0, victim, TO_NOTVICT);
-			act("$n moves to your flank and takes a bite from the back of your head!", mob, 0, victim, TO_VICT);
+			act("$n moves to $N's flank and takes a bite from the back of $S head!", mob, nullptr, victim, TO_NOTVICT);
+			act("$n moves to your flank and takes a bite from the back of your head!", mob, nullptr, victim, TO_VICT);
 
 			one_hit_new(mob, victim, TYPE_UNDEFINED, HIT_NOSPECIALS, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "bite");
 
@@ -3425,10 +3425,10 @@ void pulse_prog_behemoth(CHAR_DATA *mob)
 
 	int dam = dice(14, 14);
 
-	act("Bones clattering in a terrible cacophony, $N charges at $n clumsily!", victim, 0, mob, TO_NOTVICT);
-	act("$N is trampled to the ground!", mob, 0, victim, TO_NOTVICT);
-	act("Bones clattering in a terrible cacophony, $n charges at you!", mob, 0, victim, TO_VICT);
-	act("You are trampled to the ground!", mob, 0, victim, TO_VICT);
+	act("Bones clattering in a terrible cacophony, $N charges at $n clumsily!", victim, nullptr, mob, TO_NOTVICT);
+	act("$N is trampled to the ground!", mob, nullptr, victim, TO_NOTVICT);
+	act("Bones clattering in a terrible cacophony, $n charges at you!", mob, nullptr, victim, TO_VICT);
+	act("You are trampled to the ground!", mob, nullptr, victim, TO_VICT);
 
 	damage_new(mob, victim, dam, TYPE_UNDEFINED, DAM_BASH, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "trampling");
 
@@ -3449,8 +3449,8 @@ void pulse_prog_glass(CHAR_DATA *mob)
 		&& !is_affected(mob, gsn_trophy)
 		&& !is_affected(victim, gsn_impale))
 	{
-		act("$n raises one of its massive arms and impales $N on it!", mob, 0, victim, TO_NOTVICT);
-		act("$n raises one of its massive arms and impales you on it!", mob, 0, victim, TO_VICT);
+		act("$n raises one of its massive arms and impales $N on it!", mob, nullptr, victim, TO_NOTVICT);
+		act("$n raises one of its massive arms and impales you on it!", mob, nullptr, victim, TO_VICT);
 
 		damage_new(mob, victim, dice(16, 15), TYPE_UNDEFINED, DAM_PIERCE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "impalement");
 
@@ -3498,7 +3498,7 @@ void pulse_prog_night_creeps(CHAR_DATA *mob)
 		if (Deref(mob->fighting))
 			stop_fighting(mob, true);
 
-		act("As the first rays of the sun emerge, $n scuttles away with sickening speed.", mob, 0, 0, TO_ROOM);
+		act("As the first rays of the sun emerge, $n scuttles away with sickening speed.", mob, nullptr, nullptr, TO_ROOM);
 
 		SET_BIT(mob->affected_by, AFF_NOSHOW);
 		return;
@@ -3507,7 +3507,7 @@ void pulse_prog_night_creeps(CHAR_DATA *mob)
 	{
 		REMOVE_BIT(mob->affected_by, AFF_NOSHOW);
 
-		act("Chittering with mindless malice, $n bursts from the cover of shadow and attacks!", mob, 0, 0, TO_ROOM);
+		act("Chittering with mindless malice, $n bursts from the cover of shadow and attacks!", mob, nullptr, nullptr, TO_ROOM);
 
 		for (victim = mob->in_room->people; victim; victim = victim->next_in_room)
 		{
@@ -3530,8 +3530,8 @@ void pulse_prog_night_creeps(CHAR_DATA *mob)
 
 		target = Deref(mob->fighting);
 
-		act("With a vicious clacking noise, $n sinks its razor-sharp pincers into $N!", mob, 0, target, TO_NOTVICT);
-		act("With a vicious clacking noise, $n sinks its razor-sharp pincers into you!", mob, 0, target, TO_VICT);
+		act("With a vicious clacking noise, $n sinks its razor-sharp pincers into $N!", mob, nullptr, target, TO_NOTVICT);
+		act("With a vicious clacking noise, $n sinks its razor-sharp pincers into you!", mob, nullptr, target, TO_VICT);
 		damage_new(mob, target, dice(target->level / 3, 3), TYPE_UNDEFINED, DAM_PIERCE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "pincering claws$");
 
 		// Re-read rather than reusing the local above: a lethal damage_new
@@ -3577,7 +3577,7 @@ void sucker_pulse(CHAR_DATA *ch, [[maybe_unused]] AFFECT_DATA *af)
 
 	if (!owner)
 	{
-		act("$n sighs in relief as the remains of the flatworm fall away from $s face.", ch, 0, 0, TO_ROOM);
+		act("$n sighs in relief as the remains of the flatworm fall away from $s face.", ch, nullptr, nullptr, TO_ROOM);
 		send_to_char("You sigh in relief as the remains of the flatworm fall away from your face.\n\r", ch);
 		affect_strip(ch, gsn_blindness);
 		return;
@@ -3586,8 +3586,8 @@ void sucker_pulse(CHAR_DATA *ch, [[maybe_unused]] AFFECT_DATA *af)
 	if (number_range(1, 3) != 1)
 		return;
 
-	act("$n swells slightly as it drains the bodily fluids from $N.", owner, 0, ch, TO_NOTVICT);
-	act("$n swells slightly as it drains your bodily fluids!", owner, 0, ch, TO_VICT);
+	act("$n swells slightly as it drains the bodily fluids from $N.", owner, nullptr, ch, TO_NOTVICT);
+	act("$n swells slightly as it drains your bodily fluids!", owner, nullptr, ch, TO_VICT);
 
 	damage_new(owner, ch, dice(8, 5), TYPE_UNDEFINED, DAM_ACID, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "suction");
 	owner->hit += number_range(20, 40);
@@ -3611,10 +3611,10 @@ void greet_prog_face_sucker(CHAR_DATA *mob, CHAR_DATA *ch)
 	mob->hunting = ch->self;
 
 	sprintf(buf, "%sSuddenly, something pale and slimy falls from the ceiling, landing on your face!%s", get_char_color(ch, "red"), END_COLOR(ch));
-	act(buf, mob, 0, ch, TO_VICT);
+	act(buf, mob, nullptr, ch, TO_VICT);
 
 	sprintf(buf, "%sSuddenly, something small and pale falls from the ceiling, landing on $N's face!%s", get_char_color(ch, "red"), END_COLOR(ch));
-	act(buf, mob, 0, ch, TO_NOTVICT);
+	act(buf, mob, nullptr, ch, TO_NOTVICT);
 
 	init_affect(&af);
 	af.where = TO_AFFECTS;
@@ -3628,8 +3628,8 @@ void greet_prog_face_sucker(CHAR_DATA *mob, CHAR_DATA *ch)
 
 	SET_BIT(af.bitvector, AFF_BLIND);
 
-	act("You scream in horror as $n latches itself onto your face!", mob, 0, ch, TO_VICT);
-	act("$N lets out a scream of pure horror as $n latches itself onto $S face!", mob, 0, ch, TO_NOTVICT);
+	act("You scream in horror as $n latches itself onto your face!", mob, nullptr, ch, TO_VICT);
+	act("$N lets out a scream of pure horror as $n latches itself onto $S face!", mob, nullptr, ch, TO_NOTVICT);
 
 	affect_to_char(ch, &af);
 

@@ -1318,8 +1318,8 @@ void affect_modify(CHAR_DATA *ch, AFFECT_DATA *paf, bool fAdd)
 		if (disarmed && get_eq_char(ch, WEAR_WIELD) == nullptr)
 		{
 			unequip_char(ch, wield, false);
-			act("You swap $p into your primary hand.", ch, wield, 0, TO_CHAR);
-			act("$n swaps $p into $s primary hand.", ch, wield, 0, TO_ROOM);
+			act("You swap $p into your primary hand.", ch, wield, nullptr, TO_CHAR);
+			act("$n swaps $p into $s primary hand.", ch, wield, nullptr, TO_ROOM);
 			equip_char(ch, wield, WEAR_WIELD, false);
 		}
 	}
@@ -1414,7 +1414,7 @@ void new_affect_to_char(CHAR_DATA *ch, AFFECT_DATA *paf)
 	if (IS_SET(ch->imm_flags, IMM_SLEEP) && IS_SET(paf->bitvector, AFF_SLEEP) && paf->where == TO_AFFECTS)
 	{
 		send_to_char("You are unaffected.\n\r", ch);
-		act("$n is unaffected.", ch, 0, 0, TO_ROOM);
+		act("$n is unaffected.", ch, nullptr, nullptr, TO_ROOM);
 		return;
 	}
 
@@ -1941,10 +1941,10 @@ void equip_char(CHAR_DATA *ch, OBJ_DATA *obj, int iWear, bool show)
 		ch->in_room->light += 3;
 
 	if (show && obj->pIndexData->wear_echo[0] != nullptr)
-		act(palloc_string(obj->pIndexData->wear_echo[0]), ch, obj, 0, TO_CHAR);
+		act(palloc_string(obj->pIndexData->wear_echo[0]), ch, obj, nullptr, TO_CHAR);
 
 	if (show && obj->pIndexData->wear_echo[1] != nullptr)
-		act(palloc_string(obj->pIndexData->wear_echo[1]), ch, obj, 0, TO_ROOM);
+		act(palloc_string(obj->pIndexData->wear_echo[1]), ch, obj, nullptr, TO_ROOM);
 }
 
 /*
@@ -2001,10 +2001,10 @@ void unequip_char(CHAR_DATA *ch, OBJ_DATA *obj, bool show)
 		ch->in_room->light = std::max(0, ch->in_room->light - 3);
 
 	if (show && obj->pIndexData->remove_echo[0] != nullptr)
-		act(palloc_string(obj->pIndexData->remove_echo[0]), ch, obj, 0, TO_CHAR);
+		act(palloc_string(obj->pIndexData->remove_echo[0]), ch, obj, nullptr, TO_CHAR);
 
 	if (show && obj->pIndexData->remove_echo[1] != nullptr)
-		act(palloc_string(obj->pIndexData->remove_echo[1]), ch, obj, 0, TO_ROOM);
+		act(palloc_string(obj->pIndexData->remove_echo[1]), ch, obj, nullptr, TO_ROOM);
 }
 
 /*

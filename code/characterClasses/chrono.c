@@ -64,8 +64,8 @@ void spell_stasis_wall(int sn, int level, CHAR_DATA *ch, SpellTarget vo, CastMod
 		rune.function = trigger_stasis_wall; // this is what's called when the rune is triggered
 		apply_rune(&rune);
 
-		act("$n gestures and an immovable barrier snaps into existence to the $t!", ch, direction_table[dir].name, 0, TO_ROOM);
-		act("You gesture and a stasis wall forms to the $t!", ch, direction_table[dir].name, 0, TO_CHAR);
+		act("$n gestures and an immovable barrier snaps into existence to the $t!", ch, direction_table[dir].name, nullptr, TO_ROOM);
+		act("You gesture and a stasis wall forms to the $t!", ch, direction_table[dir].name, nullptr, TO_CHAR);
 		return;
 	}
 
@@ -115,8 +115,8 @@ bool trigger_stasis_wall(void *vo, void *vo2, void *vo3, [[maybe_unused]] void *
 	if (is_safe_new(ch, victim, false))
 		return false;
 
-	act("You try to move to the $t but a stasis wall flickers and holds you back!", victim, direction_table[dir].name, 0, TO_CHAR);
-	act("$n tries to move to the $t but is halted by a stasis wall!", victim, direction_table[dir].name, 0, TO_ROOM);
+	act("You try to move to the $t but a stasis wall flickers and holds you back!", victim, direction_table[dir].name, nullptr, TO_CHAR);
+	act("$n tries to move to the $t but is halted by a stasis wall!", victim, direction_table[dir].name, nullptr, TO_ROOM);
 
 	return true;
 }
@@ -145,8 +145,8 @@ bool activate_stasis_wall(void *vo, void *vo2, void *vo3, [[maybe_unused]] void 
 	if (is_safe_new(ch, victim, false))
 		return false;
 
-	act("As you pass through the $t, a stasis wall snaps into existence behind you!", victim, pexit->keyword, 0, TO_CHAR);
-	act("As $n passes through the $t, a stasis wall snaps into existence behind $m!", victim, pexit->keyword, 0, TO_ROOM);
+	act("As you pass through the $t, a stasis wall snaps into existence behind you!", victim, pexit->keyword, nullptr, TO_CHAR);
+	act("As $n passes through the $t, a stasis wall snaps into existence behind $m!", victim, pexit->keyword, nullptr, TO_ROOM);
 
 	new_rune.level = rune->level;
 	new_rune.placed_on = pexit;
@@ -185,12 +185,12 @@ void draw_rune(std::unique_ptr<RUNE_DATA> rune)
 
 	if (number_percent() > get_skill(ch, rune->type))
 	{
-		act("The rune flares brightly before vanishing!", ch, 0, 0, TO_ROOM);
+		act("The rune flares brightly before vanishing!", ch, nullptr, nullptr, TO_ROOM);
 		send_to_char("The improperly scribed rune flares brightly before vanishing!\n\r", ch);
 		return;
 	}
 
-	act("The rune flares $t!", ch, skill_table[rune->type].msg_off, 0, TO_ALL);
+	act("The rune flares $t!", ch, skill_table[rune->type].msg_off, nullptr, TO_ALL);
 	apply_rune(rune.get());
 }
 
@@ -334,8 +334,8 @@ void do_rune(CHAR_DATA *ch, char *argument)
 
 		vo = obj;
 
-		act("$n carefully begins to scribe an intricate rune on $p.", ch, obj, 0, TO_ROOM);
-		act("You carefully begin to scribe an intricate rune on $p.", ch, obj, 0, TO_CHAR);
+		act("$n carefully begins to scribe an intricate rune on $p.", ch, obj, nullptr, TO_ROOM);
+		act("You carefully begin to scribe an intricate rune on $p.", ch, obj, nullptr, TO_CHAR);
 	}
 	else if (target == RUNE_DOOR)
 	{
@@ -347,14 +347,14 @@ void do_rune(CHAR_DATA *ch, char *argument)
 
 		vo = SpellTarget::Direction(where);
 
-		act("$n carefully begins to scribe an intricate rune on the $t.", ch, strcmp(pexit->keyword, "") ? pexit->keyword : "door", 0, TO_ROOM);
-		act("You carefully begin to scribe an intricate rune on the $t.", ch, strcmp(pexit->keyword, "") ? pexit->keyword : "door", 0, TO_CHAR);
+		act("$n carefully begins to scribe an intricate rune on the $t.", ch, strcmp(pexit->keyword, "") ? pexit->keyword : "door", nullptr, TO_ROOM);
+		act("You carefully begin to scribe an intricate rune on the $t.", ch, strcmp(pexit->keyword, "") ? pexit->keyword : "door", nullptr, TO_CHAR);
 	}
 	else if (target == RUNE_ROOM)
 	{
 		vo = (ROOM_INDEX_DATA *)ch->in_room;
-		act("$n moves $s hands slowly, tracing a glowing rune in midair.", ch, 0, 0, TO_ROOM);
-		act("Slowly tracing a glowing pattern in front of you, you create a rune in midair.", ch, pexit->keyword, 0, TO_CHAR);
+		act("$n moves $s hands slowly, tracing a glowing rune in midair.", ch, nullptr, nullptr, TO_ROOM);
+		act("Slowly tracing a glowing pattern in front of you, you create a rune in midair.", ch, pexit->keyword, nullptr, TO_CHAR);
 	}
 	else
 	{
@@ -372,7 +372,7 @@ void do_rune(CHAR_DATA *ch, char *argument)
 	ch->mana -= mana;
 	if (IS_SET(ch->in_room->room_flags, ROOM_NO_MAGIC) && !(ch->level > LEVEL_HERO))
 	{
-		act("$n's spell fizzles.", ch, 0, 0, TO_ROOM);
+		act("$n's spell fizzles.", ch, nullptr, nullptr, TO_ROOM);
 		send_to_char("Your spell fizzles and dies.\n\r", ch);
 		return;
 	}

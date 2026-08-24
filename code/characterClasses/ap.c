@@ -102,8 +102,8 @@ void spell_indomitability(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /*
 {
 	AFFECT_DATA af;
 
-	act("You call upon the force of your will, using it to maintain your body's current state.", ch, 0, 0, TO_CHAR);
-	act("$n looks more determined.", ch, 0, 0, TO_ROOM);
+	act("You call upon the force of your will, using it to maintain your body's current state.", ch, nullptr, nullptr, TO_CHAR);
+	act("$n looks more determined.", ch, nullptr, nullptr, TO_ROOM);
 
 	init_affect(&af);
 	af.where = TO_AFFECTS;
@@ -145,9 +145,9 @@ void do_taunt(CHAR_DATA *ch, char *argument)
 
 	if (number_percent() < chance)
 	{
-		act("You shout and jeer at $N, angering $M until $E attacks!", ch, 0, victim, TO_CHAR);
-		act("$n shouts insults and curses at you and you attack $m in a fit of rage!", ch, 0, victim, TO_VICT);
-		act("$n shouts and curses at $N, angering $M until $E attacks!", ch, 0, victim, TO_NOTVICT);
+		act("You shout and jeer at $N, angering $M until $E attacks!", ch, nullptr, victim, TO_CHAR);
+		act("$n shouts insults and curses at you and you attack $m in a fit of rage!", ch, nullptr, victim, TO_VICT);
+		act("$n shouts and curses at $N, angering $M until $E attacks!", ch, nullptr, victim, TO_NOTVICT);
 
 		do_murder(victim, ch->name);
 
@@ -155,9 +155,9 @@ void do_taunt(CHAR_DATA *ch, char *argument)
 	}
 	else
 	{
-		act("You shout and jeer at $N, but $E shrugs it off.", ch, 0, victim, TO_CHAR);
-		act("$n shouts insults and curses at you, but you calmly ignore $m.", ch, 0, victim, TO_VICT);
-		act("$n shouts and curses at $N, but $N ignores $m.", ch, 0, victim, TO_NOTVICT);
+		act("You shout and jeer at $N, but $E shrugs it off.", ch, nullptr, victim, TO_CHAR);
+		act("$n shouts insults and curses at you, but you calmly ignore $m.", ch, nullptr, victim, TO_VICT);
+		act("$n shouts and curses at $N, but $N ignores $m.", ch, nullptr, victim, TO_NOTVICT);
 
 		check_improve(ch, skill_lookup("taunt"), false, 1);
 	}
@@ -176,9 +176,9 @@ void spell_wrack(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unuse
 		return;
 	}
 
-	act("You infuse $N's body with your anger, causing $M to be vulnerable to attack!", ch, 0, victim, TO_CHAR);
-	act("You feel a sudden surge of anger, followed by wracking pain.", ch, 0, victim, TO_VICT);
-	act("$n infuses $s anger into $N, leaving $M vulnerable.", ch, 0, victim, TO_NOTVICT);
+	act("You infuse $N's body with your anger, causing $M to be vulnerable to attack!", ch, nullptr, victim, TO_CHAR);
+	act("You feel a sudden surge of anger, followed by wracking pain.", ch, nullptr, victim, TO_VICT);
+	act("$n infuses $s anger into $N, leaving $M vulnerable.", ch, nullptr, victim, TO_NOTVICT);
 
 	init_affect(&af);
 	af.where = TO_AFFECTS;
@@ -207,8 +207,8 @@ void spell_radiance(int sn, int level, CHAR_DATA *ch, [[maybe_unused]] SpellTarg
 {
 	AFFECT_DATA af;
 
-	act("You channel your magic towards augmenting your beauty.", ch, 0, 0, TO_CHAR);
-	act("$n appears to glow momentarily.", ch, 0, 0, TO_ROOM);
+	act("You channel your magic towards augmenting your beauty.", ch, nullptr, nullptr, TO_CHAR);
+	act("$n appears to glow momentarily.", ch, nullptr, nullptr, TO_ROOM);
 
 	if (is_affected(ch, sn))
 	{
@@ -256,8 +256,8 @@ void spell_inspire_lust(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[mayb
 
 	if ((victim != ch) && (!saves_spell(level, victim, DAM_NEGATIVE)))
 	{
-		act("You call upon your unholy powers to taint $N's mind with greed!", ch, 0, victim, TO_CHAR);
-		act("A dark flash of greed fills your mind with thoughts of riches.", ch, 0, victim, TO_VICT);
+		act("You call upon your unholy powers to taint $N's mind with greed!", ch, nullptr, victim, TO_CHAR);
+		act("A dark flash of greed fills your mind with thoughts of riches.", ch, nullptr, victim, TO_VICT);
 
 		init_affect(&af);
 		af.where = TO_AFFECTS;
@@ -274,7 +274,7 @@ void spell_inspire_lust(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[mayb
 	}
 	else if (victim != ch)
 	{
-		act("You failed to fill $N's mind with greed.", ch, 0, victim, TO_CHAR);
+		act("You failed to fill $N's mind with greed.", ch, nullptr, victim, TO_CHAR);
 
 		if (!is_npc(victim))
 		{
@@ -288,7 +288,7 @@ void spell_inspire_lust(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[mayb
 
 	if (victim == ch)
 	{
-		act("A dark flash of greed fills your mind with thoughts of riches.", ch, 0, victim, TO_CHAR);
+		act("A dark flash of greed fills your mind with thoughts of riches.", ch, nullptr, victim, TO_CHAR);
 
 		init_affect(&af);
 		af.where = TO_AFFECTS;
@@ -329,7 +329,7 @@ void lust_pulse(CHAR_DATA *ch, [[maybe_unused]] AFFECT_DATA *af)
 			if (steal->wear_loc != WEAR_NONE || !can_see_obj(ch, steal) || number_percent() < 95)
 				continue;
 
-			act("Overcome by greed, you suddenly reach for $N's pack!", ch, 0, victim, TO_CHAR);
+			act("Overcome by greed, you suddenly reach for $N's pack!", ch, nullptr, victim, TO_CHAR);
 
 			if (number_percent() > skill)
 			{
@@ -427,14 +427,14 @@ void do_consume(CHAR_DATA *ch, char *argument)
 
 	if (number_percent() > skill)
 	{
-		act("You tear at $p with your teeth, but fail to heal yourself from it.", ch, corpse, 0, TO_CHAR);
-		act("$n tears at $p with $s teeth and comes up looking angry.", ch, corpse, 0, TO_ROOM);
+		act("You tear at $p with your teeth, but fail to heal yourself from it.", ch, corpse, nullptr, TO_CHAR);
+		act("$n tears at $p with $s teeth and comes up looking angry.", ch, corpse, nullptr, TO_ROOM);
 		extract_obj(corpse);
 	}
 	else
 	{
-		act("You tear at $p with your teeth and heal yourself with its blood.", ch, corpse, 0, TO_CHAR);
-		act("$n tears at $p with $s teeth and suddenly looks better.", ch, corpse, 0, TO_ROOM);
+		act("You tear at $p with your teeth and heal yourself with its blood.", ch, corpse, nullptr, TO_CHAR);
+		act("$n tears at $p with $s teeth and suddenly looks better.", ch, corpse, nullptr, TO_ROOM);
 		ch->hit += dice(corpse->level, 2);
 		extract_obj(corpse);
 	}
@@ -478,7 +478,7 @@ void spell_baals_mastery(int /* sn */, int /* level */, CHAR_DATA *ch, SpellTarg
 		return;
 	}
 
-	act("In a terrifying flash of dark insight, your Lord grants you mastery of $ts.", ch, target_name, 0, TO_CHAR);
+	act("In a terrifying flash of dark insight, your Lord grants you mastery of $ts.", ch, target_name, nullptr, TO_CHAR);
 
 	init_affect(&af);
 	af.where = TO_AFFECTS;
@@ -527,37 +527,37 @@ void check_baals_mastery(CHAR_DATA *ch, CHAR_DATA *victim)
 	switch (af->modifier)
 	{
 		case WEAPON_AXE:
-			act("With a rush of unholy might, you hack brutally with your axe at $N's flesh!", ch, 0, victim, TO_CHAR);
-			act("A wicked grin flashes across $n's face as $s axe rends your flesh!", ch, 0, victim, TO_VICT);
-			act("A wicked grin flashes across $n's face as $s axe rends $N's flesh!", ch, 0, victim, TO_NOTVICT);
+			act("With a rush of unholy might, you hack brutally with your axe at $N's flesh!", ch, nullptr, victim, TO_CHAR);
+			act("A wicked grin flashes across $n's face as $s axe rends your flesh!", ch, nullptr, victim, TO_VICT);
+			act("A wicked grin flashes across $n's face as $s axe rends $N's flesh!", ch, nullptr, victim, TO_NOTVICT);
 
 			one_hit_new(ch, victim, TYPE_UNDEFINED, HIT_NOSPECIALS, HIT_UNBLOCKABLE, HIT_NOADD, 150, nullptr);
 			break;
 		case WEAPON_SWORD:
-			act("With a surge of unholy vigor, your drive your blade deep into $N!", ch, 0, victim, TO_CHAR);
-			act("A wicked grin flashes across $n's face as $e plunges $s sword into you!", ch, 0, victim, TO_VICT);
-			act("A wicked grin flashes across $n's face as $e plunges $s sword into $N!", ch, 0, victim, TO_NOTVICT);
+			act("With a surge of unholy vigor, your drive your blade deep into $N!", ch, nullptr, victim, TO_CHAR);
+			act("A wicked grin flashes across $n's face as $e plunges $s sword into you!", ch, nullptr, victim, TO_VICT);
+			act("A wicked grin flashes across $n's face as $e plunges $s sword into $N!", ch, nullptr, victim, TO_NOTVICT);
 
 			one_hit_new(ch, victim, TYPE_UNDEFINED, HIT_NOSPECIALS, HIT_UNBLOCKABLE, HIT_NOADD, 150, nullptr);
 			break;
 		case WEAPON_MACE:
-			act("With a surge of unholy might, you bring your mace crashing down upon $N!", ch, 0, victim, TO_CHAR);
-			act("A wicked grin flashes across $n's face as $e brings $s mace down upon you!", ch, 0, victim, TO_VICT);
-			act("A wicked grin flashes across $n's face as $e brings $s mace down upon $N!", ch, 0, victim, TO_NOTVICT);
+			act("With a surge of unholy might, you bring your mace crashing down upon $N!", ch, nullptr, victim, TO_CHAR);
+			act("A wicked grin flashes across $n's face as $e brings $s mace down upon you!", ch, nullptr, victim, TO_VICT);
+			act("A wicked grin flashes across $n's face as $e brings $s mace down upon $N!", ch, nullptr, victim, TO_NOTVICT);
 
 			one_hit_new(ch, victim, TYPE_UNDEFINED, HIT_NOSPECIALS, HIT_UNBLOCKABLE, HIT_NOADD, 150, nullptr);
 			break;
 		case WEAPON_SPEAR:
-			act("With a surge of unholy might, you thrust your spear through $N's guard!", ch, 0, victim, TO_CHAR);
-			act("A wicked grin flashes across $n's face as $e drives $s spear into you!", ch, 0, victim, TO_VICT);
-			act("A wicked grin flashes across $n's face as $e drives $s spear into $N!", ch, 0, victim, TO_NOTVICT);
+			act("With a surge of unholy might, you thrust your spear through $N's guard!", ch, nullptr, victim, TO_CHAR);
+			act("A wicked grin flashes across $n's face as $e drives $s spear into you!", ch, nullptr, victim, TO_VICT);
+			act("A wicked grin flashes across $n's face as $e drives $s spear into $N!", ch, nullptr, victim, TO_NOTVICT);
 
 			one_hit_new(ch, victim, TYPE_UNDEFINED, HIT_NOSPECIALS, HIT_UNBLOCKABLE, HIT_NOADD, 200, nullptr);
 
 			if (number_percent() < 40 && !is_affected(victim, gsn_bleeding))
 			{
-				act("Your dark heart exults as blood fountains forth from the wound!", ch, 0, victim, TO_CHAR);
-				act("$n's eyes flicker darkly as blood fountains forth from the wound!", ch, 0, victim, TO_ROOM);
+				act("Your dark heart exults as blood fountains forth from the wound!", ch, nullptr, victim, TO_CHAR);
+				act("$n's eyes flicker darkly as blood fountains forth from the wound!", ch, nullptr, victim, TO_ROOM);
 				init_affect(&af2);
 				af2.where = TO_AFFECTS;
 				af2.aftype = AFT_MALADY;
@@ -574,9 +574,9 @@ void check_baals_mastery(CHAR_DATA *ch, CHAR_DATA *victim)
 
 			break;
 		case WEAPON_FLAIL:
-			act("With a surge of unholy might, you bring your flail crashing down upon $N!", ch, 0, victim, TO_CHAR);
-			act("A wicked grin flashes across $n's face as $e brings $s flail down upon you!", ch, 0, victim, TO_VICT);
-			act("A wicked grin flashes across $n's face as $e brings $s flail down upon $N!", ch, 0, victim, TO_NOTVICT);
+			act("With a surge of unholy might, you bring your flail crashing down upon $N!", ch, nullptr, victim, TO_CHAR);
+			act("A wicked grin flashes across $n's face as $e brings $s flail down upon you!", ch, nullptr, victim, TO_VICT);
+			act("A wicked grin flashes across $n's face as $e brings $s flail down upon $N!", ch, nullptr, victim, TO_NOTVICT);
 
 			one_hit_new(ch, victim, TYPE_UNDEFINED, HIT_NOSPECIALS, HIT_UNBLOCKABLE, HIT_NOADD, 175, nullptr);
 			break;
@@ -657,8 +657,8 @@ void spell_word_of_command(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /
 	{
 		send_to_char("What the hell do you think you're doing?\n\r", ch);
 
-		act("A bolt from the heavens smites you!", ch, 0, 0, TO_CHAR);
-		act("A bolt from the heavens smites $n!", ch, 0, 0, TO_ROOM);
+		act("A bolt from the heavens smites you!", ch, nullptr, nullptr, TO_CHAR);
+		act("A bolt from the heavens smites $n!", ch, nullptr, nullptr, TO_ROOM);
 
 		ch->hit /= 2;
 		return;
@@ -666,8 +666,8 @@ void spell_word_of_command(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /
 
 	if (saves_spell(level + 20 - get_curr_stat(victim, STAT_INT), victim, DAM_CHARM))
 	{
-		act("$N's mind resists your word of command.", ch, 0, victim, TO_CHAR);
-		act("You fend off a dark mental assault by $n!", ch, 0, victim, TO_VICT);
+		act("$N's mind resists your word of command.", ch, nullptr, victim, TO_CHAR);
+		act("You fend off a dark mental assault by $n!", ch, nullptr, victim, TO_VICT);
 
 		sprintf(buf, "Die, %s you sorcerous dog!", ch->name);
 		do_myell(victim, buf, ch);
@@ -676,7 +676,7 @@ void spell_word_of_command(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /
 		return;
 	}
 
-	act("You successfully implant a word of command in $N's malleable mind.", ch, 0, victim, TO_CHAR);
+	act("You successfully implant a word of command in $N's malleable mind.", ch, nullptr, victim, TO_CHAR);
 
 	arg2[strlen(arg2)] = '\0';
 
@@ -752,9 +752,9 @@ void spell_mark_of_wrath(int /* sn */, int level, CHAR_DATA *ch, SpellTarget vo,
 		return;
 	}
 
-	act("You intone unholy words and a flaming brand appears on $N's forehead!", ch, 0, victim, TO_CHAR);
-	act("A wave of rage clouds your thoughts as $n chants in an unintelligible tongue.", ch, 0, victim, TO_VICT);
-	act("A flaming brand appears on $N's forehead, radiating malevolence.", ch, 0, victim, TO_NOTVICT);
+	act("You intone unholy words and a flaming brand appears on $N's forehead!", ch, nullptr, victim, TO_CHAR);
+	act("A wave of rage clouds your thoughts as $n chants in an unintelligible tongue.", ch, nullptr, victim, TO_VICT);
+	act("A flaming brand appears on $N's forehead, radiating malevolence.", ch, nullptr, victim, TO_NOTVICT);
 
 	init_affect(&af);
 	af.where = TO_AFFECTS;
@@ -788,8 +788,8 @@ void spell_living_blade(int /* sn */, int level, CHAR_DATA *ch, SpellTarget vo, 
 		return;
 	}
 
-	act("You call upon the power of Baal to imbue $p with a dark vitality.", ch, weapon, 0, TO_CHAR);
-	act("$p writhes briefly in $n's grasp.", ch, weapon, 0, TO_ROOM);
+	act("You call upon the power of Baal to imbue $p with a dark vitality.", ch, weapon, nullptr, TO_CHAR);
+	act("$p writhes briefly in $n's grasp.", ch, weapon, nullptr, TO_ROOM);
 
 	init_affect_obj(&oaf);
 	oaf.where = TO_OBJ_APPLY;
@@ -826,13 +826,13 @@ void living_blade_pulse(OBJ_DATA *obj, OBJ_AFFECT_DATA *af)
 			switch (number_range(1, 3))
 			{
 				case 1:
-					act("$p hisses at you: 'Insignificant whelp, you are unworthy of my power!'", ch, obj, 0, TO_CHAR);
+					act("$p hisses at you: 'Insignificant whelp, you are unworthy of my power!'", ch, obj, nullptr, TO_CHAR);
 					break;
 				case 2:
-					act("$p writhes in your grasp as you hear a faint cry of outrage.", ch, obj, 0, TO_CHAR);
+					act("$p writhes in your grasp as you hear a faint cry of outrage.", ch, obj, nullptr, TO_CHAR);
 					break;
 				case 3:
-					act("$p whispers menacingly: 'My master will devour your soul, blasphemer.'", ch, obj, 0, TO_CHAR);
+					act("$p whispers menacingly: 'My master will devour your soul, blasphemer.'", ch, obj, nullptr, TO_CHAR);
 					break;
 			}
 		}
@@ -869,7 +869,7 @@ void living_blade_pulse(OBJ_DATA *obj, OBJ_AFFECT_DATA *af)
 					break;
 			}
 
-			act("$p twists in your grasp, hissing caustically:", ch, obj, 0, TO_CHAR);
+			act("$p twists in your grasp, hissing caustically:", ch, obj, nullptr, TO_CHAR);
 			send_to_char(buf, ch);
 		}
 	}
@@ -941,13 +941,13 @@ void living_blade_pulse(OBJ_DATA *obj, OBJ_AFFECT_DATA *af)
 		switch (number_range(1, 3))
 		{
 			case 1:
-				act("A hollow laughter reaches your ears as $p pulses in your grasp.", ch, obj, 0, TO_CHAR);
+				act("A hollow laughter reaches your ears as $p pulses in your grasp.", ch, obj, nullptr, TO_CHAR);
 				break;
 			case 2:
-				act("$p writhes as you faintly hear sounds not unlike cries of carnal ecstasy.", ch, obj, 0, TO_CHAR);
+				act("$p writhes as you faintly hear sounds not unlike cries of carnal ecstasy.", ch, obj, nullptr, TO_CHAR);
 				break;
 			case 3:
-				act("$p cries with glee: 'Yes!  Yes!  Tear their heart out!'", ch, obj, 0, TO_CHAR);
+				act("$p cries with glee: 'Yes!  Yes!  Tear their heart out!'", ch, obj, nullptr, TO_CHAR);
 				break;
 		}
 	}
@@ -963,7 +963,7 @@ void living_blade_end(OBJ_DATA *obj, OBJ_AFFECT_DATA *af)
 	if (carrier == nullptr)
 		return;
 
-	act("$p ceases its slight writhing and seems less animated.", carrier, obj, 0, TO_CHAR);
+	act("$p ceases its slight writhing and seems less animated.", carrier, obj, nullptr, TO_CHAR);
 }
 
 void traitor_pulse(CHAR_DATA *ch, AFFECT_DATA *af)
@@ -1083,7 +1083,7 @@ void spell_dark_familiar(int /* sn */, int /* level */, CHAR_DATA *ch, SpellTarg
 		get_char_color(ch, "red"),
 		END_COLOR(ch));
 
-	act(buf, ch, 0, fam, TO_ALL);
+	act(buf, ch, nullptr, fam, TO_ALL);
 
 	init_affect(&af);
 	af.where = TO_AFFECTS;
@@ -1124,8 +1124,8 @@ void spell_unholy_communion(int /* sn */, int level, CHAR_DATA *ch, SpellTarget 
 		return;
 	}
 
-	act("A chill breeze sweeps through the area as the shadows flicker malevolently.", ch, 0, 0, TO_ROOM);
-	act("A sudden chill runs down your spine as you call upon the powers of darkness.", ch, 0, 0, TO_CHAR);
+	act("A chill breeze sweeps through the area as the shadows flicker malevolently.", ch, nullptr, nullptr, TO_ROOM);
+	act("A sudden chill runs down your spine as you call upon the powers of darkness.", ch, nullptr, nullptr, TO_CHAR);
 
 	init_affect(&af);
 	af.where = TO_AFFECTS;
@@ -1286,7 +1286,7 @@ void check_unholy_communion(CHAR_DATA *ch, char *argument)
 
 	WAIT_STATE(ch, 5 * PULSE_VIOLENCE);
 
-	act("As the name of the $t demon escapes your lips, the shadows writhe violently.", ch, (type == LESSER_DEMON) ? "lesser" : "greater", 0, TO_CHAR);
+	act("As the name of the $t demon escapes your lips, the shadows writhe violently.", ch, (type == LESSER_DEMON) ? "lesser" : "greater", nullptr, TO_CHAR);
 
 	RS.Queue.AddToQueue(2, "check_unholy_communion", "act_queue", act_queue, "A sonorous throbbing fills your surroundings, and then all is deathly silent.", ch, nullptr, nullptr, TO_ALL);
 
@@ -1308,22 +1308,22 @@ void demon_appear(CHAR_DATA *ch, int demon, int type)
 		{
 			case LESSER_BARBAS:
 				vnum = MOB_VNUM_BARBAS;
-				act("Frothing at the mouth, a livid lesser demon materializes before you!", ch, 0, 0, TO_ALL);
+				act("Frothing at the mouth, a livid lesser demon materializes before you!", ch, nullptr, nullptr, TO_ALL);
 				break;
 			case LESSER_AAMON:
 				vnum = MOB_VNUM_AAMON;
-				act("With a peal of laughter like the sound of a dying goat, a lesser demon appears!", ch, 0, 0, TO_ALL);
+				act("With a peal of laughter like the sound of a dying goat, a lesser demon appears!", ch, nullptr, nullptr, TO_ALL);
 				break;
 			case LESSER_MALAPHAR:
 				vnum = MOB_VNUM_MALAPHAR;
-				act("A well-dressed man with a wicked twinkle in his eye steps from the shadows!", ch, 0, 0, TO_ALL);
+				act("A well-dressed man with a wicked twinkle in his eye steps from the shadows!", ch, nullptr, nullptr, TO_ALL);
 				break;
 			case LESSER_FURCAS:
 				vnum = MOB_VNUM_FURCAS;
-				act("A shivering lesser demon materializes before you, keeping to the shadows.", ch, 0, 0, TO_ALL);
+				act("A shivering lesser demon materializes before you, keeping to the shadows.", ch, nullptr, nullptr, TO_ALL);
 				break;
 			case LESSER_IPOS:
-				act("With a soft 'pop' and a flash of subdued reddish light, a horned demon appears!", ch, 0, 0, TO_ALL);
+				act("With a soft 'pop' and a flash of subdued reddish light, a horned demon appears!", ch, nullptr, nullptr, TO_ALL);
 				vnum = MOB_VNUM_IPOS;
 				break;
 			default:
@@ -1337,23 +1337,23 @@ void demon_appear(CHAR_DATA *ch, int demon, int type)
 		switch (demon)
 		{
 			case GREATER_OZE:
-				act("With a great sucking sound and a fine mist of blood, a fearsome demon appears!", ch, 0, 0, TO_ALL);
+				act("With a great sucking sound and a fine mist of blood, a fearsome demon appears!", ch, nullptr, nullptr, TO_ALL);
 				vnum = MOB_VNUM_OZE;
 				break;
 			case GREATER_GAMYGYN:
-				act("A deceptively mellifluous chorus heralds the arrival of a massive darkened form!", ch, 0, 0, TO_ALL);
+				act("A deceptively mellifluous chorus heralds the arrival of a massive darkened form!", ch, nullptr, nullptr, TO_ALL);
 				vnum = MOB_VNUM_GAMYGYN;
 				break;
 			case GREATER_OROBAS:
-				act("In a flurry of blurred hands, feet, heads and hair, a gruesome demon appears!", ch, 0, 0, TO_ALL);
+				act("In a flurry of blurred hands, feet, heads and hair, a gruesome demon appears!", ch, nullptr, nullptr, TO_ALL);
 				vnum = MOB_VNUM_OROBAS;
 				break;
 			case GREATER_GERYON:
-				act("A swirl of mist rises and falls, revealing a terrible demon in its place!", ch, 0, 0, TO_ALL);
+				act("A swirl of mist rises and falls, revealing a terrible demon in its place!", ch, nullptr, nullptr, TO_ALL);
 				vnum = MOB_VNUM_GERYON;
 				break;
 			case GREATER_CIMERIES:
-				act("A huge demon materializes in mid-air and crashes unceremoniously to the ground.", ch, 0, 0, TO_ALL);
+				act("A huge demon materializes in mid-air and crashes unceremoniously to the ground.", ch, nullptr, nullptr, TO_ALL);
 				vnum = MOB_VNUM_CIMERIES;
 				break;
 			default:
@@ -1548,7 +1548,7 @@ void lesser_demon_tick(CHAR_DATA *mob, AFFECT_DATA *af)
 				sprintf(buf, "%s We give up... it cannnot find us... a pity, yes.  Goodbye, it.", Deref(af->owner)->name);
 				do_tell(mob, buf);
 
-				act("$n vanishes in a crimson flash!", mob, 0, 0, TO_ROOM);
+				act("$n vanishes in a crimson flash!", mob, nullptr, nullptr, TO_ROOM);
 
 				Deref(af->owner)->pcdata->lesserdata[LESSER_FURCAS] = FAVOR_FAILED;
 				extract_char(mob, true);
@@ -1580,7 +1580,7 @@ void lesser_demon_tick(CHAR_DATA *mob, AFFECT_DATA *af)
 			if (af->duration == 1)
 			{
 				do_say(mob, "My friend, I have better things to do with my time.  A pity.");
-				act("$n vanishes in a crimson flash!", mob, 0, 0, TO_ROOM);
+				act("$n vanishes in a crimson flash!", mob, nullptr, nullptr, TO_ROOM);
 
 				Deref(af->owner)->pcdata->lesserdata[LESSER_MALAPHAR] = FAVOR_FAILED;
 				extract_char(mob, true);
@@ -1590,7 +1590,7 @@ void lesser_demon_tick(CHAR_DATA *mob, AFFECT_DATA *af)
 			if (af->duration == 1)
 			{
 				do_say(mob, "I've better things to do with my time, than wait for you to mumble a rhyme!");
-				act("$n vanishes in a crimson flash!", mob, 0, 0, TO_ROOM);
+				act("$n vanishes in a crimson flash!", mob, nullptr, nullptr, TO_ROOM);
 
 				Deref(af->owner)->pcdata->lesserdata[LESSER_IPOS] = FAVOR_FAILED;
 				extract_char(mob, true);
@@ -1619,7 +1619,7 @@ void greater_demon_tick(CHAR_DATA *mob, AFFECT_DATA *af)
 
 			if (af->duration == 3)
 			{
-				act("Crying out suddenly, Oze begins to liquefy, giving off a hideous odor.", mob, 0, 0, TO_ROOM);
+				act("Crying out suddenly, Oze begins to liquefy, giving off a hideous odor.", mob, nullptr, nullptr, TO_ROOM);
 				break;
 			}
 
@@ -1628,7 +1628,7 @@ void greater_demon_tick(CHAR_DATA *mob, AFFECT_DATA *af)
 				sprintf(buf, "The abyss will not forget this treachery, %s.", Deref(af->owner)->name);
 				do_whisper(mob, buf);
 
-				act("The puddle of gore before you which was once a greater demon seeps downward.", mob, 0, 0, TO_ROOM);
+				act("The puddle of gore before you which was once a greater demon seeps downward.", mob, nullptr, nullptr, TO_ROOM);
 				Deref(af->owner)->pcdata->greaterdata[GREATER_OZE] = FAVOR_FAILED;
 
 				extract_char(mob, true);
@@ -1642,7 +1642,7 @@ void greater_demon_tick(CHAR_DATA *mob, AFFECT_DATA *af)
 				sprintf(buf, "%s You fool.  You utter fool.  You know not what power you have squandered.", Deref(af->owner)->name);
 				do_tell(mob, buf);
 
-				act("Flashing a great dark light, $n vanishes from sight.", mob, 0, 0, TO_ROOM);
+				act("Flashing a great dark light, $n vanishes from sight.", mob, nullptr, nullptr, TO_ROOM);
 				extract_char(mob, true);
 				break;
 			}
@@ -1654,7 +1654,7 @@ void greater_demon_tick(CHAR_DATA *mob, AFFECT_DATA *af)
 				sprintf(buf, "%s, you fool.  You utter fool.  You know not what power you have squandered!", Deref(af->owner)->name);
 				do_say(mob, buf);
 
-				act("With a fierce snarl, and many assorted whispers, Orobas streaks into the sky.", mob, 0, 0, TO_ROOM);
+				act("With a fierce snarl, and many assorted whispers, Orobas streaks into the sky.", mob, nullptr, nullptr, TO_ROOM);
 				extract_char(mob, true);
 				break;
 
@@ -1670,12 +1670,12 @@ void greater_demon_tick(CHAR_DATA *mob, AFFECT_DATA *af)
 
 			if (af->duration == 3)
 			{
-				act("Exploding suddenly, $n's face darkens and his eyes seethe an angry red!", mob, 0, 0, TO_ALL);
+				act("Exploding suddenly, $n's face darkens and his eyes seethe an angry red!", mob, nullptr, nullptr, TO_ALL);
 
 				do_yell(mob, "WHY, BY THE FIVE DEVILS, MUST I BE SADDLED WITH SUCH INCOMPETENCE?!");
 				do_emote(mob, "draws his howling visage close to your own, a mask of impenetrable hate.");
 
-				act("Very suddenly, the greater demon composes himself and smiles firmly once more.", mob, 0, 0, TO_ALL);
+				act("Very suddenly, the greater demon composes himself and smiles firmly once more.", mob, nullptr, nullptr, TO_ALL);
 				break;
 			}
 
@@ -1690,7 +1690,7 @@ void greater_demon_tick(CHAR_DATA *mob, AFFECT_DATA *af)
 			{
 				do_say(mob, "Very well, fool.  The lords of the abyss will hear of this.");
 
-				act("Turning coldly and melting into a cool mist, $n wafts away on a breeze.", mob, 0, 0, TO_ALL);
+				act("Turning coldly and melting into a cool mist, $n wafts away on a breeze.", mob, nullptr, nullptr, TO_ALL);
 
 				Deref(af->owner)->pcdata->greaterdata[GREATER_GERYON] = FAVOR_FAILED;
 
@@ -1707,15 +1707,15 @@ void greater_demon_tick(CHAR_DATA *mob, AFFECT_DATA *af)
 
 			if (af->duration == 2)
 			{
-				act("As blood trickles down your neck, your mind races to decide:  ear or nose?", mob, 0, Deref(af->owner),
+				act("As blood trickles down your neck, your mind races to decide:  ear or nose?", mob, nullptr, Deref(af->owner),
 					TO_VICT);
 				break;
 
 			}
 			if (af->duration == 1)
 			{
-				act("In disgust, $n rips his claws free and moves his massive frame back.", mob, 0, 0, TO_ROOM);
-				act("Slowly, the monstrous demon fades into shadows and dissipates.", mob, 0, 0, TO_ROOM);
+				act("In disgust, $n rips his claws free and moves his massive frame back.", mob, nullptr, nullptr, TO_ROOM);
+				act("Slowly, the monstrous demon fades into shadows and dissipates.", mob, nullptr, nullptr, TO_ROOM);
 
 				Deref(af->owner)->pcdata->greaterdata[GREATER_CIMERIES] = FAVOR_FAILED;
 				extract_char(mob, true);
@@ -1759,7 +1759,7 @@ void spell_insanity(int sn, int level, CHAR_DATA *ch, [[maybe_unused]] SpellTarg
 {
 	AFFECT_DATA af;
 
-	act("You feel a rush of dark power take over your body!", ch, 0, 0, TO_CHAR);
+	act("You feel a rush of dark power take over your body!", ch, nullptr, nullptr, TO_CHAR);
 
 	init_affect(&af);
 	af.where = TO_AFFECTS;
@@ -1813,27 +1813,27 @@ void insanity_pulse(CHAR_DATA *ch, [[maybe_unused]] AFFECT_DATA *af)
 		switch (number_range(1, 5))
 		{
 			case 1:
-				act("With a wild look in $s eyes, $n charges into battle!", ch, 0, 0, TO_ROOM);
-				act("A touch of froth escapes your lips as you charge into $N.", ch, 0, victim, TO_CHAR);
+				act("With a wild look in $s eyes, $n charges into battle!", ch, nullptr, nullptr, TO_ROOM);
+				act("A touch of froth escapes your lips as you charge into $N.", ch, nullptr, victim, TO_CHAR);
 				do_bash(ch, victim->name);
 				break;
 			case 2:
-				act("With a wild look in $s eyes, $n charges into battle!", ch, 0, 0, TO_ROOM);
-				act("A touch of froth escapes your lips as you charge into $N.", ch, 0, victim, TO_CHAR);
+				act("With a wild look in $s eyes, $n charges into battle!", ch, nullptr, nullptr, TO_ROOM);
+				act("A touch of froth escapes your lips as you charge into $N.", ch, nullptr, victim, TO_CHAR);
 				do_murder(ch, victim->name);
 				break;
 			case 3:
-				act("$n flashes a quick grin, $s eyes gleaming with a dark madness.", ch, 0, 0, TO_ROOM);
-				act("Coalesced energy erupts from $n's body, covering the area in flames.", ch, 0, 0, TO_ROOM);
-				act("You utter arcane words as a ball of fire erupts from your body.", ch, 0, 0, TO_CHAR);
+				act("$n flashes a quick grin, $s eyes gleaming with a dark madness.", ch, nullptr, nullptr, TO_ROOM);
+				act("Coalesced energy erupts from $n's body, covering the area in flames.", ch, nullptr, nullptr, TO_ROOM);
+				act("You utter arcane words as a ball of fire erupts from your body.", ch, nullptr, nullptr, TO_CHAR);
 				spell_fireball(skill_lookup("fireball"), ch->level, ch, SpellTarget(), CastMode::Spell);
 				break;
 			case 4:
 				insanity_two(ch, room);
 				break;
 			case 5:
-				act("With a wild look in $s eyes, $n charges into battle!", ch, 0, 0, TO_ROOM);
-				act("A touch of froth escapes your lips as you charge into $N.", ch, 0, victim, TO_CHAR);
+				act("With a wild look in $s eyes, $n charges into battle!", ch, nullptr, nullptr, TO_ROOM);
+				act("A touch of froth escapes your lips as you charge into $N.", ch, nullptr, victim, TO_CHAR);
 				do_cleave(ch, victim->name);
 				break;
 		}
@@ -1952,17 +1952,17 @@ void insanity_fight(CHAR_DATA *ch)
 			if (get_eq_char(ch, WEAR_WIELD) == nullptr)
 				break;
 
-			act("$n brutally drives $s weapon into your chest!", ch, 0, victim, TO_VICT);
-			act("You brutally drive your weapon into $N's chest!", ch, 0, victim, TO_CHAR);
-			act("$n brutally drives $s weapon into $N's chest!", ch, 0, victim, TO_NOTVICT);
+			act("$n brutally drives $s weapon into your chest!", ch, nullptr, victim, TO_VICT);
+			act("You brutally drive your weapon into $N's chest!", ch, nullptr, victim, TO_CHAR);
+			act("$n brutally drives $s weapon into $N's chest!", ch, nullptr, victim, TO_NOTVICT);
 
 			one_hit_new(ch, victim, TYPE_UNDEFINED, HIT_NOSPECIALS, HIT_UNBLOCKABLE, HIT_NOADD, 125, "crushing assault");
 
 			if (number_percent() > 25)
 			{
-				act("Your head hits the ground as $n sweeps your legs from under you.", ch, 0, victim, TO_VICT);
-				act("As $N recovers from your attack, you swiftly knock $S legs out from under $M.", ch, 0, victim, TO_CHAR);
-				act("As $N sways under the force of $n's attack, $n knocks $S legs out from under $M.", ch, 0, victim, TO_NOTVICT);
+				act("Your head hits the ground as $n sweeps your legs from under you.", ch, nullptr, victim, TO_VICT);
+				act("As $N recovers from your attack, you swiftly knock $S legs out from under $M.", ch, nullptr, victim, TO_CHAR);
+				act("As $N sways under the force of $n's attack, $n knocks $S legs out from under $M.", ch, nullptr, victim, TO_NOTVICT);
 
 				LAG_CHAR(victim, (int)(1.5 * PULSE_VIOLENCE));
 			}
@@ -1973,15 +1973,15 @@ void insanity_fight(CHAR_DATA *ch)
 			do_bash(ch, victim->name);
 			break;
 		case 3:
-			act("$n grunts and growls unintelligible words.", ch, 0, 0, TO_ROOM);
-			act("You grunt and growl unintelligible words.", ch, 0, 0, TO_CHAR);
+			act("$n grunts and growls unintelligible words.", ch, nullptr, nullptr, TO_ROOM);
+			act("You grunt and growl unintelligible words.", ch, nullptr, nullptr, TO_CHAR);
 			break;
 		case 4:
 			do_trip(ch, victim->name);
 			break;
 		case 5:
-			act("$n screams arcane words of power in a fit of rage.", ch, 0, 0, TO_ROOM);
-			act("As your insanity overtakes you, you scream arcane words in rage.", ch, 0, 0, TO_CHAR);
+			act("$n screams arcane words of power in a fit of rage.", ch, nullptr, nullptr, TO_ROOM);
+			act("As your insanity overtakes you, you scream arcane words in rage.", ch, nullptr, nullptr, TO_CHAR);
 
 			switch (number_range(0, 3))
 			{
@@ -1999,9 +1999,9 @@ void insanity_fight(CHAR_DATA *ch)
 					break;
 			}
 
-			act("As $n finishes $s incantation, $e charges you!", ch, 0, victim, TO_VICT);
-			act("As $n finishes $s incantation, $e charges $N!", ch, 0, victim, TO_NOTVICT);
-			act("Finishing your spell, you charge $N!", ch, 0, victim, TO_CHAR);
+			act("As $n finishes $s incantation, $e charges you!", ch, nullptr, victim, TO_VICT);
+			act("As $n finishes $s incantation, $e charges $N!", ch, nullptr, victim, TO_NOTVICT);
+			act("Finishing your spell, you charge $N!", ch, nullptr, victim, TO_CHAR);
 
 			do_bash(ch, victim->name);
 			break;
@@ -2026,12 +2026,12 @@ void gamygyn_tick(CHAR_DATA *ch, AFFECT_DATA *af)
 	{
 		WAIT_STATE(ch, PULSE_VIOLENCE * 2);
 
-		act("You feel a sudden wrenching pain from within, and collapse in agony.", ch, 0, 0, TO_CHAR);
-		act("$n's face twists in sudden agony as $e collapses to the ground, writhing.", ch, 0, 0, TO_ROOM);
-		act("Pure horror sweeps over you as you recall your bargain with the fiend Gamygyn!", ch, 0, 0, TO_CHAR);
-		act("A razor-clawed hand bursts from your belly as the world fades to black....", ch, 0, 0, TO_CHAR);
-		act("Blood fountains from $n's body as a clawed hand emerges from $s belly!", ch, 0, 0, TO_ROOM);
-		act("A dripping demon emerges from the mangled remains and vanishes into the earth.", ch, 0, 0, TO_ROOM);
+		act("You feel a sudden wrenching pain from within, and collapse in agony.", ch, nullptr, nullptr, TO_CHAR);
+		act("$n's face twists in sudden agony as $e collapses to the ground, writhing.", ch, nullptr, nullptr, TO_ROOM);
+		act("Pure horror sweeps over you as you recall your bargain with the fiend Gamygyn!", ch, nullptr, nullptr, TO_CHAR);
+		act("A razor-clawed hand bursts from your belly as the world fades to black....", ch, nullptr, nullptr, TO_CHAR);
+		act("Blood fountains from $n's body as a clawed hand emerges from $s belly!", ch, nullptr, nullptr, TO_ROOM);
+		act("A dripping demon emerges from the mangled remains and vanishes into the earth.", ch, nullptr, nullptr, TO_ROOM);
 
 		raw_kill(ch, ch);
 
@@ -2069,12 +2069,12 @@ void orobas_tick(CHAR_DATA *ch, AFFECT_DATA *af)
 
 	if (af->duration == 1)
 	{
-		act("You feel a sudden wrenching pain from within, and collapse in agony.", ch, 0, 0, TO_CHAR);
-		act("$n's face twists in sudden agony as $e collapses to the ground, writhing.", ch, 0, 0, TO_ROOM);
-		act("Pure horror sweeps over you as you recall your bargain with the fiend Orobas!", ch, 0, 0, TO_CHAR);
-		act("A razor-clawed hand bursts from your belly as the world fades to black....", ch, 0, 0, TO_CHAR);
-		act("Blood fountains from $n's body as a clawed hand emerges from $s belly!", ch, 0, 0, TO_ROOM);
-		act("A dripping demon emerges from the mangled remains and vanishes into the earth.", ch, 0, 0, TO_ROOM);
+		act("You feel a sudden wrenching pain from within, and collapse in agony.", ch, nullptr, nullptr, TO_CHAR);
+		act("$n's face twists in sudden agony as $e collapses to the ground, writhing.", ch, nullptr, nullptr, TO_ROOM);
+		act("Pure horror sweeps over you as you recall your bargain with the fiend Orobas!", ch, nullptr, nullptr, TO_CHAR);
+		act("A razor-clawed hand bursts from your belly as the world fades to black....", ch, nullptr, nullptr, TO_CHAR);
+		act("Blood fountains from $n's body as a clawed hand emerges from $s belly!", ch, nullptr, nullptr, TO_ROOM);
+		act("A dripping demon emerges from the mangled remains and vanishes into the earth.", ch, nullptr, nullptr, TO_ROOM);
 
 		raw_kill(ch, ch);
 
@@ -2144,8 +2144,8 @@ void do_breath_mephisto(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	act("You begin building up the intense cold within you.", ch, 0, 0, TO_CHAR);
-	act("$n's skin shifts to a shade of blue.", ch, 0, 0, TO_ROOM);
+	act("You begin building up the intense cold within you.", ch, nullptr, nullptr, TO_CHAR);
+	act("$n's skin shifts to a shade of blue.", ch, nullptr, nullptr, TO_ROOM);
 
 	RS.Queue.AddToQueue(3, "do_breath_mephisto", "mephisto_two", mephisto_two, ch, victim, argument);
 }
@@ -2156,17 +2156,17 @@ void mephisto_two(CHAR_DATA *ch, CHAR_DATA *victim, char *argument)
 
 	if (!(Deref(ch->fighting)) && !(get_char_room(ch, argument)))
 	{
-		act("You let the intense cold dissipate, your target having escaped.", ch, 0, 0, TO_CHAR);
+		act("You let the intense cold dissipate, your target having escaped.", ch, nullptr, nullptr, TO_CHAR);
 		return;
 	}
 
-	act("$n opens $s mouth and a plume of deathly cold issues forth!", ch, 0, 0, TO_ROOM);
-	act("You open your mouth and unleash your icy fury!", ch, 0, 0, TO_CHAR);
+	act("$n opens $s mouth and a plume of deathly cold issues forth!", ch, nullptr, nullptr, TO_ROOM);
+	act("You open your mouth and unleash your icy fury!", ch, nullptr, nullptr, TO_CHAR);
 
 	damage_new(ch, victim, ch->level * 3, TYPE_UNDEFINED, DAM_COLD, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "icy breath");
 
-	act("$n freezes in $s tracks under the icy onslaught.", victim, 0, ch, TO_ROOM);
-	act("The intense cold shocks you into temporary immobility!", ch, 0, victim, TO_VICT);
+	act("$n freezes in $s tracks under the icy onslaught.", victim, nullptr, ch, TO_ROOM);
+	act("The intense cold shocks you into temporary immobility!", ch, nullptr, victim, TO_VICT);
 
 	WAIT_STATE(ch, PULSE_VIOLENCE * 2);
 	LAG_CHAR(victim, PULSE_VIOLENCE * 4);
@@ -2235,9 +2235,9 @@ void do_touch(CHAR_DATA *ch, char *argument)
 	{
 		WAIT_STATE(ch, PULSE_VIOLENCE * 2);
 
-		act("You reach out and lay your hand on $N as $E bursts into flames!", ch, 0, victim, TO_CHAR);
-		act("$n places his hand on you as you feel fire engulf your body!", ch, 0, victim, TO_VICT);
-		act("$n places his hand on $N as $N bursts into flames!", ch, 0, victim, TO_NOTVICT);
+		act("You reach out and lay your hand on $N as $E bursts into flames!", ch, nullptr, victim, TO_CHAR);
+		act("$n places his hand on you as you feel fire engulf your body!", ch, nullptr, victim, TO_VICT);
+		act("$n places his hand on $N as $N bursts into flames!", ch, nullptr, victim, TO_NOTVICT);
 
 		damage_new(ch, victim, ch->level * 2, TYPE_UNDEFINED, DAM_FIRE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "burning touch");
 
@@ -2258,9 +2258,9 @@ void do_touch(CHAR_DATA *ch, char *argument)
 	}
 	else
 	{
-		act("You reach out for $N, but $E twists away from you.", ch, 0, victim, TO_CHAR);
-		act("$n reaches for you, but you twist away from $m.", ch, 0, victim, TO_VICT);
-		act("$n reaches for $N, but $E twists away from $m.", ch, 0, victim, TO_NOTVICT);
+		act("You reach out for $N, but $E twists away from you.", ch, nullptr, victim, TO_CHAR);
+		act("$n reaches for you, but you twist away from $m.", ch, nullptr, victim, TO_VICT);
+		act("$n reaches for $N, but $E twists away from $m.", ch, nullptr, victim, TO_NOTVICT);
 		WAIT_STATE(ch, PULSE_VIOLENCE * 2);
 	}
 }
@@ -2285,13 +2285,13 @@ void check_orobas_gamygyn(CHAR_DATA *ch, CHAR_DATA *victim)
 
 	if (is_affected(ch, gsn_orobas_soul) && victim->Class()->name == "anti-paladin")
 	{
-		act("With a sound of rending flesh, something tears itself from your body!", ch, 0, 0, TO_CHAR);
-		act("With a sound of rending flesh, something tears itself from $n's body!", ch, 0, 0, TO_ROOM);
-		act("You fall to your knees, bellowing in horror and pain!", ch, 0, 0, TO_CHAR);
-		act("$n falls to $s knees, bellowing in horror and pain!", ch, 0, 0, TO_ROOM);
-		act("A flailing multi-armed demon rends hungrily at $N's corpse with its many arms!", ch, 0, victim, TO_ALL);
-		act("Orobas turns to face you for a moment, and you feel infused with power!", ch, 0, 0, TO_CHAR);
-		act("The monstrosity streaks away in a blur, cradling the corpse in its hands.", ch, 0, 0, TO_ALL);
+		act("With a sound of rending flesh, something tears itself from your body!", ch, nullptr, nullptr, TO_CHAR);
+		act("With a sound of rending flesh, something tears itself from $n's body!", ch, nullptr, nullptr, TO_ROOM);
+		act("You fall to your knees, bellowing in horror and pain!", ch, nullptr, nullptr, TO_CHAR);
+		act("$n falls to $s knees, bellowing in horror and pain!", ch, nullptr, nullptr, TO_ROOM);
+		act("A flailing multi-armed demon rends hungrily at $N's corpse with its many arms!", ch, nullptr, victim, TO_ALL);
+		act("Orobas turns to face you for a moment, and you feel infused with power!", ch, nullptr, nullptr, TO_CHAR);
+		act("The monstrosity streaks away in a blur, cradling the corpse in its hands.", ch, nullptr, nullptr, TO_ALL);
 		ch->pcdata->greaterdata[GREATER_OROBAS] = FAVOR_GRANTED;
 		ch->pcdata->learned[skill_lookup("traitors luck")] = 1;
 		extract_obj(corpse);
@@ -2300,9 +2300,9 @@ void check_orobas_gamygyn(CHAR_DATA *ch, CHAR_DATA *victim)
 
 	if (is_affected(ch, gsn_gamygyn_soul) && is_good(victim))
 	{
-		act("With a terrible wail, a figure composed of gloomy light springs from your torso!", ch, 0, 0, TO_CHAR);
-		act("Suddenly, a figure composed of gloomy light springs from from $n's torso!", ch, 0, 0, TO_ROOM);
-		act("Leaping upon the fresh corpse, the fiend howls with delight and devours it.", ch, 0, 0, TO_ALL);
+		act("With a terrible wail, a figure composed of gloomy light springs from your torso!", ch, nullptr, nullptr, TO_CHAR);
+		act("Suddenly, a figure composed of gloomy light springs from from $n's torso!", ch, nullptr, nullptr, TO_ROOM);
+		act("Leaping upon the fresh corpse, the fiend howls with delight and devours it.", ch, nullptr, nullptr, TO_ALL);
 		extract_obj(corpse);
 
 		sprintf(buf, "Gamygyn tells you '%sYou have met your end of the bargain, mortal, and now I shall meet mine.%s'\n\r",
@@ -2311,7 +2311,7 @@ void check_orobas_gamygyn(CHAR_DATA *ch, CHAR_DATA *victim)
 
 		send_to_char(buf, ch);
 		send_to_char("You feel an influx of power at Gamygyn's words.\n\r", ch);
-		act("Enveloped in a black glow, the demon vanishes from sight.", ch, 0, 0, TO_ALL);
+		act("Enveloped in a black glow, the demon vanishes from sight.", ch, nullptr, nullptr, TO_ALL);
 
 		ch->pcdata->greaterdata[GREATER_GAMYGYN] = FAVOR_GRANTED;
 		ch->pcdata->learned[skill_lookup("bloodlust")] = 1;
@@ -2334,8 +2334,8 @@ void burning_pulse(CHAR_DATA *ch, AFFECT_DATA *af)
 	if (number_percent() > 50)
 		return;
 
-	act("You scream in pain as fire erupts from within your body!", ch, 0, 0, TO_CHAR);
-	act("$n screams in pain as fire erupts from within $s body!", ch, 0, 0, TO_ROOM);
+	act("You scream in pain as fire erupts from within your body!", ch, nullptr, nullptr, TO_CHAR);
+	act("$n screams in pain as fire erupts from within $s body!", ch, nullptr, nullptr, TO_ROOM);
 	damage_new(owner, ch, owner->level / 2, skill_lookup("burning touch"), DAM_FIRE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the consuming fire*");
 }
 
@@ -2379,7 +2379,7 @@ void do_darksight(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 
 	WAIT_STATE(ch, PULSE_VIOLENCE);
 
-	act("Dark power surges through your eyes as you focus upon the shadows.", ch, 0, 0, TO_CHAR);
+	act("Dark power surges through your eyes as you focus upon the shadows.", ch, nullptr, nullptr, TO_CHAR);
 	ch->mana -= 40;
 
 	init_affect(&af);
@@ -2462,9 +2462,9 @@ void spell_dark_insight(int /* sn */, int /* level */, CHAR_DATA *ch, SpellTarge
 	float dammod;
 	CHAR_DATA *victim = vo.AsChar();
 
-	act("You call upon the dark powers to reveal $N's weaknesses.", ch, 0, victim, TO_CHAR);
-	act("$n utters arcane words as $e looks you over.", ch, 0, victim, TO_VICT);
-	act("$n utters arcane words as $e looks $N over.", ch, 0, victim, TO_NOTVICT);
+	act("You call upon the dark powers to reveal $N's weaknesses.", ch, nullptr, victim, TO_CHAR);
+	act("$n utters arcane words as $e looks you over.", ch, nullptr, victim, TO_VICT);
+	act("$n utters arcane words as $e looks $N over.", ch, nullptr, victim, TO_NOTVICT);
 
 	act("$N appears to be resistant to $t.", ch, (char *)get_insight_line(victim->res_flags), victim, TO_CHAR);
 	found++;
@@ -2492,19 +2492,19 @@ void spell_dark_insight(int /* sn */, int /* level */, CHAR_DATA *ch, SpellTarge
 		dammod *= 1.3;
 
 	if (victim->dam_mod < 20)
-		act("$N is virtually impervious to harm!", ch, 0, victim, TO_CHAR);
+		act("$N is virtually impervious to harm!", ch, nullptr, victim, TO_CHAR);
 	else if (victim->dam_mod <= 40)
-		act("$N has extensive protection from all sorts of harm.", ch, 0, victim, TO_CHAR);
+		act("$N has extensive protection from all sorts of harm.", ch, nullptr, victim, TO_CHAR);
 	else if (victim->dam_mod <= 60)
-		act("$N is well protected from all sorts of harm.", ch, 0, victim, TO_CHAR);
+		act("$N is well protected from all sorts of harm.", ch, nullptr, victim, TO_CHAR);
 	else if (victim->dam_mod <= 80)
-		act("$N is somewhat protected from all sorts of harm.", ch, 0, victim, TO_CHAR);
+		act("$N is somewhat protected from all sorts of harm.", ch, nullptr, victim, TO_CHAR);
 	else if (victim->dam_mod <= 99)
-		act("$N's susceptibility to damage is slightly reduced.", ch, 0, victim, TO_CHAR);
+		act("$N's susceptibility to damage is slightly reduced.", ch, nullptr, victim, TO_CHAR);
 	else if (victim->dam_mod <= 100)
-		act("$N does not appear to have any special protections.", ch, 0, victim, TO_CHAR);
+		act("$N does not appear to have any special protections.", ch, nullptr, victim, TO_CHAR);
 	else
-		act("$N is highly susceptible to all damage.", ch, 0, victim, TO_CHAR);
+		act("$N is highly susceptible to all damage.", ch, nullptr, victim, TO_CHAR);
 
 	found++;
 

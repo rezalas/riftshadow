@@ -108,21 +108,21 @@ void drowning_tick(CHAR_DATA *ch, AFFECT_DATA *af)
 	switch (af->duration)
 	{
 		case 0:
-			act("You drift into unconsciousness, and a sea of blackness swiftly overtakes you.", ch, 0, 0, TO_CHAR);
+			act("You drift into unconsciousness, and a sea of blackness swiftly overtakes you.", ch, nullptr, nullptr, TO_CHAR);
 			raw_kill(ch, ch);
 			break;
 		case 1:
 		case 2:
-			act("Gasping involuntarily, you take huge amounts of water into your lungs!", ch, 0, 0, TO_CHAR);
+			act("Gasping involuntarily, you take huge amounts of water into your lungs!", ch, nullptr, nullptr, TO_CHAR);
 			damage_new(ch, ch, (int)((ch->max_hit / 100) * 75), gsn_drowning, DAM_DROWNING, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "drowning");
 			break;
 		case 3:
-			act("Your heart leaps in your chest, protesting the lack of oxygen!", ch, 0, 0, TO_CHAR);
+			act("Your heart leaps in your chest, protesting the lack of oxygen!", ch, nullptr, nullptr, TO_CHAR);
 			damage_new(ch, ch, (int)((ch->max_hit / 100) * 25), gsn_drowning, DAM_DROWNING, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "asphyxiation");
 			break;
 		case 4:
-			act("Your face grows a deeper shade of red as you struggle to hold your breath!", ch, 0, 0, TO_CHAR);
-			act("$n's face grows a deeper shade of red as $e struggles to hold $s breath!", ch, 0, 0, TO_ROOM);
+			act("Your face grows a deeper shade of red as you struggle to hold your breath!", ch, nullptr, nullptr, TO_CHAR);
+			act("$n's face grows a deeper shade of red as $e struggles to hold $s breath!", ch, nullptr, nullptr, TO_ROOM);
 			break;
 	}
 }
@@ -146,8 +146,8 @@ void check_waterbreath(CHAR_DATA *ch, ROOM_INDEX_DATA *to_room)
 
 		new_affect_to_char(ch, &af);
 
-		act("You take a deep breath and hold it tight as you descend into the water.", ch, 0, 0, TO_CHAR);
-		act("$n takes a deep breath as $e descends into the water.", ch, 0, 0, TO_ROOM);
+		act("You take a deep breath and hold it tight as you descend into the water.", ch, nullptr, nullptr, TO_CHAR);
+		act("$n takes a deep breath as $e descends into the water.", ch, nullptr, nullptr, TO_ROOM);
 	}
 	else if (is_affected(ch, gsn_drowning)
 		&& (to_room->sector_type != SECT_UNDERWATER || is_affected_room(to_room, gsn_airy_water)))
@@ -181,19 +181,19 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 		{
 			if (Deref(raf->owner) == ch)
 			{
-				act("The smoke parts for you allowing you passage.", ch, 0, 0, TO_CHAR);
+				act("The smoke parts for you allowing you passage.", ch, nullptr, nullptr, TO_CHAR);
 			}
 			else
 			{
 				CHAR_DATA *master = Deref(ch->master);
 
 				if (Deref(raf->owner) == master && automatic)
-					act("You follow $N through the smoke.", ch, 0, master, TO_CHAR);
+					act("You follow $N through the smoke.", ch, nullptr, master, TO_CHAR);
 			}
 		}
 		else
 		{
-			act("You stumble around directionless in the smoke.", ch, 0, 0, TO_CHAR);
+			act("You stumble around directionless in the smoke.", ch, nullptr, nullptr, TO_CHAR);
 			door = number_range(0, 5);
 		}
 	}
@@ -345,14 +345,14 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 			paf = affect_find(ch->affected, gsn_quicksand_sinking);
 			if (number_percent() > ((get_curr_stat(ch, STAT_STR) * 4) - 5 * paf->modifier))
 			{
-				act("You struggle to escape from the quicksand, but fail to pull yourself free!", ch, 0, 0, TO_CHAR);
-				act("$n struggles to escape from the quicksand, but fails to pull $mself free!", ch, 0, 0, TO_ROOM);
+				act("You struggle to escape from the quicksand, but fail to pull yourself free!", ch, nullptr, nullptr, TO_CHAR);
+				act("$n struggles to escape from the quicksand, but fails to pull $mself free!", ch, nullptr, nullptr, TO_ROOM);
 				WAIT_STATE(ch, 2 * PULSE_VIOLENCE);
 				return;
 			}
 
-			act("You manage to pull yourself out of the quicksand.", ch, 0, 0, TO_CHAR);
-			act("$n manages to pull $mself out of the quicksand.", ch, 0, 0, TO_ROOM);
+			act("You manage to pull yourself out of the quicksand.", ch, nullptr, nullptr, TO_CHAR);
+			act("$n manages to pull $mself out of the quicksand.", ch, nullptr, nullptr, TO_ROOM);
 			affect_strip(ch, gsn_quicksand_sinking);
 		}
 
@@ -555,7 +555,7 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 		un_hide(ch, nullptr);
 
 		if (is_affected(ch, gsn_door_bash))
-			act("$n goes crashing through the door $T.", ch, 0, dir_name[door], TO_ROOM);
+			act("$n goes crashing through the door $T.", ch, nullptr, dir_name[door], TO_ROOM);
 		else
 			sprintf(exbuf, "leave");
 
@@ -656,7 +656,7 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 		}
 
 		if (is_affected(ch, gsn_door_bash))
-			act("The $T door bursts open and $n comes crashing in!", ch, 0, dir_name[door], TO_ROOM);
+			act("The $T door bursts open and $n comes crashing in!", ch, nullptr, dir_name[door], TO_ROOM);
 		else
 			act("$n $t.", ch, exbuf, nullptr, TO_ROOM);
 	}
@@ -712,7 +712,7 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 
 		if (Deref(raf->owner) == ch)
 		{
-			act("You gracefully step over your tripwire.", ch, 0, 0, TO_CHAR);
+			act("You gracefully step over your tripwire.", ch, nullptr, nullptr, TO_CHAR);
 		}
 		else
 		{
@@ -721,8 +721,8 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 
 			if (!is_safe(Deref(raf->owner), ch) && (number_percent() > twchance))
 			{
-				act("You trip over a wire and fall flat on your face!", ch, 0, 0, TO_CHAR);
-				act("$n trips over a wire and falls flat on $s face!", ch, 0, 0, TO_ROOM);
+				act("You trip over a wire and fall flat on your face!", ch, nullptr, nullptr, TO_CHAR);
+				act("$n trips over a wire and falls flat on $s face!", ch, nullptr, nullptr, TO_ROOM);
 
 				ch->position = POS_RESTING;
 				WAIT_STATE(ch, PULSE_VIOLENCE * 2);
@@ -765,12 +765,12 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 						END_COLOR(ch));
 					send_to_char(exbuf, ch);
 
-					act("$n is suddenly pulled under the surface by a violent riptide!", ch, 0, 0, TO_ROOM);
+					act("$n is suddenly pulled under the surface by a violent riptide!", ch, nullptr, nullptr, TO_ROOM);
 
 					char_from_room(ch);
 					char_to_room(ch, riptideroom);
 
-					act("$n is suddenly pulled into the room by the powerful riptide!", ch, 0, 0, TO_ROOM);
+					act("$n is suddenly pulled into the room by the powerful riptide!", ch, nullptr, nullptr, TO_ROOM);
 
 					do_look(ch, "auto");
 
@@ -798,13 +798,13 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 
 		if (number_percent() <= (5 * (get_curr_stat(ch, STAT_DEX) - 15)))
 		{
-			act("You almost lose your footing on the surprisingly-slick ground, but steady yourself.", ch, 0, 0, TO_CHAR);
-			act("$n almost loses $s footing on the frost-covered ground, but remains standing.", ch, 0, 0, TO_ROOM);
+			act("You almost lose your footing on the surprisingly-slick ground, but steady yourself.", ch, nullptr, nullptr, TO_CHAR);
+			act("$n almost loses $s footing on the frost-covered ground, but remains standing.", ch, nullptr, nullptr, TO_ROOM);
 			break;
 		}
 
-		act("You slip on an unnoticed patch of ice and crash heavily to the ground!", ch, 0, 0, TO_CHAR);
-		act("$n slips on the icy ground as he enters, collapsing in a heap!", ch, 0, 0, TO_ROOM);
+		act("You slip on an unnoticed patch of ice and crash heavily to the ground!", ch, nullptr, nullptr, TO_CHAR);
+		act("$n slips on the icy ground as he enters, collapsing in a heap!", ch, nullptr, nullptr, TO_ROOM);
 
 		WAIT_STATE(ch, (ch->carry_weight / 150) * PULSE_VIOLENCE);
 
@@ -837,8 +837,8 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 			break;
 		}
 
-		act("As you enter, the ground gives way beneath you and you sink into quicksand!", ch, 0, 0, TO_CHAR);
-		act("As $n enters, the ground gives way beneath $m and $e sinks into quicksand!", ch, 0, 0, TO_ROOM);
+		act("As you enter, the ground gives way beneath you and you sink into quicksand!", ch, nullptr, nullptr, TO_CHAR);
+		act("As $n enters, the ground gives way beneath $m and $e sinks into quicksand!", ch, nullptr, nullptr, TO_ROOM);
 		do_myell(ch, "Help!  I'm sinking in quicksand!", nullptr);
 
 		AFFECT_DATA qs;
@@ -870,8 +870,8 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 		if (is_affected(ch, gsn_ultradiffusion))
 			break;
 
-		act("An icy stalactite plummets from the ceiling above as you enter!", ch, 0, 0, TO_CHAR);
-		act("An icy stalactite plummets from the ceiling above!", ch, 0, 0, TO_ROOM);
+		act("An icy stalactite plummets from the ceiling above as you enter!", ch, nullptr, nullptr, TO_CHAR);
+		act("An icy stalactite plummets from the ceiling above!", ch, nullptr, nullptr, TO_ROOM);
 
 		do_visible(ch, "");
 
@@ -881,8 +881,8 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 		}
 		else
 		{
-			act("The mass of ice shatters on the ground as you leap out of the way!", ch, 0, 0, TO_CHAR);
-			act("The mass of ice shatters on the ground as $n leaps out of the way!", ch, 0, 0, TO_ROOM);
+			act("The mass of ice shatters on the ground as you leap out of the way!", ch, nullptr, nullptr, TO_CHAR);
+			act("The mass of ice shatters on the ground as $n leaps out of the way!", ch, nullptr, nullptr, TO_ROOM);
 			damage_new(Deref(raf->owner), ch, 0, gsn_stalactites, DAM_PIERCE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the falling stalactite*");
 		}
 
@@ -1226,7 +1226,7 @@ void trip_trap(CHAR_DATA *ch, ROOM_INDEX_DATA *room, TRAP_DATA *trap)
 
 	if (trap->timer)
 	{
-		act(trap->trig_echo, ch, 0, 0, TO_CHAR);
+		act(trap->trig_echo, ch, nullptr, nullptr, TO_CHAR);
 		RS.Queue.AddToQueue(trap->timer, "do_down", "trap_execute", trap_execute, nullptr, room, trap);
 	}
 	else
@@ -1243,7 +1243,7 @@ void trap_execute(CHAR_DATA *victim, ROOM_INDEX_DATA *room, TRAP_DATA *trap)
 	if (!victim)
 		return;
 
-	act(trap->exec_echo, victim, 0, 0, TO_ALL);
+	act(trap->exec_echo, victim, nullptr, nullptr, TO_ALL);
 	switch (trap->type)
 	{
 		case TRAP_DART:
@@ -1489,7 +1489,7 @@ void do_open(CHAR_DATA *ch, char *argument)
 
 		if (is_affected_obj(obj, gsn_ice_blast))
 		{
-			act("$p is frozen shut!", ch, obj, 0, TO_CHAR);
+			act("$p is frozen shut!", ch, obj, nullptr, TO_CHAR);
 			return;
 		}
 
@@ -1619,7 +1619,7 @@ void do_close(CHAR_DATA *ch, char *argument)
 
 		if (is_affected_obj(obj, gsn_ice_blast))
 		{
-			act("$p is frozen shut!", ch, obj, 0, TO_CHAR);
+			act("$p is frozen shut!", ch, obj, nullptr, TO_CHAR);
 			return;
 		}
 
@@ -2635,8 +2635,8 @@ void do_wake(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	act("You wake $N.", ch, 0, victim, TO_CHAR);
-	act("$n wakes $N.", ch, 0, victim, TO_NOTVICT);
+	act("You wake $N.", ch, nullptr, victim, TO_CHAR);
+	act("$n wakes $N.", ch, nullptr, victim, TO_NOTVICT);
 	act_new("$n wakes you.", ch, nullptr, victim, TO_VICT, POS_SLEEPING);
 
 	do_stand(victim, "");
@@ -3027,7 +3027,7 @@ void do_creep(CHAR_DATA *ch, char *argument)
 	}
 	else
 	{
-		act("You can't creep there.", ch, nullptr, 0, TO_CHAR);
+		act("You can't creep there.", ch, nullptr, nullptr, TO_CHAR);
 	}
 
 	AFFECT_DATA af;
@@ -3171,8 +3171,8 @@ void un_earthfade(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 
 	affect_strip(ch, gsn_earthfade);
 
-	act("$n slowly emerges from the ground.", ch, 0, 0, TO_ROOM);
-	act("You slowly emerge from the ground.", ch, 0, 0, TO_CHAR);
+	act("$n slowly emerges from the ground.", ch, nullptr, nullptr, TO_ROOM);
+	act("You slowly emerge from the ground.", ch, nullptr, nullptr, TO_CHAR);
 	
 	WAIT_STATE(ch, 3 * PULSE_VIOLENCE);
 }
@@ -3184,8 +3184,8 @@ void un_blade_barrier(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 
 	affect_strip(ch, gsn_blade_barrier);
 
-	act("The whirling blades around $n vanish.", ch, 0, 0, TO_ROOM);
-	act("The whirling blades around you vanish.", ch, 0, 0, TO_CHAR);
+	act("The whirling blades around $n vanish.", ch, nullptr, nullptr, TO_ROOM);
+	act("The whirling blades around you vanish.", ch, nullptr, nullptr, TO_CHAR);
 
 	WAIT_STATE(ch, PULSE_VIOLENCE);
 }
@@ -3197,7 +3197,7 @@ void un_watermeld(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 
 	affect_strip(ch, gsn_watermeld);
 
-	act("The water swirls around you as your concealment fails you.", ch, 0, 0, TO_CHAR);
+	act("The water swirls around you as your concealment fails you.", ch, nullptr, nullptr, TO_CHAR);
 }
 
 void un_shroud(CHAR_DATA *ch, [[maybe_unused]] char *argument)
@@ -3234,7 +3234,7 @@ void do_recall(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 		return;
 	}
 
-	act("$n prays for transportation!", ch, 0, 0, TO_ROOM);
+	act("$n prays for transportation!", ch, nullptr, nullptr, TO_ROOM);
 
 	auto location = get_room_index(hometown_table[ch->hometown].recall);
 	if (location == nullptr)
@@ -3483,7 +3483,7 @@ void do_bear_call(CHAR_DATA *ch, char *argument)
 		&& ch->in_room->sector_type != SECT_HILLS
 		&& ch->in_room->sector_type != SECT_MOUNTAIN)
 	{
-		act("$n calls out into the surroundings but nothing comes.", ch, 0, 0, TO_ROOM);
+		act("$n calls out into the surroundings but nothing comes.", ch, nullptr, nullptr, TO_ROOM);
 		send_to_char("You call a bear call but nothing responds.\n\r", ch);
 		return;
 	}
@@ -3500,7 +3500,7 @@ void do_bear_call(CHAR_DATA *ch, char *argument)
 	ch->mana -= 70;
 	auto a_level = ch->level;
 
-	act("$n calls out to the wild and is heard!", ch, 0, 0, TO_ROOM);
+	act("$n calls out to the wild and is heard!", ch, nullptr, nullptr, TO_ROOM);
 	send_to_char("Your call to the wild is heard!\n\r", ch);
 
 	for (auto count = 0; count < 2; count++)
@@ -3645,7 +3645,7 @@ void do_animal_call(CHAR_DATA *ch, char *argument)
 
 	if (number_percent() > chance)
 	{
-		act("$n calls out to the wild but nothing responds.", ch, 0, 0, TO_ROOM);
+		act("$n calls out to the wild but nothing responds.", ch, nullptr, nullptr, TO_ROOM);
 		send_to_char("You call out to the wild but nothing responds.\n\r", ch);
 
 		ch->mana -= 25;
@@ -3661,7 +3661,7 @@ void do_animal_call(CHAR_DATA *ch, char *argument)
 		RS.Logger.Warn("Animal call: Bad mob vnum call {}.", type);
 
 		send_to_char("You call out to the wild but nothing responds.\n\r", ch);
-		act("$n calls out to the wild but nothing responds.", ch, 0, 0, TO_ROOM);
+		act("$n calls out to the wild but nothing responds.", ch, nullptr, nullptr, TO_ROOM);
 
 		ch->mana -= 25;
 		return;
@@ -3726,7 +3726,7 @@ void do_animal_call(CHAR_DATA *ch, char *argument)
 		RS.Logger.Warn("Bad animal call: {}.", type);
 
 		send_to_char("You call out to the wild but nothing responds.\n\r", ch);
-		act("$n calls out to the wild but nothing comes.\n\r", ch, 0, 0, TO_ROOM);
+		act("$n calls out to the wild but nothing comes.\n\r", ch, nullptr, nullptr, TO_ROOM);
 
 		ch->mana -= 25;
 		return;
@@ -3738,8 +3738,8 @@ void do_animal_call(CHAR_DATA *ch, char *argument)
 	animal1->level = ch->level;
 	animal2->level = ch->level;
 
-	act("Animals respond to $n's call!", ch, 0, animal1, TO_ROOM);
-	act("Animals respond to your call!", ch, 0, animal1, TO_CHAR);
+	act("Animals respond to $n's call!", ch, nullptr, animal1, TO_ROOM);
+	act("Animals respond to your call!", ch, nullptr, animal1, TO_CHAR);
 
 	ch->mana -= 50;
 
@@ -3795,7 +3795,7 @@ void track_char(CHAR_DATA *ch, CHAR_DATA *mob)
 	if (IS_SET(mob->act, ACT_SENTINEL))
 		return;
 
-	act("$n checks the ground for tracks.", mob, 0, 0, TO_ROOM);
+	act("$n checks the ground for tracks.", mob, nullptr, nullptr, TO_ROOM);
 
 	if (IS_SET(mob->off_flags, STATIC_TRACKING) || track_dir == -1)
 		return;
@@ -4130,7 +4130,7 @@ void do_vanish(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 		|| IS_SET(ch->in_room->room_flags, ROOM_NO_SUMMON_FROM))
 	{
 		send_to_char("You attempt to vanish without trace but fail.\n\r", ch);
-		act("$n attempts to slide into the shadows but fails.", ch, 0, 0, TO_ROOM);
+		act("$n attempts to slide into the shadows but fails.", ch, nullptr, nullptr, TO_ROOM);
 
 		check_improve(ch, gsn_vanish, false, 2);
 
@@ -4172,13 +4172,13 @@ void do_vanish(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 
 	stop_fighting(ch, true);
 
-	act("$n suddenly vanishes into the shadows!", ch, 0, 0, TO_ROOM);
+	act("$n suddenly vanishes into the shadows!", ch, nullptr, nullptr, TO_ROOM);
 	send_to_char("You slip into the shadows and vanish!\n\r", ch);
 
 	char_from_room(ch);
 	char_to_room(ch, pRoomIndex);
 
-	act("$n appears from the shadows.", ch, 0, 0, TO_ROOM);
+	act("$n appears from the shadows.", ch, nullptr, nullptr, TO_ROOM);
 
 	do_look(ch, "auto");
 
@@ -4254,11 +4254,11 @@ void do_door_bash(CHAR_DATA *ch, char *argument)
 
 	if (number_percent() > chance || IS_SET(pexit->exit_info, EX_NOBASH))
 	{
-		act("$n flies into the $T door and rebounds with a great lack of dignity!", ch, 0, dir_name[door], TO_ROOM);
-		act("You fly into the door $T but simply bounce off it like a lump of rock!", ch, 0, dir_name[door], TO_CHAR);
+		act("$n flies into the $T door and rebounds with a great lack of dignity!", ch, nullptr, dir_name[door], TO_ROOM);
+		act("You fly into the door $T but simply bounce off it like a lump of rock!", ch, nullptr, dir_name[door], TO_CHAR);
 
 		if (pexit->u1.to_room->people)
-			act("The door buckles as a heavy weight crashes against it from the other side!", pexit->u1.to_room->people, 0, 0, TO_ALL);
+			act("The door buckles as a heavy weight crashes against it from the other side!", pexit->u1.to_room->people, nullptr, nullptr, TO_ALL);
 
 		damage_new(ch, ch, dice(ch->level, 2), gsn_door_bash, DAM_BASH, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the impact*");
 
@@ -4270,8 +4270,8 @@ void do_door_bash(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	act("$n slams into the $T door and throws it open with a mighty crash!", ch, 0, dir_name[door], TO_ROOM);
-	act("You slam into the $T door and it cracks open with a deafening sound!", ch, 0, dir_name[door], TO_CHAR);
+	act("$n slams into the $T door and throws it open with a mighty crash!", ch, nullptr, dir_name[door], TO_ROOM);
+	act("You slam into the $T door and it cracks open with a deafening sound!", ch, nullptr, dir_name[door], TO_CHAR);
 
 	check_improve(ch, gsn_door_bash, true, 1);
 

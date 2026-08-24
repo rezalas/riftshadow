@@ -205,7 +205,7 @@ void spell_epic(int sn, int level, CHAR_DATA *ch, [[maybe_unused]] SpellTarget v
 	affect_to_char(ch, &af);
 
 	send_to_char("Strength surges through your body as you prepare for battle.\n\r", ch);
-	act("$n concentrates intently for a moment, getting a wild look in $s eyes.", ch, 0, 0, TO_ROOM);
+	act("$n concentrates intently for a moment, getting a wild look in $s eyes.", ch, nullptr, nullptr, TO_ROOM);
 }
 
 void spell_calm(int sn, int level, CHAR_DATA *ch, [[maybe_unused]] SpellTarget vo, [[maybe_unused]] CastMode mode)
@@ -281,7 +281,7 @@ void spell_rage(int sn, int level, CHAR_DATA *ch, [[maybe_unused]] SpellTarget v
 	sprintf(buf, "You feel your rage grow as the spirit of the %s surges through you!\n\r", capitalize(tribe_table[ch->pcdata->tribe].name));
 	send_to_char(buf, ch);
 
-	act("$n starts growling and frothing as $s battle rage overtakes $m!", ch, 0, 0, TO_ROOM);
+	act("$n starts growling and frothing as $s battle rage overtakes $m!", ch, nullptr, nullptr, TO_ROOM);
 
 	if (is_affected(ch, gsn_sanctuary) || is_affected(ch, gsn_protective_shield))
 	{
@@ -770,7 +770,7 @@ void spell_hire_mercenary(int sn, int level, CHAR_DATA *ch, SpellTarget /* vo */
 	}
 
 	sprintf(buf, "The mercenary's guild charges you %i gold for your hired mercenary.\n\r", amount);
-	act("$n hires $N.", ch, 0, merc, TO_ROOM);
+	act("$n hires $N.", ch, nullptr, merc, TO_ROOM);
 
 	send_to_char(buf, ch);
 
@@ -831,7 +831,7 @@ void spell_hunters_strength(int sn, int level, CHAR_DATA *ch, SpellTarget /* vo 
 	affect_to_char(ch, &af);
 
 	send_to_char("You feel your body surge with the newfound strength of a hunter seeking his prey!\n\r", ch);
-	act("$n seems to move with a newfound strength and agility.", ch, 0, 0, TO_ROOM);
+	act("$n seems to move with a newfound strength and agility.", ch, nullptr, nullptr, TO_ROOM);
 }
 
 void spell_hunters_awareness(int sn, int level, CHAR_DATA *ch, SpellTarget /* vo */, CastMode /* mode */)
@@ -872,15 +872,15 @@ void spell_hunters_awareness(int sn, int level, CHAR_DATA *ch, SpellTarget /* vo
 		{
 			ch->mana -= 100;
 
-			act("You stalk $N relentlessly, pursuing $M with all the tools at your disposal.", ch, 0, victim, TO_CHAR);
+			act("You stalk $N relentlessly, pursuing $M with all the tools at your disposal.", ch, nullptr, victim, TO_CHAR);
 
 			if (saves_spell(level + 8, victim, DAM_OTHER))
 			{
-				act("You are unable to get an accurate fix on $N.", ch, 0, victim, TO_CHAR);
+				act("You are unable to get an accurate fix on $N.", ch, nullptr, victim, TO_CHAR);
 				return;
 			}
 
-			act("You manage to get an accurate perception of $N's surroundings.", ch, 0, victim, TO_CHAR);
+			act("You manage to get an accurate perception of $N's surroundings.", ch, nullptr, victim, TO_CHAR);
 
 			send_to_char(get_room_description(victim->in_room), ch);
 			send_to_char("\n\r", ch);
@@ -928,15 +928,15 @@ void spell_web(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]
 
 	if (saves_spell(level + 5, victim, DAM_OTHER) || number_range(20, 35) < get_curr_stat(victim, STAT_DEX))
 	{
-		act("$n tries to entangle you in a sticky web, but you avoid it.", ch, 0, victim, TO_VICT);
-		act("$n tries to entangle $N in a sticky web, but $E avoids it.", ch, 0, victim, TO_NOTVICT);
-		act("You try to entangle $N, but $E avoids it.", ch, 0, victim, TO_CHAR);
+		act("$n tries to entangle you in a sticky web, but you avoid it.", ch, nullptr, victim, TO_VICT);
+		act("$n tries to entangle $N in a sticky web, but $E avoids it.", ch, nullptr, victim, TO_NOTVICT);
+		act("You try to entangle $N, but $E avoids it.", ch, nullptr, victim, TO_CHAR);
 		return;
 	}
 
-	act("$n releases a sticky web at you, impeding your mobility!", ch, 0, victim, TO_VICT);
-	act("$n releases a sticky web at $N!", ch, 0, victim, TO_NOTVICT);
-	act("You release a sticky web at $N!", ch, 0, victim, TO_CHAR);
+	act("$n releases a sticky web at you, impeding your mobility!", ch, nullptr, victim, TO_VICT);
+	act("$n releases a sticky web at $N!", ch, nullptr, victim, TO_NOTVICT);
+	act("You release a sticky web at $N!", ch, nullptr, victim, TO_CHAR);
 
 	victim->move /= 2;
 
@@ -969,7 +969,7 @@ void spell_informant(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /* vo *
 
 	if (saves_spell(level + 8, victim, DAM_OTHER) || is_npc(victim) || is_immortal(victim))
 	{
-		act("Your spies are unable to locate $N.", ch, 0, victim, TO_CHAR);
+		act("Your spies are unable to locate $N.", ch, nullptr, victim, TO_CHAR);
 		return;
 	}
 
@@ -1035,13 +1035,13 @@ void do_howl(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 
 	if (number_percent() > get_skill(ch, gsn_howl) || exits == 0)
 	{
-		act("$n opens $s mouth to scream, but his voice sounds stripped.", ch, 0, 0, TO_ROOM);
+		act("$n opens $s mouth to scream, but his voice sounds stripped.", ch, nullptr, nullptr, TO_ROOM);
 		send_to_char("Your howl seems to be rather weak.\n\r", ch);
 		check_improve(ch, gsn_howl, false, 2);
 	}
 	else
 	{
-		act("$n opens $s mouth and startles you with an animal-like howl!", ch, 0, 0, TO_ROOM);
+		act("$n opens $s mouth and startles you with an animal-like howl!", ch, nullptr, nullptr, TO_ROOM);
 		send_to_char("You scream at the top of your lungs like an animal!\n\r", ch);
 		check_improve(ch, gsn_howl, true, 2);
 
@@ -1054,7 +1054,7 @@ void do_howl(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 				&& Deref(vch->fighting) == ch
 				&& (!is_npc(vch) || (is_npc(vch) && !IS_SET(vch->act, ACT_SENTINEL))))
 			{
-				act("$n looks frightened and tries to run!", vch, 0, 0, TO_ROOM);
+				act("$n looks frightened and tries to run!", vch, nullptr, nullptr, TO_ROOM);
 				do_flee(vch, "");
 			}
 		}
@@ -1074,9 +1074,9 @@ void spell_mana_transfer(int sn, int /* level */, CHAR_DATA *ch, SpellTarget vo,
 		return;
 	}
 
-	act("You transfer part of your energy to $N!", ch, 0, victim, TO_CHAR);
-	act("$n transfers part of $s energy to you!", ch, 0, victim, TO_VICT);
-	act("$n transfers part of $s energy to $N!", ch, 0, victim, TO_NOTVICT);
+	act("You transfer part of your energy to $N!", ch, nullptr, victim, TO_CHAR);
+	act("$n transfers part of $s energy to you!", ch, nullptr, victim, TO_VICT);
+	act("$n transfers part of $s energy to $N!", ch, nullptr, victim, TO_NOTVICT);
 
 	damage_new(ch, ch, mod, sn, DAM_MENTAL, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "mana transfer");
 
@@ -1116,7 +1116,7 @@ void spell_scribe(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /* vo */, 
 
 	if (obj == nullptr)
 	{
-		act("You do not have a blank scroll to scribe on.", ch, 0, 0, TO_CHAR);
+		act("You do not have a blank scroll to scribe on.", ch, nullptr, nullptr, TO_CHAR);
 		return;
 	}
 
@@ -1129,7 +1129,7 @@ void spell_scribe(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /* vo */, 
 
 	if ((ch->mana - cost) < 0)
 	{
-		act("You do not have the mana to scribe a scroll.", ch, 0, 0, TO_CHAR);
+		act("You do not have the mana to scribe a scroll.", ch, nullptr, nullptr, TO_CHAR);
 		return;
 	}
 	else
@@ -1139,19 +1139,19 @@ void spell_scribe(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /* vo */, 
 
 	if (get_skill(ch, skill) == 0)
 	{
-		act("You are not even learned in $t.", ch, skill_table[skill].name, 0, TO_CHAR);
+		act("You are not even learned in $t.", ch, skill_table[skill].name, nullptr, TO_CHAR);
 		return;
 	}
 
 	if (get_skill(ch, skill) < 90)
 	{
-		act("You are not sufficiently learned in $t to properly scribe it.", ch, skill_table[skill].name, 0, TO_CHAR);
+		act("You are not sufficiently learned in $t to properly scribe it.", ch, skill_table[skill].name, nullptr, TO_CHAR);
 		return;
 	}
 
 	if (skill_table[skill].skill_level[ch->Class()->GetIndex()] >= 30)
 	{
-		act("That spell is too high level to be scribed!", ch, 0, 0, TO_CHAR);
+		act("That spell is too high level to be scribed!", ch, nullptr, nullptr, TO_CHAR);
 		return;
 	}
 
@@ -1169,8 +1169,8 @@ void spell_scribe(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /* vo */, 
 	free_pstring(obj->description);
 	obj->description = palloc_string("You see a scroll marked with some strange arcane symbols.");
 
-	act("You scribe the $t spell onto the scroll!", ch, skill_table[skill].name, 0, TO_CHAR);
-	act("$n makes detailed inscriptions on a scroll in $s possession.", ch, skill_table[skill].name, 0, TO_ROOM);
+	act("You scribe the $t spell onto the scroll!", ch, skill_table[skill].name, nullptr, TO_CHAR);
+	act("$n makes detailed inscriptions on a scroll in $s possession.", ch, skill_table[skill].name, nullptr, TO_ROOM);
 }
 
 void spell_deny_magic([[maybe_unused]] int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
@@ -1184,9 +1184,9 @@ void spell_deny_magic([[maybe_unused]] int sn, int level, CHAR_DATA *ch, SpellTa
 		return;
 	}
 
-	act("You gesture at $N and $E is surrounded by a faint blue aura.", ch, 0, victim, TO_CHAR);
-	act("$n gestures at you, and a faint blue aura forms around you.", ch, 0, victim, TO_VICT);
-	act("$n gestures at $N, and a faint blue aura forms around $M.", ch, 0, victim, TO_NOTVICT);
+	act("You gesture at $N and $E is surrounded by a faint blue aura.", ch, nullptr, victim, TO_CHAR);
+	act("$n gestures at you, and a faint blue aura forms around you.", ch, nullptr, victim, TO_VICT);
+	act("$n gestures at $N, and a faint blue aura forms around $M.", ch, nullptr, victim, TO_NOTVICT);
 
 	init_affect(&af);
 	af.where = TO_AFFECTS;
@@ -1203,8 +1203,8 @@ bool check_deny_magic(CHAR_DATA *ch)
 	if (!is_affected(ch, gsn_deny_magic))
 		return false;
 
-	act("The light blue aura around you flares and your magic does nothing.", ch, 0, 0, TO_CHAR);
-	act("The light blue aura around $n flares.", ch, 0, 0, TO_ROOM);
+	act("The light blue aura around you flares and your magic does nothing.", ch, nullptr, nullptr, TO_CHAR);
+	act("The light blue aura around $n flares.", ch, nullptr, nullptr, TO_ROOM);
 
 	return true;
 }
@@ -1217,9 +1217,9 @@ void spell_bane([[maybe_unused]] int sn, int level, CHAR_DATA *ch, SpellTarget v
 	if (IS_SET(victim->act, PLR_IGNORANT))
 	{
 		damage = 3 * dice(level, 3);
-		act("Your mental assault tears at $N's ignorance!", ch, 0, victim, TO_CHAR);
-		act("$n's mental assault tears at your ignorance!", ch, 0, victim, TO_VICT);
-		act("$n's mental assault tears at $N's ignorance!", ch, 0, victim, TO_NOTVICT);
+		act("Your mental assault tears at $N's ignorance!", ch, nullptr, victim, TO_CHAR);
+		act("$n's mental assault tears at your ignorance!", ch, nullptr, victim, TO_VICT);
+		act("$n's mental assault tears at $N's ignorance!", ch, nullptr, victim, TO_NOTVICT);
 	}
 	else
 	{
@@ -1235,7 +1235,7 @@ void spell_repose(int /* sn */, int /* level */, CHAR_DATA *ch, SpellTarget /* v
 
 	if (is_affected(ch, gsn_repose))
 	{
-		act("You are already able to rest quickly.", ch, 0, 0, TO_CHAR);
+		act("You are already able to rest quickly.", ch, nullptr, nullptr, TO_CHAR);
 	}
 	else
 	{
@@ -1246,7 +1246,7 @@ void spell_repose(int /* sn */, int /* level */, CHAR_DATA *ch, SpellTarget /* v
 		af.duration = ch->level;
 		af.mod_name = MOD_MOVEMENT;
 		new_affect_to_char(ch, &af);
-		act("You feel lighter on your feet.", ch, 0, 0, TO_CHAR);
+		act("You feel lighter on your feet.", ch, nullptr, nullptr, TO_CHAR);
 	}
 }
 
@@ -1257,7 +1257,7 @@ void spell_medicine(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /* vo */
 
 	if (is_affected(ch, gsn_medicine))
 	{
-		act("You cannot apply medicine again so soon.", ch, 0, 0, TO_CHAR);
+		act("You cannot apply medicine again so soon.", ch, nullptr, nullptr, TO_CHAR);
 		return;
 	}
 
@@ -1277,14 +1277,14 @@ void spell_medicine(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /* vo */
 
 		if (vch == ch)
 		{
-			act("You apply medicine to your wounds.", ch, 0, 0, TO_CHAR);
-			act("$n applies medicine to $s wounds.", ch, 0, 0, TO_ROOM);
+			act("You apply medicine to your wounds.", ch, nullptr, nullptr, TO_CHAR);
+			act("$n applies medicine to $s wounds.", ch, nullptr, nullptr, TO_ROOM);
 		}
 		else
 		{
-			act("You apply medicine to $N's wounds.", ch, 0, vch, TO_CHAR);
-			act("$n applies medicine to your wounds.", ch, 0, vch, TO_VICT);
-			act("$n applies medicine to $N's wounds.", ch, 0, vch, TO_NOTVICT);
+			act("You apply medicine to $N's wounds.", ch, nullptr, vch, TO_CHAR);
+			act("$n applies medicine to your wounds.", ch, nullptr, vch, TO_VICT);
+			act("$n applies medicine to $N's wounds.", ch, nullptr, vch, TO_NOTVICT);
 		}
 	}
 }
@@ -1346,7 +1346,7 @@ void spell_horde_communion(int /* sn */, int level, CHAR_DATA *ch, SpellTarget v
 		|| victim->Class()->name == "shapeshifter"
 		|| victim->Class()->name == "chronomancer")
 	{
-		act("$N is not fit to partake in the rites of communion.", ch, 0, victim, TO_CHAR);
+		act("$N is not fit to partake in the rites of communion.", ch, nullptr, victim, TO_CHAR);
 		return;
 	}
 
@@ -1358,9 +1358,9 @@ void spell_horde_communion(int /* sn */, int level, CHAR_DATA *ch, SpellTarget v
 		return;
 	}
 
-	act("You prepare $N for communion with the animal spirits of Horde.", ch, 0, victim, TO_CHAR);
-	act("A tranquil calm washes over you as your skin tingles slightly.", ch, 0, victim, TO_VICT);
-	act("A gentle breeze sweeps through, as an eerie silence falls over the area.", ch, 0, victim, TO_NOTVICT);
+	act("You prepare $N for communion with the animal spirits of Horde.", ch, nullptr, victim, TO_CHAR);
+	act("A tranquil calm washes over you as your skin tingles slightly.", ch, nullptr, victim, TO_VICT);
+	act("A gentle breeze sweeps through, as an eerie silence falls over the area.", ch, nullptr, victim, TO_NOTVICT);
 
 	init_affect(&af);
 	af.where = TO_AFFECTS;
@@ -1422,8 +1422,8 @@ void do_exile(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	act("You exile $N from the Horde and mark $M as a betrayer to you and your brethren!", ch, 0, victim, TO_CHAR);
-	act("You have been exiled from the Longhouse and marked a betrayer of your brethren!", ch, 0, victim, TO_VICT);
+	act("You exile $N from the Horde and mark $M as a betrayer to you and your brethren!", ch, nullptr, victim, TO_CHAR);
+	act("You have been exiled from the Longhouse and marked a betrayer of your brethren!", ch, nullptr, victim, TO_VICT);
 
 	victim->cabal = CABAL_NONE;
 
@@ -1468,8 +1468,8 @@ void spell_piety(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /* vo */, C
 	af.duration = level / 5;
 	affect_to_char(ch, &af);
 
-	act("Your righteous wrath at the impure surges through you.", ch, 0, 0, TO_CHAR);
-	act("$n stands taller as $s righteous wrath infuses $m.", ch, 0, 0, TO_ROOM);
+	act("Your righteous wrath at the impure surges through you.", ch, nullptr, nullptr, TO_CHAR);
+	act("$n stands taller as $s righteous wrath infuses $m.", ch, nullptr, nullptr, TO_ROOM);
 }
 
 void spell_fervor(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /* vo */, CastMode /* mode */)
@@ -1508,8 +1508,8 @@ void spell_fervor(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /* vo */, 
 
 	new_affect_to_char(ch, &af);
 
-	act("$n's eyes blaze with light for a moment before fading to a dull glow.", ch, 0, 0, TO_ROOM);
-	act("You feel your spirit rejoice as holy fervor enters you.", ch, 0, 0, TO_CHAR);
+	act("$n's eyes blaze with light for a moment before fading to a dull glow.", ch, nullptr, nullptr, TO_ROOM);
+	act("You feel your spirit rejoice as holy fervor enters you.", ch, nullptr, nullptr, TO_CHAR);
 }
 
 void spell_spiritual_healing(int /* sn */, int level, CHAR_DATA *ch, SpellTarget vo, CastMode /* mode */)
@@ -1525,7 +1525,7 @@ void spell_spiritual_healing(int /* sn */, int level, CHAR_DATA *ch, SpellTarget
 
 	if (!is_good(victim))
 	{
-		act("$N is too impure!", ch, 0, victim, TO_CHAR);
+		act("$N is too impure!", ch, nullptr, victim, TO_CHAR);
 		return;
 	}
 
@@ -1533,26 +1533,26 @@ void spell_spiritual_healing(int /* sn */, int level, CHAR_DATA *ch, SpellTarget
 
 	if (ch != victim)
 	{
-		act("$n utters a quiet prayer and places $s hand on your forehead.", ch, 0, victim, TO_VICT);
-		act("You quietly say a prayer, placing your hand on $N's forehead.", ch, 0, victim, TO_CHAR);
-		act("$n places a hand on $N's forehead.", ch, 0, victim, TO_NOTVICT);
+		act("$n utters a quiet prayer and places $s hand on your forehead.", ch, nullptr, victim, TO_VICT);
+		act("You quietly say a prayer, placing your hand on $N's forehead.", ch, nullptr, victim, TO_CHAR);
+		act("$n places a hand on $N's forehead.", ch, nullptr, victim, TO_NOTVICT);
 	}
 	else
 	{
-		act("You pray quietly for healing.", ch, 0, victim, TO_CHAR);
-		act("$n utters a quiet prayer.", ch, 0, 0, TO_ROOM);
+		act("You pray quietly for healing.", ch, nullptr, victim, TO_CHAR);
+		act("$n utters a quiet prayer.", ch, nullptr, nullptr, TO_ROOM);
 	}
 
 	if (check_dispel(ch->level, victim, gsn_poison))
 	{
 		send_to_char("Your fever subsides as the poison leaves your body.\n\r", ch);
-		act("$n looks better.", ch, 0, 0, TO_ROOM);
+		act("$n looks better.", ch, nullptr, nullptr, TO_ROOM);
 	}
 
 	if (check_dispel(ch->level, victim, gsn_plague))
 	{
 		send_to_char("Your plague sores vanish.\n\r", ch);
-		act("$n looks relieved as his sores vanish.", ch, 0, 0, TO_ROOM);
+		act("$n looks relieved as his sores vanish.", ch, nullptr, nullptr, TO_ROOM);
 	}
 
 	if (check_dispel(ch->level, victim, gsn_blindness))
@@ -1585,8 +1585,8 @@ void spell_shroud_of_light(int sn, int level, CHAR_DATA *ch, SpellTarget /* vo *
 		return;
 	}
 
-	act("A feeling of warmth fills your body as you become shrouded in crackling light.", ch, 0, 0, TO_CHAR);
-	act("A veil of sparkling luminescence crackles into existence around $n.", ch, 0, 0, TO_ROOM);
+	act("A feeling of warmth fills your body as you become shrouded in crackling light.", ch, nullptr, nullptr, TO_CHAR);
+	act("A veil of sparkling luminescence crackles into existence around $n.", ch, nullptr, nullptr, TO_ROOM);
 
 	init_affect(&af);
 	af.where = TO_AFFECTS;
@@ -1626,10 +1626,10 @@ void spell_crimson_martyr(int sn, int level, CHAR_DATA *ch, SpellTarget /* vo */
 		return;
 	}
 
-	act("Raising $s arms to the heavens in supplication, $n calls down judgement upon the impure!", ch, 0, 0, TO_ROOM);
-	act("$n blazes with blinding incandescence as the wrath of the Light falls upon you!", ch, 0, 0, TO_ROOM);
-	act("Raising your arms to the heavens in supplication, you call down judgement upon the impure!", ch, 0, 0, TO_CHAR);
-	act("You feel the infinite power of the Light surge through you, burning you alive!", ch, 0, 0, TO_CHAR);
+	act("Raising $s arms to the heavens in supplication, $n calls down judgement upon the impure!", ch, nullptr, nullptr, TO_ROOM);
+	act("$n blazes with blinding incandescence as the wrath of the Light falls upon you!", ch, nullptr, nullptr, TO_ROOM);
+	act("Raising your arms to the heavens in supplication, you call down judgement upon the impure!", ch, nullptr, nullptr, TO_CHAR);
+	act("You feel the infinite power of the Light surge through you, burning you alive!", ch, nullptr, nullptr, TO_CHAR);
 
 	for (vch = ch->in_room->people; vch; vch = vch_next)
 	{
@@ -1664,11 +1664,11 @@ void spell_crimson_martyr(int sn, int level, CHAR_DATA *ch, SpellTarget /* vo */
 			// Correcting it turns on healing that has never applied to anyone
 			// short of full, so the magnitude needs a balance decision first.
 			vch->hit = std::min((int)vch->max_hit, vch->hit + (level * 10 * (ch->hit / ch->max_hit)));
-			act("$n's sacrifice infuses you with newfound vigor!", ch, 0, vch, TO_VICT);
+			act("$n's sacrifice infuses you with newfound vigor!", ch, nullptr, vch, TO_VICT);
 		}
 	}
 
-	act("$n slumps to the ground, crimson blood streaming from $s body.", ch, 0, 0, TO_ROOM);
+	act("$n slumps to the ground, crimson blood streaming from $s body.", ch, nullptr, nullptr, TO_ROOM);
 	send_to_char("You fall to the ground as the searing ravages of your martyrdom take their toll.\n\r", ch);
 
 	stop_fighting(ch, true);
@@ -1716,9 +1716,9 @@ void spell_retribution(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe
 	af.owner = ch->self;
 	affect_to_char(victim, &af);
 
-	act("You unleash the vengeance of the Phalanx upon $N!", ch, 0, victim, TO_CHAR);
-	act("$n unleashes the vengeance of the Phalanx upon $N!", ch, 0, victim, TO_NOTVICT);
-	act("$n unleashes the vengeance of the Phalanx upon you!", ch, 0, victim, TO_VICT);
+	act("You unleash the vengeance of the Phalanx upon $N!", ch, nullptr, victim, TO_CHAR);
+	act("$n unleashes the vengeance of the Phalanx upon $N!", ch, nullptr, victim, TO_NOTVICT);
+	act("$n unleashes the vengeance of the Phalanx upon you!", ch, nullptr, victim, TO_VICT);
 
 	af.tick_fun = nullptr;
 	af.duration = level - 5;
@@ -1768,16 +1768,16 @@ void do_phalanx(CHAR_DATA *ch, char *argument)
 		victim->pcdata->cabal_level = 2;
 		update_cskills(victim);
 
-		act("$N is now a Keeper of the Fire.", ch, 0, victim, TO_CHAR);
-		act("You are now a Keeper of the Fire.", ch, 0, victim, TO_VICT);
+		act("$N is now a Keeper of the Fire.", ch, nullptr, victim, TO_CHAR);
+		act("You are now a Keeper of the Fire.", ch, nullptr, victim, TO_VICT);
 	}
 	else if (!str_cmp(argument, "inquisitor"))
 	{
 		victim->pcdata->cabal_level = 3;
 		update_cskills(victim);
 
-		act("$N is now an Inquisitor of the Fire.", ch, 0, victim, TO_CHAR);
-		act("You are now an Inquisitor of the Fire.", ch, 0, victim, TO_VICT);
+		act("$N is now an Inquisitor of the Fire.", ch, nullptr, victim, TO_CHAR);
+		act("You are now an Inquisitor of the Fire.", ch, nullptr, victim, TO_VICT);
 	}
 	else
 	{
@@ -1798,15 +1798,15 @@ void spell_safehaven(int /* sn */, int /* level */, CHAR_DATA *ch, SpellTarget v
 		}
 		else
 		{
-			act("$N is not healthy enough to return to the safe haven.", ch, 0, victim, TO_CHAR);
+			act("$N is not healthy enough to return to the safe haven.", ch, nullptr, victim, TO_CHAR);
 			return;
 		}
 	}
 
 	if (ch == victim)
 	{
-		act("You call upon the power of Light to transport yourself to the safe haven.", ch, 0, 0, TO_CHAR);
-		act("$n disappears in a flash of light.", ch, 0, 0, TO_ROOM);
+		act("You call upon the power of Light to transport yourself to the safe haven.", ch, nullptr, nullptr, TO_CHAR);
+		act("$n disappears in a flash of light.", ch, nullptr, nullptr, TO_ROOM);
 
 		char_from_room(ch);
 		char_to_room(ch, get_room_index(3699));
@@ -1823,9 +1823,9 @@ void spell_safehaven(int /* sn */, int /* level */, CHAR_DATA *ch, SpellTarget v
 			return;
 		}
 
-		act("You call upon the power of Light to transport $N to the safe haven.", ch, 0, victim, TO_CHAR);
-		act("$n calls upon the Light and you are transported to the safe haven.", ch, 0, victim, TO_VICT);
-		act("$n vanishes in a flash of light.", victim, 0, ch, TO_ROOM);
+		act("You call upon the power of Light to transport $N to the safe haven.", ch, nullptr, victim, TO_CHAR);
+		act("$n calls upon the Light and you are transported to the safe haven.", ch, nullptr, victim, TO_VICT);
+		act("$n vanishes in a flash of light.", victim, nullptr, ch, TO_ROOM);
 
 		char_from_room(victim);
 		char_to_room(victim, get_room_index(3699));

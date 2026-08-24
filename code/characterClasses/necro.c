@@ -82,7 +82,7 @@ void spell_dark_vessel(int /* sn */, int /* level */, CHAR_DATA *ch, SpellTarget
 
 	WAIT_STATE(ch, PULSE_VIOLENCE * 2);
 
-	act("$n plunges a hand into $p's chest cavity, and removes the heart.", ch, corpse, 0, TO_ROOM);
+	act("$n plunges a hand into $p's chest cavity, and removes the heart.", ch, corpse, nullptr, TO_ROOM);
 
 	RS.Queue.AddToQueue(2, "spell_dark_vessel", "act_queue", act_queue, "$n holds the heart aloft as it visibly begins to harden.", ch, nullptr, nullptr, TO_ROOM);
 	send_to_char("You remove the corpse's heart and squeeze the blood out of it, hardening it into a solid object.\n\r", ch);
@@ -101,8 +101,8 @@ void make_urn(CHAR_DATA *ch, OBJ_DATA *corpse)
 {
 	char buf[MSL];
 
-	act("When this morbid sculpting is complete, $n is holding a solid receptacle.", ch, 0, 0, TO_ROOM);
-	act("You craft a morbid urn from the coagulated blood of $p!", ch, corpse, 0, TO_CHAR);
+	act("When this morbid sculpting is complete, $n is holding a solid receptacle.", ch, nullptr, nullptr, TO_ROOM);
+	act("You craft a morbid urn from the coagulated blood of $p!", ch, corpse, nullptr, TO_CHAR);
 
 	if (corpse->item_type == ITEM_CORPSE_NPC)
 	{
@@ -207,9 +207,9 @@ void spell_siphon([[maybe_unused]] int sn, int level, CHAR_DATA *ch, SpellTarget
 		return;
 	}
 
-	act("$n siphons the blood from $N's body in a sudden crimson burst!", ch, 0, victim, TO_NOTVICT);
-	act("$n siphons the blood right out of your body in a crimson burst!", ch, 0, victim, TO_VICT);
-	act("You siphon the blood out of $N's body in a crimson burst!", ch, 0, victim, TO_CHAR);
+	act("$n siphons the blood from $N's body in a sudden crimson burst!", ch, nullptr, victim, TO_NOTVICT);
+	act("$n siphons the blood right out of your body in a crimson burst!", ch, nullptr, victim, TO_VICT);
+	act("You siphon the blood out of $N's body in a crimson burst!", ch, nullptr, victim, TO_CHAR);
 
 	damage_new(ch, victim, dam, TYPE_UNDEFINED, DAM_NEGATIVE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "siphoning");
 
@@ -241,17 +241,17 @@ void spell_hex(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]
 	if (is_affected(victim, sn))
 		return send_to_char("They are already hexed.\n\r", ch);
 
-	act("$n grins maniacally and spits out an archaic word, unleashing a hex upon $N!", ch, 0, victim, TO_NOTVICT);
-	act("$n grins maniacally and spits out an archaic word, unleashing a hex upon you!", ch, 0, victim, TO_VICT);
-	act("You grin maniacally and spit out an archaic word, unleashing a hex upon $N!", ch, 0, victim, TO_CHAR);
+	act("$n grins maniacally and spits out an archaic word, unleashing a hex upon $N!", ch, nullptr, victim, TO_NOTVICT);
+	act("$n grins maniacally and spits out an archaic word, unleashing a hex upon you!", ch, nullptr, victim, TO_VICT);
+	act("You grin maniacally and spit out an archaic word, unleashing a hex upon $N!", ch, nullptr, victim, TO_CHAR);
 
 	chance = get_skill(ch, sn);
 	roll = number_percent();
 
 	if (saves_spell(level + 2, victim, DAM_NEGATIVE) && ((chance * 0.80) < roll))
 	{
-		act("$n staggers for a moment, but resists the hex.", victim, 0, 0, TO_ROOM);
-		act("You stagger as the power of the hex strikes you, but manage to resist it.", victim, 0, 0, TO_CHAR);
+		act("$n staggers for a moment, but resists the hex.", victim, nullptr, nullptr, TO_ROOM);
+		act("You stagger as the power of the hex strikes you, but manage to resist it.", victim, nullptr, nullptr, TO_CHAR);
 		return;
 	}
 
@@ -313,17 +313,17 @@ void spell_hex(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]
 
 	if (severity > 1 && severity < 4)
 	{
-		act("$n sags as the hex strikes him powerfully!", victim, 0, 0, TO_ROOM);
-		act("You slump as the hex strikes you powerfully.", victim, 0, 0, TO_CHAR);
+		act("$n sags as the hex strikes him powerfully!", victim, nullptr, nullptr, TO_ROOM);
+		act("You slump as the hex strikes you powerfully.", victim, nullptr, nullptr, TO_CHAR);
 	}
 
 	if (severity == 4)
 	{
-		act("$n screams in utter agony as the full power of the hex strangles $s soul!", victim, 0, 0, TO_ROOM);
-		act("You scream in utter agony as the full power of the hex strangles your soul!", victim, 0, 0, TO_CHAR);
+		act("$n screams in utter agony as the full power of the hex strangles $s soul!", victim, nullptr, nullptr, TO_ROOM);
+		act("You scream in utter agony as the full power of the hex strangles your soul!", victim, nullptr, nullptr, TO_CHAR);
 	}
 
-	act("You feel drained from the power of your hex.", ch, 0, 0, TO_CHAR);
+	act("You feel drained from the power of your hex.", ch, nullptr, nullptr, TO_CHAR);
 	drain_factor = 1 - (0.97 - (0.035 * severity));
 	drain = (int)(drain_factor * ch->hit);
 	ch->hit -= drain;
@@ -400,8 +400,8 @@ void spell_animate_dead(int sn, int level, CHAR_DATA *ch, SpellTarget /* vo */, 
 
 	ch->disrupted= false;
 
-	act("You kneel before $p, chanting softly in an arcane language.", ch, corpse, 0, TO_CHAR);
-	act("$n kneels before $p, chanting softly in an unintelligible language.", ch, corpse, 0, TO_ROOM);
+	act("You kneel before $p, chanting softly in an arcane language.", ch, corpse, nullptr, TO_CHAR);
+	act("$n kneels before $p, chanting softly in an unintelligible language.", ch, corpse, nullptr, TO_ROOM);
 
 	RS.Queue.AddToQueue(2, "spell_animate_dead", "animate_two", animate_two, ch, corpse);
 }
@@ -483,7 +483,7 @@ void animate_four(CHAR_DATA *ch, OBJ_DATA *corpse)
 
 	if (number_percent() > corpse->value[4])
 	{
-		act("The magics fail to take hold, leaving the corpse a worthless pile of entrails.", ch, 0, 0, TO_CHAR);
+		act("The magics fail to take hold, leaving the corpse a worthless pile of entrails.", ch, nullptr, nullptr, TO_CHAR);
 		act("$n's efforts to animate $p result only in a disgusting pile of entrails.", ch, corpse, nullptr, TO_ROOM);
 
 		extract_obj(corpse);
@@ -500,8 +500,8 @@ void animate_four(CHAR_DATA *ch, OBJ_DATA *corpse)
 	af.location = 0;
 	affect_to_char(ch, &af);
 
-	act("$p convulses slightly and rises to its feet to serve $n!", ch, corpse, 0, TO_ROOM);
-	act("$p convulses slightly and rises to its feet to serve you!", ch, corpse, 0, TO_CHAR);
+	act("$p convulses slightly and rises to its feet to serve $n!", ch, corpse, nullptr, TO_ROOM);
+	act("$p convulses slightly and rises to its feet to serve you!", ch, corpse, nullptr, TO_CHAR);
 
 	ch->wait = 0;
 
@@ -519,9 +519,9 @@ void animate_four(CHAR_DATA *ch, OBJ_DATA *corpse)
 	if (corpse->item_type == ITEM_CORPSE_PC && corpse->level > 25)
 		soul_add(ch, 1);
 	else if (corpse->item_type == ITEM_CORPSE_PC && corpse->level <= 25)
-		act("The essence of $p was too weak for your studies.", ch, corpse, 0, TO_CHAR);
+		act("The essence of $p was too weak for your studies.", ch, corpse, nullptr, TO_CHAR);
 	else
-		act("The raising was successful, but $p had no soul to steal.", ch, corpse, 0, TO_CHAR);
+		act("The raising was successful, but $p had no soul to steal.", ch, corpse, nullptr, TO_CHAR);
 
 	zombie->hit = zombie->max_hit;
 	zombie->damage[DICE_NUMBER] = (corpse->level - ((int)(corpse->level / 2.5)));
@@ -602,8 +602,8 @@ void spell_black_circle(int sn, int /* level */, CHAR_DATA *ch, SpellTarget /* v
 	if (is_affected(ch, sn))
 		return send_to_char("You cannot summon your minions again yet.\n\r", ch);
 
-	act("$n draws a black circle on the ground and falls into deep concentration.", ch, 0, 0, TO_ROOM);
-	act("You draw a black circle on the ground and fall into deep concentration.", ch, 0, 0, TO_CHAR);
+	act("$n draws a black circle on the ground and falls into deep concentration.", ch, nullptr, nullptr, TO_ROOM);
+	act("You draw a black circle on the ground and fall into deep concentration.", ch, nullptr, nullptr, TO_CHAR);
 
 	for (OwningListWalk<CHAR_DATA> walk(char_list); !walk.Done(); walk.Step())
 	{
@@ -613,13 +613,13 @@ void spell_black_circle(int sn, int /* level */, CHAR_DATA *ch, SpellTarget /* v
 		{
 			stop_fighting(pet, true);
 
-			act("$n disappears suddenly.", pet, 0, 0, TO_ROOM);
+			act("$n disappears suddenly.", pet, nullptr, nullptr, TO_ROOM);
 
 			char_from_room(pet);
 			char_to_room(pet, ch->in_room);
 
 			act("$N arrives suddenly, kneeling before you outside the circle.", ch, nullptr, pet, TO_CHAR);
-			act("$N arrives suddenly, kneeling before $n outside the circle.", ch, 0, pet, TO_ROOM);
+			act("$N arrives suddenly, kneeling before $n outside the circle.", ch, nullptr, pet, TO_ROOM);
 
 			found = true;
 		}
@@ -687,8 +687,8 @@ void spell_visceral(int sn, int /* level */, CHAR_DATA *ch, SpellTarget /* vo */
 
 	ch->disrupted= false;
 
-	act("$n slices open three corpses, spreading their entrails upon the ground.", ch, 0, 0, TO_ROOM);
-	act("You slice open three corpses, spreading their entrails upon the ground.", ch, 0, 0, TO_CHAR);
+	act("$n slices open three corpses, spreading their entrails upon the ground.", ch, nullptr, nullptr, TO_ROOM);
+	act("You slice open three corpses, spreading their entrails upon the ground.", ch, nullptr, nullptr, TO_CHAR);
 
 	RS.Queue.AddToQueue(6, "spell_visceral", "visceral_two", visceral_two, ch);
 }
@@ -702,8 +702,8 @@ void visceral_two(CHAR_DATA *ch)
 		return;
 	}
 
-	act("Upon this gore, $n pours a generous amount of blood, saturating it.", ch, 0, 0, TO_ROOM);
-	act("Upon this gore, you pour a generous amount of blood, saturating it.", ch, 0, 0, TO_CHAR);
+	act("Upon this gore, $n pours a generous amount of blood, saturating it.", ch, nullptr, nullptr, TO_ROOM);
+	act("Upon this gore, you pour a generous amount of blood, saturating it.", ch, nullptr, nullptr, TO_CHAR);
 
 	RS.Queue.AddToQueue(6, "visceral_two", "visceral_three", visceral_three, ch);
 }
@@ -725,8 +725,8 @@ void visceral_three(CHAR_DATA *ch)
 		return;
 	}
 
-	act("$n and $s minions blissfully writhe in the carnage, praising the Dark Gods.", ch, 0, 0, TO_ROOM);
-	act("You blissfully writhe in the carnage, praising the Dark Gods.", ch, 0, 0, TO_CHAR);
+	act("$n and $s minions blissfully writhe in the carnage, praising the Dark Gods.", ch, nullptr, nullptr, TO_ROOM);
+	act("You blissfully writhe in the carnage, praising the Dark Gods.", ch, nullptr, nullptr, TO_CHAR);
 
 	RS.Queue.AddToQueue(6, "visceral_three", "visceral_four", visceral_four, ch);
 }
@@ -750,8 +750,8 @@ void visceral_four(CHAR_DATA *ch)
 		return;
 	}
 
-	act("Emerging from this loathsome orgy, $n and $s creatures surge with new strength.", ch, 0, 0, TO_ROOM);
-	act("Emerging from this loathsome orgy, you feel new strength surge through you.", ch, 0, 0, TO_CHAR);
+	act("Emerging from this loathsome orgy, $n and $s creatures surge with new strength.", ch, nullptr, nullptr, TO_ROOM);
+	act("Emerging from this loathsome orgy, you feel new strength surge through you.", ch, nullptr, nullptr, TO_CHAR);
 
 	init_affect(&af);
 	af.where = TO_AFFECTS;
@@ -776,7 +776,7 @@ void visceral_four(CHAR_DATA *ch)
 			af.location = APPLY_DAMROLL;
 			af.modifier = (ch->level / 2) - 5;
 			affect_to_char(mob, &af);
-			act("$n's eyes glow with unholy fervor.", mob, 0, 0, TO_ROOM);
+			act("$n's eyes glow with unholy fervor.", mob, nullptr, nullptr, TO_ROOM);
 		}
 	}
 }
@@ -810,8 +810,8 @@ void spell_ritual_soul(int /* sn */, int /* level */, CHAR_DATA *ch, SpellTarget
 
 	ch->disrupted= false;
 
-	act("$n begins to spread out some infernal relics and charms.", ch, 0, 0, TO_ROOM);
-	act("You begin to spread out some infernal relics and charms.", ch, 0, 0, TO_CHAR);
+	act("$n begins to spread out some infernal relics and charms.", ch, nullptr, nullptr, TO_ROOM);
+	act("You begin to spread out some infernal relics and charms.", ch, nullptr, nullptr, TO_CHAR);
 
 	RS.Queue.AddToQueue(3, "spell_ritual_soul", "ritual_two", ritual_two, ch, victim);
 }
@@ -829,8 +829,8 @@ void ritual_two(CHAR_DATA *ch, CHAR_DATA *victim)
 		return;
 	}
 
-	act("$n pours some blood onto the floor from $s urn, and chants quietly.", ch, 0, 0, TO_ROOM);
-	act("You spill out blood from your urn, chanting softly in an arcane tongue.", ch, 0, 0, TO_CHAR);
+	act("$n pours some blood onto the floor from $s urn, and chants quietly.", ch, nullptr, nullptr, TO_ROOM);
+	act("You spill out blood from your urn, chanting softly in an arcane tongue.", ch, nullptr, nullptr, TO_CHAR);
 
 	RS.Queue.AddToQueue(3, "ritual_two", "ritual_three", ritual_three, ch, victim);
 }
@@ -848,8 +848,8 @@ void ritual_three(CHAR_DATA *ch, CHAR_DATA *victim)
 		return;
 	}
 
-	act("$n calls upon the dark gods, and forfeits part of $s spirit in unholy sacrifice!", ch, 0, victim, TO_ROOM);
-	act("You forfeit part of your spirit in an unholy sacrifice before the Dark Gods!", ch, 0, 0, TO_CHAR);
+	act("$n calls upon the dark gods, and forfeits part of $s spirit in unholy sacrifice!", ch, nullptr, victim, TO_ROOM);
+	act("You forfeit part of your spirit in an unholy sacrifice before the Dark Gods!", ch, nullptr, nullptr, TO_CHAR);
 
 	ch->mana = (short)(ch->mana * .8);
 	ch->move = (short)(ch->move * .5);
@@ -874,8 +874,8 @@ void ritual_four(CHAR_DATA *ch, CHAR_DATA *victim)
 		return;
 	}
 
-	act("$n points at $N and the rotting body crumbles to ashes!", ch, 0, victim, TO_ROOM);
-	act("You point at $N and the rotting body crumbles to ashes!", ch, 0, victim, TO_CHAR);
+	act("$n points at $N and the rotting body crumbles to ashes!", ch, nullptr, victim, TO_ROOM);
+	act("You point at $N and the rotting body crumbles to ashes!", ch, nullptr, victim, TO_CHAR);
 
 	mob = create_mobile(get_mob_index(number_range(2940, 2942)));
 
@@ -897,7 +897,7 @@ void ritual_four(CHAR_DATA *ch, CHAR_DATA *victim)
 
 	extract_char(victim, true);
 
-	act("From the ashes rises $n!", mob, 0, ch, TO_ALL);
+	act("From the ashes rises $n!", mob, nullptr, ch, TO_ALL);
 
 	add_follower(mob, ch);
 
@@ -943,7 +943,7 @@ void spell_ritual_flesh(int /* sn */, int /* level */, CHAR_DATA *ch, SpellTarge
 	ch->disrupted= false;
 
 	RS.Queue.AddToQueue(3, "spell_ritual_flesh", "flesh_two", flesh_two, ch, victim);
-	act("You prepare to make an unholy sacrifice to the Dark Gods!", ch, 0, 0, TO_CHAR);
+	act("You prepare to make an unholy sacrifice to the Dark Gods!", ch, nullptr, nullptr, TO_CHAR);
 }
 
 void flesh_two(CHAR_DATA *ch, CHAR_DATA *victim)
@@ -955,8 +955,8 @@ void flesh_two(CHAR_DATA *ch, CHAR_DATA *victim)
 		return;
 	}
 
-	act("$n pours blood onto the floor, chanting softly in an undecipherable tongue.", ch, 0, 0, TO_ROOM);
-	act("You pour blood onto the floor, chanting softly in an arcane tongue.", ch, 0, 0, TO_CHAR);
+	act("$n pours blood onto the floor, chanting softly in an undecipherable tongue.", ch, nullptr, nullptr, TO_ROOM);
+	act("You pour blood onto the floor, chanting softly in an arcane tongue.", ch, nullptr, nullptr, TO_CHAR);
 
 	RS.Queue.AddToQueue(3, "flesh_two", "flesh_three", flesh_three, ch, victim);
 }
@@ -972,8 +972,8 @@ void flesh_three(CHAR_DATA *ch, CHAR_DATA *victim)
 		ch->disrupted = true;
 	}
 
-	act("$n calls upon the Dark Gods and forfeits part of $s vitality in sacrifice!", ch, 0, 0, TO_ROOM);
-	act("You call upon the Dark Gods and offer part of your vitality as sacrifice!", ch, 0, 0, TO_CHAR);
+	act("$n calls upon the Dark Gods and forfeits part of $s vitality in sacrifice!", ch, nullptr, nullptr, TO_ROOM);
+	act("You call upon the Dark Gods and offer part of your vitality as sacrifice!", ch, nullptr, nullptr, TO_CHAR);
 
 	ch->hit = (short)(ch->hit * 0.8);
 
@@ -1009,8 +1009,8 @@ void flesh_four(CHAR_DATA *ch, CHAR_DATA *victim)
 	mob->damage[DICE_TYPE] = 2;
 	mob->damroll = victim->level - URANGE(-50, (short)(2.5 * (victim->level - ch->level)), 50);
 
-	act("$n points at $N and its rotting body crumbles into grey ashes.", ch, 0, victim, TO_ROOM);
-	act("You point at $N and its rotting body crumbles into ashes.", ch, 0, victim, TO_CHAR);
+	act("$n points at $N and its rotting body crumbles into grey ashes.", ch, nullptr, victim, TO_ROOM);
+	act("You point at $N and its rotting body crumbles into ashes.", ch, nullptr, victim, TO_CHAR);
 
 	if (is_affected(victim, gsn_unholy_bond))
 	{
@@ -1024,8 +1024,8 @@ void flesh_four(CHAR_DATA *ch, CHAR_DATA *victim)
 
 	extract_char(victim, true);
 
-	act("Suddenly, the pile of ashes is scattered as $N arises to kneel before you!", ch, 0, mob, TO_CHAR);
-	act("Suddenly, the pile of ashes is scattered as $N arises to kneel before $n!", ch, 0, mob, TO_ROOM);
+	act("Suddenly, the pile of ashes is scattered as $N arises to kneel before you!", ch, nullptr, mob, TO_CHAR);
+	act("Suddenly, the pile of ashes is scattered as $N arises to kneel before $n!", ch, nullptr, mob, TO_ROOM);
 
 	add_follower(mob, ch);
 
@@ -1052,9 +1052,9 @@ void spell_decrepify(int sn, [[maybe_unused]] int level, CHAR_DATA *ch, SpellTar
 	if (saves_spell(ch->level, victim, DAM_MENTAL))
 		mv /= 2;
 
-	act("$N suddenly looks very worn out.", 0, 0, victim, TO_NOTVICT);
-	act("You suddenly feel sluggish.", ch, 0, victim, TO_VICT);
-	act("$N suddenly looks very worn out.", ch, 0, victim, TO_CHAR);
+	act("$N suddenly looks very worn out.", 0, nullptr, victim, TO_NOTVICT);
+	act("You suddenly feel sluggish.", ch, nullptr, victim, TO_VICT);
+	act("$N suddenly looks very worn out.", ch, nullptr, victim, TO_CHAR);
 
 	victim->move -= mv;
 
@@ -1149,7 +1149,7 @@ void spell_corrupt_flesh(int sn, int /* level */, CHAR_DATA *ch, SpellTarget /* 
 	{
 		if (!(obj2 = get_eq_char(victim, WEAR_WIELD)))
 		{
-			act("$N is not wielding a weapon.", ch, 0, victim, TO_CHAR);
+			act("$N is not wielding a weapon.", ch, nullptr, victim, TO_CHAR);
 			return;
 		}
 
@@ -1246,8 +1246,8 @@ void spell_corrupt_flesh(int sn, int /* level */, CHAR_DATA *ch, SpellTarget /* 
 
 		char_to_room(mob, ch->in_room);
 
-		act("The flesh of $p withers away rapidly as you sap its remaining life force.", ch, obj, 0, TO_CHAR);
-		act("The flesh of $p withers away rapidly, leaving $n holding a putrid skull.", ch, obj, 0, TO_ROOM);
+		act("The flesh of $p withers away rapidly as you sap its remaining life force.", ch, obj, nullptr, TO_CHAR);
+		act("The flesh of $p withers away rapidly, leaving $n holding a putrid skull.", ch, obj, nullptr, TO_ROOM);
 
 		obj_from_char(obj);
 		extract_obj(obj);
@@ -1304,7 +1304,7 @@ void spell_corpse_trap(int sn, int /* level */, CHAR_DATA *ch, SpellTarget /* vo
 	if (number_percent() > chance)
 	{
 		send_to_char("Your magic accelerates the decaying process too quickly, destroying the corpse.\n\r", ch);
-		act("$p decays rapidly, leaving nothing but dust.", ch, corpse, 0, TO_ROOM);
+		act("$p decays rapidly, leaving nothing but dust.", ch, corpse, nullptr, TO_ROOM);
 
 		extract_obj(corpse);
 		return;
@@ -1319,8 +1319,8 @@ void spell_corpse_trap(int sn, int /* level */, CHAR_DATA *ch, SpellTarget /* vo
 
 	SET_BIT(trap->extra_flags, CORPSE_NO_ANIMATE);
 
-	act("You carefully accelerate the decay rate of $p, preparing it to explode.", ch, corpse, 0, TO_CHAR);
-	act("$p's skin begins to wrinkle and fold.", ch, corpse, 0, TO_ROOM);
+	act("You carefully accelerate the decay rate of $p, preparing it to explode.", ch, corpse, nullptr, TO_CHAR);
+	act("$p's skin begins to wrinkle and fold.", ch, corpse, nullptr, TO_ROOM);
 
 	extract_obj(corpse);
 	obj_to_room(trap, ch->in_room);
@@ -1448,8 +1448,8 @@ void spell_lesser_golem(int sn, int /* level */, CHAR_DATA *ch, SpellTarget /* v
 
 	char_to_room(mob, ch->in_room);
 
-	act("$n pours some blood on the floor.  It begins shifting and changing, finally forming $N!", ch, 0, mob, TO_ROOM);
-	act("You pour some blood on the floor.  It begins shifting and changing, finally forming $N!", ch, 0, mob, TO_CHAR);
+	act("$n pours some blood on the floor.  It begins shifting and changing, finally forming $N!", ch, nullptr, mob, TO_ROOM);
+	act("You pour some blood on the floor.  It begins shifting and changing, finally forming $N!", ch, nullptr, mob, TO_CHAR);
 }
 
 void spell_greater_golem(int sn, int /* level */, CHAR_DATA *ch, SpellTarget /* vo */, CastMode /* mode */)
@@ -1520,8 +1520,8 @@ void spell_greater_golem(int sn, int /* level */, CHAR_DATA *ch, SpellTarget /* 
 
 		vnum = 2961;
 
-		act("$n fashions a golem from a lifeless hunk of glass!", ch, 0, 0, TO_ROOM);
-		act("You fashion a golem from $p.", ch, obj, 0, TO_CHAR);
+		act("$n fashions a golem from a lifeless hunk of glass!", ch, nullptr, nullptr, TO_ROOM);
+		act("You fashion a golem from $p.", ch, obj, nullptr, TO_CHAR);
 		extract_obj(obj);
 	}
 
@@ -1535,8 +1535,8 @@ void spell_greater_golem(int sn, int /* level */, CHAR_DATA *ch, SpellTarget /* 
 
 		vnum = 2959;
 
-		act("$n fashions a golem from a mass of stone!", ch, 0, 0, TO_ROOM);
-		act("You fashion a golem from a mass of stone.", ch, 0, 0, TO_CHAR);
+		act("$n fashions a golem from a mass of stone!", ch, nullptr, nullptr, TO_ROOM);
+		act("You fashion a golem from a mass of stone.", ch, nullptr, nullptr, TO_CHAR);
 	}
 
 	if (!str_cmp(type, "shadow"))
@@ -1549,8 +1549,8 @@ void spell_greater_golem(int sn, int /* level */, CHAR_DATA *ch, SpellTarget /* 
 
 		vnum = 2960;
 
-		act("$n gives life to the shadows around him!", ch, 0, 0, TO_ROOM);
-		act("You give life to the shadows around you.", ch, 0, 0, TO_CHAR);
+		act("$n gives life to the shadows around him!", ch, nullptr, nullptr, TO_ROOM);
+		act("You give life to the shadows around you.", ch, nullptr, nullptr, TO_CHAR);
 	}
 
 	init_affect(&af);
@@ -1631,8 +1631,8 @@ void do_drain(CHAR_DATA *ch, char *argument)
 
 	if (chance > number_percent())
 	{
-		act("You successfully drain $p of its blood!", ch, corpse, 0, TO_CHAR);
-		act("$n crouches over $p, chanting softly as $e desiccates it.", ch, corpse, 0, TO_ROOM);
+		act("You successfully drain $p of its blood!", ch, corpse, nullptr, TO_CHAR);
+		act("$n crouches over $p, chanting softly as $e desiccates it.", ch, corpse, nullptr, TO_ROOM);
 
 		long modifier = corpse->item_type == ITEM_CORPSE_PC ? 4 : 8;
 		long minBloodScore = 1;
@@ -1650,8 +1650,8 @@ void do_drain(CHAR_DATA *ch, char *argument)
 	}
 	else
 	{
-		act("You fail to drain the blood of $p and render it useless!", ch, corpse, 0, TO_CHAR);
-		act("$n attempts to drain the blood from $p, but ruins it, blood spilling everywhere.", ch, corpse, 0, TO_ROOM);
+		act("You fail to drain the blood of $p and render it useless!", ch, corpse, nullptr, TO_CHAR);
+		act("$n attempts to drain the blood from $p, but ruins it, blood spilling everywhere.", ch, corpse, nullptr, TO_ROOM);
 
 		SET_BIT(corpse->extra_flags, CORPSE_NO_ANIMATE);
 
@@ -1676,9 +1676,9 @@ bool check_bond(CHAR_DATA *ch, CHAR_DATA *mob)
 		af.aftype = AFT_SKILL;
 		affect_to_char(mob, &af);
 
-		act("The zombie's eyes suddenly flare a deep crimson, which rapidly fades away.", ch, 0, mob, TO_ROOM);
-		act("The zombie's eyes suddenly flare a deep crimson, which rapidly fades away.", ch, 0, mob, TO_CHAR);
-		act("You form a successful bond with $N!", ch, 0, mob, TO_CHAR);
+		act("The zombie's eyes suddenly flare a deep crimson, which rapidly fades away.", ch, nullptr, mob, TO_ROOM);
+		act("The zombie's eyes suddenly flare a deep crimson, which rapidly fades away.", ch, nullptr, mob, TO_CHAR);
+		act("You form a successful bond with $N!", ch, nullptr, mob, TO_CHAR);
 
 		check_improve(ch, gsn_unholy_bond, true, 1);
 		return true;
@@ -1708,10 +1708,10 @@ bool check_zombie_summon(CHAR_DATA *ch)
 				return false;
 
 			stop_fighting(mob, true);
-			act("$n disappears suddenly.", mob, 0, 0, TO_ROOM);
+			act("$n disappears suddenly.", mob, nullptr, nullptr, TO_ROOM);
 			char_from_room(mob);
 			char_to_room(mob, ch->in_room);
-			act("$n arrives suddenly.", mob, 0, 0, TO_ROOM);
+			act("$n arrives suddenly.", mob, nullptr, nullptr, TO_ROOM);
 			return true;
 		}
 	}

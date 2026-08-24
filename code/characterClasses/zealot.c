@@ -45,9 +45,9 @@ void spell_infidels_weight(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[m
 	af.owner = ch->self;
 	new_affect_to_char(victim, &af);
 
-	act("You burden $N with the weight of a thousand infidels!", ch, 0, victim, TO_CHAR);
-	act("$n burdens you with the weight of a thousand infidels!", ch, 0, victim, TO_VICT);
-	act("$n burdens $N with the weight of a thousand infidels!", ch, 0, victim, TO_NOTVICT);
+	act("You burden $N with the weight of a thousand infidels!", ch, nullptr, victim, TO_CHAR);
+	act("$n burdens you with the weight of a thousand infidels!", ch, nullptr, victim, TO_VICT);
+	act("$n burdens $N with the weight of a thousand infidels!", ch, nullptr, victim, TO_NOTVICT);
 }
 
 int get_bv_stage(CHAR_DATA *ch)
@@ -100,9 +100,9 @@ void spell_burning_vision(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[ma
 		{
 			maf->modifier = mod;
 
-			act("$n further burns your vision!", ch, 0, victim, TO_VICT);
-			act("You further burn $N's vision!", ch, 0, victim, TO_CHAR);
-			act("$n further burns $N's vision!", ch, 0, victim, TO_NOTVICT);
+			act("$n further burns your vision!", ch, nullptr, victim, TO_VICT);
+			act("You further burn $N's vision!", ch, nullptr, victim, TO_CHAR);
+			act("$n further burns $N's vision!", ch, nullptr, victim, TO_NOTVICT);
 			return;
 		}
 	}
@@ -120,9 +120,9 @@ void spell_burning_vision(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[ma
 		af.mod_name = MOD_VISION;
 		new_affect_to_char(victim, &af);
 
-		act("You sear $N's vision!", ch, 0, victim, TO_CHAR);
-		act("$n sears your vision!", ch, 0, victim, TO_VICT);
-		act("$n sears $N's vision!", ch, 0, victim, TO_NOTVICT);
+		act("You sear $N's vision!", ch, nullptr, victim, TO_CHAR);
+		act("$n sears your vision!", ch, nullptr, victim, TO_VICT);
+		act("$n sears $N's vision!", ch, nullptr, victim, TO_NOTVICT);
 	}
 }
 
@@ -132,8 +132,8 @@ void burning_vision_tick(CHAR_DATA *ch, [[maybe_unused]] AFFECT_DATA *af)
 
 	if (get_bv_stage(ch) >= 4 && !is_affected_by(ch, AFF_BLIND))
 	{
-		act("You are blinded!", ch, 0, 0, TO_CHAR);
-		act("$n appears to be blinded.", ch, 0, 0, TO_ROOM);
+		act("You are blinded!", ch, nullptr, nullptr, TO_CHAR);
+		act("$n appears to be blinded.", ch, nullptr, nullptr, TO_ROOM);
 
 		caf = nullptr;
 		for (auto &caf_elem : ch->affected)
@@ -164,14 +164,14 @@ void spell_divine_malison(int /* sn */, int level, CHAR_DATA *ch, SpellTarget vo
 
 	if (victim && (paf = affect_find(victim->affected, gsn_divine_ward)) != nullptr && Deref(paf->owner) == ch)
 	{
-		act("Your deity already protects you from $N!", ch, 0, victim, TO_CHAR);
+		act("Your deity already protects you from $N!", ch, nullptr, victim, TO_CHAR);
 		return;
 	}
 
 	if (Deref(ch->fighting) && saves_spell(level + 9, victim, DAM_HOLY))
 	{
-		act("A nimbus flickers briefly around $n, but dissipates.", victim, 0, 0, TO_ROOM);
-		act("A haze surrounds you briefly, but dissipates.", victim, 0, 0, TO_CHAR);
+		act("A nimbus flickers briefly around $n, but dissipates.", victim, nullptr, nullptr, TO_ROOM);
+		act("A haze surrounds you briefly, but dissipates.", victim, nullptr, nullptr, TO_CHAR);
 		return;
 	}
 
@@ -179,15 +179,15 @@ void spell_divine_malison(int /* sn */, int level, CHAR_DATA *ch, SpellTarget vo
 	{
 		reduction = 1;
 
-		act("A hazy barrier forms between yourself and $n.", ch, 0, victim, TO_VICT);
-		act("A hazy barrier forms between yourself and $N.", ch, 0, victim, TO_CHAR);
-		act("A hazy barrier forms between $n and $N.", ch, 0, victim, TO_NOTVICT);
+		act("A hazy barrier forms between yourself and $n.", ch, nullptr, victim, TO_VICT);
+		act("A hazy barrier forms between yourself and $N.", ch, nullptr, victim, TO_CHAR);
+		act("A hazy barrier forms between $n and $N.", ch, nullptr, victim, TO_NOTVICT);
 	}
 	else
 	{
-		act("A luminous barrier forms between yourself and $n.", ch, 0, victim, TO_VICT);
-		act("A luminous barrier forms between yourself and $N.", ch, 0, victim, TO_CHAR);
-		act("A luminous barrier forms between $n and $N.", ch, 0, victim, TO_NOTVICT);
+		act("A luminous barrier forms between yourself and $n.", ch, nullptr, victim, TO_VICT);
+		act("A luminous barrier forms between yourself and $N.", ch, nullptr, victim, TO_CHAR);
+		act("A luminous barrier forms between $n and $N.", ch, nullptr, victim, TO_NOTVICT);
 
 		reduction = 2;
 	}

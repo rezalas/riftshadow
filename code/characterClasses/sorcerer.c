@@ -127,8 +127,8 @@ void spell_scorch(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unus
 	if (saves_spell(level, victim, DAM_FIRE))
 		dam /= 2;
 
-	act("Waves of heat ripple through the air as $n's flesh crackles.", victim, 0, ch, TO_ROOM);
-	act("Waves of heat ripple through the air towards you.\n\rYou feel your skin crackling.", ch, 0, victim, TO_VICT);
+	act("Waves of heat ripple through the air as $n's flesh crackles.", victim, nullptr, ch, TO_ROOM);
+	act("Waves of heat ripple through the air towards you.\n\rYou feel your skin crackling.", ch, nullptr, victim, TO_VICT);
 	damage_new(ch, victim, dam, sn, DAM_FIRE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, nullptr);
 }
 
@@ -175,7 +175,7 @@ void spell_gravity_well(int sn, int level, CHAR_DATA *ch, SpellTarget /* vo */, 
 		return;
 	}
 
-	act("$p folds in upon itself, warping the space around it as it shrinks until no more than the tiniest speck remains.", ch, well, 0, TO_ALL);
+	act("$p folds in upon itself, warping the space around it as it shrinks until no more than the tiniest speck remains.", ch, well, nullptr, TO_ALL);
 	gwell = create_object(get_obj_index(2950), 0);
 	gwell->weight = well->weight;
 	obj_to_room(gwell, ch->in_room);
@@ -244,7 +244,7 @@ void gravity_well_explode(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *af)
 	send_to_char("You lose control of your gravity well and it ruptures violently!\n\r", ch);
 
 	if (well->in_room->people)
-		act("The gravity well flares brightly and explodes, sending waves of force rippling outward!", well->in_room->people, 0, 0, TO_ALL);
+		act("The gravity well flares brightly and explodes, sending waves of force rippling outward!", well->in_room->people, nullptr, nullptr, TO_ALL);
 
 	extract_obj(well);
 	affect_strip_room(room, gsn_gravity_well);
@@ -326,7 +326,7 @@ void spell_cyclone(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /* vo */,
 	affect_to_char(ch, &af);
 
 	send_to_char("As you feed energy into the air overhead, powerful, swirling currents begin to develop.\n\r", ch);
-	act("$n concentrates intently and the surrounding winds seem to pick up slightly.", ch, 0, 0, TO_ROOM);
+	act("$n concentrates intently and the surrounding winds seem to pick up slightly.", ch, nullptr, nullptr, TO_ROOM);
 }
 
 void cyclone_begin(AREA_DATA *area, AREA_AFFECT_DATA *af)
@@ -366,7 +366,7 @@ void spell_chill(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unuse
 	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
 
-	act("You draw the heat out of $N's flesh, chilling $M.", ch, 0, victim, TO_CHAR);
+	act("You draw the heat out of $N's flesh, chilling $M.", ch, nullptr, victim, TO_CHAR);
 
 	int dam = dice(5, 4) + level;
 
@@ -387,8 +387,8 @@ void spell_chill(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unuse
 		else
 			affect_to_char(victim, &af);
 
-		act("$n's flesh turns purple as he shivers!", victim, 0, ch, TO_ROOM);
-		act("You begin shivering violently.", 0, 0, victim, TO_VICT);
+		act("$n's flesh turns purple as he shivers!", victim, nullptr, ch, TO_ROOM);
+		act("You begin shivering violently.", 0, nullptr, victim, TO_VICT);
 		damage_new(ch, victim, dam, TYPE_UNDEFINED, DAM_COLD, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "chill");
 	}
 	else
@@ -526,7 +526,7 @@ void spell_conflagration(int sn, int level, CHAR_DATA *ch, SpellTarget /* vo */,
 	af.modifier = 0;
 	affect_to_char(ch, &af);
 
-	act("The room erupts in a fiery explosion and is engulfed in searing flames!", ch, 0, 0, TO_ALL);
+	act("The room erupts in a fiery explosion and is engulfed in searing flames!", ch, nullptr, nullptr, TO_ALL);
 	zone_echo(ch->in_room->area, "The crackling roar of fire reaches your ears.\n\r");
 }
 
@@ -932,8 +932,8 @@ void spell_heat_metal([[maybe_unused]] int sn, int level, CHAR_DATA *ch, SpellTa
 	if (obj2 != nullptr)
 	{
 		unequip_char(victim, obj2, false);
-		act("You hastily swap $p into your primary hand.", ch, obj2, 0, TO_CHAR);
-		act("$n hastily swaps $p into $s primary hand.", ch, obj2, 0, TO_ROOM);
+		act("You hastily swap $p into your primary hand.", ch, obj2, nullptr, TO_CHAR);
+		act("$n hastily swaps $p into $s primary hand.", ch, obj2, nullptr, TO_ROOM);
 		equip_char(victim, obj2, WEAR_WIELD, false);
 	}
 }
@@ -979,14 +979,14 @@ void spell_knock(int /* sn */, int /* level */, CHAR_DATA *ch, SpellTarget /* vo
 		if (IS_SET(pexit->exit_info, EX_NOPASS))
 		{
 			direction = flag_name_lookup(door, direction_table);
-			act("You rapidly heat the $T door, causing it to expand within its confines.", ch, 0, direction, TO_CHAR);
-			act("The $T door buckles slightly, but remains intact.", ch, 0, direction, TO_ALL);
+			act("You rapidly heat the $T door, causing it to expand within its confines.", ch, nullptr, direction, TO_CHAR);
+			act("The $T door buckles slightly, but remains intact.", ch, nullptr, direction, TO_ALL);
 			return;
 		}
 
 		direction = flag_name_lookup(door, direction_table);
-		act("You rapidly heat the $T door, causing it to expand within its confines.", ch, 0, direction, TO_CHAR);
-		act("The $T door suddenly buckles on its hinges and bursts open!", ch, 0, direction, TO_ALL);
+		act("You rapidly heat the $T door, causing it to expand within its confines.", ch, nullptr, direction, TO_CHAR);
+		act("The $T door suddenly buckles on its hinges and bursts open!", ch, nullptr, direction, TO_ALL);
 
 		REMOVE_BIT(pexit->exit_info, EX_LOCKED);
 		REMOVE_BIT(pexit->exit_info, EX_CLOSED);
@@ -1007,7 +1007,7 @@ void spell_knock(int /* sn */, int /* level */, CHAR_DATA *ch, SpellTarget /* vo
 
 		for (fch = to_room->people; fch != nullptr; fch = fch->next_in_room)
 		{
-			act("The $T door suddenly buckles on its hinges and bursts open!", fch, 0, direction, TO_ALL);
+			act("The $T door suddenly buckles on its hinges and bursts open!", fch, nullptr, direction, TO_ALL);
 			break;
 		}
 	}
@@ -1045,8 +1045,8 @@ void spell_vacuum(int sn, int level, CHAR_DATA *ch, [[maybe_unused]] SpellTarget
 		return;
 	}
 
-	act("Concentrating intently, you force all the air out of the area!", ch, 0, 0, TO_CHAR);
-	act("$n raises $s arms, and in a violent rush, all the air is torn from the surrounding area!", ch, 0, 0, TO_ROOM);
+	act("Concentrating intently, you force all the air out of the area!", ch, nullptr, nullptr, TO_CHAR);
+	act("$n raises $s arms, and in a violent rush, all the air is torn from the surrounding area!", ch, nullptr, nullptr, TO_ROOM);
 
 	init_affect_room(&raf);
 	raf.where = TO_ROOM_AFFECTS;
@@ -1092,7 +1092,7 @@ void spell_vacuum(int sn, int level, CHAR_DATA *ch, [[maybe_unused]] SpellTarget
 			if (to_room->people)
 			{
 				direction = flag_name_lookup(reverse_d(i), direction_table);
-				act("A sudden blast of air rushes in from the $T!", to_room->people, 0, direction, TO_ALL);
+				act("A sudden blast of air rushes in from the $T!", to_room->people, nullptr, direction, TO_ALL);
 			}
 		}
 
@@ -1109,7 +1109,7 @@ void vacuum_end_fun(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *af)
 	OBJ_DATA *obj, *obj_next;
 
 	if (room->people)
-		act("Air rushes back into the area in a fierce torrent!", room->people, 0, 0, TO_ALL);
+		act("Air rushes back into the area in a fierce torrent!", room->people, nullptr, nullptr, TO_ALL);
 
 	auto i = 0;
 
@@ -1126,7 +1126,7 @@ void vacuum_end_fun(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *af)
 		if (to_room != nullptr && to_room->people)
 		{
 			direction = flag_name_lookup(reverse_d(i), direction_table);
-			act("Air rushes back $Tward!", to_room->people, 0, direction, TO_ALL);
+			act("Air rushes back $Tward!", to_room->people, nullptr, direction, TO_ALL);
 		}
 
 		i++;
@@ -1168,7 +1168,7 @@ void vacuum_end_fun(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *af)
 					if (get_true_weight(obj) < 5 && IS_SET(obj->wear_flags, ITEM_TAKE))
 					{
 						if (to_room->people)
-							act("$p is sucked out of the room!", to_room->people, obj, 0, TO_ALL);
+							act("$p is sucked out of the room!", to_room->people, obj, nullptr, TO_ALL);
 
 						obj_from_room(obj);
 						obj_to_room(obj, room);
@@ -1192,8 +1192,8 @@ void vacuum_end_fun(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *af)
 						if (!smacked)
 							break;
 
-						act("$p is sucked into the room, striking $n!", smacked, obj, 0, TO_ROOM);
-						act("$p is sucked into the room, striking you!", smacked, obj, 0, TO_CHAR);
+						act("$p is sucked into the room, striking $n!", smacked, obj, nullptr, TO_ROOM);
+						act("$p is sucked into the room, striking you!", smacked, obj, nullptr, TO_CHAR);
 						damage_new(Deref(af->owner), smacked, dice(get_true_weight(obj) + 1, 9), TYPE_UNDEFINED, DAM_BASH, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the flying debris*");
 						objcount++;
 					}
@@ -1227,16 +1227,16 @@ void vacuum_end_fun(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *af)
 
 					direction = flag_name_lookup(reverse_d(i), direction_table);
 
-					act("A torrent of air pulls $n $T!", vch, 0, direction, TO_ROOM);
+					act("A torrent of air pulls $n $T!", vch, nullptr, direction, TO_ROOM);
 
 					char_from_room(vch);
 					char_to_room(vch, room);
 
-					act("A torrent of air pulls you unexpectedly $T!", vch, 0, direction, TO_CHAR);
+					act("A torrent of air pulls you unexpectedly $T!", vch, nullptr, direction, TO_CHAR);
 					do_look(vch, "auto");
 
 					direction = flag_name_lookup(i, direction_table);
-					act("The torrent of air pulls $n into the room from the $T!", vch, 0, direction, TO_ROOM);
+					act("The torrent of air pulls $n into the room from the $T!", vch, nullptr, direction, TO_ROOM);
 				}
 			}
 
@@ -1314,9 +1314,9 @@ void spell_diuretic(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /* vo */
 
 	if (!trusts(ch, victim) && saves_spell(level, victim, DAM_OTHER))
 	{
-		act("$N resists the effects.", ch, 0, victim, TO_CHAR);
-		act_new("You feel a rush of warmth, but it fades.", ch, 0, victim, TO_VICT, POS_SLEEPING);
-		act("$N looks flushed for a moment, but it passes.", ch, 0, victim, TO_NOTVICT);
+		act("$N resists the effects.", ch, nullptr, victim, TO_CHAR);
+		act_new("You feel a rush of warmth, but it fades.", ch, nullptr, victim, TO_VICT, POS_SLEEPING);
+		act("$N looks flushed for a moment, but it passes.", ch, nullptr, victim, TO_NOTVICT);
 
 		if (!trusts(ch, victim))
 			multi_hit(victim, ch, TYPE_UNDEFINED);
@@ -1326,9 +1326,9 @@ void spell_diuretic(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /* vo */
 
 	if (ch != victim)
 	{
-		act("You infuse $N with a rush of healing warmth.", ch, 0, victim, TO_CHAR);
+		act("You infuse $N with a rush of healing warmth.", ch, nullptr, victim, TO_CHAR);
 		act_new("A feeling of warmth washes over you.", victim, nullptr, nullptr, TO_CHAR, POS_SLEEPING);
-		act("$n looks flushed for a moment.", ch, 0, victim, TO_NOTVICT);
+		act("$n looks flushed for a moment.", ch, nullptr, victim, TO_NOTVICT);
 	}
 
 	if (ch == victim)
@@ -1343,7 +1343,7 @@ void spell_diuretic(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /* vo */
 		}
 
 		send_to_char("The flow of blood from your wounds intensifies.\n\r", victim);
-		act("The blood seems to gush from $n's wounds more rapidly.", victim, 0, 0, TO_ROOM);
+		act("The blood seems to gush from $n's wounds more rapidly.", victim, nullptr, nullptr, TO_ROOM);
 	}
 
 	heal = dice(2, 8) + level / 2;
@@ -1365,7 +1365,7 @@ void spell_corona(int sn, int level, CHAR_DATA *ch, [[maybe_unused]] SpellTarget
 		return;
 	}
 
-	act("$n is surrounded by a corona of flames that rapidly fades away.", ch, 0, 0, TO_ROOM);
+	act("$n is surrounded by a corona of flames that rapidly fades away.", ch, nullptr, nullptr, TO_ROOM);
 	send_to_char("You form heat energy into a protective barrier surrounding you.\n\r", ch);
 
 	init_affect(&af);
@@ -1413,7 +1413,7 @@ void spell_heatshield(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /* vo 
 	affect_to_char(ch, &af);
 
 	send_to_char("The air around you ripples with heat.\n\r", ch);
-	act("The air around $n ripples with heat.", ch, 0, 0, TO_ROOM);
+	act("The air around $n ripples with heat.", ch, nullptr, nullptr, TO_ROOM);
 }
 
 void spell_immolate([[maybe_unused]] int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
@@ -1423,9 +1423,9 @@ void spell_immolate([[maybe_unused]] int sn, int level, CHAR_DATA *ch, SpellTarg
 	OBJ_DATA *obj;
 	int dam = 0;
 
-	act("You concentrate intently, unleashing a burst of heat upon $N's armor.", ch, 0, victim, TO_CHAR);
-	act("$n extends $s hand towards you, releasing an oppressive wave of heat that washes over you.", ch, 0, victim, TO_VICT);
-	act("$n extends $s hand towards $N, releasing a burst of heat that washes over $M!", ch, 0, victim, TO_NOTVICT);
+	act("You concentrate intently, unleashing a burst of heat upon $N's armor.", ch, nullptr, victim, TO_CHAR);
+	act("$n extends $s hand towards you, releasing an oppressive wave of heat that washes over you.", ch, nullptr, victim, TO_VICT);
+	act("$n extends $s hand towards $N, releasing a burst of heat that washes over $M!", ch, nullptr, victim, TO_NOTVICT);
 
 	for (obj = victim->carrying; obj != nullptr; obj = obj->next_content)
 	{
@@ -1453,7 +1453,7 @@ void spell_immolate([[maybe_unused]] int sn, int level, CHAR_DATA *ch, SpellTarg
 			oaf.tick_fun = nullptr;
 			affect_to_obj(obj, &oaf);
 
-			act("$p bursts into flames!", victim, obj, 0, TO_ALL);
+			act("$p bursts into flames!", victim, obj, nullptr, TO_ALL);
 			dam += dice(6, 6);
 		}
 	}
@@ -1461,16 +1461,16 @@ void spell_immolate([[maybe_unused]] int sn, int level, CHAR_DATA *ch, SpellTarg
 	if (dam)
 		damage_new(ch, victim, dam, TYPE_UNDEFINED, DAM_FIRE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "immolation");
 	else
-		act("You failed to ignite any of $N's armor.", ch, 0, victim, TO_CHAR);
+		act("You failed to ignite any of $N's armor.", ch, nullptr, victim, TO_CHAR);
 }
 
 void immolate_end(OBJ_DATA *obj, [[maybe_unused]] OBJ_AFFECT_DATA *af)
 {
 	if (CHAR_DATA *carrier = Deref(obj->carried_by))
-		act("$p stops burning.", carrier, obj, 0, TO_CHAR);
+		act("$p stops burning.", carrier, obj, nullptr, TO_CHAR);
 
 	if (obj->in_room && obj->in_room->people)
-		act("$p stops burning.", obj->in_room->people, obj, 0, TO_ALL);
+		act("$p stops burning.", obj->in_room->people, obj, nullptr, TO_ALL);
 }
 
 void spell_scathing(int sn, int level, CHAR_DATA *ch, [[maybe_unused]] SpellTarget vo, [[maybe_unused]] CastMode mode)
@@ -1481,7 +1481,7 @@ void spell_scathing(int sn, int level, CHAR_DATA *ch, [[maybe_unused]] SpellTarg
 	char buf[MSL];
 
 	send_to_char("You create violent, scorching gusts of wind to sweep across the area.\n\r", ch);
-	act("Heat radiates from $n's fingertips as a scathing wind sweeps across the area.", ch, 0, 0, TO_ROOM);
+	act("Heat radiates from $n's fingertips as a scathing wind sweeps across the area.", ch, nullptr, nullptr, TO_ROOM);
 
 	init_affect(&af);
 	af.where = TO_AFFECTS;
@@ -1517,7 +1517,7 @@ void spell_scathing(int sn, int level, CHAR_DATA *ch, [[maybe_unused]] SpellTarg
 			&& !is_affected(vch, sn)
 			&& !(IS_SET(vch->act, ACT_UNDEAD) || IS_SET(vch->form, FORM_UNDEAD)))
 		{
-			act("The heated air sears $n's eyes, blinding $m!", vch, 0, 0, TO_ROOM);
+			act("The heated air sears $n's eyes, blinding $m!", vch, nullptr, nullptr, TO_ROOM);
 			send_to_char("The heated air sears your eyes, blinding you!\n\r", vch);
 			affect_to_char(vch, &af);
 		}
@@ -1544,7 +1544,7 @@ void spell_earthquake(int sn, int level, CHAR_DATA *ch, [[maybe_unused]] SpellTa
 		return;
 	}
 
-	act("The earth beneath you rumbles violently!", ch, 0, 0, TO_ALL);
+	act("The earth beneath you rumbles violently!", ch, nullptr, nullptr, TO_ALL);
 
 	for (vch = ch->in_room->people; vch != nullptr; vch = vch_next)
 	{
@@ -1565,7 +1565,7 @@ void spell_earthquake(int sn, int level, CHAR_DATA *ch, [[maybe_unused]] SpellTa
 			do_myell(vch, buf, ch);
 		}
 
-		act("You lose your footing amidst the shaking and fall to the ground!", vch, 0, 0, TO_CHAR);
+		act("You lose your footing amidst the shaking and fall to the ground!", vch, nullptr, nullptr, TO_CHAR);
 
 		WAIT_STATE(vch, PULSE_VIOLENCE);
 		damage_new(ch, vch, dice(10, 3), sn, DAM_BASH, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, nullptr);
@@ -1580,14 +1580,14 @@ void spell_earthquake(int sn, int level, CHAR_DATA *ch, [[maybe_unused]] SpellTa
 		case SECT_ROAD:
 			break;
 		case SECT_HILLS:
-			act("Loose rocks and earth tumbles down from the hills around you!", ch, 0, 0, TO_ALL);
+			act("Loose rocks and earth tumbles down from the hills around you!", ch, nullptr, nullptr, TO_ALL);
 
 			// The cave case below re-guards on the sector, so hills gets the
 			// shared damage loop without the cave message.
 			[[fallthrough]];
 		case SECT_CAVE:
 			if (ch->in_room->sector_type != SECT_HILLS)
-				act("Loose rocks and earth tumbles down from the cave around you!", ch, 0, 0, TO_ALL);
+				act("Loose rocks and earth tumbles down from the cave around you!", ch, nullptr, nullptr, TO_ALL);
 
 			for (vch = ch->in_room->people; vch != nullptr; vch = vch_next)
 			{
@@ -1608,7 +1608,7 @@ void spell_earthquake(int sn, int level, CHAR_DATA *ch, [[maybe_unused]] SpellTa
 				if (is_same_group(vch, ch) || is_safe(ch, vch) || is_same_cabal(ch, vch))
 					continue;
 
-				act("Loose bricks and mortar tumble down from the buildings around you!", vch, 0, 0, TO_CHAR);
+				act("Loose bricks and mortar tumble down from the buildings around you!", vch, nullptr, nullptr, TO_CHAR);
 				damage_new(ch, vch, dice(10, 10), sn, DAM_BASH, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the falling debris*");
 			}
 
@@ -1622,7 +1622,7 @@ void spell_earthquake(int sn, int level, CHAR_DATA *ch, [[maybe_unused]] SpellTa
 					continue;
 
 				ADD_WAIT_STATE(vch, PULSE_VIOLENCE);
-				act("Nearby trees topple, crushing you beneath their weight!", vch, 0, 0, TO_CHAR);
+				act("Nearby trees topple, crushing you beneath their weight!", vch, nullptr, nullptr, TO_CHAR);
 				damage_new(ch, vch, dice(10, 15), sn, DAM_BASH, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the falling trees*$");
 			}
 
@@ -1648,7 +1648,7 @@ void spell_earthquake(int sn, int level, CHAR_DATA *ch, [[maybe_unused]] SpellTa
 				if (is_safe(ch, vch))
 					continue;
 
-				act("A torrential downpour of stone and debris pours down from the ceiling above!", vch, 0, 0, TO_CHAR);
+				act("A torrential downpour of stone and debris pours down from the ceiling above!", vch, nullptr, nullptr, TO_CHAR);
 
 				if (is_same_group(vch, ch) || is_same_cabal(ch, vch))
 					damage_new(ch, vch, dice(10, 15), sn, DAM_BASH, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the falling debris*");
@@ -1681,35 +1681,35 @@ void spell_electrocute(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe
 		tconduct += material_table[obj->pIndexData->material_index].mat_conductivity;
 	}
 
-	act("You attempt to send an electric current though $N's armor.", ch, 0, victim, TO_CHAR);
-	act("$n attempts to send an electric current though your armor.", ch, 0, victim, TO_VICT);
-	act("$n attempts to send an electric current though $N's armor.", ch, 0, victim, TO_NOTVICT);
+	act("You attempt to send an electric current though $N's armor.", ch, nullptr, victim, TO_CHAR);
+	act("$n attempts to send an electric current though your armor.", ch, nullptr, victim, TO_VICT);
+	act("$n attempts to send an electric current though $N's armor.", ch, nullptr, victim, TO_NOTVICT);
 
 	if (tconduct <= 0)
 	{
-		act("Your armor harmlessly absorbs the electric charge.", victim, 0, 0, TO_CHAR);
-		act("$n's armor harmlessly absorbs the electric charge.", victim, 0, 0, TO_ROOM);
+		act("Your armor harmlessly absorbs the electric charge.", victim, nullptr, nullptr, TO_CHAR);
+		act("$n's armor harmlessly absorbs the electric charge.", victim, nullptr, nullptr, TO_ROOM);
 		return;
 	}
 	else if (tconduct < 15)
 	{
-		act("You experience a brief jolt of pain as electricity hits your armor.", victim, 0, 0, TO_CHAR);
-		act("$n jerks slightly as $s armor crackles with electricity.", victim, 0, 0, TO_ROOM);
+		act("You experience a brief jolt of pain as electricity hits your armor.", victim, nullptr, nullptr, TO_CHAR);
+		act("$n jerks slightly as $s armor crackles with electricity.", victim, nullptr, nullptr, TO_ROOM);
 	}
 	else if (tconduct < 30)
 	{
-		act("Your body is wracked with pain as electricity surges through you!", victim, 0, 0, TO_CHAR);
-		act("$n convulses as bursts of electricity explode through $s armor!", victim, 0, 0, TO_ROOM);
+		act("Your body is wracked with pain as electricity surges through you!", victim, nullptr, nullptr, TO_CHAR);
+		act("$n convulses as bursts of electricity explode through $s armor!", victim, nullptr, nullptr, TO_ROOM);
 	}
 	else if (tconduct < 45)
 	{
-		act("You open your mouth in a silent scream as raw electricity explodes through your joints!", victim, 0, 0, TO_CHAR);
-		act("$n's face contorts in agony as $e convulses, briefly paralyzed!", victim, 0, 0, TO_ROOM);
+		act("You open your mouth in a silent scream as raw electricity explodes through your joints!", victim, nullptr, nullptr, TO_CHAR);
+		act("$n's face contorts in agony as $e convulses, briefly paralyzed!", victim, nullptr, nullptr, TO_ROOM);
 	}
 	else
 	{
-		act("Every inch of your body explodes with pain, your flesh melting as electricity courses into your body!", victim, 0, 0, TO_CHAR);
-		act("$n lets out a horrible shriek as the electric current roasts $m alive within $s armor!", victim, 0, 0, TO_ROOM);
+		act("Every inch of your body explodes with pain, your flesh melting as electricity courses into your body!", victim, nullptr, nullptr, TO_CHAR);
+		act("$n lets out a horrible shriek as the electric current roasts $m alive within $s armor!", victim, nullptr, nullptr, TO_ROOM);
 	}
 
 	damage_new(ch, victim, dice((level / 15) * tconduct, 4), sn, DAM_LIGHTNING, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, nullptr);
@@ -1726,12 +1726,12 @@ void spell_induce_pain(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe
 
 	if (get_curr_stat(victim, STAT_INT) > 10 && number_range(0, 200) < (pow(get_curr_stat(victim, STAT_INT) - 10, 2)))
 	{
-		act("Pain courses through your body, but you faintly realize that it is an illusion.", victim, 0, 0, TO_CHAR);
+		act("Pain courses through your body, but you faintly realize that it is an illusion.", victim, nullptr, nullptr, TO_CHAR);
 		dam /= 2;
 	}
 	else
 	{
-		act("Your vision clouds as searing pain courses through your body!", victim, 0, 0, TO_CHAR);
+		act("Your vision clouds as searing pain courses through your body!", victim, nullptr, nullptr, TO_CHAR);
 	}
 
 	damage_new(ch, victim, dam, sn, DAM_OTHER, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, nullptr);
@@ -1793,9 +1793,9 @@ void spell_mana_conduit(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[mayb
 	affect_to_char(victim, &af);
 
 	if (ch != victim)
-		act("You enhance $N's ability to channel mana.", ch, 0, victim, TO_CHAR);
+		act("You enhance $N's ability to channel mana.", ch, nullptr, victim, TO_CHAR);
 
-	act("You feel energized, mana flowing more easily through your body.", victim, 0, 0, TO_CHAR);
+	act("You feel energized, mana flowing more easily through your body.", victim, nullptr, nullptr, TO_CHAR);
 }
 
 void spell_synaptic_enhancement(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
@@ -1828,8 +1828,8 @@ void spell_synaptic_enhancement(int sn, int level, CHAR_DATA *ch, SpellTarget vo
 	af.mod_name = MOD_CONC;
 	affect_to_char(victim, &af);
 
-	act("$n twitches as $e suddenly looks more aware.", victim, 0, 0, TO_ROOM);
-	act("Your mind suddenly feels much clearer and your reflexes sharpen.", victim, 0, 0, TO_CHAR);
+	act("$n twitches as $e suddenly looks more aware.", victim, nullptr, nullptr, TO_ROOM);
+	act("Your mind suddenly feels much clearer and your reflexes sharpen.", victim, nullptr, nullptr, TO_CHAR);
 }
 
 void spell_synaptic_impairment(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
@@ -1868,9 +1868,9 @@ void spell_synaptic_impairment(int sn, int level, CHAR_DATA *ch, SpellTarget vo,
 	af.mod_name = MOD_CONC;
 	affect_to_char(victim, &af);
 
-	act("You disrupt $N's ability to focus with a controlled electrical burst!", ch, 0, victim, TO_CHAR);
-	act("$n disrupts $N's ability to focus with a controlled electrical burst!", ch, 0, victim, TO_NOTVICT);
-	act("Your mind clouds and you find concentration somewhat more difficult.", ch, 0, victim, TO_VICT);
+	act("You disrupt $N's ability to focus with a controlled electrical burst!", ch, nullptr, victim, TO_CHAR);
+	act("$n disrupts $N's ability to focus with a controlled electrical burst!", ch, nullptr, victim, TO_NOTVICT);
+	act("Your mind clouds and you find concentration somewhat more difficult.", ch, nullptr, victim, TO_VICT);
 }
 
 void spell_elecshield(int sn, int level, CHAR_DATA *ch, [[maybe_unused]] SpellTarget vo, [[maybe_unused]] CastMode mode)
@@ -1895,7 +1895,7 @@ void spell_elecshield(int sn, int level, CHAR_DATA *ch, [[maybe_unused]] SpellTa
 	affect_to_char(ch, &af);
 
 	send_to_char("You create an electrically-charged sphere around you.\n\r", ch);
-	act("A crackling sphere of electricity briefly surrounds $n.", ch, 0, 0, TO_ROOM);
+	act("A crackling sphere of electricity briefly surrounds $n.", ch, nullptr, nullptr, TO_ROOM);
 }
 
 void spell_scramble_neurons(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
@@ -1936,16 +1936,16 @@ void spell_mana_leech(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_
 	CHAR_DATA *victim = vo.AsChar();
 	int drain;
 
-	act("You extend tendrils of electricity towards $N.", ch, 0, victim, TO_CHAR);
-	act("$n extends tendrils of electricity towards you.", ch, 0, victim, TO_VICT);
-	act("$n extends tendrils of electricity towards $N.", ch, 0, victim, TO_NOTVICT);
+	act("You extend tendrils of electricity towards $N.", ch, nullptr, victim, TO_CHAR);
+	act("$n extends tendrils of electricity towards you.", ch, nullptr, victim, TO_VICT);
+	act("$n extends tendrils of electricity towards $N.", ch, nullptr, victim, TO_NOTVICT);
 
 	damage_new(ch, victim, dice(5, 2), sn, DAM_ENERGY, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, nullptr);
 
 	if (saves_spell(level, victim, DAM_ENERGY))
 	{
-		act("You fail to siphon away any of $N's mana.", ch, 0, victim, TO_CHAR);
-		act("You feel a brief tingling sensation, but it quickly dissipates.", ch, 0, victim, TO_VICT);
+		act("You fail to siphon away any of $N's mana.", ch, nullptr, victim, TO_CHAR);
+		act("You feel a brief tingling sensation, but it quickly dissipates.", ch, nullptr, victim, TO_VICT);
 		return;
 	}
 	else
@@ -1953,9 +1953,9 @@ void spell_mana_leech(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_
 		if (victim->mana <= 1)
 			return;
 
-		act("You siphon away $N's mana energy!", ch, 0, victim, TO_CHAR);
-		act("You feel weak as mana energy is ripped from your body!", ch, 0, victim, TO_VICT);
-		act("$N looks drained as the tendrils lash across his body!", ch, 0, victim, TO_NOTVICT);
+		act("You siphon away $N's mana energy!", ch, nullptr, victim, TO_CHAR);
+		act("You feel weak as mana energy is ripped from your body!", ch, nullptr, victim, TO_VICT);
+		act("$N looks drained as the tendrils lash across his body!", ch, nullptr, victim, TO_NOTVICT);
 
 		drain = dice(20, 15);
 
@@ -2053,13 +2053,13 @@ void spell_dehydrate(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_u
 
 	if (!is_npc(victim) && victim->pcdata->condition[COND_THIRST] > COND_HUNGRY)
 	{
-		act("$N is already too dehydrated to be affected.", ch, 0, victim, TO_CHAR);
+		act("$N is already too dehydrated to be affected.", ch, nullptr, victim, TO_CHAR);
 		return;
 	}
 
-	act("You attempt to draw fluids from $N's body.", ch, 0, victim, TO_CHAR);
-	act("A wave of nausea overcomes you as your gut clenches and sweat gushes from your pores.\n\rYou feel desperately thirsty.", ch, 0, victim, TO_VICT);
-	act("$N doubles over in agony as rolls of sweat drip from $S body.", ch, 0, victim, TO_NOTVICT);
+	act("You attempt to draw fluids from $N's body.", ch, nullptr, victim, TO_CHAR);
+	act("A wave of nausea overcomes you as your gut clenches and sweat gushes from your pores.\n\rYou feel desperately thirsty.", ch, nullptr, victim, TO_VICT);
+	act("$N doubles over in agony as rolls of sweat drip from $S body.", ch, nullptr, victim, TO_NOTVICT);
 
 	if (is_npc(victim))
 	{
@@ -2079,8 +2079,8 @@ void spell_drown(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unuse
 	CHAR_DATA *victim = vo.AsChar();
 	int dam = dice(level + 10, 4);
 
-	act("You choke and gasp for air as your lungs fill with water!", victim, 0, 0, TO_CHAR);
-	act("$n sputters and clutches $s chest as $s lungs fill with water!", victim, 0, 0, TO_ROOM);
+	act("You choke and gasp for air as your lungs fill with water!", victim, nullptr, nullptr, TO_CHAR);
+	act("$n sputters and clutches $s chest as $s lungs fill with water!", victim, nullptr, nullptr, TO_ROOM);
 
 	if (ch->in_room->sector_type == SECT_WATER || ch->in_room->sector_type == SECT_UNDERWATER)
 		dam *= 2;
@@ -2178,18 +2178,18 @@ void spell_hydration(int /* sn */, int /* level */, CHAR_DATA *ch, SpellTarget v
 	}
 
 	if (victim == ch)
-		act("You draw upon the water in your surroundings to revitalize yourself.", ch, 0, victim, TO_CHAR);
+		act("You draw upon the water in your surroundings to revitalize yourself.", ch, nullptr, victim, TO_CHAR);
 	else
-		act("You draw upon the water in your surroundings to revitalize $N.", ch, 0, victim, TO_CHAR);
+		act("You draw upon the water in your surroundings to revitalize $N.", ch, nullptr, victim, TO_CHAR);
 
 	if (heal == 0)
-		act("The flames burn up all moisture around you!", victim, 0, 0, TO_CHAR);
+		act("The flames burn up all moisture around you!", victim, nullptr, nullptr, TO_CHAR);
 	else if (heal <= 30)
-		act("You feel slightly more vigorous as moisture bathes your skin.", victim, 0, 0, TO_CHAR);
+		act("You feel slightly more vigorous as moisture bathes your skin.", victim, nullptr, nullptr, TO_CHAR);
 	else if (heal <= 80)
-		act("A renewed energy surges through your limbs as the healing waters wash over you.", victim, 0, 0, TO_CHAR);
+		act("A renewed energy surges through your limbs as the healing waters wash over you.", victim, nullptr, nullptr, TO_CHAR);
 	else
-		act("You feel your wounds mending rapidly as the life-giving water fills you with vigor!", victim, 0, 0, TO_CHAR);
+		act("You feel your wounds mending rapidly as the life-giving water fills you with vigor!", victim, nullptr, nullptr, TO_CHAR);
 
 	victim->hit = std::min(victim->hit + heal, (int)victim->max_hit);
 }
@@ -2204,7 +2204,7 @@ void spell_regeneration(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[mayb
 		if (ch == victim)
 			send_to_char("You can not aid your regeneration any further.\n\r", ch);
 		else
-			act("You can not aid $N's regeneration any further.", ch, 0, victim, TO_VICT);
+			act("You can not aid $N's regeneration any further.", ch, nullptr, victim, TO_VICT);
 
 		return;
 	}
@@ -2221,9 +2221,9 @@ void spell_regeneration(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[mayb
 	affect_to_char(victim, &af);
 
 	if (victim != ch)
-		act("You harness the restorative powers of water to aid $N's regeneration.", ch, 0, victim, TO_CHAR);
+		act("You harness the restorative powers of water to aid $N's regeneration.", ch, nullptr, victim, TO_CHAR);
 	else
-		act("You harness the restorative powers of water to aid your regeneration.", ch, 0, victim, TO_CHAR);
+		act("You harness the restorative powers of water to aid your regeneration.", ch, nullptr, victim, TO_CHAR);
 
 	send_to_char("A soothing coolness washes over you as you feel a surge of vitality.\n\r", victim);
 }
@@ -2250,7 +2250,7 @@ void spell_watershield(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /* vo
 	affect_to_char(ch, &af);
 
 	send_to_char("You form a shield of swirling water around you.\n\r", ch);
-	act("A magical sphere of swirling water briefly surrounds $n.", ch, 0, 0, TO_ROOM);
+	act("A magical sphere of swirling water briefly surrounds $n.", ch, nullptr, nullptr, TO_ROOM);
 }
 
 void spell_flood(int sn, int level, CHAR_DATA *ch, [[maybe_unused]] SpellTarget vo, [[maybe_unused]] CastMode mode)
@@ -2325,12 +2325,12 @@ void spell_flood(int sn, int level, CHAR_DATA *ch, [[maybe_unused]] SpellTarget 
 		}
 
 		direction = flag_name_lookup(door, direction_table);
-		act("You gather the water around you and direct it to overflow the bank to the $T!", ch, 0, direction, TO_CHAR);
+		act("You gather the water around you and direct it to overflow the bank to the $T!", ch, nullptr, direction, TO_CHAR);
 
 		if (to_room->people)
 		{
 			direction = flag_name_lookup(reverse_d(door), direction_table);
-			act("A torrent of water rushes in from the $T, flooding the room!", to_room->people, 0, direction, TO_ALL);
+			act("A torrent of water rushes in from the $T, flooding the room!", to_room->people, nullptr, direction, TO_ALL);
 		}
 
 		duration = 24;
@@ -2493,12 +2493,12 @@ void spell_tidalwave(int sn, int level, CHAR_DATA *ch, [[maybe_unused]] SpellTar
 		to_room = pexit->u1.to_room;
 	}
 
-	act("You gather the waters around you into a massive tidal wave!", ch, 0, 0, TO_CHAR);
-	act("As $n gestures, a massive wave rises from the waters before him.", ch, 0, 0, TO_ROOM);
+	act("You gather the waters around you into a massive tidal wave!", ch, nullptr, nullptr, TO_CHAR);
+	act("As $n gestures, a massive wave rises from the waters before him.", ch, nullptr, nullptr, TO_ROOM);
 
 	direction = flag_name_lookup(door, direction_table);
 
-	act("The tidal wave surges $T, leaving havoc in its wake!", ch, 0, direction, TO_ALL);
+	act("The tidal wave surges $T, leaving havoc in its wake!", ch, nullptr, direction, TO_ALL);
 
 	for (vch = ch->in_room->people; vch != nullptr; vch = v_next)
 	{
@@ -2587,7 +2587,7 @@ void spell_riptide(int sn, int level, CHAR_DATA *ch, [[maybe_unused]] SpellTarge
 			return;
 		}
 
-		act("You shape the water currents around you to flow into this area.", ch, 0, 0, TO_CHAR);
+		act("You shape the water currents around you to flow into this area.", ch, nullptr, nullptr, TO_CHAR);
 
 		init_affect(&af);
 		af.where = TO_AFFECTS;
@@ -2626,8 +2626,8 @@ void spell_riptide(int sn, int level, CHAR_DATA *ch, [[maybe_unused]] SpellTarge
 			return;
 		}
 
-		act("Faint eddies disturb the surface of the water as you create a dangerous riptide.", ch, 0, 0, TO_CHAR);
-		act("The water near $n ripples slightly.", ch, 0, 0, TO_ROOM);
+		act("Faint eddies disturb the surface of the water as you create a dangerous riptide.", ch, nullptr, nullptr, TO_CHAR);
+		act("The water near $n ripples slightly.", ch, nullptr, nullptr, TO_ROOM);
 
 		init_affect_room(&nraf);
 		nraf.where = TO_ROOM_AFFECTS;
@@ -2805,9 +2805,9 @@ void spell_disruption(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_
 	if (saves_spell(level, victim, DAM_INTERNAL))
 		dam /= 2;
 
-	act("You concentrate and briefly disrupt the molecular structure of $N's organs!", ch, 0, victim, TO_CHAR);
-	act("$n extends a hand towards you and you feel a horrible rending pain deep within you!", ch, 0, victim, TO_VICT);
-	act("$n extends a hand towards $N, who lurches in agony despite no visible injury!", ch, 0, victim, TO_NOTVICT);
+	act("You concentrate and briefly disrupt the molecular structure of $N's organs!", ch, nullptr, victim, TO_CHAR);
+	act("$n extends a hand towards you and you feel a horrible rending pain deep within you!", ch, nullptr, victim, TO_VICT);
+	act("$n extends a hand towards $N, who lurches in agony despite no visible injury!", ch, nullptr, victim, TO_NOTVICT);
 
 	damage_new(ch, victim, dam, sn, DAM_INTERNAL, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, nullptr);
 }
@@ -2837,7 +2837,7 @@ void spell_anchor(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /* vo */, 
 
 	if (oldanchor)
 	{
-		act("$n dissipates harmlessly.", oldanchor, 0, 0, TO_ROOM);
+		act("$n dissipates harmlessly.", oldanchor, nullptr, nullptr, TO_ROOM);
 		extract_char(oldanchor, true);
 	}
 
@@ -2846,8 +2846,8 @@ void spell_anchor(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /* vo */, 
 	anchor->level = level;
 	anchor->hunting = ch->self;
 
-	act("You harness the energy in the surrounding air to anchor your essence to this spot.", ch, 0, 0, TO_CHAR);
-	act("$n concentrates intently, and a small funnel cloud begins to spin in place beside $m.", ch, 0, 0, TO_ROOM);
+	act("You harness the energy in the surrounding air to anchor your essence to this spot.", ch, nullptr, nullptr, TO_CHAR);
+	act("$n concentrates intently, and a small funnel cloud begins to spin in place beside $m.", ch, nullptr, nullptr, TO_ROOM);
 }
 
 void spell_aerial_transferrence(int sn, int /* level */, CHAR_DATA *ch, SpellTarget /* vo */, CastMode /* mode */)
@@ -2882,14 +2882,14 @@ void spell_aerial_transferrence(int sn, int /* level */, CHAR_DATA *ch, SpellTar
 
 	if (anchor)
 	{
-		act("As you call upon the power of the winds, a large funnel cloud materializes to carry you off into the air!", ch, 0, 0, TO_CHAR);
-		act("A large funnel cloud materializes out of nowhere and carries $n soaring into the sky!", ch, 0, 0, TO_ROOM);
+		act("As you call upon the power of the winds, a large funnel cloud materializes to carry you off into the air!", ch, nullptr, nullptr, TO_CHAR);
+		act("A large funnel cloud materializes out of nowhere and carries $n soaring into the sky!", ch, nullptr, nullptr, TO_ROOM);
 
 		char_from_room(ch);
 		char_to_room(ch, anchor->in_room);
 
-		act("You soar through the air and are soon set down beside your anchor.", ch, 0, 0, TO_CHAR);
-		act("$n suddenly drops gently to the ground, beside the small funnel cloud.", ch, 0, 0, TO_ROOM);
+		act("You soar through the air and are soon set down beside your anchor.", ch, nullptr, nullptr, TO_CHAR);
+		act("$n suddenly drops gently to the ground, beside the small funnel cloud.", ch, nullptr, nullptr, TO_ROOM);
 
 		do_look(ch, "auto");
 		check_plasma_thread(ch, -1);
@@ -2912,14 +2912,14 @@ void spell_aerial_transferrence(int sn, int /* level */, CHAR_DATA *ch, SpellTar
 				break;
 		}
 
-		act("As you call upon the power of the winds, a large funnel cloud materializes to carry you off into the air!", ch, 0, 0, TO_CHAR);
-		act("A large funnel cloud materializes out of nowhere and carries $n soaring into the sky!", ch, 0, 0, TO_ROOM);
+		act("As you call upon the power of the winds, a large funnel cloud materializes to carry you off into the air!", ch, nullptr, nullptr, TO_CHAR);
+		act("A large funnel cloud materializes out of nowhere and carries $n soaring into the sky!", ch, nullptr, nullptr, TO_ROOM);
 
 		char_from_room(ch);
 		char_to_room(ch, pRoomIndex);
 
-		act("Without an anchor to secure you, the winds fling you haphazardly through the sky! ", ch, 0, 0, TO_CHAR);
-		act("$n plummets suddenly from the sky, hitting the ground hard!", ch, 0, 0, TO_ROOM);
+		act("Without an anchor to secure you, the winds fling you haphazardly through the sky! ", ch, nullptr, nullptr, TO_CHAR);
+		act("$n plummets suddenly from the sky, hitting the ground hard!", ch, nullptr, nullptr, TO_ROOM);
 
 		do_look(ch, "auto");
 		damage_new(ch, ch, dice(10, 10), sn, DAM_BASH, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, nullptr);
@@ -2955,7 +2955,7 @@ void spell_airshield(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /* vo *
 	affect_to_char(ch, &af);
 
 	send_to_char("The air begins to swirl rapidly around you.\n\r", ch);
-	act("$n raises $s arms, and swirling winds surround $m.", ch, 0, 0, TO_ROOM);
+	act("$n raises $s arms, and swirling winds surround $m.", ch, nullptr, nullptr, TO_ROOM);
 }
 
 /* Earth spells */
@@ -2978,8 +2978,8 @@ void spell_hardenfist(int sn, int level, CHAR_DATA *ch, [[maybe_unused]] SpellTa
 		af.end_fun = nullptr;
 		new_affect_to_char(ch, &af);
 
-		act("$n clenches $s fists tightly as the flesh seems to take on a stony pallor.", ch, 0, 0, TO_ROOM);
-		act("As you clench your fist, it becomes as hard as granite.", ch, 0, 0, TO_CHAR);
+		act("$n clenches $s fists tightly as the flesh seems to take on a stony pallor.", ch, nullptr, nullptr, TO_ROOM);
+		act("As you clench your fist, it becomes as hard as granite.", ch, nullptr, nullptr, TO_CHAR);
 	}
 	else
 	{
@@ -3008,7 +3008,7 @@ void spell_stability(int sn, int level, CHAR_DATA *ch, [[maybe_unused]] SpellTar
 	af.mod_name = MOD_LEVITATION;
 	affect_to_char(ch, &af);
 
-	act("$n suddenly seems much more sure of $s balance.", ch, 0, 0, TO_ROOM);
+	act("$n suddenly seems much more sure of $s balance.", ch, nullptr, nullptr, TO_ROOM);
 	send_to_char("You focus on manipulating your own mass, steadying your balance.\n\r", ch);
 }
 
@@ -3022,9 +3022,9 @@ void spell_crush(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unuse
 	if (saves_spell(level, victim, DAM_BASH))
 		dam /= 2;
 
-	act("You concentrate and briefly disrupt the molecular structure of $N's organs!", ch, 0, victim, TO_CHAR);
-	act("$n extends a hand towards you and you feel a horrible rending pain deep within you!", ch, 0, victim, TO_VICT);
-	act("$n extends a hand towards $N, who lurches in agony despite no visible injury!", ch, 0, victim, TO_NOTVICT);
+	act("You concentrate and briefly disrupt the molecular structure of $N's organs!", ch, nullptr, victim, TO_CHAR);
+	act("$n extends a hand towards you and you feel a horrible rending pain deep within you!", ch, nullptr, victim, TO_VICT);
+	act("$n extends a hand towards $N, who lurches in agony despite no visible injury!", ch, nullptr, victim, TO_NOTVICT);
 
 	damage_new(ch, victim, dam, sn, DAM_INTERNAL, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "crushing force");
 }
@@ -3048,7 +3048,7 @@ void spell_sensevibrations(int sn, int level, CHAR_DATA *ch, SpellTarget /* vo *
 		af.mod_name = MOD_PERCEPTION;
 		new_affect_to_char(ch, &af);
 
-		act("You attune your senses to the vibrations of the ground beneath you.", ch, 0, 0, TO_CHAR);
+		act("You attune your senses to the vibrations of the ground beneath you.", ch, nullptr, nullptr, TO_CHAR);
 	}
 	else
 	{
@@ -3076,8 +3076,8 @@ void spell_diamondskin(int sn, int level, CHAR_DATA *ch, SpellTarget /* vo */, C
 			af.mod_name = MOD_PROTECTION;
 			new_affect_to_char(ch, &af);
 
-			act("$n concentrates, and $s skin hardens into a diamond-like carapace.", ch, 0, 0, TO_ROOM);
-			act("The outer layers of your skin become almost impossibly hard.", ch, 0, 0, TO_CHAR);
+			act("$n concentrates, and $s skin hardens into a diamond-like carapace.", ch, nullptr, nullptr, TO_ROOM);
+			act("The outer layers of your skin become almost impossibly hard.", ch, nullptr, nullptr, TO_CHAR);
 			if (is_affected(ch, gsn_stoneskin))
 				affect_strip(ch, gsn_stoneskin);
 			if (is_affected(ch, gsn_ironskin))
@@ -3155,14 +3155,14 @@ void spell_overbear(int sn, [[maybe_unused]] int level, CHAR_DATA *ch, SpellTarg
 
 	if (number_percent() >= chance)
 	{
-		act("An invisible weight presses down upon you, but you shrug it off.", victim, 0, 0, TO_CHAR);
-		act("$n staggers slightly for a moment, but maintains $s balance.", victim, 0, 0, TO_ROOM);
+		act("An invisible weight presses down upon you, but you shrug it off.", victim, nullptr, nullptr, TO_CHAR);
+		act("$n staggers slightly for a moment, but maintains $s balance.", victim, nullptr, nullptr, TO_ROOM);
 		return;
 	}
 	else
 	{
-		act("An invisible weight bears down upon you, forcing you to your knees!", victim, 0, 0, TO_CHAR);
-		act("$n loses his footing, staggering under an unseen burden!", victim, 0, 0, TO_ROOM);
+		act("An invisible weight bears down upon you, forcing you to your knees!", victim, nullptr, nullptr, TO_CHAR);
+		act("$n loses his footing, staggering under an unseen burden!", victim, nullptr, nullptr, TO_ROOM);
 
 		damage_new(ch, victim, dice(2, 6), sn, DAM_BASH, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "overbearing force");
 		victim->position = POS_RESTING;
@@ -3196,7 +3196,7 @@ void spell_reduce([[maybe_unused]] int sn, int level, CHAR_DATA *ch, SpellTarget
 	if (is_affected(victim, gsn_enlarge))
 	{
 		send_to_char("You shrink down to your normal size.\n\r", victim);
-		act("$n shrinks down to $s normal size.", victim, 0, 0, TO_ROOM);
+		act("$n shrinks down to $s normal size.", victim, nullptr, nullptr, TO_ROOM);
 
 		affect_strip(victim, gsn_enlarge);
 		return;
@@ -3218,7 +3218,7 @@ void spell_reduce([[maybe_unused]] int sn, int level, CHAR_DATA *ch, SpellTarget
 	affect_to_char(victim, &af);
 
 	send_to_char("Your entire body suddenly contracts, leaving you significantly smaller but somehow sturdier.\n\r", victim);
-	act("$n rapidly shrinks to two-thirds of $s original size!", victim, 0, 0, TO_ROOM);
+	act("$n rapidly shrinks to two-thirds of $s original size!", victim, nullptr, nullptr, TO_ROOM);
 
 	if (!trusts(ch, victim))
 	{
@@ -3250,7 +3250,7 @@ void spell_earthshield(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /* vo
 	affect_to_char(ch, &af);
 
 	send_to_char("You ready a shield of solid matter to deflect the bodies of your foes.\n\r", ch);
-	act("$n's form is suddenly masked by an opaque gray shield that vanishes as quickly as it appeared.", ch, 0, 0, TO_ROOM);
+	act("$n's form is suddenly masked by an opaque gray shield that vanishes as quickly as it appeared.", ch, nullptr, nullptr, TO_ROOM);
 }
 
 void spell_coldshield(int sn, int level, CHAR_DATA *ch, [[maybe_unused]] SpellTarget vo, [[maybe_unused]] CastMode mode)
@@ -3275,7 +3275,7 @@ void spell_coldshield(int sn, int level, CHAR_DATA *ch, [[maybe_unused]] SpellTa
 	affect_to_char(ch, &af);
 
 	send_to_char("The air around you rapidly chills.\n\r", ch);
-	act("The air around $n suddenly turns frigid.", ch, 0, 0, TO_ROOM);
+	act("The air around $n suddenly turns frigid.", ch, nullptr, nullptr, TO_ROOM);
 }
 
 void spell_coagulate(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /* vo */, CastMode /* mode */)
@@ -3306,16 +3306,16 @@ void spell_coagulate(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /* vo *
 
 	int dam = dice(5, 4) + level;
 
-	act("You draw heat out of $N's bloodstream.", ch, 0, victim, TO_CHAR);
-	act("Your blood chills as $n extends a hand towards you.", ch, 0, victim, TO_VICT);
+	act("You draw heat out of $N's bloodstream.", ch, nullptr, victim, TO_CHAR);
+	act("Your blood chills as $n extends a hand towards you.", ch, nullptr, victim, TO_VICT);
 
 	if (damage_new(ch, victim, dam, TYPE_UNDEFINED, DAM_COLD, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "coagulation") == -1)
 		return;
 
 	if (is_affected(victim, gsn_bleeding))
 	{
-		act("$N's blood congeals, and $S bleeding stops.", ch, 0, victim, TO_CHAR);
-		act("You shiver slightly from the cold, but your bleeding stops.", ch, 0, victim, TO_VICT);
+		act("$N's blood congeals, and $S bleeding stops.", ch, nullptr, victim, TO_CHAR);
+		act("You shiver slightly from the cold, but your bleeding stops.", ch, nullptr, victim, TO_VICT);
 		affect_strip(victim, gsn_bleeding);
 	}
 }
@@ -3330,7 +3330,7 @@ void spell_hypothermia(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe
 		|| saves_spell(level - 1, victim, DAM_COLD)
 		|| IS_SET(victim->imm_flags, IMM_SLEEP))
 	{
-		act("$N resisted your hypothermia spell.", ch, 0, victim, TO_CHAR);
+		act("$N resisted your hypothermia spell.", ch, nullptr, victim, TO_CHAR);
 		return;
 	}
 
@@ -3352,7 +3352,7 @@ void spell_hypothermia(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe
 	{
 		if (is_affected(victim, gsn_indom))
 		{
-			act("$N's body's state is maintained by the force of $S will.", ch, 0, victim, TO_CHAR);
+			act("$N's body's state is maintained by the force of $S will.", ch, nullptr, victim, TO_CHAR);
 			return;
 		}
 
@@ -3431,8 +3431,8 @@ void spell_frigidaura(int sn, int level, CHAR_DATA *ch, [[maybe_unused]] SpellTa
 
 	affect_to_char(ch, &af);
 
-	act("You chill the air around you, prepared to lash out at any who come near.", ch, 0, 0, TO_CHAR);
-	act("$n is briefly surrounded by an aura of ice, which rapidly fades away.", ch, 0, 0, TO_ROOM);
+	act("You chill the air around you, prepared to lash out at any who come near.", ch, nullptr, nullptr, TO_CHAR);
+	act("$n is briefly surrounded by an aura of ice, which rapidly fades away.", ch, nullptr, nullptr, TO_ROOM);
 }
 
 ///
@@ -3459,7 +3459,7 @@ void spell_enervate_agitate_helper(int sn, int level, CHAR_DATA *ch, [[maybe_unu
 
 	if (is_npc(victim))
 	{
-		act("You lack the necessary understanding of $N's structure to accomplish that.", ch, 0, victim, TO_CHAR);
+		act("You lack the necessary understanding of $N's structure to accomplish that.", ch, nullptr, victim, TO_CHAR);
 		return;
 	}
 
@@ -3475,9 +3475,9 @@ void spell_enervate_agitate_helper(int sn, int level, CHAR_DATA *ch, [[maybe_unu
 		if (saves_spell(level, victim, (sn == gsn_agitate) ? DAM_FIRE : DAM_COLD))
 		{
 			if (iDir > 0)
-				act("You failed to accelerate the particles of $N.", ch, 0, victim, TO_CHAR);
+				act("You failed to accelerate the particles of $N.", ch, nullptr, victim, TO_CHAR);
 			else
-				act("You failed to decelerate the particles of $N.", ch, 0, victim, TO_CHAR);
+				act("You failed to decelerate the particles of $N.", ch, nullptr, victim, TO_CHAR);
 
 			multi_hit(victim, ch, TYPE_UNDEFINED);
 			return;
@@ -3497,13 +3497,13 @@ void spell_enervate_agitate_helper(int sn, int level, CHAR_DATA *ch, [[maybe_unu
 
 	if (iDir > 0)
 	{
-		act("You infuse the particles of $N's body with kinetic energy.", ch, 0, victim, TO_CHAR);
-		act("$n focuses intense energy upon $N's body!", ch, 0, victim, TO_NOTVICT);
+		act("You infuse the particles of $N's body with kinetic energy.", ch, nullptr, victim, TO_CHAR);
+		act("$n focuses intense energy upon $N's body!", ch, nullptr, victim, TO_NOTVICT);
 	}
 	else
 	{
-		act("Drawing heat from $N's body in large quantity, you slow down $s particles.", ch, 0, victim, TO_CHAR);
-		act("$n draws energy from $N's body!", ch, 0, victim, TO_NOTVICT);
+		act("Drawing heat from $N's body in large quantity, you slow down $s particles.", ch, nullptr, victim, TO_CHAR);
+		act("$n draws energy from $N's body!", ch, nullptr, victim, TO_NOTVICT);
 	}
 
 	if (iDir > 0)
@@ -3527,7 +3527,7 @@ void spell_enervate_agitate_helper(int sn, int level, CHAR_DATA *ch, [[maybe_unu
 							"realize you are about to die.\n\r", victim);
 				break;
 			default:
-				act("$n infuses your body with powerful heat energy!", ch, 0, victim, TO_VICT);
+				act("$n infuses your body with powerful heat energy!", ch, nullptr, victim, TO_VICT);
 				break;
 		}
 	}
@@ -3551,7 +3551,7 @@ void spell_enervate_agitate_helper(int sn, int level, CHAR_DATA *ch, [[maybe_unu
 				send_to_char("Your body grinds to a halt as you lose control of the last of your mobility.\n\r", victim);
 				break;
 			default:
-				act("$n infuses your body with frigid cold energy!", ch, 0, victim, TO_VICT);
+				act("$n infuses your body with frigid cold energy!", ch, nullptr, victim, TO_VICT);
 				break;
 		}
 	}
@@ -3650,7 +3650,7 @@ void agitate_tick(CHAR_DATA *ch, AFFECT_DATA *af)
 
 	if (ch->pcdata->energy_state > 4)
 	{
-		act("$n collapses in a heap, wisps of smoke rising from $s charred corpse.", ch, 0, 0, TO_ROOM);
+		act("$n collapses in a heap, wisps of smoke rising from $s charred corpse.", ch, nullptr, nullptr, TO_ROOM);
 		send_to_char("You crumple to the ground, your consciousness fading away, as your body collapses under the heat.\n\r", ch);
 
 		if (Deref(af->owner))
@@ -3681,9 +3681,9 @@ void spell_freezemetal(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe
 	OBJ_DATA *obj;
 	int iWear, highchance, crushdam, piercedam;
 
-	act("The air around you suddenly turns ice cold.", ch, 0, victim, TO_VICT);
-	act("You attempt to siphon heat away from $N's armor.", ch, 0, victim, TO_CHAR);
-	act("$n extends a hand toward $N, as a chill fills the air.", ch, 0, victim, TO_NOTVICT);
+	act("The air around you suddenly turns ice cold.", ch, nullptr, victim, TO_VICT);
+	act("You attempt to siphon heat away from $N's armor.", ch, nullptr, victim, TO_CHAR);
+	act("$n extends a hand toward $N, as a chill fills the air.", ch, nullptr, victim, TO_NOTVICT);
 
 	crushdam = 0;
 	piercedam = 0;
@@ -3754,9 +3754,9 @@ void spell_frostbite(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_u
 			return;
 		}
 
-		act("$N's arm goes limp as you draw heat from it.", ch, 0, victim, TO_CHAR);
-		act_new("Your arm goes limp as $n draws heat from it.", ch, 0, victim, TO_VICT, POS_SLEEPING);
-		act("$N's arm goes limp as $n draws heat from it.", ch, 0, victim, TO_NOTVICT);
+		act("$N's arm goes limp as you draw heat from it.", ch, nullptr, victim, TO_CHAR);
+		act_new("Your arm goes limp as $n draws heat from it.", ch, nullptr, victim, TO_VICT, POS_SLEEPING);
+		act("$N's arm goes limp as $n draws heat from it.", ch, nullptr, victim, TO_NOTVICT);
 
 		for (auto it = victim->affected.begin(); it != victim->affected.end(); )
 		{
@@ -3780,9 +3780,9 @@ void spell_frostbite(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_u
 
 		if (!saves_spell(level - 2, victim, DAM_COLD))
 		{
-			act("$N's screams in pain as $S arm, now a pale bluish-white color, dangles uselessly at $S side!", ch, 0, victim, TO_CHAR);
-			act_new("Shooting pains run through your arm as $n chills it, and then suddenly, you have no feeling in it at all.", ch, 0, victim, TO_VICT, POS_SLEEPING);
-			act("$N's screams in pain as $S arm, now a pale bluish-white color, dangles uselessly at $S side!", ch, 0, victim, TO_NOTVICT);
+			act("$N's screams in pain as $S arm, now a pale bluish-white color, dangles uselessly at $S side!", ch, nullptr, victim, TO_CHAR);
+			act_new("Shooting pains run through your arm as $n chills it, and then suddenly, you have no feeling in it at all.", ch, nullptr, victim, TO_VICT, POS_SLEEPING);
+			act("$N's screams in pain as $S arm, now a pale bluish-white color, dangles uselessly at $S side!", ch, nullptr, victim, TO_NOTVICT);
 
 			init_affect(&af);
 			af.where = TO_AFFECTS;
@@ -3803,9 +3803,9 @@ void spell_frostbite(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_u
 			return;
 		}
 
-		act("$N's leg goes limp as you draw heat from it.", ch, 0, victim, TO_CHAR);
-		act_new("Your leg goes limp as $n draws heat from it.", ch, 0, victim, TO_VICT, POS_SLEEPING);
-		act("$N's leg goes limp as $n draws heat from it.", ch, 0, victim, TO_NOTVICT);
+		act("$N's leg goes limp as you draw heat from it.", ch, nullptr, victim, TO_CHAR);
+		act_new("Your leg goes limp as $n draws heat from it.", ch, nullptr, victim, TO_VICT, POS_SLEEPING);
+		act("$N's leg goes limp as $n draws heat from it.", ch, nullptr, victim, TO_NOTVICT);
 
 		for (auto it = victim->affected.begin(); it != victim->affected.end(); )
 		{
@@ -3829,9 +3829,9 @@ void spell_frostbite(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_u
 
 		if (!saves_spell(level - 2, victim, DAM_COLD))
 		{
-			act("$N nearly collapses to the ground as $S leg is frozen solid!", ch, 0, victim, TO_CHAR);
-			act_new("Shooting pains run through your leg as $n chills it, and then suddenly, you have no feeling in it at all.", ch, 0, victim, TO_VICT, POS_SLEEPING);
-			act("$N nearly collapses to the ground as $S leg is frozen solid!", ch, 0, victim, TO_NOTVICT);
+			act("$N nearly collapses to the ground as $S leg is frozen solid!", ch, nullptr, victim, TO_CHAR);
+			act_new("Shooting pains run through your leg as $n chills it, and then suddenly, you have no feeling in it at all.", ch, nullptr, victim, TO_VICT, POS_SLEEPING);
+			act("$N nearly collapses to the ground as $S leg is frozen solid!", ch, nullptr, victim, TO_NOTVICT);
 
 			init_affect(&af);
 			af.where = TO_AFFECTS;
@@ -3946,32 +3946,32 @@ void spell_acid_stream(int /* sn */, int level, CHAR_DATA *ch, SpellTarget vo, C
 	if (ch != victim)
 	{
 		buffer = fmt::format("You spray a stream of hissing acid at $N, striking $S {}!", bodypart);
-		act(buffer.c_str(), ch, 0, victim, TO_CHAR);
+		act(buffer.c_str(), ch, nullptr, victim, TO_CHAR);
 
 		buffer = fmt::format("$n sprays a stream of hissing acid at you, striking your {}!", bodypart);
-		act(buffer.c_str(), ch, 0, victim, TO_VICT);
+		act(buffer.c_str(), ch, nullptr, victim, TO_VICT);
 
 		buffer = fmt::format("$n sprays a stream of hissing acid at $N, striking $S {}!", bodypart);
-		act(buffer.c_str(), ch, 0, victim, TO_NOTVICT);
+		act(buffer.c_str(), ch, nullptr, victim, TO_NOTVICT);
 	}
 	else
 	{
 		buffer = fmt::format("A stream of hissing acid hits you, striking your %s!", bodypart);
-		act(buffer.c_str(), ch, 0, 0, TO_CHAR);
+		act(buffer.c_str(), ch, nullptr, nullptr, TO_CHAR);
 
 		buffer = fmt::format("A stream of hissing acid hits $n, striking $s %s!", bodypart);
-		act(buffer.c_str(), ch, 0, 0, TO_ROOM);
+		act(buffer.c_str(), ch, nullptr, nullptr, TO_ROOM);
 	}
 
 	if (ch != victim)
 	{
-		act(tochar2, ch, 0, victim, TO_CHAR);
-		act(tovict2, ch, 0, victim, TO_VICT);
+		act(tochar2, ch, nullptr, victim, TO_CHAR);
+		act(tovict2, ch, nullptr, victim, TO_VICT);
 	}
 	else
-		act(tovict2, ch, 0, 0, TO_CHAR);
+		act(tovict2, ch, nullptr, nullptr, TO_CHAR);
 
-	act(toroom2, ch, 0, victim, TO_NOTVICT);
+	act(toroom2, ch, nullptr, victim, TO_NOTVICT);
 
 	if (hardness > 3 || (armor != nullptr && number_percent() > 50))
 	{
@@ -4035,15 +4035,15 @@ void spell_acid_stream(int /* sn */, int level, CHAR_DATA *ch, SpellTarget vo, C
 	{
 		if (ch != victim)
 		{
-			act(tochar3, ch, 0, victim, TO_CHAR);
-			act(tovict3, ch, 0, victim, TO_VICT);
+			act(tochar3, ch, nullptr, victim, TO_CHAR);
+			act(tovict3, ch, nullptr, victim, TO_VICT);
 		}
 		else
 		{
-			act(tovict3, ch, 0, 0, TO_CHAR);
+			act(tovict3, ch, nullptr, nullptr, TO_CHAR);
 		}
 
-		act(toroom3, ch, 0, victim, TO_NOTVICT);
+		act(toroom3, ch, nullptr, victim, TO_NOTVICT);
 	}
 
 	if (ch != victim)
@@ -4092,23 +4092,23 @@ void spell_acid_vein(int sn, int level, CHAR_DATA *ch, [[maybe_unused]] SpellTar
 	oaf.owner = ch->self;
 	affect_to_obj(weapon, &oaf);
 
-	act("You coat $p with acid.", ch, weapon, 0, TO_CHAR);
+	act("You coat $p with acid.", ch, weapon, nullptr, TO_CHAR);
 	WAIT_STATE(ch, PULSE_VIOLENCE * 2);
 }
 
 void acid_end(OBJ_DATA *obj, [[maybe_unused]] OBJ_AFFECT_DATA *af)
 {
 	if (CHAR_DATA *carrier = Deref(obj->carried_by))
-		act("$p is dissolved by the acid coating it.", carrier, obj, 0, TO_CHAR);
+		act("$p is dissolved by the acid coating it.", carrier, obj, nullptr, TO_CHAR);
 
 	if (obj->in_room && obj->in_room->people)
-		act("$p is dissolved by the acid coating it.", obj->in_room->people, obj, 0, TO_ALL);
+		act("$p is dissolved by the acid coating it.", obj->in_room->people, obj, nullptr, TO_ALL);
 
 	OBJ_DATA *container = Deref(obj->in_obj);
 	CHAR_DATA *containerCarrier = container != nullptr ? Deref(container->carried_by) : nullptr;
 
 	if (containerCarrier != nullptr)
-		act("You hear a faint hissing sound coming from $p.", containerCarrier, container, 0, TO_CHAR);
+		act("You hear a faint hissing sound coming from $p.", containerCarrier, container, nullptr, TO_CHAR);
 
 	extract_obj(obj);
 }
@@ -4510,7 +4510,7 @@ void spell_thunderclap(int sn, int level, CHAR_DATA *ch, SpellTarget /* vo */, C
 	AFFECT_DATA af;
 	char buf[MSL];
 	send_to_char("As you gesture, a booming thunderclap rips through the air!\n\r", ch);
-	act("As $n gestures, a booming thunderclap rips through the air!", ch, 0, 0, TO_ROOM);
+	act("As $n gestures, a booming thunderclap rips through the air!", ch, nullptr, nullptr, TO_ROOM);
 
 	init_affect(&af);
 	af.where = TO_AFFECTS;
@@ -4537,7 +4537,7 @@ void spell_thunderclap(int sn, int level, CHAR_DATA *ch, SpellTarget /* vo */, C
 
 		if (!saves_spell(level, vch, DAM_OTHER) && !saves_spell(level, vch, DAM_OTHER) && !is_affected(vch, sn))
 		{
-			act("$n staggers, dazed by the force of the deafening thunderclap!", vch, 0, 0, TO_ROOM);
+			act("$n staggers, dazed by the force of the deafening thunderclap!", vch, nullptr, nullptr, TO_ROOM);
 			send_to_char("The thunderclap resonates in your ears, deafening you!\n\r", vch);
 			affect_to_char(vch, &af);
 		}
@@ -4553,12 +4553,12 @@ void spell_neutralize([[maybe_unused]] int sn, int level, CHAR_DATA *ch, SpellTa
 
 	if (is_affected(victim, gsn_neutralize))
 	{
-		act("$N is already neutralized.", ch, 0, victim, TO_CHAR);
+		act("$N is already neutralized.", ch, nullptr, victim, TO_CHAR);
 		return;
 	}
 
 	send_to_char("Your body becomes tempered against acids.\n\r", victim);
-	act("$n's skin flushes slightly green for a moment, then returns to normal.", victim, 0, 0, TO_ROOM);
+	act("$n's skin flushes slightly green for a moment, then returns to normal.", victim, nullptr, nullptr, TO_ROOM);
 
 	init_affect(&af);
 	af.where = TO_IMMUNE;
@@ -4639,7 +4639,7 @@ void spell_caustic_vapor(int sn, int level, CHAR_DATA *ch, SpellTarget /* vo */,
 	af.modifier = 0;
 	affect_to_char(ch, &af);
 
-	act("Vapors of acidic mist rise from the ground and begin to engulf the room.", ch, 0, 0, TO_ALL);
+	act("Vapors of acidic mist rise from the ground and begin to engulf the room.", ch, nullptr, nullptr, TO_ALL);
 	zone_echo(ch->in_room->area, "You hear a massive hissing sound.");
 }
 
@@ -4689,7 +4689,7 @@ void spell_smokescreen(int sn, int level, CHAR_DATA *ch, SpellTarget /* vo */, C
 	af.duration = 20;
 	affect_to_char(ch, &af);
 
-	act("Dense smoke fills the room, concealing any way out!", ch, 0, 0, TO_ALL);
+	act("Dense smoke fills the room, concealing any way out!", ch, nullptr, nullptr, TO_ALL);
 }
 
 void smokescreen_end(ROOM_INDEX_DATA *room, [[maybe_unused]] ROOM_AFFECT_DATA *af)
@@ -4703,9 +4703,9 @@ void spell_smother(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unu
 	CHAR_DATA *victim = vo.AsChar();
 	AFFECT_DATA af;
 
-	act("$N chokes and gasps for air as you smother $M with thick smoke!", ch, 0, victim, TO_CHAR);
-	act("You choke and gasp for air as $n smothers you with thick smoke!", ch, 0, victim, TO_VICT);
-	act("$N chokes and gasps for air as $n smothers $M with thick smoke!", ch, 0, victim, TO_NOTVICT);
+	act("$N chokes and gasps for air as you smother $M with thick smoke!", ch, nullptr, victim, TO_CHAR);
+	act("You choke and gasp for air as $n smothers you with thick smoke!", ch, nullptr, victim, TO_VICT);
+	act("$N chokes and gasps for air as $n smothers $M with thick smoke!", ch, nullptr, victim, TO_NOTVICT);
 
 	if (number_percent() > 6 * (get_curr_stat(victim, STAT_CON) - 12))
 	{
@@ -4738,7 +4738,7 @@ void spell_putrid_air(int /* sn */, int /* level */, CHAR_DATA *ch, SpellTarget 
 		return;
 	}
 
-	act("A wave of putrid air sweeps through the area!", ch, 0, 0, TO_ALL);
+	act("A wave of putrid air sweeps through the area!", ch, nullptr, nullptr, TO_ALL);
 
 	for (vch = ch->in_room->people; vch != nullptr; vch = vch_next)
 	{
@@ -4773,9 +4773,9 @@ void spell_asphyxiate(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_
 		return;
 	}
 
-	act("$N gasps as you corrupt the air $E is breathing!", ch, 0, victim, TO_CHAR);
-	act("You gasp as $n corrupts the air you are breathing!", ch, 0, victim, TO_VICT);
-	act("$N gasps as $n corrupts the air $E is breathing!", ch, 0, victim, TO_NOTVICT);
+	act("$N gasps as you corrupt the air $E is breathing!", ch, nullptr, victim, TO_CHAR);
+	act("You gasp as $n corrupts the air you are breathing!", ch, nullptr, victim, TO_VICT);
+	act("$N gasps as $n corrupts the air $E is breathing!", ch, nullptr, victim, TO_NOTVICT);
 
 	if (saves_spell(level, victim, DAM_INTERNAL))
 		dam /= 2;
@@ -4799,8 +4799,8 @@ void spell_shroud_of_secrecy(int sn, int level, CHAR_DATA *ch, SpellTarget /* vo
 		return;
 	}
 
-	act("A shroud of smoke bursts out around you, concealing your presence.", ch, 0, 0, TO_CHAR);
-	act("A shroud of smoke bursts out around $n, concealing $s presence.", ch, 0, 0, TO_ROOM);
+	act("A shroud of smoke bursts out around you, concealing your presence.", ch, nullptr, nullptr, TO_CHAR);
+	act("A shroud of smoke bursts out around $n, concealing $s presence.", ch, nullptr, nullptr, TO_ROOM);
 
 	free_pstring(ch->name);
 	ch->name = palloc_string("Someone");
@@ -4823,8 +4823,8 @@ void shroud_end(CHAR_DATA *ch, [[maybe_unused]] AFFECT_DATA *af)
 	free_pstring(ch->name);
 	ch->name = palloc_string(ch->true_name);
 
-	act("The shroud of smoke concealing you dissipates.", ch, 0, 0, TO_CHAR);
-	act("The shroud of smoke concealing $n dissipates.", ch, 0, 0, TO_ROOM);
+	act("The shroud of smoke concealing you dissipates.", ch, nullptr, nullptr, TO_CHAR);
+	act("The shroud of smoke concealing $n dissipates.", ch, nullptr, nullptr, TO_ROOM);
 }
 
 void spell_noxious_ward(int sn, int level, CHAR_DATA *ch, SpellTarget /* vo */, CastMode /* mode */)
@@ -4848,7 +4848,7 @@ void spell_noxious_ward(int sn, int level, CHAR_DATA *ch, SpellTarget /* vo */, 
 	af.mod_name = MOD_PROTECTION;
 	affect_to_char(ch, &af);
 
-	act("You feel protected by a noxious ward.", ch, 0, 0, TO_CHAR);
+	act("You feel protected by a noxious ward.", ch, nullptr, nullptr, TO_CHAR);
 }
 
 void spell_molten_stones(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
@@ -4873,9 +4873,9 @@ void spell_molten_stones(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[may
 	if (saves_spell(level, victim, DAM_FIRE))
 		fire /= 2;
 
-	act("$n grabs a large stone, liquefies it in a flash and sends it flying at $N!", ch, 0, victim, TO_NOTVICT);
-	act("You grab a large stone, liquify it with a burst of heat, and send it flying at $N!", ch, 0, victim, TO_CHAR);
-	act("$n grabs a large stone, liquefies it in a flash and sends it flying at you!", ch, 0, victim, TO_VICT);
+	act("$n grabs a large stone, liquefies it in a flash and sends it flying at $N!", ch, nullptr, victim, TO_NOTVICT);
+	act("You grab a large stone, liquify it with a burst of heat, and send it flying at $N!", ch, nullptr, victim, TO_CHAR);
+	act("$n grabs a large stone, liquefies it in a flash and sends it flying at you!", ch, nullptr, victim, TO_VICT);
 
 	damage_new(ch, victim, blunt, sn, DAM_BASH, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "molten stone");
 
@@ -4898,8 +4898,8 @@ void spell_heat_earth(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /* vo 
 
 	dam = dice(level, 7);
 
-	act("You superheat the earth in the area, searing your foes!", ch, 0, 0, TO_CHAR);
-	act("$n waves $s arm at the ground and waves of heat radiate upward from beneath you!", ch, 0, 0, TO_ROOM);
+	act("You superheat the earth in the area, searing your foes!", ch, nullptr, nullptr, TO_CHAR);
+	act("$n waves $s arm at the ground and waves of heat radiate upward from beneath you!", ch, nullptr, nullptr, TO_ROOM);
 
 	for (vch = ch->in_room->people; vch; vch = vch_next)
 	{
@@ -4990,14 +4990,14 @@ void spell_blanket(int sn, int level, CHAR_DATA *ch, [[maybe_unused]] SpellTarge
 
 	clear_tracks(ch->in_room);
 
-	act("A sudden gust sweeps through, bearing heavy snowflakes that rapidly blanket the ground.", ch, 0, 0, TO_ALL);
+	act("A sudden gust sweeps through, bearing heavy snowflakes that rapidly blanket the ground.", ch, nullptr, nullptr, TO_ALL);
 }
 
 void blanket_melt(ROOM_INDEX_DATA *room, [[maybe_unused]] ROOM_AFFECT_DATA *af)
 {
 	for (CHAR_DATA *rch = room->people; rch != nullptr; rch = rch->next_in_room)
 	{
-		act("The layer of snow blanketing the earth fades away as the magic dissipates.", rch, 0, 0, TO_CHAR);
+		act("The layer of snow blanketing the earth fades away as the magic dissipates.", rch, nullptr, nullptr, TO_CHAR);
 	}
 
 	clear_tracks(room);
@@ -5094,8 +5094,8 @@ void spell_concave_shell(int /* sn */, int /* level */, CHAR_DATA *ch, SpellTarg
 
 	RS.Queue.AddToQueue(6, "spell_concave_shell", "concave_shell_move", concave_shell_move, ch, dir, ch->in_room);
 
-	act("Air begins to swirl rapidly around you.", ch, 0, 0, TO_CHAR);
-	act("Swirling winds begin to mass near $n.", ch, 0, 0, TO_ROOM);
+	act("Air begins to swirl rapidly around you.", ch, nullptr, nullptr, TO_CHAR);
+	act("Swirling winds begin to mass near $n.", ch, nullptr, nullptr, TO_ROOM);
 }
 
 void concave_shell_move(CHAR_DATA *ch, int dir, ROOM_INDEX_DATA *oldroom)
@@ -5112,7 +5112,7 @@ void concave_shell_move(CHAR_DATA *ch, int dir, ROOM_INDEX_DATA *oldroom)
 
 	if (ch->disrupted)
 	{
-		act("The shell of air dissipates with no effect.", ch, 0, 0, TO_ALL);
+		act("The shell of air dissipates with no effect.", ch, nullptr, nullptr, TO_ALL);
 		return;
 	}
 
@@ -5125,8 +5125,8 @@ void concave_shell_move(CHAR_DATA *ch, int dir, ROOM_INDEX_DATA *oldroom)
 	range = ch->level / 3;
 
 	direction = flag_name_lookup(dir, direction_table);
-	act("The shell of air finishes forming and rushes $tward, taking you with it!", ch, direction, 0, TO_CHAR);
-	act("The shell of air finishes forming and rushes $tward, taking $n with it!", ch, direction, 0, TO_ROOM);
+	act("The shell of air finishes forming and rushes $tward, taking you with it!", ch, direction, nullptr, TO_CHAR);
+	act("The shell of air finishes forming and rushes $tward, taking $n with it!", ch, direction, nullptr, TO_ROOM);
 
 	if (!IS_SET(ch->comm, COMM_BRIEF))
 	{
@@ -5141,7 +5141,7 @@ void concave_shell_move(CHAR_DATA *ch, int dir, ROOM_INDEX_DATA *oldroom)
 		|| (IS_SET(pexit->exit_info, EX_CLOSED) && !is_affected_by(ch, AFF_PASS_DOOR))
 		|| (IS_SET(pexit->exit_info, EX_CLOSED) && IS_SET(pexit->exit_info, EX_NOPASS)))
 	{
-		act("Since the exit $t has become obstructed, the swirling winds dissipate.", ch, direction, 0, TO_ALL);
+		act("Since the exit $t has become obstructed, the swirling winds dissipate.", ch, direction, nullptr, TO_ALL);
 		return;
 	}
 
@@ -5157,7 +5157,7 @@ void concave_shell_move(CHAR_DATA *ch, int dir, ROOM_INDEX_DATA *oldroom)
 			|| (IS_SET(pexit->exit_info, EX_CLOSED) && IS_SET(pexit->exit_info, EX_NOPASS)))
 		{
 			send_to_char("Your rapid motion comes to a crashing halt as you strike an obstacle!\n\r", ch);
-			act("$n flies into the room and crashes into the obstruction $tward!", ch, direction, 0, TO_ROOM);
+			act("$n flies into the room and crashes into the obstruction $tward!", ch, direction, nullptr, TO_ROOM);
 
 			damage_new(ch, ch, dice(10, 10), gsn_bash, DAM_BASH, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "bone-jarring collision");
 			WAIT_STATE(ch, PULSE_VIOLENCE * 2);
@@ -5209,8 +5209,8 @@ void spell_frost_glaze(int sn, int level, CHAR_DATA *ch, SpellTarget /* vo */, C
 		return;
 	}
 
-	act("Your armor becomes covered in frost.", ch, 0, 0, TO_CHAR);
-	act("$n's armor becomes covered in frost.", ch, 0, 0, TO_ROOM);
+	act("Your armor becomes covered in frost.", ch, nullptr, nullptr, TO_CHAR);
+	act("$n's armor becomes covered in frost.", ch, nullptr, nullptr, TO_ROOM);
 
 	acmod = level / 2;
 
@@ -5265,22 +5265,22 @@ void spell_unbreakable(int /* sn */, int level, CHAR_DATA *ch, SpellTarget vo, C
 	{
 		if (victim == ch)
 		{
-			act("You painfully freeze your weapon to your hand!", ch, 0, victim, TO_CHAR);
-			act("$n's fist turns a rigid white as $e grips $s weapon tightly.", ch, 0, 0, TO_ROOM);
+			act("You painfully freeze your weapon to your hand!", ch, nullptr, victim, TO_CHAR);
+			act("$n's fist turns a rigid white as $e grips $s weapon tightly.", ch, nullptr, nullptr, TO_ROOM);
 		}
 		else
 		{
-			act("You freeze $N's weapon to $S hand.", ch, 0, victim, TO_CHAR);
-			act("$n painfully freezes your weapon to your hand!", ch, 0, victim, TO_VICT);
-			act("$N's fist turns a rigid white as $E grips $S weapon tightly.", ch, 0, victim, TO_NOTVICT);
+			act("You freeze $N's weapon to $S hand.", ch, nullptr, victim, TO_CHAR);
+			act("$n painfully freezes your weapon to your hand!", ch, nullptr, victim, TO_VICT);
+			act("$N's fist turns a rigid white as $E grips $S weapon tightly.", ch, nullptr, victim, TO_NOTVICT);
 		}
 	}
 	else
 	{
 		if (victim == ch)
-			act("You are not wielding a weapon!", ch, 0, 0, TO_CHAR);
+			act("You are not wielding a weapon!", ch, nullptr, nullptr, TO_CHAR);
 		else
-			act("$N is not wielding a weapon!", ch, 0, victim, TO_CHAR);
+			act("$N is not wielding a weapon!", ch, nullptr, victim, TO_CHAR);
 
 		return;
 	}
@@ -5296,7 +5296,7 @@ void spell_unbreakable(int /* sn */, int level, CHAR_DATA *ch, SpellTarget vo, C
 		}
 		else
 		{
-			act("$N's weapon is already frozen to $S hand!", ch, 0, victim, TO_CHAR);
+			act("$N's weapon is already frozen to $S hand!", ch, nullptr, victim, TO_CHAR);
 			send_to_char("Your weapon is already frozen to your hand!\n\r", victim);
 			return;
 		}
@@ -5435,7 +5435,7 @@ void spell_frigid_breeze(int /* sn */, int /* level */, CHAR_DATA *ch, SpellTarg
 		return;
 	}
 
-	act("A wave of chilled air sweeps through the area!", ch, 0, 0, TO_ALL);
+	act("A wave of chilled air sweeps through the area!", ch, nullptr, nullptr, TO_ALL);
 
 	for (vch = ch->in_room->people; vch != nullptr; vch = vch_next)
 	{
@@ -5496,7 +5496,7 @@ void spell_pure_air(int /* sn */, int /* level */, CHAR_DATA *ch, SpellTarget /*
 		return;
 	}
 
-	act("A gentle breeze of icy air sweeps through the area.", ch, 0, 0, TO_ALL);
+	act("A gentle breeze of icy air sweeps through the area.", ch, nullptr, nullptr, TO_ALL);
 
 	for (vch = ch->in_room->people; vch != nullptr; vch = vch->next_in_room)
 	{
@@ -5530,7 +5530,7 @@ void spell_pure_air(int /* sn */, int /* level */, CHAR_DATA *ch, SpellTarget /*
 			affect_strip_room(ch->in_room, purify_type);
 
 		if (cleansed)
-			act("The air around $n is purified.", vch, 0, 0, TO_ROOM);
+			act("The air around $n is purified.", vch, nullptr, nullptr, TO_ROOM);
 	}
 }
 
@@ -5549,9 +5549,9 @@ void spell_icelance(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_un
 	if (saves_spell(level, victim, DAM_COLD))
 		dam /= 2;
 
-	act("You gesture at the ground and a jagged lance of ice erupts, impaling $N!", ch, 0, victim, TO_CHAR);
-	act("$n gestures at the ground and a jagged lance of ice erupts, impaling you!", ch, 0, victim, TO_VICT);
-	act("$n gestures at the ground and a jagged lance of ice erupts, impaling $N!", ch, 0, victim, TO_NOTVICT);
+	act("You gesture at the ground and a jagged lance of ice erupts, impaling $N!", ch, nullptr, victim, TO_CHAR);
+	act("$n gestures at the ground and a jagged lance of ice erupts, impaling you!", ch, nullptr, victim, TO_VICT);
+	act("$n gestures at the ground and a jagged lance of ice erupts, impaling $N!", ch, nullptr, victim, TO_NOTVICT);
 
 	damage_new(ch, victim, dam, sn, DAM_PIERCE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, nullptr);
 
@@ -5570,8 +5570,8 @@ void spell_icelance(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_un
 		af.owner = ch->self;
 		new_affect_to_char(victim, &af);
 
-		act("Blood spills forth from your gaping wound!", victim, 0, 0, TO_CHAR);
-		act("Blood begins to pour from $n's gaping wound!", victim, 0, 0, TO_ROOM);
+		act("Blood spills forth from your gaping wound!", victim, nullptr, nullptr, TO_CHAR);
+		act("Blood begins to pour from $n's gaping wound!", victim, nullptr, nullptr, TO_ROOM);
 	}
 }
 
@@ -5604,8 +5604,8 @@ void spell_freeze_door(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /* vo
 	}
 
 	direction = flag_name_lookup(door, direction_table);
-	act("You cover the $T door with a thick frost, freezing it shut.", ch, 0, direction, TO_CHAR);
-	act("$n covers the $T door with a thick frost, freezing it shut.", ch, 0, direction, TO_ROOM);
+	act("You cover the $T door with a thick frost, freezing it shut.", ch, nullptr, direction, TO_CHAR);
+	act("$n covers the $T door with a thick frost, freezing it shut.", ch, nullptr, direction, TO_ROOM);
 
 	SET_BIT(pexit->exit_info, EX_JAMMED);
 
@@ -5642,7 +5642,7 @@ void door_unfreeze(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *af)
 	if (room->people)
 	{
 		direction = flag_name_lookup(af->modifier, direction_table);
-		act("The frost covering the door $T thaws.", room->people, 0, direction, TO_ALL);
+		act("The frost covering the door $T thaws.", room->people, nullptr, direction, TO_ALL);
 	}
 
 	REMOVE_BIT(pexit->exit_info, EX_JAMMED);
@@ -5658,8 +5658,8 @@ void spell_frost_growth(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /* v
 		return;
 	}
 
-	act("As you gesture, a barely-visible slick frost covers the ground beneath you.", ch, 0, 0, TO_CHAR);
-	act("As $n gestures, a barely-visible slick frost covers the ground beneath you.", ch, 0, 0, TO_ROOM);
+	act("As you gesture, a barely-visible slick frost covers the ground beneath you.", ch, nullptr, nullptr, TO_CHAR);
+	act("As $n gestures, a barely-visible slick frost covers the ground beneath you.", ch, nullptr, nullptr, TO_ROOM);
 
 	init_affect_room(&raf);
 	raf.where = TO_ROOM_AFFECTS;
@@ -5675,7 +5675,7 @@ void spell_frost_growth(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /* v
 void ground_thaw(ROOM_INDEX_DATA *room, [[maybe_unused]] ROOM_AFFECT_DATA *af)
 {
 	if (room->people)
-		act("The fine layer of frost coating the ground melts away.", room->people, 0, 0, TO_ALL);
+		act("The fine layer of frost coating the ground melts away.", room->people, nullptr, nullptr, TO_ALL);
 }
 
 void spell_bind_feet([[maybe_unused]] int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]] CastMode mode)
@@ -5697,14 +5697,14 @@ void spell_bind_feet([[maybe_unused]] int sn, int level, CHAR_DATA *ch, SpellTar
 
 	if (saves_spell(level, victim, DAM_COLD))
 	{
-		act("A chill runs through your feet.", victim, 0, 0, TO_CHAR);
-		act("$n's legs stiffen briefly before resuming their motion.", victim, 0, 0, TO_ROOM);
+		act("A chill runs through your feet.", victim, nullptr, nullptr, TO_CHAR);
+		act("$n's legs stiffen briefly before resuming their motion.", victim, nullptr, nullptr, TO_ROOM);
 		return;
 	}
 
-	act("You gesture at $N's legs and a thick frost binds $N's feet to the ground!", ch, 0, victim, TO_CHAR);
-	act("$n gestures at your legs and a thick frost binds your feet to the ground!", ch, 0, victim, TO_VICT);
-	act("$n gestures at $N's legs and a thick frost binds $S feet to the ground!", ch, 0, victim, TO_NOTVICT);
+	act("You gesture at $N's legs and a thick frost binds $N's feet to the ground!", ch, nullptr, victim, TO_CHAR);
+	act("$n gestures at your legs and a thick frost binds your feet to the ground!", ch, nullptr, victim, TO_VICT);
+	act("$n gestures at $N's legs and a thick frost binds $S feet to the ground!", ch, nullptr, victim, TO_NOTVICT);
 
 	init_affect(&af);
 	af.where = TO_AFFECTS;
@@ -5746,13 +5746,13 @@ void spell_glaciate(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /* vo */
 	raf.tick_fun = nullptr;
 	new_affect_to_room(room, &raf);
 
-	act("The water beneath you suddenly congeals into glacial ice.", ch, 0, 0, TO_CHAR);
+	act("The water beneath you suddenly congeals into glacial ice.", ch, nullptr, nullptr, TO_CHAR);
 }
 
 void glaciate_melt(ROOM_INDEX_DATA *room, [[maybe_unused]] ROOM_AFFECT_DATA *raf)
 {
 	if (room->people)
-		act("The ice beneath you melts into water as the magic dissipates.", room->people, 0, 0, TO_ALL);
+		act("The ice beneath you melts into water as the magic dissipates.", room->people, nullptr, nullptr, TO_ALL);
 }
 
 void spell_hailstorm(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /* vo */, CastMode /* mode */)
@@ -5766,8 +5766,8 @@ void spell_hailstorm(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /* vo *
 	if (is_outside(ch))
 		dam = (int)((float)dam * 1.75);
 
-	act("You conjure a rain of deadly hailstones to pelt the area!", ch, 0, 0, TO_CHAR);
-	act("$n throws $s arms in the air, calling a rain of deadly hailstones upon the area!", ch, 0, 0, TO_ROOM);
+	act("You conjure a rain of deadly hailstones to pelt the area!", ch, nullptr, nullptr, TO_CHAR);
+	act("$n throws $s arms in the air, calling a rain of deadly hailstones upon the area!", ch, nullptr, nullptr, TO_ROOM);
 
 	for (vch = ch->in_room->people; vch; vch = vch_next)
 	{
@@ -5805,8 +5805,8 @@ void spell_stalactites(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /* vo
 		return;
 	}
 
-	act("You cause razor-sharp stalactites to sprout from the ceiling above.", ch, 0, 0, TO_CHAR);
-	act("$n raises one arm and icy stalactites form on the ceiling above.", ch, 0, 0, TO_ROOM);
+	act("You cause razor-sharp stalactites to sprout from the ceiling above.", ch, nullptr, nullptr, TO_CHAR);
+	act("$n raises one arm and icy stalactites form on the ceiling above.", ch, nullptr, nullptr, TO_ROOM);
 
 	init_affect_room(&raf);
 	raf.where = TO_ROOM_AFFECTS;
@@ -5828,9 +5828,9 @@ void spell_ice_blast([[maybe_unused]] int sn, int level, CHAR_DATA *ch, SpellTar
 	OBJ_DATA *obj, *obj_next;
 	OBJ_AFFECT_DATA oaf;
 
-	act("You extend an arm toward $N and send forth a frigid blast!", ch, 0, victim, TO_CHAR);
-	act("$n extends an arm toward you and sends forth a frigid blast!", ch, 0, victim, TO_VICT);
-	act("$n extends an arm toward $N and sends forth a frigid blast!", ch, 0, victim, TO_NOTVICT);
+	act("You extend an arm toward $N and send forth a frigid blast!", ch, nullptr, victim, TO_CHAR);
+	act("$n extends an arm toward you and sends forth a frigid blast!", ch, nullptr, victim, TO_VICT);
+	act("$n extends an arm toward $N and sends forth a frigid blast!", ch, nullptr, victim, TO_NOTVICT);
 
 	damage_new(ch, victim, dice(level, 3), gsn_ice_blast, DAM_COLD, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, nullptr);
 
@@ -5843,7 +5843,7 @@ void spell_ice_blast([[maybe_unused]] int sn, int level, CHAR_DATA *ch, SpellTar
 			case ITEM_DRINK_CON:
 				if (number_percent() <= 75)
 				{
-					act("$p freezes and shatters!", victim, obj, 0, TO_ALL);
+					act("$p freezes and shatters!", victim, obj, nullptr, TO_ALL);
 					extract_obj(obj);
 				}
 
@@ -5851,7 +5851,7 @@ void spell_ice_blast([[maybe_unused]] int sn, int level, CHAR_DATA *ch, SpellTar
 			case ITEM_POTION:
 				if (number_percent() <= 45)
 				{
-					act("$p freezes and shatters!", victim, obj, 0, TO_ALL);
+					act("$p freezes and shatters!", victim, obj, nullptr, TO_ALL);
 					extract_obj(obj);
 				}
 
@@ -5859,7 +5859,7 @@ void spell_ice_blast([[maybe_unused]] int sn, int level, CHAR_DATA *ch, SpellTar
 			case ITEM_CONTAINER:
 				if (number_percent() <= 15)
 				{
-					act("$p is frozen shut by a thick layer of ice!", victim, obj, 0, TO_ALL);
+					act("$p is frozen shut by a thick layer of ice!", victim, obj, nullptr, TO_ALL);
 					init_affect_obj(&oaf);
 					oaf.where = TO_OBJ_AFFECTS;
 					oaf.aftype = AFT_SPELL;
@@ -5884,7 +5884,7 @@ void spell_ice_blast([[maybe_unused]] int sn, int level, CHAR_DATA *ch, SpellTar
 void container_defrost(OBJ_DATA *obj, [[maybe_unused]] OBJ_AFFECT_DATA *af)
 {
 	if (CHAR_DATA *carrier = Deref(obj->carried_by))
-		act("The ice sealing $p melts.", carrier, obj, 0, TO_CHAR);
+		act("The ice sealing $p melts.", carrier, obj, nullptr, TO_CHAR);
 }
 
 void spell_icy_carapace(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /* vo */, CastMode /* mode */)
@@ -5919,21 +5919,21 @@ void spell_icy_carapace(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /* v
 
 	if (fountain)
 	{
-		act("Water flows up from $p, forming an icy carapace around you.", ch, obj, 0, TO_CHAR);
-		act("Water flows up from $p, solidifying as ice around $n.", ch, obj, 0, TO_ROOM);
+		act("Water flows up from $p, forming an icy carapace around you.", ch, obj, nullptr, TO_CHAR);
+		act("Water flows up from $p, solidifying as ice around $n.", ch, obj, nullptr, TO_ROOM);
 	}
 	else if (puddle)
 	{
-		act("Water flows up from the puddle on the ground, forming an icy carapace around you.", ch, 0, 0, TO_CHAR);
-		act("Water flows up from the puddle on the ground, solidifying as ice around $n.", ch, 0, 0, TO_ROOM);
+		act("Water flows up from the puddle on the ground, forming an icy carapace around you.", ch, nullptr, nullptr, TO_CHAR);
+		act("Water flows up from the puddle on the ground, solidifying as ice around $n.", ch, nullptr, nullptr, TO_ROOM);
 
 		if (obj)
 			extract_obj(obj);
 	}
 	else
 	{
-		act("A shell of water flows up around you and solidifies into an icy carapace.", ch, 0, 0, TO_CHAR);
-		act("A shell of water flows up around $n and solidifies into an icy carapace.", ch, 0, 0, TO_ROOM);
+		act("A shell of water flows up around you and solidifies into an icy carapace.", ch, nullptr, nullptr, TO_CHAR);
+		act("A shell of water flows up around $n and solidifies into an icy carapace.", ch, nullptr, nullptr, TO_ROOM);
 	}
 
 	init_affect(&af);
@@ -6017,7 +6017,7 @@ void spell_sheath_of_ice(int /* sn */, int level, CHAR_DATA *ch, SpellTarget vo,
 void ice_sheath_melt(OBJ_DATA *obj, [[maybe_unused]] OBJ_AFFECT_DATA *af)
 {
 	if (CHAR_DATA *carrier = Deref(obj->carried_by))
-		act("The ice surrounding $p melts.", carrier, obj, 0, TO_CHAR);
+		act("The ice surrounding $p melts.", carrier, obj, nullptr, TO_CHAR);
 }
 
 void spell_ironskin(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /* vo */, CastMode /* mode */)
@@ -6030,8 +6030,8 @@ void spell_ironskin(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /* vo */
 		return;
 	}
 
-	act("Your skin hardens and takes on a metallic tone.", ch, 0, 0, TO_CHAR);
-	act("$n's skin hardens and takes on a metallic tone.", ch, 0, 0, TO_ROOM);
+	act("Your skin hardens and takes on a metallic tone.", ch, nullptr, nullptr, TO_CHAR);
+	act("$n's skin hardens and takes on a metallic tone.", ch, nullptr, nullptr, TO_ROOM);
 
 	init_affect(&af);
 	af.where = TO_AFFECTS;
@@ -6115,15 +6115,15 @@ void spell_burden([[maybe_unused]] int sn, int level, CHAR_DATA *ch, SpellTarget
 
 	if (saves_spell(level, victim, DAM_OTHER))
 	{
-		act("$N resisted your spell.", ch, 0, victim, TO_CHAR);
-		act("You feel a weight bearing down upon you briefly, but it goes away.", ch, 0, victim, TO_VICT);
-		act("$N seems slightly weighed down for a moment, but it passes.", ch, 0, victim, TO_NOTVICT);
+		act("$N resisted your spell.", ch, nullptr, victim, TO_CHAR);
+		act("You feel a weight bearing down upon you briefly, but it goes away.", ch, nullptr, victim, TO_VICT);
+		act("$N seems slightly weighed down for a moment, but it passes.", ch, nullptr, victim, TO_NOTVICT);
 		return;
 	}
 	else
 	{
-		act("$n staggers beneath an unseen burden, struggling to remain standing.", victim, 0, 0, TO_ROOM);
-		act("You stagger beneath an unseen burden, struggling to remain standing.", victim, 0, 0, TO_CHAR);
+		act("$n staggers beneath an unseen burden, struggling to remain standing.", victim, nullptr, nullptr, TO_ROOM);
+		act("You stagger beneath an unseen burden, struggling to remain standing.", victim, nullptr, nullptr, TO_CHAR);
 	}
 
 	init_affect(&af);
@@ -6192,14 +6192,14 @@ void spell_fortify_weapon(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[ma
 	}
 	else if (diff > -25)
 	{
-		act("Your magic fails to take hold on $p.", ch, weapon, 0, TO_CHAR);
-		act("$p hums very briefly in $n's hands.", ch, weapon, 0, TO_ROOM);
+		act("Your magic fails to take hold on $p.", ch, weapon, nullptr, TO_CHAR);
+		act("$p hums very briefly in $n's hands.", ch, weapon, nullptr, TO_ROOM);
 		return;
 	}
 	else
 	{
-		act("$p shudders and explodes in your hands!", ch, weapon, 0, TO_CHAR);
-		act("$p shudders and explodes in $n's hands!", ch, weapon, 0, TO_ROOM);
+		act("$p shudders and explodes in your hands!", ch, weapon, nullptr, TO_CHAR);
+		act("$p shudders and explodes in $n's hands!", ch, weapon, nullptr, TO_ROOM);
 		damage_new(ch, ch, dice(weapon->level, 5), TYPE_UNDEFINED, DAM_ENERGY, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the explosion*");
 		extract_obj(weapon);
 		return;
@@ -6268,15 +6268,15 @@ void spell_fortify_weapon(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[ma
 		if (number_percent() < chance)
 		{
 			hitapp->modifier += 1;
-			act("You feel $p's balance improve in your hands as it is infused with magic.", ch, weapon, 0, TO_CHAR);
-			act("$p rings with a light piercing tone as $n's magic works upon it.", ch, weapon, 0, TO_ROOM);
+			act("You feel $p's balance improve in your hands as it is infused with magic.", ch, weapon, nullptr, TO_CHAR);
+			act("$p rings with a light piercing tone as $n's magic works upon it.", ch, weapon, nullptr, TO_ROOM);
 		}
 		else
 		{
 			if (number_percent() > chance)
 			{
-				act("$p shudders and explodes in your hands!", ch, weapon, 0, TO_CHAR);
-				act("$p shudders and explodes in $n's hands!", ch, weapon, 0, TO_ROOM);
+				act("$p shudders and explodes in your hands!", ch, weapon, nullptr, TO_CHAR);
+				act("$p shudders and explodes in $n's hands!", ch, weapon, nullptr, TO_ROOM);
 				damage_new(ch, ch, dice(weapon->level, 5), TYPE_UNDEFINED, DAM_ENERGY, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the explosion*");
 				extract_obj(weapon);
 				return;
@@ -6284,8 +6284,8 @@ void spell_fortify_weapon(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[ma
 			else
 			{
 				hitapp->modifier -= 1;
-				act("You feel $p twist in your hands as the magic goes awry.", ch, weapon, 0, TO_CHAR);
-				act("$p emits a discordant tone as $n's magic works upon it.", ch, weapon, 0, TO_ROOM);
+				act("You feel $p twist in your hands as the magic goes awry.", ch, weapon, nullptr, TO_CHAR);
+				act("$p emits a discordant tone as $n's magic works upon it.", ch, weapon, nullptr, TO_ROOM);
 			}
 		}
 	}
@@ -6295,15 +6295,15 @@ void spell_fortify_weapon(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[ma
 		if (number_percent() < chance)
 		{
 			damapp->modifier += 1;
-			act("You feel $p grow sturdier in your hands as it is infused with magic.", ch, weapon, 0, TO_CHAR);
-			act("$p flickers with a cerulean glow as $n's magic works upon it.", ch, weapon, 0, TO_ROOM);
+			act("You feel $p grow sturdier in your hands as it is infused with magic.", ch, weapon, nullptr, TO_CHAR);
+			act("$p flickers with a cerulean glow as $n's magic works upon it.", ch, weapon, nullptr, TO_ROOM);
 		}
 		else
 		{
 			if (number_percent() > chance)
 			{
-				act("$p shudders and explodes in your hands!", ch, weapon, 0, TO_CHAR);
-				act("$p shudders and explodes in $n's hands!", ch, weapon, 0, TO_ROOM);
+				act("$p shudders and explodes in your hands!", ch, weapon, nullptr, TO_CHAR);
+				act("$p shudders and explodes in $n's hands!", ch, weapon, nullptr, TO_ROOM);
 				damage_new(ch, ch, dice(weapon->level, 5), TYPE_UNDEFINED, DAM_ENERGY, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the explosion*");
 				extract_obj(weapon);
 				return;
@@ -6311,8 +6311,8 @@ void spell_fortify_weapon(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[ma
 			else
 			{
 				damapp->modifier -= 1;
-				act("You feel $p grow frail in your hands as the magic goes awry.", ch, weapon, 0, TO_CHAR);
-				act("$p flickers with a crimson glow as $n's magic works upon it.", ch, weapon, 0, TO_ROOM);
+				act("You feel $p grow frail in your hands as the magic goes awry.", ch, weapon, nullptr, TO_CHAR);
+				act("$p flickers with a crimson glow as $n's magic works upon it.", ch, weapon, nullptr, TO_ROOM);
 			}
 		}
 	}
@@ -6384,8 +6384,8 @@ void spell_fortify_armor(int /* sn */, int level, CHAR_DATA *ch, SpellTarget vo,
 				armor->weight++;
 			}
 
-			act("$p feels sturdier in your hands, fortified by your magic.", ch, armor, 0, TO_CHAR);
-			act("$n focuses intently and $p glows briefly with an inner light.", ch, armor, 0, TO_ROOM);
+			act("$p feels sturdier in your hands, fortified by your magic.", ch, armor, nullptr, TO_CHAR);
+			act("$n focuses intently and $p glows briefly with an inner light.", ch, armor, nullptr, TO_ROOM);
 		}
 		else
 		{
@@ -6394,14 +6394,14 @@ void spell_fortify_armor(int /* sn */, int level, CHAR_DATA *ch, SpellTarget vo,
 				armor->value[i]--;
 			}
 
-			act("The magic goes awry, leaving $p feeling brittle in your hands.", ch, armor, 0, TO_CHAR);
-			act("$n focuses intently and a shadow briefly flickers across $p.", ch, armor, 0, TO_ROOM);
+			act("The magic goes awry, leaving $p feeling brittle in your hands.", ch, armor, nullptr, TO_CHAR);
+			act("$n focuses intently and a shadow briefly flickers across $p.", ch, armor, nullptr, TO_ROOM);
 		}
 	}
 	else
 	{
-		act("$p shudders and explodes in your hands!", ch, armor, 0, TO_CHAR);
-		act("$p shudders and explodes in $n's hands!", ch, armor, 0, TO_ROOM);
+		act("$p shudders and explodes in your hands!", ch, armor, nullptr, TO_CHAR);
+		act("$p shudders and explodes in $n's hands!", ch, armor, nullptr, TO_ROOM);
 		damage_new(ch, ch, dice(armor->level, 5), TYPE_UNDEFINED, DAM_ENERGY, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the explosion*");
 		extract_obj(armor);
 	}
@@ -6480,14 +6480,14 @@ void spell_alter_metal(int /* sn */, int /* level */, CHAR_DATA *ch, SpellTarget
 		free_pstring(obj->material);
 		obj->material = palloc_string(arg2);
 
-		act("$p writhes in your grasp as the magic courses through it.", ch, obj, 0, TO_CHAR);
+		act("$p writhes in your grasp as the magic courses through it.", ch, obj, nullptr, TO_CHAR);
 		act("$p is reconstituted into $T!", ch, obj, arg2, TO_CHAR);
-		act("$p writhes in $n's grasp, altered somehow.", ch, obj, 0, TO_ROOM);
+		act("$p writhes in $n's grasp, altered somehow.", ch, obj, nullptr, TO_ROOM);
 	}
 	else
 	{
-		act("$p shudders and explodes in your hands!", ch, obj, 0, TO_CHAR);
-		act("$p shudders and explodes in $n's hands!", ch, obj, 0, TO_ROOM);
+		act("$p shudders and explodes in your hands!", ch, obj, nullptr, TO_CHAR);
+		act("$p shudders and explodes in $n's hands!", ch, obj, nullptr, TO_ROOM);
 		damage_new(ch, ch, dice(obj->level, 5), TYPE_UNDEFINED, DAM_ENERGY, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the explosion*");
 		extract_obj(obj);
 	}
@@ -6503,8 +6503,8 @@ void spell_cloak_of_mist(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /* 
 		return;
 	}
 
-	act("You gather a thick cloak of mist around yourself.", ch, 0, 0, TO_CHAR);
-	act("A thick cloak of mist gathers around $n.", ch, 0, 0, TO_ROOM);
+	act("You gather a thick cloak of mist around yourself.", ch, nullptr, nullptr, TO_CHAR);
+	act("A thick cloak of mist gathers around $n.", ch, nullptr, nullptr, TO_ROOM);
 
 	init_affect(&af);
 	af.where = TO_AFFECTS;
@@ -6536,8 +6536,8 @@ void spell_vigorize(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /* vo */
 	if (ch->in_room->area->temp == Temperature::Hot || ch->in_room->area->temp == Temperature::Cold)
 		refresh /= 2;
 
-	act("You blanket the area with a soothing mist.", ch, 0, 0, TO_CHAR);
-	act("$n blankets the area with a soothing mist.", ch, 0, 0, TO_ROOM);
+	act("You blanket the area with a soothing mist.", ch, nullptr, nullptr, TO_CHAR);
+	act("$n blankets the area with a soothing mist.", ch, nullptr, nullptr, TO_ROOM);
 
 	for (vch = ch->in_room->people; vch; vch = vch->next_in_room)
 	{
@@ -6562,15 +6562,15 @@ void spell_creeping_tomb(int /* sn */, int level, CHAR_DATA *ch, SpellTarget vo,
 
 	if (saves_spell(level - 5, victim, DAM_OTHER))
 	{
-		act("$N resisted your spell.", ch, 0, victim, TO_CHAR);
-		act("Damp earth cakes briefly on your legs but crumbles rapidly to dust.", ch, 0, victim, TO_VICT);
-		act("Damp earth cakes briefly on $N's legs but crumbles rapidly to dust.", ch, 0, victim, TO_NOTVICT);
+		act("$N resisted your spell.", ch, nullptr, victim, TO_CHAR);
+		act("Damp earth cakes briefly on your legs but crumbles rapidly to dust.", ch, nullptr, victim, TO_VICT);
+		act("Damp earth cakes briefly on $N's legs but crumbles rapidly to dust.", ch, nullptr, victim, TO_NOTVICT);
 		return;
 	}
 
-	act("A mass of living ooze begins to slowly encircle $N's legs.", ch, 0, victim, TO_CHAR);
-	act("A mass of living ooze coalesces beneath you and begins to creep up your legs!", ch, 0, victim, TO_VICT);
-	act("A mass of living ooze coalesces beneath $N and begins to creep up $S legs!", ch, 0, victim, TO_NOTVICT);
+	act("A mass of living ooze begins to slowly encircle $N's legs.", ch, nullptr, victim, TO_CHAR);
+	act("A mass of living ooze coalesces beneath you and begins to creep up your legs!", ch, nullptr, victim, TO_VICT);
+	act("A mass of living ooze coalesces beneath $N and begins to creep up $S legs!", ch, nullptr, victim, TO_NOTVICT);
 
 	init_affect(&af);
 	af.where = TO_AFFECTS;
@@ -6592,24 +6592,24 @@ void creeping_tomb_tick(CHAR_DATA *ch, AFFECT_DATA *af)
 	switch (af->duration)
 	{
 		case 4:
-			act("The living ooze ascends further, threatening to completely engulf you!", ch, 0, 0, TO_CHAR);
-			act("$n squirms uncomfortably as the living ooze covering $m creeps upward.", ch, 0, 0, TO_ROOM);
+			act("The living ooze ascends further, threatening to completely engulf you!", ch, nullptr, nullptr, TO_CHAR);
+			act("$n squirms uncomfortably as the living ooze covering $m creeps upward.", ch, nullptr, nullptr, TO_ROOM);
 			af->modifier--;
 			return;
 		case 3:
-			act("The living ooze suddenly solidifies, entombing you from head to toe!", ch, 0, 0, TO_CHAR);
-			act("The mass of living ooze surrounding $n suddenly solidifies, entombing $m!", ch, 0, 0, TO_ROOM);
+			act("The living ooze suddenly solidifies, entombing you from head to toe!", ch, nullptr, nullptr, TO_CHAR);
+			act("The mass of living ooze surrounding $n suddenly solidifies, entombing $m!", ch, nullptr, nullptr, TO_ROOM);
 			return;
 		case 2:
 		case 1:
-			act("The ooze that has hardened around you begins to crumble.", ch, 0, 0, TO_CHAR);
+			act("The ooze that has hardened around you begins to crumble.", ch, nullptr, nullptr, TO_CHAR);
 			return;
 		case 0:
 		case -1:
 			return;
 		default:
-			act("The living ooze covering you continues to creep inexorably upward.", ch, 0, 0, TO_CHAR);
-			act("$n squirms uncomfortably as the living ooze covering $m creeps upward.", ch, 0, 0, TO_ROOM);
+			act("The living ooze covering you continues to creep inexorably upward.", ch, nullptr, nullptr, TO_CHAR);
+			act("$n squirms uncomfortably as the living ooze covering $m creeps upward.", ch, nullptr, nullptr, TO_ROOM);
 			af->modifier--;
 			return;
 	}
@@ -6657,8 +6657,8 @@ void spell_quicksand(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /* vo *
 		return;
 	}
 
-	act("You gesture at the ground beneath you, liquefying it to trap the unsuspecting.", ch, 0, 0, TO_CHAR);
-	act("$n gestures at the ground, which seems to ripple ominously for a moment.", ch, 0, 0, TO_ROOM);
+	act("You gesture at the ground beneath you, liquefying it to trap the unsuspecting.", ch, nullptr, nullptr, TO_CHAR);
+	act("$n gestures at the ground, which seems to ripple ominously for a moment.", ch, nullptr, nullptr, TO_ROOM);
 
 	init_affect_room(&raf);
 	raf.where = TO_ROOM_AFFECTS;
@@ -6686,7 +6686,7 @@ void spell_quicksand(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /* vo *
 void quicksand_end(ROOM_INDEX_DATA *room, [[maybe_unused]] ROOM_AFFECT_DATA *af)
 {
 	if (room->people)
-		act("The ground beneath you solidifies.", room->people, 0, 0, TO_ALL);
+		act("The ground beneath you solidifies.", room->people, nullptr, nullptr, TO_ALL);
 }
 
 void quicksand_pulse_sink(CHAR_DATA *ch, AFFECT_DATA *af)
@@ -6722,9 +6722,9 @@ void spell_sap_endurance(int /* sn */, int level, CHAR_DATA *ch, SpellTarget vo,
 		return;
 	}
 
-	act("A tendril of ooze springs from the earth to sap $N's endurance!", ch, 0, victim, TO_CHAR);
-	act("A tendril of ooze springs from the earth to sap your endurance!", ch, 0, victim, TO_VICT);
-	act("A tendril of ooze springs from the earth to sap $N's endurance!", ch, 0, victim, TO_NOTVICT);
+	act("A tendril of ooze springs from the earth to sap $N's endurance!", ch, nullptr, victim, TO_CHAR);
+	act("A tendril of ooze springs from the earth to sap your endurance!", ch, nullptr, victim, TO_VICT);
+	act("A tendril of ooze springs from the earth to sap $N's endurance!", ch, nullptr, victim, TO_NOTVICT);
 
 	victim->move = std::max(0, victim->move - number_range((int)((float)level * .9), (int)((float)level * 1.1)));
 }
@@ -6739,8 +6739,8 @@ void spell_emulsify(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_un
 	if (saves_spell(level, victim, DAM_INTERNAL))
 		dam /= 2;
 
-	act("$n writhes in agony as $s midsection suddenly distends.", victim, 0, 0, TO_ROOM);
-	act("Your insides twist with pain, as your organs begin to dissolve into viscous pools.", ch, 0, victim, TO_VICT);
+	act("$n writhes in agony as $s midsection suddenly distends.", victim, nullptr, nullptr, TO_ROOM);
+	act("Your insides twist with pain, as your organs begin to dissolve into viscous pools.", ch, nullptr, victim, TO_VICT);
 
 	damage_new(ch, victim, dam, sn, DAM_INTERNAL, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "emulsification");
 }
@@ -6751,17 +6751,17 @@ void spell_rust([[maybe_unused]] int sn, int level, CHAR_DATA *ch, SpellTarget v
 	OBJ_DATA *eq;
 	OBJ_AFFECT_DATA oaf;
 
-	act("You conjure a cloud of mist in an attempt to rust $N's armor!", ch, 0, victim, TO_CHAR);
+	act("You conjure a cloud of mist in an attempt to rust $N's armor!", ch, nullptr, victim, TO_CHAR);
 
 	if (saves_spell(level, victim, DAM_OTHER))
 	{
-		act("A cloud of mist envelops you, but dissipates rapidly.", victim, 0, 0, TO_CHAR);
-		act("A misty fog envelops $n, but dissipates rapidly.", victim, 0, 0, TO_ROOM);
+		act("A cloud of mist envelops you, but dissipates rapidly.", victim, nullptr, nullptr, TO_CHAR);
+		act("A misty fog envelops $n, but dissipates rapidly.", victim, nullptr, nullptr, TO_ROOM);
 		return;
 	}
 
-	act("A thick cloud of mist envelops you, swirling around your garments.", ch, 0, victim, TO_VICT);
-	act("A thick cloud of mist envelops $N, swirling around $S garments.", ch, 0, victim, TO_NOTVICT);
+	act("A thick cloud of mist envelops you, swirling around your garments.", ch, nullptr, victim, TO_VICT);
+	act("A thick cloud of mist envelops $N, swirling around $S garments.", ch, nullptr, victim, TO_NOTVICT);
 
 	init_affect_obj(&oaf);
 	oaf.where = TO_OBJ_APPLY;
@@ -6821,8 +6821,8 @@ void spell_rust([[maybe_unused]] int sn, int level, CHAR_DATA *ch, SpellTarget v
 				continue;
 		}
 
-		act("$p is covered with a thick patina of rust!", victim, eq, 0, TO_CHAR);
-		act("$p is covered with a thick patina of rust!", ch, eq, 0, TO_CHAR);
+		act("$p is covered with a thick patina of rust!", victim, eq, nullptr, TO_CHAR);
+		act("$p is covered with a thick patina of rust!", ch, eq, nullptr, TO_CHAR);
 
 		affect_to_obj(eq, &oaf);
 	}
@@ -6845,8 +6845,8 @@ void spell_airy_water(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /* vo 
 		return;
 	}
 
-	act("You infuse the water around you with air, making it breathable.", ch, 0, 0, TO_CHAR);
-	act("Bubbles fill the water as $n infuses the area with breathable air.", ch, 0, 0, TO_ROOM);
+	act("You infuse the water around you with air, making it breathable.", ch, nullptr, nullptr, TO_CHAR);
+	act("Bubbles fill the water as $n infuses the area with breathable air.", ch, nullptr, nullptr, TO_ROOM);
 
 	init_affect_room(&raf);
 	raf.where = TO_ROOM_AFFECTS;
@@ -6874,10 +6874,10 @@ void spell_cooling_mist(int /* sn */, int level, CHAR_DATA *ch, SpellTarget vo, 
 	}
 
 	if (ch != victim)
-		act("You conjure a soothing mist to refresh $N and shelter $M from heat.", ch, 0, victim, TO_CHAR);
+		act("You conjure a soothing mist to refresh $N and shelter $M from heat.", ch, nullptr, victim, TO_CHAR);
 
-	act("A soothing mist envelops you, sheltering you from heat.", victim, 0, 0, TO_CHAR);
-	act("A light mist envelops $n as $e appears soothed.", victim, 0, 0, TO_ROOM);
+	act("A soothing mist envelops you, sheltering you from heat.", victim, nullptr, nullptr, TO_CHAR);
+	act("A light mist envelops $n as $e appears soothed.", victim, nullptr, nullptr, TO_ROOM);
 
 	init_affect(&af);
 	af.where = TO_RESIST;
@@ -6904,15 +6904,15 @@ void spell_prismatic_spray(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[m
 	int color = number_range(1, 7), dam = 0;
 	bool poisoned = false, disint = false, blinded = false;
 
-	act("You send a diffuse spray of varicolored light streaking towards $N!", ch, 0, victim, TO_CHAR);
-	act("$n sends a diffuse spray of varicolored light streaking towards you!", ch, 0, victim, TO_VICT);
-	act("$n sends a diffuse spray of varicolored light streaking towards $N!", ch, 0, victim, TO_NOTVICT);
+	act("You send a diffuse spray of varicolored light streaking towards $N!", ch, nullptr, victim, TO_CHAR);
+	act("$n sends a diffuse spray of varicolored light streaking towards you!", ch, nullptr, victim, TO_VICT);
+	act("$n sends a diffuse spray of varicolored light streaking towards $N!", ch, nullptr, victim, TO_NOTVICT);
 
 	switch (color)
 	{
 		case 1:
-			act("A red beam of light strikes $n!", victim, 0, 0, TO_ROOM);
-			act("A red beam of light strikes you!", victim, 0, 0, TO_CHAR);
+			act("A red beam of light strikes $n!", victim, nullptr, nullptr, TO_ROOM);
+			act("A red beam of light strikes you!", victim, nullptr, nullptr, TO_CHAR);
 
 			dam = dice(level, 2);
 
@@ -6921,8 +6921,8 @@ void spell_prismatic_spray(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[m
 
 			break;
 		case 2:
-			act("An orange beam of light strikes $n!", victim, 0, 0, TO_ROOM);
-			act("An orange beam of light strikes you!", victim, 0, 0, TO_CHAR);
+			act("An orange beam of light strikes $n!", victim, nullptr, nullptr, TO_ROOM);
+			act("An orange beam of light strikes you!", victim, nullptr, nullptr, TO_CHAR);
 
 			dam = dice(level, 4);
 
@@ -6931,8 +6931,8 @@ void spell_prismatic_spray(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[m
 
 			break;
 		case 3:
-			act("A yellow beam of light strikes $n!", victim, 0, 0, TO_ROOM);
-			act("A yellow beam of light strikes you!", victim, 0, 0, TO_CHAR);
+			act("A yellow beam of light strikes $n!", victim, nullptr, nullptr, TO_ROOM);
+			act("A yellow beam of light strikes you!", victim, nullptr, nullptr, TO_CHAR);
 
 			dam = dice(level, 7);
 
@@ -6941,8 +6941,8 @@ void spell_prismatic_spray(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[m
 
 			break;
 		case 4:
-			act("A green beam of light strikes $n!", victim, 0, 0, TO_ROOM);
-			act("A green beam of light strikes you!", victim, 0, 0, TO_CHAR);
+			act("A green beam of light strikes $n!", victim, nullptr, nullptr, TO_ROOM);
+			act("A green beam of light strikes you!", victim, nullptr, nullptr, TO_CHAR);
 
 			dam = dice(level, 3);
 
@@ -6954,8 +6954,8 @@ void spell_prismatic_spray(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[m
 
 			break;
 		case 5:
-			act("A blue beam of light strikes $n!", victim, 0, 0, TO_ROOM);
-			act("A blue beam of light strikes you!", victim, 0, 0, TO_CHAR);
+			act("A blue beam of light strikes $n!", victim, nullptr, nullptr, TO_ROOM);
+			act("A blue beam of light strikes you!", victim, nullptr, nullptr, TO_CHAR);
 
 			dam = dice(level, 3);
 
@@ -6965,8 +6965,8 @@ void spell_prismatic_spray(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[m
 			LAG_CHAR(victim, 2 * PULSE_VIOLENCE);
 			break;
 		case 6:
-			act("A indigo beam of light strikes $n!", victim, 0, 0, TO_ROOM);
-			act("A indigo beam of light strikes you!", victim, 0, 0, TO_CHAR);
+			act("A indigo beam of light strikes $n!", victim, nullptr, nullptr, TO_ROOM);
+			act("A indigo beam of light strikes you!", victim, nullptr, nullptr, TO_CHAR);
 
 			dam = dice(level, 3);
 
@@ -6978,8 +6978,8 @@ void spell_prismatic_spray(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[m
 
 			break;
 		case 7:
-			act("A violet beam of light strikes $n!", victim, 0, 0, TO_ROOM);
-			act("A violet beam of light strikes you!", victim, 0, 0, TO_CHAR);
+			act("A violet beam of light strikes $n!", victim, nullptr, nullptr, TO_ROOM);
+			act("A violet beam of light strikes you!", victim, nullptr, nullptr, TO_CHAR);
 
 			dam = dice(level, 3);
 
@@ -6993,8 +6993,8 @@ void spell_prismatic_spray(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[m
 
 	if (poisoned && !is_affected(victim, gsn_poison))
 	{
-		act("Poison creeps into your veins as the sickly light washes over you.", victim, 0, 0, TO_CHAR);
-		act("$n looks very ill.", victim, 0, 0, TO_ROOM);
+		act("Poison creeps into your veins as the sickly light washes over you.", victim, nullptr, nullptr, TO_CHAR);
+		act("$n looks very ill.", victim, nullptr, nullptr, TO_ROOM);
 
 		init_affect(&af);
 		af.where = TO_AFFECTS;
@@ -7015,8 +7015,8 @@ void spell_prismatic_spray(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[m
 
 	if (blinded)
 	{
-		act("The intense indigo light sears your eyes, blinding you!", victim, 0, 0, TO_CHAR);
-		act("$n appears to be blinded.", victim, 0, 0, TO_ROOM);
+		act("The intense indigo light sears your eyes, blinding you!", victim, nullptr, nullptr, TO_CHAR);
+		act("$n appears to be blinded.", victim, nullptr, nullptr, TO_ROOM);
 
 		init_affect(&af);
 		af.where = TO_AFFECTS;
@@ -7037,13 +7037,13 @@ void spell_prismatic_spray(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[m
 
 	if (disint)
 	{
-		act("You feel a piercing pain in your chest as the violet light washes over you!", victim, 0, 0, TO_CHAR);
-		act("$n writhes in agony as the violet light passes through $m!", victim, 0, 0, TO_ROOM);
+		act("You feel a piercing pain in your chest as the violet light washes over you!", victim, nullptr, nullptr, TO_CHAR);
+		act("$n writhes in agony as the violet light passes through $m!", victim, nullptr, nullptr, TO_ROOM);
 
 		if (victim->level < ch->level - 9)
 		{
-			act("You gasp in horror as your body disintegrates into nothingness.", victim, 0, 0, TO_CHAR);
-			act("A final look of horror crosses $n's face before $e disintegrates into dust.", victim, 0, 0, TO_ROOM);
+			act("You gasp in horror as your body disintegrates into nothingness.", victim, nullptr, nullptr, TO_CHAR);
+			act("A final look of horror crosses $n's face before $e disintegrates into dust.", victim, nullptr, nullptr, TO_ROOM);
 			raw_kill(ch, victim);
 		}
 		else
@@ -7084,8 +7084,8 @@ void spell_earthfade(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /* vo *
 		return;
 	}
 
-	act("The ground beneath $n liquefies and $e vanishes below the surface!", ch, 0, 0, TO_ROOM);
-	act("You liquify the ground beneath you and conceal yourself within.", ch, 0, 0, TO_CHAR);
+	act("The ground beneath $n liquefies and $e vanishes below the surface!", ch, nullptr, nullptr, TO_ROOM);
+	act("You liquify the ground beneath you and conceal yourself within.", ch, nullptr, nullptr, TO_CHAR);
 
 	init_affect(&af);
 	af.where = TO_AFFECTS;
@@ -7169,8 +7169,8 @@ void spell_plasma_bolt(int sn, int level, CHAR_DATA *ch, SpellTarget /* vo */, C
 		return;
 	}
 
-	act("You briefly envelop yourself in pure plasma, streaking away!", ch, 0, 0, TO_CHAR);
-	act("$n flares with energy and streaks out of the area!", ch, 0, 0, TO_ROOM);
+	act("You briefly envelop yourself in pure plasma, streaking away!", ch, nullptr, nullptr, TO_CHAR);
+	act("$n flares with energy and streaks out of the area!", ch, nullptr, nullptr, TO_ROOM);
 
 	for (vch = ch->in_room->people; vch != nullptr; vch = vch_next)
 	{
@@ -7193,8 +7193,8 @@ void spell_plasma_bolt(int sn, int level, CHAR_DATA *ch, SpellTarget /* vo */, C
 	char_from_room(ch);
 	char_to_room(ch, pRoomIndex);
 
-	act("$n appears in a flash of plasma!", ch, 0, 0, TO_ROOM);
-	act("The plasma around you fades as quickly as it formed, and you are elsewhere.", ch, 0, 0, TO_CHAR);
+	act("$n appears in a flash of plasma!", ch, nullptr, nullptr, TO_ROOM);
+	act("The plasma around you fades as quickly as it formed, and you are elsewhere.", ch, nullptr, nullptr, TO_CHAR);
 
 	do_look(ch, "auto");
 	check_plasma_thread(ch, -1);
@@ -7247,8 +7247,8 @@ void sphere_of_plasma_pulse(CHAR_DATA *ch, AFFECT_DATA *af)
 	if (number_percent() > 60)
 		return;
 
-	act("A tendril of plasma from the sphere encircling you lashes out at $N!", ch, 0, Deref(ch->fighting), TO_CHAR);
-	act("A writhing, pulsating tendril of plasma lashes out from $n's body!", ch, 0, 0, TO_ROOM);
+	act("A tendril of plasma from the sphere encircling you lashes out at $N!", ch, nullptr, Deref(ch->fighting), TO_CHAR);
+	act("A writhing, pulsating tendril of plasma lashes out from $n's body!", ch, nullptr, nullptr, TO_ROOM);
 
 	damage_new(ch, Deref(ch->fighting), af->level, gsn_sphere_of_plasma, DAM_TRUESTRIKE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, nullptr);
 
@@ -7296,8 +7296,8 @@ void spell_plasma_cube(int sn, int level, CHAR_DATA *ch, SpellTarget /* vo */, C
 		return;
 	}
 
-	act("You conjure a massive cube of interlaced plasma in the room.", ch, 0, 0, TO_CHAR);
-	act("$n conjures a massive cube of interlaced plasma in the room.", ch, 0, 0, TO_ROOM);
+	act("You conjure a massive cube of interlaced plasma in the room.", ch, nullptr, nullptr, TO_CHAR);
+	act("$n conjures a massive cube of interlaced plasma in the room.", ch, nullptr, nullptr, TO_ROOM);
 
 	init_affect_room(&raf);
 	raf.where = TO_ROOM_AFFECTS;
@@ -7331,9 +7331,9 @@ void spell_essence_of_plasma(int /* sn */, int level, CHAR_DATA *ch, SpellTarget
 		return;
 	}
 
-	act("As you gesture, an intensely bright point of radiance appears before you.", ch, 0, 0, TO_CHAR);
-	act("An intensely bright point of radiance appears before you.", ch, 0, 0, TO_ROOM);
-	act("The brilliant singularity flares into a pulsating ball of pure plasma!", ch, 0, 0, TO_ROOM);
+	act("As you gesture, an intensely bright point of radiance appears before you.", ch, nullptr, nullptr, TO_CHAR);
+	act("An intensely bright point of radiance appears before you.", ch, nullptr, nullptr, TO_ROOM);
+	act("The brilliant singularity flares into a pulsating ball of pure plasma!", ch, nullptr, nullptr, TO_ROOM);
 
 	init_affect_room(&raf);
 	raf.where = TO_ROOM_AFFECTS;
@@ -7401,8 +7401,8 @@ void essence_of_plasma_pulse(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *af)
 
 	dam = dice(af->level, 10) / af->modifier;
 
-	act("The ball of plasma hurtles about wildly, discharging pure energy into you!", victim, 0, 0, TO_CHAR);
-	act("The ball of plasma hurtles about wildly, discharging pure energy into $n!", victim, 0, 0, TO_ROOM);
+	act("The ball of plasma hurtles about wildly, discharging pure energy into you!", victim, nullptr, nullptr, TO_CHAR);
+	act("The ball of plasma hurtles about wildly, discharging pure energy into $n!", victim, nullptr, nullptr, TO_ROOM);
 
 	damage_new(Deref(af->owner), victim, dam, gsn_essence_of_plasma, DAM_ENERGY, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the essence of plasma*");
 
@@ -7420,7 +7420,7 @@ void essence_of_plasma_end(ROOM_INDEX_DATA *room, [[maybe_unused]] ROOM_AFFECT_D
 	if (!room->people)
 		return;
 
-	act("The writhing mass of plasma flickers one last time and then dissipates.", room->people, 0, 0, TO_ALL);
+	act("The writhing mass of plasma flickers one last time and then dissipates.", room->people, nullptr, nullptr, TO_ALL);
 }
 
 void plasma_thread_end(CHAR_DATA *ch, AFFECT_DATA *paf)
@@ -7457,25 +7457,25 @@ void spell_plasma_thread(int sn, int level, CHAR_DATA *ch, SpellTarget /* vo */,
 	if (!trusts(ch, victim) && is_safe(ch, victim))
 		return;
 
-	act("Concentrating intently, you conjure forth a plasma conduit at $N!", ch, 0, victim, TO_CHAR);
-	act("Reaching $s arms toward you, $n conjures forth a plasma conduit!", ch, 0, victim, TO_VICT);
-	act("Reaching $s arms toward $N, $n conjures forth a plasma conduit!", ch, 0, victim, TO_NOTVICT);
+	act("Concentrating intently, you conjure forth a plasma conduit at $N!", ch, nullptr, victim, TO_CHAR);
+	act("Reaching $s arms toward you, $n conjures forth a plasma conduit!", ch, nullptr, victim, TO_VICT);
+	act("Reaching $s arms toward $N, $n conjures forth a plasma conduit!", ch, nullptr, victim, TO_NOTVICT);
 
 	if (!trusts(ch, victim))
 	{
 		if (saves_spell(level, victim, DAM_ENERGY))
 		{
-			act("The thread of plasma dissipates before connecting you to $M.", ch, 0, victim, TO_CHAR);
-			act("The thread of plasma dissipates before connecting $m to you.", ch, 0, victim, TO_VICT);
-			act("The thread of plasma dissipates before connecting $n to $N.", ch, 0, victim, TO_NOTVICT);
+			act("The thread of plasma dissipates before connecting you to $M.", ch, nullptr, victim, TO_CHAR);
+			act("The thread of plasma dissipates before connecting $m to you.", ch, nullptr, victim, TO_VICT);
+			act("The thread of plasma dissipates before connecting $n to $N.", ch, nullptr, victim, TO_NOTVICT);
 			multi_hit(victim, ch, TYPE_UNDEFINED);
 			return;
 		}
 	}
 
-	act("The rippling thread of plasma connects, attaching you to $N!", ch, 0, victim, TO_CHAR);
-	act("The rippling thread of plasma connects, attaching $n to you!", ch, 0, victim, TO_VICT);
-	act("The rippling thread of plasma connects, attaching $n to $N!", ch, 0, victim, TO_NOTVICT);
+	act("The rippling thread of plasma connects, attaching you to $N!", ch, nullptr, victim, TO_CHAR);
+	act("The rippling thread of plasma connects, attaching $n to you!", ch, nullptr, victim, TO_VICT);
+	act("The rippling thread of plasma connects, attaching $n to $N!", ch, nullptr, victim, TO_NOTVICT);
 
 	init_affect(&af);
 	af.where = TO_AFFECTS;
@@ -7538,29 +7538,29 @@ void check_plasma_thread(CHAR_DATA *ch, int direction)
 
 	if (direction == -1)
 	{
-		act("The rippling thread of plasma pulls $N along with you.", ch, 0, victim, TO_CHAR);
-		act("A rippling thread of plasma pulls $N along with $n.", ch, 0, victim, TO_ROOM);
-		act("The rippling thread of plasma pulls you along with $N.", victim, 0, ch, TO_CHAR);
-		act("A rippling thread of plasma pulls $n along with $N.", victim, 0, ch, TO_ROOM);
+		act("The rippling thread of plasma pulls $N along with you.", ch, nullptr, victim, TO_CHAR);
+		act("A rippling thread of plasma pulls $N along with $n.", ch, nullptr, victim, TO_ROOM);
+		act("The rippling thread of plasma pulls you along with $N.", victim, nullptr, ch, TO_CHAR);
+		act("A rippling thread of plasma pulls $n along with $N.", victim, nullptr, ch, TO_ROOM);
 		char_from_room(victim);
 		char_to_room(victim, ch->in_room);
 		do_look(victim, "auto");
 	}
 	else
 	{
-		act("The thread of plasma pulls $N along with you.", ch, 0, victim, TO_CHAR);
-		act("A thread of plasma pulls $N along with $n.", ch, 0, victim, TO_ROOM);
-		act("The thread of plasma pulls you along with $N.", victim, 0, ch, TO_CHAR);
-		act("A thread of plasma pulls $n along with $N.", victim, 0, ch, TO_ROOM);
+		act("The thread of plasma pulls $N along with you.", ch, nullptr, victim, TO_CHAR);
+		act("A thread of plasma pulls $N along with $n.", ch, nullptr, victim, TO_ROOM);
+		act("The thread of plasma pulls you along with $N.", victim, nullptr, ch, TO_CHAR);
+		act("A thread of plasma pulls $n along with $N.", victim, nullptr, ch, TO_ROOM);
 		move_char(victim, direction, true, true);
 	}
 
 	if (ch->in_room != victim->in_room)
 	{
-		act("The writhing thread of plasma suddenly snaps you back to $N!", ch, 0, victim, TO_CHAR);
-		act("A writhing thread of plasma suddenly snaps $n back to $N!", ch, 0, victim, TO_ROOM);
-		act("The writhing thread of plasma suddenly snaps $N back to you!", victim, 0, ch, TO_CHAR);
-		act("The writhing thread of plasma suddenly snaps $N back to $n!", victim, 0, ch, TO_ROOM);
+		act("The writhing thread of plasma suddenly snaps you back to $N!", ch, nullptr, victim, TO_CHAR);
+		act("A writhing thread of plasma suddenly snaps $n back to $N!", ch, nullptr, victim, TO_ROOM);
+		act("The writhing thread of plasma suddenly snaps $N back to you!", victim, nullptr, ch, TO_CHAR);
+		act("The writhing thread of plasma suddenly snaps $N back to $n!", victim, nullptr, ch, TO_ROOM);
 		char_from_room(ch);
 		char_to_room(ch, victim->in_room);
 		do_look(ch, "auto");
@@ -7608,9 +7608,9 @@ void spell_melt_rock(int sn, [[maybe_unused]] int level, CHAR_DATA *ch, SpellTar
 	OBJ_DATA *obj;
 	int iWear, dam;
 
-	act("A wave of oppressive heat emanates from your fingertips as you gesture at $N.", ch, 0, victim, TO_CHAR);
-	act("As $n gestures, a wave of oppressive heat washes over you.", ch, 0, victim, TO_VICT);
-	act("$n gestures, sending a wave of oppressive heat washing over $N.", ch, 0, victim, TO_NOTVICT);
+	act("A wave of oppressive heat emanates from your fingertips as you gesture at $N.", ch, nullptr, victim, TO_CHAR);
+	act("As $n gestures, a wave of oppressive heat washes over you.", ch, nullptr, victim, TO_VICT);
+	act("$n gestures, sending a wave of oppressive heat washing over $N.", ch, nullptr, victim, TO_NOTVICT);
 
 	for (iWear = 0; iWear < MAX_WEAR; iWear++)
 	{
@@ -7708,16 +7708,16 @@ void spell_magma_tunnel(int /* sn */, int /* level */, CHAR_DATA *ch, SpellTarge
 		old_room = to_room;
 	}
 
-	act("As you gesture, the ground around your feet turns to magma and you are engulfed.", ch, 0, 0, TO_CHAR);
-	act("The ground around $n's feet turns into magma and $e is engulfed.", ch, 0, 0, TO_ROOM);
+	act("As you gesture, the ground around your feet turns to magma and you are engulfed.", ch, nullptr, nullptr, TO_CHAR);
+	act("The ground around $n's feet turns into magma and $e is engulfed.", ch, nullptr, nullptr, TO_ROOM);
 
 	char_from_room(ch);
 	char_to_room(ch, old_room);
 
 	do_look(ch, "auto");
 
-	act("You emerge from the ground.", ch, 0, 0, TO_CHAR);
-	act("$n emerges from the ground.", ch, 0, 0, TO_ROOM);
+	act("You emerge from the ground.", ch, nullptr, nullptr, TO_CHAR);
+	act("$n emerges from the ground.", ch, nullptr, nullptr, TO_ROOM);
 }
 
 void spell_fashion_crystal(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /* vo */, CastMode /* mode */)
@@ -7750,11 +7750,11 @@ void spell_fashion_crystal(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /
 		ch->mana += 100;
 	}
 
-	act("You focus intently, channeling raw mana to form a pure energy crystal.", ch, 0, 0, TO_CHAR);
-	act("$n focuses intently and a flash of luminescence flickers in $s hands.", ch, 0, 0, TO_ROOM);
+	act("You focus intently, channeling raw mana to form a pure energy crystal.", ch, nullptr, nullptr, TO_CHAR);
+	act("$n focuses intently and a flash of luminescence flickers in $s hands.", ch, nullptr, nullptr, TO_ROOM);
 
 	if (mana > 100)
-		act("You channel additional mana into forming the crystal, infusing it with power.", ch, 0, 0, TO_CHAR);
+		act("You channel additional mana into forming the crystal, infusing it with power.", ch, nullptr, nullptr, TO_CHAR);
 
 	obj = create_object(get_obj_index(OBJ_VNUM_CRYSTAL), level);
 	obj_to_char(obj, ch);
@@ -7779,7 +7779,7 @@ void crystal_tick(OBJ_DATA *obj, OBJ_AFFECT_DATA *af)
 	if (af->modifier <= 0)
 	{
 		if (CHAR_DATA *carrier = Deref(obj->carried_by))
-			act("$p crumbles to dust as the energy contained within dissipates.", carrier, obj, 0, TO_CHAR);
+			act("$p crumbles to dust as the energy contained within dissipates.", carrier, obj, nullptr, TO_CHAR);
 
 		extract_obj(obj);
 	}
@@ -7795,7 +7795,7 @@ void spell_farsee(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /* vo */, 
 		return;
 	}
 
-	act("Your vision sharpens as you attune yourself to magical crystals.", ch, 0, 0, TO_CHAR);
+	act("Your vision sharpens as you attune yourself to magical crystals.", ch, nullptr, nullptr, TO_CHAR);
 
 	init_affect(&af);
 	af.where = TO_AFFECTS;
@@ -7833,9 +7833,9 @@ void spell_mana_beam(int sn, [[maybe_unused]] int level, CHAR_DATA *ch, SpellTar
 		return;
 	}
 
-	act("You thrust forth your pulsing crystal, unleashing a beam of mana at $N!", ch, 0, victim, TO_CHAR);
-	act("$n thrusts forth a pulsing crystal, unleashing a beam of mana to sear you!", ch, 0, victim, TO_VICT);
-	act("$n thrusts forth a pulsing crystal, unleashing a beam of mana at $N!", ch, 0, victim, TO_NOTVICT);
+	act("You thrust forth your pulsing crystal, unleashing a beam of mana at $N!", ch, nullptr, victim, TO_CHAR);
+	act("$n thrusts forth a pulsing crystal, unleashing a beam of mana to sear you!", ch, nullptr, victim, TO_VICT);
+	act("$n thrusts forth a pulsing crystal, unleashing a beam of mana at $N!", ch, nullptr, victim, TO_NOTVICT);
 
 	dam = number_range(35, 45) * af->modifier;
 	dam /= 100;
@@ -7846,7 +7846,7 @@ void spell_mana_beam(int sn, [[maybe_unused]] int level, CHAR_DATA *ch, SpellTar
 
 	if (af->modifier == 0)
 	{
-		act("$p crumbles to dust in your hands.", ch, obj, 0, TO_CHAR);
+		act("$p crumbles to dust in your hands.", ch, obj, nullptr, TO_CHAR);
 		extract_obj(obj);
 	}
 }
@@ -7874,10 +7874,10 @@ void spell_detonation(int sn, int /* level */, CHAR_DATA *ch, SpellTarget /* vo 
 		return;
 	}
 
-	act("You hurl $p, sending it arcing through the air!", ch, obj, 0, TO_CHAR);
-	act("$n hurls $p, sending it arcing through the air!", ch, obj, 0, TO_ROOM);
-	act("You focus on the energy contained within $p and unleash a massive explosion!", ch, obj, 0, TO_CHAR);
-	act("$p suddenly explodes in mid-air, unleashing a torrent of raw energy!", ch, obj, 0, TO_ROOM);
+	act("You hurl $p, sending it arcing through the air!", ch, obj, nullptr, TO_CHAR);
+	act("$n hurls $p, sending it arcing through the air!", ch, obj, nullptr, TO_ROOM);
+	act("You focus on the energy contained within $p and unleash a massive explosion!", ch, obj, nullptr, TO_CHAR);
+	act("$p suddenly explodes in mid-air, unleashing a torrent of raw energy!", ch, obj, nullptr, TO_ROOM);
 
 	for (vch = ch->in_room->people; vch; vch = vch_next)
 	{
@@ -7946,11 +7946,11 @@ void spell_rotating_ward(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /* 
 	}
 
 	if (affected)
-		act("You raise your hand and release another charged crystal to circle your body.", ch, 0, 0, TO_CHAR);
+		act("You raise your hand and release another charged crystal to circle your body.", ch, nullptr, nullptr, TO_CHAR);
 	else
-		act("You raise your hand, release your crystal, and it begins orbiting your body.", ch, 0, 0, TO_CHAR);
+		act("You raise your hand, release your crystal, and it begins orbiting your body.", ch, nullptr, nullptr, TO_CHAR);
 
-	act("$n holds out a multifaceted crystal and it begins orbiting $s body.", ch, 0, 0, TO_ROOM);
+	act("$n holds out a multifaceted crystal and it begins orbiting $s body.", ch, nullptr, nullptr, TO_ROOM);
 
 	init_affect(&af);
 	af.where = TO_AFFECTS;
@@ -7993,7 +7993,7 @@ void spell_fortify_crystal(int /* sn */, int /* level */, CHAR_DATA *ch, SpellTa
 		return;
 	}
 
-	act("$p hums briefly as you stabilize the energies within it.", ch, crystal, 0, TO_CHAR);
+	act("$p hums briefly as you stabilize the energies within it.", ch, crystal, nullptr, TO_CHAR);
 
 	af->tick_fun = nullptr;
 	af->modifier /= 2;
@@ -8003,9 +8003,9 @@ void mana_infusion_helper(CHAR_DATA *ch, CHAR_DATA *victim)
 {
 	AFFECT_DATA af;
 
-	act("Mana continues to flow out of $N, leaving $M glowing brightly.", ch, 0, victim, TO_CHAR);
-	act("Mana continues to flow out of $N, leaving $M glowing brightly.", ch, 0, victim, TO_NOTVICT);
-	act("Mana continues to flow out of you, leaving you glowing brightly.", ch, 0, victim, TO_VICT);
+	act("Mana continues to flow out of $N, leaving $M glowing brightly.", ch, nullptr, victim, TO_CHAR);
+	act("Mana continues to flow out of $N, leaving $M glowing brightly.", ch, nullptr, victim, TO_NOTVICT);
+	act("Mana continues to flow out of you, leaving you glowing brightly.", ch, nullptr, victim, TO_VICT);
 
 	init_affect(&af);
 	af.where = TO_AFFECTS;
@@ -8038,9 +8038,9 @@ void spell_mana_infusion(int /* sn */, int level, CHAR_DATA *ch, SpellTarget vo,
 	else
 		dammod = 120;
 
-	act("You infuse $N's body with pure mana, overwhelming it!", ch, 0, victim, TO_CHAR);
-	act("$n gestures at you and your body suddenly feels full!", ch, 0, victim, TO_VICT);
-	act("$n gestures at $N, who begins to glow.", ch, 0, victim, TO_NOTVICT);
+	act("You infuse $N's body with pure mana, overwhelming it!", ch, nullptr, victim, TO_CHAR);
+	act("$n gestures at you and your body suddenly feels full!", ch, nullptr, victim, TO_VICT);
+	act("$n gestures at $N, who begins to glow.", ch, nullptr, victim, TO_NOTVICT);
 
 	init_affect(&af1);
 	af1.where = TO_AFFECTS;
@@ -8061,8 +8061,8 @@ void spell_mana_infusion(int /* sn */, int level, CHAR_DATA *ch, SpellTarget vo,
 
 void infusion_tick(CHAR_DATA *ch, AFFECT_DATA *af)
 {
-	act("You writhe in pain as the mana continues to flow out of you.", ch, 0, 0, TO_CHAR);
-	act("$n writhes in pain as the mana continues to flow out of $m.", ch, 0, 0, TO_ROOM);
+	act("You writhe in pain as the mana continues to flow out of you.", ch, nullptr, nullptr, TO_CHAR);
+	act("$n writhes in pain as the mana continues to flow out of $m.", ch, nullptr, nullptr, TO_ROOM);
 
 	// One read: both uses are arguments to the same call, so nothing runs
 	// between them.

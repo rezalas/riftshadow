@@ -243,14 +243,14 @@ void greet_prog_cimar_dollgirl(CHAR_DATA *mob, CHAR_DATA *ch)
 	switch (ch->pcdata->quests[DOLL_QUEST])
 	{
 		case 0:
-			act("$n approaches $N and asks $M something.", mob, 0, ch, TO_NOTVICT);
+			act("$n approaches $N and asks $M something.", mob, nullptr, ch, TO_NOTVICT);
 			sprintf(buf, "A red eyed girl asks '%sPlease... will you help me find my doll?%s'\n\r",
 				get_char_color(ch, "speech"),
 				END_COLOR(ch));
 			send_to_char(buf, ch);
 			break;
 		case 1:
-			act("$n approaches $N and asks $M something.", mob, 0, ch, TO_NOTVICT);
+			act("$n approaches $N and asks $M something.", mob, nullptr, ch, TO_NOTVICT);
 			sprintf(buf, "A red-eyed girl asks '%sD-did you find my d-doll?%s'\n\r",
 				get_char_color(ch, "speech"),
 				END_COLOR(ch));
@@ -258,11 +258,11 @@ void greet_prog_cimar_dollgirl(CHAR_DATA *mob, CHAR_DATA *ch)
 			break;
 		case 2:
 		case 3:
-			act("$n catches sight of you and her sobs intensify.", mob, 0, ch, TO_VICT);
-			act("$n catches sight of $N and her sobs intensify.", mob, 0, ch, TO_NOTVICT);
+			act("$n catches sight of you and her sobs intensify.", mob, nullptr, ch, TO_VICT);
+			act("$n catches sight of $N and her sobs intensify.", mob, nullptr, ch, TO_NOTVICT);
 			break;
 		case 4:
-			act("$n catches sight of you and gives you a smile and a wink.", mob, 0, ch, TO_VICT);
+			act("$n catches sight of you and gives you a smile and a wink.", mob, nullptr, ch, TO_VICT);
 			break;
 	}
 }
@@ -286,7 +286,7 @@ void speech_prog_cimar_dollgirl(CHAR_DATA *mob, CHAR_DATA *ch, char *speech)
 			if (!str_prefix("yes", speech))
 			{
 				do_emote(mob, "'s eyes light up and gleam with hope.");
-				act("$n approaches $N and murmurs something to $M.", mob, 0, ch, TO_NOTVICT);
+				act("$n approaches $N and murmurs something to $M.", mob, nullptr, ch, TO_NOTVICT);
 
 				sprintf(buf,
 					"A red-eyed girl says '%sI lost it somewhere on Wormwood Avenue... I saw a rat, and it tried to bite "\
@@ -302,7 +302,7 @@ void speech_prog_cimar_dollgirl(CHAR_DATA *mob, CHAR_DATA *ch, char *speech)
 
 			if (!str_prefix("no", speech))
 			{
-				act("A brief look of shock crosses $n's face and she turns away, sobbing.", mob, 0, 0, TO_ROOM);
+				act("A brief look of shock crosses $n's face and she turns away, sobbing.", mob, nullptr, nullptr, TO_ROOM);
 
 				ch->pcdata->quests[DOLL_QUEST] = 2;
 				ch->pcdata->reputation -= 10;
@@ -320,12 +320,12 @@ void speech_prog_cimar_dollgirl(CHAR_DATA *mob, CHAR_DATA *ch, char *speech)
 				}
 				else
 				{
-					act("$n stops crying suddenly and studies your face for a moment.", mob, 0, ch, TO_VICT);
-					act("$n stops crying suddenly and studies $N's face for a moment.", mob, 0, ch, TO_NOTVICT);
+					act("$n stops crying suddenly and studies your face for a moment.", mob, nullptr, ch, TO_VICT);
+					act("$n stops crying suddenly and studies $N's face for a moment.", mob, nullptr, ch, TO_NOTVICT);
 					do_say(mob, "Why... would you l-lie to me?  W-why?");
 
-					act("$n turns away from you and wails pitifully.", mob, 0, ch, TO_VICT);
-					act("$n turns away from $N and wails pitifully.", mob, 0, ch, TO_NOTVICT);
+					act("$n turns away from you and wails pitifully.", mob, nullptr, ch, TO_VICT);
+					act("$n turns away from $N and wails pitifully.", mob, nullptr, ch, TO_NOTVICT);
 
 					ch->pcdata->quests[DOLL_QUEST] = 3;
 					ch->pcdata->reputation -= 15;
@@ -353,9 +353,9 @@ void give_prog_cimar_dollgirl(CHAR_DATA *mob, CHAR_DATA *ch, OBJ_DATA *obj)
 	if (!can_do_quest(ch, DOLL_QUEST))
 		return;
 
-	act("$N snatches the doll from your hands and examines it intently.", ch, 0, mob, TO_CHAR);
-	act("$N snatches the doll from $n's hands and examines it intently.", ch, 0, mob, TO_ROOM);
-	act("$N lets out a squeal of gleeful laughter and skips away, dangling the doll loosely by its leg.", ch, 0, mob, TO_ALL);
+	act("$N snatches the doll from your hands and examines it intently.", ch, nullptr, mob, TO_CHAR);
+	act("$N snatches the doll from $n's hands and examines it intently.", ch, nullptr, mob, TO_ROOM);
+	act("$N lets out a squeal of gleeful laughter and skips away, dangling the doll loosely by its leg.", ch, nullptr, mob, TO_ALL);
 
 	extract_char(mob, true);
 
@@ -393,7 +393,7 @@ void greet_prog_cimar_sorcgm(CHAR_DATA *mob, CHAR_DATA *ch)
 				"hiding, however, for there are many who would seek to learn his secrets.  Pelamon is his name.  Speak "\
 				"it that he may know you are a friend.  Do not shame me by proving unworthy in his eyes.%s'",
 				get_char_color(ch, "red"), ch->name, END_COLOR(ch));
-		act(buf, mob, 0, ch, TO_VICT);
+		act(buf, mob, nullptr, ch, TO_VICT);
 
 		ch->pcdata->quests[TALISMANIC_QUEST] = 1;
 	}
@@ -402,7 +402,7 @@ void greet_prog_cimar_sorcgm(CHAR_DATA *mob, CHAR_DATA *ch)
 		sprintf(buf, "$n whispers '%sRemember.  A hermit north and to the west.  His name is Pelamon.%s'",
 			get_char_color(ch, "red"),
 			END_COLOR(ch));
-		act(buf, mob, 0, ch, TO_VICT);
+		act(buf, mob, nullptr, ch, TO_VICT);
 	}
 }
 
@@ -456,9 +456,9 @@ void speech_prog_ilopheth_shack(ROOM_INDEX_DATA *room, CHAR_DATA *ch, char *spee
 				char_from_room(mob);
 				char_to_room(mob, room);
 
-				act("A previously-unnoticed door on the shack to the west creaks loudly open.", ch, 0, 0, TO_ALL);
-				act("A hermit clad in tattered robes grabs $n by the hand and drags $m in!", ch, 0, 0, TO_ROOM);
-				act("A hermit clad in tattered robes grabs you by the hand and drags you in!", ch, 0, 0, TO_CHAR);
+				act("A previously-unnoticed door on the shack to the west creaks loudly open.", ch, nullptr, nullptr, TO_ALL);
+				act("A hermit clad in tattered robes grabs $n by the hand and drags $m in!", ch, nullptr, nullptr, TO_ROOM);
+				act("A hermit clad in tattered robes grabs you by the hand and drags you in!", ch, nullptr, nullptr, TO_CHAR);
 
 				char_from_room(mob);
 				char_from_room(ch);
@@ -500,9 +500,9 @@ void speech_prog_ilopheth_shack(ROOM_INDEX_DATA *room, CHAR_DATA *ch, char *spee
 					char_from_room(mob);
 					char_to_room(mob, room);
 
-					act("A previously-unnoticed door on the shack to the west creaks loudly open.", ch, 0, 0, TO_ALL);
-					act("A hermit clad in tattered robes grabs $n by the hand and drags $m in!", ch, 0, 0, TO_ROOM);
-					act("A hermit clad in tattered robes grabs you by the hand and drags you in!", ch, 0, 0, TO_CHAR);
+					act("A previously-unnoticed door on the shack to the west creaks loudly open.", ch, nullptr, nullptr, TO_ALL);
+					act("A hermit clad in tattered robes grabs $n by the hand and drags $m in!", ch, nullptr, nullptr, TO_ROOM);
+					act("A hermit clad in tattered robes grabs you by the hand and drags you in!", ch, nullptr, nullptr, TO_CHAR);
 
 					char_from_room(mob);
 					char_from_room(ch);
@@ -536,9 +536,9 @@ void speech_prog_ilopheth_shack(ROOM_INDEX_DATA *room, CHAR_DATA *ch, char *spee
 					char_from_room(mob);
 					char_to_room(mob, room);
 
-					act("A previously-unnoticed door on the shack to the west creaks loudly open.", ch, 0, 0, TO_ALL);
-					act("A hermit clad in tattered robes grabs $n by the hand and drags $m in!", ch, 0, 0, TO_ROOM);
-					act("A hermit clad in tattered robes grabs you by the hand and drags you in!", ch, 0, 0, TO_CHAR);
+					act("A previously-unnoticed door on the shack to the west creaks loudly open.", ch, nullptr, nullptr, TO_ALL);
+					act("A hermit clad in tattered robes grabs $n by the hand and drags $m in!", ch, nullptr, nullptr, TO_ROOM);
+					act("A hermit clad in tattered robes grabs you by the hand and drags you in!", ch, nullptr, nullptr, TO_CHAR);
 
 					char_from_room(mob);
 					char_from_room(ch);
@@ -553,7 +553,7 @@ void speech_prog_ilopheth_shack(ROOM_INDEX_DATA *room, CHAR_DATA *ch, char *spee
 
 			break;
 		case 5:
-			act("A bolt of lightning streaks down from the clouds above!", ch, 0, 0, TO_ALL);
+			act("A bolt of lightning streaks down from the clouds above!", ch, nullptr, nullptr, TO_ALL);
 			do_myell(ch, "Argh!  I've been struck by lightning!", nullptr);
 
 			damage_new(mob, ch, dice(ch->level, 8), gsn_call_lightning, DAM_LIGHTNING, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "The lightning strike*");
@@ -823,7 +823,7 @@ void pulse_prog_ilopheth_hermit(CHAR_DATA *mob)
 			sprintf(buf, "%s You!  Coming again to grub, eh?  You'll pay, oh yes yes, you will!", Deref(d->character)->name);
 			do_tell(mob, buf);
 
-			act("A bolt of lightning streaks down from the clouds above!", Deref(d->character), 0, 0, TO_ALL);
+			act("A bolt of lightning streaks down from the clouds above!", Deref(d->character), nullptr, nullptr, TO_ALL);
 			do_myell(Deref(d->character), "Argh!  I've been struck by lightning!", nullptr);
 
 			damage_new(mob, Deref(d->character), dice(Deref(d->character)->level, 8), gsn_call_lightning, DAM_LIGHTNING, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "The lightning strike*");
@@ -847,21 +847,21 @@ void greet_prog_drow_scribe(CHAR_DATA *mob, CHAR_DATA *ch)
 
 	if (ch->pcdata->quests[SCRIBE_QUEST] == 0)
 	{
-		act("The drow scribe looks up at you with a look of contemplation on his face.", ch, 0, 0, TO_CHAR);
-		act("The drow scribe looks up at $n with a look of contemplation on his face.", ch, 0, 0, TO_ROOM);
+		act("The drow scribe looks up at you with a look of contemplation on his face.", ch, nullptr, nullptr, TO_CHAR);
+		act("The drow scribe looks up at $n with a look of contemplation on his face.", ch, nullptr, nullptr, TO_ROOM);
 		do_say(mob, "You there... You look like you could use a bit of extra gold.  Am I right?");
 		ch->pcdata->quests[SCRIBE_QUEST] = 1;
 	}
 	else if (ch->pcdata->quests[SCRIBE_QUEST] == 1)
 	{
-		act("The drow scribe snorts at you as you enter.", ch, 0, 0, TO_CHAR);
-		act("The drow scribe snorts at $n as $e enters.", ch, 0, 0, TO_ROOM);
+		act("The drow scribe snorts at you as you enter.", ch, nullptr, nullptr, TO_CHAR);
+		act("The drow scribe snorts at $n as $e enters.", ch, nullptr, nullptr, TO_ROOM);
 		sprintf(buf, "Well, %s?  Do you want the job or not?", ch->name);
 		do_say(mob, buf);
 	}
 	else if (ch->pcdata->quests[SCRIBE_QUEST] == 2)
 	{
-		act("The drow scribe looks up from his work quickly.", ch, 0, 0, TO_ROOM);
+		act("The drow scribe looks up from his work quickly.", ch, nullptr, nullptr, TO_ROOM);
 		sprintf(buf, "Hand me the fruit, %s.", ch->name);
 		do_say(mob, buf);
 	}
@@ -903,7 +903,7 @@ void give_prog_drow_scribe(CHAR_DATA *mob, CHAR_DATA *ch, OBJ_DATA *obj)
 	if (obj->pIndexData->vnum != 14222)
 	{
 		do_say(mob, "Bah!  This is not what I want!");
-		act("$n roughly throws $p to the ground.", mob, obj, 0, TO_ROOM);
+		act("$n roughly throws $p to the ground.", mob, obj, nullptr, TO_ROOM);
 		obj_from_char(obj);
 		obj_to_room(obj, mob->in_room);
 		return;
@@ -953,7 +953,7 @@ void greet_prog_headmaster(CHAR_DATA *mob, CHAR_DATA *ch)
 	if (ch->pcdata->quests[MUD_SCHOOL] > 1)
 		return;
 
-	act("$N nods solemnly to you.", ch, 0, mob, TO_CHAR);
+	act("$N nods solemnly to you.", ch, nullptr, mob, TO_CHAR);
 	mprog_tell(1,
 		"Welcome to the guildhall of the Shalaran Academy.  Here, my guildmasters and I will train you in the "\
 		"fine arts of combat.  Type 'practice' and 'train' here to prepare yourself before moving on.", mob, ch);
@@ -972,7 +972,7 @@ void greet_prog_pay_char(CHAR_DATA *mob, CHAR_DATA *ch)
 	mprog_tell(0,
 			"I highly recommend you visit Cimar's shops and stock up on items you might need.  The kiosk and the "\
 			"general store are very important.", mob, ch);
-	act("$N gives you 500 gold.", ch, 0, mob, TO_CHAR);
+	act("$N gives you 500 gold.", ch, nullptr, mob, TO_CHAR);
 
 	ch->gold += 500;
 
@@ -1002,8 +1002,8 @@ void greet_prog_starvin_pete(CHAR_DATA *mob, CHAR_DATA *ch)
 			mprog_say(0, "Bag!  Must have bag!", mob, ch);
 			break;
 		case 3:
-			act("$N winks at you.", ch, 0, mob, TO_CHAR);
-			act("$N winks at $n.", ch, 0, mob, TO_ROOM);
+			act("$N winks at you.", ch, nullptr, mob, TO_CHAR);
+			act("$N winks at $n.", ch, nullptr, mob, TO_ROOM);
 			break;
 	}
 }
@@ -1031,9 +1031,9 @@ void give_prog_starvin_pete(CHAR_DATA *mob, CHAR_DATA *ch, OBJ_DATA *obj)
 					extract_obj(obj);
 				}
 
-				act("$n sings joyfully at the sight of meat!", mob, 0, ch, TO_ALL);
-				act("$N gratefully hands you 10 gold coins.", ch, 0, mob, TO_CHAR);
-				act("$N hands $n some coins.", ch, 0, mob, TO_ROOM);
+				act("$n sings joyfully at the sight of meat!", mob, nullptr, ch, TO_ALL);
+				act("$N gratefully hands you 10 gold coins.", ch, nullptr, mob, TO_CHAR);
+				act("$N hands $n some coins.", ch, nullptr, mob, TO_ROOM);
 
 				ch->gold += 10;
 				gain_exp(ch, 50);
@@ -1060,12 +1060,12 @@ void give_prog_starvin_pete(CHAR_DATA *mob, CHAR_DATA *ch, OBJ_DATA *obj)
 		case 2:
 			if (obj->pIndexData->vnum == 2416)
 			{
-				act("$N dances wildly before you!", ch, 0, mob, TO_ALL);
+				act("$N dances wildly before you!", ch, nullptr, mob, TO_ALL);
 				sprintf(buf,
 					"$N whispers '%sVery near here... plate in the ground, treasure under the plate... Pete's strange "\
 					"friend tell Pete... but dangerous down there, bring safety!  Oh... also, need rope.%s'",
 					get_char_color(ch, "red"), END_COLOR(ch));
-				act(buf, ch, 0, mob, TO_CHAR);
+				act(buf, ch, nullptr, mob, TO_CHAR);
 				ch->pcdata->quests[PETE_QUEST] = 3;
 			}
 			else
@@ -1080,9 +1080,9 @@ void give_prog_starvin_pete(CHAR_DATA *mob, CHAR_DATA *ch, OBJ_DATA *obj)
 		case 3:
 			if (!str_cmp(material_table[obj->pIndexData->material_index].mat_name, "meat"))
 			{
-				act("$n sings joyfully at the sight of meat!", mob, 0, ch, TO_ALL);
-				act("$N gratefully hands you 10 gold coins.", ch, 0, mob, TO_CHAR);
-				act("$N hands $n some coins.", ch, 0, mob, TO_ROOM);
+				act("$n sings joyfully at the sight of meat!", mob, nullptr, ch, TO_ALL);
+				act("$N gratefully hands you 10 gold coins.", ch, nullptr, mob, TO_CHAR);
+				act("$N hands $n some coins.", ch, nullptr, mob, TO_ROOM);
 				ch->gold += 10;
 				act("$N gobbles down $p noisily.", ch, obj, mob, TO_ALL);
 				obj_from_char(obj);
@@ -1115,11 +1115,11 @@ int academy_smith_greet(CHAR_DATA *ch, CHAR_DATA *mob)
 
 		if (!can_do_quest(ch, SMITH_QUEST) || STAGE(ch) != 0)
 			return 0;
-		act("$N looks up from his forge, sweat dripping down his brow.", ch, 0, mob, TO_CHAR);
+		act("$N looks up from his forge, sweat dripping down his brow.", ch, nullptr, mob, TO_CHAR);
 		if (is_good(ch))
-			act("$N smiles at you broadly.", ch, 0, mob, TO_CHAR);
+			act("$N smiles at you broadly.", ch, nullptr, mob, TO_CHAR);
 		else
-			act("$N regards you carefully, sizing you up.", ch, 0, mob, TO_CHAR);
+			act("$N regards you carefully, sizing you up.", ch, nullptr, mob, TO_CHAR);
 		mprog_say(2, "You there.  Yer look like yer in the market for something more powerful, eh?", mob, ch);
 		SET_STAGE(ch, 1);
 

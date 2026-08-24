@@ -180,7 +180,7 @@ void pulse_prog_cimar_sewergrate(ROOM_INDEX_DATA *room)
 	if (!room->people)
 		return;
 
-	act("The sewer grate emits a soft burbling sound, and a stench fills the air.", room->people, 0, 0, TO_ALL);
+	act("The sewer grate emits a soft burbling sound, and a stench fills the air.", room->people, nullptr, nullptr, TO_ALL);
 }
 
 void pulse_prog_cim_conv(ROOM_INDEX_DATA *room)
@@ -191,7 +191,7 @@ void pulse_prog_cim_conv(ROOM_INDEX_DATA *room)
 	if (!room->people)
 		return;
 
-	act("Conversations buffet you, and your eyes are drawn to a sign on the wall.", room->people, 0, 0, TO_ALL);
+	act("Conversations buffet you, and your eyes are drawn to a sign on the wall.", room->people, nullptr, nullptr, TO_ALL);
 }
 
 void entry_prog_ilopheth_flute(ROOM_INDEX_DATA *room, CHAR_DATA *ch)
@@ -222,14 +222,14 @@ void entry_prog_ilopheth_flute(ROOM_INDEX_DATA *room, CHAR_DATA *ch)
 		sprintf(buf, "%sThe weathered old man ceases his flute-playing and regards you intently.%s",
 			get_char_color(ch, "magenta"),
 			END_COLOR(ch));
-		act(buf, man, 0, ch, TO_VICT);
+		act(buf, man, nullptr, ch, TO_VICT);
 	}
 	else if (room == adj)
 	{
 		sprintf(buf, "%sA haunting melody echoes from the north, its rich tones exuding melancholy and grief.%s",
 			get_char_color(ch, "magenta"),
 			END_COLOR(ch));
-		act(buf, ch, 0, 0, TO_CHAR);
+		act(buf, ch, nullptr, nullptr, TO_CHAR);
 	}
 }
 
@@ -247,7 +247,7 @@ void entry_prog_sidhe_ankle([[maybe_unused]] ROOM_INDEX_DATA *room, CHAR_DATA *c
 		return;
 
 	send_to_char("You feel a sharp pain in your ankle as your foot slips on a loose rock.\n\r", ch);
-	act("$n winces in pain as $e twists his ankle on a loose rock.", ch, 0, 0, TO_ROOM);
+	act("$n winces in pain as $e twists his ankle on a loose rock.", ch, nullptr, nullptr, TO_ROOM);
 
 	damage_new(ch, ch, dice(ch->level, 2), TYPE_UNDEFINED, DAM_BASH, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "twisted ankle");
 
@@ -295,8 +295,8 @@ bool open_prog_mudschool_key([[maybe_unused]] ROOM_INDEX_DATA *room, CHAR_DATA *
 	obj = create_object(get_obj_index(24596), 1);
 	send_to_char("It's locked...\n\r", ch);
 	obj_to_char(obj, ch);
-	act("With a sudden flash of lavender light, a pudgy hand pops into existence and gives you a key!", ch, 0, 0, TO_CHAR);
-	act("With a sudden flash of lavender light, a pudgy hand pops into existence gives $n a key!", ch, 0, 0, TO_ROOM);
+	act("With a sudden flash of lavender light, a pudgy hand pops into existence and gives you a key!", ch, nullptr, nullptr, TO_CHAR);
+	act("With a sudden flash of lavender light, a pudgy hand pops into existence gives $n a key!", ch, nullptr, nullptr, TO_ROOM);
 
 	return false;
 }
@@ -324,13 +324,13 @@ bool move_prog_mudschool_key(ROOM_INDEX_DATA *room, CHAR_DATA *ch, int dir)
 
 	if (found)
 	{
-		act("As you pass through the door, $p crumbles to dust.", ch, obj, 0, TO_CHAR);
+		act("As you pass through the door, $p crumbles to dust.", ch, obj, nullptr, TO_CHAR);
 		obj_from_char(obj);
 		extract_obj(obj);
 	}
 
 	if (room->people)
-		act("The eastern door slams shut.", room->people, 0, 0, TO_ROOM);
+		act("The eastern door slams shut.", room->people, nullptr, nullptr, TO_ROOM);
 
 	return true;
 }
@@ -342,8 +342,8 @@ bool move_prog_door_close(ROOM_INDEX_DATA *room, CHAR_DATA *ch, int dir)
 	if (IS_SET(exit->exit_info, EX_CLOSED))
 		return true;
 
-	act("The door to the north closes up behind you, locking with a tiny click.", ch, 0, 0, TO_CHAR);
-	act("The door to the south closes up behind $n, locking with a tiny click.", ch, 0, 0, TO_ROOM);
+	act("The door to the north closes up behind you, locking with a tiny click.", ch, nullptr, nullptr, TO_CHAR);
+	act("The door to the south closes up behind $n, locking with a tiny click.", ch, nullptr, nullptr, TO_ROOM);
 	SET_BIT(exit->exit_info, EX_CLOSED);
 	SET_BIT(exit->exit_info, EX_LOCKED);
 	SET_BIT(exit->exit_info, EX_NONOBVIOUS);
@@ -377,8 +377,8 @@ void pulse_prog_mudschool_snake(ROOM_INDEX_DATA *room)
 
 	snake = create_mobile(get_mob_index(24546));
 	char_to_room(snake, room);
-	act("Sensing warmth and moisture, a rootsnake bursts from a nearby root and attacks you!", ch, 0, 0, TO_CHAR);
-	act("Sensing warmth and moisture, a rootsnake bursts from a nearby root and attacks $n!", ch, 0, 0, TO_ROOM);
+	act("Sensing warmth and moisture, a rootsnake bursts from a nearby root and attacks you!", ch, nullptr, nullptr, TO_CHAR);
+	act("Sensing warmth and moisture, a rootsnake bursts from a nearby root and attacks $n!", ch, nullptr, nullptr, TO_ROOM);
 
 	do_murder(snake, ch->name);
 
@@ -435,7 +435,7 @@ bool move_prog_stone_roll(ROOM_INDEX_DATA *room, CHAR_DATA *ch, [[maybe_unused]]
 	SET_BIT(exit->exit_info, EX_LOCKED);
 	SET_BIT(exit->exit_info, EX_NONOBVIOUS);
 
-	act("As you pass through, the stone rolls violently back into place!", ch, 0, 0, TO_CHAR);
+	act("As you pass through, the stone rolls violently back into place!", ch, nullptr, nullptr, TO_CHAR);
 
 	for (corpse = room->contents; corpse != nullptr; corpse = corpse->next_content)
 	{
@@ -480,7 +480,7 @@ bool move_prog_horde_shrine([[maybe_unused]] ROOM_INDEX_DATA *room, CHAR_DATA *c
 void entry_prog_iseldheim_lift([[maybe_unused]] ROOM_INDEX_DATA *room, CHAR_DATA *ch)
 {
 	send_to_char("You step onto the swaying lift.\n\r", ch);
-	act("$n steps onto the lift, causing it to sway momentarily.", ch, 0, 0, TO_ROOM);
+	act("$n steps onto the lift, causing it to sway momentarily.", ch, nullptr, nullptr, TO_ROOM);
 }
 
 void drop_prog_elven_star([[maybe_unused]] ROOM_INDEX_DATA *room, CHAR_DATA *ch, OBJ_DATA *obj)
@@ -492,7 +492,7 @@ void drop_prog_elven_star([[maybe_unused]] ROOM_INDEX_DATA *room, CHAR_DATA *ch,
 	if (vnum != 4637 && vnum != 4638 && vnum != 4639 && vnum != 4640 && vnum != 4641)
 		return;
 
-	act("As $p falls to the ground, it is immediately drawn to it's place in the star of the Chilliad.", ch, obj, 0, TO_ROOM);
+	act("As $p falls to the ground, it is immediately drawn to it's place in the star of the Chilliad.", ch, obj, nullptr, TO_ROOM);
 }
 
 void speech_prog_elven_down([[maybe_unused]] ROOM_INDEX_DATA *room, CHAR_DATA *ch, char *speech)
@@ -516,8 +516,8 @@ void speech_prog_elven_down([[maybe_unused]] ROOM_INDEX_DATA *room, CHAR_DATA *c
 		raf.duration = 0;
 		affect_to_room(ch->in_room, &raf);
 
-		act("A chill wind blows through the room, extinguishing the candle.", ch, 0, 0, TO_CHAR);
-		act("A chill wind blows through the room, extinguishing the candle.", ch, 0, 0, TO_ROOM);
+		act("A chill wind blows through the room, extinguishing the candle.", ch, nullptr, nullptr, TO_CHAR);
+		act("A chill wind blows through the room, extinguishing the candle.", ch, nullptr, nullptr, TO_ROOM);
 
 		for (ich = ch->in_room->people; ich != nullptr; ich = ich->next_in_room)
 		{
@@ -544,8 +544,8 @@ void rprog_elven_down_end(CHAR_DATA *ch, [[maybe_unused]] AFFECT_DATA *af)
 	char_from_room(ch);
 	char_to_room(ch, to_room);
 
-	act("You feel the floor drop beneath you, and you feel yourself fall and then impact as you hit the ground.", ch, 0, 0, TO_CHAR);
-	act("$n appears out of thin air, crumpling in to the ground with a thud.", ch, 0, 0, TO_ROOM);
+	act("You feel the floor drop beneath you, and you feel yourself fall and then impact as you hit the ground.", ch, nullptr, nullptr, TO_CHAR);
+	act("$n appears out of thin air, crumpling in to the ground with a thud.", ch, nullptr, nullptr, TO_ROOM);
 }
 
 void pulse_prog_elven_star([[maybe_unused]] ROOM_INDEX_DATA *room)
@@ -566,8 +566,8 @@ void pulse_prog_elven_star([[maybe_unused]] ROOM_INDEX_DATA *room)
 		{
 			if(ch != nullptr)
 			{
-				act("As the star is completed, you hear a noise nearby.",ch,0,0,TO_ROOM);
-				act("Their purpose fulfilled, the gems disintegrate.",ch,0,0,TO_ROOM);
+				act("As the star is completed, you hear a noise nearby.",ch,nullptr,nullptr,TO_ROOM);
+				act("Their purpose fulfilled, the gems disintegrate.",ch,nullptr,nullptr,TO_ROOM);
 			}
 
 			extract_obj(obj);

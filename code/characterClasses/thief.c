@@ -423,8 +423,8 @@ void do_blackjack(CHAR_DATA *ch, char *argument)
 
 	if (number_percent() < chance)
 	{
-		act("You whack $N over the head with a heavy looking sack. Ouch.", ch, 0, victim, TO_CHAR);
-		act("$n whacks $N over the head with a heavy looking sack. Ouch.", ch, 0, victim, TO_NOTVICT);
+		act("You whack $N over the head with a heavy looking sack. Ouch.", ch, nullptr, victim, TO_CHAR);
+		act("$n whacks $N over the head with a heavy looking sack. Ouch.", ch, nullptr, victim, TO_NOTVICT);
 		send_to_char("You feel a sudden pain erupt through the back of your skull.\n\r", victim);
 
 		af.duration = 2;
@@ -451,9 +451,9 @@ void do_blackjack(CHAR_DATA *ch, char *argument)
 	}
 	else
 	{
-		act("You attempt to blackjack $N but fail.", ch, 0, victim, TO_CHAR);
-		act("$n attempts to blackjack $N but misses.", ch, 0, victim, TO_NOTVICT);
-		act("$n hits you over the head with a heavy sack.", ch, 0, victim, TO_VICT);
+		act("You attempt to blackjack $N but fail.", ch, nullptr, victim, TO_CHAR);
+		act("$n attempts to blackjack $N but misses.", ch, nullptr, victim, TO_NOTVICT);
+		act("$n hits you over the head with a heavy sack.", ch, nullptr, victim, TO_VICT);
 
 		af.duration = 2;
 		affect_to_char(victim, &af);
@@ -548,9 +548,9 @@ void do_ghetto_bind(CHAR_DATA *ch, char *argument)
 		af.location = APPLY_DEX;
 		affect_to_char(victim, &af);
 
-		act("$n puts a sack over $N's head and ties a rope around $S legs tightly.", ch, 0, victim, TO_NOTVICT);
-		act("You feel someone putting something over your head and legs.", ch, 0, victim, TO_VICT);
-		act("You put a sack over $N's head and tie a rope around $S legs tightly.", ch, 0, victim, TO_CHAR);
+		act("$n puts a sack over $N's head and ties a rope around $S legs tightly.", ch, nullptr, victim, TO_NOTVICT);
+		act("You feel someone putting something over your head and legs.", ch, nullptr, victim, TO_VICT);
+		act("You put a sack over $N's head and tie a rope around $S legs tightly.", ch, nullptr, victim, TO_CHAR);
 
 		WAIT_STATE(ch, PULSE_VIOLENCE);
 		check_improve(ch, gsn_bind, true, 1);
@@ -567,10 +567,10 @@ void do_ghetto_bind(CHAR_DATA *ch, char *argument)
 		af.location = APPLY_NONE;
 		affect_to_char(victim, &af);
 
-		act("$n tries to put a sack over $N's head but it rips.", ch, 0, victim, TO_NOTVICT);
+		act("$n tries to put a sack over $N's head but it rips.", ch, nullptr, victim, TO_NOTVICT);
 		send_to_char("You feel someone trying to put something over your head and legs.\n\r", victim);
 
-		act("You try to put a sack over $N's head but it rips.", ch, 0, victim, TO_CHAR);
+		act("You try to put a sack over $N's head but it rips.", ch, nullptr, victim, TO_CHAR);
 
 		WAIT_STATE(ch, PULSE_VIOLENCE * 3);
 		check_improve(ch, gsn_bind, false, 3);
@@ -587,16 +587,16 @@ void do_ghetto_unbind(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 
 	if (number_percent() > 30)
 	{
-		act("You break free of the bindings on your head and legs.", ch, 0, 0, TO_CHAR);
-		act("$n breaks free of the bindings on $s head and legs.", ch, 0, 0, TO_ROOM);
+		act("You break free of the bindings on your head and legs.", ch, nullptr, nullptr, TO_CHAR);
+		act("$n breaks free of the bindings on $s head and legs.", ch, nullptr, nullptr, TO_ROOM);
 
 		affect_strip(ch, gsn_bind);
 		WAIT_STATE(ch, PULSE_VIOLENCE);
 	}
 	else
 	{
-		act("You fail to break free of the bindings on your head and legs.", ch, 0, 0, TO_CHAR);
-		act("$n fails to break free of the bindings on $s head and legs.", ch, 0, 0, TO_ROOM);
+		act("You fail to break free of the bindings on your head and legs.", ch, nullptr, nullptr, TO_CHAR);
+		act("$n fails to break free of the bindings on $s head and legs.", ch, nullptr, nullptr, TO_ROOM);
 
 		WAIT_STATE(ch, PULSE_VIOLENCE);
 	}
@@ -761,30 +761,30 @@ void do_ungag(CHAR_DATA *ch, char *argument)
 
 	if (check_bind(vch, "arms") != nullptr)
 	{
-		act("$T arms are bound too tightly for you to reach $T gag!\n\r", ch, 0, vch == ch ? "your" : "their", TO_CHAR);
+		act("$T arms are bound too tightly for you to reach $T gag!\n\r", ch, nullptr, vch == ch ? "your" : "their", TO_CHAR);
 		return;
 	}
 
 	if (number_percent() > 30)
 	{
-		act("You tear away the gag from $T mouth.", ch, 0, vch == ch ? "your" : "their", TO_CHAR);
+		act("You tear away the gag from $T mouth.", ch, nullptr, vch == ch ? "your" : "their", TO_CHAR);
 
 		if (vch == ch)
-			act("$n tears away the gag from $s mouth.", ch, 0, 0, TO_ROOM);
+			act("$n tears away the gag from $s mouth.", ch, nullptr, nullptr, TO_ROOM);
 		else
-			act("$n tears away the gag from $N's mouth.", ch, 0, vch, TO_ROOM);
+			act("$n tears away the gag from $N's mouth.", ch, nullptr, vch, TO_ROOM);
 
 		affect_strip(ch, gsn_gag);
 		WAIT_STATE(ch, PULSE_VIOLENCE);
 	}
 	else
 	{
-		act("The gag is tied too tightly and you fail to remove it.", ch, 0, 0, TO_CHAR);
+		act("The gag is tied too tightly and you fail to remove it.", ch, nullptr, nullptr, TO_CHAR);
 
 		if (vch == ch)
-			act("$n fails to remove $s gag.", ch, 0, 0, TO_ROOM);
+			act("$n fails to remove $s gag.", ch, nullptr, nullptr, TO_ROOM);
 		else
-			act("$n fails to remove $N's gag.", ch, 0, vch, TO_ROOM);
+			act("$n fails to remove $N's gag.", ch, nullptr, vch, TO_ROOM);
 
 		WAIT_STATE(ch, PULSE_VIOLENCE);
 	}
@@ -947,7 +947,7 @@ void do_drag(CHAR_DATA *ch, char *argument)
 
 	if (is_npc(victim) && IS_SET(victim->act, ACT_SENTINEL))
 	{
-		act("You can't seem to move $N from $S position!", ch, 0, victim, TO_CHAR);
+		act("You can't seem to move $N from $S position!", ch, nullptr, victim, TO_CHAR);
 		return;
 	}
 
@@ -1034,8 +1034,8 @@ void do_drag(CHAR_DATA *ch, char *argument)
 	}
 	else
 	{
-		act("You grapple $N, and try to drag $M but $E doesn't budge!", ch, 0, victim, TO_CHAR);
-		act("$n grapples $N, and tries to drag $M away but $N doesn't budge!", ch, 0, victim, TO_NOTVICT);
+		act("You grapple $N, and try to drag $M but $E doesn't budge!", ch, nullptr, victim, TO_CHAR);
+		act("$n grapples $N, and tries to drag $M away but $N doesn't budge!", ch, nullptr, victim, TO_NOTVICT);
 		check_improve(ch, gsn_drag, false, 1);
 	}
 
@@ -1086,7 +1086,7 @@ void do_tripwire(CHAR_DATA *ch, char *argument)
 	{
 		direction = flag_name_lookup(door, direction_table);
 
-		act("You lay a concealed tripwire across the exit $Tward and draw it taut.", ch, 0, direction, TO_CHAR);
+		act("You lay a concealed tripwire across the exit $Tward and draw it taut.", ch, nullptr, direction, TO_CHAR);
 
 		for (victim = ch->in_room->people; victim != nullptr; victim = victim->next_in_room)
 		{
@@ -1384,7 +1384,7 @@ void do_stash(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	act("You attempt to stash $p away.", ch, obj, 0, TO_CHAR);
+	act("You attempt to stash $p away.", ch, obj, nullptr, TO_CHAR);
 
 	if (number_percent() < skill)
 	{
@@ -1467,8 +1467,8 @@ void do_disguise(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	act("You strip $p of its garb and try to disguise yourself.", ch, corpse, 0, TO_CHAR);
-	act("$n strips $p of its garb and tries to disguise $mself.", ch, corpse, 0, TO_ROOM);
+	act("You strip $p of its garb and try to disguise yourself.", ch, corpse, nullptr, TO_CHAR);
+	act("$n strips $p of its garb and tries to disguise $mself.", ch, corpse, nullptr, TO_ROOM);
 
 	init_affect_obj(&oaf);
 	oaf.where = TO_OBJ_AFFECTS;
@@ -1531,15 +1531,15 @@ void disguise_pulse(CHAR_DATA *ch, AFFECT_DATA *af)
 {
 	if (Deref(ch->fighting) && number_percent() < 25)
 	{
-		act("Your shoddy disguise comes apart, the tatters falling away and revealing you!", ch, 0, 0, TO_CHAR);
-		act("$n's garb falls to tatters around $m...  revealing $t beneath the disguise!", ch, ch->pcdata->old->name, 0, TO_ROOM);
+		act("Your shoddy disguise comes apart, the tatters falling away and revealing you!", ch, nullptr, nullptr, TO_CHAR);
+		act("$n's garb falls to tatters around $m...  revealing $t beneath the disguise!", ch, ch->pcdata->old->name, nullptr, TO_ROOM);
 		affect_strip(ch, gsn_disguise);
 		return;
 	}
 
 	if (af->modifier < ch->in_room->area->min_vnum || af->modifier > ch->in_room->area->max_vnum)
 	{
-		act("Your disguise ceases to be effective as you leave the vicinity.", ch, 0, 0, TO_CHAR);
+		act("Your disguise ceases to be effective as you leave the vicinity.", ch, nullptr, nullptr, TO_CHAR);
 		affect_strip(ch, gsn_disguise);
 	}
 }
@@ -1577,8 +1577,8 @@ void do_undisguise(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 		}
 	}
 
-	act("$n suddenly slips out of $s garb... revealing $t beneath the disguise!", ch, ch->pcdata->old->name, 0, TO_ROOM);
-	act("You deftly slip out of your disguise and cast it aside.", ch, 0, 0, TO_CHAR);
+	act("$n suddenly slips out of $s garb... revealing $t beneath the disguise!", ch, ch->pcdata->old->name, nullptr, TO_ROOM);
+	act("You deftly slip out of your disguise and cast it aside.", ch, nullptr, nullptr, TO_CHAR);
 
 	affect_strip(ch, gsn_disguise);
 
@@ -1590,8 +1590,8 @@ void do_search(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 	OBJ_DATA *obj = nullptr;
 	int chance;
 
-	act("You intently scrutinize your surroundings...", ch, 0, 0, TO_CHAR);
-	act("$n intently scrutinizes $s surroundings...", ch, 0, 0, TO_ROOM);
+	act("You intently scrutinize your surroundings...", ch, nullptr, nullptr, TO_CHAR);
+	act("$n intently scrutinizes $s surroundings...", ch, nullptr, nullptr, TO_ROOM);
 
 	chance = number_percent();
 
@@ -1612,8 +1612,8 @@ void do_search(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 				if (Deref(oaf.owner) != ch && (number_percent() < chance))
 				{
 					affect_strip_obj(obj, gsn_stash);
-					act("You stumble across $p which seemed to be hidden from your eye.", ch, obj, 0, TO_CHAR);
-					act("$n stumbles across and reveals $p.", ch, obj, 0, TO_ROOM);
+					act("You stumble across $p which seemed to be hidden from your eye.", ch, obj, nullptr, TO_CHAR);
+					act("$n stumbles across and reveals $p.", ch, obj, nullptr, TO_ROOM);
 				}
 			}
 		}
@@ -1676,7 +1676,7 @@ void do_counterfeit(CHAR_DATA *ch, char *argument)
 
 	if (number_percent() < skill)
 	{
-		act("You successfully counterfeit $p.", ch, orig, 0, TO_CHAR);
+		act("You successfully counterfeit $p.", ch, orig, nullptr, TO_CHAR);
 
 		free_pstring(copy->short_descr);
 		copy->short_descr = palloc_string(orig->short_descr);
@@ -1691,7 +1691,7 @@ void do_counterfeit(CHAR_DATA *ch, char *argument)
 	}
 	else
 	{
-		act("You botch the counterfeit and ruin $p!", ch, copy, 0, TO_CHAR);
+		act("You botch the counterfeit and ruin $p!", ch, copy, nullptr, TO_CHAR);
 
 		free_pstring(copy->short_descr);
 		sprintf(hold, "a shoddy imitation of %s", orig->short_descr);
@@ -1779,7 +1779,7 @@ void do_shadow_cloak(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 
 	if (number_percent() < skill)
 	{
-		act("You sharpen your mind and attempt to shield yourself from scrying magic.", ch, 0, 0, TO_CHAR);
+		act("You sharpen your mind and attempt to shield yourself from scrying magic.", ch, nullptr, nullptr, TO_CHAR);
 
 		init_affect(&af);
 		af.where = TO_AFFECTS;
@@ -1792,7 +1792,7 @@ void do_shadow_cloak(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 	}
 	else
 	{
-		act("You sharpen your mind and attempt to shield yourself from scrying magic, but you fail.", ch, 0, 0, TO_CHAR);
+		act("You sharpen your mind and attempt to shield yourself from scrying magic, but you fail.", ch, nullptr, nullptr, TO_CHAR);
 		check_improve(ch, gsn_shadow_cloak, false, 1);
 	}
 
@@ -1826,7 +1826,7 @@ bool check_stealth(CHAR_DATA *ch, CHAR_DATA *mob)
 	}
 	else
 	{
-		act("You stumble slightly and $N notices you!", ch, 0, mob, TO_CHAR);
+		act("You stumble slightly and $N notices you!", ch, nullptr, mob, TO_CHAR);
 		check_improve(ch, gsn_stealth, false, 3);
 		return false;
 	}
@@ -1953,14 +1953,14 @@ void do_strip(CHAR_DATA *ch, char *argument)
 		}
 		else
 		{
-			act("Oops.", ch, 0, victim, TO_CHAR);
+			act("Oops.", ch, nullptr, victim, TO_CHAR);
 			thief_yell(ch, victim);
 			check_improve(ch, gsn_strip, false, 1);
 		}
 	}
 	else
 	{
-		act("Oops.", ch, 0, victim, TO_CHAR);
+		act("Oops.", ch, nullptr, victim, TO_CHAR);
 		thief_yell(ch, victim);
 		check_improve(ch, gsn_strip, false, 1);
 	}
@@ -2168,27 +2168,27 @@ void do_bind(CHAR_DATA *ch, char *argument)
 			af.location = APPLY_HITROLL;
 			af.modifier = -(ch->level / 5);
 
-			act("You lift up $N's head and slide a sack over it.", ch, 0, victim, TO_CHAR);
-			act_new("You feel someone putting something over your head.", ch, 0, victim, TO_VICT, POS_SLEEPING);
-			act("$n lifts up $N's head and slides a sack over it.", ch, 0, victim, TO_NOTVICT);
+			act("You lift up $N's head and slide a sack over it.", ch, nullptr, victim, TO_CHAR);
+			act_new("You feel someone putting something over your head.", ch, nullptr, victim, TO_VICT, POS_SLEEPING);
+			act("$n lifts up $N's head and slides a sack over it.", ch, nullptr, victim, TO_NOTVICT);
 		}
 		else if (!str_cmp(arg2, "arms"))
 		{
 			af.location = APPLY_STR;
 			af.modifier = -(ch->level / 8);
 
-			act("Pulling $N's arms together, you tie $S wrists with a rope.", ch, 0, victim, TO_CHAR);
-			act_new("You feel something painfully constrict your arms.", ch, 0, victim, TO_VICT, POS_SLEEPING);
-			act("Pulling $N's arms together, $n ties $S wrists with a rope.", ch, 0, victim, TO_NOTVICT);
+			act("Pulling $N's arms together, you tie $S wrists with a rope.", ch, nullptr, victim, TO_CHAR);
+			act_new("You feel something painfully constrict your arms.", ch, nullptr, victim, TO_VICT, POS_SLEEPING);
+			act("Pulling $N's arms together, $n ties $S wrists with a rope.", ch, nullptr, victim, TO_NOTVICT);
 		}
 		else if (!str_cmp(arg2, "legs"))
 		{
 			af.location = APPLY_DEX;
 			af.modifier = -(ch->level / 5);
 
-			act("You tie $N's legs together tightly with a rope.", ch, 0, victim, TO_CHAR);
-			act_new("You feel something being tied around your legs.", ch, 0, victim, TO_VICT, POS_SLEEPING);
-			act("$n ties $N's legs together tightly with a rope.", ch, 0, victim, TO_NOTVICT);
+			act("You tie $N's legs together tightly with a rope.", ch, nullptr, victim, TO_CHAR);
+			act_new("You feel something being tied around your legs.", ch, nullptr, victim, TO_VICT, POS_SLEEPING);
+			act("$n ties $N's legs together tightly with a rope.", ch, nullptr, victim, TO_NOTVICT);
 		}
 
 		affect_to_char(victim, &af);
@@ -2199,18 +2199,18 @@ void do_bind(CHAR_DATA *ch, char *argument)
 	{
 		if (!str_cmp(arg2, "head"))
 		{
-			act("You attempt to put a sack over $N's head, but it rips.", ch, 0, victim, TO_CHAR);
-			act("$n attempts to put a sack over $N's head, but it rips.", ch, 0, victim, TO_NOTVICT);
+			act("You attempt to put a sack over $N's head, but it rips.", ch, nullptr, victim, TO_CHAR);
+			act("$n attempts to put a sack over $N's head, but it rips.", ch, nullptr, victim, TO_NOTVICT);
 		}
 		else if (!str_cmp(arg2, "arms"))
 		{
-			act("You attempt to tie $N's wrists together, but the rope tears.", ch, 0, victim, TO_CHAR);
-			act("$n attempts to tie $N's wrists together, but the rope tears.", ch, 0, victim, TO_NOTVICT);
+			act("You attempt to tie $N's wrists together, but the rope tears.", ch, nullptr, victim, TO_CHAR);
+			act("$n attempts to tie $N's wrists together, but the rope tears.", ch, nullptr, victim, TO_NOTVICT);
 		}
 		else if (!str_cmp(arg2, "legs"))
 		{
-			act("You attempt to tie $N's legs together, but the rope tears.", ch, 0, victim, TO_CHAR);
-			act("$n attempts to tie $N's legs together, but the rope tears.", ch, 0, victim, TO_NOTVICT);
+			act("You attempt to tie $N's legs together, but the rope tears.", ch, nullptr, victim, TO_CHAR);
+			act("$n attempts to tie $N's legs together, but the rope tears.", ch, nullptr, victim, TO_NOTVICT);
 		}
 
 		WAIT_STATE(ch, PULSE_VIOLENCE * 2);
@@ -2244,14 +2244,14 @@ void do_unbind(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 	{
 		if (number_percent() < get_curr_stat(ch, STAT_STR) * 6)
 		{
-			act("Exerting all of your strength, you break the bindings on your arms!", ch, 0, 0, TO_CHAR);
-			act("Exerting all of $s strength, $n breaks the bindings on $s arms!", ch, 0, 0, TO_ROOM);
+			act("Exerting all of your strength, you break the bindings on your arms!", ch, nullptr, nullptr, TO_CHAR);
+			act("Exerting all of $s strength, $n breaks the bindings on $s arms!", ch, nullptr, nullptr, TO_ROOM);
 			affect_remove(ch, af);
 		}
 		else
 		{
-			act("You struggle with the bindings on your arms, but fail to break them.", ch, 0, 0, TO_CHAR);
-			act("$n struggles with the bindings on $s arms, but fails to break them.", ch, 0, 0, TO_ROOM);
+			act("You struggle with the bindings on your arms, but fail to break them.", ch, nullptr, nullptr, TO_CHAR);
+			act("$n struggles with the bindings on $s arms, but fails to break them.", ch, nullptr, nullptr, TO_ROOM);
 		}
 
 		WAIT_STATE(ch, PULSE_VIOLENCE);
@@ -2260,14 +2260,14 @@ void do_unbind(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 	{
 		if (number_percent() < get_curr_stat(ch, STAT_DEX) * 6)
 		{
-			act("Staggering blindly, you manage to rip the sack off your head!", ch, 0, 0, TO_CHAR);
-			act("Staggering blindly, $n manages to rip the sack off $s head!", ch, 0, 0, TO_ROOM);
+			act("Staggering blindly, you manage to rip the sack off your head!", ch, nullptr, nullptr, TO_CHAR);
+			act("Staggering blindly, $n manages to rip the sack off $s head!", ch, nullptr, nullptr, TO_ROOM);
 			affect_remove(ch, af);
 		}
 		else
 		{
-			act("You struggle with the sack on your head, but fail to remove it.", ch, 0, 0, TO_CHAR);
-			act("$n struggles with the sack on $s head, but fails to remove it.", ch, 0, 0, TO_ROOM);
+			act("You struggle with the sack on your head, but fail to remove it.", ch, nullptr, nullptr, TO_CHAR);
+			act("$n struggles with the sack on $s head, but fails to remove it.", ch, nullptr, nullptr, TO_ROOM);
 		}
 
 		WAIT_STATE(ch, PULSE_VIOLENCE);
@@ -2276,14 +2276,14 @@ void do_unbind(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 	{
 		if (number_percent() < (get_curr_stat(ch, STAT_DEX) * 3 + get_curr_stat(ch, STAT_STR) * 3))
 		{
-			act("You pull the bindings on your legs, ripping them apart!", ch, 0, 0, TO_CHAR);
-			act("$n pulls the bindings on $s legs, ripping them apart!", ch, 0, 0, TO_ROOM);
+			act("You pull the bindings on your legs, ripping them apart!", ch, nullptr, nullptr, TO_CHAR);
+			act("$n pulls the bindings on $s legs, ripping them apart!", ch, nullptr, nullptr, TO_ROOM);
 			affect_remove(ch, af);
 		}
 		else
 		{
-			act("You struggle with the bindings on your legs, but fail to break them.", ch, 0, 0, TO_CHAR);
-			act("$n struggles with the bindings on $s legs, but fails to break them.", ch, 0, 0, TO_ROOM);
+			act("You struggle with the bindings on your legs, but fail to break them.", ch, nullptr, nullptr, TO_CHAR);
+			act("$n struggles with the bindings on $s legs, but fails to break them.", ch, nullptr, nullptr, TO_ROOM);
 		}
 
 		WAIT_STATE(ch, PULSE_VIOLENCE);
@@ -2366,9 +2366,9 @@ void do_knife(CHAR_DATA *ch, char *argument)
 
 	if (number_percent() < get_skill(ch, gsn_knife))
 	{
-		act("You slam your dagger into $N's side!", ch, 0, victim, TO_CHAR);
-		act("$n slams $s dagger into your side!", ch, 0, victim, TO_VICT);
-		act("$n slams $s dagger into $N's side!", ch, 0, victim, TO_NOTVICT);
+		act("You slam your dagger into $N's side!", ch, nullptr, victim, TO_CHAR);
+		act("$n slams $s dagger into your side!", ch, nullptr, victim, TO_VICT);
+		act("$n slams $s dagger into $N's side!", ch, nullptr, victim, TO_NOTVICT);
 
 		bool killed = one_hit_new(ch, victim, gsn_knife, HIT_SPECIALS, HIT_UNBLOCKABLE, HIT_NOADD, 125, nullptr);
 
@@ -2379,7 +2379,7 @@ void do_knife(CHAR_DATA *ch, char *argument)
 
 		if (number_range(0, 5) == 3)
 		{
-			act("Bright red blood spurts out of $S wound!\n\r", ch, 0, victim, TO_CHAR);
+			act("Bright red blood spurts out of $S wound!\n\r", ch, nullptr, victim, TO_CHAR);
 
 			init_affect(&af);
 			af.where = TO_AFFECTS;
