@@ -2983,14 +2983,14 @@ void fix_sex(CHAR_DATA *ch)
 /// Exists for compatibility only with older code that may use it.
 /// @deprecated Please use act_new instead.
 ///
-void act(const char *format, CHAR_DATA *ch, const void *arg1, const void *arg2, int type)
+void act(const char *format, CHAR_DATA *ch, ActArg arg1, ActArg arg2, int type)
 {
 	act_new(format, ch, arg1, arg2, type, POS_RESTING);
 }
 
 void act_queue(std::string format, CHAR_DATA *ch, OBJ_DATA *arg1, CHAR_DATA *arg2, int type)
 {
-	act_new(format.c_str(), ch, (void*)arg1, (void*)arg2, type, POS_RESTING);
+	act_new(format.c_str(), ch, arg1, arg2, type, POS_RESTING);
 }
 
 void act_area(const char *format, CHAR_DATA *ch, CHAR_DATA *victim)
@@ -3131,7 +3131,7 @@ void act_area(const char *format, CHAR_DATA *ch, CHAR_DATA *victim)
 /// @param arg2: (optional) The second subject mentioned
 /// @param type: The scope of the message, e.g. TO_ROOM, TO_GROUP, etc.
 /// @param min_pos: The minimum position for the act (lowest default is POS_RESTING)
-void act_new(const char *format, CHAR_DATA *ch, const void *arg1, const void *arg2, int type, int min_pos)
+void act_new(const char *format, CHAR_DATA *ch, ActArg arg1, ActArg arg2, int type, int min_pos)
 {
 	static char *const he_she[] = {"it", "he", "she"};
 	static char *const him_her[] = {"it", "him", "her"};
@@ -3140,11 +3140,13 @@ void act_new(const char *format, CHAR_DATA *ch, const void *arg1, const void *ar
 	char buf[MAX_STRING_LENGTH], buf2[100];
 	char fname[MAX_INPUT_LENGTH];
 	CHAR_DATA *to;
-	CHAR_DATA *vch = (CHAR_DATA *)arg2;
-	OBJ_DATA *obj1 = (OBJ_DATA *)arg1;
-	OBJ_DATA *obj2 = (OBJ_DATA *)arg2;
+	CHAR_DATA *vch = arg2.AsCharacter();
+	OBJ_DATA *obj1 = arg1.AsObject();
+	OBJ_DATA *obj2 = arg2.AsObject();
 	const char *str;
 	const char *i;
+	const int *number;
+	const char *door_name;
 	char *point;
 
 	// Neither the format nor the substituted text is bounded by anything. Object
@@ -3170,7 +3172,15 @@ void act_new(const char *format, CHAR_DATA *ch, const void *arg1, const void *ar
 	{
 		if (vch == nullptr)
 		{
-			RS.Logger.Warn("Act: null vch with TO_VICT. -- {}", format);
+			// Worth telling apart. The first is a caller that forgot an argument.
+			// The second used to be a char pointer or an object read as a
+			// character and dereferenced a few lines below this, with nothing
+			// anywhere in the function able to notice.
+			if (arg2.IsEmpty())
+				RS.Logger.Warn("Act: null vch with TO_VICT. -- {}", format);
+			else
+				RS.Logger.Warn("Act: arg2 with TO_VICT is not a character. -- {}", format);
+
 			return;
 		}
 
@@ -3229,7 +3239,7 @@ void act_new(const char *format, CHAR_DATA *ch, const void *arg1, const void *ar
 
 			++str;
 
-			if (arg2 == nullptr && *str >= 'A' && *str <= 'Z' && *str != 'I')
+			if (arg2.IsEmpty() && *str >= 'A' && *str <= 'Z')
 			{
 				RS.Logger.Warn("Act: missing arg2 for code {}.", *str);
 				i = " <@@@> ";
@@ -3240,53 +3250,73 @@ void act_new(const char *format, CHAR_DATA *ch, const void *arg1, const void *ar
 				{
 					/* Thx alex for 't' idea */
 					case 't':
-						i = (char *)arg1;
+						i = arg1.AsText();
 						break;
 					case 'T':
-						i = (char *)arg2;
+						i = arg2.AsText();
 						break;
 					case 'n':
 						i = get_descr_form(ch, to, false);
 						break;
 					case 'N':
-						i = get_descr_form(vch, to, false);
+						i = vch != nullptr ? get_descr_form(vch, to, false) : nullptr;
 						break;
 					case 'f':
 						i = (ch->true_name ? ch->true_name : ch->name);
 						break;
 					case 'F':
-						i = (vch->true_name ? vch->true_name : vch->name);
+						i = vch != nullptr ? (vch->true_name ? vch->true_name : vch->name) : nullptr;
 						break;
 					case 'i':
-						sprintf(buf2, "%d", *((int *)arg1));
-						i = (const char *)&buf2;
+						number = arg1.AsNumber();
+
+						if (number != nullptr)
+						{
+							sprintf(buf2, "%d", *number);
+							i = buf2;
+						}
+						else
+						{
+							i = nullptr;
+						}
+
 						break;
 					case 'I':
-						sprintf(buf2, "%d", *((int *)arg2));
-						i = (const char *)&buf2;
+						number = arg2.AsNumber();
+
+						if (number != nullptr)
+						{
+							sprintf(buf2, "%d", *number);
+							i = buf2;
+						}
+						else
+						{
+							i = nullptr;
+						}
+
 						break;
 					case 'e':
 						i = he_she[URANGE(0, ch->sex, 2)];
 						break;
 					case 'E':
-						i = he_she[URANGE(0, vch->sex, 2)];
+						i = vch != nullptr ? he_she[URANGE(0, vch->sex, 2)] : nullptr;
 						break;
 					case 'm':
 						i = him_her[URANGE(0, ch->sex, 2)];
 						break;
 					case 'M':
-						i = him_her[URANGE(0, vch->sex, 2)];
+						i = vch != nullptr ? him_her[URANGE(0, vch->sex, 2)] : nullptr;
 						break;
 					case 's':
 						i = his_her[URANGE(0, ch->sex, 2)];
 						break;
 					case 'S':
-						i = his_her[URANGE(0, vch->sex, 2)];
+						i = vch != nullptr ? his_her[URANGE(0, vch->sex, 2)] : nullptr;
 						break;
 					case 'p':
 						if (obj1 == nullptr)
 						{
-							i = "something";
+							i = arg1.IsEmpty() ? "something" : nullptr;
 							break;
 						}
 
@@ -3306,24 +3336,48 @@ void act_new(const char *format, CHAR_DATA *ch, const void *arg1, const void *ar
 
 						break;
 					case 'P':
+						if (obj2 == nullptr)
+						{
+							i = arg2.IsEmpty() ? "something" : nullptr;
+							break;
+						}
+
 						i = can_see_obj(to, obj2) ? obj2->short_descr : "something";
 						break;
 					case 'd':
-						if (arg2 == nullptr || ((char *)arg2)[0] == '\0')
+						door_name = arg2.AsText();
+
+						if (arg2.IsEmpty() || (door_name != nullptr && door_name[0] == '\0'))
 						{
 							i = "door";
 						}
+						else if (door_name == nullptr)
+						{
+							// arg2 holds something, and it is not the door name this code wants.
+							i = nullptr;
+						}
 						else
 						{
-							one_argument((char *)arg2, fname);
+							one_argument(const_cast<char *>(door_name), fname);
 							i = fname;
 						}
+
 						break;
 					default:
 						RS.Logger.Warn("Act: bad code {}.", *str);
 						i = " <@@@> ";
 						break;
 				}
+			}
+
+			// A code asked its argument for something the argument does not hold.
+			// This is the case that used to reinterpret the pointer and read whatever
+			// was behind it. The message names the code and the format so the call
+			// site can be found.
+			if (i == nullptr)
+			{
+				RS.Logger.Warn("Act: code {} cannot read its argument. -- {}", *str, format);
+				i = " <@@@> ";
 			}
 
 			++str;

@@ -20,6 +20,7 @@
 #endif
 
 #include <string>
+#include <variant>
 
 #include "entity/fwd.h"
 #include "entity/limits.h"
@@ -178,10 +179,68 @@ void page_to_char (const char *txt, CHAR_DATA *ch);
 void show_string (struct descriptor_data *d, char *input);
 /* quick sex fixer */
 void fix_sex (CHAR_DATA *ch);
-void act (const char *format, CHAR_DATA *ch, const void *arg1, const void *arg2, int type);
+///
+/// One of act()'s two substitution arguments.
+///
+/// These were const void * and were reinterpreted by format code at runtime, so
+/// arg1 was read as three unrelated types and arg2 as four, with the choice made
+/// by a character in the format string and checked by nothing. Carrying the type
+/// with the value lets the format switch ask what it was handed. A mismatch is
+/// then a logged, attributable message instead of a wild read.
+///
+/// The constructors are implicit so call sites pass what they always passed. The
+/// types that are absent are absent on purpose. A std::string has no conversion to
+/// any alternative, so passing one is a compile error rather than the address of a
+/// string object arriving where a char pointer was expected. A bare void * and a
+/// literal 0 are both rejected as ambiguous for the same reason.
+///
+struct ActArg
+{
+	std::variant<std::monostate, const char *, const int *, OBJ_DATA *, CHAR_DATA *> value;
+
+	ActArg() : value(std::monostate()) {}
+	ActArg(std::nullptr_t) : value(std::monostate()) {}
+	ActArg(const char *text) : value(text) {}
+	ActArg(char *text) : value(static_cast<const char *>(text)) {}
+	ActArg(const int *number) : value(number) {}
+	ActArg(int *number) : value(static_cast<const int *>(number)) {}
+	ActArg(OBJ_DATA *obj) : value(obj) {}
+	ActArg(CHAR_DATA *ch) : value(ch) {}
+
+	/// True when the caller passed no argument at all.
+	bool IsEmpty() const { return std::holds_alternative<std::monostate>(value); }
+
+	/// Each of these returns nullptr when the argument holds something else, which
+	/// is what turns a type confusion into a message the caller can be found by.
+	const char *AsText() const
+	{
+		const char *const *held = std::get_if<const char *>(&value);
+		return held != nullptr ? *held : nullptr;
+	}
+
+	const int *AsNumber() const
+	{
+		const int *const *held = std::get_if<const int *>(&value);
+		return held != nullptr ? *held : nullptr;
+	}
+
+	OBJ_DATA *AsObject() const
+	{
+		OBJ_DATA *const *held = std::get_if<OBJ_DATA *>(&value);
+		return held != nullptr ? *held : nullptr;
+	}
+
+	CHAR_DATA *AsCharacter() const
+	{
+		CHAR_DATA *const *held = std::get_if<CHAR_DATA *>(&value);
+		return held != nullptr ? *held : nullptr;
+	}
+};
+
+void act (const char *format, CHAR_DATA *ch, ActArg arg1, ActArg arg2, int type);
 void act_queue (std::string format, CHAR_DATA *ch, OBJ_DATA *arg1, CHAR_DATA *arg2, int type);
 void act_area (const char *format, CHAR_DATA *ch, CHAR_DATA *victim);
-void act_new (const char *format, CHAR_DATA *ch, const void *arg1, const void *arg2, int type, int min_pos);
+void act_new (const char *format, CHAR_DATA *ch, ActArg arg1, ActArg arg2, int type, int min_pos);
 void announce_login (CHAR_DATA *ch);
 void announce_logout (CHAR_DATA *ch);
 void do_rename (CHAR_DATA* ch, char* argument);
