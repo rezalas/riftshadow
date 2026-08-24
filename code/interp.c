@@ -105,7 +105,7 @@ bool fLogAll= false;
 /*
  * Command table.
  */
-const struct cmd_type cmd_table[] = {
+constexpr struct cmd_type cmd_table[] = {
 	/*
 	 * Common movement commands.
 	 */
@@ -728,10 +728,10 @@ void interpret(CHAR_DATA *ch, char *argument)
 	found= false;
 	trust = get_trust(ch);
 
-	for (cmd = 0; cmd_table[cmd].name[0] != '\0'; cmd++)
+	for (cmd = 0; !cmd_table[cmd].name.empty(); cmd++)
 	{
 		if (command[0] == cmd_table[cmd].name[0]
-			&& !str_prefix(command, cmd_table[cmd].name)
+			&& !str_prefix(command, cmd_table[cmd].name.data())
 			&& cmd_table[cmd].level <= trust
 			&& knows_command(ch, cmd))
 		{
@@ -781,8 +781,8 @@ void interpret(CHAR_DATA *ch, char *argument)
 	if (!is_npc(ch)
 		&& (is_affected(ch, gsn_hold_person) || ch->pcdata->energy_state < -4)
 		&& get_trust(ch) < MAX_LEVEL
-		&& str_cmp(cmd_table[cmd].name, "immtalk")
-		&& str_cmp(cmd_table[cmd].name, "astrip"))
+		&& cmd_table[cmd].name != "immtalk"
+		&& cmd_table[cmd].name != "astrip")
 	{
 		send_to_char("You are totally frozen!\n\r", ch);
 		return;
@@ -792,7 +792,7 @@ void interpret(CHAR_DATA *ch, char *argument)
 	{
 		paf = affect_find(ch->affected, gsn_creeping_tomb);
 		
-		if (paf->duration <= 2 && (str_cmp(cmd_table[cmd].name, "astrip")) && (str_cmp(cmd_table[cmd].name, "immtalk")))
+		if (paf->duration <= 2 && (cmd_table[cmd].name != "astrip") && (cmd_table[cmd].name != "immtalk"))
 		{
 			send_to_char("You are entombed in ooze and cannot move.\n\r", ch);
 			return;
@@ -808,29 +808,29 @@ void interpret(CHAR_DATA *ch, char *argument)
 	}
 
 	if (is_affected(ch, gsn_ultradiffusion)
-		&& str_cmp(cmd_table[cmd].name, "visible")
-		&& str_cmp(cmd_table[cmd].name, "score")
-		&& str_cmp(cmd_table[cmd].name, "look")
-		&& str_cmp(cmd_table[cmd].name, "who")
-		&& str_cmp(cmd_table[cmd].name, "where")
-		&& str_cmp(cmd_table[cmd].name, "affects")
-		&& str_cmp(cmd_table[cmd].name, "group")
-		&& str_cmp(cmd_table[cmd].name, "gt")
-		&& str_cmp(cmd_table[cmd].name, "gtell")
-		&& str_cmp(cmd_table[cmd].name, "tell")
-		&& str_cmp(cmd_table[cmd].name, "reply")
-		&& str_cmp(cmd_table[cmd].name, "north")
-		&& str_cmp(cmd_table[cmd].name, "east")
-		&& str_cmp(cmd_table[cmd].name, "south")
-		&& str_cmp(cmd_table[cmd].name, "west")
-		&& str_cmp(cmd_table[cmd].name, "up")
-		&& str_cmp(cmd_table[cmd].name, "down")
-		&& str_cmp(cmd_table[cmd].name, "equipment")
-		&& str_cmp(cmd_table[cmd].name, "skills")
-		&& str_cmp(cmd_table[cmd].name, "save")
-		&& str_cmp(cmd_table[cmd].name, "skills")
-		&& str_cmp(cmd_table[cmd].name, "spells")
-		&& str_cmp(cmd_table[cmd].name, "pray")
+		&& cmd_table[cmd].name != "visible"
+		&& cmd_table[cmd].name != "score"
+		&& cmd_table[cmd].name != "look"
+		&& cmd_table[cmd].name != "who"
+		&& cmd_table[cmd].name != "where"
+		&& cmd_table[cmd].name != "affects"
+		&& cmd_table[cmd].name != "group"
+		&& cmd_table[cmd].name != "gt"
+		&& cmd_table[cmd].name != "gtell"
+		&& cmd_table[cmd].name != "tell"
+		&& cmd_table[cmd].name != "reply"
+		&& cmd_table[cmd].name != "north"
+		&& cmd_table[cmd].name != "east"
+		&& cmd_table[cmd].name != "south"
+		&& cmd_table[cmd].name != "west"
+		&& cmd_table[cmd].name != "up"
+		&& cmd_table[cmd].name != "down"
+		&& cmd_table[cmd].name != "equipment"
+		&& cmd_table[cmd].name != "skills"
+		&& cmd_table[cmd].name != "save"
+		&& cmd_table[cmd].name != "skills"
+		&& cmd_table[cmd].name != "spells"
+		&& cmd_table[cmd].name != "pray"
 		&& !(cmd_table[cmd].level > LEVEL_HERO))
 	{
 		send_to_char("You cannot do that while your molecules are diffused from your body.\n\r", ch);
@@ -847,53 +847,53 @@ void interpret(CHAR_DATA *ch, char *argument)
 	}
 
 	if (is_affected(ch, gsn_bind_feet)
-		&& str_cmp(cmd_table[cmd].name, "score")
-		&& str_cmp(cmd_table[cmd].name, "look")
-		&& str_cmp(cmd_table[cmd].name, "glance")
-		&& str_cmp(cmd_table[cmd].name, "examine")
-		&& str_cmp(cmd_table[cmd].name, "get")
-		&& str_cmp(cmd_table[cmd].name, "wear")
-		&& str_cmp(cmd_table[cmd].name, "remove")
-		&& str_cmp(cmd_table[cmd].name, "wield")
-		&& str_cmp(cmd_table[cmd].name, "zap")
-		&& str_cmp(cmd_table[cmd].name, "recite")
-		&& str_cmp(cmd_table[cmd].name, "brandish")
-		&& str_cmp(cmd_table[cmd].name, "invoke")
-		&& str_cmp(cmd_table[cmd].name, "quaff")
-		&& str_cmp(cmd_table[cmd].name, "eat")
-		&& str_cmp(cmd_table[cmd].name, "drink")
-		&& str_cmp(cmd_table[cmd].name, "say")
-		&& str_cmp(cmd_table[cmd].name, "'")
-		&& str_cmp(cmd_table[cmd].name, "tell")
-		&& str_cmp(cmd_table[cmd].name, "whisper")
-		&& str_cmp(cmd_table[cmd].name, "[")
-		&& str_cmp(cmd_table[cmd].name, ";")
-		&& str_cmp(cmd_table[cmd].name, ",")
-		&& str_cmp(cmd_table[cmd].name, "yell")
-		&& str_cmp(cmd_table[cmd].name, "who")
-		&& str_cmp(cmd_table[cmd].name, "where")
-		&& str_cmp(cmd_table[cmd].name, "chess")
-		&& str_cmp(cmd_table[cmd].name, "affects")
-		&& str_cmp(cmd_table[cmd].name, "group")
-		&& str_cmp(cmd_table[cmd].name, "gt")
-		&& str_cmp(cmd_table[cmd].name, "gtell")
-		&& str_cmp(cmd_table[cmd].name, "reply")
-		&& str_cmp(cmd_table[cmd].name, "immtalk")
-		&& str_cmp(cmd_table[cmd].name, "equipment")
-		&& str_cmp(cmd_table[cmd].name, "save")
-		&& str_cmp(cmd_table[cmd].name, "trustgroup")
-		&& str_cmp(cmd_table[cmd].name, "trustall")
-		&& str_cmp(cmd_table[cmd].name, "trustcabal")
-		&& str_cmp(cmd_table[cmd].name, "skills")
-		&& str_cmp(cmd_table[cmd].name, "spells")
-		&& str_cmp(cmd_table[cmd].name, "supplications")
-		&& str_cmp(cmd_table[cmd].name, "powers")
-		&& str_cmp(cmd_table[cmd].name, "pray")
-		&& str_cmp(cmd_table[cmd].name, "cast")
-		&& str_cmp(cmd_table[cmd].name, "commune")
-		&& str_cmp(cmd_table[cmd].name, "cast")
-		&& str_cmp(cmd_table[cmd].name, "astrip")
-		&& str_cmp(cmd_table[cmd].name, "force")
+		&& cmd_table[cmd].name != "score"
+		&& cmd_table[cmd].name != "look"
+		&& cmd_table[cmd].name != "glance"
+		&& cmd_table[cmd].name != "examine"
+		&& cmd_table[cmd].name != "get"
+		&& cmd_table[cmd].name != "wear"
+		&& cmd_table[cmd].name != "remove"
+		&& cmd_table[cmd].name != "wield"
+		&& cmd_table[cmd].name != "zap"
+		&& cmd_table[cmd].name != "recite"
+		&& cmd_table[cmd].name != "brandish"
+		&& cmd_table[cmd].name != "invoke"
+		&& cmd_table[cmd].name != "quaff"
+		&& cmd_table[cmd].name != "eat"
+		&& cmd_table[cmd].name != "drink"
+		&& cmd_table[cmd].name != "say"
+		&& cmd_table[cmd].name != "'"
+		&& cmd_table[cmd].name != "tell"
+		&& cmd_table[cmd].name != "whisper"
+		&& cmd_table[cmd].name != "["
+		&& cmd_table[cmd].name != ";"
+		&& cmd_table[cmd].name != ","
+		&& cmd_table[cmd].name != "yell"
+		&& cmd_table[cmd].name != "who"
+		&& cmd_table[cmd].name != "where"
+		&& cmd_table[cmd].name != "chess"
+		&& cmd_table[cmd].name != "affects"
+		&& cmd_table[cmd].name != "group"
+		&& cmd_table[cmd].name != "gt"
+		&& cmd_table[cmd].name != "gtell"
+		&& cmd_table[cmd].name != "reply"
+		&& cmd_table[cmd].name != "immtalk"
+		&& cmd_table[cmd].name != "equipment"
+		&& cmd_table[cmd].name != "save"
+		&& cmd_table[cmd].name != "trustgroup"
+		&& cmd_table[cmd].name != "trustall"
+		&& cmd_table[cmd].name != "trustcabal"
+		&& cmd_table[cmd].name != "skills"
+		&& cmd_table[cmd].name != "spells"
+		&& cmd_table[cmd].name != "supplications"
+		&& cmd_table[cmd].name != "powers"
+		&& cmd_table[cmd].name != "pray"
+		&& cmd_table[cmd].name != "cast"
+		&& cmd_table[cmd].name != "commune"
+		&& cmd_table[cmd].name != "cast"
+		&& cmd_table[cmd].name != "astrip"
+		&& cmd_table[cmd].name != "force"
 		&& !is_social)
 	{
 		send_to_char("Your feet are rooted to the ground and you cannot move!\n\r", ch);
@@ -984,16 +984,16 @@ void interpret(CHAR_DATA *ch, char *argument)
 		un_hide(ch, nullptr);
 
 	/* Style checks */
-	if (!is_npc(ch) && get_trust(ch) < 60 && ch->pcdata->style && str_cmp(cmd_table[cmd].skill_name, "none"))
+	if (!is_npc(ch) && get_trust(ch) < 60 && ch->pcdata->style && cmd_table[cmd].skill_name != "none")
 	{
-		if (!str_cmp(cmd_table[cmd].skill_name, "none"))
-			sprintf(skill_name, "%s", cmd_table[cmd].name);
+		if (cmd_table[cmd].skill_name == "none")
+			sprintf(skill_name, "%s", cmd_table[cmd].name.data());
 		else
-			sprintf(skill_name, "%s", cmd_table[cmd].skill_name);
+			sprintf(skill_name, "%s", cmd_table[cmd].skill_name.data());
 
 		if ((skill_num = skill_lookup(skill_name)) > 0)
 		{
-			if (!str_cmp(cmd_table[cmd].skill_name, skill_table[skill_num].name))
+			if (cmd_table[cmd].skill_name == skill_table[skill_num].name)
 			{
 				if ((gn = gn_skill_lookup(skill_num)) > 1)
 				{
@@ -1010,7 +1010,7 @@ void interpret(CHAR_DATA *ch, char *argument)
 	/*
 	 * Dispatch the command.
 	 */
-	if (str_cmp(cmd_table[cmd].skill_name, "none") && (sn = skill_lookup(cmd_table[cmd].skill_name)) > 1)
+	if (cmd_table[cmd].skill_name != "none" && (sn = skill_lookup(cmd_table[cmd].skill_name.data())) > 1)
 	{
 		switch (skill_table[sn].target)
 		{
@@ -1140,10 +1140,10 @@ void interpret_queue(CHAR_DATA *ch, std::string argument)
 
 bool knows_command(CHAR_DATA *ch, int cmd)
 {
-	if (!cmd_table[cmd].skill_name || cmd_table[cmd].skill_name == "none")
+	if (cmd_table[cmd].skill_name.empty() || cmd_table[cmd].skill_name == "none")
 		return true;
 
-	if (get_skill(ch, skill_lookup(cmd_table[cmd].skill_name)) < 2)
+	if (get_skill(ch, skill_lookup(cmd_table[cmd].skill_name.data())) < 2)
 		return false;
 
 	return true;
@@ -1390,11 +1390,11 @@ void do_commands(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 
 	col = 0;
 
-	for (cmd = 0; cmd_table[cmd].name[0] != '\0'; cmd++)
+	for (cmd = 0; !cmd_table[cmd].name.empty(); cmd++)
 	{
 		if (cmd_table[cmd].level < LEVEL_HERO && cmd_table[cmd].level <= get_trust(ch) && cmd_table[cmd].show)
 		{
-			sprintf(buf, "%-12s", cmd_table[cmd].name);
+			sprintf(buf, "%-12s", cmd_table[cmd].name.data());
 			send_to_char(buf, ch);
 
 			if (++col % 6 == 0)
@@ -1423,22 +1423,22 @@ void do_wizhelp(CHAR_DATA *ch, char *argument)
 	if (showlevel && showval > get_trust(ch))
 		return;
 
-	for (cmd = 0; cmd_table[cmd].name[0] != '\0'; cmd++)
+	for (cmd = 0; !cmd_table[cmd].name.empty(); cmd++)
 	{
 		if (((!showlevel && cmd_table[cmd].level >= LEVEL_HERO && cmd_table[cmd].level <= get_trust(ch))
 				|| (showlevel && cmd_table[cmd].level == showval))
 			&& cmd_table[cmd].level == arrangeListLooper)
 		{
-			if (!showlevel && argument[0] != '\0' && str_prefix(argument, cmd_table[cmd].name))
+			if (!showlevel && argument[0] != '\0' && str_prefix(argument, cmd_table[cmd].name.data()))
 				continue;
 
-			sprintf(buf, "(%i)%-18s  ", cmd_table[cmd].level, cmd_table[cmd].name);
+			sprintf(buf, "(%i)%-18s  ", cmd_table[cmd].level, cmd_table[cmd].name.data());
 			send_to_char(buf, ch);
 
 			if (++col % 5 == 0)
 				send_to_char("\n\r", ch);
 
-			if (cmd_table[cmd + 1].name[0] == '\0' && arrangeListLooper < MAX_LEVEL)
+			if (cmd_table[cmd + 1].name.empty() && arrangeListLooper < MAX_LEVEL)
 			{
 				arrangeListLooper++;
 				cmd = 0;

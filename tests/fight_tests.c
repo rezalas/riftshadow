@@ -291,9 +291,9 @@ SCENARIO("a reference to a freed opponent reads as nothing", "[stop_fighting]")
 }
 static bool CommandExists(const char *name)
 {
-	for (auto cmd = 0; cmd_table[cmd].name[0] != '\0'; cmd++)
+	for (auto cmd = 0; !cmd_table[cmd].name.empty(); cmd++)
 	{
-		if (!str_cmp(cmd_table[cmd].name, name))
+		if (cmd_table[cmd].name == name)
 			return true;
 	}
 

@@ -2,6 +2,7 @@
 #define PROF_H
 
 #include <time.h>
+#include <string_view>
 #include <vector>
 #include <algorithm>
 
@@ -42,9 +43,9 @@ struct proficiency_msg
 
 struct prof_cmd_type
 {
-	char *name;
+	std::string_view name;
 	DO_FUN *cmd;
-	char *prerequisite;
+	std::string_view prerequisite;
 };
 
 

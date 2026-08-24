@@ -7765,7 +7765,7 @@ void do_interpdump([[maybe_unused]] CHAR_DATA *ch, [[maybe_unused]] char *argume
 		if (cmd_table[i].hide == 1)
 			bit += 1;
 
-		fprintf(fp, ";%s;0;do_%s;%d;%d;%d;\n", cmd_table[i].name, cmd_table[i].name, cmd_table[i].level, cmd_table[i].log, bit);
+		fprintf(fp, ";%s;0;do_%s;%d;%d;%d;\n", cmd_table[i].name.data(), cmd_table[i].name.data(), cmd_table[i].level, cmd_table[i].log, bit);
 	}
 	fclose(fp);
 

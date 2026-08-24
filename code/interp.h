@@ -37,6 +37,7 @@
 #define INTERP_H
 
 #include <string>
+#include <string_view>
 
 #include "entity/fwd.h"
 
@@ -58,14 +59,14 @@
  */
 struct cmd_type
 {
-	char * const name;
+	std::string_view name;
 	DO_FUN *do_fun;
 	short position;
 	short level;
 	short log;
 	short show;
 	short hide;
-	char * const skill_name;
+	std::string_view skill_name;
 };
 
 /* the command table itself */

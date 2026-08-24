@@ -794,7 +794,7 @@ bool CProficiencies::InterpCommand(char *command, char *argument)
 		if (foundPos == std::string::npos)
 			continue;
 		
-		auto pindex = ProfIndexLookup(cmd.prerequisite);
+		auto pindex = ProfIndexLookup(cmd.prerequisite.data());
 		if (cmd.prerequisite == "none" || pindex == -1 || ch->Profs()->HasProf(pindex))
 		{
 			(cmd.cmd) (ch, argument);

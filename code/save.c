@@ -794,7 +794,7 @@ void fwrite_obj(CHAR_DATA *ch, OBJ_DATA *obj, FILE *fp, int iNest)
 	if (str_cmp(obj->description, obj->pIndexData->description))
 		fprintf(fp, "Desc %s~\n", obj->description);
 
-	if (obj->owner != "")
+	if (obj->owner != nullptr)
 		fprintf(fp, "Owner %s~\n", obj->owner);
 
 	if (!vector_equal(obj->extra_flags, obj->pIndexData->extra_flags))
@@ -2091,6 +2091,12 @@ void fread_obj(CHAR_DATA *ch, FILE *fp)
 		obj->name = palloc_string("");
 		obj->short_descr = palloc_string("");
 		obj->description = palloc_string("");
+		// create_object gives every object this sentinel, but this fallback runs
+		// when the prototype is gone or the entry is old-style, and it used to
+		// leave owner null. Readers spell the no-owner case "none" (act_obj.c
+		// is_restricted), and str_cmp reports null as differing, so a null owner
+		// reads as owned by someone else.
+		obj->owner = palloc_string("none");
 	}
 
 	fNest = false;
