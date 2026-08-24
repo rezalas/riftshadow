@@ -1361,7 +1361,7 @@ void do_finger(CHAR_DATA *ch, char *argument)
 		sprintf(buf2, "  Align: %-16s Ethos: %-20s Sex:  %s\n\r",
 			align < 0 ? "evil" : align == 0 ? "neutral" : align > 0 ? "good" : "(none)",
 			ethos < 0 ? "chaotic" : ethos == 0 ? "neutral" : ethos > 0 ? "lawful" : "(none)",
-			pc_race_table[race].name);
+			sex);
 		send_to_char(buf2, ch);
 
 		sprintf(buf3, "%d (b%d)", time_info.year - born, born);

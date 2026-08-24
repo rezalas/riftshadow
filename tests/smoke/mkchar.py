@@ -221,9 +221,53 @@ def main():
     print(">>> who lists a class tag (%s)" % tag.group(1))
 
     cast_a_spell(s)
+    outfit_a_character(s)
 
     s.sock.close()
     return 0
+
+
+def outfit_a_character(s):
+    """Check the starting kit do_outfit produced during creation.
+
+    nanny calls do_outfit once, and do_outfit then affects the character for 80
+    ticks, so this cannot run the command itself -- it asserts the result of the
+    call creation already made. That is still the only coverage do_outfit has.
+
+    It walks the equipment list because that is the only way to tell a piece
+    that was created from one that was skipped: do_outfit prints nothing per
+    slot, and a vnum that resolved to nothing would take the server down on the
+    next create_object rather than report anything.
+
+    The shield is listed deliberately. It does not come from the per-slot vnums
+    the other five use -- it comes from the OBJ_VNUM_SCHOOL_SHIELD block, which
+    is gated on not wielding a two-hander and on having no light, so it is the
+    one piece here whose absence would look like a normal outcome.
+    """
+    s.send("equipment")
+    reply = s.recv(2.0)
+
+    if "You are using:" not in reply:
+        s.fail("'equipment' produced no equipment list")
+
+    # do_equipment skips empty slots entirely, so a slot label is present only
+    # when something is worn there. These are the labels, not the slot names:
+    # WEAR_BODY renders as "torso", and "<worn on body>" is a different slot
+    # (WEAR_ABOUT) that outfit does not fill.
+    labels = {
+        "body": "<worn on torso>",
+        "legs": "<worn on legs>",
+        "feet": "<worn on feet>",
+        "hands": "<worn on hands>",
+        "arms": "<worn on arms>",
+        "shield": "<worn as shield>",
+    }
+    missing = [slot for slot, label in labels.items() if label not in reply]
+
+    if missing:
+        s.fail("outfit did not fill: %s" % ", ".join(sorted(missing)))
+
+    print(">>> outfit: all six slots worn, shield included")
 
 
 def cast_a_spell(s):

@@ -537,7 +537,7 @@ void do_induct(CHAR_DATA *ch, char *argument)
 void do_outfit(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	OBJ_DATA *obj;
-	int i, body, arms, legs, hands, feet, shield, sn, vnum;
+	int i, body, arms, legs, hands, feet, sn, vnum;
 	AFFECT_DATA af;
 
 	if (is_affected(ch, skill_lookup("outfit")))
@@ -562,7 +562,6 @@ void do_outfit(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 		legs = 24574;
 		hands = 24576;
 		feet = 24578;
-		shield = 24580;
 	}
 	else
 	{
@@ -571,7 +570,6 @@ void do_outfit(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 		legs = 24575;
 		hands = 24577;
 		feet = 24579;
-		shield = 24580;
 	}
 
 	obj = get_eq_char(ch, WEAR_BODY);
@@ -651,6 +649,7 @@ void do_outfit(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 		obj_to_char(obj, ch);
 		wear_obj(ch, obj, false);
 	}
+
 
 	/*
 	obj = get_eq_char(ch, WEAR_ABOUT);
@@ -4209,10 +4208,10 @@ void do_advance(CHAR_DATA *ch, char *argument)
 	 *   Currently, an imp can lower another imp.
 	 *   -- Swiftest
 	 */
+	int temp_prac = -1;
+
 	if (level <= victim->level)
 	{
-		int temp_prac;
-
 		send_to_char("Lowering a player's level!\n\r", ch);
 		send_to_char("**** OOOOHHHHHHHHHH  NNNNOOOO ****\n\r", victim);
 		temp_prac = victim->practice;
@@ -4242,6 +4241,12 @@ void do_advance(CHAR_DATA *ch, char *argument)
 		victim->level += 1;
 		advance_level(victim, false);
 	}
+
+	// Only the lowering branch zeroes practices, and each advance_level above
+	// grants a fresh allowance on the way back up. Restoring the saved count
+	// puts the player back where they were instead of paying them again.
+	if (temp_prac >= 0)
+		victim->practice = temp_prac;
 
 	sprintf(buf, "You are now level %d.\n\r", victim->level);
 	send_to_char(buf, victim);

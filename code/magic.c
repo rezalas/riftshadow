@@ -3200,6 +3200,16 @@ void spell_holy_word(int sn, int level, CHAR_DATA *ch, [[maybe_unused]] SpellTar
 	else
 		wrath_num = skill_lookup("dark wrath");
 
+	// TODO: sanc_num is looked up alongside the other three and is the only one
+	// this spell never applies. Allies below receive frenzy and bless, so the
+	// obvious reading is that sanctuary was meant to join them. That is a buff
+	// to an area effect rather than a repair. Sanctuary halves incoming damage
+	// and holy_word applies to every aligned character in the room, so adding
+	// it changes group combat rather than fixing a broken case. Nothing here
+	// records what was intended. There is no comment and no commented out call,
+	// only the unused lookup, which is weaker evidence than the rest of this
+	// file offers elsewhere. This needs a balance decision before the call is
+	// added.
 	sanc_num = skill_lookup("sanctuary");
 	bless_num = skill_lookup("bless");
 	curse_num = skill_lookup("curse");

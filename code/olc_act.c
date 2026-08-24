@@ -3201,13 +3201,36 @@ bool redit_mana(CHAR_DATA *ch, char *argument)
 	return false;
 }
 
-bool redit_clan(CHAR_DATA *ch, [[maybe_unused]] char *argument)
+bool redit_clan(CHAR_DATA *ch, char *argument)
 {
 	ROOM_INDEX_DATA *pRoom;
+	char buf[MAX_STRING_LENGTH];
 
 	EDIT_ROOM(ch, pRoom);
 
-	send_to_char("Clan set.\n\r", ch);
+	if (argument[0] == '\0')
+	{
+		send_to_char("Syntax:  clan (name)\n\r", ch);
+		send_to_char("         clan none\n\r", ch);
+		return false;
+	}
+
+	// cabal_lookup returns 0 for anything it does not recognize, and 0 is also
+	// the "none" cabal, so an unknown name would otherwise clear the room
+	// silently instead of reporting a typo.
+	int cabal = cabal_lookup(argument);
+
+	if (cabal == 0 && str_cmp(argument, cabal_table[0].name))
+	{
+		sprintf(buf, "There is no '%s' cabal.\n\r", argument);
+		send_to_char(buf, ch);
+		return false;
+	}
+
+	pRoom->cabal = cabal;
+
+	sprintf(buf, "Clan set to %s.\n\r", cabal_table[cabal].name);
+	send_to_char(buf, ch);
 	return true;
 }
 

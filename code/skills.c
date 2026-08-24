@@ -202,6 +202,7 @@ void do_spells(CHAR_DATA *ch, char *argument)
 			break;
 
 		if ((level = skill_table[sn].skill_level[ch->Class()->GetIndex()]) < LEVEL_HERO + 1
+			&& (fAll || level <= ch->level)
 			&& level >= min_lev
 			&& level <= max_lev
 			&& skill_table[sn].spell_fun != spell_null
@@ -367,6 +368,7 @@ void do_skills(CHAR_DATA *ch, char *argument)
 			&&  ch->pcdata->learned[sn] > 0)
 		*/
 		if ((level = skill_table[sn].skill_level[ch->Class()->GetIndex()]) < LEVEL_HERO + 1
+			&& (fAll || level <= ch->level)
 			&& level >= min_lev
 			&& level <= max_lev
 			&& skill_table[sn].spell_fun == spell_null

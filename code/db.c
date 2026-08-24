@@ -499,6 +499,15 @@ void new_load_area(FILE *fp)
 				SKEY("Credits", pArea->credits)
 				break;
 		}
+
+		// Every KEY/SKEY above ends by setting fMatch, and nothing used to read
+		// it: an unrecognized key was skipped silently and its value stayed in
+		// the stream to be read as the next key.
+		if (!fMatch)
+		{
+			RS.Logger.Warn("New_load_area: unknown key [{}] in {}.", word, strArea);
+			fread_to_eol(fp);
+		}
 	}
 }
 
@@ -1290,15 +1299,10 @@ void reset_room(ROOM_INDEX_DATA *pRoom)
 				}
 				else /* ROM OLC else version */
 				{
-					int limit;
-
-					if (pReset->arg2 > 50) /* old format */
-						limit = 6;
-					else if (pReset->arg2 == -1 || pReset->arg2 == 0) /* no limit */
-						limit = 999;
-					else
-						limit = pReset->arg2;
-
+					// This branch used to derive a per-reset cap from arg2. Both
+					// 'G' and 'E' set arg2 to 0 when they load and save_resets
+					// never writes it, so the cap could only ever come out as
+					// the "no limit" value. Only limtotal actually bounds these.
 					if (pObjIndex->limcount >= pObjIndex->limtotal && pObjIndex->limtotal > 0)
 					{
 						break;

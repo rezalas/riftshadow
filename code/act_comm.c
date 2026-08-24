@@ -112,8 +112,12 @@ void do_delete(CHAR_DATA *ch, char *argument)
 			do_quit_new(ch, "", true);
 
 			auto cname = palloc_string(ch->true_name);
+
+			// Archiving the pfile into dead_char is what makes a name refuse to
+			// be reused, so only a character with real time behind it retires
+			// its name. Anything shorter frees the name for someone else.
 			auto save_pfile = ((ch->played + (current_time - ch->logon)) / 3600) >= 15;
-			delete_char(cname, true); // >= 15 hours. Make name unusable.
+			delete_char(cname, save_pfile);
 
 			free_pstring(cname);
 			return;
