@@ -916,6 +916,14 @@ void bust_a_prompt(CHAR_DATA *ch)
 					sprintf(buf2, " (%s - %s)", olc_ed_name(ch), olc_ed_vnum(ch));
 					i = buf2;
 				}
+				else
+				{
+					// Every other code assigns i on every path. Leaving it alone here
+					// meant %o substituted whatever the previous code had produced, or
+					// dereferenced null when it was the first code in the prompt.
+					i = "";
+				}
+
 				break;
 			case 't':
 				sprintf(buf2, "%d%s %s",

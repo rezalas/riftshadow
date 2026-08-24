@@ -4535,6 +4535,11 @@ void parse_bar(char *buf, size_t size, const char *str, CHAR_DATA *ch, CHAR_DATA
 				i = buf2;
 				break;
 			default:
+				// An unknown code substitutes nothing. Leaving i alone meant it
+				// substituted the previous code's text instead, or dereferenced null
+				// when it was the first code in the message. The message comes from
+				// area data, so any typo in a barred entry reaches this.
+				i = "";
 				break;
 		}
 
