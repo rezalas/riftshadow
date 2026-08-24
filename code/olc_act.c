@@ -648,8 +648,6 @@ bool medit_vnum(CHAR_DATA *ch, char *argument)
 	if (pMob == nullptr)
 		return false;
 
-	return false;
-
 	if (!*argument || !is_number(argument))
 	{
 		send_to_char("Syntax: vnum <vnum>\n\r", ch);
@@ -658,19 +656,59 @@ bool medit_vnum(CHAR_DATA *ch, char *argument)
 
 	vnum = atoi(argument);
 
-	if (vnum >= ch->in_room->area->min_vnum && vnum <= ch->in_room->area->max_vnum)
-	{
-		pMob->vnum = vnum;
-		send_to_char("Vnum set.\n\r", ch);
-		return true;
-	}
-	else
+	if (vnum < ch->in_room->area->min_vnum || vnum > ch->in_room->area->max_vnum)
 	{
 		send_to_char("That vnum is not within the area range.\n\r", ch);
 		return false;
 	}
 
-	return false;
+	if (vnum == pMob->vnum)
+	{
+		send_to_char("That is already this mobile's vnum.\n\r", ch);
+		return false;
+	}
+
+	if (get_mob_index(vnum) != nullptr)
+	{
+		send_to_char("That vnum is already in use.\n\r", ch);
+		return false;
+	}
+
+	// The hash bucket is chosen by vnum, so assigning the new number in place
+	// would strand the prototype in the old bucket where get_mob_index cannot
+	// find it under either number. Unlink from the old bucket, renumber, then
+	// link into the new one.
+	int iHash = pMob->vnum % MAX_KEY_HASH;
+
+	if (mob_index_hash[iHash] == pMob)
+	{
+		mob_index_hash[iHash] = pMob->next;
+	}
+	else
+	{
+		MOB_INDEX_DATA *prev = mob_index_hash[iHash];
+
+		while (prev != nullptr && prev->next != pMob)
+			prev = prev->next;
+
+		if (prev == nullptr)
+		{
+			send_to_char("That mobile is not in the index. Vnum unchanged.\n\r", ch);
+			return false;
+		}
+
+		prev->next = pMob->next;
+	}
+
+	pMob->vnum = vnum;
+
+	iHash = vnum % MAX_KEY_HASH;
+	pMob->next = mob_index_hash[iHash];
+	mob_index_hash[iHash] = pMob;
+
+	send_to_char("Vnum set.\n\r", ch);
+	send_to_char("Resets referring to the old vnum are NOT updated. Check them before saving.\n\r", ch);
+	return true;
 }
 
 bool medit_group(CHAR_DATA *ch, char *argument)
