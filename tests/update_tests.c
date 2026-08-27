@@ -4,6 +4,9 @@
 #include "../code/update.h"
 #include "../code/direction.h"
 #include "../code/weather_enums.h"
+#include "../code/magic.h"
+#include "../code/const.h"
+#include "world_fixture.h"
 
 SCENARIO("checking if lunar cycles advance with the right values","[LunarCycle_update]")
 {
@@ -255,3 +258,100 @@ SCENARIO("checking that get_age_name_new provides the right age names", "[get_ag
 	}
 }
 
+
+
+//
+// The paladin commune renewal on the expiry tick, and who it asks about trust.
+//
+// A commune that reaches duration zero normally expires. A paladin's channeling
+// can renew it instead, on their own affects and on those they placed on
+// somebody else, and the second case is meant to require that the paladin
+// trusts the character carrying it. The condition read
+// `(A || (B && C)) && D` while its indentation claimed `((A || B) && C) && D`,
+// so C, the trust check, sat inside the branch for an affect with no owner. An
+// affect with an owner is the common case, and it renewed without ever asking.
+//
+// The renewal is a percentage roll, so the trusted case is run until it fires.
+// It is also the control for the untrusted case: "the commune was not renewed"
+// means nothing unless renewal is reachable at all.
+//
+
+static bool CommuneRenewedOnExpiry(bool trusted, int attempts)
+{
+	TestWorld::WireSkillNumbers();
+
+	int sn = skill_lookup("detect evil");
+	REQUIRE(sn > 0);
+	// The renewal is refused outright for anything a cleanse could strip, so
+	// this test would be measuring the wrong branch with such a skill.
+	REQUIRE(!(skill_table[sn].dispel & CAN_CLEANSE));
+
+	for (int attempt = 0; attempt < attempts; attempt++)
+	{
+		TestWorld world;
+		auto room = world.CreateRoom();
+		auto paladin = world.CreatePlayer("Paladin", room, CLASS_PALADIN);
+		auto believer = world.CreatePlayer("Believer", room);
+
+		// Channeling opens to paladins above level 50, so a level 50 paladin
+		// has none of it and nothing would ever be renewed.
+		paladin->level = 60;
+		paladin->pcdata->learned[gsn_channeling] = 100;
+
+		if (trusted)
+			paladin->pcdata->trusting = believer->self;
+
+		AFFECT_DATA af;
+		init_affect(&af);
+		af.where = TO_AFFECTS;
+		af.aftype = AFT_COMMUNE;
+		af.type = sn;
+		af.level = 50;
+		af.duration = 20;
+		af.owner = paladin->self;
+
+		affect_to_char(believer, &af);
+
+		// affect_to_char records the duration it was given as the one a renewal
+		// restores, so the affect is aged to its last tick afterwards rather
+		// than added at zero.
+		AFFECT_DATA *live = affect_find(believer->affected, sn);
+		REQUIRE(live != nullptr);
+		live->duration = 0;
+
+		world.LinkToCharList(paladin);
+		world.LinkToCharList(believer);
+
+		char_update();
+
+		if (is_affected(believer, sn))
+			return true;
+	}
+
+	return false;
+}
+
+SCENARIO("a paladin's commune is only renewed for somebody they trust", "[char_update]")
+{
+	GIVEN("a commune placed on a character the paladin trusts")
+	{
+		WHEN("it reaches its last tick")
+		{
+			THEN("channeling renews it")
+			{
+				REQUIRE(CommuneRenewedOnExpiry(true, 60));
+			}
+		}
+	}
+
+	GIVEN("a commune placed on a character the paladin does not trust")
+	{
+		WHEN("it reaches its last tick")
+		{
+			THEN("it expires like any other affect")
+			{
+				REQUIRE_FALSE(CommuneRenewedOnExpiry(false, 60));
+			}
+		}
+	}
+}

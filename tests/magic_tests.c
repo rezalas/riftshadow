@@ -8,6 +8,7 @@
 #include "../code/handler.h"
 #include "../code/characterClasses/sorcerer.h"
 #include "../code/entity/room_index_data.h"
+#include "world_fixture.h"
 
 char* substr(char* arr, int begin, int len = 0)
 {	
@@ -142,5 +143,87 @@ SCENARIO("a conflagration pulses in a room with no exits", "[conflagration_pulse
 		}
 
 		delete room;
+	}
+}
+
+
+//
+// rust, and the worn slots it was silently skipping.
+//
+// The spell picks a penalty from the slot the piece is worn in. Two of the
+// slot groups fell through to the default label, which is a `continue`, so the
+// arms, hands, feet, legs, about and body groups were skipped entirely: no
+// affect on the item and neither of the two messages. Only the finger, neck,
+// wrist, waist and head groups ever rusted.
+//
+// Both the save and the per-item roll are random, so the cast is repeated until
+// it lands. The reachable slot is the control: it says the loop is capable of
+// rusting something at all, which is what makes "the body piece was rusted"
+// worth reading.
+//
+
+static bool RustReachesSlot(int wearLoc, int attempts)
+{
+	TestWorld::WireSkillNumbers();
+
+	for (int attempt = 0; attempt < attempts; attempt++)
+	{
+		TestWorld world;
+		auto room = world.CreateRoom();
+		auto caster = world.CreatePlayer("Caster", room);
+		auto victim = world.CreatePlayer("Victim", room);
+		auto armour = world.CreateItem("hauberk", "an iron hauberk");
+
+		armour->material = (char *)"iron";
+		obj_to_char(armour, victim);
+		armour->wear_loc = wearLoc;
+
+		TestWorld::ClearOutput(caster);
+		TestWorld::ClearOutput(victim);
+
+		spell_rust(gsn_rust, 50, caster, victim, CastMode::Spell);
+
+		if (armour->affected.empty())
+			continue;
+
+		// Both messages, because the missing break suppressed the affect and
+		// the messages together, and a fix that restored only the affect would
+		// still leave both sides of the cast with nothing to see.
+		REQUIRE(TestWorld::Heard(victim, "covered with a thick patina of rust"));
+		REQUIRE(TestWorld::Heard(caster, "covered with a thick patina of rust"));
+
+		// The penalty is what the slot selects, and it is the value the
+		// fall-through skipped past.
+		REQUIRE(armour->affected.front().location == APPLY_DEX);
+		REQUIRE(armour->affected.front().modifier == (wearLoc == WEAR_BODY ? -4 : -2));
+
+		return true;
+	}
+
+	return false;
+}
+
+SCENARIO("rust reaches every armour slot it names", "[spell_rust]")
+{
+	GIVEN("a victim wearing a metal helmet, a slot that always rusted")
+	{
+		WHEN("rust is cast until it takes hold")
+		{
+			THEN("the helmet rusts")
+			{
+				REQUIRE(RustReachesSlot(WEAR_HEAD, 200));
+			}
+		}
+	}
+
+	GIVEN("a victim wearing metal body armour")
+	{
+		WHEN("rust is cast until it takes hold")
+		{
+			THEN("the body armour rusts as well")
+			{
+				REQUIRE(RustReachesSlot(WEAR_BODY, 200));
+			}
+		}
 	}
 }

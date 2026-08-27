@@ -13,6 +13,7 @@
 #include "../code/db.h"
 #include "../code/recycle.h"
 #include "../code/pstring.h"
+#include "world_fixture.h"
 
 // TEST_CASE("Test capitalization", "[string]" )
 // {
@@ -2824,5 +2825,91 @@ SCENARIO("a connection that stops snooping leaves its target alone", "[snoop]")
 
 		free_descriptor(snooper);
 		free_descriptor(watched);
+	}
+}
+
+//
+// equip_char's rejection path and who it applies to.
+//
+// The alignment and ethos restrictions on a piece of equipment are a player
+// rule. A mob wearing what its area file gave it is not making a moral choice,
+// and the sixteen-odd resets that hand an aligned item to a mob depend on that.
+// The guard that says so used to bind only the first of the seven checks after
+// it, so every check but ANTI_EVIL applied to mobs as well, and the item was
+// dropped on the floor of the room the mob was reset into.
+//
+// Written against the fixture rather than by hand because the rejection path
+// fires two act() calls and an obj_to_room before it returns. Asserting that it
+// did not fire needs the room the object would have been dropped into and a
+// watcher who would have been told about it.
+//
+
+SCENARIO("an aligned item does not reject the mob wearing it", "[equip_char]")
+{
+	GIVEN("a good mob holding an item that rejects the good")
+	{
+		TestWorld world;
+		auto room = world.CreateRoom();
+		auto mob = world.CreateMob("guard", room);
+		auto watcher = world.CreatePlayer("Watcher", room);
+		auto obj = world.CreateItem("blade", "a dark blade");
+
+		mob->alignment = 1000;
+		SET_BIT(obj->extra_flags, ITEM_ANTI_GOOD);
+		obj_to_char(obj, mob);
+
+		REQUIRE(Deref(obj->carried_by) == mob);
+
+		WHEN("the mob is equipped with it")
+		{
+			TestWorld::ClearOutput(watcher);
+			equip_char(mob, obj, WEAR_WIELD, false);
+
+			THEN("it wears the item instead of dropping it")
+			{
+				REQUIRE(obj->wear_loc == WEAR_WIELD);
+				REQUIRE(Deref(obj->carried_by) == mob);
+				REQUIRE(obj->in_room == nullptr);
+				REQUIRE(room->contents == nullptr);
+			}
+
+			THEN("nobody in the room is told it was dropped")
+			{
+				REQUIRE_FALSE(TestWorld::Heard(watcher, "drops"));
+			}
+		}
+	}
+
+	GIVEN("a good player holding the same item")
+	{
+		TestWorld world;
+		auto room = world.CreateRoom();
+		auto player = world.CreatePlayer("Pilgrim", room);
+		auto watcher = world.CreatePlayer("Watcher", room);
+		auto obj = world.CreateItem("blade", "a dark blade");
+
+		player->alignment = 1000;
+		SET_BIT(obj->extra_flags, ITEM_ANTI_GOOD);
+		obj_to_char(obj, player);
+
+		WHEN("the player is equipped with it")
+		{
+			TestWorld::ClearOutput(player);
+			TestWorld::ClearOutput(watcher);
+			equip_char(player, obj, WEAR_WIELD, false);
+
+			THEN("the item rejects them and lands in the room")
+			{
+				REQUIRE(obj->wear_loc == WEAR_NONE);
+				REQUIRE(obj->in_room == room);
+				REQUIRE(Deref(obj->carried_by) == nullptr);
+			}
+
+			THEN("both messages are sent")
+			{
+				REQUIRE(TestWorld::Heard(player, "rejects you"));
+				REQUIRE(TestWorld::Heard(watcher, "drops"));
+			}
+		}
 	}
 }

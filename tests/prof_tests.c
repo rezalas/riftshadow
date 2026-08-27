@@ -4,7 +4,7 @@
 #include "../code/handler.h"
 #include "../code/mud.h"
 #include "../code/macros.h"  // after mud.h -> rift.h: URANGE macro must not shadow rift.h's inline
-#include "test_helpers.c"
+#include "world_fixture.h"
 
 SCENARIO("performing an index lookup based on proficiency name", "[ProfIndexLookup]")
 {
@@ -1489,34 +1489,34 @@ SCENARIO("Attempt to track a character", "[prof_tracking]")
 			TestHelperCleanupPlayerObject(player2);
 		}
 
+		// The one message in this proficiency that leaves through act() rather
+		// than send_to_char, which is why this case sat unasserted. act() walks
+		// the room's people list and substitutes $N through pers(), so it needs
+		// a character standing in a room rather than one holding a descriptor,
+		// which is what the fixture builds.
 		WHEN("the player tries tracking another player but there are no tracks")
 		{
-			auto player = new char_data();
-			TestHelperSetupPlayerBuffer(player);
+			TestWorld world;
+			auto room = world.CreateRoom();
+			room->light = 5;
+			room->sector_type = SECT_SNOW;
+
+			auto player = world.CreatePlayer("player1", room);
+			auto elsewhere = world.CreateRoom("room2");
+			auto player2 = world.CreatePlayer("player2", elsewhere);
 
 			player->Profs()->SetChar(player);
 			player->Profs()->SetProf(12, 1);
-			player->in_room->light = 5;
-			player->in_room->sector_type = SECT_SNOW;
-
-			auto player2 = new char_data();
-			TestHelperSetupPlayerBuffer(player2, "player2", "room2");
-
-			player2->long_descr = player2->name;
-			player->in_room->people = player;
 
 			THEN("it should display a message notifying the player")
 			{
-				TestHelperLinkToCharList(player2);
+				world.LinkToCharList(player2);
+				TestWorld::ClearOutput(player);
+
 				player->Profs()->InterpCommand("track", "player2");
 
-				//auto result = !str_cmp(Deref(player->desc)->outbuf,"\n\rYou were unable to find any sign of player2 here.\n\r");
-				// TODO: find out how act() writes to buffer
-				REQUIRE(1 == 1);
+				REQUIRE(TestWorld::Heard(player, "You were unable to find any sign of player2 here."));
 			}
-
-			TestHelperCleanupPlayerObject(player);
-			TestHelperCleanupPlayerObject(player2);
 		}
 
 		WHEN("the player tries tracking another player who left tracks")

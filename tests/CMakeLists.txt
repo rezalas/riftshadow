@@ -43,9 +43,8 @@ set(TEST_SRC_FILES act_obj_tests.c
 	standalone_tests.c
 	update_tests.c
 )
-# test_helpers.c is intentionally excluded since
-# it has zero test cases and is a helper file only.
-# if needed, then include it like a header file.
+# world_fixture.h is a header, so it is not listed above. It is included by the
+# tests that need a loaded world, and it holds what test_helpers.c used to.
 
 ##
 ## CREATE TEST TARGETS

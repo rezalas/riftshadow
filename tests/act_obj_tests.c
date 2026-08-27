@@ -7,6 +7,8 @@
 #include "../code/lookup.h"
 #include "../code/tables.h"
 #include "../code/db.h"
+#include "../code/iprog.h"
+#include "world_fixture.h"
 //#include "../code/bootup.h"
 
 
@@ -64,6 +66,10 @@ void TestHelperLoadCClass()
 	auto cclass = new CClass();
 	cclass->name = "ANTI_PALADIN";
 	cclass->index = 5;
+	// CClass has a user-provided constructor that initializes nothing, so the
+	// terminator has to be written here. Without it GetClass walks off the end
+	// of this one-element list for any index but this one.
+	cclass->next = nullptr;
 	CClass::first = cclass;
 }
 
@@ -390,3 +396,60 @@ SCENARIO("testing selling to merchants", "[do_sell]")
 //         }
 //     }
 // }
+
+//
+// give, and the object program that gets a say in it.
+//
+// An object can carry a give_prog, and the prog's return value is the whole
+// protocol between it and do_give: true means the prog handled the handover
+// itself and do_give must not repeat it, false means it declined and the normal
+// transfer should happen. The call site used to end in a stray semicolon, so
+// the return that belonged to the true branch ran every time and no object with
+// a give_prog was ever transferred by give.
+//
+// give_prog_cabal_item is the real prog rather than a stand-in, because the
+// case that matters is the one it declines: a receiver who is not a cabal
+// guard. That is the branch that returns false, which is the branch the defect
+// swallowed.
+//
+
+SCENARIO("giving an object that carries a give program", "[do_give]")
+{
+	GIVEN("a player holding an object whose give program declines")
+	{
+		TestWorld world;
+		auto room = world.CreateRoom();
+		auto giver = world.CreatePlayer("Giver", room);
+		auto taker = world.CreatePlayer("Taker", room);
+		auto obj = world.CreateItem("bauble", "a plain bauble");
+
+		obj->pIndexData->iprogs = new iprog_data();
+		obj->pIndexData->iprogs->give_prog = give_prog_cabal_item;
+		SET_BIT(obj->progtypes, IPROG_GIVE);
+
+		obj_to_char(obj, giver);
+
+		REQUIRE(Deref(obj->carried_by) == giver);
+
+		WHEN("the object is given away")
+		{
+			TestWorld::ClearOutput(taker);
+			do_give(giver, (char *)"bauble Taker");
+
+			THEN("the prog declines and give completes the handover itself")
+			{
+				REQUIRE(Deref(obj->carried_by) == taker);
+				REQUIRE(taker->carrying == obj);
+				REQUIRE(giver->carrying == nullptr);
+			}
+
+			THEN("the receiver is told about it")
+			{
+				REQUIRE(TestWorld::Heard(taker, "gives you a plain bauble"));
+			}
+		}
+
+		delete obj->pIndexData->iprogs;
+		obj->pIndexData->iprogs = nullptr;
+	}
+}

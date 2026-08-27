@@ -7,6 +7,7 @@
 #include "../code/db.h"
 #include "../code/recycle.h"
 #include "../code/interp.h"
+#include "world_fixture.h"
 
 SCENARIO("testing updating victim position", "[update_pos]")
 {
@@ -333,6 +334,129 @@ SCENARIO("the command names exempted by movement and silence affects", "[interp]
 				REQUIRE_FALSE(CommandExists("gt"));
 				REQUIRE_FALSE(CommandExists("examine"));
 				REQUIRE_FALSE(CommandExists("trustall"));
+			}
+		}
+	}
+}
+
+//
+// headbutt's knockout and the two immunities that block it.
+//
+// The knockout puts an AFF_SLEEP on the victim, so IMM_BASH and IMM_SLEEP both
+// have to stop it. The test they were behind read
+// `IS_SET(imm, IMM_BASH && !IS_SET(imm, IMM_SLEEP))`, and the inner expression
+// is a boolean, so what reached IS_SET as a bit position was 0 or 1. Bit 0 is
+// IMM_SUMMON, which has nothing to do with being knocked out, and neither
+// IMM_BASH (4) nor IMM_SLEEP (26) was ever consulted.
+//
+// The knockout is a three percent roll, so each case runs the attack until it
+// either fires or the attempts run out. The victim who is immune to nothing is
+// the control: without it, "the immune victim was never knocked out" would pass
+// just as well on a build where nobody is ever knocked out at all.
+//
+
+static bool HeadbuttEverKnocksOut(CHAR_DATA *ch, CHAR_DATA *victim, int attempts)
+{
+	for (int attempt = 0; attempt < attempts; attempt++)
+	{
+		ch->hit = ch->max_hit;
+		victim->hit = victim->max_hit;
+		victim->position = POS_FIGHTING;
+		ch->position = POS_FIGHTING;
+		ch->fighting = victim->self;
+
+		do_headbutt(ch, (char *)"");
+
+		// Both halves of the knockout, because they are guarded separately.
+		// affect_to_char refuses an AFF_SLEEP affect from anybody immune to
+		// sleep, so the affect alone would report the immunity check that runs
+		// after this one. The position is set by this branch and nothing else.
+		if (is_affected(victim, gsn_headbutt) || victim->position == POS_SLEEPING)
+			return true;
+	}
+
+	return false;
+}
+
+SCENARIO("a headbutt knockout is blocked by the immunities that cover it", "[do_headbutt]")
+{
+	TestWorld::WireSkillNumbers();
+
+	GIVEN("a fighter headbutting somebody who is immune to nothing")
+	{
+		TestWorld world;
+		auto room = world.CreateRoom();
+		auto ch = world.CreatePlayer("Basher", room);
+		auto victim = world.CreatePlayer("Target", room);
+
+		ch->pcdata->learned[gsn_headbutt] = 100;
+		ch->max_hit = victim->max_hit = 100000;
+
+		WHEN("the attack is repeated until the knockout comes up")
+		{
+			THEN("the victim is knocked out")
+			{
+				REQUIRE(HeadbuttEverKnocksOut(ch, victim, 500));
+			}
+		}
+	}
+
+	GIVEN("a victim immune to bashing")
+	{
+		TestWorld world;
+		auto room = world.CreateRoom();
+		auto ch = world.CreatePlayer("Basher", room);
+		auto victim = world.CreatePlayer("Target", room);
+
+		ch->pcdata->learned[gsn_headbutt] = 100;
+		ch->max_hit = victim->max_hit = 100000;
+		SET_BIT(victim->imm_flags, IMM_BASH);
+
+		WHEN("the attack is repeated far past the point the knockout would land")
+		{
+			THEN("it never lands")
+			{
+				REQUIRE_FALSE(HeadbuttEverKnocksOut(ch, victim, 500));
+			}
+		}
+	}
+
+	GIVEN("a victim immune to sleep")
+	{
+		TestWorld world;
+		auto room = world.CreateRoom();
+		auto ch = world.CreatePlayer("Basher", room);
+		auto victim = world.CreatePlayer("Target", room);
+
+		ch->pcdata->learned[gsn_headbutt] = 100;
+		ch->max_hit = victim->max_hit = 100000;
+		SET_BIT(victim->imm_flags, IMM_SLEEP);
+
+		WHEN("the attack is repeated far past the point the knockout would land")
+		{
+			THEN("it never lands")
+			{
+				REQUIRE_FALSE(HeadbuttEverKnocksOut(ch, victim, 500));
+			}
+		}
+	}
+
+	GIVEN("a victim immune only to summoning")
+	{
+		TestWorld world;
+		auto room = world.CreateRoom();
+		auto ch = world.CreatePlayer("Basher", room);
+		auto victim = world.CreatePlayer("Target", room);
+
+		ch->pcdata->learned[gsn_headbutt] = 100;
+		ch->max_hit = victim->max_hit = 100000;
+		SET_BIT(victim->imm_flags, IMM_SUMMON);
+
+		WHEN("the attack is repeated until the knockout comes up")
+		{
+			THEN("summoning immunity does not protect them")
+			{
+				REQUIRE(HeadbuttEverKnocksOut(ch, victim, 500));
 			}
 		}
 	}

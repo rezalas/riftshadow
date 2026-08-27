@@ -1,48 +1,8 @@
 #include "catch.hpp"
-#include "../code/entity/handles.h"
+#include "world_fixture.h"
 #include "../code/mprog.h"
-#include "../code/handler.h"
-#include "../code/entity/char_data.h"
-#include "../code/entity/obj_data.h"
-#include "../code/entity/room_index_data.h"
-#include "../code/entity/area_data.h"
-#include "../code/entity/mob_index_data.h"
-#include "../code/macros.h"
 #include "../code/enums.h"
 #include "../code/mud.h"
-
-static room_index_data* CreateTestRoom()
-{
-	auto room = new room_index_data();
-	room->light = 3;
-	room->area = new area_data();
-
-	return room;
-}
-
-static obj_data* CreateTestItem()
-{
-	auto item = new obj_data();
-	// Registered the way new_obj would, so handle-typed references to it
-	// resolve. Without this its self handle stays null and every reference
-	// to it would read as "nothing", passing the assertions vacuously.
-	item->self = objectHandles.Add(item);
-	item->name = "test_trinket";
-	item->description = "A test item";
-	item->wear_loc = -1;
-
-	return item;
-}
-
-static char_data* CreateTestChar(char *name, room_index_data *room)
-{
-	auto ch = new char_data();
-	ch->self = charHandles.Add(ch);	// as new_char would
-	ch->name = name;
-	char_to_room(ch, room);
-
-	return ch;
-}
 
 // mprog_give and mprog_drop queue the unlink and the relink as two separate
 // events on the same tick, so their relative order decides which inventory the
@@ -53,10 +13,11 @@ SCENARIO("Testing a mob handing an object to a character", "[mprog_give]")
 {
 	GIVEN("a mob carrying an object, and a character in the same room")
 	{
-		auto room = CreateTestRoom();
-		auto mob = CreateTestChar((char*)"Mob", room);
-		auto ch = CreateTestChar((char*)"Player", room);
-		auto obj = CreateTestItem();
+		TestWorld world;
+		auto room = world.CreateRoom();
+		auto mob = world.CreateMob("Mob", room);
+		auto ch = world.CreatePlayer("Player", room);
+		auto obj = world.CreateItem("test_trinket", "a test trinket");
 
 		obj_to_char(obj, mob);
 
@@ -81,9 +42,10 @@ SCENARIO("Testing a mob dropping an object", "[mprog_drop]")
 {
 	GIVEN("a mob carrying an object")
 	{
-		auto room = CreateTestRoom();
-		auto mob = CreateTestChar((char*)"Mob", room);
-		auto obj = CreateTestItem();
+		TestWorld world;
+		auto room = world.CreateRoom();
+		auto mob = world.CreateMob("Mob", room);
+		auto obj = world.CreateItem("test_trinket", "a test trinket");
 
 		obj_to_char(obj, mob);
 
@@ -124,17 +86,13 @@ SCENARIO("a demon whose quarry is gone gives up without reading it", "[mprog_dem
 {
 	GIVEN("a demon with a master and no quarry")
 	{
-		auto room = CreateTestRoom();
-		auto master = CreateTestChar((char *)"Summoner", room);
-		auto demon = CreateTestChar((char *)"Demon", room);
-
+		TestWorld world;
+		auto room = world.CreateRoom();
 		// Both NPCs: extract_char's die_follower walk reaches can_see, which
 		// reads pcdata on anything that is not one.
-		master->pIndexData = new mob_index_data();
-		SET_BIT(master->act, ACT_IS_NPC);
+		auto master = world.CreateMob("Summoner", room);
+		auto demon = world.CreateMob("Demon", room);
 
-		demon->pIndexData = new mob_index_data();
-		SET_BIT(demon->act, ACT_IS_NPC);
 		demon->master = master->self;
 
 		REQUIRE(Deref(demon->hunting) == nullptr);
@@ -146,9 +104,8 @@ SCENARIO("a demon whose quarry is gone gives up without reading it", "[mprog_dem
 			THEN("it runs the give-up branch through instead of dereferencing the quarry it does not have")
 			{
 				// Reaching char_from_room is the observable end of that branch.
-				// The extract stops short of freeing here -- this demon was
-				// never linked into char_list, and free_char would try to
-				// release a string literal -- so the room is what to assert on.
+				// The extract stops short of freeing here, since this demon was
+				// never linked into char_list, so the room is what to assert on.
 				REQUIRE(demon->in_room == nullptr);
 			}
 		}
