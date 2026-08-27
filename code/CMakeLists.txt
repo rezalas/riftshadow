@@ -83,7 +83,7 @@ set(RIFT_SOURCE config.cpp
 	olc_save.c
 	bit.c
 	mem.c
-	string.c
+	editor.c
 	mspec.c
 	ispec.c
 	pstring.c
@@ -146,13 +146,13 @@ set(RIFT_WRITE_STRINGS_CLEAN
 	alias.c
 	bit.c
 	characterClasses/class.c
+	editor.c
 	gameloop.c
 	main.c
 	pstring.c
 	queue.c
 	riftpath.c
 	spell_target.c
-	string.c
 	titles.c
 )
 set_source_files_properties(${RIFT_WRITE_STRINGS_CLEAN} PROPERTIES

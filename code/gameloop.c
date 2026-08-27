@@ -18,7 +18,7 @@
 #include "interp.h"
 #include "alias.h"
 #include "save.h"
-#include "string.h"
+#include "editor.h"
 #include "update.h"
 
 CGameLoop::CGameLoop()

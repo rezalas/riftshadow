@@ -40,7 +40,7 @@
 #include "comm.h"
 #include "db.h"
 #include "bit.h"
-#include "string.h"
+#include "editor.h"
 #include "aprog.h"
 #include "iprog.h"
 #include "mprog.h"

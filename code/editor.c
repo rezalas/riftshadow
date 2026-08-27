@@ -1,5 +1,5 @@
 /***************************************************************************
- *  File: string.c                                                         *
+ *  File: editor.c                                                         *
  *                                                                         *
  *  Much time and thought has gone into this software and you are          *
  *  benefitting.  We hope that you share your changes too.  What goes      *
@@ -23,7 +23,7 @@
 #include <string.h>
 #include <time.h>
 #include "merc.h"
-#include "string.h"
+#include "editor.h"
 #include "pstring.h"
 #include "comm.h"
 #include "interp.h"
@@ -86,7 +86,7 @@ void string_append(CHAR_DATA *ch, char **pString)
 /*****************************************************************************
  Name:		string_replace
  Purpose:	Substitutes one string for another.
- Called by:	string_add(string.c) (aedit_builder)olc_act.c.
+ Called by:	string_add(editor.c) (aedit_builder)olc_act.c.
  ****************************************************************************/
 char *string_replace(char *orig, char *old, char *newstr)
 {
@@ -274,7 +274,7 @@ void string_add(CHAR_DATA *ch, char *argument)
 /*****************************************************************************
  Name:		format_string
  Purpose:	Special string formatting and word-wrapping.
- Called by:	string_add(string.c) (many)olc_act.c
+ Called by:	string_add(editor.c) (many)olc_act.c
  ****************************************************************************/
 char *format_string(char *oldstring /*, bool fSpace */)
 {
@@ -456,7 +456,7 @@ char *format_string(char *oldstring /*, bool fSpace */)
  Purpose:	Pick off one argument from a string and return the rest.
 		Understands quates, parenthesis (barring ) ('s) and
 		percentages.
- Called by:	string_add(string.c)
+ Called by:	string_add(editor.c)
  ****************************************************************************/
 char *first_arg(char *argument, char *arg_first, bool fCase)
 {

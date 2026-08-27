@@ -1,5 +1,5 @@
-#ifndef STRING_H
-#define STRING_H
+#ifndef EDITOR_H
+#define EDITOR_H
 
 #include "entity/fwd.h"
 
@@ -22,7 +22,7 @@ void string_append(CHAR_DATA *ch, char **pString);
 /*****************************************************************************
  Name:		string_replace
  Purpose:	Substitutes one string for another.
- Called by:	string_add(string.c) (aedit_builder)olc_act.c.
+ Called by:	string_add(editor.c) (aedit_builder)olc_act.c.
  ****************************************************************************/
 char *string_replace(char *orig, char *old, char *newstr);
 /*****************************************************************************
@@ -38,7 +38,7 @@ void string_add(CHAR_DATA *ch, char *argument);
 /*****************************************************************************
  Name:		format_string
  Purpose:	Special string formatting and word-wrapping.
- Called by:	string_add(string.c) (many)olc_act.c
+ Called by:	string_add(editor.c) (many)olc_act.c
  ****************************************************************************/
 char *format_string(char *oldstring /*, bool fSpace */);
 /*
@@ -52,7 +52,7 @@ char *format_string(char *oldstring /*, bool fSpace */);
  Purpose:	Pick off one argument from a string and return the rest.
 		Understands quates, parenthesis (barring ) ('s) and
 		percentages.
- Called by:	string_add(string.c)
+ Called by:	string_add(editor.c)
  ****************************************************************************/
 char *first_arg(char *argument, char *arg_first, bool fCase);
 /*
@@ -65,4 +65,4 @@ char *string_unpad(char *argument);
  */
 char *string_proper(char *argument);
 
-#endif /* STRING_H */
+#endif /* EDITOR_H */

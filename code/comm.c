@@ -83,7 +83,7 @@
 #include "devextra.h"
 #include "magic.h"
 #include "misc.h"
-#include "string.h"
+#include "editor.h"
 #include "chardef.h"
 #include "const.h"
 #include "titles.h"
