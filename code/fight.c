@@ -2916,7 +2916,7 @@ void set_fighting(CHAR_DATA *ch, CHAR_DATA *victim)
 	if (is_affected_by(ch, AFF_SLEEP))
 		affect_strip(ch, gsn_sleep);
 
-	if (is_affected_by(ch, gsn_hypothermia))
+	if (is_affected(ch, gsn_hypothermia))
 		affect_strip(ch, gsn_hypothermia);
 
 	if (is_affected(victim, gsn_bind_feet))
