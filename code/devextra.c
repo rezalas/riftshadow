@@ -225,6 +225,12 @@ void clean_mud()
 
 			CHAR_DATA *victim = Deref(d->character);
 
+			// load_char_obj reported success, so it attached a character. Nothing
+			// forces that here, and the branch above leaves by continue rather
+			// than falling through, so this path is reached with nothing proven.
+			if (victim == nullptr)
+				continue;
+
 			victim->desc = nullptr;
 
 			if (victim->level >= 30)
@@ -1054,6 +1060,9 @@ void mob_recho(CHAR_DATA *ch, char *argument)
 
 		CHAR_DATA *wch = Deref(d->character);
 
+		if (wch == nullptr)
+			continue;
+
 		if (d->connected == CON_PLAYING
 			&& wch->in_room == ch->in_room
 			&& is_awake(wch)
@@ -1078,6 +1087,9 @@ void area_echo(CHAR_DATA *ch, char *echo)
 
 		CHAR_DATA *wch = Deref(d->character);
 
+		if (wch == nullptr)
+			continue;
+
 		if (d->connected == CON_PLAYING
 			&& wch->in_room != nullptr
 			&& ch->in_room != nullptr
@@ -1100,6 +1112,9 @@ void rarea_echo(ROOM_INDEX_DATA *room, char *echo)
 
 		CHAR_DATA *wch = Deref(d->character);
 
+		if (wch == nullptr)
+			continue;
+
 		if (d->connected == CON_PLAYING
 			&& wch->in_room != nullptr
 			&& room != nullptr
@@ -1121,6 +1136,9 @@ void outdoors_echo(AREA_DATA *area, char *echo)
 		DESCRIPTOR_DATA *d = walk.Current();
 
 		CHAR_DATA *wch = Deref(d->character);
+
+		if (wch == nullptr)
+			continue;
 
 		if (d->connected == CON_PLAYING
 			&& wch->in_room != nullptr

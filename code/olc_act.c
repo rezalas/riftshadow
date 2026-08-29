@@ -558,6 +558,15 @@ bool redit_mshow(CHAR_DATA *ch, char *argument)
 	}
 
 	medit_show(ch, argument);
+
+	// Resolved again rather than reusing the pointer above. medit_show is a page
+	// dump, and a dump long enough to pass the output buffer's ceiling closes the
+	// connection and destroys it, which leaves the local standing for nothing.
+	connection = Deref(ch->desc);
+
+	if (connection == nullptr)
+		return false;
+
 	connection->pEdit = (void *)ch->in_room;
 	return false;
 }
@@ -598,6 +607,13 @@ bool redit_oshow(CHAR_DATA *ch, char *argument)
 	}
 
 	oedit_show(ch, argument);
+
+	// Same page dump, same reason as redit_mshow above.
+	connection = Deref(ch->desc);
+
+	if (connection == nullptr)
+		return false;
+
 	connection->pEdit = (void *)ch->in_room;
 	return false;
 }

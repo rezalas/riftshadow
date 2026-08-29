@@ -60,23 +60,29 @@ public:
 		// whether it is still alive: extract_char during the test destroys it
 		// already, and a destroyed entity retires its handle, so Deref stops
 		// resolving back to the pointer we recorded.
-		for (CHAR_DATA *ch : characters)
+		//
+		// The handle is the one recorded when the entity was built, not one read
+		// back out of it. Reading `ch->self` to find out whether `ch` is still
+		// there requires `ch` to still be there, which is the question being
+		// asked. A test that frees or extracts anything makes that circular read
+		// a use after free.
+		for (auto &[ch, handle] : characters)
 		{
-			if (Deref(ch->self) == ch)
+			if (Deref(handle) == ch)
 				free_char(ch);
 		}
 
 		// Same liveness question for objects. A character destroys what it
 		// carries, so by this point some of these are already gone.
-		for (OBJ_DATA *obj : objects)
+		for (auto &[obj, handle] : objects)
 		{
-			if (Deref(obj->self) == obj)
+			if (Deref(handle) == obj)
 				free_obj(obj);
 		}
 
-		for (DESCRIPTOR_DATA *d : descriptors)
+		for (auto &[d, handle] : descriptors)
 		{
-			if (Deref(d->self) == d)
+			if (Deref(handle) == d)
 				free_descriptor(d);
 		}
 
@@ -171,10 +177,10 @@ public:
 	{
 		auto obj = new obj_data();
 		obj->self = objectHandles.Add(obj);
-		// The prototype is not decoration. extract_obj reaches
-		// obj->pIndexData->limcount with no null check, so an object built
-		// without one segfaults the moment anything destroys it, including the
-		// character that is carrying it.
+		// Every object the loader stamps comes from a prototype, so one here
+		// keeps a fixture object the same shape as a real one. extract_obj now
+		// copes without it, but limcount is only meaningful when there is a
+		// prototype issuing the object to count.
 		obj->pIndexData = CreatePrototype(name, shortDescr);
 		obj->name = palloc_string(name);
 		obj->short_descr = palloc_string(shortDescr);
@@ -184,7 +190,7 @@ public:
 		obj->level = 1;
 		obj->condition = 100;
 
-		objects.push_back(obj);
+		objects.emplace_back(obj, obj->self);
 
 		return obj;
 	}
@@ -256,7 +262,7 @@ private:
 		ch->hit = ch->max_hit = 100;
 		ch->sex = SEX_MALE;
 
-		characters.push_back(ch);
+		characters.emplace_back(ch, ch->self);
 
 		if (room != nullptr)
 			char_to_room(ch, room);
@@ -315,7 +321,7 @@ private:
 		d->outbuf = new char[d->outsize];
 		d->outtop = 0;
 
-		descriptors.push_back(d);
+		descriptors.emplace_back(d, d->self);
 
 		return d;
 	}
@@ -374,11 +380,11 @@ private:
 		}
 	}
 
-	std::vector<CHAR_DATA *> characters;
-	std::vector<OBJ_DATA *> objects;
+	std::vector<std::pair<CHAR_DATA *, Handle<CHAR_DATA>>> characters;
+	std::vector<std::pair<OBJ_DATA *, Handle<OBJ_DATA>>> objects;
 	std::vector<OBJ_INDEX_DATA *> prototypes;
 	std::vector<MOB_INDEX_DATA *> mobPrototypes;
-	std::vector<DESCRIPTOR_DATA *> descriptors;
+	std::vector<std::pair<DESCRIPTOR_DATA *, Handle<DESCRIPTOR_DATA>>> descriptors;
 	std::vector<ROOM_INDEX_DATA *> rooms;
 	std::vector<CClass *> classes;
 	CClass *savedClassList = nullptr;

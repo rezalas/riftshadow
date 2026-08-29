@@ -543,6 +543,12 @@ bool process_output(DESCRIPTOR_DATA *d, bool fPrompt)
 
 		ch = Deref(d->character);
 
+		// A connection in CON_PLAYING normally has a character, but the handle
+		// expires as soon as anything frees it. There is nobody to write a
+		// prompt for, so report the failure and let the caller close the link.
+		if (ch == nullptr)
+			return false;
+
 		/* battle prompt */
 		if ((victim = Deref(ch->fighting)) != nullptr)
 		{
@@ -577,12 +583,27 @@ bool process_output(DESCRIPTOR_DATA *d, bool fPrompt)
 		// the socket and frees the character.
 		ch = original ? original : Deref(d->character);
 
+		// The re-read exists to produce this null. Acting on it is the other
+		// half of the guard: everything below dereferences the result.
+		if (ch == nullptr)
+			return false;
+
 		if (!IS_SET(ch->comm, COMM_COMPACT))
 			write_to_buffer(d, "\n\r", 2);
 		if (!is_npc(ch) && ch->pcdata->entering_text)
 			write_to_buffer(d, ": ", 2);
 		else if (IS_SET(ch->comm, COMM_PROMPT))
-			bust_a_prompt(Deref(d->character));
+		{
+			// The prompt is drawn for the body being driven rather than for the
+			// player driving it, so this is deliberately not the local above.
+			// It is resolved again because the write just made can free it.
+			CHAR_DATA *prompted = Deref(d->character);
+
+			if (prompted == nullptr)
+				return false;
+
+			bust_a_prompt(prompted);
+		}
 
 		if (IS_SET(ch->comm, COMM_TELNET_GA))
 			write_to_buffer(d, go_ahead_str, 0);
@@ -831,6 +852,9 @@ void bust_a_prompt(CHAR_DATA *ch)
 					{
 						CHAR_DATA *wch = Deref(owned->character);
 
+						if (wch == nullptr)
+							continue;
+
 						if (owned->connected == CON_PLAYING
 							&& wch->in_room != nullptr
 							&& wch->in_room->area == ch->in_room->area
@@ -856,6 +880,9 @@ void bust_a_prompt(CHAR_DATA *ch)
 					for (auto &owned : descriptor_list)
 					{
 						CHAR_DATA *wch = Deref(owned->character);
+
+						if (wch == nullptr)
+							continue;
 
 						if (owned->connected == CON_PLAYING
 							&& wch->in_room != nullptr
@@ -1240,7 +1267,23 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
 
 	ch = Deref(d->character);
 
-	switch (d->connected)
+	// Read once and dispatched on below, so that the guard and the switch are
+	// asking about the same value. Cases assign d->connected to choose the state
+	// the next call lands in, which is a different question from this one.
+	int state = d->connected;
+
+	// CON_GET_NAME is the one state that runs before a character exists, and it
+	// is also the state that attaches one. Every state below it dereferences ch
+	// without asking, so a null here is a connection that lost its character and
+	// has nothing left to advance.
+	if (ch == nullptr && state != CON_GET_NAME)
+	{
+		RS.Logger.Warn("nanny: connection in state {} has no character. Closing.", state);
+		close_socket(d);
+		return;
+	}
+
+	switch (state)
 	{
 		case CON_GET_NAME:
 			if (argument[0] == '\'')
@@ -1275,7 +1318,20 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
 			}
 
 			fOld = load_char_obj(d, argument);
+
+			// This is the resolve that gives the rest of the state a character
+			// to work with. load_char_obj attaches the one it builds before it
+			// can fail, so the null is not expected, and every line below reads
+			// through the result without asking again.
 			ch = Deref(d->character);
+
+			if (ch == nullptr)
+			{
+				RS.Logger.Warn("nanny: no character after loading {}. Closing.", argument);
+				write_to_buffer(d, "Unable to start a session. Please reconnect.\n\r", 0);
+				close_socket(d);
+				return;
+			}
 
 			if (IS_SET(ch->act, PLR_DENY))
 			{

@@ -2192,7 +2192,11 @@ void extract_obj(OBJ_DATA *obj)
 	else if (Deref(obj->in_obj) != nullptr)
 		obj_from_obj(obj);
 
-	obj->pIndexData->limcount -= 1;
+	// Every object the loader stamps has a prototype, so this is not a warning
+	// case. An object built by hand does not, and the count it would decrement
+	// belongs to a prototype that never issued it.
+	if (obj->pIndexData != nullptr)
+		obj->pIndexData->limcount -= 1;
 
 	for (obj_content = obj->contains; obj_content; obj_content = obj_next)
 	{
@@ -2204,7 +2208,13 @@ void extract_obj(OBJ_DATA *obj)
 	// to erase. Nothing owns it either, so it is the caller's to delete.
 	if (obj->globalNode == ObjectList::iterator{})
 	{
-		RS.Logger.Warn("Extract_obj: obj {} was not on the object list.", obj->pIndexData->vnum);
+		// Reported by vnum where there is a prototype to name. The message exists
+		// because the object is unaccounted for, so it cannot assume one.
+		if (obj->pIndexData != nullptr)
+			RS.Logger.Warn("Extract_obj: obj {} was not on the object list.", obj->pIndexData->vnum);
+		else
+			RS.Logger.Warn("Extract_obj: an object with no prototype was not on the object list.");
+
 		return;
 	}
 

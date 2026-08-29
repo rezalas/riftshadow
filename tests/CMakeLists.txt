@@ -15,6 +15,7 @@ set(TEST_SRC_FILES act_obj_tests.c
 	bitflag_tests.c
 	bug_tests.c
 	cabal_tests.c
+	comm_tests.c
 	class_tests.c
 	db_tests.c
 	fight_tests.c

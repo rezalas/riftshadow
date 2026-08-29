@@ -92,10 +92,15 @@ static int qwhip_one_hit(CHAR_DATA *ch, CHAR_DATA *, OBJ_DATA *, float &, int &,
 /// @note Body taken from the EVENT_IFIGHT block of ispec_qwhip.
 static int qwhip_fight(CHAR_DATA *ch, OBJ_DATA *)
 {
-	if (number_percent() <= 97 || !IS_SET(Deref(ch->fighting)->parts, PART_LEGS))
+	CHAR_DATA *victim = Deref(ch->fighting);
+
+	// Resolved before it is read rather than after. The opponent can be freed
+	// during the round that fires this, and the test below wants its body parts.
+	if (victim == nullptr)
 		return 0;
 
-	CHAR_DATA *victim = Deref(ch->fighting);
+	if (number_percent() <= 97 || !IS_SET(victim->parts, PART_LEGS))
+		return 0;
 
 	act("$n wraps $s whip around $N's legs, sending $M staggering!", ch, nullptr, victim, TO_NOTVICT);
 	act("You wrap your whip around $N's legs, sending $M staggering.", ch, nullptr, victim, TO_CHAR);

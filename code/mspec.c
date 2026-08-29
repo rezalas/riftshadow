@@ -296,6 +296,11 @@ void apet_at_room(CHAR_DATA *ch, int vnum)
 {
 	CHAR_DATA *player = Deref(ch->leader);
 
+	// An academy pet whose leader has quit or been extracted still ticks. There
+	// is nobody to escort, so there is nothing for this routine to do.
+	if (player == nullptr)
+		return;
+
 	player->master = nullptr;
 	ch->master = ch->leader;
 

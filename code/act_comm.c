@@ -348,6 +348,9 @@ void do_cb(CHAR_DATA *ch, char *argument)
 		// extract a listener.
 		CHAR_DATA *listener = Deref(d->character);
 
+		if (listener == nullptr)
+			continue;
+
 		if (d->connected == CON_PLAYING && listener != ch && ((is_same_cabal(ch, listener) && !IS_SET(listener->comm, COMM_NOCABAL) && !IS_SET(listener->in_room->room_flags, ROOM_SILENCE)) || IS_SET(listener->comm, COMM_ALL_CABALS)))
 		{
 			if (IS_SET(listener->comm, COMM_ANSI))
@@ -1932,9 +1935,18 @@ void do_quit_new(CHAR_DATA *ch, [[maybe_unused]] char *argument, bool autoq)
 
 	save_char_obj(ch);
 	auto id = ch->id;
-	auto d = Deref(ch->desc);
+
+	// The handle is copied before the extract because the character does not
+	// survive it. Resolving is left until after, because extract_char routes a
+	// switched connection through do_return, which writes to it, and a write
+	// that overflows the output buffer closes the connection. A pointer taken
+	// before the extract would be tested for null after it had already stopped
+	// standing for anything.
+	auto connection = ch->desc;
 
 	extract_char(ch, true);
+
+	DESCRIPTOR_DATA *d = Deref(connection);
 
 	if (d != nullptr)
 		close_socket(d);
@@ -1947,8 +1959,17 @@ void do_quit_new(CHAR_DATA *ch, [[maybe_unused]] char *argument, bool autoq)
 		auto tch = Deref(d->original) ? Deref(d->original) : Deref(d->character);
 		if (tch && tch->id == id)
 		{
+			// Same reason as above: the extract can reach this connection and
+			// close it, so what gets closed here is whatever the handle still
+			// resolves to rather than the pointer the walk handed out.
+			auto connection = d->self;
+
 			extract_char(tch, true);
-			close_socket(d);
+
+			DESCRIPTOR_DATA *live = Deref(connection);
+
+			if (live != nullptr)
+				close_socket(live);
 		}
 	}
 }

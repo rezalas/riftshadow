@@ -51,11 +51,21 @@ endif()
 # to use the local that already holds the proof. Others never had a guard at
 # all, and predate the gating commit rather than arriving with it.
 #
-# All of it is worth fixing. None of it is something this group can hold a line
-# against in the meantime, because the build type that would catch a new one is
-# not the build type anyone develops in.
+# That population is now zero and this is promoted to an error below, with the
+# rest of the history above kept because it explains how the number has to be
+# measured. Two things about it still hold and are the reason it sits apart from
+# the groups in the gated list.
+#
+# It is silent at -O0, so a Debug build cannot catch a new violation and a
+# developer working locally will not see one. The Release leg of CI is what
+# holds this line, not the tree anyone edits in.
+#
+# It also has to be measured ungated. A translation unit that errors stops
+# before the later passes run, so a gated tree under counts itself: the same
+# tree that reported 71 sites reported 58 once it was an error. Take the number
+# with the warning form, then promote.
 if(CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
-	add_compile_options(-Wnull-dereference)
+	add_compile_options(-Werror=null-dereference)
 endif()
 
 # This is mostly a severity change rather than new diagnostics. Nine of the

@@ -903,6 +903,9 @@ void time_update(void)
 
 			CHAR_DATA *wch = Deref(d->character);
 
+			if (wch == nullptr)
+				continue;
+
 			if (d->connected == CON_PLAYING
 				&& wch->in_room
 				&& wch->in_room->sector_type != SECT_UNDERWATER

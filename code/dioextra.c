@@ -158,6 +158,9 @@ void do_ghost(CHAR_DATA *ch, char *argument)
 
 			CHAR_DATA *wch = Deref(d->character);
 
+			if (wch == nullptr)
+				continue;
+
 			if (d->connected == CON_PLAYING
 				&& wch != ch
 				&& wch->in_room != nullptr
@@ -187,6 +190,9 @@ void do_ghost(CHAR_DATA *ch, char *argument)
 			DESCRIPTOR_DATA *d = walk.Current();
 
 			CHAR_DATA *wch = Deref(d->character);
+
+			if (wch == nullptr)
+				continue;
 
 			if (d->connected == CON_PLAYING
 				&& wch != ch
@@ -545,6 +551,9 @@ void do_ccb(CHAR_DATA *ch, char *argument)
 		if (d->connected == CON_PLAYING)
 		{
 			CHAR_DATA *wch = Deref(d->character);
+
+			if (wch == nullptr)
+				continue;
 
 			if ((wch != ch
 					&& !IS_SET(wch->comm, COMM_NOCABAL)
@@ -1745,6 +1754,9 @@ void zone_echo(AREA_DATA *area, char *echo)
 		DESCRIPTOR_DATA *d = walk.Current();
 
 		CHAR_DATA *wch = Deref(d->character);
+
+		if (wch == nullptr)
+			continue;
 
 		if (d->connected == CON_PLAYING && wch->in_room != nullptr && wch->in_room->area == area)
 		{

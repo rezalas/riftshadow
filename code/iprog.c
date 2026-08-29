@@ -635,11 +635,25 @@ void fight_prog_skean(OBJ_DATA *obj, CHAR_DATA *ch)
 
 	if (number_percent() < 6)
 	{
+		// Resolved once for the test below, then resolved again after each pair
+		// of acts. An act reaches the output buffer, and a buffer that overflows
+		// closes the connection and frees the character behind it, so a pointer
+		// to the opponent does not survive being used to talk to them.
+		CHAR_DATA *victim = Deref(ch->fighting);
+
+		if (victim == nullptr)
+			return;
+
 		percent = number_percent();
-		if (Deref(ch->fighting)->Class()->ctype == CLASS_COMMUNER && !is_affected(Deref(ch->fighting), gsn_severed))
+		if (victim->Class()->ctype == CLASS_COMMUNER && !is_affected(victim, gsn_severed))
 		{
-			act("An enchanted obsidian skean blazes through the air, leaving a trail of fire!", ch, nullptr, Deref(ch->fighting), TO_ROOM);
-			act("Your vital ties to the gods' empowerment have been severed!", ch, nullptr, Deref(ch->fighting), TO_VICT);
+			act("An enchanted obsidian skean blazes through the air, leaving a trail of fire!", ch, nullptr, victim, TO_ROOM);
+			act("Your vital ties to the gods' empowerment have been severed!", ch, nullptr, victim, TO_VICT);
+
+			victim = Deref(ch->fighting);
+
+			if (victim == nullptr)
+				return;
 
 			init_affect(&af);
 			af.where = TO_AFFECTS;
@@ -648,15 +662,20 @@ void fight_prog_skean(OBJ_DATA *obj, CHAR_DATA *ch)
 			af.level = ch->level;
 			af.modifier = 10 + dice(1, 8);
 			af.duration = dice(1, 2);
-			new_affect_to_char(Deref(ch->fighting), &af);
+			new_affect_to_char(victim, &af);
 
 			return;
 		}
 
 		if (!IS_SET(ch->affected_by, AFF_BLIND))
 		{
-			act("An enchanted obsidian skean darts toward your eyes, gouging you painfully!", ch, nullptr, Deref(ch->fighting), TO_VICT);
-			act("An enchanted obsidian skean darts toward $N's eyes, gouging $M painfully!", ch, nullptr, Deref(ch->fighting), TO_NOTVICT);
+			act("An enchanted obsidian skean darts toward your eyes, gouging you painfully!", ch, nullptr, victim, TO_VICT);
+			act("An enchanted obsidian skean darts toward $N's eyes, gouging $M painfully!", ch, nullptr, victim, TO_NOTVICT);
+
+			victim = Deref(ch->fighting);
+
+			if (victim == nullptr)
+				return;
 
 			init_affect(&af);
 			af.where = TO_AFFECTS;
@@ -666,15 +685,21 @@ void fight_prog_skean(OBJ_DATA *obj, CHAR_DATA *ch)
 
 			SET_BIT(af.bitvector, AFF_BLIND);
 			af.duration = dice(1, 4);
-			new_affect_to_char(Deref(ch->fighting), &af);
+			new_affect_to_char(victim, &af);
 
 			return;
 		}
 
-		if (is_good(Deref(ch->fighting)))
+		if (is_good(victim))
 		{
-			act("You swoon for a moment, and the world goes slightly hazy...", Deref(ch->fighting), nullptr, nullptr, TO_CHAR);
-			WAIT_STATE(Deref(ch->fighting), PULSE_VIOLENCE * 2);
+			act("You swoon for a moment, and the world goes slightly hazy...", victim, nullptr, nullptr, TO_CHAR);
+
+			victim = Deref(ch->fighting);
+
+			if (victim == nullptr)
+				return;
+
+			WAIT_STATE(victim, PULSE_VIOLENCE * 2);
 			return;
 		}
 	}

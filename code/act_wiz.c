@@ -1203,6 +1203,9 @@ void do_immecho(CHAR_DATA *ch, char *argument)
 
 		CHAR_DATA *wch = Deref(d->character);
 
+		if (wch == nullptr)
+			continue;
+
 		if (d->connected == CON_PLAYING && (wch->level > 51))
 		{
 			colorconv(buffer, argument, wch);
@@ -1227,6 +1230,9 @@ void do_recho(CHAR_DATA *ch, char *argument)
 		DESCRIPTOR_DATA *d = walk.Current();
 
 		CHAR_DATA *wch = Deref(d->character);
+
+		if (wch == nullptr)
+			continue;
 
 		if (d->connected == CON_PLAYING && wch->in_room == ch->in_room)
 		{
@@ -1256,6 +1262,9 @@ void do_zecho(CHAR_DATA *ch, char *argument)
 		DESCRIPTOR_DATA *d = walk.Current();
 
 		CHAR_DATA *wch = Deref(d->character);
+
+		if (wch == nullptr)
+			continue;
 
 		if (d->connected == CON_PLAYING
 			&& wch->in_room != nullptr
@@ -1352,6 +1361,9 @@ void do_transfer(CHAR_DATA *ch, char *argument)
 			DESCRIPTOR_DATA *d = walk.Current();
 
 			CHAR_DATA *wch = Deref(d->character);
+
+			if (wch == nullptr)
+				continue;
 
 			if (d->connected == CON_PLAYING
 				&& wch != ch
