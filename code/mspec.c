@@ -352,8 +352,13 @@ void apet_walk_to_room(CHAR_DATA *ch, int vnum)
 	walk_to_room(ch, room);
 
 	// Read after the move rather than before it: walk_to_room relocates this
-	// mob and can fire progs on the way.
+	// mob and can fire progs on the way. Those progs are also what can end the
+	// leader, which is what the read comes back empty for.
 	CHAR_DATA *player = Deref(ch->leader);
+
+	// Nobody left to escort, so there is nowhere this pet is walking to.
+	if (player == nullptr)
+		return;
 
 	if (ch->in_room == oldroom || ch->in_room != player->in_room)
 	{

@@ -139,6 +139,16 @@ void bust_a_prompt (CHAR_DATA *ch);
 bool output_buffer (DESCRIPTOR_DATA *d);
 /*
  * Append onto an output buffer.
+ *
+ * This can destroy the connection it is given. A buffer that has grown to its
+ * ceiling and still cannot fit the text closes the socket, which frees the
+ * descriptor and expires every handle to it, including the character's ch->desc
+ * and any snooper's snoop_by.
+ *
+ * That matters to callers well upstream, because send_to_char, act and every
+ * page dump end here. A pointer to a descriptor, or to a character reached
+ * through one, does not survive being used to write to it. Re-read it through
+ * its handle afterwards and test the result. See entity/handles.h.
  */
 void write_to_buffer (DESCRIPTOR_DATA *d, const char *txt, int length);
 /*

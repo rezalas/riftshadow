@@ -2781,6 +2781,16 @@ bool can_see(CHAR_DATA *ch, CHAR_DATA *victim)
 	AREA_AFFECT_DATA *paf;
 	AFFECT_DATA *af;
 
+	// Nothing that is not there can be seen, and nobody who is not there can see
+	// it. Callers that resolve a character out of a handle and pass the result
+	// straight in read `if (!can_see(ch, victim))` as a filter that rejects an
+	// absent character. Every line below dereferences both arguments, so without
+	// this it is not that filter, and the crash happens inside the test rather
+	// than at the call. This has to come before the ch == victim case, which
+	// would otherwise answer true for two absent characters.
+	if (ch == nullptr || victim == nullptr)
+		return false;
+
 	if (is_npc(ch) && IS_SET(ch->act, ACT_DETECT_SPECIAL))
 		return true;
 

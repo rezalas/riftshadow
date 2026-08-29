@@ -2986,3 +2986,57 @@ SCENARIO("an academy pet whose leader has gone", "[apet_at_room]")
 		}
 	}
 }
+
+// can_see is read at its call sites as a filter that rejects a character who is
+// not there: several callers resolve one out of a handle and pass the result
+// straight in, guarded by nothing but the call itself. Every line of the body
+// dereferences both arguments, so the predicate has to answer for the absent
+// case rather than crash inside it.
+SCENARIO("can_see answers for a character that is not there", "[can_see]")
+{
+	GIVEN("a character in a lit room")
+	{
+		TestWorld world;
+		auto room = world.CreateRoom();
+		auto watcher = world.CreatePlayer("Watcher", room);
+		auto seen = world.CreatePlayer("Seen", room);
+
+		WHEN("the victim is absent")
+		{
+			THEN("nothing is visible rather than the test dying inside itself")
+			{
+				// Without the guard this dereferences null a few lines into the
+				// body and the process dies here.
+				REQUIRE(can_see(watcher, nullptr) == false);
+			}
+		}
+
+		WHEN("the viewer is absent")
+		{
+			THEN("nothing is visible")
+			{
+				REQUIRE(can_see(nullptr, seen) == false);
+			}
+		}
+
+		WHEN("both are absent")
+		{
+			THEN("the answer is still no")
+			{
+				// The ch == victim shortcut sits above most of the body and
+				// would answer true for two null pointers, so the guard has to
+				// come before it.
+				REQUIRE(can_see(nullptr, nullptr) == false);
+			}
+		}
+
+		WHEN("both are present")
+		{
+			THEN("they can see each other, so the guard did not swallow the normal case")
+			{
+				REQUIRE(can_see(watcher, seen) == true);
+				REQUIRE(can_see(seen, watcher) == true);
+			}
+		}
+	}
+}
