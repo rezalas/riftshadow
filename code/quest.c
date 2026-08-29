@@ -827,10 +827,23 @@ void pulse_prog_ilopheth_hermit(CHAR_DATA *mob)
 			sprintf(buf, "%s You!  Coming again to grub, eh?  You'll pay, oh yes yes, you will!", wch->name);
 			do_tell(mob, buf);
 
-			act("A bolt of lightning streaks down from the clouds above!", Deref(d->character), nullptr, nullptr, TO_ALL);
-			do_myell(Deref(d->character), "Argh!  I've been struck by lightning!", nullptr);
+			// Read again after the tell, and again after the two lines below.
+			// Each of them reaches the output buffer, and a buffer that overflows
+			// closes the connection and frees the character on the end of it.
+			wch = Deref(d->character);
 
-			damage_new(mob, Deref(d->character), dice(Deref(d->character)->level, 8), gsn_call_lightning, DAM_LIGHTNING, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "The lightning strike*");
+			if (wch == nullptr)
+				continue;
+
+			act("A bolt of lightning streaks down from the clouds above!", wch, nullptr, nullptr, TO_ALL);
+			do_myell(wch, "Argh!  I've been struck by lightning!", nullptr);
+
+			wch = Deref(d->character);
+
+			if (wch == nullptr)
+				continue;
+
+			damage_new(mob, wch, dice(wch->level, 8), gsn_call_lightning, DAM_LIGHTNING, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "The lightning strike*");
 		}
 	}
 

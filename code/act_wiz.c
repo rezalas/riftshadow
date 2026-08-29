@@ -3801,6 +3801,15 @@ void do_return(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 
 	wiznet(buf, Deref(connection->original), 0, WIZ_SWITCHES, WIZ_SECURE, get_trust(ch));
 
+	// Read again rather than reusing the local above. The message and the wiznet
+	// call between there and here both reach the output buffer, and a buffer that
+	// overflows closes this connection and destroys it. There is nothing to
+	// return to if that has happened.
+	connection = Deref(ch->desc);
+
+	if (connection == nullptr)
+		return;
+
 	ch->pcdata.release();		// relinquish the borrowed pcdata WITHOUT freeing it
 	connection->character = connection->original;
 	connection->original = nullptr;
@@ -4154,8 +4163,14 @@ void do_purge(CHAR_DATA *ch, char *argument)
 		if (victim->level > 1)
 			save_char_obj(victim);
 
-		d = Deref(victim->desc);
+		// The handle is copied before the extract because the character does not
+		// survive it, and resolved after because extract_char routes a switched
+		// connection through do_return, which writes to it.
+		auto connection = victim->desc;
+
 		extract_char(victim, true);
+
+		d = Deref(connection);
 
 		if (d != nullptr)
 			close_socket(d);

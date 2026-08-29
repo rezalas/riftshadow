@@ -118,13 +118,22 @@ char *string_replace(char *orig, char *old, char *newstr)
  ****************************************************************************/
 void string_add(CHAR_DATA *ch, char *argument)
 {
-	// This whole function edits one connection's OLC string buffer; nothing in
-	// it can close the socket, so the connection is read once.
+	// Read once, and read again below wherever a message has been sent since.
+	// An earlier note here said nothing in this function can close the socket.
+	// That is not so: send_to_char reaches the output buffer, and a buffer that
+	// passes its ceiling closes the connection and destroys it. Most of the
+	// touches below already happen before their message, and the two that did
+	// not have been reordered.
 	DESCRIPTOR_DATA *connection = Deref(ch->desc);
 	char buf[MAX_STRING_LENGTH];
 	char obuf[MSL * 2];
 	int len = 0;
 	bool found = false;
+
+	// A character can be in edit mode with no connection left to edit through.
+	if (connection == nullptr)
+		return;
+
 	/*
 	 * Thanks to James Seng
 	 */
@@ -142,14 +151,22 @@ void string_add(CHAR_DATA *ch, char *argument)
 
 		if (!str_cmp(arg1, ".c"))
 		{
-			send_to_char("String cleared.\n\r", ch);
 			**connection->pString = '\0';
+			send_to_char("String cleared.\n\r", ch);
 			return;
 		}
 
 		if (!str_cmp(arg1, ".s"))
 		{
 			send_to_char("String so far:\n\r", ch);
+
+			// The heading has been sent, so the connection is read again before
+			// the string is read through it.
+			connection = Deref(ch->desc);
+
+			if (connection == nullptr)
+				return;
+
 			send_to_char(*connection->pString, ch);
 			return;
 		}
@@ -248,10 +265,10 @@ void string_add(CHAR_DATA *ch, char *argument)
 	 */
 	if (strlen(buf) + strlen(argument) >= (MAX_STRING_LENGTH - 4))
 	{
-		send_to_char("String too long, last line skipped.\n\r", ch);
-
 		/* Force character out of editing mode. */
 		connection->pString = nullptr;
+
+		send_to_char("String too long, last line skipped.\n\r", ch);
 		return;
 	}
 
