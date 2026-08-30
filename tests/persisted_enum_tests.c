@@ -116,3 +116,51 @@ SCENARIO("measuring the gap between two sizes", "[size_difference]")
 		}
 	}
 }
+
+SCENARIO("reading a stored sector", "[persisted_enum]")
+{
+	GIVEN("the value 1,523 rooms in the area files carry")
+	{
+		THEN("it names the absence of a terrain rather than nothing at all")
+		{
+			REQUIRE(read_persisted<SectorType>(0, "sector") == SECT_NONE);
+			REQUIRE(is_named_value<SectorType>(0));
+		}
+	}
+
+	GIVEN("a stored sector the enumeration does not name")
+	{
+		THEN("it survives the trip")
+		{
+			REQUIRE(write_persisted(read_persisted<SectorType>(30, "sector")) == 30);
+		}
+	}
+}
+
+SCENARIO("changing a room's terrain and putting it back", "[sector_offset]")
+{
+	// A room affect that changes terrain stores an offset, not a terrain, and
+	// the room reverts by having the same number taken off again. Conflagration
+	// and glaciate both rely on it, and one of them computes the original
+	// terrain by subtracting the offset before working out the next one.
+	const int Highest = 20;
+
+	GIVEN("every pair of terrains")
+	{
+		THEN("the stored offset turns one into the other, and undoes itself")
+		{
+			for (int from = 0; from <= Highest; from++)
+			{
+				for (int to = 0; to <= Highest; to++)
+				{
+					SectorType was = static_cast<SectorType>(from);
+					SectorType becomes = static_cast<SectorType>(to);
+					int offset = sector_offset(becomes, was);
+
+					REQUIRE(sector_shifted(was, offset) == becomes);
+					REQUIRE(sector_shifted(sector_shifted(was, offset), -offset) == was);
+				}
+			}
+		}
+	}
+}

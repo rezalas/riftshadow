@@ -45,6 +45,17 @@ struct PersistedEnum<Size>
 									 SIZE_HUGE, SIZE_GIANT, SIZE_IMMENSE};
 };
 
+template <>
+struct PersistedEnum<SectorType>
+{
+	static constexpr const char *Family = "SectorType";
+	static constexpr SectorType Named[] = {
+		SECT_NONE, SECT_CITY, SECT_FIELD, SECT_FOREST, SECT_HILLS, SECT_MOUNTAIN,
+		SECT_WATER, SECT_INSIDE, SECT_UNDERWATER, SECT_AIR, SECT_DESERT, SECT_ROAD,
+		SECT_CONFLAGRATION, SECT_BURNING, SECT_TRAIL, SECT_SWAMP, SECT_PARK,
+		SECT_VERTICAL, SECT_ICE, SECT_SNOW, SECT_CAVE};
+};
+
 /// Whether the stored integer is one of the values the family names.
 template <class E>
 bool is_named_value(int raw)

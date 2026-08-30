@@ -1756,7 +1756,7 @@ void do_rstat(CHAR_DATA *ch, char *argument)
 
 	sprintf(buf, "Vnum: %d  Sector: %s  Healing: %d%%  mana: %d%%\n\r",
 		location->vnum,
-		capitalize(sect_table[sect_numlookup(location->sector_type)].name),
+		capitalize(sector_row(location->sector_type)->name),
 		location->heal_rate,
 		location->mana_rate);
 	send_to_char(buf, ch);
@@ -5863,7 +5863,7 @@ void do_rset(CHAR_DATA *ch, char *argument)
 
 	if (!str_prefix(arg2, "sector"))
 	{
-		location->sector_type = value;
+		location->sector_type = static_cast<SectorType>(value);
 		return;
 	}
 

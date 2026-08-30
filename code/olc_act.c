@@ -2390,7 +2390,7 @@ bool redit_show(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 
 	sprintf(buf, "Vnum:       [%5d]\n\rSector:     [%s]\n\r",
 		pRoom->vnum,
-		flag_string_old(sector_flags, pRoom->sector_type));
+		flag_string_old(sector_flags, write_persisted(pRoom->sector_type)));
 	strcat(buf1, buf);
 
 	sprintf(buf, "Cabal:      [%s]\n\r", cabal_table[pRoom->cabal].name);

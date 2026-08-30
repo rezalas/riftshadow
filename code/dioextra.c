@@ -1403,9 +1403,9 @@ void do_finger(CHAR_DATA *ch, char *argument)
 
 		if (sect_time[0] > 0)
 		{
-			sectval[0] = sect_time[SECT_CITY] + sect_time[SECT_INSIDE] + sect_time[SECT_ROAD];
+			sectval[0] = sect_time[sector_index(SECT_CITY)] + sect_time[sector_index(SECT_INSIDE)] + sect_time[sector_index(SECT_ROAD)];
 			perc[0] = (((float)sectval[0] / (float)sect_time[0]) * (float)100);
-			sectval[1] = sect_time[SECT_FIELD] + sect_time[SECT_FOREST] + sect_time[SECT_HILLS] + sect_time[SECT_MOUNTAIN] + sect_time[SECT_DESERT];
+			sectval[1] = sect_time[sector_index(SECT_FIELD)] + sect_time[sector_index(SECT_FOREST)] + sect_time[sector_index(SECT_HILLS)] + sect_time[sector_index(SECT_MOUNTAIN)] + sect_time[sector_index(SECT_DESERT)];
 			perc[1] = (((float)sectval[1] / (float)sect_time[0]) * (float)100);
 			perc[2] = 100 - perc[1] - perc[0];
 			sprintf(buf2, "  Sect:  Civilized %2.1f%% %sWilderness %2.1f%%             Other %2.1f%%\n\r",

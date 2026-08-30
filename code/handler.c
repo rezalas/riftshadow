@@ -3941,7 +3941,9 @@ void affect_modify_room(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *paf, bool fAdd)
 			room->mana_rate += mod;
 			break;
 		case APPLY_ROOM_SECT:
-			room->sector_type += mod;
+			// An affect shifts the terrain by an offset, which is how a room
+			// is set alight and put back.
+			room->sector_type = sector_shifted(room->sector_type, mod);
 			break;
 		default:
 			RS.Logger.Warn("Affect_modify_room: unknown location {}.", paf->location);

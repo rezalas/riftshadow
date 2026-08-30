@@ -477,12 +477,11 @@ void spell_conflagration(int sn, int level, CHAR_DATA *ch, SpellTarget /* vo */,
 		return;
 	}
 
-	if (ch->in_room->sector_type
-		&& (ch->in_room->sector_type == SECT_WATER
-			|| ch->in_room->sector_type == SECT_AIR
-			|| ch->in_room->sector_type == SECT_DESERT
-			|| ch->in_room->sector_type == SECT_INSIDE
-			|| ch->in_room->sector_type == SECT_CITY))
+	if (ch->in_room->sector_type == SECT_WATER
+		|| ch->in_room->sector_type == SECT_AIR
+		|| ch->in_room->sector_type == SECT_DESERT
+		|| ch->in_room->sector_type == SECT_INSIDE
+		|| ch->in_room->sector_type == SECT_CITY)
 	{
 		send_to_char("This room is not flammable.\n\r", ch);
 		return;
@@ -509,7 +508,7 @@ void spell_conflagration(int sn, int level, CHAR_DATA *ch, SpellTarget /* vo */,
 	raf.level = level;
 	raf.duration = 20;
 	raf.location = APPLY_ROOM_SECT;
-	raf.modifier = SECT_CONFLAGRATION - ch->in_room->sector_type;
+	raf.modifier = sector_offset(SECT_CONFLAGRATION, ch->in_room->sector_type);
 	raf.owner = ch->self;
 	raf.end_fun = conflag_burnout;
 	raf.pulse_fun = conflagration_pulse;
@@ -550,7 +549,7 @@ bool conflagrate_room(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *oldaf)
 	if (!found)
 		return false;
 
-	if ((room->sector_type && room->sector_type == SECT_WATER)
+	if ((room->sector_type == SECT_WATER)
 		|| room->sector_type == SECT_AIR
 		|| room->sector_type == SECT_DESERT
 		|| room->sector_type == SECT_INSIDE
@@ -567,7 +566,7 @@ bool conflagrate_room(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *oldaf)
 	raf.level = oldaf->level;
 	raf.duration = 20;
 	raf.location = APPLY_ROOM_SECT;
-	raf.modifier = SECT_CONFLAGRATION - room->sector_type;
+	raf.modifier = sector_offset(SECT_CONFLAGRATION, room->sector_type);
 	raf.owner = oldaf->owner;
 	raf.end_fun = oldaf->end_fun;
 	raf.pulse_fun = conflagration_pulse;
@@ -654,7 +653,7 @@ void conflag_burnout(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *af)
 	raf.level = af->level;
 	raf.duration = 144;
 	raf.location = APPLY_ROOM_SECT;
-	raf.modifier = SECT_DESERT - (room->sector_type - af->modifier);
+	raf.modifier = sector_offset(SECT_DESERT, sector_shifted(room->sector_type, -af->modifier));
 	raf.owner = af->owner;
 	raf.end_fun = nullptr;
 	raf.tick_fun = nullptr;
@@ -1537,7 +1536,7 @@ void spell_earthquake(int sn, int level, CHAR_DATA *ch, [[maybe_unused]] SpellTa
 		return;
 	}
 
-	if ((ch->in_room->sector_type && ch->in_room->sector_type == SECT_WATER)
+	if ((ch->in_room->sector_type == SECT_WATER)
 		|| ch->in_room->sector_type == SECT_AIR)
 	{
 		return;
@@ -2348,7 +2347,7 @@ void spell_flood(int sn, int level, CHAR_DATA *ch, [[maybe_unused]] SpellTarget 
 		raf.level = level;
 		raf.duration = duration;
 		raf.location = APPLY_ROOM_SECT;
-		raf.modifier = SECT_WATER - to_room->sector_type;
+		raf.modifier = sector_offset(SECT_WATER, to_room->sector_type);
 		raf.owner = ch->self;
 		raf.end_fun = flood_recede;
 		raf.tick_fun = nullptr;
@@ -4606,7 +4605,7 @@ void spell_caustic_vapor(int sn, int level, CHAR_DATA *ch, SpellTarget /* vo */,
 		return;
 	}
 
-	if ((ch->in_room->sector_type && ch->in_room->sector_type == SECT_WATER)
+	if ((ch->in_room->sector_type == SECT_WATER)
 		|| ch->in_room->sector_type == SECT_AIR
 		|| ch->in_room->sector_type == SECT_UNDERWATER
 		|| ch->in_room->sector_type == SECT_VERTICAL)
@@ -4731,7 +4730,7 @@ void spell_putrid_air(int /* sn */, int /* level */, CHAR_DATA *ch, SpellTarget 
 {
 	CHAR_DATA *vch, *vch_next;
 
-	if (ch->in_room->sector_type && ch->in_room->sector_type == SECT_UNDERWATER)
+	if (ch->in_room->sector_type == SECT_UNDERWATER)
 	{
 		send_to_char("You cannot cast this here.\n\r", ch);
 		return;
@@ -4766,7 +4765,7 @@ void spell_asphyxiate(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_
 	CHAR_DATA *victim = vo.AsChar();
 	int dam = dice(level, 5);
 
-	if (ch->in_room->sector_type && ch->in_room->sector_type == SECT_UNDERWATER)
+	if (ch->in_room->sector_type == SECT_UNDERWATER)
 	{
 		send_to_char("You cannot cast this here.\n\r", ch);
 		return;
@@ -4792,7 +4791,7 @@ void spell_shroud_of_secrecy(int sn, int level, CHAR_DATA *ch, SpellTarget /* vo
 		return;
 	}
 
-	if (ch->in_room->sector_type && ch->in_room->sector_type == SECT_UNDERWATER)
+	if (ch->in_room->sector_type == SECT_UNDERWATER)
 	{
 		send_to_char("You cannot cast this here.\n\r", ch);
 		return;
@@ -4934,19 +4933,17 @@ void spell_blanket(int sn, int level, CHAR_DATA *ch, [[maybe_unused]] SpellTarge
 		return;
 	}
 
-	if (ch->in_room->sector_type
-		&& (ch->in_room->sector_type == SECT_AIR
-			|| ch->in_room->sector_type == SECT_WATER
-			|| ch->in_room->sector_type == SECT_UNDERWATER
-			|| ch->in_room->sector_type == SECT_VERTICAL))
+	if (ch->in_room->sector_type == SECT_AIR
+		|| ch->in_room->sector_type == SECT_WATER
+		|| ch->in_room->sector_type == SECT_UNDERWATER
+		|| ch->in_room->sector_type == SECT_VERTICAL)
 	{
 		send_to_char("Blanket what??\n\r", ch);
 		return;
 	}
 
-	if (ch->in_room->sector_type
-		&& (ch->in_room->sector_type == SECT_BURNING
-			|| ch->in_room->sector_type == SECT_DESERT))
+	if (ch->in_room->sector_type == SECT_BURNING
+		|| ch->in_room->sector_type == SECT_DESERT)
 	{		
 		send_to_char("Your magic is not powerful enough to create snow here.\n\r", ch);
 		return;
@@ -4971,7 +4968,7 @@ void spell_blanket(int sn, int level, CHAR_DATA *ch, [[maybe_unused]] SpellTarge
 	raf.level = level;
 	raf.duration = 24;
 	raf.location = APPLY_ROOM_SECT;
-	raf.modifier = SECT_SNOW - ch->in_room->sector_type;
+	raf.modifier = sector_offset(SECT_SNOW, ch->in_room->sector_type);
 	raf.owner = ch->self;
 	raf.end_fun = blanket_melt;
 	raf.tick_fun = nullptr;
@@ -5428,7 +5425,7 @@ void spell_frigid_breeze(int /* sn */, int /* level */, CHAR_DATA *ch, SpellTarg
 	CHAR_DATA *vch, *vch_next;
 	int chance;
 
-	if (ch->in_room->sector_type && ch->in_room->sector_type == SECT_UNDERWATER)
+	if (ch->in_room->sector_type == SECT_UNDERWATER)
 	{
 		send_to_char("You cannot cast this here.\n\r", ch);
 		return;
@@ -5482,7 +5479,7 @@ void spell_pure_air(int /* sn */, int /* level */, CHAR_DATA *ch, SpellTarget /*
 	CHAR_DATA *vch;
 	bool cleansed;
 
-	if (ch->in_room->sector_type && ch->in_room->sector_type == SECT_UNDERWATER)
+	if (ch->in_room->sector_type == SECT_UNDERWATER)
 	{
 		send_to_char("You cannot cast this here.\n\r", ch);
 		return;
@@ -5738,7 +5735,7 @@ void spell_glaciate(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /* vo */
 	raf.level = level;
 	raf.duration = 3 + level / 7;
 	raf.location = APPLY_ROOM_SECT;
-	raf.modifier = SECT_ICE - ch->in_room->sector_type;
+	raf.modifier = sector_offset(SECT_ICE, ch->in_room->sector_type);
 	raf.owner = ch->self;
 	raf.end_fun = glaciate_melt;
 	raf.tick_fun = nullptr;

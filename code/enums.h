@@ -1117,11 +1117,25 @@ enum AreaSector : int
 	ARE_SHRINE					= 6,
 };
 
-// Sector (terrain) types, an ordinal in room_index_data::sector_type. Note the
-// deliberate collision: SECT_INSIDE and SECT_UNUSED are both 7. SECT_MAX (21) is
-// a count/sentinel, not a terrain. Wire format - never renumber.
-enum SectorType : int
+// Sector (terrain) types, an ordinal in room_index_data::sector_type. Wire
+// format - never renumber.
+//
+// Two things here are worth knowing before reading a room's terrain.
+//
+// SECT_NONE is 0, which is what a room whose area file says "unused" loads as,
+// because that is the value sect_table's first row carries. 1,523 rooms in 46
+// area files hold it. It matches no terrain, so every test against a SECT_*
+// value is false for those rooms and they cost the least to walk through.
+//
+// SECT_UNUSED is 7, the same value as SECT_INSIDE, and it is not the value
+// above. It reaches nothing but sector_flags, which is the list the room
+// editor offers, so a builder who sets a room's sector to "unused" is setting
+// it to inside. A file that already said "unused" means 0 instead. The two
+// meanings of the word are left as they are here because changing either one
+// changes what a room is.
+enum class SectorType : int
 {
+	SECT_NONE					= 0,
 	SECT_INSIDE					= 7,
 	SECT_CITY					= 1,
 	SECT_FIELD					= 2,
@@ -1143,8 +1157,58 @@ enum SectorType : int
 	SECT_ICE					= 18,
 	SECT_SNOW					= 19,
 	SECT_CAVE					= 20,
-	SECT_MAX					= 21,	// count/sentinel, not a terrain
 };
+
+// How many sector values there are. A count, not a terrain, which is why it is
+// not one of the enumerators: it is an array bound and a loop limit, and a
+// value of the type would be neither.
+constexpr int SECT_MAX = 21;
+
+// The subscript for a per-sector array, such as the time a character has spent
+// in each terrain. Those arrays are SECT_MAX long and indexed by the terrain's
+// own number.
+constexpr int sector_index(SectorType sector)
+{
+	return static_cast<int>(sector);
+}
+
+// A room affect that changes terrain stores an offset rather than a terrain,
+// so that subtracting the same number again puts the room back what it was.
+// These two say which direction is which: sector_offset computes the number to
+// store, sector_shifted applies one.
+constexpr int sector_offset(SectorType to, SectorType from)
+{
+	return static_cast<int>(to) - static_cast<int>(from);
+}
+
+constexpr SectorType sector_shifted(SectorType sector, int offset)
+{
+	return static_cast<SectorType>(static_cast<int>(sector) + offset);
+}
+
+// Reachable unqualified, as the other promoted families are.
+constexpr SectorType SECT_NONE = SectorType::SECT_NONE;
+constexpr SectorType SECT_INSIDE = SectorType::SECT_INSIDE;
+constexpr SectorType SECT_CITY = SectorType::SECT_CITY;
+constexpr SectorType SECT_FIELD = SectorType::SECT_FIELD;
+constexpr SectorType SECT_FOREST = SectorType::SECT_FOREST;
+constexpr SectorType SECT_HILLS = SectorType::SECT_HILLS;
+constexpr SectorType SECT_MOUNTAIN = SectorType::SECT_MOUNTAIN;
+constexpr SectorType SECT_WATER = SectorType::SECT_WATER;
+constexpr SectorType SECT_UNUSED = SectorType::SECT_UNUSED;
+constexpr SectorType SECT_UNDERWATER = SectorType::SECT_UNDERWATER;
+constexpr SectorType SECT_AIR = SectorType::SECT_AIR;
+constexpr SectorType SECT_DESERT = SectorType::SECT_DESERT;
+constexpr SectorType SECT_ROAD = SectorType::SECT_ROAD;
+constexpr SectorType SECT_CONFLAGRATION = SectorType::SECT_CONFLAGRATION;
+constexpr SectorType SECT_BURNING = SectorType::SECT_BURNING;
+constexpr SectorType SECT_TRAIL = SectorType::SECT_TRAIL;
+constexpr SectorType SECT_SWAMP = SectorType::SECT_SWAMP;
+constexpr SectorType SECT_PARK = SectorType::SECT_PARK;
+constexpr SectorType SECT_VERTICAL = SectorType::SECT_VERTICAL;
+constexpr SectorType SECT_ICE = SectorType::SECT_ICE;
+constexpr SectorType SECT_SNOW = SectorType::SECT_SNOW;
+constexpr SectorType SECT_CAVE = SectorType::SECT_CAVE;
 
 // Trap effect ordinal. Wire format - never renumber.
 enum TrapType : int

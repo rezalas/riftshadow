@@ -43,6 +43,7 @@
 #include <iterator>
 #include <algorithm>
 #include "merc.h"
+#include "persisted_enum.h"
 #include "db.h"
 #include "db2.h"
 #include "entity/handles.h"
@@ -3584,6 +3585,9 @@ void load_rooms(FILE *fp)
 			chop(pRoomIndex->name);
 
 		pRoomIndex->description = fread_string(fp);
+		// sect_lookup answers with the row, and the row carries the terrain:
+		// the two are not the same number for every sector. The table's column
+		// is typed, so nothing else can come out of here.
 		pRoomIndex->sector_type = sect_table[sect_lookup(fread_word(fp))].value;
 
 		/* Morg - Valgrind fix. */

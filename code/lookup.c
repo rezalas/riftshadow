@@ -295,7 +295,7 @@ int sect_lookup(const char *name)
 	return 0;
 }
 
-int sect_numlookup(int number)
+int sect_numlookup(SectorType number)
 {
 	int flag;
 
@@ -319,7 +319,7 @@ int sect_numlookup(int number)
 // a value the table does not carry answers with the first row, the way
 // sect_numlookup has always answered.
 //
-const struct sect_type *sector_row(int sector_type)
+const struct sect_type *sector_row(SectorType sector_type)
 {
 	return &sect_table[sect_numlookup(sector_type)];
 }

@@ -142,7 +142,10 @@ struct color_event_type
 struct sect_type
 {
 	char *name;
-	int value;
+	// The terrain this row describes. It is not the row's index: two rows sit
+	// at an index that is not their own value, so reach a row through
+	// sector_row rather than by subscripting the table.
+	SectorType value;
 	int move_cost;
 	int wait;
 };

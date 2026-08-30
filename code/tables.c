@@ -669,7 +669,7 @@ const struct color_event_type color_event[MAX_EVENTS] =
 const struct sect_type sect_table[] =
 {
 	//	keyword,			number				moves	wait
-	{	"unused",			0,					1,		1 },
+	{	"unused",			SECT_NONE,			1,		1 },
 	{	"city",				SECT_CITY,			1,		1 },
 	{	"field",			SECT_FIELD,			2,		1 },
 	{	"forest",			SECT_FOREST,		3,		2 },
@@ -690,7 +690,7 @@ const struct sect_type sect_table[] =
 	{	"ice",				SECT_ICE,			2,		3 },
 	{	"snow",				SECT_SNOW,			6,		2 },
 	{	"cave",				SECT_CAVE,			2,		2 },
-	{	nullptr,			0,					0,		0 }
+	{	nullptr,			SECT_NONE,			0,		0 }
 };
 
 const struct flag_type room_flags[] =
@@ -1298,27 +1298,27 @@ const struct flag_type door_resets[] =
 const struct flag_type sector_flags[] =
 {
 	//	name,				bit,				settable
-	{	"inside",			SECT_INSIDE,		true	},
-	{	"city",				SECT_CITY,			true	},
-	{	"field",			SECT_FIELD,			true	},
-	{	"forest",			SECT_FOREST,		true	},
-	{	"hills",			SECT_HILLS,			true	},
-	{	"mountain",			SECT_MOUNTAIN,		true	},
-	{	"water",			SECT_WATER,			true	},
-	{	"unused",			SECT_UNUSED,		true	},
-	{	"underwater",		SECT_UNDERWATER,	true	},
-	{	"air",				SECT_AIR,			true	},
-	{	"desert",			SECT_DESERT,		true	},
-	{	"road",				SECT_ROAD,			true	},
-	{	"conflagration",	SECT_CONFLAGRATION,	true	},
-	{	"burning",			SECT_BURNING,		true	},
-	{	"trail",			SECT_TRAIL,			true	},
-	{	"swamp",			SECT_SWAMP,			true	},
-	{	"park",				SECT_PARK,			true	},
-	{	"vertical",			SECT_VERTICAL,		true	},
-	{	"ice",				SECT_ICE,			true	},
-	{	"snow",				SECT_SNOW,			true	},
-	{	"cave",				SECT_CAVE,			true	},
+	{	"inside",			write_persisted(SECT_INSIDE),		true	},
+	{	"city",				write_persisted(SECT_CITY),			true	},
+	{	"field",			write_persisted(SECT_FIELD),			true	},
+	{	"forest",			write_persisted(SECT_FOREST),		true	},
+	{	"hills",			write_persisted(SECT_HILLS),			true	},
+	{	"mountain",			write_persisted(SECT_MOUNTAIN),		true	},
+	{	"water",			write_persisted(SECT_WATER),			true	},
+	{	"unused",			write_persisted(SECT_UNUSED),		true	},
+	{	"underwater",		write_persisted(SECT_UNDERWATER),	true	},
+	{	"air",				write_persisted(SECT_AIR),			true	},
+	{	"desert",			write_persisted(SECT_DESERT),		true	},
+	{	"road",				write_persisted(SECT_ROAD),			true	},
+	{	"conflagration",	write_persisted(SECT_CONFLAGRATION),	true	},
+	{	"burning",			write_persisted(SECT_BURNING),		true	},
+	{	"trail",			write_persisted(SECT_TRAIL),			true	},
+	{	"swamp",			write_persisted(SECT_SWAMP),			true	},
+	{	"park",				write_persisted(SECT_PARK),			true	},
+	{	"vertical",			write_persisted(SECT_VERTICAL),		true	},
+	{	"ice",				write_persisted(SECT_ICE),			true	},
+	{	"snow",				write_persisted(SECT_SNOW),			true	},
+	{	"cave",				write_persisted(SECT_CAVE),			true	},
 	{	nullptr,			0,					0		}
 };
 

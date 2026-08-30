@@ -34,7 +34,7 @@ struct room_index_data
 	short alt_description_cond;
 	short vnum;
 	long room_flags[MAX_BITVECTOR];
-	short sector_type;
+	SectorType sector_type;
 	short heal_rate;
 	short mana_rate;
 	short cabal;

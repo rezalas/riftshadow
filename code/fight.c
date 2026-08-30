@@ -9204,7 +9204,7 @@ int check_terrain_mastery(CHAR_DATA *ch)
 		if (total == 0)
 			return 0;
 
-		sect_per = (float)(ch->pcdata->sect_time[ch->in_room->sector_type]) / (float)total * 100;
+		sect_per = (float)(ch->pcdata->sect_time[sector_index(ch->in_room->sector_type)]) / (float)total * 100;
 
 		check_improve(ch, gsn_terrain_mastery, true, 4);
 		return (int)(sect_per / (10 - 0.36 * (ch->mod_stat[STAT_INT])));

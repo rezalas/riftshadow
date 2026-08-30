@@ -1439,8 +1439,8 @@ SCENARIO("finding the row that describes a sector", "[sector_row]")
 	{
 		THEN("the first row answers, rather than a read past the end")
 		{
-			REQUIRE(sector_row(999) == &sect_table[0]);
-			REQUIRE(sector_row(-3) == &sect_table[0]);
+			REQUIRE(sector_row(static_cast<SectorType>(999)) == &sect_table[0]);
+			REQUIRE(sector_row(static_cast<SectorType>(-3)) == &sect_table[0]);
 		}
 	}
 }
@@ -1454,7 +1454,7 @@ SCENARIO("a sector name survives being written and read back", "[sect_table]")
 			for (int row = 0; sect_table[row].name != nullptr; row++)
 			{
 				// What the loader does with the word in the file.
-				int loaded = sect_table[sect_lookup(sect_table[row].name)].value;
+				SectorType loaded = sect_table[sect_lookup(sect_table[row].name)].value;
 
 				// What the area writer puts back.
 				REQUIRE(strcmp(sector_row(loaded)->name, sect_table[row].name) == 0);

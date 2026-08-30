@@ -244,7 +244,7 @@ ROOM_INDEX_DATA *new_room_index(void)
 
 	zero_vector(pRoom->room_flags);
 
-	pRoom->sector_type = 0;
+	pRoom->sector_type = SECT_NONE;
 	pRoom->heal_rate = 100;
 	pRoom->mana_rate = 100;
 	pRoom->cabal = 0;

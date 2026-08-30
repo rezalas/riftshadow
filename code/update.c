@@ -1302,7 +1302,7 @@ void char_update(void)
 		if (!is_npc(ch) && ch->in_room)
 		{
 			ch->pcdata->sect_time[0]++;
-			ch->pcdata->sect_time[ch->in_room->sector_type]++;
+			ch->pcdata->sect_time[sector_index(ch->in_room->sector_type)]++;
 		}
 
 		if (!is_npc(ch) && ch->pcdata->save_timer)

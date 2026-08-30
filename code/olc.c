@@ -567,7 +567,7 @@ void redit(CHAR_DATA *ch, char *argument)
 
 	if ((value = flag_value(sector_flags, command)) != NO_FLAG)
 	{
-		pRoom->sector_type = value;
+		pRoom->sector_type = static_cast<SectorType>(value);
 
 		SET_BIT(pArea->area_flags, AREA_CHANGED);
 		send_to_char("Sector type set.\n\r", ch);
