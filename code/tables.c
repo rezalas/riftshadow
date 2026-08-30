@@ -565,15 +565,17 @@ const struct flag_type comm_flags[] =
 	{	nullptr,		0,					0		}
 };
 
+// A mob's barred entry is stored in the area file by the name in this table
+// rather than by the number beside it, so the numbers are free to move.
 const struct flag_type criterion_flags[] =
 {
-	//	name			bit				settable
-	{	"class",		BAR_CLASS,		true	},
-	{	"cabal",		BAR_CABAL,		true	},
-	{	"size",			BAR_SIZE,		true	},
-	{	"tattoo",		BAR_TATTOO,		true	},
-	{	"level",		BAR_LEVEL,		true	},
-	{	nullptr,		0,				true	}
+	//	name			bit										settable
+	{	"class",		static_cast<long>(BAR_CLASS),			true	},
+	{	"cabal",		static_cast<long>(BAR_CABAL),			true	},
+	{	"size",			static_cast<long>(BAR_SIZE),			true	},
+	{	"tattoo",		static_cast<long>(BAR_TATTOO),			true	},
+	{	"level",		static_cast<long>(BAR_LEVEL),			true	},
+	{	nullptr,		0,										true	}
 };
 
 const struct flag_type trap_table[] =

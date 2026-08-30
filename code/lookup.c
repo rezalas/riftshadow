@@ -452,3 +452,76 @@ char *chaldir(int dir)
 	else
 		return "null";
 }
+
+/// The word an area file and the editor spell a criterion with. This one is a
+/// flag table rather than a switch, because the editor offers the same table to
+/// whoever is typing the entry in.
+const char *bar_criterion_name(BarCriterion type)
+{
+	return flag_name_lookup(static_cast<long>(type), criterion_flags);
+}
+
+/// The word an area file and the editor spell a comparison with. Total over the
+/// family, so a value that reaches here always produces a word rather than
+/// leaving the caller's buffer as it found it.
+const char *bar_comparison_name(BarComparison comparison)
+{
+	switch (comparison)
+	{
+		case BarComparison::BAR_EQUAL_TO:
+			return "EQUALTO";
+		case BarComparison::BAR_LESS_THAN:
+			return "LESSTHAN";
+		case BarComparison::BAR_GREATER_THAN:
+			return "GREATERTHAN";
+	}
+
+	return "EQUALTO";
+}
+
+/// Empty when the word is not one of the three. There is no comparison value
+/// that means "not a comparison", so the caller has to answer for it.
+std::optional<BarComparison> bar_comparison_lookup(const char *name)
+{
+	if (!str_cmp(name, "EQUALTO"))
+		return BarComparison::BAR_EQUAL_TO;
+
+	if (!str_cmp(name, "LESSTHAN"))
+		return BarComparison::BAR_LESS_THAN;
+
+	if (!str_cmp(name, "GREATERTHAN"))
+		return BarComparison::BAR_GREATER_THAN;
+
+	return {};
+}
+
+/// The word an area file and the editor spell a message style with.
+const char *bar_message_name(BarMessage msg_type)
+{
+	switch (msg_type)
+	{
+		case BarMessage::BAR_SAY:
+			return "SAY";
+		case BarMessage::BAR_ECHO:
+			return "ECHO";
+		case BarMessage::BAR_EMOTE:
+			return "EMOTE";
+	}
+
+	return "SAY";
+}
+
+/// Empty when the word is not one of the three.
+std::optional<BarMessage> bar_message_lookup(const char *name)
+{
+	if (!str_cmp(name, "SAY"))
+		return BarMessage::BAR_SAY;
+
+	if (!str_cmp(name, "EMOTE"))
+		return BarMessage::BAR_EMOTE;
+
+	if (!str_cmp(name, "ECHO"))
+		return BarMessage::BAR_ECHO;
+
+	return {};
+}

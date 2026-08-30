@@ -798,40 +798,34 @@ void load_mobs(FILE *fp)
 					bugout("Mobile has multiple barred entries.");
 
 				bar = new BARRED_DATA;
-				bar->type = flag_lookup(fread_word(fp), criterion_flags);
 
-				if (bar->type == NO_FLAG)
+				int criterion = flag_lookup(fread_word(fp), criterion_flags);
+
+				if (criterion == NO_FLAG)
 					bugout("Invalid barred entry type.");
 
+				bar->type = static_cast<BarCriterion>(criterion);
+
 				word = fread_word(fp);
-				bar->comparison = -1;
+				auto comparison = bar_comparison_lookup(word);
 
-				if (!str_cmp(word, "EQUALTO"))
-					bar->comparison = BAR_EQUAL_TO;
-
-				if (!str_cmp(word, "LESSTHAN"))
-					bar->comparison = BAR_LESS_THAN;
-
-				if (!str_cmp(word, "GREATERTHAN"))
-					bar->comparison = BAR_GREATER_THAN;
-
-				if (bar->comparison < 0)
+				if (!comparison)
 					bugout("Invalid comparison in barred entry.");
+
+				bar->comparison = comparison.value();
 
 				bar->value = fread_number(fp);
 				bar->vnum = fread_number(fp);
-				bar->msg_type = -1;
 				word = fread_word(fp);
+				auto msg_type = bar_message_lookup(word);
 
-				if (!str_cmp(word, "SAY"))
-					bar->msg_type = BAR_SAY;
+				if (!msg_type)
+					bugout("Invalid message type in barred entry.");
 
-				if (!str_cmp(word, "EMOTE"))
-					bar->msg_type = BAR_EMOTE;
+				bar->msg_type = msg_type.value();
 
-				if (!str_cmp(word, "ECHO"))
+				if (bar->msg_type == BAR_ECHO)
 				{
-					bar->msg_type = BAR_ECHO;
 					bar->message = fread_string(fp);
 					bar->message_two = fread_string(fp);
 
@@ -841,9 +835,6 @@ void load_mobs(FILE *fp)
 					pMobIndex->barred_entry = bar;
 					continue;
 				}
-
-				if (bar->msg_type < 0)
-					bugout("Invalid message type in barred entry.");
 
 				bar->message = fread_string(fp);
 				pMobIndex->barred_entry = bar;

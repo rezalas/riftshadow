@@ -2999,7 +2999,7 @@ void do_mstat(CHAR_DATA *ch, char *argument)
 	if (is_npc(victim) && victim->pIndexData->barred_entry)
 	{
 		barred = get_room_index(victim->pIndexData->barred_entry->vnum);
-		i = victim->pIndexData->barred_entry->comparison;
+		BarComparison comparison = victim->pIndexData->barred_entry->comparison;
 
 		if (!barred)
 			bugout("Error: No room for barred entry data was found.");
@@ -3007,24 +3007,24 @@ void do_mstat(CHAR_DATA *ch, char *argument)
 		sprintf(buf, "Mobile bars entry to %s (%d) if %s is not %s %d.\n\r",
 			barred->name,
 			barred->vnum,
-			criterion_flags[victim->pIndexData->barred_entry->type].name,
-			i == BAR_EQUAL_TO
+			bar_criterion_name(victim->pIndexData->barred_entry->type),
+			comparison == BAR_EQUAL_TO
 				? "equal to"
-				: i == BAR_LESS_THAN ? "less than" : i == BAR_GREATER_THAN ? "greater than" : "unknown",
+				: comparison == BAR_LESS_THAN ? "less than" : comparison == BAR_GREATER_THAN ? "greater than" : "unknown",
 			victim->pIndexData->barred_entry->value);
 
 		send_to_char(buf, ch);
 
-		i = victim->pIndexData->barred_entry->msg_type;
+		BarMessage msg_type = victim->pIndexData->barred_entry->msg_type;
 
 		sprintf(buf, "Mobile forbids access by %s %s%s\n\r",
-			i == BAR_SAY ? "saying" : i == BAR_ECHO ? "echoing" : i == BAR_EMOTE ? "emoting" : "unknown",
+			msg_type == BAR_SAY ? "saying" : msg_type == BAR_ECHO ? "echoing" : msg_type == BAR_EMOTE ? "emoting" : "unknown",
 			victim->pIndexData->barred_entry->message,
-			i == BAR_ECHO ? " to the person." : "");
+			msg_type == BAR_ECHO ? " to the person." : "");
 
 		send_to_char(buf, ch);
 
-		if (i == BAR_ECHO && victim->pIndexData->barred_entry->message_two)
+		if (msg_type == BAR_ECHO && victim->pIndexData->barred_entry->message_two)
 		{
 			sprintf(buf, "Mobile forbids access by echoing %s to the room excluding the person.\n\r",
 				victim->pIndexData->barred_entry->message_two);

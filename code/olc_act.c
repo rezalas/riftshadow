@@ -5503,7 +5503,6 @@ bool medit_optional(CHAR_DATA *ch, char *argument)
 	char arg5[MSL], arg6[MSL], arg7[MSL];
 	int sn, bit, i;
 	bool added = false;
-	BARRED_DATA *bar = nullptr;
 
 	EDIT_MOB(ch, pMob);
 
@@ -5569,14 +5568,12 @@ bool medit_optional(CHAR_DATA *ch, char *argument)
 	}
 	else if (arg1[0] == 'B' || arg1[0] == 'b')
 	{
-		bar = new BARRED_DATA();
-
 		if (pMob->barred_entry)
 		{
 			if (!str_cmp(arg2, "delete"))
 			{
-				pMob->barred_entry = nullptr;
 				delete pMob->barred_entry;
+				pMob->barred_entry = nullptr;
 				send_to_char("Barred entry removed.\n\r", ch);
 				return false;
 			}
@@ -5587,37 +5584,35 @@ bool medit_optional(CHAR_DATA *ch, char *argument)
 			}
 		}
 
-		bar->type = flag_lookup(arg2, criterion_flags);
+		// Owned here until the mob takes it, so the seven ways out below stop
+		// leaking the entry they gave up on.
+		auto bar = std::make_unique<BARRED_DATA>();
 
-		if (bar->type == NO_FLAG)
+		int criterion = flag_lookup(arg2, criterion_flags);
+
+		if (criterion == NO_FLAG)
 		{
 			send_to_char("Invalid Bar Entry Type.\n\r", ch);
 			return false;
 		}
 
-		bar->comparison = -1;
+		bar->type = static_cast<BarCriterion>(criterion);
 
-		if (!str_cmp(arg3, "EQUALTO") || !str_cmp(arg3, "equalto"))
-		{
-			bar->comparison = BAR_EQUAL_TO;
-		}
-		else if (!str_cmp(arg3, "LESSTHAN") || !str_cmp(arg3, "lessthan"))
-		{
-			bar->comparison = BAR_LESS_THAN;
-		}
-		else if (!str_cmp(arg3, "GREATERTHAN") || !str_cmp(arg3, "greaterthan"))
-		{
-			bar->comparison = BAR_GREATER_THAN;
-		}
-		else
+		auto comparison = bar_comparison_lookup(arg3);
+
+		if (!comparison)
 		{
 			send_to_char("Not a valid operator.\n\r", ch);
 			return false;
 		}
 
+		bar->comparison = comparison.value();
+
 		// A barred entry holds either a class or a plain number, depending on
 		// what it bars on, and -1 is how it says the word was not understood.
-		if (bar->type == 1)
+		// Everything else this bars on is already a number: a cabal, a size, a
+		// level, an object vnum.
+		if (bar->type == BAR_CLASS)
 			bar->value = write_persisted(CClass::Lookup(arg4).value_or(static_cast<CharClass>(-1)));
 		else
 			bar->value = atoi(arg4);
@@ -5636,35 +5631,34 @@ bool medit_optional(CHAR_DATA *ch, char *argument)
 			return false;
 		}
 
-		if (!str_cmp(arg6, "SAY") || !str_cmp(arg6, "say"))
-		{
-			bar->msg_type = BAR_SAY;
-		}
-		else if (!str_cmp(arg6, "EMOTE") || !str_cmp(arg6, "emote"))
-		{
-			bar->msg_type = BAR_EMOTE;
-		}
-		else if (!str_cmp(arg6, "ECHO") || !str_cmp(arg6, "echo"))
-		{
-			argument = one_argument(argument, arg7);
+		auto msg_type = bar_message_lookup(arg6);
 
-			bar->msg_type = BAR_ECHO;
-			bar->message = palloc_string(arg7);
-			bar->message_two = palloc_string(argument);
-
-			if (!str_cmp(bar->message_two, ""))
-				bar->message_two = nullptr;
-
-			pMob->barred_entry = bar;
-		}
-		else
+		if (!msg_type)
 		{
 			send_to_char("Not a valid message type.\n\r", ch);
 			return false;
 		}
 
-		bar->message = palloc_string(argument);
-		pMob->barred_entry = bar;
+		bar->msg_type = msg_type.value();
+
+		if (bar->msg_type == BAR_ECHO)
+		{
+			// An echo entry carries two messages: the first word group goes to
+			// the mover and the rest goes to the room.
+			argument = one_argument(argument, arg7);
+
+			bar->message = palloc_string(arg7);
+			bar->message_two = palloc_string(argument);
+
+			if (!str_cmp(bar->message_two, ""))
+				bar->message_two = nullptr;
+		}
+		else
+		{
+			bar->message = palloc_string(argument);
+		}
+
+		pMob->barred_entry = bar.release();
 		send_to_char("Barred exit added.\n\r", ch);
 		return true;
 	}
@@ -5865,7 +5859,7 @@ bool medit_class(CHAR_DATA *ch, char *argument)
 bool medit_show(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	MOB_INDEX_DATA *pMob;
-	char buf[MAX_STRING_LENGTH], msg_type[MSL], comparison[MSL];
+	char buf[MAX_STRING_LENGTH];
 	int i;
 
 	EDIT_MOB(ch, pMob);
@@ -6045,36 +6039,10 @@ bool medit_show(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 		sprintf(buf, "Optional: Barred Exit:\n\r");
 		send_to_char(buf, ch);
 
-		switch (pMob->barred_entry->comparison)
-		{
-			case BAR_EQUAL_TO:
-				sprintf(comparison, "EQUALTO");
-				break;
-			case BAR_LESS_THAN:
-				sprintf(comparison, "LESSTHAN");
-				break;
-			case BAR_GREATER_THAN:
-				sprintf(comparison, "GREATERTHAN");
-				break;
-		}
-
-		switch (pMob->barred_entry->msg_type)
-		{
-			case BAR_SAY:
-				sprintf(msg_type, "SAY");
-				break;
-			case BAR_EMOTE:
-				sprintf(msg_type, "EMOTE");
-				break;
-			case BAR_ECHO:
-				sprintf(msg_type, "ECHO");
-				break;
-		}
-
-		sprintf(buf, " Check Type:   [%s]\n\r", flag_name_lookup(pMob->barred_entry->type, criterion_flags));
+		sprintf(buf, " Check Type:   [%s]\n\r", bar_criterion_name(pMob->barred_entry->type));
 		send_to_char(buf, ch);
 
-		auto buffer = fmt::format(" Comparison:   [{}]\n\r", comparison); //TODO: change the rest of the sprintf calls to format
+		auto buffer = fmt::format(" Comparison:   [{}]\n\r", bar_comparison_name(pMob->barred_entry->comparison)); //TODO: change the rest of the sprintf calls to format
 		send_to_char(buffer.c_str(), ch);
 
 		sprintf(buf, " Value:        [%d]\n\r", pMob->barred_entry->value);
@@ -6083,7 +6051,7 @@ bool medit_show(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 		sprintf(buf, " Target Vnum:  [%d]\n\r", pMob->barred_entry->vnum);
 		send_to_char(buf, ch);
 
-		buffer = fmt::format(" Message Type: [{}]\n\r", msg_type);
+		buffer = fmt::format(" Message Type: [{}]\n\r", bar_message_name(pMob->barred_entry->msg_type));
 		send_to_char(buffer.c_str(), ch);
 
 		if (pMob->barred_entry->msg_type == BAR_ECHO)

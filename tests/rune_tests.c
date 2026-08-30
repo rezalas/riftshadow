@@ -44,7 +44,7 @@ namespace
 
 	// apply_rune copies its argument into a rune rune_list owns, so the caller's
 	// struct is a template rather than the thing that ends up on the lists.
-	RUNE_DATA *PlaceRuneOnObj(OBJ_DATA *obj, int type, int trigger, CHAR_DATA *owner = nullptr)
+	RUNE_DATA *PlaceRuneOnObj(OBJ_DATA *obj, int type, RuneTrigger trigger, CHAR_DATA *owner = nullptr)
 	{
 		RUNE_DATA temp;
 

@@ -295,10 +295,12 @@ struct rune_data
 	// it can outlive the moment it was cast in, and nothing has ever cleared
 	// this, so every reader has to cope with the caster being gone.
 	Handle<CHAR_DATA> owner;
-	int target_type;
-	int trigger_type;
+	RuneTarget target_type = RuneTarget::RUNE_TO_WEAPON;
+	RuneTrigger trigger_type = RuneTrigger::RUNE_TRIGGER_ENTRY;
 	int level;
 	int duration;
+	// The skill number of the spell the rune carries, not one of the RUNE_
+	// families. Nothing else in this struct is a skill number.
 	int type;
 	int extra;
 	int drawn_in;
@@ -341,13 +343,15 @@ struct help_data
 
 struct barred_data
 {
-	short type;			// Bar on basis of guild.. or?
-	short comparison;	// less than greater than = to
-	short value;		// value allowed in
-	short vnum;			// Vnum it bars entry to
-	short msg_type;		// echo/say/emote
-	char *message;		// message when access is barred
-	char *message_two;	// room message for echo type
+	BarCriterion type = BarCriterion::BAR_CLASS;		// what the mover is judged on
+	BarComparison comparison = BarComparison::BAR_EQUAL_TO;	// less than, greater than, equal to
+	short value = 0;									// value allowed in
+	short vnum = 0;										// vnum it bars entry to
+	BarMessage msg_type = BarMessage::BAR_SAY;			// echo/say/emote
+	char *message = nullptr;							// message when access is barred
+	// Only an echo entry has one, and the area writer reads this to decide
+	// whether to write it, so it has to be readable for the other two styles.
+	char *message_two = nullptr;						// room message for echo type
 };
 
 

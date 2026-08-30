@@ -34,8 +34,10 @@
 #ifndef LOOKUP_H
 #define LOOKUP_H
 
+#include <optional>
 #include <string>
 
+#include "enums.h"
 #include "entity/fwd.h"
 
 struct flag_type;		// code/tables.h
@@ -63,6 +65,14 @@ int material_lookup (const char *name);
 int sect_lookup (const char *name);
 int sect_numlookup (SectorType number);
 const struct sect_type *sector_row (SectorType sector_type);
+/// The two barred-entry word families. A mob's barred entry is stored in the
+/// area file by name and typed in by name in the editor, so both directions of
+/// each family answer from one place instead of four.
+const char *bar_criterion_name (BarCriterion type);
+const char *bar_comparison_name (BarComparison comparison);
+std::optional<BarComparison> bar_comparison_lookup (const char *name);
+const char *bar_message_name (BarMessage msg_type);
+std::optional<BarMessage> bar_message_lookup (const char *name);
 int cabal_lookup  (const char *name);
 int position_lookup	(const char *name);
 int sex_lookup (const char *name);

@@ -248,6 +248,27 @@ static_assert(!std::is_convertible_v<AffectWhere, ObjAffectWhere>, "a character 
 static_assert(!std::is_convertible_v<RoomAffectWhere, AreaAffectWhere>, "a room affect is not an area affect");
 static_assert(!std::is_convertible_v<ObjAffectWhere, AffectWhere>, "an object affect is not a character affect");
 
+// The three families a mob's barred entry stores in three adjacent fields, all
+// spelled BAR_ and all starting at zero. The criterion says which of the
+// mover's numbers is being compared, so a comparison sitting in it reads as a
+// perfectly plausible criterion.
+static_assert(!std::is_convertible_v<BarCriterion, int>, "a bar criterion is not a number");
+static_assert(!std::is_convertible_v<BarComparison, int>, "a bar comparison is not a number");
+static_assert(!std::is_convertible_v<BarMessage, int>, "a bar message style is not a number");
+static_assert(!std::is_convertible_v<BarCriterion, BarComparison>, "a criterion is not a comparison");
+static_assert(!std::is_convertible_v<BarComparison, BarMessage>, "a comparison is not a message style");
+static_assert(!std::is_convertible_v<BarMessage, BarCriterion>, "a message style is not a criterion");
+
+// A rune's target says what kind of thing placed_on points at, so the wrong
+// value here is a cast to the wrong type rather than a wrong answer. The
+// trigger and the RUNE_ masks collide with it from one upwards.
+static_assert(!std::is_convertible_v<RuneTarget, int>, "a rune target is not a number");
+static_assert(!std::is_convertible_v<RuneTrigger, int>, "a rune trigger is not a number");
+static_assert(!std::is_convertible_v<RuneTarget, RuneTrigger>, "a rune target is not a trigger");
+static_assert(!std::is_convertible_v<RuneTrigger, RuneTarget>, "a rune trigger is not a target");
+static_assert(!std::is_convertible_v<RuneMask, RuneTarget>, "a rune mask is not a rune target");
+static_assert(!std::is_convertible_v<RuneMask, RuneTrigger>, "a rune mask is not a rune trigger");
+
 SCENARIO("the values behind the hit arguments", "[hit_flags]")
 {
 	GIVEN("the two flag families")

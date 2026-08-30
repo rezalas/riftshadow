@@ -266,38 +266,12 @@ void save_mobile(FILE *fp, MOB_INDEX_DATA *pMobIndex)
 
 	if (pMobIndex->barred_entry)
 	{
-		switch (pMobIndex->barred_entry->comparison)
-		{
-			case BAR_EQUAL_TO:
-				sprintf(buf, "EQUALTO");
-				break;
-			case BAR_LESS_THAN:
-				sprintf(buf, "LESSTHAN");
-				break;
-			case BAR_GREATER_THAN:
-				sprintf(buf, "GREATERTHAN");
-				break;
-		}
-
-		switch (pMobIndex->barred_entry->msg_type)
-		{
-			case BAR_SAY:
-				sprintf(buf2, "SAY");
-				break;
-			case BAR_EMOTE:
-				sprintf(buf2, "EMOTE");
-				break;
-			case BAR_ECHO:
-				sprintf(buf2, "ECHO");
-				break;
-		}
-
 		fprintf(fp, "B %s %s %d %d %s %s~\n%s%s",
-			flag_name_lookup(pMobIndex->barred_entry->type, criterion_flags),
-			buf,
+			bar_criterion_name(pMobIndex->barred_entry->type),
+			bar_comparison_name(pMobIndex->barred_entry->comparison),
 			pMobIndex->barred_entry->value,
 			pMobIndex->barred_entry->vnum,
-			buf2,
+			bar_message_name(pMobIndex->barred_entry->msg_type),
 			pMobIndex->barred_entry->message,
 			(pMobIndex->barred_entry->message_two
 				&& pMobIndex->barred_entry->msg_type == BAR_ECHO) ? pMobIndex->barred_entry->message_two : "",

@@ -4425,7 +4425,9 @@ bool check_barred(CHAR_DATA *ch, ROOM_INDEX_DATA *to_room)
 				if (!tattoo && blocker->pIndexData->barred_entry->value)
 					return bar_entry(ch, blocker, to_room);
 
-				field = tattoo->pIndexData->vnum;
+				// A mob that bars on tattoo vnum 0 lets anyone through, so a
+				// mover with no brand reaches here with nothing to read.
+				field = tattoo != nullptr ? tattoo->pIndexData->vnum : 0;
 			}
 
 			if (blocker->pIndexData->barred_entry->type == BAR_CLASS
@@ -4454,9 +4456,11 @@ bool check_barred(CHAR_DATA *ch, ROOM_INDEX_DATA *to_room)
 bool bar_entry(CHAR_DATA *ch, CHAR_DATA *blocker, ROOM_INDEX_DATA *to_room)
 {
 	char buf[MAX_STRING_LENGTH];
-	auto str = palloc_string(blocker->pIndexData->barred_entry->message);
 
-	parse_bar(buf, sizeof(buf), str, ch, blocker, to_room);
+	// The message is read, not written, and it belongs to the mob's prototype
+	// for as long as the area is loaded. The copy this used to take was never
+	// released, so every refusal leaked one.
+	parse_bar(buf, sizeof(buf), blocker->pIndexData->barred_entry->message, ch, blocker, to_room);
 
 	if (blocker->pIndexData->barred_entry->msg_type == BAR_SAY)
 		do_say(blocker, buf);
@@ -4474,8 +4478,7 @@ bool bar_entry(CHAR_DATA *ch, CHAR_DATA *blocker, ROOM_INDEX_DATA *to_room)
 		if (blocker->pIndexData->barred_entry->message_two)
 		{
 			char buf2[MAX_STRING_LENGTH];
-			auto strtwo = palloc_string(blocker->pIndexData->barred_entry->message_two);
-			parse_bar(buf2, sizeof(buf2), strtwo, ch, blocker, to_room);
+			parse_bar(buf2, sizeof(buf2), blocker->pIndexData->barred_entry->message_two, ch, blocker, to_room);
 
 			buf2[0] = UPPER(buf2[0]);
 

@@ -11,6 +11,7 @@ set_target_properties(TestMain PROPERTIES LINKER_LANGUAGE CXX)
 
 set(TEST_SRC_FILES act_obj_tests.c
 	ban_tests.c
+	barred_tests.c
 	entity_storage_tests.c
 	bitflag_tests.c
 	bug_tests.c

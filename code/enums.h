@@ -147,9 +147,12 @@ constexpr ActTarget TO_GROUP = ActTarget::TO_GROUP;
 constexpr ActTarget TO_NOTGROUP = ActTarget::TO_NOTGROUP;
 constexpr ActTarget TO_AREA = ActTarget::TO_AREA;
 
-// Door-bar restriction criterion. Three separate BAR_ families follow, colliding
-// in value; each is its own enum. Wire format - never renumber.
-enum BarCriterion : int
+// Door-bar restriction criterion, and it says which of the mover's numbers
+// barred_data::value is being compared against. Three separate BAR_ families
+// follow and all three start at zero, so a value from any of them reads as a
+// member of the other two. The area file stores all three by name rather than
+// by number, so these can be renumbered freely.
+enum class BarCriterion : int
 {
 	BAR_CLASS					= 0,
 	BAR_CABAL					= 1,
@@ -158,21 +161,35 @@ enum BarCriterion : int
 	BAR_LEVEL					= 4,
 };
 
+constexpr BarCriterion BAR_CLASS = BarCriterion::BAR_CLASS;
+constexpr BarCriterion BAR_CABAL = BarCriterion::BAR_CABAL;
+constexpr BarCriterion BAR_SIZE = BarCriterion::BAR_SIZE;
+constexpr BarCriterion BAR_TATTOO = BarCriterion::BAR_TATTOO;
+constexpr BarCriterion BAR_LEVEL = BarCriterion::BAR_LEVEL;
+
 // Bar comparison operator.
-enum BarComparison : int
+enum class BarComparison : int
 {
 	BAR_EQUAL_TO				= 0,
 	BAR_LESS_THAN				= 1,
 	BAR_GREATER_THAN			= 2,
 };
 
+constexpr BarComparison BAR_EQUAL_TO = BarComparison::BAR_EQUAL_TO;
+constexpr BarComparison BAR_LESS_THAN = BarComparison::BAR_LESS_THAN;
+constexpr BarComparison BAR_GREATER_THAN = BarComparison::BAR_GREATER_THAN;
+
 // Bar rejection-message style.
-enum BarMessage : int
+enum class BarMessage : int
 {
 	BAR_SAY						= 0,
 	BAR_ECHO					= 1,
 	BAR_EMOTE					= 2,
 };
+
+constexpr BarMessage BAR_SAY = BarMessage::BAR_SAY;
+constexpr BarMessage BAR_ECHO = BarMessage::BAR_ECHO;
+constexpr BarMessage BAR_EMOTE = BarMessage::BAR_EMOTE;
 
 // Primary-stat index into char_data::perm_stat[] / mod_stat[]. Wire format -
 // rename freely, never renumber.
@@ -244,9 +261,11 @@ constexpr AffectWhere TO_RESIST = AffectWhere::TO_RESIST;
 constexpr AffectWhere TO_VULN = AffectWhere::TO_VULN;
 constexpr AffectWhere TO_WEAPON = AffectWhere::TO_WEAPON;
 
-// What a rune is applied to - an ordinal. Separate family from RUNE_TRIGGER_*
-// and the RUNE_* masks below (all three collide in value).
-enum RuneTarget : int
+// What a rune is applied to, and it also says which kind of thing rune_data's
+// placed_on points at. Separate family from RUNE_TRIGGER_* and the RUNE_* masks
+// below: all three collide in value, so the wrong one reads as a plausible
+// member of any of the others.
+enum class RuneTarget : int
 {
 	RUNE_TO_WEAPON				= 0,
 	RUNE_TO_ARMOR				= 1,
@@ -254,12 +273,20 @@ enum RuneTarget : int
 	RUNE_TO_ROOM				= 3,
 };
 
+constexpr RuneTarget RUNE_TO_WEAPON = RuneTarget::RUNE_TO_WEAPON;
+constexpr RuneTarget RUNE_TO_ARMOR = RuneTarget::RUNE_TO_ARMOR;
+constexpr RuneTarget RUNE_TO_PORTAL = RuneTarget::RUNE_TO_PORTAL;
+constexpr RuneTarget RUNE_TO_ROOM = RuneTarget::RUNE_TO_ROOM;
+
 // When a rune fires - an ordinal.
-enum RuneTrigger : int
+enum class RuneTrigger : int
 {
 	RUNE_TRIGGER_ENTRY			= 0,
 	RUNE_TRIGGER_EXIT			= 1,
 };
+
+constexpr RuneTrigger RUNE_TRIGGER_ENTRY = RuneTrigger::RUNE_TRIGGER_ENTRY;
+constexpr RuneTrigger RUNE_TRIGGER_EXIT = RuneTrigger::RUNE_TRIGGER_EXIT;
 
 // room_affect_data::where - discriminator for a room affect's bitvector.
 enum class RoomAffectWhere : int

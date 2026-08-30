@@ -384,7 +384,7 @@ void do_rune(CHAR_DATA *ch, char *argument)
 	check_improve(ch, sn, true, 1);
 }
 
-RUNE_DATA *find_rune(void *vo, int target_type, int trigger_type, RUNE_DATA *rune_prev)
+RUNE_DATA *find_rune(void *vo, RuneTarget target_type, RuneTrigger trigger_type, RUNE_DATA *rune_prev)
 {
 	RUNE_DATA *rune = nullptr, *rune_loop;
 
