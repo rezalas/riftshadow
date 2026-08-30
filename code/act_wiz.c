@@ -2600,7 +2600,7 @@ void do_mstat(CHAR_DATA *ch, char *argument)
 	sprintf(buf, "Level:  %-11d Race:   %-10s  Sex:    %-10s Room: %-9d Class: %s\n\r",
 		victim->level,
 		race_table[victim->race].name,
-		sex_table[victim->sex].name,
+		sex_table[static_cast<int>(victim->sex)].name,
 		!victim->in_room ? 0 : victim->in_room->vnum,
 		victim->Class()->name.c_str());
 	send_to_char(buf, ch);
@@ -2702,7 +2702,7 @@ void do_mstat(CHAR_DATA *ch, char *argument)
 		sprintf(buf, "Pracs:  %-10d  Trains: %-10d  Beauty: %-8s   Wimpy:  %-6d  Home:   %s\n\r",
 			victim->practice,
 			victim->train,
-			victim->sex == 2
+			victim->sex == SEX_FEMALE
 				? beauty_table[victim->pcdata->beauty].female
 				: beauty_table[victim->pcdata->beauty].male,
 			victim->wimpy, hometown_table[victim->hometown].name);
@@ -5199,10 +5199,10 @@ void do_mset(CHAR_DATA *ch, char *argument)
 			return;
 		}
 
-		victim->sex = value;
+		victim->sex = static_cast<Sex>(value);
 
 		if (!is_npc(victim))
-			victim->pcdata->true_sex = value;
+			victim->pcdata->true_sex = victim->sex;
 
 		return;
 	}

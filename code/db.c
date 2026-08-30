@@ -1539,8 +1539,10 @@ CHAR_DATA *create_mobile(MOB_INDEX_DATA *pMobIndex)
 		mob->start_pos = pMobIndex->start_pos;
 		mob->sex = pMobIndex->sex;
 
-		if (mob->sex == 3) /* random sex */
-			mob->sex = number_range(1, 2);
+		// The prototype asks for one to be picked here rather than carrying
+		// one of its own.
+		if (mob->sex == SEX_EITHER)
+			mob->sex = number_range(1, 2) == 1 ? SEX_MALE : SEX_FEMALE;
 
 		mob->race = pMobIndex->race;
 

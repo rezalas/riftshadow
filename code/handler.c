@@ -780,12 +780,12 @@ void reset_char(CHAR_DATA *ch)
 		ch->pcdata->perm_move = ch->max_move;
 		ch->pcdata->last_level = ch->played / 3600;
 
-		if (ch->pcdata->true_sex < 0 || ch->pcdata->true_sex > 2)
+		if (!is_character_sex(ch->pcdata->true_sex))
 		{
-			if (ch->sex > 0 && ch->sex < 3)
+			if (ch->sex == SEX_MALE || ch->sex == SEX_FEMALE)
 				ch->pcdata->true_sex = ch->sex;
 			else
-				ch->pcdata->true_sex = 0;
+				ch->pcdata->true_sex = SEX_NEUTRAL;
 		}
 	}
 
@@ -795,8 +795,8 @@ void reset_char(CHAR_DATA *ch)
 		ch->mod_stat[stat] = 0;
 	}
 
-	if (ch->pcdata->true_sex < 0 || ch->pcdata->true_sex > 2)
-		ch->pcdata->true_sex = 0;
+	if (!is_character_sex(ch->pcdata->true_sex))
+		ch->pcdata->true_sex = SEX_NEUTRAL;
 
 	ch->sex = ch->pcdata->true_sex;
 	ch->max_hit = ch->pcdata->perm_hit;
@@ -843,7 +843,7 @@ void reset_char(CHAR_DATA *ch)
 	}
 
 	/* make sure sex is RIGHT!!!! */
-	if (ch->sex < 0 || ch->sex > 2)
+	if (!is_character_sex(ch->sex))
 		ch->sex = ch->pcdata->true_sex;
 }
 
@@ -4810,7 +4810,11 @@ void modify_location(CHAR_DATA *ch, int location, int mod, bool add)
 			ch->mod_stat[STAT_CON] += mod;
 			break;
 		case APPLY_SEX:
-			ch->sex += mod;
+			// An affect shifts the ordinal, which is how a spell turns a
+			// character into the other sex. It can land outside the three a
+			// character can be, and the guard at the end of reset_char puts it
+			// back.
+			ch->sex = static_cast<Sex>(static_cast<int>(ch->sex) + mod);
 			break;
 		case APPLY_CLASS:
 			break;

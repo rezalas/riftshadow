@@ -18,6 +18,11 @@ bool is_cabal_guard (CHAR_DATA *ch)
 /// Checks if the given character is an NPC.
 /// @param ch: The character to check for NPC status.
 /// @returns true if the character is an NPC; false otherwise.
+bool is_character_sex (Sex sex)
+{
+	return sex == SEX_NEUTRAL || sex == SEX_MALE || sex == SEX_FEMALE;
+}
+
 bool is_npc (CHAR_DATA *ch)
 {
 	if (ch == nullptr)

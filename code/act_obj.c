@@ -3372,7 +3372,7 @@ void do_steal(CHAR_DATA *ch, char *argument)
 			case 1:
 				sprintf(buf, "%s couldn't rob %s way out of a paper bag!",
 					pers(ch, victim), 
-					(ch->sex == 2) ? "her" : "his");
+					(ch->sex == SEX_FEMALE) ? "her" : "his");
 				break;
 			case 2:
 				sprintf(buf, "%s tried to rob me!", pers(ch, victim));

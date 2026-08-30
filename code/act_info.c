@@ -652,9 +652,9 @@ void show_char_to_char_1(CHAR_DATA *victim, CHAR_DATA *ch)
 	{
 		sprintf(buf2, ", a%s %s %s %s%s,",
 				(victim->pcdata->beauty == 1 || victim->pcdata->beauty == 3 || victim->pcdata->beauty == 4) ? "n" : "",
-				(victim->sex == 2) ? beauty_table[victim->pcdata->beauty].female
+				(victim->sex == SEX_FEMALE) ? beauty_table[victim->pcdata->beauty].female
 								   : beauty_table[victim->pcdata->beauty].male,
-				sex_table[victim->sex].name, pc_race_table[victim->race].name,
+				sex_table[static_cast<int>(victim->sex)].name, pc_race_table[victim->race].name,
 				(!str_cmp(pc_race_table[victim->race].name, "celestial") ||
 				 !str_cmp(pc_race_table[victim->race].name, "planar") ||
 				 !str_cmp(pc_race_table[victim->race].name, "abyss"))
@@ -894,9 +894,9 @@ void show_char_to_char_2(CHAR_DATA *victim, CHAR_DATA *ch)
 		char buf2[MAX_STRING_LENGTH];
 		sprintf(buf2, ", a%s %s %s %s,",
 				(victim->pcdata->beauty == 1 || victim->pcdata->beauty == 3 || victim->pcdata->beauty == 4) ? "n" : "",
-				(victim->sex == 2) ? beauty_table[victim->pcdata->beauty].female
+				(victim->sex == SEX_FEMALE) ? beauty_table[victim->pcdata->beauty].female
 								   : beauty_table[victim->pcdata->beauty].male,
-				sex_table[victim->sex].name, pc_race_table[victim->race].name);
+				sex_table[static_cast<int>(victim->sex)].name, pc_race_table[victim->race].name);
 
 		strcat(buf, buf2);
 	}
@@ -968,9 +968,9 @@ void show_char_to_char_3(CHAR_DATA *victim, CHAR_DATA *ch)
 		char buf2[MAX_STRING_LENGTH];
 		sprintf(buf2, ", a%s %s %s %s,",
 				(victim->pcdata->beauty == 1 || victim->pcdata->beauty == 3 || victim->pcdata->beauty == 4) ? "n" : "",
-				(victim->sex == 2) ? beauty_table[victim->pcdata->beauty].female
+				(victim->sex == SEX_FEMALE) ? beauty_table[victim->pcdata->beauty].female
 								   : beauty_table[victim->pcdata->beauty].male,
-				sex_table[victim->sex].name, pc_race_table[victim->race].name);
+				sex_table[static_cast<int>(victim->sex)].name, pc_race_table[victim->race].name);
 
 		strcat(buf, buf2);
 	}
@@ -2465,7 +2465,7 @@ void do_score(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 
 	sprintf(buf, "Race: %s  Sex: %s  Class: %s\n\r",
 		race_table[ch->race].name,
-		sex_table[ch->sex].name,
+		sex_table[static_cast<int>(ch->sex)].name,
 		is_npc(ch) ? "mobile" : ch->Class()->name.c_str());
 	send_to_char(buf, ch);
 

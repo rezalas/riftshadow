@@ -9,6 +9,11 @@ extern "C" {
 
 bool is_npc (CHAR_DATA *ch);
 
+/// Whether this is a sex a character can be. SEX_EITHER is a mobile
+/// prototype's instruction to pick one at spawn rather than a state anything
+/// can be in, and a stored value the enumeration does not name is neither.
+bool is_character_sex (Sex sex);
+
 #ifdef __cplusplus
 }
 #endif

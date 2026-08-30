@@ -44,6 +44,7 @@
 #include "handler.h"
 #include "db.h"
 #include "lookup.h"
+#include "persisted_enum.h"
 #include "tables.h"
 #include "recycle.h"
 #include "spec.h"
@@ -509,8 +510,9 @@ void load_mobs(FILE *fp)
 
 		/* vital statistics */
 		pMobIndex->start_pos = position_lookup(fread_word(fp));
-		pMobIndex->sex = sex_lookup(fread_word(fp));
-		pMobIndex->sex = std::max(0, (int)pMobIndex->sex);
+		// sex_lookup answers with the row index, and -1 for a word it does
+		// not know, which the loader has always read as neutral.
+		pMobIndex->sex = read_persisted<Sex>(std::max(0, sex_lookup(fread_word(fp))), "sex");
 		temp_wealth = fread_word(fp);
 		if (is_number(temp_wealth))
 			wealth = atoi(temp_wealth);

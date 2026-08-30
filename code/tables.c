@@ -35,6 +35,7 @@
 #include <stdio.h>
 #include <time.h>
 #include "merc.h"
+#include "persisted_enum.h"
 #include "tables.h"
 #include "direction.h"
 
@@ -1277,11 +1278,11 @@ const struct flag_type area_flags[] =
 const struct flag_type sex_flags[] =
 {
 	//	name,			bit,			settable
-	{	"male",			SEX_MALE,		true	},
-	{	"female",		SEX_FEMALE,		true	},
-	{	"neutral",		SEX_NEUTRAL,	true	},
-	{	"random",		3,				true	},   /* ROM */
-	{	"none",			SEX_NEUTRAL,	true	},
+	{	"male",			write_persisted(SEX_MALE),		true	},
+	{	"female",		write_persisted(SEX_FEMALE),	true	},
+	{	"neutral",		write_persisted(SEX_NEUTRAL),	true	},
+	{	"random",		write_persisted(SEX_EITHER),	true	},
+	{	"none",			write_persisted(SEX_NEUTRAL),	true	},
 	{	nullptr,		0,				0		}
 };
 

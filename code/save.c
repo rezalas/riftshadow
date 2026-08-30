@@ -23,6 +23,7 @@
 #include "./repositories/playerrepository.h"
 #include "chardef.h"
 #include "const.h"
+#include "persisted_enum.h"
 #include "utility.h"
 #include "misc.h"
 #include "./include/spdlog/fmt/bundled/format.h"
@@ -116,7 +117,7 @@ void save_char_obj(CHAR_DATA *ch)
 		player.class_ = ch->Class()->GetIndex();
 		player.race = ch->race;
 		player.cabal = ch->cabal;
-		player.sex = ch->pcdata->true_sex;
+		player.sex = write_persisted(ch->pcdata->true_sex);
 		player.hours = (int)((ch->played + current_time - ch->logon) / 3600);
 		player.align = ch->alignment;
 		player.ethos = ch->pcdata->ethos;
@@ -288,7 +289,7 @@ void fwrite_char(CHAR_DATA *ch, FILE *fp)
 	if (ch->cabal == CABAL_HORDE)
 		fprintf(fp, "Tribe %d\n", ch->pcdata->tribe);
 
-	fprintf(fp, "Sex  %d\n", ch->sex);
+	fprintf(fp, "Sex  %d\n", write_persisted(ch->sex));
 	fprintf(fp, "Beauty %d\n", ch->pcdata->beauty);
 	fprintf(fp, "Cla  %s~\n", ch->Class()->name.c_str());
 	fprintf(fp, "Levl %d\n", ch->level);
@@ -488,7 +489,7 @@ void fwrite_char(CHAR_DATA *ch, FILE *fp)
 		if (ch->pcdata->extitle)
 			fprintf(fp, "EXTitl %s~\n", ch->pcdata->extitle);
 
-		fprintf(fp, "TSex %d\n", ch->pcdata->true_sex);
+		fprintf(fp, "TSex %d\n", write_persisted(ch->pcdata->true_sex));
 		fprintf(fp, "LLev %d\n", ch->pcdata->last_level);
 		fprintf(fp, "HMVP %d %d %d\n", ch->pcdata->perm_hit, ch->pcdata->perm_mana, ch->pcdata->perm_move);
 		fprintf(fp, "Cnd  %d %d %d %d %d %d\n",
@@ -682,7 +683,7 @@ void fwrite_pet(CHAR_DATA *pet, FILE *fp)
 	if (pet->cabal)
 		fprintf(fp, "Cabal %s~\n", cabal_table[pet->cabal].name);
 
-	fprintf(fp, "Sex  %d\n", pet->sex);
+	fprintf(fp, "Sex  %d\n", write_persisted(pet->sex));
 
 	if (pet->level != pet->pIndexData->level)
 		fprintf(fp, "Levl %d\n", pet->level);
@@ -1703,7 +1704,7 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
 				KEY("SavingThrow", ch->saving_throw, fread_number(fp))
 				KEY("Save", ch->saving_throw, fread_number(fp))
 				KEY("Scro", ch->lines, fread_number(fp))
-				KEY("Sex", ch->sex, fread_number(fp))
+				KEY("Sex", ch->sex, read_persisted<Sex>(fread_number(fp), "Sex"))
 				KEY("ShortDescr", ch->short_descr, fread_string(fp))
 				KEY("ShD", ch->short_descr, fread_string(fp))
 				KEY("Sec", ch->pcdata->security, fread_number(fp)) /* OLC */
@@ -1750,8 +1751,8 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
 
 				break;
 			case 'T':
-				KEY("TrueSex", ch->pcdata->true_sex, fread_number(fp))
-				KEY("TSex", ch->pcdata->true_sex, fread_number(fp))
+				KEY("TrueSex", ch->pcdata->true_sex, read_persisted<Sex>(fread_number(fp), "TrueSex"))
+				KEY("TSex", ch->pcdata->true_sex, read_persisted<Sex>(fread_number(fp), "TSex"))
 				KEY("Trai", ch->train, fread_number(fp))
 				KEY("Trust", ch->trust, fread_number(fp))
 				KEYV("TrSet", ch->pcdata->trust)
@@ -2035,7 +2036,7 @@ void fread_pet(CHAR_DATA *ch, FILE *fp)
 				break;
 			case 'S':
 				KEY("Save", pet->saving_throw, fread_number(fp))
-				KEY("Sex", pet->sex, fread_number(fp))
+				KEY("Sex", pet->sex, read_persisted<Sex>(fread_number(fp), "Sex"))
 				KEY("ShD", pet->short_descr, fread_string(fp))
 				break;
 		}

@@ -812,7 +812,7 @@ void plug_graveyard(CHAR_DATA *ch, int type)
 	if (type == 1)
 	{
 		type_death = "DEL";
-		message_death = fmt::sprintf("took %s own life.", (ch->sex == 2) ? "her" : "his");
+		message_death = fmt::sprintf("took %s own life.", (ch->sex == SEX_FEMALE) ? "her" : "his");
 	}
 	else if (type == 2)
 	{
@@ -827,7 +827,7 @@ void plug_graveyard(CHAR_DATA *ch, int type)
 	else
 	{
 		type_death = "AUTO";
-		message_death = fmt::sprintf("perished in %s sleep.", (ch->sex == 2) ? "her" : "his");
+		message_death = fmt::sprintf("perished in %s sleep.", (ch->sex == SEX_FEMALE) ? "her" : "his");
 	}
 
 	auto strf_time = [](const char *format) {
@@ -894,7 +894,7 @@ void plug_graveyard(CHAR_DATA *ch, int type)
 		ch->pcdata->birth_date,
 		get_hours(ch),
 		race_table[ch->race].name,
-		sex_table[ch->sex].name,
+		sex_table[static_cast<int>(ch->sex)].name,
 		ch->Class()->name.c_str());
 
 	if (ch->Class()->GetIndex() == CLASS_WARRIOR)
@@ -916,7 +916,7 @@ void plug_graveyard(CHAR_DATA *ch, int type)
 		message += fmt::sprintf("%s's major elemental focus was %s and %s para-elemental focus was %s.\r",
 			(const char *)ch->true_name,
 			sphere_table[ch->pcdata->ele_major].name,
-			(ch->sex == 2) ? "her" : "his",
+			(ch->sex == SEX_FEMALE) ? "her" : "his",
 			sphere_table[ch->pcdata->ele_para].name);
 	}
 

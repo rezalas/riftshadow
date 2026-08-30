@@ -647,12 +647,29 @@ enum AffectObjFlag : int
 };
 
 // Sex ordinal, in char_data::sex. Wire format - never renumber.
-enum Sex : int
+//
+// SEX_EITHER is what a mobile prototype carries to say "pick one at spawn",
+// and db.c resolves it to male or female as the mobile is created. It has
+// always been in the area files, as the word "either" in sex_table and
+// "random" in sex_flags, and as a bare 3 in the code that reads it. Naming it
+// here does not change what any file holds.
+enum class Sex : int
 {
 	SEX_NEUTRAL					= 0,
 	SEX_MALE					= 1,
 	SEX_FEMALE					= 2,
+	SEX_EITHER					= 3,
 };
+
+// The enumerators are reachable unqualified, the way every constant in this
+// header has always been. The type is what carries the safety: a Sex cannot be
+// assigned from an int, and an int field cannot be assigned a Sex. Scoping the
+// names as well would buy nothing, because each family already prefixes its
+// own, and would cost every call site in the tree.
+constexpr Sex SEX_NEUTRAL = Sex::SEX_NEUTRAL;
+constexpr Sex SEX_MALE = Sex::SEX_MALE;
+constexpr Sex SEX_FEMALE = Sex::SEX_FEMALE;
+constexpr Sex SEX_EITHER = Sex::SEX_EITHER;
 
 // Armor-class index into char_data::armor[]. Wire format - never renumber.
 enum ArmorClass : int

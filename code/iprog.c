@@ -1533,7 +1533,7 @@ void verb_prog_check_bounties([[maybe_unused]] OBJ_DATA *obj, CHAR_DATA *ch, [[m
 				else
 				{
 					CHAR_DATA *marked = Deref(d->character);
-					sprintf(buf, "%s has %ld gold on %s head.", marked->name, marked->pcdata->bounty, his_her[URANGE(0, marked->sex, 2)]);
+					sprintf(buf, "%s has %ld gold on %s head.", marked->name, marked->pcdata->bounty, his_her[URANGE(0, static_cast<int>(marked->sex), 2)]);
 				}
 
 				do_say(mob, buf);

@@ -1696,7 +1696,7 @@ void spell_change_sex(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_
 
 	do
 	{
-		af.modifier = number_range(0, 2) - victim->sex;
+		af.modifier = number_range(0, 2) - static_cast<int>(victim->sex);
 	} while (af.modifier == 0);
 
 	affect_to_char(victim, &af);

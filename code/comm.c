@@ -60,6 +60,7 @@
 #include "entity/handles.h"
 #include "entity/list_cursor.h"
 #include "comm.h"
+#include "persisted_enum.h"
 #include "recycle.h"
 #include "tables.h"
 #include "olc.h"
@@ -2576,7 +2577,7 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
 				newPlayer.class_ = ch->Class()->GetIndex();
 				newPlayer.race = ch->race;
 				newPlayer.cabal = ch->cabal;
-				newPlayer.sex = ch->sex;
+				newPlayer.sex = write_persisted(ch->sex);
 				newPlayer.hours = (int)(ch->played + current_time - ch->logon) / 3600;
 				newPlayer.align = ch->alignment;
 				newPlayer.ethos = ch->pcdata->ethos;
@@ -3028,8 +3029,8 @@ void show_string(struct descriptor_data *d, char *input)
 /* quick sex fixer */
 void fix_sex(CHAR_DATA *ch)
 {
-	if (ch->sex < 0 || ch->sex > 2)
-		ch->sex = is_npc(ch) ? 0 : ch->pcdata->true_sex;
+	if (!is_character_sex(ch->sex))
+		ch->sex = is_npc(ch) ? SEX_NEUTRAL : ch->pcdata->true_sex;
 }
 
 ///
@@ -3126,13 +3127,13 @@ void act_area(const char *format, CHAR_DATA *ch, CHAR_DATA *victim)
 							i = get_descr_form(victim, ch, false);
 							break;
 						case 'e':
-							i = he_she[URANGE(0, victim->sex, 2)];
+							i = he_she[URANGE(0, static_cast<int>(victim->sex), 2)];
 							break;
 						case 'm':
-							i = him_her[URANGE(0, victim->sex, 2)];
+							i = him_her[URANGE(0, static_cast<int>(victim->sex), 2)];
 							break;
 						case 's':
-							i = his_her[URANGE(0, victim->sex, 2)];
+							i = his_her[URANGE(0, static_cast<int>(victim->sex), 2)];
 							break;
 						default:
 							RS.Logger.Warn("Act: bad code {}.", *str);
@@ -3349,22 +3350,22 @@ void act_new(const char *format, CHAR_DATA *ch, ActArg arg1, ActArg arg2, int ty
 
 						break;
 					case 'e':
-						i = he_she[URANGE(0, ch->sex, 2)];
+						i = he_she[URANGE(0, static_cast<int>(ch->sex), 2)];
 						break;
 					case 'E':
-						i = vch != nullptr ? he_she[URANGE(0, vch->sex, 2)] : nullptr;
+						i = vch != nullptr ? he_she[URANGE(0, static_cast<int>(vch->sex), 2)] : nullptr;
 						break;
 					case 'm':
-						i = him_her[URANGE(0, ch->sex, 2)];
+						i = him_her[URANGE(0, static_cast<int>(ch->sex), 2)];
 						break;
 					case 'M':
-						i = vch != nullptr ? him_her[URANGE(0, vch->sex, 2)] : nullptr;
+						i = vch != nullptr ? him_her[URANGE(0, static_cast<int>(vch->sex), 2)] : nullptr;
 						break;
 					case 's':
-						i = his_her[URANGE(0, ch->sex, 2)];
+						i = his_her[URANGE(0, static_cast<int>(ch->sex), 2)];
 						break;
 					case 'S':
-						i = vch != nullptr ? his_her[URANGE(0, vch->sex, 2)] : nullptr;
+						i = vch != nullptr ? his_her[URANGE(0, static_cast<int>(vch->sex), 2)] : nullptr;
 						break;
 					case 'p':
 						if (obj1 == nullptr)

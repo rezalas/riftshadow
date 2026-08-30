@@ -35,7 +35,7 @@ struct pc_data
 	short perm_hit;
 	short perm_mana;
 	short perm_move;
-	short true_sex;
+	Sex true_sex;
 	short age_mod;
 	short death_timer;
 	short death_status;

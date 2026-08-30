@@ -50,7 +50,7 @@ public:
 	short xp_mod;
 	float dam_mod;
 	short start_pos;
-	short sex;
+	Sex sex;
 	short race;
 	int wealth;
 	long form[MAX_BITVECTOR];

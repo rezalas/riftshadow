@@ -428,7 +428,7 @@ MOB_INDEX_DATA *new_mob_index(void)
 	pMob->vnum = 0;
 	pMob->count = 0;
 	pMob->killed = 0;
-	pMob->sex = 0;
+	pMob->sex = SEX_NEUTRAL;
 	pMob->level = 0;
 	pMob->dam_type = 0;
 

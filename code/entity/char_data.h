@@ -136,7 +136,7 @@ public:
 	char *prefix;
 	short group;
 	short cabal;
-	short sex;
+	Sex sex;
 
 	CClass *Class()
 	{

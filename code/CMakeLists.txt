@@ -34,6 +34,7 @@ set(RIFT_SOURCE config.cpp
 	gameloop.c
 	riftpath.c
 	const.c
+	persisted_enum.c
 	db.c
 	db2.c
 	effects.c

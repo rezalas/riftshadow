@@ -5886,7 +5886,7 @@ bool medit_show(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 		pMob->vnum,
 		pMob->sex == SEX_MALE ? "male" :
 			pMob->sex == SEX_FEMALE ? "female" :
-			pMob->sex == 3 ? "random" : "neutral"); /* ROM magic number */
+			pMob->sex == SEX_EITHER ? "random" : "neutral");
 	send_to_char(buf, ch);
 
 	sprintf(buf, "Race:        [%s]\n\r", race_table[pMob->race].name); /* ROM OLC */
@@ -6560,7 +6560,9 @@ bool medit_sex(CHAR_DATA *ch, char *argument) /* Moved out of medit() due to nam
 
 		if (value != NO_FLAG)
 		{
-			pMob->sex = value;
+			// The table this came from is built from the enumeration, so the
+			// value is one of its own.
+			pMob->sex = static_cast<Sex>(value);
 
 			send_to_char("Sex set.\n\r", ch);
 			return true;

@@ -27,6 +27,7 @@ set(TEST_SRC_FILES act_obj_tests.c
 	mprog_tests.c
 	note_tests.c
 	pathfind_tests.c
+	persisted_enum_tests.c
 	offering_tests.c
 	pklog_tests.c
 	sitecomment_tests.c
