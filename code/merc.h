@@ -1318,8 +1318,8 @@ struct pathfind_data
 
 
 
-// Utility macros (the IS_SET/SET_BIT bit-flag family, CAP, CLEAR_MEM) moved to
-// macros.h so tests can pull them in without merc.h.
+// The IS_SET/SET_BIT bit-flag family, moved out of merc.h so tests can pull it
+// in without merc.h.
 #include "macros.h"
 
 

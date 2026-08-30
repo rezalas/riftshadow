@@ -68,11 +68,5 @@ extern const std::vector<attack_type> attack_table;
 extern const struct skill_type skill_table[MAX_SKILL];
 extern const struct group_type group_table[MAX_GROUP];
 
-/*
- * The skill and spell table.
- * Slot numbers must never be changed as they appear in #OBJECTS sections.
- */
-#define SLOT(n)	n
-
 
 #endif /* CONST_H */

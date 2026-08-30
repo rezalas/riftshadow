@@ -1048,8 +1048,7 @@ bool medit_prog(CHAR_DATA *ch, char *argument)
 		{
 			if (pMobIndex->mprogs == nullptr)
 			{
-				pMobIndex->mprogs = new MPROG_DATA;
-				CLEAR_MEM(pMobIndex->mprogs, sizeof(MPROG_DATA))
+				pMobIndex->mprogs = new MPROG_DATA();
 			}
 
 			mprog_set(pMobIndex, prog_type, prog);
@@ -1132,8 +1131,7 @@ bool oedit_prog(CHAR_DATA *ch, char *argument)
 
 		if (pObjIndex->iprogs == nullptr)
 		{
-			pObjIndex->iprogs = new IPROG_DATA;
-			CLEAR_MEM(pObjIndex->iprogs, sizeof(IPROG_DATA))
+			pObjIndex->iprogs = new IPROG_DATA();
 		}
 
 		for (count = 0; iprog_table[count].type != nullptr; count++)
@@ -1423,8 +1421,7 @@ bool redit_prog(CHAR_DATA *ch, char *argument)
 
 		if (pRoomIndex->rprogs == nullptr)
 		{
-			pRoomIndex->rprogs = new RPROG_DATA;
-			CLEAR_MEM(pRoomIndex->rprogs, sizeof(RPROG_DATA))
+			pRoomIndex->rprogs = new RPROG_DATA();
 		}
 
 		for (count = 0; rprog_table[count].type != nullptr; count++)
@@ -1667,8 +1664,7 @@ bool aedit_prog(CHAR_DATA *ch, char *argument)
 
 		if (pArea->aprogs == nullptr)
 		{
-			pArea->aprogs = new APROG_DATA;
-			CLEAR_MEM(pArea->aprogs, sizeof(APROG_DATA))
+			pArea->aprogs = new APROG_DATA();
 		}
 
 		for (count = 0; aprog_table[count].type != nullptr; count++)
@@ -5572,8 +5568,7 @@ bool medit_optional(CHAR_DATA *ch, char *argument)
 	}
 	else if (arg1[0] == 'B' || arg1[0] == 'b')
 	{
-		bar = new BARRED_DATA;
-		CLEAR_MEM(bar, sizeof(BARRED_DATA))
+		bar = new BARRED_DATA();
 
 		if (pMob->barred_entry)
 		{
@@ -6534,8 +6529,7 @@ bool medit_shop(CHAR_DATA *ch, char *argument)
 
 	if (!pMob->pShop)
 	{
-		pShop = new SHOP_DATA;
-		CLEAR_MEM(pShop, sizeof(SHOP_DATA))
+		pShop = new SHOP_DATA();
 		pMob->pShop = pShop;
 		pShop->pMobIndex = pMob;
 	}

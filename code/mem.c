@@ -49,8 +49,7 @@ RESET_DATA *new_reset_data(void)
 
 	if (!reset_free)
 	{
-		pReset = new RESET_DATA;
-		CLEAR_MEM(pReset, sizeof(RESET_DATA))
+		pReset = new RESET_DATA();
 		top_reset++;
 	}
 	else
@@ -137,8 +136,7 @@ EXIT_DATA *new_exit(void)
 
 	if (!exit_free)
 	{
-		pExit = new EXIT_DATA;
-		CLEAR_MEM(pExit, sizeof(EXIT_DATA))
+		pExit = new EXIT_DATA();
 		top_exit++;
 	}
 	else
@@ -210,8 +208,9 @@ ROOM_INDEX_DATA *new_room_index(void)
 
 	if (!room_index_free)
 	{
-		// value-init zeroes the scalar members AND constructs the std::list member;
-		// CLEAR_MEM (byte-zero) would corrupt the list's internal state.
+		// Value-init zeroes the scalar members and constructs the std::list
+		// member. Byte-zeroing this type would corrupt the list's internal
+		// state.
 		pRoom = new ROOM_INDEX_DATA();
 		top_room++;
 	}
@@ -301,9 +300,7 @@ void free_affect(AFFECT_DATA* pAf)
 
 SHOP_DATA *new_shop(void)
 {
-	SHOP_DATA *pShop = new SHOP_DATA;
-
-	CLEAR_MEM(pShop, sizeof(SHOP_DATA))
+	SHOP_DATA *pShop = new SHOP_DATA();
 
 	pShop->open_hour = 0;
 	pShop->close_hour = 23;
@@ -325,8 +322,9 @@ OBJ_INDEX_DATA *new_obj_index(void)
 
 	if (!obj_index_free)
 	{
-		// value-init zeroes the scalar members AND constructs the std::list members;
-		// CLEAR_MEM (byte-zero) would corrupt the lists' internal state.
+		// Value-init zeroes the scalar members and constructs the std::list
+		// members. Byte-zeroing this type would corrupt the lists' internal
+		// state.
 		pObj = new OBJ_INDEX_DATA();
 
 		top_obj_index++;

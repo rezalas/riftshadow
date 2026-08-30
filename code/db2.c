@@ -275,7 +275,6 @@ void load_improgs(FILE *fp)
 				if (pObjIndex->iprogs == nullptr)
 				{
 					pObjIndex->iprogs = new_iprog();
-					CLEAR_MEM(pObjIndex->iprogs, sizeof(IPROG_DATA))
 				}
 
 				strcpy(progtype, fread_word(fp));
@@ -286,8 +285,7 @@ void load_improgs(FILE *fp)
 				room = get_room_index(fread_number(fp));
 				if (!room->rprogs)
 				{
-					room->rprogs = new RPROG_DATA;
-					CLEAR_MEM(room->rprogs, sizeof(RPROG_DATA))
+					room->rprogs = new RPROG_DATA();
 				}
 
 				strcpy(progtype, fread_word(fp));
@@ -297,8 +295,7 @@ void load_improgs(FILE *fp)
 			case 'A':
 				if (!area_last->aprogs)
 				{
-					area_last->aprogs = new APROG_DATA;
-					CLEAR_MEM(area_last->aprogs, sizeof(APROG_DATA))
+					area_last->aprogs = new APROG_DATA();
 				}
 
 				strcpy(progtype, fread_word(fp));
@@ -309,8 +306,7 @@ void load_improgs(FILE *fp)
 				pMobIndex = get_mob_index(fread_number(fp));
 				if (pMobIndex->mprogs == nullptr)
 				{
-					pMobIndex->mprogs = new MPROG_DATA;
-					CLEAR_MEM(pMobIndex->mprogs, sizeof(MPROG_DATA))
+					pMobIndex->mprogs = new MPROG_DATA();
 				}
 
 				strcpy(progtype, fread_word(fp));

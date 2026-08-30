@@ -1,8 +1,11 @@
+#include <cstring>
+
 #include "catch.hpp"
 #include "world_fixture.h"
 #include "../code/mprog.h"
 #include "../code/enums.h"
 #include "../code/mud.h"
+#include "../code/recycle.h"
 
 // mprog_give and mprog_drop queue the unlink and the relink as two separate
 // events on the same tick, so their relative order decides which inventory the
@@ -108,6 +111,36 @@ SCENARIO("a demon whose quarry is gone gives up without reading it", "[mprog_dem
 				// never linked into char_list, so the room is what to assert on.
 				REQUIRE(demon->in_room == nullptr);
 			}
+		}
+	}
+}
+
+SCENARIO("a freshly allocated item program block is empty", "[new_iprog]")
+{
+	GIVEN("a block of memory that has been used and released")
+	{
+		// The allocator hands the next request of this size the block just
+		// released, so the new block starts out holding whatever was written
+		// here. Fresh pages come back zeroed, which is why the state this
+		// checks for cannot be observed on the first allocation of a run.
+		auto used = new IPROG_DATA;
+		memset(used, 0xFF, sizeof(IPROG_DATA));
+		delete used;
+
+		WHEN("a program block is allocated")
+		{
+			IPROG_DATA *iprogs = new_iprog();
+
+			THEN("both halves are null, the programs as well as their names")
+			{
+				REQUIRE(iprogs->wear_prog == nullptr);
+				REQUIRE(iprogs->greet_prog == nullptr);
+				REQUIRE(iprogs->hit_prog == nullptr);
+				REQUIRE(iprogs->wear_name == nullptr);
+				REQUIRE(iprogs->hit_name == nullptr);
+			}
+
+			delete iprogs;
 		}
 	}
 }

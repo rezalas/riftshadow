@@ -169,29 +169,11 @@ speech_data::~speech_data()
 
 IPROG_DATA *new_iprog(void)
 {
-	IPROG_DATA *ipr = new IPROG_DATA;
-
-	ipr->wear_name = nullptr;
-	ipr->remove_name = nullptr;
-	ipr->get_name = nullptr;
-	ipr->loot_name = nullptr;
-	ipr->drop_name = nullptr;
-	ipr->sac_name = nullptr;
-	ipr->sac_name = nullptr;
-	ipr->entry_name = nullptr;
-	ipr->give_name = nullptr;
-	ipr->greet_name = nullptr;
-	ipr->fight_name = nullptr;
-	ipr->death_name = nullptr;
-	ipr->speech_name = nullptr;
-	ipr->pulse_name = nullptr;
-	ipr->invoke_name = nullptr;
-	ipr->open_name = nullptr;
-	ipr->look_name = nullptr;
-	ipr->verb_name = nullptr;
-	ipr->hit_name = nullptr;
-
-	return ipr;
+	// Value-initialized: this type is two parallel halves, eighteen program
+	// pointers and eighteen names, and naming the members here only ever
+	// covered the names. The pointers were left indeterminate for the caller
+	// to zero afterwards.
+	return new IPROG_DATA();
 }
 
 RACE_DATA *new_race_data(void)
