@@ -755,7 +755,7 @@ void do_outfit(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 	af.where = TO_AFFECTS;
 	af.aftype = AFT_POWER;
 	af.type = skill_lookup("outfit");
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.duration = 80;
 
 	SET_BIT(af.bitvector, AFF_DARK_VISION);
@@ -2350,7 +2350,7 @@ void do_ostat(CHAR_DATA *ch, char *argument)
 				? str_cmp(oaffect_loc_name(paf.location), "none")
 					? oaffect_loc_name(paf.location)
 					: (paf.where == TO_OBJ_APPLY)
-						? affect_loc_name(paf.location)
+						? affect_loc_name(static_cast<ApplyLocation>(paf.location))
 						: apply_locations[paf.location].name
 				: "none",
 			paf.modifier,
@@ -3083,7 +3083,7 @@ void do_mstat(CHAR_DATA *ch, char *argument)
 			paf.name ? ") " : "",
 			str_cmp(affect_loc_name(paf.location), "none")
 				? affect_loc_name(paf.location)
-				: apply_locations[paf.location].name,
+				: apply_locations[write_persisted(paf.location)].name,
 			paf.modifier,
 			(paf.duration == -1) ? -1 : (paf.duration / 2) + 1,
 			(paf.duration % 2 == 0) ? "" : (paf.duration == -1) ? "" : ".5",
@@ -6629,7 +6629,8 @@ void do_addapply(CHAR_DATA *ch, char *argument)
 	char arg1[MAX_INPUT_LENGTH];
 	char arg2[MAX_INPUT_LENGTH];
 	char arg3[MAX_INPUT_LENGTH];
-	int modifier, location;
+	int modifier;
+	ApplyLocation location;
 
 	argument = one_argument(argument, arg1);
 	argument = one_argument(argument, arg2);
@@ -6731,7 +6732,7 @@ void do_addapply(CHAR_DATA *ch, char *argument)
 
 		af.level = obj->level;
 		af.duration = -1;
-		af.location = 0;
+		af.location = APPLY_NONE;
 		af.modifier = 0;
 		af.owner = nullptr;
 		charaff_to_obj(obj, &af);

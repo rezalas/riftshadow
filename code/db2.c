@@ -1180,10 +1180,15 @@ void load_objs(FILE *fp)
 				OBJ_APPLY_DATA apply;
 				// read in PPLY and discard it
 				discard = fread_word(fp);
-				apply.location = display_lookup(fread_word(fp), apply_locations);
+				int found = display_lookup(fread_word(fp), apply_locations);
 
-				if (apply.location == -1)
+				// display_lookup answers with 0 for a word it does not
+				// recognize rather than with -1, so this has never fired: an
+				// apply location the table does not carry loads as APPLY_NONE.
+				if (found == -1)
 					bugout("Invalid affect apply location.");
+
+				apply.location = read_persisted<ApplyLocation>(found, "object apply location");
 
 				apply.modifier = fread_number(fp);
 				pObjIndex->apply.insert(pObjIndex->apply.begin(), apply);
@@ -1228,7 +1233,7 @@ void load_objs(FILE *fp)
 
 					paf.level = pObjIndex->level;
 					paf.duration = -1;
-					paf.location = 0;
+					paf.location = APPLY_NONE;
 					paf.modifier = 0;
 					charaff_to_obj_index(pObjIndex, &paf);
 

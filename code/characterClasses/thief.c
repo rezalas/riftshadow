@@ -412,7 +412,7 @@ void do_blackjack(CHAR_DATA *ch, char *argument)
 	af.where = TO_AFFECTS;
 	af.level = ch->level;
 	af.owner = ch->self;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.type = gsn_blackjack;
 	af.modifier = 0;
 	af.aftype = AFT_SKILL;

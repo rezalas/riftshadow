@@ -2018,7 +2018,7 @@ void speech_prog_gamygyn(CHAR_DATA *mob, CHAR_DATA *ch, char *speech)
 		af.level = 60;
 		af.duration = 1000;
 		af.modifier = 0;
-		af.location = 0;
+		af.location = APPLY_NONE;
 
 		SET_BIT(af.bitvector, AFF_PERMANENT);
 		af.tick_fun = gamygyn_tick;
@@ -2077,7 +2077,7 @@ void speech_prog_orobas(CHAR_DATA *mob, CHAR_DATA *ch, char *speech)
 		af.level = 60;
 		af.duration = 1000;
 		af.modifier = 0;
-		af.location = 0;
+		af.location = APPLY_NONE;
 
 		SET_BIT(af.bitvector, AFF_PERMANENT);
 
@@ -3479,7 +3479,7 @@ void pulse_prog_glass(CHAR_DATA *mob)
 
 		init_affect(&caf);
 		caf.where = TO_AFFECTS;
-		caf.location = 0;
+		caf.location = APPLY_NONE;
 		caf.modifier = 0;
 		caf.duration = 1;
 		caf.type = gsn_trophy;

@@ -194,7 +194,7 @@ static bool RustReachesSlot(int wearLoc, int attempts)
 
 		// The penalty is what the slot selects, and it is the value the
 		// fall-through skipped past.
-		REQUIRE(armour->affected.front().location == APPLY_DEX);
+		REQUIRE(armour->affected.front().location == obj_location(APPLY_DEX));
 		REQUIRE(armour->affected.front().modifier == (wearLoc == WEAR_BODY ? -4 : -2));
 
 		return true;

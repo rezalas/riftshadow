@@ -3502,7 +3502,7 @@ void raw_kill(CHAR_DATA *ch, CHAR_DATA *victim)
 	af.type = skill_lookup("infravision");
 	af.name = palloc_string("ghost");
 	af.duration = 10;
-	af.location = 0;
+	af.location = APPLY_NONE;
 
 	if (!is_affected_by(victim, AFF_WATERBREATH))
 		SET_BIT(af.bitvector, AFF_WATERBREATH);
@@ -3578,7 +3578,7 @@ void raw_kill(CHAR_DATA *ch, CHAR_DATA *victim)
 		raf.type = gsn_infidels_fate;
 		raf.duration = ch->level;
 		raf.modifier = 0;
-		raf.location = 0;
+		raf.location = APPLY_ROOM_NONE;
 		affect_to_room(ch->in_room, &raf);
 
 		init_affect_area(&aaf);
@@ -6460,7 +6460,7 @@ void do_herb(CHAR_DATA *ch, char *argument)
 	init_affect(&af);
 	af.where = TO_AFFECTS;
 	af.type = gsn_herb;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.duration = 4;
 	af.modifier = 0;
 	af.aftype = AFT_SKILL;
@@ -7360,7 +7360,7 @@ void do_strangle(CHAR_DATA *ch, char *argument)
 	af.level = ch->level;
 	af.duration = 2;
 	af.modifier = 0;
-	af.location = 0;
+	af.location = APPLY_NONE;
 
 	SET_BIT(af.bitvector, AFF_SLEEP);
 
@@ -7515,7 +7515,7 @@ void do_enlist(CHAR_DATA *ch, char *argument)
 	SET_BIT(af.bitvector, AFF_CHARM);
 
 	af.duration = ch->level;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	affect_to_char(victim, &af);
 
 	af.duration = 15;
@@ -8584,7 +8584,7 @@ void do_protection_heat_cold(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 	SET_BIT(af.bitvector, RES_FIRE);
 	SET_BIT(af.bitvector, RES_COLD);
 
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.mod_name = MOD_RESISTANCE;
 	affect_to_char(ch, &af);
 
@@ -8713,7 +8713,7 @@ void do_iron_resolve(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 	af.aftype = AFT_SKILL;
 	af.type = gsn_iron_resolve;
 	af.level = ch->level;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.modifier = 0;
 	af.duration = ch->level / 3;
 	// TODO: add affect_to_char ?
@@ -8770,7 +8770,7 @@ void do_quiet_movement(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 	af.where = TO_AFFECTS;
 	af.type = gsn_quiet_movement;
 	af.aftype = AFT_SKILL;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.modifier = 0;
 	af.duration = ch->level;
 	af.level = ch->level;
@@ -9069,10 +9069,10 @@ void trophy_corpse(CHAR_DATA *ch, CHAR_DATA *victim)
 	oaf.level = ch->level;
 	oaf.duration = -1;
 	oaf.modifier = (newbelt->value[4] + 1) / 2;
-	oaf.location = APPLY_HITROLL;
+	oaf.location = obj_location(APPLY_HITROLL);
 	affect_to_obj(newbelt, &oaf);
 
-	oaf.location = APPLY_DAMROLL;
+	oaf.location = obj_location(APPLY_DAMROLL);
 	oaf.modifier = std::max((newbelt->value[4] + 1) / 2 - (newbelt->value[4] % 2) + 1, 1);
 	affect_to_obj(newbelt, &oaf);
 

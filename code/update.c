@@ -2784,7 +2784,7 @@ void room_affect_update(void)
 							cvaf.aftype = AFT_MALADY;
 							cvaf.level = af->level;
 							cvaf.duration = 4;
-							cvaf.location = 0;
+							cvaf.location = APPLY_NONE;
 							cvaf.modifier = 0;
 							cvaf.owner = af->owner;
 							new_affect_to_char(vch, &cvaf);
@@ -2804,7 +2804,7 @@ void room_affect_update(void)
 						cvaf2.aftype = AFT_MALADY;
 						cvaf.level = af->level;
 						cvaf.duration = 1;
-						cvaf.location = 0;
+						cvaf.location = APPLY_NONE;
 						cvaf.modifier = 0;
 						cvaf.owner = af->owner;
 

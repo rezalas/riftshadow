@@ -7,6 +7,7 @@
 #include <time.h>
 #include <math.h>
 #include "../merc.h"
+#include "../persisted_enum.h"
 #include "../entity/handles.h"
 #include "ap.h"
 #include "../interp.h"
@@ -113,7 +114,7 @@ void spell_indomitability(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /*
 	af.level = level;
 	af.duration = level / 5;
 	af.modifier = 0;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	affect_to_char(ch, &af);
 }
 
@@ -220,7 +221,7 @@ void spell_radiance(int sn, int level, CHAR_DATA *ch, [[maybe_unused]] SpellTarg
 	af.where = TO_AFFECTS;
 	af.owner = ch->self;
 	af.level = level;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.modifier = 3;
 	af.type = sn;
 	af.aftype = AFT_SPELL;
@@ -263,7 +264,7 @@ void spell_inspire_lust(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[mayb
 		af.where = TO_AFFECTS;
 		af.aftype = AFT_SPELL;
 		af.level = level;
-		af.location = 0;
+		af.location = APPLY_NONE;
 		af.modifier = 0;
 		af.owner = ch->self;
 		af.pulse_fun = lust_pulse;
@@ -294,7 +295,7 @@ void spell_inspire_lust(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[mayb
 		af.where = TO_AFFECTS;
 		af.aftype = AFT_SPELL;
 		af.level = level;
-		af.location = 0;
+		af.location = APPLY_NONE;
 		af.modifier = 0;
 		af.owner = ch->self;
 		af.pulse_fun = lust_pulse;
@@ -486,7 +487,7 @@ void spell_baals_mastery(int /* sn */, int /* level */, CHAR_DATA *ch, SpellTarg
 	af.type = gsn_baals_mastery;
 	af.owner = ch->self;
 	af.level = MAX_LEVEL;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.modifier = weapon;
 	af.duration = -1;
 
@@ -689,7 +690,7 @@ void spell_word_of_command(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /
 	af.type = gsn_word_of_command;
 	af.owner = ch->self;
 	af.level = level;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.duration = -1;
 	af.modifier = 0;
 	af.tick_fun = 0;
@@ -768,7 +769,7 @@ void spell_mark_of_wrath(int /* sn */, int level, CHAR_DATA *ch, SpellTarget vo,
 	else
 		af.duration = (int)(level * 0.4);
 
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.modifier = 0;
 	af.tick_fun = 0;
 	af.end_fun = 0;
@@ -798,14 +799,14 @@ void spell_living_blade(int /* sn */, int level, CHAR_DATA *ch, SpellTarget vo, 
 	oaf.owner = ch->self;
 	oaf.level = level;
 	oaf.duration = level;
-	oaf.location = APPLY_DAMROLL;
+	oaf.location = obj_location(APPLY_DAMROLL);
 	oaf.modifier = 0;
 	oaf.end_fun = living_blade_end;
 	oaf.tick_fun = 0;
 	oaf.pulse_fun = living_blade_pulse;
 	affect_to_obj(weapon, &oaf);
 
-	oaf.location = APPLY_HITROLL;
+	oaf.location = obj_location(APPLY_HITROLL);
 	affect_to_obj(weapon, &oaf);
 }
 
@@ -821,7 +822,7 @@ void living_blade_pulse(OBJ_DATA *obj, OBJ_AFFECT_DATA *af)
 
 	if (ch != Deref(af->owner))
 	{
-		if (number_percent() < 7 && af->location == APPLY_DAMROLL)
+		if (number_percent() < 7 && af->location == obj_location(APPLY_DAMROLL))
 		{
 			switch (number_range(1, 3))
 			{
@@ -842,7 +843,7 @@ void living_blade_pulse(OBJ_DATA *obj, OBJ_AFFECT_DATA *af)
 
 	if (!Deref(ch->fighting) && af->modifier == 0)
 	{
-		if (number_percent() < 4 && af->location == APPLY_DAMROLL)
+		if (number_percent() < 4 && af->location == obj_location(APPLY_DAMROLL))
 		{
 			switch (number_range(1, 4))
 			{
@@ -936,7 +937,7 @@ void living_blade_pulse(OBJ_DATA *obj, OBJ_AFFECT_DATA *af)
 
 	affect_to_obj(obj, &af2);
 
-	if (number_percent() < 10 && af2.location == APPLY_DAMROLL)
+	if (number_percent() < 10 && af2.location == obj_location(APPLY_DAMROLL))
 	{
 		switch (number_range(1, 3))
 		{
@@ -955,7 +956,7 @@ void living_blade_pulse(OBJ_DATA *obj, OBJ_AFFECT_DATA *af)
 
 void living_blade_end(OBJ_DATA *obj, OBJ_AFFECT_DATA *af)
 {
-	if (af->location == APPLY_HITROLL)
+	if (af->location == obj_location(APPLY_HITROLL))
 		return;
 
 	CHAR_DATA *carrier = Deref(obj->carried_by);
@@ -2200,7 +2201,7 @@ void mephisto_two(CHAR_DATA *ch, CHAR_DATA *victim, char *argument)
 	af.owner = ch->self;
 	af.duration = 4;
 	af.modifier = 0;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	affect_to_char(ch, &af);
 }
 
@@ -2268,7 +2269,7 @@ void do_touch(CHAR_DATA *ch, char *argument)
 
 		init_affect(&af);
 		af.where = TO_AFFECTS;
-		af.location = 0;
+		af.location = APPLY_NONE;
 		af.modifier = 0;
 		af.owner = ch->self;
 		af.type = skill_lookup("burning touch");
@@ -2411,7 +2412,7 @@ void do_darksight(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 	af.owner = ch->self;
 	af.aftype = AFT_SKILL;
 	af.duration = 12;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.modifier = 0;
 
 	SET_BIT(af.bitvector, AFF_DARK_VISION);
@@ -2433,7 +2434,7 @@ void darksight_end(CHAR_DATA *ch, [[maybe_unused]] AFFECT_DATA *af)
 	af2.aftype = AFT_TIMER;
 	af2.duration = 36;
 	af2.modifier = 0;
-	af2.location = 0;
+	af2.location = APPLY_NONE;
 	affect_to_char(ch, &af2);
 }
 

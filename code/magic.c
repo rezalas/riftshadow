@@ -545,7 +545,7 @@ void do_laying_hands(CHAR_DATA *ch, char *argument)
 	af.level = ch->level;
 	af.duration = 48;
 	af.modifier = 0;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	affect_to_char(ch, &af);
 
 	heal = dice(ch->level, 12);
@@ -1438,7 +1438,7 @@ void spell_blindness(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_u
 	affect_to_char(victim, &af);
 
 	af.aftype = get_spell_aftype(ch);
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.modifier = 0;
 	af.mod_name = MOD_VISION;
 
@@ -1758,7 +1758,7 @@ void spell_charm_person(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[mayb
 	af.type = sn;
 	af.level = level;
 	af.duration = number_fuzzy(level / 4);
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.modifier = 0;
 	af.mod_name = MOD_CONC;
 
@@ -2480,7 +2480,6 @@ void do_detect_movement(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 		af.type = gsn_detect_movement;
 		af.level = ch->level;
 		af.duration = ch->level;
-		af.location = ch->level / 2;
 		af.location = APPLY_NONE;
 		af.modifier = 0;
 		af.mod_name = MOD_PERCEPTION;
@@ -2791,7 +2790,7 @@ void spell_fireproof(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_u
 	oaf.type = sn;
 	oaf.level = level;
 	oaf.duration = number_fuzzy(level / 4);
-	oaf.location = APPLY_NONE;
+	oaf.location = obj_location(APPLY_NONE);
 	oaf.modifier = 0;
 	SET_BIT(oaf.bitvector, ITEM_BURN_PROOF);
 
@@ -2862,7 +2861,7 @@ void spell_faerie_fog(int sn, int level, CHAR_DATA *ch, [[maybe_unused]] SpellTa
 	af.level = level;
 	af.duration = 4 + (level / 5);
 	af.modifier = 0;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.mod_name = MOD_VISIBILITY;
 
 	for (ich = ch->in_room->people; ich != nullptr; ich = ich->next_in_room)
@@ -2922,7 +2921,7 @@ void spell_fly(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unused]
 	af.type = sn;
 	af.level = level;
 	af.duration = level / 4;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.modifier = 0;
 
 	SET_BIT(af.bitvector, AFF_FLYING);
@@ -5119,7 +5118,7 @@ void spell_protective_shield(int sn, int level, CHAR_DATA *ch, SpellTarget /* vo
 	init_affect(&af);
 	af.where = TO_AFFECTS;
 	af.aftype = get_spell_aftype(ch);
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.modifier = 0;
 	af.duration = 5 + level / 5;
 	af.type = sn;
@@ -5161,7 +5160,7 @@ void sanguine_blind(CHAR_DATA *ch, CHAR_DATA *victim)
 	af.level = ch->level;
 	af.owner = ch->self;
 	af.duration = number_percent() > 50 ? 1 : 0;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.modifier = 0;
 	af.mod_name = MOD_VISION;
 
@@ -5193,7 +5192,7 @@ void spell_sanguine_ward(int sn, int level, CHAR_DATA *ch, SpellTarget /* vo */,
 	init_affect(&af);
 	af.where = TO_AFFECTS;
 	af.aftype = AFT_SPELL;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.modifier = charges;
 	af.duration = level / 5 + std::min(charges * 2, 7);
 	af.type = sn;
@@ -5296,7 +5295,7 @@ void spell_consecrate(int sn, int level, CHAR_DATA *ch, [[maybe_unused]] SpellTa
 	raf.type = sn;
 	raf.level = level;
 	raf.duration = number_range(4, 6);
-	raf.location = APPLY_NONE;
+	raf.location = APPLY_ROOM_NONE;
 	raf.modifier = 0;
 	raf.owner = ch->self;
 	raf.end_fun = nullptr;
@@ -5307,7 +5306,7 @@ void spell_consecrate(int sn, int level, CHAR_DATA *ch, [[maybe_unused]] SpellTa
 	af.where = TO_AFFECTS;
 	af.aftype = AFT_COMMUNE;
 	af.type = sn;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.modifier = 0;
 	af.level = level;
 	af.duration = 15;
@@ -5891,7 +5890,7 @@ void spell_heavenly_sceptre_fire(int sn, int /* level */, CHAR_DATA *ch, SpellTa
 	af.type = sn;
 	af.modifier = 0;
 	af.duration = 1;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.level = ch->level;
 	affect_to_char(ch, &af);
 }
@@ -5972,7 +5971,7 @@ void spell_forget(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unus
 	af.modifier = 0;
 	af.owner = ch->self;
 	af.duration = level / 10;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.level = level;
 	af.mod_name = MOD_CONC;
 	affect_to_char(victim, &af);
@@ -6005,7 +6004,7 @@ void spell_earthbind(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_u
 	af.modifier = 0;
 	af.level = level;
 	af.duration = level / 5;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.mod_name = MOD_LEVITATION;
 	affect_to_char(victim, &af);
 
@@ -6041,7 +6040,7 @@ void spell_divine_touch(int sn, int level, CHAR_DATA *ch, SpellTarget /* vo */, 
 
 	af.type = sn;
 	af.modifier = 0;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.duration = level / 5;
 	af.level = level;
 	affect_to_char(ch, &af);
@@ -6428,7 +6427,7 @@ void spell_prevent_healing(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[m
 	af.aftype = AFT_SPELL;
 	af.type = gsn_prevent_healing;
 	af.level = level;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.modifier = 0;
 	af.duration = level / 6;
 	af.mod_name = MOD_REGEN;
@@ -6567,7 +6566,7 @@ void spell_hold_person(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe
 	af.where = TO_AFFECTS;
 	af.aftype = AFT_SPELL;
 	af.type = gsn_hold_person;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.modifier = 0;
 	af.duration = 1;
 	af.level = level;
@@ -6637,7 +6636,7 @@ void spell_deafen(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unus
 	af.level = level;
 	af.duration = level / 12;
 	af.modifier = 0;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.mod_name = MOD_HEARING;
 	affect_to_char(victim, &af);
 
@@ -6689,7 +6688,7 @@ void spell_talismanic_aura(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /
 		af.duration = 8;
 		affect_to_char(ch, &af);
 
-		af.location = 0;
+		af.location = APPLY_NONE;
 		af.aftype = AFT_SPELL;
 		af.modifier = 0;
 		affect_to_char(ch, &af);
@@ -6702,7 +6701,7 @@ void spell_talismanic_aura(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /
 		act("A multihued aura coalesces around $n.", ch, nullptr, ch, TO_ROOM);
 		affect_to_char(ch, &af);
 
-		af.location = 0;
+		af.location = APPLY_NONE;
 		af.aftype = AFT_SPELL;
 		af.modifier = 0;
 		affect_to_char(ch, &af);

@@ -296,7 +296,7 @@ constexpr AreaAffectWhere TO_AREA_AFFECTS = AreaAffectWhere::TO_AREA_AFFECTS;
 
 // Room-affect apply locations. A separate family from the main APPLY_* below:
 // values 0-4 collide with APPLY_NONE..APPLY_WIS, so it must be its own enum.
-enum ApplyRoomLocation : int
+enum class ApplyRoomLocation : int
 {
 	APPLY_ROOM_NONE				= 0,
 	APPLY_ROOM_HEAL				= 1,
@@ -304,6 +304,29 @@ enum ApplyRoomLocation : int
 	APPLY_ROOM_SECT				= 3,
 	APPLY_ROOM_NOPE				= 4,
 };
+constexpr ApplyRoomLocation APPLY_ROOM_NONE = ApplyRoomLocation::APPLY_ROOM_NONE;
+constexpr ApplyRoomLocation APPLY_ROOM_HEAL = ApplyRoomLocation::APPLY_ROOM_HEAL;
+constexpr ApplyRoomLocation APPLY_ROOM_MANA = ApplyRoomLocation::APPLY_ROOM_MANA;
+constexpr ApplyRoomLocation APPLY_ROOM_SECT = ApplyRoomLocation::APPLY_ROOM_SECT;
+constexpr ApplyRoomLocation APPLY_ROOM_NOPE = ApplyRoomLocation::APPLY_ROOM_NOPE;
+
+
+// Area-affect apply locations. The fourth APPLY_* family, and the second one
+// that was a run of #defines in merc.h rather than an enumeration, which is
+// the same reason the area affect discriminator was: nothing about an area
+// affect had a type.
+enum class ApplyAreaLocation : int
+{
+	APPLY_AREA_NONE				= 0,
+	APPLY_AREA_TEMP				= 1,
+	APPLY_AREA_WIND				= 2,
+	APPLY_AREA_SKY				= 3,
+};
+
+constexpr ApplyAreaLocation APPLY_AREA_NONE = ApplyAreaLocation::APPLY_AREA_NONE;
+constexpr ApplyAreaLocation APPLY_AREA_TEMP = ApplyAreaLocation::APPLY_AREA_TEMP;
+constexpr ApplyAreaLocation APPLY_AREA_WIND = ApplyAreaLocation::APPLY_AREA_WIND;
+constexpr ApplyAreaLocation APPLY_AREA_SKY = ApplyAreaLocation::APPLY_AREA_SKY;
 
 // Object apply locations (the obj->value[] slots). Another separate family -
 // values 0-6 collide with both APPLY_ROOM_* and the main APPLY_*. Note
@@ -999,7 +1022,7 @@ enum FurniturePosition : int
 // (short), not a bit field. Compared with == and switched on. APPLY_ROOM_* and
 // APPLY_OBJ_* (above) are separate families on separate location fields.
 // Wire format - rename freely, never renumber.
-enum ApplyLocation : int
+enum class ApplyLocation : int
 {
 	APPLY_NONE					= 0,
 	APPLY_STR					= 1,
@@ -1043,6 +1066,61 @@ enum ApplyLocation : int
 	// numbering despite its APPLY_OBJ_ name. Kept in this enum, at its value.
 	APPLY_OBJ_PROPERTIES		= 100,
 };
+// Reachable unqualified, as the other promoted families are.
+constexpr ApplyLocation APPLY_NONE = ApplyLocation::APPLY_NONE;
+constexpr ApplyLocation APPLY_STR = ApplyLocation::APPLY_STR;
+constexpr ApplyLocation APPLY_DEX = ApplyLocation::APPLY_DEX;
+constexpr ApplyLocation APPLY_INT = ApplyLocation::APPLY_INT;
+constexpr ApplyLocation APPLY_WIS = ApplyLocation::APPLY_WIS;
+constexpr ApplyLocation APPLY_CON = ApplyLocation::APPLY_CON;
+constexpr ApplyLocation APPLY_SEX = ApplyLocation::APPLY_SEX;
+constexpr ApplyLocation APPLY_CLASS = ApplyLocation::APPLY_CLASS;
+constexpr ApplyLocation APPLY_LUCK = ApplyLocation::APPLY_LUCK;
+constexpr ApplyLocation APPLY_AGE = ApplyLocation::APPLY_AGE;
+constexpr ApplyLocation APPLY_HEIGHT = ApplyLocation::APPLY_HEIGHT;
+constexpr ApplyLocation APPLY_WEIGHT = ApplyLocation::APPLY_WEIGHT;
+constexpr ApplyLocation APPLY_MANA = ApplyLocation::APPLY_MANA;
+constexpr ApplyLocation APPLY_HIT = ApplyLocation::APPLY_HIT;
+constexpr ApplyLocation APPLY_MOVE = ApplyLocation::APPLY_MOVE;
+constexpr ApplyLocation APPLY_GOLD = ApplyLocation::APPLY_GOLD;
+constexpr ApplyLocation APPLY_EXP = ApplyLocation::APPLY_EXP;
+constexpr ApplyLocation APPLY_AC = ApplyLocation::APPLY_AC;
+constexpr ApplyLocation APPLY_HITROLL = ApplyLocation::APPLY_HITROLL;
+constexpr ApplyLocation APPLY_DAMROLL = ApplyLocation::APPLY_DAMROLL;
+constexpr ApplyLocation APPLY_SAVES = ApplyLocation::APPLY_SAVES;
+constexpr ApplyLocation APPLY_SAVING_PARA = ApplyLocation::APPLY_SAVING_PARA;
+constexpr ApplyLocation APPLY_SAVING_ROD = ApplyLocation::APPLY_SAVING_ROD;
+constexpr ApplyLocation APPLY_SAVING_PETRI = ApplyLocation::APPLY_SAVING_PETRI;
+constexpr ApplyLocation APPLY_SAVING_BREATH = ApplyLocation::APPLY_SAVING_BREATH;
+constexpr ApplyLocation APPLY_SAVING_SPELL = ApplyLocation::APPLY_SAVING_SPELL;
+constexpr ApplyLocation APPLY_SPELL_AFFECT = ApplyLocation::APPLY_SPELL_AFFECT;
+constexpr ApplyLocation APPLY_CARRY_WEIGHT = ApplyLocation::APPLY_CARRY_WEIGHT;
+constexpr ApplyLocation APPLY_DEFENSE = ApplyLocation::APPLY_DEFENSE;
+constexpr ApplyLocation APPLY_REGENERATION = ApplyLocation::APPLY_REGENERATION;
+constexpr ApplyLocation APPLY_SIZE = ApplyLocation::APPLY_SIZE;
+constexpr ApplyLocation APPLY_ENERGYSTATE = ApplyLocation::APPLY_ENERGYSTATE;
+constexpr ApplyLocation APPLY_DAM_MOD = ApplyLocation::APPLY_DAM_MOD;
+constexpr ApplyLocation APPLY_LEGS = ApplyLocation::APPLY_LEGS;
+constexpr ApplyLocation APPLY_ARMS = ApplyLocation::APPLY_ARMS;
+constexpr ApplyLocation APPLY_BEAUTY = ApplyLocation::APPLY_BEAUTY;
+constexpr ApplyLocation APPLY_ALIGNMENT = ApplyLocation::APPLY_ALIGNMENT;
+constexpr ApplyLocation APPLY_ETHOS = ApplyLocation::APPLY_ETHOS;
+constexpr ApplyLocation APPLY_OBJ_PROPERTIES = ApplyLocation::APPLY_OBJ_PROPERTIES;
+
+// An object affect's location field holds one of two families, chosen by the
+// affect's `where`: one of the object's own value slots, or a character apply
+// that the object hands to whoever wears it. The field is therefore a plain
+// number, and these say which family is being put into it or read out of it.
+constexpr short obj_location(ApplyObjLocation location)
+{
+	return static_cast<short>(location);
+}
+
+constexpr short obj_location(ApplyLocation location)
+{
+	return static_cast<short>(location);
+}
+
 
 // Spell/effect modifier type, an ordinal. MOD_NONE is the -1 sentinel, hence
 // the required : int underlying type. Wire format - never renumber.

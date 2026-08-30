@@ -33,6 +33,7 @@
 #include <time.h>
 #include <algorithm>
 #include "merc.h"
+#include "persisted_enum.h"
 #include "olc_save.h"
 #include "rift.h"
 #include "stdlibs/cfilesystem.h"
@@ -475,7 +476,7 @@ void save_object(FILE *fp, OBJ_INDEX_DATA *pObjIndex)
 	for (const auto &app : pObjIndex->apply)
 	{
 		fprintf(fp, "APPLY %s %d\n",
-			upstring(display_name_lookup(app.location, apply_locations)),
+			upstring(display_name_lookup(write_persisted(app.location), apply_locations)),
 			app.modifier);
 	}
 

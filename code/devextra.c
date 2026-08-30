@@ -9,6 +9,7 @@
 #include <algorithm>
 #include <iterator>
 #include "merc.h"
+#include "persisted_enum.h"
 #include "entity/handles.h"
 #include "devextra.h"
 #include "rift.h"
@@ -1717,7 +1718,12 @@ void do_affto(CHAR_DATA *ch, char *argument)
 	CHAR_DATA *victim;
 	char cname[MAX_INPUT_LENGTH], skill_name[MAX_INPUT_LENGTH], location[MAX_INPUT_LENGTH],
 		targ[MAX_INPUT_LENGTH], saftype[MAX_INPUT_LENGTH], sbitvector[MAX_INPUT_LENGTH];
-	int duration = -2, sn = 2, nlocation = -2, modifier = 0, aftype = -2;
+	int duration = -2, sn = 2, modifier = 0, aftype = -2;
+
+	// -2 is this command's "not given yet" marker for the arguments it reads,
+	// and an apply location has no such value, so the marker stays a number
+	// and is converted once it has been checked.
+	int nlocation = -2;
 	long bitvector = 0;
 	char returnstr[MAX_INPUT_LENGTH];
 
@@ -1805,7 +1811,7 @@ void do_affto(CHAR_DATA *ch, char *argument)
 	af.type = sn;
 	af.aftype = aftype;
 	af.level = ch->level;
-	af.location = nlocation;
+	af.location = read_persisted<ApplyLocation>(nlocation, "affect location");
 	af.modifier = modifier;
 	af.duration = duration;
 	SET_BIT(af.bitvector, bitvector);
@@ -2946,7 +2952,7 @@ void do_snare(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 	af.type = gsn_snare;
 	af.level = ch->level;
 	af.duration = 24;
-	af.location = APPLY_NONE;
+	af.location = APPLY_ROOM_NONE;
 	af.modifier = 0;
 	af.owner = ch->self;
 	af.end_fun = nullptr;

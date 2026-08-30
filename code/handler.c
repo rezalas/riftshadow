@@ -38,6 +38,7 @@
 #include <time.h>
 #include <algorithm>
 #include "merc.h"
+#include "persisted_enum.h"
 #include "handler.h"
 #include "entity/handles.h"
 #include "entity/list_cursor.h"
@@ -1148,7 +1149,7 @@ void init_affect(AFFECT_DATA *paf)
 	paf->level = 0;
 	paf->init_duration = 0;
 	paf->duration = 0;
-	paf->location = 0;
+	paf->location = APPLY_NONE;
 	paf->modifier = 0;
 	paf->mod_name = MOD_NONE;
 
@@ -2976,15 +2977,15 @@ bool can_drop_obj(CHAR_DATA *ch, OBJ_DATA *obj)
 /*
  * Return ascii name of an affect location.
  */
-char *affect_loc_name(int location)
+char *affect_loc_name(ApplyLocation location)
 {
 	for (int i = 0; apply_locations[i].name != nullptr; i++)
 	{
-		if (apply_locations[i].bit == location)
+		if (apply_locations[i].bit == write_persisted(location))
 			return apply_locations[i].display;
 	}
 
-	RS.Logger.Warn("Affect_location_name: unknown location {}.", location);
+	RS.Logger.Warn("Affect_location_name: unknown location {}.", write_persisted(location));
 	return "(unknown)";
 }
 
@@ -3882,7 +3883,7 @@ void init_affect_room(ROOM_AFFECT_DATA *paf)
 	paf->aftype = AFT_SPELL;
 	paf->level = 0;
 	paf->duration = 0;
-	paf->location = 0;
+	paf->location = APPLY_ROOM_NONE;
 	paf->modifier = 0;
 
 	zero_vector(paf->bitvector);
@@ -3946,7 +3947,7 @@ void affect_modify_room(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *paf, bool fAdd)
 			room->sector_type = sector_shifted(room->sector_type, mod);
 			break;
 		default:
-			RS.Logger.Warn("Affect_modify_room: unknown location {}.", paf->location);
+			RS.Logger.Warn("Affect_modify_room: unknown location {}.", write_persisted(paf->location));
 			break;
 	}
 }
@@ -4143,7 +4144,7 @@ void affect_join_room(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *paf)
 /*
  * Return ascii name of an raffect location.
  */
-char *raffect_loc_name(int location)
+char *raffect_loc_name(ApplyRoomLocation location)
 {
 	switch (location)
 	{
@@ -4159,7 +4160,7 @@ char *raffect_loc_name(int location)
 			return "nope";
 	}
 
-	RS.Logger.Warn("raffect_location_name: unknown location {}.", location);
+	RS.Logger.Warn("raffect_location_name: unknown location {}.", write_persisted(location));
 	return "(unknown)";
 }
 
@@ -4231,7 +4232,7 @@ void init_affect_obj(OBJ_AFFECT_DATA *paf)
 	paf->aftype = AFT_SPELL;
 	paf->level = 0;
 	paf->duration = 0;
-	paf->location = 0;
+	paf->location = obj_location(APPLY_OBJ_NONE);
 	paf->modifier = 0;
 	zero_vector(paf->bitvector);
 	paf->tick_fun = nullptr;
@@ -4261,7 +4262,9 @@ void affect_modify_obj(OBJ_DATA *obj, OBJ_AFFECT_DATA *paf, bool fAdd)
 					unequip_char(ch, obj, false);
 
 				OBJ_APPLY_DATA app;
-				app.location = paf->location;
+				// This affect is TO_OBJ_APPLY, so the location it carries is a
+				// character apply rather than one of the object's own slots.
+				app.location = static_cast<ApplyLocation>(paf->location);
 				app.modifier = paf->modifier;
 				app.type = paf->type;
 				obj->apply.push_front(app);
@@ -4290,7 +4293,7 @@ void affect_modify_obj(OBJ_DATA *obj, OBJ_AFFECT_DATA *paf, bool fAdd)
 				auto it = obj->apply.begin();
 				for (; it != obj->apply.end(); ++it)
 				{
-					if (it->type == paf->type && it->location == paf->location)
+					if (it->type == paf->type && it->location == static_cast<ApplyLocation>(paf->location))
 						break;
 				}
 
@@ -4505,7 +4508,7 @@ void init_affect_area(AREA_AFFECT_DATA *paf)
 	paf->aftype = AFT_SPELL;
 	paf->level = 0;
 	paf->duration = 0;
-	paf->location = 0;
+	paf->location = APPLY_AREA_NONE;
 	paf->modifier = 0;
 	zero_vector(paf->bitvector);
 	paf->pulse_fun = nullptr;
@@ -4567,7 +4570,7 @@ void affect_modify_area(AREA_DATA *area, AREA_AFFECT_DATA *paf, bool fAdd)
 
 			break;
 		default:
-			RS.Logger.Warn("affect_modify_area: unknown location {}.", paf->location);
+			RS.Logger.Warn("affect_modify_area: unknown location {}.", write_persisted(paf->location));
 	}
 }
 
@@ -4681,7 +4684,7 @@ void affect_join_area(AREA_DATA *area, AREA_AFFECT_DATA *paf)
 	affect_to_area(area, paf);
 }
 
-char *aaffect_loc_name(int location)
+char *aaffect_loc_name(ApplyAreaLocation location)
 {
 	switch (location)
 	{
@@ -4695,7 +4698,7 @@ char *aaffect_loc_name(int location)
 			return "wind";
 	}
 
-	RS.Logger.Warn("aaffect_loc_name: unknown  location {}.", location);
+	RS.Logger.Warn("aaffect_loc_name: unknown  location {}.", write_persisted(location));
 	return "(unknown)";
 }
 
@@ -4786,7 +4789,7 @@ char *flag_room_name(int vector)
 	return (buf[0] != '\0') ? buf + 1 : (char *)"none";
 }
 
-void modify_location(CHAR_DATA *ch, int location, int mod, bool add)
+void modify_location(CHAR_DATA *ch, ApplyLocation location, int mod, bool add)
 {
 	int i;
 	if (!add)

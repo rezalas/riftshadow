@@ -388,7 +388,7 @@ void pulse_prog_mudschool_snake(ROOM_INDEX_DATA *room)
 	af.aftype = AFT_SKILL;
 	af.duration = 3;
 	af.modifier = 0;
-	af.location = 0;
+	af.location = APPLY_ROOM_NONE;
 	new_affect_to_room(room, &af);
 
 	init_affect(&paf);

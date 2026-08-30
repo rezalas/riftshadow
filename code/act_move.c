@@ -931,7 +931,7 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 				cvaf.aftype = AFT_MALADY;
 				cvaf.level = raf->level;
 				cvaf.duration = 4;
-				cvaf.location = 0;
+				cvaf.location = APPLY_NONE;
 				cvaf.modifier = 0;
 				cvaf.owner = raf->owner;
 				new_affect_to_char(ch, &cvaf);
@@ -951,7 +951,7 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 			cvaf2.aftype = AFT_MALADY;
 			cvaf2.level = raf->level;
 			cvaf2.duration = 1;
-			cvaf2.location = 0;
+			cvaf2.location = APPLY_NONE;
 			cvaf2.modifier = 0;
 			cvaf2.owner = raf->owner;
 
@@ -1322,7 +1322,7 @@ void trap_execute(CHAR_DATA *victim, ROOM_INDEX_DATA *room, TRAP_DATA *trap)
 						af.type = gsn_sleep;
 						af.level = trap->quality * 6;
 						af.owner = vch->self;
-						af.location = 0;
+						af.location = APPLY_NONE;
 						af.modifier = 0;
 						af.duration = trap->quality * 4;
 
@@ -1362,7 +1362,7 @@ void trap_execute(CHAR_DATA *victim, ROOM_INDEX_DATA *room, TRAP_DATA *trap)
 					af.duration = trap->quality * 4;
 					af.owner = vch->self;
 					af.modifier = 0;
-					af.location = 0;
+					af.location = APPLY_NONE;
 					af.pulse_fun = mana_drain_pulse;
 					affect_to_char(vch, &af);
 				}
@@ -2824,7 +2824,7 @@ void do_vigilance(CHAR_DATA *ch, char *argument)
 	af.where = TO_AFFECTS;
 	af.aftype = AFT_POWER;
 	af.level = ch->level;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.duration = 48;
 	af.modifier = 0;
 	af.type = gsn_vigilance;
@@ -2879,7 +2879,7 @@ void do_acute_vision(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 	af.where = TO_AFFECTS;
 	af.aftype = AFT_SKILL;
 	af.type = gsn_acute_vision;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.modifier = 0;
 	af.level = ch->level;
 	af.duration = ch->level;
@@ -2933,7 +2933,7 @@ void do_camp(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 	init_affect(&af);
 	af.where = TO_AFFECTS;
 	af.aftype = AFT_SKILL;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.duration = 5;
 	af.modifier = 0;
 	af.level = ch->level;
@@ -3042,7 +3042,7 @@ void do_creep(CHAR_DATA *ch, char *argument)
 	af.aftype = AFT_SKILL;
 	af.type = gsn_creep;
 	af.modifier = 0;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.duration = 1;
 	af.level = ch->level;
 	affect_join(ch, &af);
@@ -3538,7 +3538,7 @@ void do_bear_call(CHAR_DATA *ch, char *argument)
 	af.level = ch->level;
 	af.modifier = 0;
 	af.duration = 24;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.type = gsn_bear_call;
 
 	affect_to_char(ch, &af);
@@ -3766,7 +3766,7 @@ void do_animal_call(CHAR_DATA *ch, char *argument)
 	af.type = gsn_animal_call;
 	af.level = ch->level;
 	af.duration = 24;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.modifier = 0;
 	affect_to_char(ch, &af);
 }
@@ -4092,7 +4092,7 @@ void do_aura_of_sustenance(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 	init_affect(&af);
 	af.where = TO_AFFECTS;
 	af.aftype = AFT_SKILL;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.level = ch->level;
 	af.duration = ch->level;
 	af.type = gsn_aura_of_sustenance;
@@ -4307,7 +4307,7 @@ void do_door_bash(CHAR_DATA *ch, char *argument)
 	af.where = TO_AFFECTS;
 	af.aftype = AFT_SKILL;
 	af.type = gsn_door_bash;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.modifier = 0;
 	af.duration = -1;
 	af.level = ch->level;

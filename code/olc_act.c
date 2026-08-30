@@ -4375,7 +4375,7 @@ bool oedit_show(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 			send_to_char("------ -------- -------\n\r", ch);
 		}
 
-		sprintf(buf, "[%4d] %-8d %s\n\r", cnt, paf.modifier, flag_string_old(apply_flags, paf.location));
+		sprintf(buf, "[%4d] %-8d %s\n\r", cnt, paf.modifier, flag_string_old(apply_flags, write_persisted(paf.location)));
 		send_to_char(buf, ch);
 		cnt++;
 	}
@@ -4418,7 +4418,7 @@ bool oedit_addapply(CHAR_DATA *ch, char *argument)
 	}
 
 	OBJ_APPLY_DATA pAf;
-	pAf.location = value;
+	pAf.location = read_persisted<ApplyLocation>(value, "apply location");
 	pAf.modifier = atoi(mod);
 	pObj->apply.push_front(pAf);
 

@@ -374,7 +374,8 @@ void do_divine_intervention(CHAR_DATA *ch, char *argument)
 	char arg3[MAX_STRING_LENGTH];
 	char arg4[MAX_STRING_LENGTH];
 	CHAR_DATA *victim;
-	int enchant_type, value, duration;
+	int value, duration;
+	ApplyLocation enchant_type;
 	bool isgoodaffect;
 	AFFECT_DATA af;
 	argument = one_argument(argument, arg1);

@@ -231,6 +231,17 @@ static_assert(!std::is_convertible_v<AffectWhere, int>, "an affect where is not 
 static_assert(!std::is_convertible_v<RoomAffectWhere, int>, "a room affect where is not a number");
 static_assert(!std::is_convertible_v<ObjAffectWhere, int>, "an object affect where is not a number");
 static_assert(!std::is_convertible_v<AreaAffectWhere, int>, "an area affect where is not a number");
+
+// The four families that all spell their values APPLY_*. Three of them are
+// stored in a field called "location" on the character, room and area affects,
+// and the fourth is the object's own value slots. Their values collide from 0
+// upwards.
+static_assert(!std::is_convertible_v<ApplyLocation, int>, "an apply location is not a number");
+static_assert(!std::is_convertible_v<ApplyRoomLocation, int>, "a room apply is not a number");
+static_assert(!std::is_convertible_v<ApplyAreaLocation, int>, "an area apply is not a number");
+static_assert(!std::is_convertible_v<ApplyLocation, ApplyRoomLocation>, "a character apply is not a room apply");
+static_assert(!std::is_convertible_v<ApplyRoomLocation, ApplyAreaLocation>, "a room apply is not an area apply");
+static_assert(!std::is_convertible_v<ApplyLocation, ApplyAreaLocation>, "a character apply is not an area apply");
 static_assert(!std::is_convertible_v<ActTarget, AffectWhere>, "an act target is not an affect where");
 static_assert(!std::is_convertible_v<AffectWhere, RoomAffectWhere>, "a character affect is not a room affect");
 static_assert(!std::is_convertible_v<AffectWhere, ObjAffectWhere>, "a character affect is not an object affect");
@@ -285,6 +296,44 @@ SCENARIO("reading a stored affect discriminator", "[persisted_enum]")
 		THEN("the value survives being read and written back")
 		{
 			REQUIRE(write_persisted(read_persisted<ObjAffectWhere>(5, "object affect where")) == 5);
+		}
+	}
+}
+
+SCENARIO("reading a stored apply location", "[persisted_enum]")
+{
+	GIVEN("locations the enumerations name")
+	{
+		THEN("each reads back as itself")
+		{
+			REQUIRE(read_persisted<ApplyLocation>(0, "apply") == APPLY_NONE);
+			REQUIRE(read_persisted<ApplyLocation>(18, "apply") == APPLY_HITROLL);
+			REQUIRE(read_persisted<ApplyLocation>(100, "apply") == APPLY_OBJ_PROPERTIES);
+		}
+	}
+
+	GIVEN("the zero of each apply family")
+	{
+		// They are all zero, which is why the sites that were written as a
+		// bare 0 could not say which family they meant, and why renaming them
+		// changed no stored value.
+		THEN("they agree")
+		{
+			REQUIRE(write_persisted(APPLY_NONE) == 0);
+			REQUIRE(write_persisted(APPLY_ROOM_NONE) == 0);
+			REQUIRE(write_persisted(APPLY_AREA_NONE) == 0);
+			REQUIRE(obj_location(APPLY_OBJ_NONE) == 0);
+		}
+	}
+
+	GIVEN("an object affect's location, which is one family or the other")
+	{
+		// Which one is decided by the affect's where, so the field is a plain
+		// number and these say which family is going into it.
+		THEN("both families reach it, and keep their own values")
+		{
+			REQUIRE(obj_location(APPLY_OBJ_V4) == 5);
+			REQUIRE(obj_location(APPLY_HITROLL) == 18);
 		}
 	}
 }

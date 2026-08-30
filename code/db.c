@@ -1980,7 +1980,9 @@ OBJ_DATA *create_object(OBJ_INDEX_DATA *pObjIndex, int level)
 			oaf.type = paf.type;
 			oaf.level = paf.level;
 			oaf.duration = paf.duration;
-			oaf.location = paf.location;
+			// The object affect's location field holds a character apply here,
+			// because the affect being copied carries one.
+			oaf.location = obj_location(paf.location);
 			oaf.modifier = paf.modifier;
 			copy_vector(oaf.bitvector, paf.bitvector);
 			affect_to_obj(obj, &oaf);

@@ -149,7 +149,7 @@ void acid_effect(SpellTarget target, int level, int dam)
 
 			for (auto &paf : obj->affected)
 			{
-				if (paf.location == APPLY_AC)
+				if (paf.location == obj_location(APPLY_AC))
 				{
 					af_found = true;
 					paf.type = -1;
@@ -167,7 +167,7 @@ void acid_effect(SpellTarget target, int level, int dam)
 				paf.type = -1;
 				paf.level = level;
 				paf.duration = -1;
-				paf.location = APPLY_AC;
+				paf.location = obj_location(APPLY_AC);
 				paf.modifier = 1;
 				obj->affected.push_front(paf);
 			}

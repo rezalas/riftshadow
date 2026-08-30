@@ -1230,7 +1230,7 @@ void do_skin(CHAR_DATA *ch, char *argument)
 	af.aftype = AFT_SKILL;
 	af.type = gsn_skin;
 	af.modifier = 0;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.duration = 24;
 	af.level = ch->level;
 	affect_to_char(ch, &af);
@@ -4375,7 +4375,7 @@ void do_request(CHAR_DATA *ch, char *argument)
 	af.type = gsn_request;
 	af.modifier = 0;
 	af.duration = 5;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.level = ch->level;
 	affect_to_char(ch, &af);
 
@@ -4890,7 +4890,7 @@ void wear_obj_fallen_wings(CHAR_DATA *ch, OBJ_DATA *obj)
 	af.aftype = AFT_SKILL;
 	af.type = skill_lookup("fly");
 	af.modifier = 0;
-	af.location = 0;
+	af.location = APPLY_NONE;
 
 	SET_BIT(af.bitvector, AFF_FLYING);
 

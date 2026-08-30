@@ -2405,7 +2405,7 @@ void do_group(CHAR_DATA *ch, char *argument)
 		af.duration = -1;
 		SET_BIT(af.bitvector, AFF_PERMANENT);
 		af.modifier = 0;
-		af.location = 0;
+		af.location = APPLY_NONE;
 		af.pulse_fun = traitor_pulse;
 		new_affect_to_char(ch, &af);
 	}
@@ -2421,7 +2421,7 @@ void do_group(CHAR_DATA *ch, char *argument)
 		af.duration = -1;
 		SET_BIT(af.bitvector, AFF_PERMANENT);
 		af.modifier = 0;
-		af.location = 0;
+		af.location = APPLY_NONE;
 		af.pulse_fun = traitor_pulse;
 
 		for (OwningListWalk<CHAR_DATA> walk(char_list); !walk.Done(); walk.Step())

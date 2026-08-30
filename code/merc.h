@@ -509,10 +509,6 @@ struct old_char
 // area applies
 //
 
-#define	APPLY_AREA_NONE				0
-#define	APPLY_AREA_TEMP				1
-#define	APPLY_AREA_WIND				2
-#define	APPLY_AREA_SKY				3
 
 //
 // Cabal definitions

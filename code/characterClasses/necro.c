@@ -498,7 +498,7 @@ void animate_four(CHAR_DATA *ch, OBJ_DATA *corpse)
 	af.level = ch->level;
 	af.duration = 24;
 	af.modifier = 0;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	affect_to_char(ch, &af);
 
 	act("$p convulses slightly and rises to its feet to serve $n!", ch, corpse, nullptr, TO_ROOM);
@@ -637,7 +637,7 @@ void spell_black_circle(int sn, int /* level */, CHAR_DATA *ch, SpellTarget /* v
 	af.aftype = AFT_TIMER;
 	af.type = sn;
 	af.modifier = 0;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.duration = 60;
 	af.owner = nullptr;
 	af.level = ch->level;
@@ -1066,7 +1066,7 @@ void spell_decrepify(int sn, [[maybe_unused]] int level, CHAR_DATA *ch, SpellTar
 	af.where = TO_AFFECTS;
 	af.aftype = AFT_MALADY;
 	af.type = sn;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.modifier = 0;
 	af.duration = ch->level / 5;
 	af.level = ch->level;
@@ -1332,7 +1332,7 @@ void spell_corpse_trap(int sn, int /* level */, CHAR_DATA *ch, SpellTarget /* vo
 	af.where = TO_AFFECTS;
 	af.aftype = AFT_TIMER;
 	af.type = sn;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.modifier = 0;
 	af.duration = 24;
 	af.level = ch->level;
@@ -1425,7 +1425,7 @@ void spell_lesser_golem(int sn, int /* level */, CHAR_DATA *ch, SpellTarget /* v
 	init_affect(&af);
 	af.where = TO_AFFECTS;
 	af.aftype = AFT_TIMER;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.modifier = 0;
 	af.duration = dice(5, 8);
 	af.type = sn;
@@ -1557,7 +1557,7 @@ void spell_greater_golem(int sn, int /* level */, CHAR_DATA *ch, SpellTarget /* 
 	init_affect(&af);
 	af.where = TO_AFFECTS;
 	af.aftype = AFT_TIMER;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.modifier = 0;
 	af.duration = dice(5, 8);
 	af.type = sn;

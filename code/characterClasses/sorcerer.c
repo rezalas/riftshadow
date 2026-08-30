@@ -187,7 +187,7 @@ void spell_gravity_well(int sn, int level, CHAR_DATA *ch, SpellTarget /* vo */, 
 	raf.aftype = AFT_SPELL;
 	raf.level = level;
 	raf.duration = level / 6;
-	raf.location = 0;
+	raf.location = APPLY_ROOM_NONE;
 	raf.modifier = 0;
 	raf.owner = ch->self;
 	raf.tick_fun = nullptr;
@@ -200,7 +200,7 @@ void spell_gravity_well(int sn, int level, CHAR_DATA *ch, SpellTarget /* vo */, 
 	af.aftype = AFT_TIMER;
 	af.level = level;
 	af.duration = 72;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.modifier = 0;
 	affect_to_char(ch, &af);
 
@@ -210,7 +210,7 @@ void spell_gravity_well(int sn, int level, CHAR_DATA *ch, SpellTarget /* vo */, 
 	aaf.aftype = AFT_SPELL;
 	aaf.level = level;
 	aaf.duration = -1;
-	aaf.location = 0;
+	aaf.location = APPLY_AREA_NONE;
 	aaf.modifier = 0;
 	aaf.owner = ch->self;
 	aaf.tick_fun = nullptr;
@@ -308,7 +308,7 @@ void spell_cyclone(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /* vo */,
 	aaf.aftype = AFT_SPELL;
 	aaf.level = level;
 	aaf.duration = 6;
-	aaf.location = 0;
+	aaf.location = APPLY_AREA_NONE;
 	aaf.modifier = 0;
 	aaf.owner = ch->self;
 	aaf.tick_fun = cyclone_begin_tick;
@@ -321,7 +321,7 @@ void spell_cyclone(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /* vo */,
 	af.aftype = AFT_TIMER;
 	af.level = level;
 	af.duration = 95;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.modifier = 0;
 	affect_to_char(ch, &af);
 
@@ -343,7 +343,7 @@ void cyclone_begin(AREA_DATA *area, AREA_AFFECT_DATA *af)
 	aaf.aftype = AFT_SPELL;
 	aaf.level = af->level;
 	aaf.duration = 18;
-	aaf.location = 0;
+	aaf.location = APPLY_AREA_NONE;
 	aaf.modifier = 0;
 	aaf.owner = af->owner;
 	aaf.tick_fun = nullptr;
@@ -521,7 +521,7 @@ void spell_conflagration(int sn, int level, CHAR_DATA *ch, SpellTarget /* vo */,
 	af.aftype = AFT_TIMER;
 	af.level = level;
 	af.duration = 144;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.modifier = 0;
 	affect_to_char(ch, &af);
 
@@ -677,7 +677,7 @@ void spell_ultradiffusion(int sn, int level, CHAR_DATA *ch, SpellTarget /* vo */
 		af.aftype = get_spell_aftype(ch);
 		af.level = level;
 		af.duration = 26;
-		af.location = 0;
+		af.location = APPLY_NONE;
 		af.modifier = 0;
 
 		SET_BIT(af.bitvector, AFF_PASS_DOOR);
@@ -1052,7 +1052,7 @@ void spell_vacuum(int sn, int level, CHAR_DATA *ch, [[maybe_unused]] SpellTarget
 	raf.aftype = get_spell_aftype(ch);
 	raf.level = level;
 	raf.duration = -1;
-	raf.location = 0;
+	raf.location = APPLY_ROOM_NONE;
 	raf.modifier = 0;
 	raf.owner = ch->self;
 	raf.end_fun = vacuum_end_fun;
@@ -1370,7 +1370,7 @@ void spell_corona(int sn, int level, CHAR_DATA *ch, [[maybe_unused]] SpellTarget
 	af.where = TO_RESIST;
 	af.type = sn;
 	af.aftype = AFT_SPELL;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.modifier = 0;
 	af.level = level;
 	af.duration = level / 3;
@@ -1406,7 +1406,7 @@ void spell_heatshield(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /* vo 
 	af.modifier = 0;
 	af.level = level;
 	af.duration = level / 8;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.mod_name = MOD_PROTECTION;
 	affect_to_char(ch, &af);
 
@@ -1632,7 +1632,7 @@ void spell_earthquake(int sn, int level, CHAR_DATA *ch, [[maybe_unused]] SpellTa
 			raf.aftype = get_spell_aftype(ch);
 			raf.level = level;
 			raf.duration = 1;
-			raf.location = 0;
+			raf.location = APPLY_ROOM_NONE;
 			raf.modifier = 0;
 			raf.owner = ch->self;
 			raf.end_fun = nullptr;
@@ -1755,7 +1755,7 @@ void spell_disrupt_vision(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[ma
 	af.aftype = get_spell_aftype(ch);
 	af.type = sn;
 	af.level = level;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.modifier = 0;
 	af.duration = level / 12;
 
@@ -1784,7 +1784,7 @@ void spell_mana_conduit(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[mayb
 	af.aftype = get_spell_aftype(ch);
 	af.type = sn;
 	af.level = level;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.modifier = 0;
 	af.duration = level / 3;
 	af.mod_name = MOD_REGEN;
@@ -1820,7 +1820,7 @@ void spell_synaptic_enhancement(int sn, int level, CHAR_DATA *ch, SpellTarget vo
 	af.aftype = get_spell_aftype(ch);
 	af.type = sn;
 	af.level = level;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.modifier = 0;
 	af.duration = level / 4;
 	af.mod_name = MOD_CONC;
@@ -1860,7 +1860,7 @@ void spell_synaptic_impairment(int sn, int level, CHAR_DATA *ch, SpellTarget vo,
 	af.aftype = get_spell_aftype(ch);
 	af.type = sn;
 	af.level = level;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.modifier = 0;
 	af.duration = level / 5;
 	af.mod_name = MOD_CONC;
@@ -1888,7 +1888,7 @@ void spell_elecshield(int sn, int level, CHAR_DATA *ch, [[maybe_unused]] SpellTa
 	af.modifier = 0;
 	af.level = level;
 	af.duration = level / 4;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.mod_name = MOD_PROTECTION;
 	affect_to_char(ch, &af);
 
@@ -1918,7 +1918,7 @@ void spell_scramble_neurons(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[
 	af.aftype = get_spell_aftype(ch);
 	af.type = sn;
 	af.level = level;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.modifier = 0;
 	af.duration = dice(4, 2) + level / 25;
 	af.mod_name = MOD_CONC;
@@ -1995,7 +1995,7 @@ void spell_interference(int sn, int level, CHAR_DATA *ch, SpellTarget /* vo */, 
 	aaf.aftype = AFT_SPELL;
 	aaf.level = level;
 	aaf.duration = dice(2, 3) + 5;
-	aaf.location = 0;
+	aaf.location = APPLY_AREA_NONE;
 	aaf.modifier = 0;
 	aaf.owner = ch->self;
 	aaf.tick_fun = nullptr;
@@ -2007,7 +2007,7 @@ void spell_interference(int sn, int level, CHAR_DATA *ch, SpellTarget /* vo */, 
 	af.type = gsn_interference;
 	af.aftype = AFT_TIMER;
 	af.duration = 48;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.modifier = 0;
 	af.owner = ch->self;
 	affect_to_char(ch, &af);
@@ -2246,7 +2246,7 @@ void spell_watershield(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /* vo
 	af.modifier = 0;
 	af.level = level;
 	af.duration = level / 4;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.mod_name = MOD_PROTECTION;
 	affect_to_char(ch, &af);
 
@@ -2596,7 +2596,7 @@ void spell_riptide(int sn, int level, CHAR_DATA *ch, [[maybe_unused]] SpellTarge
 		af.aftype = AFT_TIMER;
 		af.level = level;
 		af.duration = 36;
-		af.location = 0;
+		af.location = APPLY_NONE;
 		af.modifier = 0;
 		affect_to_char(ch, &af);
 
@@ -2689,7 +2689,7 @@ void spell_watermeld(int sn, int level, CHAR_DATA *ch, [[maybe_unused]] SpellTar
 		af.aftype = AFT_SPELL;
 		af.level = level;
 		af.duration = level / 5;
-		af.location = 0;
+		af.location = APPLY_NONE;
 		af.modifier = 0;
 		af.owner = nullptr;
 		af.end_fun = nullptr;
@@ -2772,7 +2772,7 @@ void spell_diffusion(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_u
 		af.aftype = AFT_SPELL;
 		af.level = level;
 		af.duration = level / 3;
-		af.location = 0;
+		af.location = APPLY_NONE;
 		af.modifier = 0;
 
 		SET_BIT(af.bitvector, AFF_PASS_DOOR);
@@ -2951,7 +2951,7 @@ void spell_airshield(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /* vo *
 	af.modifier = 0;
 	af.level = level;
 	af.duration = level / 4;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.mod_name = MOD_PROTECTION;
 	affect_to_char(ch, &af);
 
@@ -2973,7 +2973,7 @@ void spell_hardenfist(int sn, int level, CHAR_DATA *ch, [[maybe_unused]] SpellTa
 		af.aftype = AFT_SPELL;
 		af.level = level;
 		af.duration = level / 3;
-		af.location = 0;
+		af.location = APPLY_NONE;
 		af.modifier = 0;
 		af.owner = nullptr;
 		af.end_fun = nullptr;
@@ -3001,7 +3001,7 @@ void spell_stability(int sn, int level, CHAR_DATA *ch, [[maybe_unused]] SpellTar
 	init_affect(&af);
 	af.where = TO_AFFECTS;
 	af.aftype = AFT_SPELL;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.modifier = 0;
 	af.duration = level / 4;
 	af.type = sn;
@@ -3042,7 +3042,7 @@ void spell_sensevibrations(int sn, int level, CHAR_DATA *ch, SpellTarget /* vo *
 		af.aftype = AFT_SPELL;
 		af.level = level;
 		af.duration = level / 2;
-		af.location = 0;
+		af.location = APPLY_NONE;
 		af.modifier = 0;
 		af.owner = nullptr;
 		af.end_fun = nullptr;
@@ -3070,7 +3070,7 @@ void spell_diamondskin(int sn, int level, CHAR_DATA *ch, SpellTarget /* vo */, C
 			af.aftype = AFT_SPELL;
 			af.level = level + 8;
 			af.duration = 18 - level / 5;
-			af.location = 0;
+			af.location = APPLY_NONE;
 			af.owner = nullptr;
 			af.end_fun = nullptr;
 			af.modifier = (dice(5, 20) + 100) * 20;
@@ -3246,7 +3246,7 @@ void spell_earthshield(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /* vo
 	af.modifier = 0;
 	af.level = level;
 	af.duration = level / 4;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.mod_name = MOD_PROTECTION;
 	affect_to_char(ch, &af);
 
@@ -3271,7 +3271,7 @@ void spell_coldshield(int sn, int level, CHAR_DATA *ch, [[maybe_unused]] SpellTa
 	af.modifier = 0;
 	af.level = level;
 	af.duration = level / 4;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.mod_name = MOD_PROTECTION;
 	affect_to_char(ch, &af);
 
@@ -3393,7 +3393,7 @@ void spell_imprisonvoice(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[may
 	af.level = level;
 	af.duration = level / 10;
 	af.modifier = 0;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.mod_name = MOD_SPEECH;
 	affect_to_char(victim, &af);
 
@@ -3415,7 +3415,7 @@ void spell_frigidaura(int sn, int level, CHAR_DATA *ch, [[maybe_unused]] SpellTa
 	af.where = TO_RESIST;
 	af.type = sn;
 	af.aftype = AFT_SPELL;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.modifier = 0;
 	af.level = level;
 	af.duration = level / 3;
@@ -4281,7 +4281,7 @@ void spell_attract(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unu
 	af.aftype = get_spell_aftype(ch);
 	af.type = sn;
 	af.level = level;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.owner = ch->self;
 	af.modifier = 0;
 	af.duration = dice(4, 2) + level / 5;
@@ -4329,7 +4329,7 @@ void spell_absorb([[maybe_unused]] int sn, int level, CHAR_DATA *ch, SpellTarget
 	af.level = level;
 	af.duration = dice(4, 2) + level / 4;
 	af.modifier = 0;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	affect_to_char(victim, &af);
 
 	send_to_char("Warmth fills your body as you attune yourself to channel raw lightning.\n\r", victim);
@@ -4386,7 +4386,7 @@ void spell_call_lightning(int sn, int level, CHAR_DATA *ch, SpellTarget /* vo */
 	af.type = sn;
 	af.level = level;
 	af.duration = 36;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.modifier = 0;
 	affect_to_char(ch, &af);
 
@@ -4443,7 +4443,7 @@ void spell_grounding(int sn, int level, CHAR_DATA *ch, [[maybe_unused]] SpellTar
 	af.where = TO_RESIST;
 	af.aftype = AFT_SPELL;
 	af.type = sn;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.modifier = 0;
 	af.duration = level / 5;
 	af.level = level;
@@ -4520,7 +4520,7 @@ void spell_thunderclap(int sn, int level, CHAR_DATA *ch, SpellTarget /* vo */, C
 	af.level = level;
 	af.duration = 3;
 	af.modifier = 0;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.mod_name = MOD_HEARING;
 
 	for (vch = ch->in_room->people; vch != nullptr; vch = vch_next)
@@ -4568,7 +4568,7 @@ void spell_neutralize([[maybe_unused]] int sn, int level, CHAR_DATA *ch, SpellTa
 	af.level = level;
 	af.duration = level / 3;
 	af.modifier = 0;
-	af.location = 0;
+	af.location = APPLY_NONE;
 
 	if (victim == ch)
 	{
@@ -4623,7 +4623,7 @@ void spell_caustic_vapor(int sn, int level, CHAR_DATA *ch, SpellTarget /* vo */,
 	raf.aftype = get_spell_aftype(ch);
 	raf.level = level;
 	raf.duration = 20;
-	raf.location = 0;
+	raf.location = APPLY_ROOM_NONE;
 	raf.modifier = 0;
 	raf.owner = ch->self;
 	raf.end_fun = caustic_vapor_burnout;
@@ -4636,7 +4636,7 @@ void spell_caustic_vapor(int sn, int level, CHAR_DATA *ch, SpellTarget /* vo */,
 	af.aftype = AFT_TIMER;
 	af.level = level;
 	af.duration = 47;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.modifier = 0;
 	affect_to_char(ch, &af);
 
@@ -4675,7 +4675,7 @@ void spell_smokescreen(int sn, int level, CHAR_DATA *ch, SpellTarget /* vo */, C
 	raf.aftype = get_spell_aftype(ch);
 	raf.level = level;
 	raf.duration = level / 5;
-	raf.location = 0;
+	raf.location = APPLY_ROOM_NONE;
 	raf.modifier = 0;
 	raf.owner = ch->self;
 	raf.end_fun = smokescreen_end;
@@ -4714,7 +4714,7 @@ void spell_smother(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_unu
 		af.where = TO_AFFECTS;
 		af.aftype = AFT_MALADY;
 		af.type = sn;
-		af.location = 0;
+		af.location = APPLY_NONE;
 		af.duration = 1;
 		af.level = level;
 		af.modifier = 0;
@@ -4810,7 +4810,7 @@ void spell_shroud_of_secrecy(int sn, int level, CHAR_DATA *ch, SpellTarget /* vo
 	af.where = TO_AFFECTS;
 	af.aftype = AFT_SPELL;
 	af.type = sn;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.duration = level / 5;
 	af.level = level;
 	af.modifier = 0;
@@ -4842,7 +4842,7 @@ void spell_noxious_ward(int sn, int level, CHAR_DATA *ch, SpellTarget /* vo */, 
 	af.where = TO_AFFECTS;
 	af.aftype = AFT_SPELL;
 	af.type = sn;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.duration = 12;
 	af.level = level;
 	af.modifier = 0;
@@ -4983,7 +4983,7 @@ void spell_blanket(int sn, int level, CHAR_DATA *ch, [[maybe_unused]] SpellTarge
 	af.aftype = AFT_TIMER;
 	af.level = level;
 	af.duration = 24;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.modifier = 0;
 	affect_to_char(ch, &af);
 
@@ -5240,7 +5240,7 @@ void spell_frost_glaze(int sn, int level, CHAR_DATA *ch, SpellTarget /* vo */, C
 	affect_to_char(ch, &af);
 
 	af.where = TO_RESIST;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.modifier = 0;
 
 	SET_BIT(af.bitvector, RES_COLD);
@@ -5308,7 +5308,7 @@ void spell_unbreakable(int /* sn */, int level, CHAR_DATA *ch, SpellTarget vo, C
 	af.owner = ch->self;
 	af.modifier = 0;
 	af.duration = level / 4;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.level = level;
 	affect_to_char(victim, &af);
 }
@@ -5412,7 +5412,7 @@ void spell_whiteout(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /* vo */
 	af.aftype = AFT_TIMER;
 	af.level = level;
 	af.duration = 36;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.modifier = 0;
 	af.owner = ch->self;
 	affect_to_char(ch, &af);
@@ -5560,7 +5560,7 @@ void spell_icelance(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_un
 		af.duration = 8;
 		af.type = gsn_bleeding;
 		af.level = level;
-		af.location = 0;
+		af.location = APPLY_NONE;
 		af.modifier = 0;
 		af.aftype = AFT_MALADY;
 		af.tick_fun = bleeding_tick;
@@ -5811,7 +5811,7 @@ void spell_stalactites(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /* vo
 	raf.aftype = AFT_SPELL;
 	raf.type = gsn_stalactites;
 	raf.level = level;
-	raf.location = 0;
+	raf.location = APPLY_ROOM_NONE;
 	raf.modifier = dice(1, 6);
 	raf.duration = level / 5;
 	raf.owner = ch->self;
@@ -5950,7 +5950,7 @@ void spell_icy_carapace(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /* v
 	affect_to_char(ch, &af);
 
 	af.aftype = AFT_INVIS;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.where = TO_RESIST;
 	af.mod_name = MOD_RESISTANCE;
 	SET_BIT(af.bitvector, RES_COLD);
@@ -6044,7 +6044,7 @@ void spell_ironskin(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /* vo */
 	new_affect_to_char(ch, &af);
 
 	af.where = TO_VULN;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.modifier = 0;
 	af.mod_name = MOD_RESISTANCE;
 	SET_BIT(af.bitvector, VULN_LIGHTNING);
@@ -6510,7 +6510,7 @@ void spell_cloak_of_mist(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /* 
 	af.aftype = AFT_SPELL;
 	af.level = level;
 	af.owner = ch->self;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.modifier = 0;
 	af.duration = level / 4;
 	af.end_fun = nullptr;
@@ -6632,7 +6632,7 @@ void spell_pass_without_trace(int /* sn */, int level, CHAR_DATA *ch, SpellTarge
 	af.owner = ch->self;
 	af.level = level;
 	af.duration = level / 6;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.modifier = 0;
 	af.mod_name = MOD_MOVEMENT;
 	affect_to_char(ch, &af);
@@ -6664,7 +6664,7 @@ void spell_quicksand(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /* vo *
 	raf.type = gsn_quicksand;
 	raf.owner = ch->self;
 	raf.level = level;
-	raf.location = 0;
+	raf.location = APPLY_ROOM_NONE;
 	raf.duration = 24;
 	raf.modifier = 0;
 	raf.tick_fun = nullptr;
@@ -6768,7 +6768,7 @@ void spell_rust([[maybe_unused]] int sn, int level, CHAR_DATA *ch, SpellTarget v
 	oaf.owner = ch->self;
 	oaf.level = level;
 	oaf.duration = level / 4;
-	oaf.location = APPLY_DEX;
+	oaf.location = obj_location(APPLY_DEX);
 
 	for (eq = victim->carrying; eq; eq = eq->next_content)
 	{
@@ -6853,7 +6853,7 @@ void spell_airy_water(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /* vo 
 	raf.owner = ch->self;
 	raf.level = level;
 	raf.duration = 12;
-	raf.location = 0;
+	raf.location = APPLY_ROOM_NONE;
 	raf.modifier = 0;
 	raf.end_fun = 0;
 	raf.tick_fun = 0;
@@ -6883,7 +6883,7 @@ void spell_cooling_mist(int /* sn */, int level, CHAR_DATA *ch, SpellTarget vo, 
 	af.type = gsn_cooling_mist;
 	af.owner = ch->self;
 	af.level = level;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.modifier = 0;
 	af.duration = level / 3;
 
@@ -7092,7 +7092,7 @@ void spell_earthfade(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /* vo *
 	af.level = level;
 	af.owner = ch->self;
 	af.modifier = 0;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.duration = level / 5;
 	af.end_fun = earthfade_end;
 	af.tick_fun = earthfade_tick;
@@ -7131,7 +7131,7 @@ void spell_plasma_arc(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_
 	af.aftype = get_spell_aftype(ch);
 	af.type = sn;
 	af.level = level;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.modifier = 0;
 	af.duration = level / 12;
 	af.mod_name = MOD_VISION;
@@ -7231,7 +7231,7 @@ void sphere_of_plasma_end(CHAR_DATA *ch, AFFECT_DATA *paf)
 	af.aftype = AFT_TIMER;
 	af.type = gsn_sphere_of_plasma;
 	af.level = ch->level;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.modifier = 0;
 	af.duration = ch->level / 5;
 	affect_to_char(ch, &af);
@@ -7273,7 +7273,7 @@ void spell_sphere_of_plasma(int sn, int level, CHAR_DATA *ch, SpellTarget /* vo 
 	af.type = sn;
 	af.level = level;
 	af.owner = ch->self;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.modifier = dice(level / 13, 2);
 	af.duration = level / 5;
 	af.end_fun = sphere_of_plasma_end;
@@ -7304,7 +7304,7 @@ void spell_plasma_cube(int sn, int level, CHAR_DATA *ch, SpellTarget /* vo */, C
 	raf.owner = ch->self;
 	raf.level = level;
 	raf.duration = 12;
-	raf.location = 0;
+	raf.location = APPLY_ROOM_NONE;
 	raf.modifier = 0;
 	affect_to_room(ch->in_room, &raf);
 }
@@ -7339,7 +7339,7 @@ void spell_essence_of_plasma(int /* sn */, int level, CHAR_DATA *ch, SpellTarget
 	raf.type = gsn_essence_of_plasma;
 	raf.owner = ch->self;
 	raf.level = level;
-	raf.location = 0;
+	raf.location = APPLY_ROOM_NONE;
 	raf.duration = 12;
 	raf.modifier = 0;
 	raf.end_fun = essence_of_plasma_end;
@@ -7352,7 +7352,7 @@ void spell_essence_of_plasma(int /* sn */, int level, CHAR_DATA *ch, SpellTarget
 	af.type = gsn_essence_of_plasma;
 	af.owner = ch->self;
 	af.level = level;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.duration = 12;
 	af.modifier = 1;
 	affect_to_char(ch, &af);
@@ -7481,7 +7481,7 @@ void spell_plasma_thread(int sn, int level, CHAR_DATA *ch, SpellTarget /* vo */,
 	af.type = sn;
 	af.owner = ch->self;
 	af.level = level;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.duration = 2;
 	af.modifier = 0;
 	af.end_fun = plasma_thread_end;
@@ -7493,7 +7493,7 @@ void spell_plasma_thread(int sn, int level, CHAR_DATA *ch, SpellTarget /* vo */,
 	af.type = sn;
 	af.owner = victim->self;
 	af.level = level;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.duration = 2;
 	af.modifier = 0;
 	af.end_fun = plasma_thread_end;
@@ -7801,7 +7801,7 @@ void spell_farsee(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /* vo */, 
 	af.type = gsn_farsee;
 	af.level = level;
 	af.owner = ch->self;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.modifier = 0;
 	af.duration = level / 4;
 	af.mod_name = MOD_VISION;
@@ -7958,7 +7958,7 @@ void spell_rotating_ward(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /* 
 	af.level = level;
 	af.modifier = charges;
 	af.duration = level / 2;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.tick_fun = rotating_tick;
 	af.mod_name = MOD_PROTECTION;
 	affect_to_char(ch, &af);
@@ -8009,7 +8009,7 @@ void mana_infusion_helper(CHAR_DATA *ch, CHAR_DATA *victim)
 	af.where = TO_AFFECTS;
 	af.type = gsn_mana_sickness;
 	af.aftype = AFT_MALADY;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.duration = number_range(1, 3);
 	af.modifier = 0;
 	af.owner = ch->self;

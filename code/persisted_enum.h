@@ -88,6 +88,22 @@ struct PersistedEnum<ObjAffectWhere>
 	static constexpr ObjAffectWhere Named[] = {TO_OBJ_AFFECTS, TO_OBJ_APPLY};
 };
 
+template <>
+struct PersistedEnum<ApplyLocation>
+{
+	static constexpr const char *Family = "ApplyLocation";
+	static constexpr ApplyLocation Named[] = {
+		APPLY_NONE, APPLY_STR, APPLY_DEX, APPLY_INT, APPLY_WIS, APPLY_CON,
+		APPLY_SEX, APPLY_CLASS, APPLY_LUCK, APPLY_AGE, APPLY_HEIGHT,
+		APPLY_WEIGHT, APPLY_MANA, APPLY_HIT, APPLY_MOVE, APPLY_GOLD, APPLY_EXP,
+		APPLY_AC, APPLY_HITROLL, APPLY_DAMROLL, APPLY_SAVES, APPLY_SAVING_PARA,
+		APPLY_SAVING_ROD, APPLY_SAVING_PETRI, APPLY_SAVING_BREATH,
+		APPLY_SAVING_SPELL, APPLY_SPELL_AFFECT, APPLY_CARRY_WEIGHT,
+		APPLY_DEFENSE, APPLY_REGENERATION, APPLY_SIZE, APPLY_ENERGYSTATE,
+		APPLY_DAM_MOD, APPLY_LEGS, APPLY_ARMS, APPLY_BEAUTY, APPLY_ALIGNMENT,
+		APPLY_ETHOS, APPLY_OBJ_PROPERTIES};
+};
+
 /// Whether the stored integer is one of the values the family names.
 template <class E>
 bool is_named_value(int raw)

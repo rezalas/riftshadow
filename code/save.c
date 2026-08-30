@@ -229,7 +229,7 @@ void fread_charmie(CHAR_DATA *ch, FILE *fp)
 	af.where = TO_AFFECTS;
 	af.level = ch->level;
 	af.aftype = AFT_SPELL;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.modifier = 0;
 	af.duration = -1;
 
@@ -1261,7 +1261,7 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
 					paf.level = fread_number(fp);
 					paf.duration = fread_number(fp);
 					paf.modifier = fread_number(fp);
-					paf.location = fread_number(fp);
+					paf.location = read_persisted<ApplyLocation>(fread_number(fp), "affect location");
 					fread_flag_new(paf.bitvector, fp);
 					paf.aftype = fread_number(fp);
 
@@ -1915,7 +1915,7 @@ void fread_pet(CHAR_DATA *ch, FILE *fp)
 					paf.level = fread_number(fp);
 					paf.duration = fread_number(fp);
 					paf.modifier = fread_number(fp);
-					paf.location = fread_number(fp);
+					paf.location = read_persisted<ApplyLocation>(fread_number(fp), "affect location");
 
 					fread_flag_new(paf.bitvector, fp);
 
@@ -2141,6 +2141,9 @@ void fread_obj(CHAR_DATA *ch, FILE *fp)
 					paf.level = fread_number(fp);
 					paf.duration = fread_number(fp);
 					paf.modifier = fread_number(fp);
+					// An object affect's location is one family or the other
+					// depending on the where above, so it is read as the plain
+					// number the file holds.
 					paf.location = fread_number(fp);
 
 					fread_flag_new(paf.bitvector, fp);
@@ -2170,7 +2173,7 @@ void fread_obj(CHAR_DATA *ch, FILE *fp)
 				if (!str_cmp(word, "AddApp"))
 				{
 					OBJ_APPLY_DATA oad;
-					oad.location = fread_number(fp);
+					oad.location = read_persisted<ApplyLocation>(fread_number(fp), "object apply location");
 					oad.modifier = fread_number(fp);
 					oad.type = fread_number(fp);
 					obj->apply.push_front(oad);

@@ -666,7 +666,7 @@ void spell_hunters_vision(int sn, int level, CHAR_DATA *ch, SpellTarget /* vo */
 	af.aftype = AFT_POWER;
 	af.type = sn;
 	af.modifier = 0;
-	af.location = 0;
+	af.location = APPLY_NONE;
 
 	SET_BIT(af.bitvector, AFF_DETECT_INVIS);
 	SET_BIT(af.bitvector, AFF_DETECT_HIDDEN);
@@ -1366,7 +1366,7 @@ void spell_horde_communion(int /* sn */, int level, CHAR_DATA *ch, SpellTarget v
 	af.where = TO_AFFECTS;
 	af.aftype = AFT_POWER;
 	af.type = gsn_horde_communion;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.modifier = 0;
 	af.duration = -1;
 	af.owner = ch->self;
@@ -1497,7 +1497,7 @@ void spell_fervor(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /* vo */, 
 	af.mod_name = MOD_VISION;
 	new_affect_to_char(ch, &af);
 
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.modifier = 0;
 
 	zero_vector(af.bitvector);

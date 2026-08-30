@@ -2183,7 +2183,7 @@ void do_overhead(CHAR_DATA *ch, char *argument)
 				af.type = gsn_overhead;
 				af.level = ch->level;
 				af.aftype = AFT_MALADY;
-				af.location = 0;
+				af.location = APPLY_NONE;
 				af.modifier = 0;
 				af.mod_name = MOD_CONC;
 
@@ -4662,7 +4662,7 @@ void do_concuss(CHAR_DATA *ch, char *argument)
 	af.name = palloc_string(af_name);
 	af.where = TO_AFFECTS;
 	af.level = ch->level;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.aftype = AFT_MALADY;
 	af.type = gsn_concuss;
 	af.modifier = 0;
@@ -4951,7 +4951,7 @@ void do_leadership(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 		af.where = TO_AFFECTS;
 		af.type = gsn_leadership;
 		af.modifier = 0;
-		af.location = 0;
+		af.location = APPLY_NONE;
 		af.duration = ch->level;
 		af.duration = ch->level / 3;
 		af.level = ch->level;

@@ -437,7 +437,7 @@ void spell_resist_heat(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe
 	SET_BIT(af.bitvector, RES_FIRE);
 
 	af.mod_name = MOD_RESISTANCE;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	affect_to_char(victim, &af);
 }
 
@@ -469,7 +469,7 @@ void spell_resist_cold(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe
 
 	SET_BIT(af.bitvector, RES_COLD);
 
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.mod_name = MOD_RESISTANCE;
 	affect_to_char(victim, &af);
 }
@@ -502,7 +502,7 @@ void spell_resist_lightning(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[
 
 	SET_BIT(af.bitvector, RES_LIGHTNING);
 
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.mod_name = MOD_RESISTANCE;
 	affect_to_char(victim, &af);
 }
@@ -535,7 +535,7 @@ void spell_resist_mental(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[may
 
 	SET_BIT(af.bitvector, RES_MENTAL);
 
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.mod_name = MOD_RESISTANCE;
 	affect_to_char(victim, &af);
 }
@@ -568,7 +568,7 @@ void spell_resist_acid(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe
 
 	SET_BIT(af.bitvector, RES_ACID);
 
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.mod_name = MOD_RESISTANCE;
 	affect_to_char(victim, &af);
 }
@@ -601,7 +601,7 @@ void spell_resist_negative(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[m
 
 	SET_BIT(af.bitvector, RES_NEGATIVE);
 
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.mod_name = MOD_RESISTANCE;
 	affect_to_char(victim, &af);
 }
@@ -719,7 +719,7 @@ void spell_strength(int sn, int level, CHAR_DATA *ch, [[maybe_unused]] SpellTarg
 	af.where = TO_RESIST;
 	af.aftype = AFT_COMMUNE;
 	af.duration = ch->level * 2;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.modifier = 0;
 
 	SET_BIT(af.bitvector, RES_HOLY);
@@ -788,7 +788,7 @@ void spell_worldbind(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe_u
 	af.aftype = AFT_SPELL;
 	af.level = level;
 	af.duration = 3;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.modifier = 0;
 	affect_to_char(victim, &af);
 }
@@ -822,7 +822,7 @@ void spell_waterbreath(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe
 	af.aftype = get_spell_aftype(ch);
 	af.level = level;
 	af.duration = level / 5;
-	af.location = 0;
+	af.location = APPLY_NONE;
 	af.modifier = 0;
 	af.end_fun = waterbreath_end;
 

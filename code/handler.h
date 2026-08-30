@@ -262,7 +262,7 @@ bool can_drop_obj (CHAR_DATA *ch, OBJ_DATA *obj);
 /*
  * Return ascii name of an affect location.
  */
-char *affect_loc_name (int location);
+char *affect_loc_name (ApplyLocation location);
 /*
  * Return ascii name of an affect bit vector.
  */
@@ -315,7 +315,7 @@ void affect_join_room (ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *paf);
 /*
  * Return ascii name of an raffect location.
  */
-char *raffect_loc_name (int location);
+char *raffect_loc_name (ApplyRoomLocation location);
 /*
  * Return ascii name of an affect bit vector.
  */
@@ -347,14 +347,14 @@ void affect_remove_area (AREA_DATA *area, AREA_AFFECT_DATA *paf);
 void affect_strip_area (AREA_DATA *area, int sn);
 bool is_affected_area (AREA_DATA *area, int sn);
 void affect_join_area (AREA_DATA *area, AREA_AFFECT_DATA *paf);
-char *aaffect_loc_name (int location);
+char *aaffect_loc_name (ApplyAreaLocation location);
 bool is_safe_rspell_nom (int level, CHAR_DATA *victim);
 bool is_safe_rspell (int level, CHAR_DATA *victim);
 /*
  * Return ascii name of an affect bit vector.
  */
 char *flag_room_name (int vector);
-void modify_location (CHAR_DATA *ch, int location, int mod, bool add);
+void modify_location (CHAR_DATA *ch, ApplyLocation location, int mod, bool add);
 int get_align (CHAR_DATA *ch);
 int get_ethos (CHAR_DATA *ch);
 int damage_queue (CHAR_DATA *ch, CHAR_DATA *victim, int dam, int damtype, HitBlockable blockable, int add, int mult, char *dnoun);

@@ -39,6 +39,7 @@
 #include <algorithm>
 #include <time.h>
 #include "merc.h"
+#include "persisted_enum.h"
 #include "entity/handles.h"
 #include "iprog.h"
 #include "magic.h"
@@ -2011,7 +2012,7 @@ void verb_prog_energize_tattoo(OBJ_DATA *obj, CHAR_DATA *ch, [[maybe_unused]] ch
 		oaf.aftype = AFT_SKILL;
 		oaf.duration = 5;
 		oaf.modifier = 0;
-		oaf.location = APPLY_NONE;
+		oaf.location = obj_location(APPLY_NONE);
 		oaf.type = gsn_bash;
 		affect_to_obj(obj, &oaf);
 	}
@@ -3299,7 +3300,7 @@ void verb_prog_pull_book([[maybe_unused]] OBJ_DATA *obj, CHAR_DATA *ch, [[maybe_
 	raf.where = TO_ROOM_AFFECTS;
 	raf.type = gsn_kick;
 	raf.aftype = AFT_INVIS;
-	raf.location = 0;
+	raf.location = APPLY_ROOM_NONE;
 	raf.modifier = 0;
 	raf.duration = 1;
 	raf.end_fun = trapdoor_end;
@@ -3406,7 +3407,7 @@ void verb_prog_pour_wine(OBJ_DATA *obj, CHAR_DATA *ch, [[maybe_unused]] char *ar
 	af.duration = -1;
 	af.type = gsn_bash;
 	af.modifier = 0;
-	af.location = 0;
+	af.location = obj_location(APPLY_OBJ_NONE);
 	af.pulse_fun = wine_pulse;
 	affect_to_obj(obj2, &af);
 }

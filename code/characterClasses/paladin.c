@@ -506,7 +506,7 @@ void spell_arms_of_light(int sn, int level, CHAR_DATA *ch, SpellTarget /* vo */,
 	oaf.where = TO_OBJ_AFFECTS;
 	oaf.type = sn;
 	oaf.aftype = AFT_COMMUNE;
-	oaf.location = APPLY_NONE;
+	oaf.location = obj_location(APPLY_NONE);
 	oaf.modifier = 0;
 	oaf.duration = level;
 	oaf.level = ch->level;
@@ -569,7 +569,7 @@ void spell_arms_of_purity(int sn, int level, CHAR_DATA *ch, SpellTarget /* vo */
 	oaf.level = ch->level;
 	oaf.type = sn;
 	oaf.duration = level;
-	oaf.location = APPLY_NONE;
+	oaf.location = obj_location(APPLY_NONE);
 	oaf.modifier = 0;
 	oaf.owner = ch->self;
 	affect_to_obj(weapon, &oaf);
@@ -630,7 +630,7 @@ void spell_arms_of_wrath(int sn, int level, CHAR_DATA *ch, SpellTarget /* vo */,
 	oaf.where = TO_OBJ_AFFECTS;
 	oaf.type = sn;
 	oaf.aftype = AFT_COMMUNE;
-	oaf.location = APPLY_NONE;
+	oaf.location = obj_location(APPLY_NONE);
 	oaf.modifier = 0;
 	oaf.duration = level;
 	oaf.level = ch->level;
@@ -692,7 +692,7 @@ void spell_arms_of_judgement(int sn, int level, CHAR_DATA *ch, SpellTarget /* vo
 	oaf.where = TO_OBJ_AFFECTS;
 	oaf.type = sn;
 	oaf.aftype = AFT_COMMUNE;
-	oaf.location = APPLY_NONE;
+	oaf.location = obj_location(APPLY_NONE);
 	oaf.modifier = 0;
 	oaf.duration = level;
 	oaf.level = ch->level;
