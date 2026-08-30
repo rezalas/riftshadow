@@ -1133,7 +1133,7 @@ void do_skin(CHAR_DATA *ch, char *argument)
 	char buf2[MAX_STRING_LENGTH];
 
 	corpse = nullptr;
-	if (get_skill(ch, gsn_skin) == 0 || ch->level < skill_table[gsn_skin].skill_level[ch->Class()->GetIndex()])
+	if (get_skill(ch, gsn_skin) == 0 || ch->level < skill_table[gsn_skin].skill_level[class_index(ch->Class()->GetIndex())])
 	{
 		send_to_char("But you don't know how to skin a corpse.\n\r", ch);
 		return;
@@ -1252,7 +1252,7 @@ void do_butcher(CHAR_DATA *ch, char *argument)
 	corpse = nullptr;
 
 	if (get_skill(ch, gsn_butcher) == 0
-		|| ch->level < skill_table[gsn_butcher].skill_level[ch->Class()->GetIndex()])
+		|| ch->level < skill_table[gsn_butcher].skill_level[class_index(ch->Class()->GetIndex())])
 	{
 		send_to_char("But you don't know how to butcher.\n\r", ch);
 		return;
@@ -2327,7 +2327,7 @@ void wear_obj(CHAR_DATA *ch, OBJ_DATA *obj, bool fReplace)
 		if (get_skill(ch, gsn_dual_wield) < 3 && (!is_npc(ch)))
 			wield_primary = true;
 
-		if (ch->level < skill_table[gsn_dual_wield].skill_level[ch->Class()->GetIndex()] && !is_npc(ch))
+		if (ch->level < skill_table[gsn_dual_wield].skill_level[class_index(ch->Class()->GetIndex())] && !is_npc(ch))
 			wield_primary = true;
 
 		if (ch->size < SIZE_LARGE && is_weapon_stat(obj, WEAPON_TWO_HANDS))
@@ -3257,7 +3257,7 @@ void do_steal(CHAR_DATA *ch, char *argument)
 	OBJ_DATA *obj;
 	int chance;
 
-	if (get_skill(ch, gsn_steal) == 0 || ch->level < skill_table[gsn_steal].skill_level[ch->Class()->GetIndex()])
+	if (get_skill(ch, gsn_steal) == 0 || ch->level < skill_table[gsn_steal].skill_level[class_index(ch->Class()->GetIndex())])
 	{
 		send_to_char("Huh?\n\r", ch);
 		return;
@@ -4420,7 +4420,7 @@ void do_embalm(CHAR_DATA *ch, char *argument)
 	OBJ_DATA *corpse;
 	char arg[100];
 
-	if (get_skill(ch, gsn_embalm) == 0 || ch->level < skill_table[gsn_embalm].skill_level[ch->Class()->GetIndex()])
+	if (get_skill(ch, gsn_embalm) == 0 || ch->level < skill_table[gsn_embalm].skill_level[class_index(ch->Class()->GetIndex())])
 	{
 		send_to_char("You don't know how to embalm corpses.\n\r", ch);
 		return;
@@ -4628,7 +4628,7 @@ void do_demand(CHAR_DATA *ch, char *argument)
 
 	chance = ch->pcdata->learned[gsn_demand];
 
-	if (chance == 0 || ch->level < skill_table[gsn_demand].skill_level[ch->Class()->GetIndex()])
+	if (chance == 0 || ch->level < skill_table[gsn_demand].skill_level[class_index(ch->Class()->GetIndex())])
 	{
 		send_to_char("You are hardly intimidating enough to demand off others.\n\r", ch);
 		return;

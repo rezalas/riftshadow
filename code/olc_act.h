@@ -197,7 +197,7 @@ bool medit_limit (CHAR_DATA *ch, char *argument);
 bool medit_optional (CHAR_DATA *ch, char *argument);
 bool medit_yell (CHAR_DATA *ch, char *argument);
 bool medit_notes (CHAR_DATA *ch, char *argument);
-void clean_mob_class (MOB_INDEX_DATA *pMob, int class_index);
+void clean_mob_class (MOB_INDEX_DATA *pMob, CharClass cclass);
 bool medit_class (CHAR_DATA *ch, char *argument);
 bool medit_show (CHAR_DATA *ch, char *argument);
 bool medit_create (CHAR_DATA *ch, char *argument);

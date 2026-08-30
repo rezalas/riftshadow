@@ -160,7 +160,7 @@ public:
 	/// optional. can_see reaches pcdata->death_status through pers() for the $n
 	/// substitution without checking it, so a player built without one crashes
 	/// the first act() that mentions anybody.
-	CHAR_DATA *CreatePlayer(const char *name, ROOM_INDEX_DATA *room, int cclass = CLASS_WARRIOR)
+	CHAR_DATA *CreatePlayer(const char *name, ROOM_INDEX_DATA *room, CharClass cclass = CLASS_WARRIOR)
 	{
 		CHAR_DATA *ch = CreateCharacter(name, room);
 
@@ -357,7 +357,7 @@ private:
 	{
 		static const struct
 		{
-			int index;
+			CharClass index;
 			const char *name;
 			const char *who_name;
 		} table[] = {

@@ -2368,7 +2368,7 @@ void do_darksight(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 	int number;
 
 	if ((number = get_skill(ch, gsn_darksight)) == 0
-		|| ch->level < skill_table[gsn_darksight].skill_level[ch->Class()->GetIndex()])
+		|| ch->level < skill_table[gsn_darksight].skill_level[class_index(ch->Class()->GetIndex())])
 	{
 		send_to_char("Huh?\n\r", ch);
 		return;

@@ -2,6 +2,7 @@
 #include <algorithm>
 #include "db_mocks.h"
 #include "../code/repositories/classrepository.h"
+#include "world_fixture.h"
 
 // class_table schema column order:
 //   id, name, who_name, attr_prime, align, weapon, gainconst,
@@ -100,6 +101,65 @@ SCENARIO("reading every class definition for the boot-time load", "[class][repos
 			THEN("it reports an empty result rather than a partial one")
 			{
 				REQUIRE(repo.FindAllOrdered().empty());
+			}
+		}
+	}
+}
+
+
+//
+// CClass::Lookup answers with nothing rather than with a class when the name is
+// not one. It used to answer -1, which is a number a class field can hold and
+// which three of its callers assigned onward without checking.
+//
+SCENARIO("looking a class up by name", "[CClass][Lookup]")
+{
+	TestWorld world;
+
+	GIVEN("a name the class table carries")
+	{
+		THEN("the class comes back")
+		{
+			auto found = CClass::Lookup("sorcerer");
+
+			REQUIRE(found);
+			REQUIRE(*found == CLASS_SORCERER);
+		}
+	}
+
+	GIVEN("a name the class table does not carry")
+	{
+		THEN("nothing comes back, rather than a class")
+		{
+			REQUIRE_FALSE(CClass::Lookup("bricklayer").has_value());
+		}
+	}
+
+	GIVEN("an empty name")
+	{
+		// Characterized, not endorsed. The comparison walks until either
+		// string ends and calls that a match, so an empty query is a prefix of
+		// the first class in the table and is answered with it. Nothing here
+		// changes that.
+		THEN("the first class in the table answers")
+		{
+			auto found = CClass::Lookup("");
+
+			REQUIRE(found);
+			REQUIRE(*found == CClass::first->index);
+		}
+	}
+
+	GIVEN("every class in the table")
+	{
+		THEN("its own name finds it")
+		{
+			for (CClass *cclass = CClass::first; cclass != nullptr; cclass = cclass->next)
+			{
+				auto found = CClass::Lookup(cclass->name.c_str());
+
+				REQUIRE(found);
+				REQUIRE(*found == cclass->index);
 			}
 		}
 	}

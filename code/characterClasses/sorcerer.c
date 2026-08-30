@@ -3851,8 +3851,8 @@ int scramble_sn(CHAR_DATA *ch, int sn)
 	for (gsn = 0; gsn < MAX_SKILL; gsn++)
 	{
 		if (skill_table[gsn].name == nullptr
-			|| skill_table[gsn].skill_level[ch->Class()->GetIndex()] > 52
-			|| ch->level < skill_table[gsn].skill_level[ch->Class()->GetIndex()]
+			|| skill_table[gsn].skill_level[class_index(ch->Class()->GetIndex())] > 52
+			|| ch->level < skill_table[gsn].skill_level[class_index(ch->Class()->GetIndex())]
 			|| ch->pcdata->learned[gsn] < 1
 			|| skill_table[gsn].spell_fun == spell_null)
 		{

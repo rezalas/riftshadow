@@ -5615,8 +5615,10 @@ bool medit_optional(CHAR_DATA *ch, char *argument)
 			return false;
 		}
 
+		// A barred entry holds either a class or a plain number, depending on
+		// what it bars on, and -1 is how it says the word was not understood.
 		if (bar->type == 1)
-			bar->value = CClass::Lookup(arg4);
+			bar->value = write_persisted(CClass::Lookup(arg4).value_or(static_cast<CharClass>(-1)));
 		else
 			bar->value = atoi(arg4);
 
@@ -5751,20 +5753,20 @@ bool medit_notes(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 	return true;
 }
 
-void clean_mob_class(MOB_INDEX_DATA *pMob, int class_index)
+void clean_mob_class(MOB_INDEX_DATA *pMob, CharClass cclass)
 {
-	if (class_index == CLASS_WARRIOR || class_index == CLASS_NONE)
+	if (cclass == CLASS_WARRIOR || cclass == CLASS_NONE)
 	{
 		pMob->ele_major = 0;
 		pMob->ele_para = 0;
 	}
 
-	if (class_index == CLASS_SORCERER || class_index == CLASS_NONE)
+	if (cclass == CLASS_SORCERER || cclass == CLASS_NONE)
 	{
 		zero_vector(pMob->styles);
 	}
 
-	pMob->SetClass(class_index);
+	pMob->SetClass(cclass);
 }
 
 bool medit_class(CHAR_DATA *ch, char *argument)

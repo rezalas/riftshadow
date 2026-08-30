@@ -3271,12 +3271,12 @@ void do_who(CHAR_DATA *ch, char *argument)
 			else
 			{
 				auto iClass = CClass::Lookup(arg);
-				if (iClass != -1)
+				if (iClass)
 				{
 					if (is_immortal(ch))
 					{
 						fClassRestrict = true;
-						rgfClass[iClass] = true;
+						rgfClass[class_index(*iClass)] = true;
 						continue;
 					}
 
@@ -3349,7 +3349,7 @@ void do_who(CHAR_DATA *ch, char *argument)
 			|| wch->level > iLevelUpper
 			|| (fImmortalOnly && (wch->level < LEVEL_IMMORTAL && !is_heroimm(wch)))
 			|| (fPkOnly && !can_pk(ch, wch))
-			|| (fClassRestrict && !rgfClass[wch->Class()->GetIndex()])
+			|| (fClassRestrict && !rgfClass[class_index(wch->Class()->GetIndex())])
 			|| (fRaceRestrict && !rgfRace[wch->race])
 			|| (fCriminal && !IS_SET(wch->act, PLR_CRIMINAL))
 			|| (fBuilder && !IS_SET(wch->comm, COMM_BUILDER))
@@ -4312,10 +4312,10 @@ void do_practice(CHAR_DATA *ch, char *argument)
 				|| sn == gsn_tactician_skill)
 				hide_skill = true;
 
-			if (skill_table[sn].skill_level[ch->Class()->GetIndex()] > 52)
+			if (skill_table[sn].skill_level[class_index(ch->Class()->GetIndex())] > 52)
 				continue;
 
-			if (ch->level < skill_table[sn].skill_level[ch->Class()->GetIndex()] || ch->pcdata->learned[sn] < 1)
+			if (ch->level < skill_table[sn].skill_level[class_index(ch->Class()->GetIndex())] || ch->pcdata->learned[sn] < 1)
 				continue;
 
 			if (!hide_skill)
@@ -4371,7 +4371,7 @@ void do_practice(CHAR_DATA *ch, char *argument)
 	auto sn = find_spell(ch, argument); 
 	if (sn < 0
 		|| (!is_npc(ch) 
-			&& (ch->level < skill_table[sn].skill_level[ch->Class()->GetIndex()] 
+			&& (ch->level < skill_table[sn].skill_level[class_index(ch->Class()->GetIndex())] 
 			|| ch->pcdata->learned[sn] < 1))) /* skill is not known */
 	{
 		send_to_char("You can't practice that.\n\r", ch);

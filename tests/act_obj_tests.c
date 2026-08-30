@@ -40,7 +40,7 @@ void TestHelperSetPlayerStats(char_data *player, short value)
 
     player->race = 2; // 2 is human
     //player->SetClass(1);
-    player->pIndexData->SetClass(1);
+    player->pIndexData->SetClass(CLASS_WARRIOR);
     player->level = 1;
 }
 
@@ -65,7 +65,7 @@ void TestHelperLoadCClass()
 {
 	auto cclass = new CClass();
 	cclass->name = "ANTI_PALADIN";
-	cclass->index = 5;
+	cclass->index = CLASS_ANTI_PALADIN;
 	// CClass has a user-provided constructor that initializes nothing, so the
 	// terminator has to be written here. Without it GetClass walks off the end
 	// of this one-element list for any index but this one.
@@ -82,7 +82,7 @@ char_data* TestHelperCreatePlayer(char *name, obj_data *item = nullptr)
 	dnew->self = descriptorHandles.Add(dnew);	// as new_descriptor would
 	player->pcdata = std::make_unique<pc_data>();
 	TestHelperLoadCClass();
-	player->SetClass(5);
+	player->SetClass(CLASS_ANTI_PALADIN);
 	player->level = 51;
 	dnew->showstr_head = nullptr;
 	dnew->showstr_point = nullptr;

@@ -5216,18 +5216,18 @@ void do_mset(CHAR_DATA *ch, char *argument)
 			return;
 		}
 
-		int sclass = CClass::Lookup(arg3);
-		if (sclass == -1)
+		auto sclass = CClass::Lookup(arg3);
+		if (!sclass)
 		{
 			char buf[MAX_STRING_LENGTH];
 
 			strcpy(buf, "Possible classes are: ");
-			for (sclass = 0; sclass < MAX_CLASS; sclass++)
+			for (int listed = 0; listed < MAX_CLASS; listed++)
 			{
-				if (sclass > 0)
+				if (listed > 0)
 					strcat(buf, " ");
 
-				strcat(buf, CClass::GetClass(sclass)->name.c_str());
+				strcat(buf, CClass::GetClass(static_cast<CharClass>(listed))->name.c_str());
 			}
 
 			strcat(buf, ".\n\r");
@@ -5236,7 +5236,7 @@ void do_mset(CHAR_DATA *ch, char *argument)
 			return;
 		}
 
-		victim->SetClass(sclass);
+		victim->SetClass(*sclass);
 		return;
 	}
 
@@ -6470,7 +6470,7 @@ void do_classes(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 		{
 			if (pc_race_table[iRace].classes[iClass] == 1)
 			{
-				sprintf(buf, "%s ", CClass::GetClass(iClass)->name.c_str());
+				sprintf(buf, "%s ", CClass::GetClass(static_cast<CharClass>(iClass))->name.c_str());
 				send_to_char(buf, ch);
 			}
 		}

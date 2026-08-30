@@ -269,10 +269,10 @@ void do_praclist(CHAR_DATA *ch, char *argument)
 		if (skill_table[sn].name == nullptr)
 			break;
 
-		if (skill_table[sn].skill_level[victim->Class()->GetIndex()] > 52)
+		if (skill_table[sn].skill_level[class_index(victim->Class()->GetIndex())] > 52)
 			continue;
 
-		if (victim->level < skill_table[sn].skill_level[victim->Class()->GetIndex()]
+		if (victim->level < skill_table[sn].skill_level[class_index(victim->Class()->GetIndex())]
 			|| victim->pcdata->learned[sn] < 1 /* skill is not known */)
 		{
 			continue;
@@ -659,12 +659,12 @@ void do_powers(CHAR_DATA *ch, char *argument)
 		if (sn < 0)
 			continue;
 
-		if ((level = skill_table[sn].skill_level[ch->Class()->GetIndex()]) < LEVEL_HERO + 1
+		if ((level = skill_table[sn].skill_level[class_index(ch->Class()->GetIndex())]) < LEVEL_HERO + 1
 			&& level >= min_lev
 			&& level <= max_lev && ch->pcdata->learned[sn] > 0)
 		{
 			found = true;
-			level = skill_table[sn].skill_level[ch->Class()->GetIndex()];
+			level = skill_table[sn].skill_level[class_index(ch->Class()->GetIndex())];
 
 			if (ch->level < level)
 				sprintf(buf, "%-18s n/a      ", skill_table[sn].name);
@@ -946,7 +946,7 @@ void easy_uninduct(CHAR_DATA *ch)
 
 		sn = skill_lookup(group_table[gn].spells[gns]);
 
-		if (skill_table[sn].skill_level[ch->Class()->GetIndex()] < LEVEL_HERO + 1 && ch->pcdata->learned[sn] > 0)
+		if (skill_table[sn].skill_level[class_index(ch->Class()->GetIndex())] < LEVEL_HERO + 1 && ch->pcdata->learned[sn] > 0)
 		{
 			ch->pcdata->learned[sn] = -2;
 		}
@@ -1027,7 +1027,8 @@ void do_finger(CHAR_DATA *ch, char *argument)
 	char buf3[MAX_STRING_LENGTH];
 	char buf97[MAX_STRING_LENGTH], *tbuf = nullptr;
 	FILE *fp;
-	int align = -1, class_index = -1, ethos = -1, kills = -1, gkills = -1, nkills = -1, ekills = -1;
+	int align = -1, ethos = -1, kills = -1, gkills = -1, nkills = -1, ekills = -1;
+	CharClass pclass = CLASS_NONE;
 	int pkilled = -1, mkilled = -1, level = -1, played = -1, cabal = 0, induct = -1, race = -1;
 	int con = 0, stat = 25, died = 0, agemod = 0, bcredits = 0, hometown = 0, aobj = -1, lobj = -1, timeplayed = -1;
 	int vnum = 0, room = 0;
@@ -1143,7 +1144,7 @@ void do_finger(CHAR_DATA *ch, char *argument)
 			case 'C':
 				if (!str_cmp(word, "Cla"))
 				{
-					class_index = CClass::Lookup(fread_string(fp));
+					pclass = CClass::Lookup(fread_string(fp)).value_or(CLASS_NONE);
 					fMatch = true;
 					break;
 				}
@@ -1360,7 +1361,7 @@ void do_finger(CHAR_DATA *ch, char *argument)
 		sprintf(buf2, "  [%2d %5s %s%s] %s%s %s%s\n\r",
 			level,
 			pc_race_table[race].who_name,
-			CClass::GetClass(class_index)->who_name.c_str(), history ? " *" : "  ",
+			CClass::GetClass(pclass)->who_name.c_str(), history ? " *" : "  ",
 			cabal_table[cabal].who_name,
 			name,
 			title ? title : "",

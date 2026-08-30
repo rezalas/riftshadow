@@ -2,8 +2,10 @@
 #define CLASS_H
 
 #include <stdio.h> //temp
+#include <optional>
 #include <string>
 
+#include "../enums.h"
 #include "../rift.h"
 /*
 #define CLASS_NONE          0
@@ -28,10 +30,14 @@ public:
  
 		CClass *		next;
 		static CClass * first;
-		static CClass * GetClass(int nIndex);			//get class ptr based on index, i.e. you pass CLASS_PALADIN
-		int				GetIndex();	//get index of class, i.e. it returns CLASS_PALADIN
-		CClass *		operator[](int nIndex);			//same as Getclass
-		static int 		Lookup (const char *name);		//lookup "paladin" and return CLASS_PALADIN
+		static CClass * GetClass(CharClass nIndex);		//get class ptr based on index, i.e. you pass CLASS_PALADIN
+		CharClass		GetIndex();	//get index of class, i.e. it returns CLASS_PALADIN
+		CClass *		operator[](CharClass nIndex);	//same as Getclass
+
+		/// Looks a class up by name. Empty when the name is not one, which the
+		/// caller has to answer for: there is no class value that means "not
+		/// found", and the -1 this used to return was not one either.
+		static std::optional<CharClass> Lookup (const char *name);
 
 		std::string		name;
 		std::string		who_name;			//3 letter name that shows on who
@@ -66,7 +72,7 @@ public:
 			ALIGN_NE
 		};
 */		
-		int				index;
+		CharClass		index;
 };
 
 #endif /* CLASS_H */

@@ -147,7 +147,7 @@ public:
 			: my_class;
 	}
 
-	void		SetClass(int nClassIndex)
+	void		SetClass(CharClass nClassIndex)
 	{
 		my_class = CClass::GetClass(nClassIndex);
 	}

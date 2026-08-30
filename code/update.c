@@ -98,7 +98,7 @@ void advance_level(CHAR_DATA *ch, bool hide)
 
 	ch->pcdata->last_level = (ch->played + (int)(current_time - ch->logon)) / 3600;
 
-	sprintf(buf, "the %s", title_table[ch->Class()->GetIndex()][ch->level][ch->sex == SEX_FEMALE ? 1 : 0]);
+	sprintf(buf, "the %s", title_table[class_index(ch->Class()->GetIndex())][ch->level][ch->sex == SEX_FEMALE ? 1 : 0]);
 	set_title(ch, buf);
 
 	int_mod = get_curr_stat(ch, STAT_INT) - 2;

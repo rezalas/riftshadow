@@ -201,7 +201,7 @@ void do_spells(CHAR_DATA *ch, char *argument)
 		if (skill_table[sn].name == nullptr)
 			break;
 
-		if ((level = skill_table[sn].skill_level[ch->Class()->GetIndex()]) < LEVEL_HERO + 1
+		if ((level = skill_table[sn].skill_level[class_index(ch->Class()->GetIndex())]) < LEVEL_HERO + 1
 			&& (fAll || level <= ch->level)
 			&& level >= min_lev
 			&& level <= max_lev
@@ -210,7 +210,7 @@ void do_spells(CHAR_DATA *ch, char *argument)
 			&& (skill_table[sn].ctype == CMD_SPELL || skill_table[sn].ctype == CMD_BOTH))
 		{
 			found = true;
-			level = skill_table[sn].skill_level[ch->Class()->GetIndex()];
+			level = skill_table[sn].skill_level[class_index(ch->Class()->GetIndex())];
 
 			if (ch->level < level)
 			{
@@ -325,7 +325,7 @@ void do_skills(CHAR_DATA *ch, char *argument)
 			}
 
 			if (ch->pcdata->learned[sn] == 0
-				|| ch->level < skill_table[sn].skill_level[ch->Class()->GetIndex()]
+				|| ch->level < skill_table[sn].skill_level[class_index(ch->Class()->GetIndex())]
 				|| ((sn == gsn_gladiator_skill
 							|| sn == gsn_barbarian_skill
 							|| sn == gsn_duelist_skill
@@ -360,14 +360,14 @@ void do_skills(CHAR_DATA *ch, char *argument)
 
 		hide_skill= false;
 		/*
-		if ((level = skill_table[sn].skill_level[ch->Class()->GetIndex()]) < LEVEL_HERO + 1
+		if ((level = skill_table[sn].skill_level[class_index(ch->Class()->GetIndex())]) < LEVEL_HERO + 1
 			&&  (fAll || level <= ch->level)
 			&&  level >= min_lev
 			&& level <= max_lev
 			&&  skill_table[sn].spell_fun == spell_null
 			&&  ch->pcdata->learned[sn] > 0)
 		*/
-		if ((level = skill_table[sn].skill_level[ch->Class()->GetIndex()]) < LEVEL_HERO + 1
+		if ((level = skill_table[sn].skill_level[class_index(ch->Class()->GetIndex())]) < LEVEL_HERO + 1
 			&& (fAll || level <= ch->level)
 			&& level >= min_lev
 			&& level <= max_lev
@@ -404,7 +404,7 @@ void do_skills(CHAR_DATA *ch, char *argument)
 			}
 
 			found = true;
-			level = skill_table[sn].skill_level[ch->Class()->GetIndex()];
+			level = skill_table[sn].skill_level[class_index(ch->Class()->GetIndex())];
 
 			if (!hide_skill)
 			{
@@ -542,7 +542,7 @@ bool parse_gen_groups(CHAR_DATA *ch,char *argument)
 			send_to_char(buf,ch);
 
 			ch->gen_data->skill_chosen[sn] = true;
-			ch->gen_data->points_chosen += skill_table[sn].rating[ch->Class()->GetIndex()];
+			ch->gen_data->points_chosen += skill_table[sn].rating[class_index(ch->Class()->GetIndex())];
 			ch->pcdata->learned[sn] = 1;
 			return true;
 		}
@@ -564,7 +564,7 @@ bool parse_gen_groups(CHAR_DATA *ch,char *argument)
 		{
 			send_to_char("Group dropped.\n\r",ch);
 			ch->gen_data->group_chosen[gn]= false;
-			ch->gen_data->points_chosen -= group_table[gn].rating[ch->Class()->GetIndex()];
+			ch->gen_data->points_chosen -= group_table[gn].rating[class_index(ch->Class()->GetIndex())];
 			gn_remove(ch,gn);
 
 			for (i = 0; i < MAX_GROUP; i++)
@@ -582,7 +582,7 @@ bool parse_gen_groups(CHAR_DATA *ch,char *argument)
 		{
 			send_to_char("Skill dropped.\n\r",ch);
 			ch->gen_data->skill_chosen[sn]= false;
-			ch->gen_data->points_chosen -= skill_table[sn].rating[ch->Class()->GetIndex()];
+			ch->gen_data->points_chosen -= skill_table[sn].rating[class_index(ch->Class()->GetIndex())];
 			ch->pcdata->learned[sn] = 0;
 			return true;
 		}
@@ -699,7 +699,7 @@ void check_improve(CHAR_DATA *ch, int sn, bool success, int multiplier)
 	if (is_affected_by(ch, AFF_CALM))
 		return;
 
-	if (ch->level < skill_table[sn].skill_level[ch->Class()->GetIndex()]
+	if (ch->level < skill_table[sn].skill_level[class_index(ch->Class()->GetIndex())]
 		|| ch->pcdata->learned[sn] <= 10
 		|| ch->pcdata->learned[sn] >= 100)
 	{

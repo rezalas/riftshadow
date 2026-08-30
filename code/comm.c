@@ -1815,9 +1815,9 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
 			col = 0;
 			for (int classind = 1; classind < MAX_CLASS; classind++)
 			{
-				CClass *tClass = CClass::GetClass(classind);
+				CClass *tClass = CClass::GetClass(static_cast<CharClass>(classind));
 
-				if (CClass::GetClass(classind)->status == CLASS_CLOSED)
+				if (tClass->status == CLASS_CLOSED)
 					continue;
 
 				sprintf(buf, "%-15s ( no extra xp)", tClass->name.c_str());
@@ -1840,9 +1840,11 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
 
 			for (iClass = 1; iClass < MAX_CLASS; iClass++)
 			{
-				if (pc_race_table[ch->race].classes[iClass] == 1 && CClass::GetClass(iClass)->status == CLASS_OPEN)
+				CClass *available = CClass::GetClass(static_cast<CharClass>(iClass));
+
+				if (pc_race_table[ch->race].classes[iClass] == 1 && available->status == CLASS_OPEN)
 				{
-					strcat(buf, CClass::GetClass(iClass)->name.c_str());
+					strcat(buf, available->name.c_str());
 					strcat(buf, " ");
 				}
 			}
@@ -1855,6 +1857,7 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
 			d->connected = CON_GET_NEW_CLASS;
 			break;
 		case CON_GET_NEW_CLASS:
+		{
 			one_argument(argument, arg);
 
 			if (!strcmp(arg, "help"))
@@ -1868,21 +1871,23 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
 				break;
 			}
 
-			iClass = CClass::Lookup(argument);
-			if (iClass == -1 || CClass::GetClass(iClass)->status == CLASS_CLOSED)
+			auto chosen = CClass::Lookup(argument);
+			if (!chosen || CClass::GetClass(*chosen)->status == CLASS_CLOSED)
 			{
 				write_to_buffer(d, "That's not a class.\n\rChoose your class (type 'help' for more information): ", 0);
 				return;
 			}
 
-			if (pc_race_table[ch->race].classes[iClass] != 1)
+			if (pc_race_table[ch->race].classes[class_index(*chosen)] != 1)
 			{
 				strcpy(buf, "Your race may only be one of these classes:\n\r");
 				for (iClass = 1; iClass < MAX_CLASS; iClass++)
 				{
-					if (pc_race_table[ch->race].classes[iClass] == 1 && CClass::GetClass(iClass)->status == CLASS_OPEN)
+					CClass *available = CClass::GetClass(static_cast<CharClass>(iClass));
+
+					if (pc_race_table[ch->race].classes[iClass] == 1 && available->status == CLASS_OPEN)
 					{
-						strcat(buf, CClass::GetClass(iClass)->name.c_str());
+						strcat(buf, available->name.c_str());
 						strcat(buf, " ");
 					}
 				}
@@ -1893,7 +1898,7 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
 				return;
 			}
 
-			ch->SetClass(iClass);
+			ch->SetClass(*chosen);
 			buffer = fmt::format("{}@{} new player.{}",
 				ch->name, d->host,
 				auto_check_multi(d, d->host) ? " (MULTI-CHAR?)" : "");
@@ -1944,6 +1949,7 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
 			}
 
 			return;
+		}
 		case CON_GET_THERMAL:
 			one_argument(argument, arg);
 
@@ -2574,7 +2580,7 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
 				newPlayer.name = ch->true_name;
 				newPlayer.lastlogin = (int)ch->logon;
 				newPlayer.level = ch->level;
-				newPlayer.class_ = ch->Class()->GetIndex();
+				newPlayer.class_ = write_persisted(ch->Class()->GetIndex());
 				newPlayer.race = ch->race;
 				newPlayer.cabal = ch->cabal;
 				newPlayer.sex = write_persisted(ch->sex);
@@ -2587,7 +2593,7 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
 				if (!added)
 					RS.Logger.Warn("Failed to add new player [{}]", newPlayer.name);
 
-				sprintf(buf, "the %s", title_table[ch->Class()->GetIndex()][ch->level][ch->sex == SEX_FEMALE ? 1 : 0]);
+				sprintf(buf, "the %s", title_table[class_index(ch->Class()->GetIndex())][ch->level][ch->sex == SEX_FEMALE ? 1 : 0]);
 				set_title(ch, buf);
 				save_char_obj(ch);
 

@@ -2794,7 +2794,7 @@ void do_vigilance(CHAR_DATA *ch, char *argument)
 {
 	AFFECT_DATA af;
 
-	if ((get_skill(ch,gsn_vigilance) == 0) || (ch->level < skill_table[gsn_vigilance].skill_level[ch->Class()->GetIndex()]))
+	if ((get_skill(ch,gsn_vigilance) == 0) || (ch->level < skill_table[gsn_vigilance].skill_level[class_index(ch->Class()->GetIndex())]))
 	{
 		send_to_char("Huh?\n\r",ch);
 		return;
@@ -2848,7 +2848,7 @@ void do_vigilance(CHAR_DATA *ch, char *argument)
 void do_acute_vision(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	if (get_skill(ch, gsn_acute_vision) == 0 ||
-		ch->level < skill_table[gsn_acute_vision].skill_level[ch->Class()->GetIndex()])
+		ch->level < skill_table[gsn_acute_vision].skill_level[class_index(ch->Class()->GetIndex())])
 	{
 		send_to_char("You don't know which bushes to look at.\n\r", ch);
 		return;
@@ -2897,7 +2897,7 @@ void do_acute_vision(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 
 void do_camp(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
-	if (get_skill(ch, gsn_camp) == 0 || ch->level < skill_table[gsn_camp].skill_level[ch->Class()->GetIndex()])
+	if (get_skill(ch, gsn_camp) == 0 || ch->level < skill_table[gsn_camp].skill_level[class_index(ch->Class()->GetIndex())])
 	{
 		send_to_char("You don't know how to effectively camp.\n\r", ch);
 		return;
@@ -3452,7 +3452,7 @@ void do_bear_call(CHAR_DATA *ch, char *argument)
 	char arg1[MAX_INPUT_LENGTH];
 	one_argument(argument, arg1);
 
-	if (get_skill(ch, gsn_bear_call) == 0 || ch->level < skill_table[gsn_bear_call].skill_level[ch->Class()->GetIndex()])
+	if (get_skill(ch, gsn_bear_call) == 0 || ch->level < skill_table[gsn_bear_call].skill_level[class_index(ch->Class()->GetIndex())])
 	{
 		send_to_char("You don't know how to call bears?\n\r", ch);
 		return;
@@ -3551,7 +3551,7 @@ void do_animal_call(CHAR_DATA *ch, char *argument)
 	one_argument(argument, arg);
 
 	auto chance = get_skill(ch, gsn_animal_call);
-	if (chance == 0 || ch->level < skill_table[gsn_animal_call].skill_level[ch->Class()->GetIndex()])
+	if (chance == 0 || ch->level < skill_table[gsn_animal_call].skill_level[class_index(ch->Class()->GetIndex())])
 	{
 		send_to_char("You don't know how to call upon animals for aid.\n\r", ch);
 		return;
@@ -4070,7 +4070,7 @@ int find_first_step(ROOM_INDEX_DATA *from, ROOM_INDEX_DATA *goal)
 
 void do_aura_of_sustenance(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
-	if (get_skill(ch, gsn_aura_of_sustenance) == 0 || ch->level < skill_table[gsn_aura_of_sustenance].skill_level[ch->Class()->GetIndex()])
+	if (get_skill(ch, gsn_aura_of_sustenance) == 0 || ch->level < skill_table[gsn_aura_of_sustenance].skill_level[class_index(ch->Class()->GetIndex())])
 	{
 		send_to_char("Huh?\n\r", ch);
 		return;
@@ -4110,7 +4110,7 @@ void do_aura_of_sustenance(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 void do_vanish(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	auto chance = get_skill(ch, gsn_vanish);
-	if (chance == 0 || ch->level < skill_table[gsn_vanish].skill_level[ch->Class()->GetIndex()])
+	if (chance == 0 || ch->level < skill_table[gsn_vanish].skill_level[class_index(ch->Class()->GetIndex())])
 	{
 		send_to_char("Huh?\n\r", ch);
 		return;
@@ -4206,7 +4206,7 @@ void do_door_bash(CHAR_DATA *ch, char *argument)
 	if (is_npc(ch))
 		chance = 50;
 
-	if (!is_npc(ch) && (chance == 0 || ch->level < skill_table[gsn_door_bash].skill_level[ch->Class()->GetIndex()]))
+	if (!is_npc(ch) && (chance == 0 || ch->level < skill_table[gsn_door_bash].skill_level[class_index(ch->Class()->GetIndex())]))
 	{
 		send_to_char("You'd hurt yourself doing that.\n\r", ch);
 		return;
@@ -4407,7 +4407,7 @@ bool check_barred(CHAR_DATA *ch, ROOM_INDEX_DATA *to_room)
 		{
 
 			if (blocker->pIndexData->barred_entry->type == BAR_CLASS)
-				field = ch->Class()->GetIndex();
+				field = class_index(ch->Class()->GetIndex());
 
 			if (blocker->pIndexData->barred_entry->type == BAR_CABAL)
 				field = ch->cabal;
@@ -4429,7 +4429,7 @@ bool check_barred(CHAR_DATA *ch, ROOM_INDEX_DATA *to_room)
 			}
 
 			if (blocker->pIndexData->barred_entry->type == BAR_CLASS
-				&& ch->Class()->GetIndex() == blocker->pIndexData->barred_entry->value
+				&& class_index(ch->Class()->GetIndex()) == blocker->pIndexData->barred_entry->value
 				&& IS_SET(blocker->act, ACT_GUILDGUARD)
 				&& ch->pause > 0
 				&& ch->ghost <= 0

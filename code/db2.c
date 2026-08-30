@@ -601,7 +601,10 @@ void load_mobs(FILE *fp)
 
 			if (!str_cmp(aword.c_str(), "CLASS"))
 			{
-				pMobIndex->SetClass(CClass::Lookup(bword.c_str()));
+				// A class name the table does not carry leaves the mobile with
+				// none, which is what the lookup's -1 used to be turned into
+				// one call further down.
+				pMobIndex->SetClass(CClass::Lookup(bword.c_str()).value_or(CLASS_NONE));
 				if (pMobIndex->Class()->GetIndex() == CLASS_WARRIOR)
 				{
 					// Warriors always carry two style words; unspecialized slots are

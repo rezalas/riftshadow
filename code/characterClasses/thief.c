@@ -149,7 +149,7 @@ void do_backstab(CHAR_DATA *ch, char *argument)
 		damage(ch, victim, 0, gsn_backstab, DAM_NONE, true);
 	}
 
-	if (ch->level < skill_table[gsn_dual_backstab].skill_level[ch->Class()->GetIndex()])
+	if (ch->level < skill_table[gsn_dual_backstab].skill_level[class_index(ch->Class()->GetIndex())])
 		return;
 
 	if (number_range(0, 3) == 0)
@@ -332,7 +332,7 @@ void do_blackjack(CHAR_DATA *ch, char *argument)
 
 	chance = get_skill(ch, gsn_blackjack);
 
-	if (chance == 0 || (ch->level < skill_table[gsn_blackjack].skill_level[ch->Class()->GetIndex()]))
+	if (chance == 0 || (ch->level < skill_table[gsn_blackjack].skill_level[class_index(ch->Class()->GetIndex())]))
 	{
 		send_to_char("You don't know how to blackjack.\n\r", ch);
 		return;
@@ -617,7 +617,7 @@ void do_plant(CHAR_DATA *ch, char *argument)
 	int percent;
 	int chance;
 
-	if (get_skill(ch, gsn_plant) == 0 || ch->level < skill_table[gsn_plant].skill_level[ch->Class()->GetIndex()])
+	if (get_skill(ch, gsn_plant) == 0 || ch->level < skill_table[gsn_plant].skill_level[class_index(ch->Class()->GetIndex())])
 	{
 		send_to_char("Huh?\n\r", ch);
 		return;
@@ -806,7 +806,7 @@ void do_gag(CHAR_DATA *ch, char *argument)
 
 	chance = get_skill(ch, gsn_gag);
 
-	if (chance == 0 || (ch->level < skill_table[gsn_gag].skill_level[ch->Class()->GetIndex()]))
+	if (chance == 0 || (ch->level < skill_table[gsn_gag].skill_level[class_index(ch->Class()->GetIndex())]))
 	{
 		send_to_char("Huh?\n\r", ch);
 		return;
@@ -2320,7 +2320,7 @@ void do_knife(CHAR_DATA *ch, char *argument)
 
 	one_argument(argument, arg);
 
-	if ((get_skill(ch, gsn_knife) == 0) || ch->level < skill_table[gsn_knife].skill_level[ch->Class()->GetIndex()])
+	if ((get_skill(ch, gsn_knife) == 0) || ch->level < skill_table[gsn_knife].skill_level[class_index(ch->Class()->GetIndex())])
 	{
 		if (!is_npc(ch))
 		{

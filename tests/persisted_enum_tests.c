@@ -164,3 +164,35 @@ SCENARIO("changing a room's terrain and putting it back", "[sector_offset]")
 		}
 	}
 }
+
+SCENARIO("reading a stored character class", "[persisted_enum]")
+{
+	GIVEN("the classes the enumeration names")
+	{
+		THEN("each reads back and writes back as its own number")
+		{
+			REQUIRE(read_persisted<CharClass>(0, "class") == CLASS_NONE);
+			REQUIRE(read_persisted<CharClass>(1, "class") == CLASS_WARRIOR);
+			REQUIRE(read_persisted<CharClass>(11, "class") == CLASS_SORCERER);
+			REQUIRE(write_persisted(CLASS_SORCERER) == 11);
+		}
+	}
+
+	GIVEN("a stored class the enumeration does not name")
+	{
+		THEN("it survives the trip")
+		{
+			REQUIRE(write_persisted(read_persisted<CharClass>(12, "class")) == 12);
+			REQUIRE(write_persisted(read_persisted<CharClass>(-1, "class")) == -1);
+		}
+	}
+
+	GIVEN("a per-class array")
+	{
+		THEN("a class subscripts it by its own number")
+		{
+			REQUIRE(class_index(CLASS_NONE) == 0);
+			REQUIRE(class_index(CLASS_SORCERER) == 11);
+		}
+	}
+}

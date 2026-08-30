@@ -2093,7 +2093,7 @@ void do_supps(CHAR_DATA *ch, char *argument)
 		if (skill_table[sn].name == nullptr)
 			break;
 
-		level = skill_table[sn].skill_level[ch->Class()->GetIndex()];
+		level = skill_table[sn].skill_level[class_index(ch->Class()->GetIndex())];
 
 		if (level < LEVEL_HERO + 1
 			&& level >= min_lev
@@ -2103,7 +2103,7 @@ void do_supps(CHAR_DATA *ch, char *argument)
 			&& (skill_table[sn].ctype == CMD_COMMUNE || skill_table[sn].ctype == CMD_BOTH))
 		{
 			found = true;
-			level = skill_table[sn].skill_level[ch->Class()->GetIndex()];
+			level = skill_table[sn].skill_level[class_index(ch->Class()->GetIndex())];
 
 			if (ch->level < level)
 			{
@@ -2229,7 +2229,7 @@ void do_commune(CHAR_DATA *ch, char *argument)
 
 		if (paf)
 		{
-			if (skill_table[sn].skill_level[ch->Class()->GetIndex()] > paf->modifier)
+			if (skill_table[sn].skill_level[class_index(ch->Class()->GetIndex())] > paf->modifier)
 			{
 				send_to_char("The ties to your god are severed and you can not commune that prayer.\n\r", ch);
 				return;
@@ -2237,7 +2237,7 @@ void do_commune(CHAR_DATA *ch, char *argument)
 		}
 	}
 
-	if (skill_table[sn].skill_level[ch->Class()->GetIndex()] >= 25
+	if (skill_table[sn].skill_level[class_index(ch->Class()->GetIndex())] >= 25
 		&& !IS_SET(ch->act, PLR_EMPOWERED)
 		&& !is_immortal(ch))
 	{
@@ -2263,7 +2263,7 @@ void do_commune(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (ch->level + 2 == skill_table[sn].skill_level[ch->Class()->GetIndex()])
+	if (ch->level + 2 == skill_table[sn].skill_level[class_index(ch->Class()->GetIndex())])
 	{
 		mana = 50;
 	}
@@ -2271,11 +2271,11 @@ void do_commune(CHAR_DATA *ch, char *argument)
 	{
 		if (is_affected(ch, gsn_concuss))
 		{
-			mana = std::max(skill_table[sn].min_mana * 4, 100 / (2 + ch->level - skill_table[sn].skill_level[ch->Class()->GetIndex()]));
+			mana = std::max(skill_table[sn].min_mana * 4, 100 / (2 + ch->level - skill_table[sn].skill_level[class_index(ch->Class()->GetIndex())]));
 		}
 		else
 		{
-			mana = std::max((int)skill_table[sn].min_mana, 100 / (2 + ch->level - skill_table[sn].skill_level[ch->Class()->GetIndex()]));
+			mana = std::max((int)skill_table[sn].min_mana, 100 / (2 + ch->level - skill_table[sn].skill_level[class_index(ch->Class()->GetIndex())]));
 		}
 	}
 
@@ -2641,10 +2641,10 @@ void do_call(CHAR_DATA *ch, char *argument)
 	if (cabal_down(ch, ch->cabal))
 		return;
 
-	if (ch->level + 2 == skill_table[sn].skill_level[ch->Class()->GetIndex()])
+	if (ch->level + 2 == skill_table[sn].skill_level[class_index(ch->Class()->GetIndex())])
 		mana = 50;
 	else
-		mana = std::max((int)skill_table[sn].min_mana, 100 / (2 + ch->level - skill_table[sn].skill_level[ch->Class()->GetIndex()]));
+		mana = std::max((int)skill_table[sn].min_mana, 100 / (2 + ch->level - skill_table[sn].skill_level[class_index(ch->Class()->GetIndex())]));
 
 	/*
 	 * Locate targets.

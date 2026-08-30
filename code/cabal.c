@@ -1149,7 +1149,7 @@ void spell_scribe(int /* sn */, int level, CHAR_DATA *ch, SpellTarget /* vo */, 
 		return;
 	}
 
-	if (skill_table[skill].skill_level[ch->Class()->GetIndex()] >= 30)
+	if (skill_table[skill].skill_level[class_index(ch->Class()->GetIndex())] >= 30)
 	{
 		act("That spell is too high level to be scribed!", ch, nullptr, nullptr, TO_CHAR);
 		return;

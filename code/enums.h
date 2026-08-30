@@ -1273,7 +1273,7 @@ enum Guild : int
 
 // Character class, an ordinal in char_data::Class()/class. The main CLASS_
 // family. Wire format - rename freely, never renumber.
-enum CharClass : int
+enum class CharClass : int
 {
 	CLASS_NONE					= 0,
 	CLASS_WARRIOR				= 1,
@@ -1288,6 +1288,28 @@ enum CharClass : int
 	CLASS_NECROMANCER			= 10,
 	CLASS_SORCERER				= 11,
 };
+
+// Reachable unqualified, as the other promoted families are.
+constexpr CharClass CLASS_NONE = CharClass::CLASS_NONE;
+constexpr CharClass CLASS_WARRIOR = CharClass::CLASS_WARRIOR;
+constexpr CharClass CLASS_THIEF = CharClass::CLASS_THIEF;
+constexpr CharClass CLASS_ZEALOT = CharClass::CLASS_ZEALOT;
+constexpr CharClass CLASS_PALADIN = CharClass::CLASS_PALADIN;
+constexpr CharClass CLASS_ANTI_PALADIN = CharClass::CLASS_ANTI_PALADIN;
+constexpr CharClass CLASS_RANGER = CharClass::CLASS_RANGER;
+constexpr CharClass CLASS_ASSASSIN = CharClass::CLASS_ASSASSIN;
+constexpr CharClass CLASS_SHAPESHIFTER = CharClass::CLASS_SHAPESHIFTER;
+constexpr CharClass CLASS_HEALER = CharClass::CLASS_HEALER;
+constexpr CharClass CLASS_NECROMANCER = CharClass::CLASS_NECROMANCER;
+constexpr CharClass CLASS_SORCERER = CharClass::CLASS_SORCERER;
+
+// The subscript for a per-class array, such as a skill's level for each class
+// or the title table. Those arrays are MAX_CLASS long and indexed by the
+// class's own number.
+constexpr int class_index(CharClass cclass)
+{
+	return static_cast<int>(cclass);
+}
 
 // Worn-equipment slot index into char_data::equipment[]. WEAR_NONE is the -1
 // sentinel (hence : int); WEAR_DUAL_WIELD and WEAR_FLOAT deliberately share slot

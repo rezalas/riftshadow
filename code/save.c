@@ -114,7 +114,7 @@ void save_char_obj(CHAR_DATA *ch)
 		player.name = ch->true_name;
 		player.pks = ch->pcdata->frags[PK_KILLS];
 		player.level = ch->level;
-		player.class_ = ch->Class()->GetIndex();
+		player.class_ = write_persisted(ch->Class()->GetIndex());
 		player.race = ch->race;
 		player.cabal = ch->cabal;
 		player.sex = write_persisted(ch->pcdata->true_sex);
@@ -1343,7 +1343,10 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
 			case 'C':
 				if (!str_cmp(word, "Cla"))
 				{
-					ch->SetClass(CClass::Lookup(fread_string(fp)));
+					// A class name the table does not carry leaves the
+					// character with none, which is what the lookup's -1
+					// became one call further down.
+					ch->SetClass(CClass::Lookup(fread_string(fp)).value_or(CLASS_NONE));
 					fMatch = true;
 					break;
 				}

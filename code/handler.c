@@ -516,7 +516,7 @@ int get_skill(CHAR_DATA *ch, int sn)
 	}
 	else if (!is_npc(ch))
 	{
-		if (ch->level < skill_table[sn].skill_level[ch->Class()->GetIndex()] && !is_immortal(ch))
+		if (ch->level < skill_table[sn].skill_level[class_index(ch->Class()->GetIndex())] && !is_immortal(ch))
 			skill = 0;
 		else
 			skill = ch->pcdata->learned[sn];
@@ -526,7 +526,7 @@ int get_skill(CHAR_DATA *ch, int sn)
 	}
 	else if (ch->pIndexData->Class()->GetIndex() > CLASS_NONE)
 	{
-		if (ch->level < skill_table[sn].skill_level[ch->pIndexData->Class()->GetIndex()])
+		if (ch->level < skill_table[sn].skill_level[class_index(ch->pIndexData->Class()->GetIndex())])
 		{
 			skill = 0;
 		}
@@ -535,7 +535,7 @@ int get_skill(CHAR_DATA *ch, int sn)
 			if (!style_check(sn, ch->mobstyle))
 				skill = 0;
 			else
-				skill = URANGE(0, 50 + 2 * (ch->level - skill_table[sn].skill_level[ch->pIndexData->Class()->GetIndex()]), 100);
+				skill = URANGE(0, 50 + 2 * (ch->level - skill_table[sn].skill_level[class_index(ch->pIndexData->Class()->GetIndex())]), 100);
 		}
 		else if (ch->pIndexData->Class()->GetIndex() == CLASS_SORCERER)
 		{
@@ -543,7 +543,7 @@ int get_skill(CHAR_DATA *ch, int sn)
 		}
 		else
 		{
-			skill = URANGE(0, 50 + 2 * (ch->level - skill_table[sn].skill_level[ch->pIndexData->Class()->GetIndex()]), 100);
+			skill = URANGE(0, 50 + 2 * (ch->level - skill_table[sn].skill_level[class_index(ch->pIndexData->Class()->GetIndex())]), 100);
 		}
 	}
 	else
@@ -886,7 +886,7 @@ int get_curr_stat(CHAR_DATA *ch, int stat)
 
 		if (!str_cmp(race_table[ch->race].name, "human"))
 		{
-			int iClass = ch->Class()->GetIndex();
+			CharClass iClass = ch->Class()->GetIndex();
 			switch (ch->Class()->attr_prime)
 			{
 				case STAT_STR:

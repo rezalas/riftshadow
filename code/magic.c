@@ -80,7 +80,7 @@ int find_spell(CHAR_DATA *ch, const char *name)
 			if (found == -1)
 				found = sn;
 
-			if (ch->level >= skill_table[sn].skill_level[ch->Class()->GetIndex()] && ch->pcdata->learned[sn] > 0)
+			if (ch->level >= skill_table[sn].skill_level[class_index(ch->Class()->GetIndex())] && ch->pcdata->learned[sn] > 0)
 				return sn;
 		}
 	}
@@ -455,7 +455,7 @@ void do_barkskin(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 	AFFECT_DATA af;
 
 	if ((get_skill(ch, gsn_barkskin) == 0) ||
-		(ch->level < skill_table[gsn_barkskin].skill_level[ch->Class()->GetIndex()]))
+		(ch->level < skill_table[gsn_barkskin].skill_level[class_index(ch->Class()->GetIndex())]))
 	{
 		send_to_char("You do not know how to turn your skin to bark.\n\r", ch);
 		return;
@@ -496,7 +496,7 @@ void do_laying_hands(CHAR_DATA *ch, char *argument)
 	int heal;
 
 	if ((get_skill(ch, gsn_laying_hands) == 0) ||
-		(ch->level < skill_table[gsn_laying_hands].skill_level[ch->Class()->GetIndex()]))
+		(ch->level < skill_table[gsn_laying_hands].skill_level[class_index(ch->Class()->GetIndex())]))
 	{
 		send_to_char("You do not have the ability to divinely heal.\n\r", ch);
 		return;
@@ -783,7 +783,7 @@ void do_cast(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (ch->level + 2 == skill_table[sn].skill_level[ch->Class()->GetIndex()])
+	if (ch->level + 2 == skill_table[sn].skill_level[class_index(ch->Class()->GetIndex())])
 	{
 		mana = 50;
 	}
@@ -791,11 +791,11 @@ void do_cast(CHAR_DATA *ch, char *argument)
 	{
 		if (is_affected(ch, gsn_concuss))
 		{
-			mana = std::max((skill_table[sn].min_mana * 4), 100 / (2 + ch->level - skill_table[sn].skill_level[ch->Class()->GetIndex()]));
+			mana = std::max((skill_table[sn].min_mana * 4), 100 / (2 + ch->level - skill_table[sn].skill_level[class_index(ch->Class()->GetIndex())]));
 		}
 		else
 		{
-			mana = std::max((int)skill_table[sn].min_mana, 100 / (2 + ch->level - skill_table[sn].skill_level[ch->Class()->GetIndex()]));
+			mana = std::max((int)skill_table[sn].min_mana, 100 / (2 + ch->level - skill_table[sn].skill_level[class_index(ch->Class()->GetIndex())]));
 		}
 	}
 
@@ -2415,7 +2415,7 @@ void do_detect_hidden(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 	number = get_skill(ch, gsn_detect_hidden);
 
 	if (number == 0
-		|| ch->level < skill_table[gsn_detect_hidden].skill_level[ch->Class()->GetIndex()])
+		|| ch->level < skill_table[gsn_detect_hidden].skill_level[class_index(ch->Class()->GetIndex())])
 	{
 		send_to_char("Huh?\n\r", ch);
 		return;
@@ -2462,7 +2462,7 @@ void do_detect_movement(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 	number = get_skill(ch, gsn_detect_movement);
 
 	if (number == 0
-		|| ch->level < skill_table[gsn_detect_movement].skill_level[ch->Class()->GetIndex()])
+		|| ch->level < skill_table[gsn_detect_movement].skill_level[class_index(ch->Class()->GetIndex())])
 	{
 		send_to_char("Huh?\n\r", ch);
 		return;
@@ -5639,7 +5639,7 @@ int check_spellcraft(CHAR_DATA *ch, int sn)
 	bonus = (get_skill(ch, gsn_spellcraft) - 50) / 5;
 	bonus -= number_range(0, 5);
 
-	if (bonus <= 0 || ch->level < skill_table[gsn_spellcraft].skill_level[ch->Class()->GetIndex()])
+	if (bonus <= 0 || ch->level < skill_table[gsn_spellcraft].skill_level[class_index(ch->Class()->GetIndex())])
 		return 0;
 
 	/*

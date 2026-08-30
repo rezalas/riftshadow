@@ -537,7 +537,8 @@ static int academy_pet_speech(CHAR_DATA *ch, CHAR_DATA *mob, char *argument)
 			ch->master = mob->self;
 			mob->master = nullptr;
 
-			int vnum = 0, cclass = ch->Class()->GetIndex();
+			int vnum = 0;
+			CharClass cclass = ch->Class()->GetIndex();
 
 			apet_find_guild();
 

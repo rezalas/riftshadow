@@ -23,7 +23,7 @@ void CClass::LoadClassTable()
 		else
 			lastp->next = stackcopy;
 
-		stackcopy->index = i++;
+		stackcopy->index = static_cast<CharClass>(i++);
 		stackcopy->name = row.name;
 		stackcopy->who_name = row.who_name;
 		stackcopy->attr_prime = row.attr_prime;
@@ -43,12 +43,12 @@ CClass::~CClass()
 {
 }
 
-int CClass::GetIndex()
+CharClass CClass::GetIndex()
 {
 	return index;
 }
 
-CClass *CClass::GetClass(int nIndex)
+CClass *CClass::GetClass(CharClass nIndex)
 {
 	/* we subtract 1 because CLASS_ANTI is 1 to differentiate from CLASS_NONE,
 	* but it's actually the 0th element in the array since there's no actual
@@ -61,7 +61,7 @@ CClass *CClass::GetClass(int nIndex)
 	return CClass::first;
 }
 
-CClass * CClass::operator[](int nIndex)
+CClass * CClass::operator[](CharClass nIndex)
 {
 	return GetClass(nIndex);
 	//return (CClass *)((char*)first + (nIndex) * sizeof(CClass));
@@ -84,13 +84,13 @@ static bool class_name_matches(const std::string &className, const char *query)
 	return true;
 }
 
-int CClass::Lookup (const char *name)
+std::optional<CharClass> CClass::Lookup (const char *name)
 {
 	CClass *aclass;
 	for (aclass = first; aclass; aclass = aclass->next)
 		if (class_name_matches(aclass->name, name))
 			return aclass->index;
 
-	return -1;
+	return {};
 }
 

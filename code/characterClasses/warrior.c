@@ -2356,7 +2356,7 @@ void do_exchange(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 	int AC;
 	float chance = get_skill(ch, gsn_exchange);
 
-	if ((chance == 0) || (ch->level < skill_table[gsn_exchange].skill_level[ch->Class()->GetIndex()] && !is_npc(ch)))
+	if ((chance == 0) || (ch->level < skill_table[gsn_exchange].skill_level[class_index(ch->Class()->GetIndex())] && !is_npc(ch)))
 	{
 		send_to_char("You don't know how to do that.\n\r", ch);
 		return;
@@ -4599,7 +4599,7 @@ void do_concuss(CHAR_DATA *ch, char *argument)
 	one_argument(argument, arg);
 
 	chance = get_skill(ch, gsn_concuss);
-	if (chance == 0 || (ch->level < skill_table[gsn_concuss].skill_level[ch->Class()->GetIndex()] && !is_npc(ch)))
+	if (chance == 0 || (ch->level < skill_table[gsn_concuss].skill_level[class_index(ch->Class()->GetIndex())] && !is_npc(ch)))
 	{
 		send_to_char("You don't know how to do that.\n\r", ch);
 		return;
@@ -4902,7 +4902,7 @@ void do_leadership(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 	int chance;
 
 	chance = get_skill(ch, gsn_leadership);
-	if (chance == 0 || ch->level < skill_table[gsn_leadership].skill_level[ch->Class()->GetIndex()])
+	if (chance == 0 || ch->level < skill_table[gsn_leadership].skill_level[class_index(ch->Class()->GetIndex())])
 	{
 		send_to_char("Huh?\n\r", ch);
 		return;

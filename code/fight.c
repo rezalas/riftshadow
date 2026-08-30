@@ -5031,7 +5031,7 @@ void do_berserk(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 
 	if (chance == 0
 		|| (is_npc(ch) && !IS_SET(ch->off_flags, OFF_BERSERK))
-		|| (!is_npc(ch) && ch->level < skill_table[gsn_berserk].skill_level[ch->Class()->GetIndex()]))
+		|| (!is_npc(ch) && ch->level < skill_table[gsn_berserk].skill_level[class_index(ch->Class()->GetIndex())]))
 	{
 		send_to_char("You turn red in the face, but nothing happens.\n\r", ch);
 		return;
@@ -5606,7 +5606,7 @@ void do_trip(CHAR_DATA *ch, char *argument)
 
 	if (chance == 0
 		|| (is_npc(ch) && !IS_SET(ch->off_flags, OFF_TRIP))
-		|| (!is_npc(ch) && ch->level < skill_table[gsn_trip].skill_level[ch->Class()->GetIndex()]))
+		|| (!is_npc(ch) && ch->level < skill_table[gsn_trip].skill_level[class_index(ch->Class()->GetIndex())]))
 	{
 		send_to_char("Tripping?  What's that?\n\r", ch);
 		return;
@@ -6026,7 +6026,7 @@ void do_ambush(CHAR_DATA *ch, char *argument)
 	chance = get_skill(ch, gsn_moving_ambush);
 
 	if (Deref(victim->fighting) != nullptr &&
-		(chance < 3 || ch->level < skill_table[gsn_moving_ambush].skill_level[ch->Class()->GetIndex()]))
+		(chance < 3 || ch->level < skill_table[gsn_moving_ambush].skill_level[class_index(ch->Class()->GetIndex())]))
 	{
 		send_to_char("They are moving around too much to ambush.\n\r", ch);
 		return;
@@ -6388,7 +6388,7 @@ void do_herb(CHAR_DATA *ch, char *argument)
 
 	one_argument(argument, arg);
 
-	if (get_skill(ch, gsn_herb) == 0 || ch->level < skill_table[gsn_herb].skill_level[ch->Class()->GetIndex()])
+	if (get_skill(ch, gsn_herb) == 0 || ch->level < skill_table[gsn_herb].skill_level[class_index(ch->Class()->GetIndex())])
 	{
 		send_to_char("Huh?\n\r", ch);
 		return;
@@ -6481,7 +6481,7 @@ void do_cleave(CHAR_DATA *ch, char *argument)
 	chance = get_skill(ch, gsn_cleave);
 
 	if (chance == 0 ||
-		ch->level < skill_table[gsn_cleave].skill_level[ch->Class()->GetIndex()])
+		ch->level < skill_table[gsn_cleave].skill_level[class_index(ch->Class()->GetIndex())])
 	{
 		send_to_char("You don't know how to cleave.\n\r", ch);
 		return;
@@ -6617,7 +6617,7 @@ void check_ground_control(CHAR_DATA *ch, CHAR_DATA *victim, float chance, int da
 	chance -= number_range(5, 15);
 	chance = URANGE(5, chance, 60);
 
-	if (ch->level < skill_table[gsn_ground_control].skill_level[ch->Class()->GetIndex()])
+	if (ch->level < skill_table[gsn_ground_control].skill_level[class_index(ch->Class()->GetIndex())])
 		return;
 
 	if (number_percent() > chance)
@@ -6720,7 +6720,7 @@ void do_throw(CHAR_DATA *ch, char *argument)
 	chance = get_skill(ch, gsn_throw);
 
 	if (chance == 0
-		|| ch->level < skill_table[gsn_throw].skill_level[ch->Class()->GetIndex()])
+		|| ch->level < skill_table[gsn_throw].skill_level[class_index(ch->Class()->GetIndex())])
 	{
 		send_to_char("Throwing? What's that?\n\r", ch);
 		return;
@@ -6933,7 +6933,7 @@ void do_nerve(CHAR_DATA *ch, char *argument)
 	chance = get_skill(ch, gsn_nerve);
 
 	if (chance == 0 
-		|| ch->level < skill_table[gsn_nerve].skill_level[ch->Class()->GetIndex()])
+		|| ch->level < skill_table[gsn_nerve].skill_level[class_index(ch->Class()->GetIndex())])
 	{
 		send_to_char("You don't know how to use nerve pressure tactics.\n\r", ch);
 		return;
@@ -7018,7 +7018,7 @@ void do_endure(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 {
 	AFFECT_DATA af;
 
-	if (get_skill(ch, gsn_endure) == 0 || ch->level < skill_table[gsn_endure].skill_level[ch->Class()->GetIndex()])
+	if (get_skill(ch, gsn_endure) == 0 || ch->level < skill_table[gsn_endure].skill_level[class_index(ch->Class()->GetIndex())])
 	{
 		send_to_char("Huh?\n\r", ch);
 		return;
@@ -7072,7 +7072,7 @@ void do_blindness_dust(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 	chance = get_skill(ch, gsn_blindness_dust);
 
 	if (chance == 0
-		|| ch->level < skill_table[gsn_blindness_dust].skill_level[ch->Class()->GetIndex()])
+		|| ch->level < skill_table[gsn_blindness_dust].skill_level[class_index(ch->Class()->GetIndex())])
 	{
 		send_to_char("You don't know how to make blindness dust to throw.\n\r", ch);
 		return;
@@ -7158,7 +7158,7 @@ void do_poison_dust(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 	chance = get_skill(ch, gsn_poison_dust);
 
 	if (chance == 0
-		|| ch->level < skill_table[gsn_poison_dust].skill_level[ch->Class()->GetIndex()])
+		|| ch->level < skill_table[gsn_poison_dust].skill_level[class_index(ch->Class()->GetIndex())])
 	{
 		send_to_char("You don't know how to make poison dust to throw.\n\r", ch);
 		return;
@@ -7242,7 +7242,7 @@ void do_warcry(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 	float chance = get_skill(ch, gsn_warcry);
 
 	if (chance == 0
-		|| ch->level < skill_table[gsn_warcry].skill_level[ch->Class()->GetIndex()])
+		|| ch->level < skill_table[gsn_warcry].skill_level[class_index(ch->Class()->GetIndex())])
 	{
 		send_to_char("You don't know how to warcry properly.\n\r", ch);
 		return;
@@ -7305,7 +7305,7 @@ void do_strangle(CHAR_DATA *ch, char *argument)
 	chance = get_skill(ch, gsn_strangle);
 
 	if (chance == 0
-		|| ch->level < skill_table[gsn_strangle].skill_level[ch->Class()->GetIndex()])
+		|| ch->level < skill_table[gsn_strangle].skill_level[class_index(ch->Class()->GetIndex())])
 	{
 		send_to_char("You don't know how to strangle properly.\n\r", ch);
 		return;
@@ -7424,7 +7424,7 @@ void do_enlist(CHAR_DATA *ch, char *argument)
 
 	chance = get_skill(ch, gsn_enlist);
 
-	if (chance <= 10 || ch->level < skill_table[gsn_enlist].skill_level[ch->Class()->GetIndex()])
+	if (chance <= 10 || ch->level < skill_table[gsn_enlist].skill_level[class_index(ch->Class()->GetIndex())])
 	{
 		send_to_char("You do not have the skills required to enlist mercenary aid.\n\r", ch);
 		return;
@@ -7593,7 +7593,7 @@ void do_find_water(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 	if (chance > 95)
 		chance = 95;
 
-	if (chance == 0 || ch->level < skill_table[gsn_find_water].skill_level[ch->Class()->GetIndex()])
+	if (chance == 0 || ch->level < skill_table[gsn_find_water].skill_level[class_index(ch->Class()->GetIndex())])
 	{
 		send_to_char("You poke the ground with a stick but find no water that way.\n\r", ch);
 		return;
@@ -7658,7 +7658,7 @@ void do_shield_cleave(CHAR_DATA *ch, char *argument)
 
 	chance = get_skill(ch, gsn_shield_cleave);
 
-	if (chance == 0 || ch->level < skill_table[gsn_shield_cleave].skill_level[ch->Class()->GetIndex()])
+	if (chance == 0 || ch->level < skill_table[gsn_shield_cleave].skill_level[class_index(ch->Class()->GetIndex())])
 	{
 		send_to_char("You don't know the methods to cleave a shield in two.\n\r", ch);
 		return;
@@ -7826,7 +7826,7 @@ void do_forage(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 	chance = get_skill(ch, gsn_forage);
 
 	if (chance == 0
-		|| ch->level < skill_table[gsn_forage].skill_level[ch->Class()->GetIndex()])
+		|| ch->level < skill_table[gsn_forage].skill_level[class_index(ch->Class()->GetIndex())])
 	{
 		send_to_char("You aren't able to decide on which plants are edible.\n\r", ch);
 		return;
@@ -7890,7 +7890,7 @@ void do_defend(CHAR_DATA *ch, char *argument)
 	CHAR_DATA *ward;
 
 	one_argument(argument, arg);
-	if (get_skill(ch, gsn_defend) == 0 || ch->level < skill_table[gsn_defend].skill_level[ch->Class()->GetIndex()])
+	if (get_skill(ch, gsn_defend) == 0 || ch->level < skill_table[gsn_defend].skill_level[class_index(ch->Class()->GetIndex())])
 	{
 		send_to_char("You aren't able to defend other people.\n\r", ch);
 		return;
@@ -8214,7 +8214,7 @@ void do_assassinate(CHAR_DATA *ch, char *argument)
 		return;
 
 	if (get_skill(ch, gsn_assassinate) == 0 ||
-		ch->level < skill_table[gsn_assassinate].skill_level[ch->Class()->GetIndex()])
+		ch->level < skill_table[gsn_assassinate].skill_level[class_index(ch->Class()->GetIndex())])
 	{
 		send_to_char("Huh?\n\r", ch);
 		return;
@@ -8479,7 +8479,7 @@ void do_pugil(CHAR_DATA *ch, char *argument)
 
 	if (chance == 0
 		|| is_npc(ch)
-		|| (!is_npc(ch) && ch->level < skill_table[gsn_pugil].skill_level[ch->Class()->GetIndex()]))
+		|| (!is_npc(ch) && ch->level < skill_table[gsn_pugil].skill_level[class_index(ch->Class()->GetIndex())]))
 	{
 		send_to_char("You're not trained in the art of pugiling.\n\r", ch);
 		return;
@@ -8554,7 +8554,7 @@ void do_protection_heat_cold(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 	int chance;
 	chance = get_skill(ch, gsn_protection_heat_cold);
 
-	if (chance == 0 || ch->level < skill_table[gsn_protection_heat_cold].skill_level[ch->Class()->GetIndex()])
+	if (chance == 0 || ch->level < skill_table[gsn_protection_heat_cold].skill_level[class_index(ch->Class()->GetIndex())])
 	{
 		send_to_char("You don't know how to protect yourself from the elements.\n\r", ch);
 		return;
@@ -8728,7 +8728,7 @@ void do_quiet_movement(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 
 	chance = get_skill(ch, gsn_quiet_movement);
 
-	if (chance == 0 || ch->level < skill_table[gsn_quiet_movement].skill_level[ch->Class()->GetIndex()])
+	if (chance == 0 || ch->level < skill_table[gsn_quiet_movement].skill_level[class_index(ch->Class()->GetIndex())])
 	{
 		send_to_char("You don't know how to move with silent stealth through the wilderness.\n\r", ch);
 		return;

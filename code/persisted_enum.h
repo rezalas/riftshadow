@@ -56,6 +56,16 @@ struct PersistedEnum<SectorType>
 		SECT_VERTICAL, SECT_ICE, SECT_SNOW, SECT_CAVE};
 };
 
+template <>
+struct PersistedEnum<CharClass>
+{
+	static constexpr const char *Family = "CharClass";
+	static constexpr CharClass Named[] = {
+		CLASS_NONE, CLASS_WARRIOR, CLASS_THIEF, CLASS_ZEALOT, CLASS_PALADIN,
+		CLASS_ANTI_PALADIN, CLASS_RANGER, CLASS_ASSASSIN, CLASS_SHAPESHIFTER,
+		CLASS_HEALER, CLASS_NECROMANCER, CLASS_SORCERER};
+};
+
 /// Whether the stored integer is one of the values the family names.
 template <class E>
 bool is_named_value(int raw)
