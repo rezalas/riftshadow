@@ -524,10 +524,15 @@ void do_ghetto_bind(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (is_affected(victim, AFF_HASTE))
+	// These read a bitvector flag, so they go through is_affected_by. The
+	// other overload searches the affect list for a skill number, and AFF_HASTE
+	// is 21, which is the row for "demand" in the skill table. Nothing creates
+	// an affect of that type, so both modifiers were dead and the bind has
+	// never accounted for haste in either direction.
+	if (is_affected_by(victim, AFF_HASTE))
 		chance -= 30;
 
-	if (is_affected(ch, AFF_HASTE))
+	if (is_affected_by(ch, AFF_HASTE))
 		chance += 30;
 
 	if (get_curr_stat(victim, STAT_DEX) > get_curr_stat(ch, STAT_DEX))

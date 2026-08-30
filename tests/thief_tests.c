@@ -41,6 +41,30 @@ static bool TripwireEverLands(CHAR_DATA *ch, char *direction, int door, int atte
 	return false;
 }
 
+/// How often the bind lands over a run of attempts. Each attempt clears the
+/// affect the last one left, puts the victim back to sleep and resets the
+/// skill, because both outcomes of the bind mark the victim and a run of
+/// attempts would otherwise train the skill it is measuring.
+static int BindSuccesses(CHAR_DATA *ch, CHAR_DATA *victim, int attempts)
+{
+	int successes = 0;
+
+	for (int attempt = 0; attempt < attempts; attempt++)
+	{
+		affect_strip(victim, gsn_bind);
+		victim->position = POS_SLEEPING;
+		ch->pcdata->learned[gsn_bind] = 50;
+		TestWorld::ClearOutput(ch);
+
+		do_ghetto_bind(ch, (char *)"Target");
+
+		if (TestWorld::Heard(ch, "tie a rope"))
+			successes++;
+	}
+
+	return successes;
+}
+
 SCENARIO("laying a tripwire in a direction", "[do_tripwire]")
 {
 	TestWorld::WireSkillNumbers();
@@ -105,6 +129,47 @@ SCENARIO("laying a tripwire in a direction", "[do_tripwire]")
 			{
 				REQUIRE(TestWorld::Heard(ch, "Huh?"));
 				REQUIRE_FALSE(RoomIsWiredFor(room, DoorNorth));
+			}
+		}
+	}
+}
+
+SCENARIO("binding somebody accounts for haste", "[do_ghetto_bind]")
+{
+	TestWorld::WireSkillNumbers();
+
+	// The two modifiers are worth thirty points each side of a fifty point
+	// skill, so the rates being compared are far enough apart that a run of
+	// this length separates them without the test depending on the rolls.
+	const int Attempts = 300;
+	const int Margin = 30;
+
+	GIVEN("a thief binding a sleeping victim")
+	{
+		TestWorld world;
+		auto room = world.CreateRoom();
+		auto ch = world.CreatePlayer("Sneak", room, CLASS_THIEF);
+		auto victim = world.CreatePlayer("Target", room, CLASS_THIEF);
+
+		int plain = BindSuccesses(ch, victim, Attempts);
+
+		WHEN("the thief is hasted")
+		{
+			SET_BIT(ch->affected_by, AFF_HASTE);
+
+			THEN("the bind lands more often")
+			{
+				REQUIRE(BindSuccesses(ch, victim, Attempts) > plain + Margin);
+			}
+		}
+
+		WHEN("the victim is hasted")
+		{
+			SET_BIT(victim->affected_by, AFF_HASTE);
+
+			THEN("the bind lands less often")
+			{
+				REQUIRE(BindSuccesses(ch, victim, Attempts) < plain - Margin);
 			}
 		}
 	}
