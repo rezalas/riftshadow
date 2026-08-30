@@ -39,6 +39,7 @@
 #include <time.h>
 #include <iterator>
 #include "merc.h"
+#include "persisted_enum.h"
 #include "act_wiz.h"
 #include "entity/handles.h"
 #include "rift.h"
@@ -2630,7 +2631,7 @@ void do_mstat(CHAR_DATA *ch, char *argument)
 					? "chaotic"
 					: "neutral",
 		victim->gold,
-		size_table[victim->size].name,
+		size_table[static_cast<int>(victim->size)].name,
 		position_table[victim->position].name);
 	send_to_char(buf, ch);
 
@@ -5058,9 +5059,9 @@ void do_mset(CHAR_DATA *ch, char *argument)
 
 	if (!str_cmp(arg2, "size"))
 	{
-		if (value > -1 && value <= SIZE_IMMENSE)
+		if (value > -1 && value <= write_persisted(SIZE_IMMENSE))
 		{
-			victim->size = value;
+			victim->size = static_cast<Size>(value);
 			return;
 		}
 

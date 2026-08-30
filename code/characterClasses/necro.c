@@ -6,6 +6,7 @@
 #include <stdlib.h>
 #include <algorithm>
 #include "../merc.h"
+#include "../persisted_enum.h"
 #include "../entity/handles.h"
 #include "necro.h"
 #include "../comm.h"
@@ -511,7 +512,7 @@ void animate_four(CHAR_DATA *ch, OBJ_DATA *corpse)
 
 	zombie->level = corpse->level;
 	zombie->max_hit = (short)(corpse->ohp * .55);
-	zombie->size = corpse->value[2];
+	zombie->size = read_persisted<Size>(corpse->value[2], "corpse size");
 
 	if (corpse->item_type == ITEM_CORPSE_PC)
 		zombie->max_hit = corpse->ohp * 6;
@@ -540,12 +541,12 @@ void animate_four(CHAR_DATA *ch, OBJ_DATA *corpse)
 
 	zombie->defense_mod = (short)dmod;
 
-	auto zombieSize = zombie->size == 0 ? "tiny, " :
-			zombie->size == 1 ? "small, " :
-			zombie->size == 2 ? "" :
-			zombie->size == 3 ? "large, " :
-			zombie->size == 4 ? "huge, " :
-			zombie->size == 5 ? "giant, " : "immense, ";
+	auto zombieSize = zombie->size == SIZE_TINY ? "tiny, " :
+			zombie->size == SIZE_SMALL ? "small, " :
+			zombie->size == SIZE_MEDIUM ? "" :
+			zombie->size == SIZE_LARGE ? "large, " :
+			zombie->size == SIZE_HUGE ? "huge, " :
+			zombie->size == SIZE_GIANT ? "giant, " : "immense, ";
 
 	auto zombieLevel = zombie->level < 11 ? "pathetic" :
 			zombie->level < 21 ? "weak" :

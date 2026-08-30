@@ -19,7 +19,7 @@ struct pc_race_type // additional data for pc races
 	char *skills[5];				// bonus skills for the race
 	short classes[MAX_CLASS]; 		// class restricts for races
 	short max_stats[MAX_STATS];	// maximum stats
-	short size;					// aff bits for the race
+	Size size;					// how big members of the race are
 	short racePulse;				// combat pulse for this race
 	float racialDam;				// racial dam modifier
 	short status;

@@ -444,7 +444,7 @@ void do_hobble(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 		return;
 	}
 
-	if (victim->size < ch->size - 1)
+	if (size_difference(ch->size, victim->size) > 1)
 	{
 		send_to_char("You cannot aim at such a small target.\n\r", ch);
 		return;
@@ -730,7 +730,7 @@ void do_crippling_blow(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 		return;
 	}
 
-	if (victim->size > ch->size + 1)
+	if (size_difference(victim->size, ch->size) > 1)
 	{
 		send_to_char("You cannot aim at such a large target.\n\r", ch);
 		return;
@@ -977,7 +977,7 @@ void do_gouge(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 		return;
 	}
 
-	if (victim->size > ch->size + 1)
+	if (size_difference(victim->size, ch->size) > 1)
 	{
 		send_to_char("You cannot aim at such a large target.\n\r", ch);
 		return;
@@ -2122,7 +2122,7 @@ void do_overhead(CHAR_DATA *ch, char *argument)
 	if (is_safe(ch, victim))
 		return;
 
-	if (victim->size > ch->size + 1)
+	if (size_difference(victim->size, ch->size) > 1)
 	{
 		send_to_char("They are too large for you to properly perform an overhead strike.\n\r", ch);
 		return;
@@ -2166,7 +2166,7 @@ void do_overhead(CHAR_DATA *ch, char *argument)
 			return;
 	}
 
-	special = (float)(skill * (1.00f + (ch->size - victim->size) / 4.00f) * (1.00f + weapon->weight / 200.00f));
+	special = (float)(skill * (1.00f + size_difference(ch->size, victim->size) / 4.00f) * (1.00f + weapon->weight / 200.00f));
 
 	if (number_percent() < .7 * skill)
 	{
@@ -2484,7 +2484,7 @@ void do_charge(CHAR_DATA *ch, char *argument)
 	if (is_safe(ch, victim))
 		return;
 
-	if (ch->size < victim->size - 1)
+	if (size_difference(victim->size, ch->size) > 1)
 	{
 		send_to_char("They are too massive to charge.\n\r", ch);
 		return;
@@ -2611,7 +2611,7 @@ void do_shieldbash(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 		return;
 	}
 
-	if (ch->size > victim->size + 1)
+	if (size_difference(ch->size, victim->size) > 1)
 	{
 		send_to_char("They are too small to properly aim a shield bash at.\n\r", ch);
 		return;
@@ -2620,7 +2620,7 @@ void do_shieldbash(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 	weight = armor_weight(ch);
 
 	chance = (int)(0.7 * (float)skill);
-	chance += 5 * (ch->size - victim->size);
+	chance += 5 * size_difference(ch->size, victim->size);
 	chance -= get_curr_stat(victim, STAT_DEX);
 
 	if (is_npc(victim))
@@ -2634,7 +2634,7 @@ void do_shieldbash(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 
 		dam = (int)((float)dice(ch->level / 4, 4) + ((float)weight / (float)20));
 
-		if (pow(2, ch->size - victim->size) * weight > 250)
+		if (pow(2, size_difference(ch->size, victim->size)) * weight > 250)
 			lag = 2;
 
 		WAIT_STATE(ch, PULSE_VIOLENCE * 2);
@@ -4633,7 +4633,7 @@ void do_concuss(CHAR_DATA *ch, char *argument)
 	if (is_safe(ch, victim))
 		return;
 
-	size = victim->size - ch->size;
+	size = size_difference(victim->size, ch->size);
 
 	if (size > 2)
 	{

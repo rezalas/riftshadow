@@ -14,6 +14,10 @@ bool is_npc (CHAR_DATA *ch);
 /// can be in, and a stored value the enumeration does not name is neither.
 bool is_character_sex (Sex sex);
 
+/// How many steps apart two sizes are, which is what the skills that care
+/// about size are written on. Positive when the first is the larger.
+int size_difference (Size larger, Size smaller);
+
 #ifdef __cplusplus
 }
 #endif

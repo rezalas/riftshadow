@@ -43,6 +43,7 @@
 #include <time.h>
 #include <algorithm>
 #include "merc.h"
+#include "persisted_enum.h"
 #include "entity/handles.h"
 #include "fight.h"
 #include "handler.h"
@@ -2014,7 +2015,7 @@ bool check_parry(CHAR_DATA *ch, CHAR_DATA *victim, int dt)
 	if (!is_npc(ch) && abs(ch->pcdata->energy_state) > 1)
 		chance -= pow(3, abs(ch->pcdata->energy_state));
 
-	chance -= 5 * abs((ch->size - victim->size));
+	chance -= 5 * abs(size_difference(ch->size, victim->size));
 
 	if (dt == gsn_dual_wield)
 		wield = get_eq_char(ch, WEAR_DUAL_WIELD);
@@ -2475,7 +2476,7 @@ bool check_avoid(CHAR_DATA *ch, CHAR_DATA *victim, int dt)
 		chance += dex;
 
 	chance += dex - dexa;
-	chance += (ch->size - victim->size) * 5;
+	chance += size_difference(ch->size, victim->size) * 5;
 
 	if (is_affected_room(ch->in_room, gsn_blanket))
 		chance *= 0.8;
@@ -2529,7 +2530,7 @@ bool check_avoid(CHAR_DATA *ch, CHAR_DATA *victim, int dt)
 	if (is_npc(victim) || is_npc(ch))
 		chance += (victim->level - ch->level);
 
-	chance -= 5 * abs((ch->size - victim->size));
+	chance -= 5 * abs(size_difference(ch->size, victim->size));
 	chance -= victim->balance;
 	chance += ch->balance;
 
@@ -2608,7 +2609,7 @@ int check_evasion(CHAR_DATA *ch, int chance)
 		chance = 100 - (int)nododge;
 
 		if (ch->size > SIZE_MEDIUM)
-			chance -= (ch->size - SIZE_MEDIUM) * 10;
+			chance -= size_difference(ch->size, SIZE_MEDIUM) * 10;
 	}
 
 	return chance;
@@ -2693,8 +2694,8 @@ bool check_fend(CHAR_DATA *ch, CHAR_DATA *victim, int dt)
 	if (is_wielded(victim, WEAPON_POLEARM, WIELD_PRIMARY))
 		skill *= 1.2;
 
-	if (ch->size > victim->size + 1)
-		skill /= pow(2, (ch->size - (victim->size - 1)));
+	if (size_difference(ch->size, victim->size) > 1)
+		skill /= pow(2, size_difference(ch->size, victim->size) + 1);
 
 	if (Deref(victim->analyzePC) == ch)
 		skill += victim->analyze;
@@ -3053,7 +3054,7 @@ void make_corpse(CHAR_DATA *killer, CHAR_DATA *ch)
 	if (is_npc(ch) && (IS_SET(ch->act, ACT_UNDEAD) || IS_SET(ch->form, FORM_UNDEAD)))
 		SET_BIT(corpse->extra_flags, CORPSE_NO_ANIMATE);
 
-	corpse->value[2] = ch->size;
+	corpse->value[2] = write_persisted(ch->size);
 
 	sprintf(buf, corpse->short_descr, name);
 	free_pstring(corpse->short_descr);
@@ -4946,8 +4947,8 @@ bool can_bash(CHAR_DATA *ch, CHAR_DATA *victim)
 {
 	if ((is_npc(ch) && !IS_SET(ch->off_flags, OFF_BASH))
 		|| victim->position < POS_FIGHTING
-		|| ch->size + 1 < victim->size
-		|| ch->size - 1 > victim->size
+		|| size_difference(victim->size, ch->size) > 1
+		|| size_difference(ch->size, victim->size) > 1
 		|| is_affected(victim, gsn_protective_shield)
 		|| is_affected(victim, gsn_sanguine_ward)
 		|| is_affected(victim, gsn_heatshield)
@@ -5178,13 +5179,13 @@ void do_bash(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (ch->size + 1 < victim->size)
+	if (size_difference(victim->size, ch->size) > 1)
 	{
 		send_to_char("They are too large to bash.\n\r", ch);
 		return;
 	}
 
-	if (ch->size - 1 > victim->size)
+	if (size_difference(ch->size, victim->size) > 1)
 	{
 		send_to_char("They are too small to properly aim a bash at.\n\r", ch);
 		return;
@@ -5334,9 +5335,9 @@ void do_bash(CHAR_DATA *ch, char *argument)
 	chance -= victim->carry_weight / 200;
 
 	if (ch->size < victim->size)
-		chance += (ch->size - victim->size) * 20;
+		chance += size_difference(ch->size, victim->size) * 20;
 	else
-		chance += (ch->size - victim->size) * 10;
+		chance += size_difference(ch->size, victim->size) * 10;
 
 	/* stats */
 	chance += get_curr_stat(ch, STAT_STR);
@@ -5372,9 +5373,9 @@ void do_bash(CHAR_DATA *ch, char *argument)
 		act("$n sends $N sprawling with a powerful bash.", ch, nullptr, victim, TO_NOTVICT);
 
 		check_improve(ch, gsn_bash, true, 1);
-		damage_old(ch, victim, number_range(2, (int)(2 + 2 * ch->size + chance / 20)), gsn_bash, DAM_BASH, true);
+		damage_old(ch, victim, number_range(2, (int)(2 + 2 * static_cast<int>(ch->size) + chance / 20)), gsn_bash, DAM_BASH, true);
 
-		LAG_CHAR(victim, std::min(2, number_range(1, 2) + ch->size - victim->size) * PULSE_VIOLENCE);
+		LAG_CHAR(victim, std::min(2, number_range(1, 2) + size_difference(ch->size, victim->size)) * PULSE_VIOLENCE);
 		WAIT_STATE(ch, PULSE_VIOLENCE * 2);
 
 		victim->position = POS_RESTING;
@@ -5668,7 +5669,7 @@ void do_trip(CHAR_DATA *ch, char *argument)
 
 	/* size */
 	if (ch->size < victim->size)
-		chance += (ch->size - victim->size) * 10; /* bigger = harder to trip */
+		chance += size_difference(ch->size, victim->size) * 10; /* bigger = harder to trip */
 
 	/* dex */
 	chance += get_curr_stat(ch, STAT_DEX);
@@ -5714,7 +5715,7 @@ void do_trip(CHAR_DATA *ch, char *argument)
 
 		check_improve(ch, gsn_trip, true, 1);
 		WAIT_STATE(ch, skill_table[gsn_trip].beats);
-		damage(ch, victim, number_range(2, 2 + 2 * victim->size), gsn_trip, DAM_BASH, true);
+		damage(ch, victim, number_range(2, 2 + 2 * static_cast<int>(victim->size)), gsn_trip, DAM_BASH, true);
 	}
 	else
 	{
@@ -9357,13 +9358,13 @@ void do_headbutt(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 		return;
 	}
 
-	if (ch->size < (victim->size - 1))
+	if (size_difference(victim->size, ch->size) > 1)
 	{
 		send_to_char("They're too large to headbutt.\n\r", ch);
 		return;
 	}
 
-	if (ch->size > (victim->size + 1))
+	if (size_difference(ch->size, victim->size) > 1)
 	{
 		send_to_char("They're too small to headbutt.\n\r", ch);
 		return;

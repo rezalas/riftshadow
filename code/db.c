@@ -1610,8 +1610,8 @@ CHAR_DATA *create_mobile(MOB_INDEX_DATA *pMobIndex)
 		if (IS_SET(mob->off_flags, OFF_FAST))
 			mob->perm_stat[STAT_DEX] += 2;
 
-		mob->perm_stat[STAT_STR] += mob->size - SIZE_MEDIUM;
-		mob->perm_stat[STAT_CON] += (mob->size - SIZE_MEDIUM) / 2;
+		mob->perm_stat[STAT_STR] += size_difference(mob->size, SIZE_MEDIUM);
+		mob->perm_stat[STAT_CON] += size_difference(mob->size, SIZE_MEDIUM) / 2;
 
 		/* let's get some spell action */
 

@@ -248,7 +248,7 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 		if (IS_SET(pexit->exit_info, EX_CLOSED) && IS_SET(ch->parts, PART_HANDS))
 			do_open(ch, dir_name[door]);
 
-		if (IS_SET(pexit->exit_info, EX_CLOSED) && ch->size >= 3)
+		if (IS_SET(pexit->exit_info, EX_CLOSED) && ch->size >= SIZE_LARGE)
 			do_door_bash(ch, dir_name[door]);
 	}
 
@@ -4413,7 +4413,7 @@ bool check_barred(CHAR_DATA *ch, ROOM_INDEX_DATA *to_room)
 				field = ch->cabal;
 
 			if (blocker->pIndexData->barred_entry->type == BAR_SIZE)
-				field = ch->size;
+				field = static_cast<int>(ch->size);
 
 			if (blocker->pIndexData->barred_entry->type == BAR_LEVEL)
 				field = ch->level;

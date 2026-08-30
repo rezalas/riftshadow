@@ -23,6 +23,11 @@ bool is_character_sex (Sex sex)
 	return sex == SEX_NEUTRAL || sex == SEX_MALE || sex == SEX_FEMALE;
 }
 
+int size_difference (Size larger, Size smaller)
+{
+	return static_cast<int>(larger) - static_cast<int>(smaller);
+}
+
 bool is_npc (CHAR_DATA *ch)
 {
 	if (ch == nullptr)

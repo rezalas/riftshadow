@@ -55,7 +55,7 @@ public:
 	int wealth;
 	long form[MAX_BITVECTOR];
 	long parts[MAX_BITVECTOR];
-	short size;
+	Size size;
 
 	// restrict mobs to a specific region
 

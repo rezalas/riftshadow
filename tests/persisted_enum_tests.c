@@ -70,3 +70,49 @@ SCENARIO("telling a character's sex from a prototype's instruction", "[is_charac
 		}
 	}
 }
+
+SCENARIO("reading a stored size", "[persisted_enum]")
+{
+	GIVEN("the sizes the enumeration names, and one it does not")
+	{
+		THEN("the named ones read back, and the unnamed one survives the trip")
+		{
+			REQUIRE(read_persisted<Size>(0, "size") == SIZE_TINY);
+			REQUIRE(read_persisted<Size>(2, "size") == SIZE_MEDIUM);
+			REQUIRE(read_persisted<Size>(6, "size") == SIZE_IMMENSE);
+			REQUIRE(write_persisted(read_persisted<Size>(9, "size")) == 9);
+		}
+	}
+}
+
+SCENARIO("measuring the gap between two sizes", "[size_difference]")
+{
+	// Sizes are an ascending ordinal and the skills that care about size were
+	// written as arithmetic on it: victim->size > ch->size + 1, ch->size <
+	// victim->size - 1, and differences scaled by a constant. Those became
+	// calls to size_difference, so what is checked here is that the rewriting
+	// rule holds for every pair of sizes rather than for the pairs that
+	// happened to come up.
+	const int Smallest = 0;
+	const int Largest = 6;
+
+	GIVEN("every pair of sizes")
+	{
+		THEN("the gap is the difference of the ordinals, and the comparisons agree")
+		{
+			for (int a = Smallest; a <= Largest; a++)
+			{
+				for (int b = Smallest; b <= Largest; b++)
+				{
+					Size first = static_cast<Size>(a);
+					Size second = static_cast<Size>(b);
+
+					REQUIRE(size_difference(first, second) == a - b);
+					REQUIRE((size_difference(first, second) > 1) == (a > b + 1));
+					REQUIRE((size_difference(second, first) > 1) == (a + 1 < b));
+					REQUIRE((size_difference(second, first) > 1) == (a < b - 1));
+				}
+			}
+		}
+	}
+}

@@ -24,6 +24,7 @@
 #include <time.h>
 #include <algorithm>
 #include "merc.h"
+#include "persisted_enum.h"
 #include "olc_act.h"
 #include "handler.h"
 #include "olc.h"
@@ -5967,7 +5968,7 @@ bool medit_show(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 	sprintf(buf, "Off:         [%s]\n\r", flag_string(off_flags, pMob->off_flags));
 	send_to_char(buf, ch);
 
-	sprintf(buf, "Size:        [%s]\n\r", flag_string_old(size_flags, pMob->size));
+	sprintf(buf, "Size:        [%s]\n\r", flag_string_old(size_flags, write_persisted(pMob->size)));
 	send_to_char(buf, ch);
 
 	sprintf(buf, "Start pos.   [%s]\n\r", flag_string_old(position_flags, pMob->start_pos));
@@ -6919,7 +6920,8 @@ bool medit_size(CHAR_DATA *ch, char *argument)
 
 		if (value != NO_FLAG)
 		{
-			pMob->size = value;
+			// The table this came from is built from the enumeration.
+			pMob->size = static_cast<Size>(value);
 			send_to_char("Size set.\n\r", ch);
 			return true;
 		}

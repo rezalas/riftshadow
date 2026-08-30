@@ -3860,7 +3860,7 @@ void do_consider(CHAR_DATA *ch, char *argument)
 	else
 		act("You must have a fascination with death.", ch, nullptr, victim, TO_CHAR);
 
-	diff = victim->size - ch->size;
+	diff = size_difference(victim->size, ch->size);
 	if (diff > 1)
 		act("$N easily towers over you.", ch, nullptr, victim, TO_CHAR);
 	else if (diff == 1)

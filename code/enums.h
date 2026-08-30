@@ -691,7 +691,7 @@ enum DiceField : int
 
 // Creature size, an ordinal in char_data::size; compared relationally. Wire
 // format - never renumber. Kept ascending so size comparisons hold.
-enum Size : int
+enum class Size : int
 {
 	SIZE_TINY					= 0,
 	SIZE_SMALL					= 1,
@@ -701,6 +701,17 @@ enum Size : int
 	SIZE_GIANT					= 5,
 	SIZE_IMMENSE				= 6,
 };
+
+// Reachable unqualified, as Sex is. Relational comparison between two sizes
+// still works and is the point of the ordering; the arithmetic that used to be
+// written on these ordinals goes through size_difference in utility.h.
+constexpr Size SIZE_TINY = Size::SIZE_TINY;
+constexpr Size SIZE_SMALL = Size::SIZE_SMALL;
+constexpr Size SIZE_MEDIUM = Size::SIZE_MEDIUM;
+constexpr Size SIZE_LARGE = Size::SIZE_LARGE;
+constexpr Size SIZE_HUGE = Size::SIZE_HUGE;
+constexpr Size SIZE_GIANT = Size::SIZE_GIANT;
+constexpr Size SIZE_IMMENSE = Size::SIZE_IMMENSE;
 
 // Item TYPES - an ordinal scalar stored in obj_data::item_type (a short), not
 // a bit field. Compared with == and switched on; never passed to IS_SET.

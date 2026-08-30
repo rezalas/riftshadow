@@ -180,7 +180,7 @@ void fwrite_charmie(CHAR_DATA *ch, FILE *fp)
 	fprintf(fp, "#CHARMED\n");
 	fprintf(fp, "%d %d %s~ %s~\n", ch->pIndexData->vnum, ch->in_room->vnum, ch->name, ch->short_descr);
 	fprintf(fp, "%s~\n", ch->long_descr);
-	fprintf(fp, "%d %d %d %d\n", ch->level, ch->max_hit, ch->hit, ch->size);
+	fprintf(fp, "%d %d %d %d\n", ch->level, ch->max_hit, ch->hit, write_persisted(ch->size));
 	fprintf(fp, "%d %d %d %d %d\n", ch->alignment, ch->damage[DICE_NUMBER], ch->damage[DICE_TYPE], ch->damroll, ch->defense_mod);
 }
 
@@ -213,7 +213,7 @@ void fread_charmie(CHAR_DATA *ch, FILE *fp)
 	charmed->level = fread_number(fp);
 	charmed->max_hit = fread_number(fp);
 	charmed->hit = fread_number(fp);
-	charmed->size = fread_number(fp);
+	charmed->size = read_persisted<Size>(fread_number(fp), "size");
 	charmed->alignment = fread_number(fp);
 	charmed->damage[DICE_NUMBER] = fread_number(fp);
 	charmed->damage[DICE_TYPE] = fread_number(fp);

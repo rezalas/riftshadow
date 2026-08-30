@@ -369,7 +369,7 @@ void do_blackjack(CHAR_DATA *ch, char *argument)
 
 	update_pc_last_fight(ch, victim);
 
-	size = victim->size - ch->size;
+	size = size_difference(victim->size, ch->size);
 
 	if (size >= 2)
 	{
@@ -956,7 +956,7 @@ void do_drag(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (victim->size > (ch->size + 1))
+	if (size_difference(victim->size, ch->size) > 1)
 	{
 		/* Can't push yourself */
 		if (victim == ch)
@@ -1015,7 +1015,7 @@ void do_drag(CHAR_DATA *ch, char *argument)
 		do_myell(victim, store, ch);
 	}
 
-	skill -= (victim->size - ch->size) * 15;
+	skill -= size_difference(victim->size, ch->size) * 15;
 
 	if (number_percent() < skill)
 	{

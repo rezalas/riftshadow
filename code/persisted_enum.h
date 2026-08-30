@@ -37,6 +37,14 @@ struct PersistedEnum<Sex>
 	static constexpr Sex Named[] = {SEX_NEUTRAL, SEX_MALE, SEX_FEMALE, SEX_EITHER};
 };
 
+template <>
+struct PersistedEnum<Size>
+{
+	static constexpr const char *Family = "Size";
+	static constexpr Size Named[] = {SIZE_TINY, SIZE_SMALL, SIZE_MEDIUM, SIZE_LARGE,
+									 SIZE_HUGE, SIZE_GIANT, SIZE_IMMENSE};
+};
+
 /// Whether the stored integer is one of the values the family names.
 template <class E>
 bool is_named_value(int raw)

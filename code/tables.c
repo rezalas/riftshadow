@@ -1549,12 +1549,12 @@ const struct flag_type ac_type[] =
 const struct flag_type size_flags[] =
 {
 	//	name,			bit,			settable
-	{	"tiny",			SIZE_TINY,		true	},
-	{	"small",		SIZE_SMALL,		true	},
-	{	"medium",		SIZE_MEDIUM,	true	},
-	{	"large",		SIZE_LARGE,		true	},
-	{	"huge",			SIZE_HUGE,		true	},
-	{	"giant",		SIZE_GIANT,		true	},
+	{	"tiny",			write_persisted(SIZE_TINY),		true	},
+	{	"small",		write_persisted(SIZE_SMALL),	true	},
+	{	"medium",		write_persisted(SIZE_MEDIUM),	true	},
+	{	"large",		write_persisted(SIZE_LARGE),	true	},
+	{	"huge",			write_persisted(SIZE_HUGE),		true	},
+	{	"giant",		write_persisted(SIZE_GIANT),	true	},
 	{	nullptr,		0,				0		}
 };
 

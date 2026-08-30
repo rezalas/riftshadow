@@ -4874,7 +4874,8 @@ void modify_location(CHAR_DATA *ch, int location, int mod, bool add)
 			ch->defense_mod += mod;
 			break;
 		case APPLY_SIZE:
-			ch->size += mod;
+			// An affect shifts the ordinal, the way enlarge and reduce do.
+			ch->size = static_cast<Size>(static_cast<int>(ch->size) + mod);
 			break;
 		case APPLY_REGENERATION:
 			ch->regen_rate += mod;

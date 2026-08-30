@@ -530,8 +530,9 @@ void load_mobs(FILE *fp)
 		BITWISE_OR(pMobIndex->parts, race_data_lookup(pMobIndex->race)->parts);
 
 		/* size */
-		pMobIndex->size = size_lookup(fread_word(fp));
-		pMobIndex->size = std::max((int)pMobIndex->size, 0);
+		// size_lookup answers with the row index, and -1 for a word it does
+		// not know, which the loader has always read as the smallest size.
+		pMobIndex->size = read_persisted<Size>(std::max(0, size_lookup(fread_word(fp))), "size");
 		pMobIndex->mprogs = nullptr;
 		pMobIndex->restrict_low = LOW_VNUM;
 		pMobIndex->restrict_high = HIGH_VNUM;
