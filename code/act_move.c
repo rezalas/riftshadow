@@ -374,7 +374,7 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 				return;
 		}
 
-		move = sect_table[to_room->sector_type].move_cost + sect_table[in_room->sector_type].move_cost;
+		move = sector_row(to_room->sector_type)->move_cost + sector_row(in_room->sector_type)->move_cost;
 		move /= 2; /* i.e. the average */
 
 		/* conditional effects */
@@ -384,7 +384,7 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 		if (is_affected_by(ch, AFF_SLOW))
 			move *= 2;
 
-		wait = sect_table[to_room->sector_type].wait;
+		wait = sector_row(to_room->sector_type)->wait;
 		if (ch->pcdata->energy_state < -2)
 			wait += 6;
 

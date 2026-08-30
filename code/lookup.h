@@ -62,6 +62,7 @@ int flag_index_lookup (const char *name, const struct flag_type *flag_table);
 int material_lookup (const char *name);
 int sect_lookup (const char *name);
 int sect_numlookup (int number);
+const struct sect_type *sector_row (int sector_type);
 int cabal_lookup  (const char *name);
 int position_lookup	(const char *name);
 int sex_lookup (const char *name);

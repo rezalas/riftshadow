@@ -308,6 +308,22 @@ int sect_numlookup(int number)
 	return 0;
 }
 
+//
+// The row describing a sector.
+//
+// sect_table is ordered by nothing in particular, and two of its rows do not
+// sit at the index their own value names: burning is row 12 and its value is
+// 13, conflagration is row 13 and its value is 12. Reaching into the table
+// with a sector type as the subscript therefore answers with the wrong row for
+// those two, which is why every caller goes through here instead. Never null:
+// a value the table does not carry answers with the first row, the way
+// sect_numlookup has always answered.
+//
+const struct sect_type *sector_row(int sector_type)
+{
+	return &sect_table[sect_numlookup(sector_type)];
+}
+
 int cabal_lookup(const char *name)
 {
 	int cabal;

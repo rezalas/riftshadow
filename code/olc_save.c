@@ -570,7 +570,7 @@ void save_rooms(FILE *fp, AREA_DATA *pArea)
 
 			fprintf(fp, "#%d\n", pRoom->vnum);
 			fprintf(fp, "%s~\n%s~\n", buf1, buf2);
-			fprintf(fp, "%s\n", sect_table[std::max(0, (int)pRoom->sector_type)].name);
+			fprintf(fp, "%s\n", sector_row(pRoom->sector_type)->name);
 
 			rs_temp = 0;
 
