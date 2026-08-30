@@ -8,14 +8,7 @@
 // can pull in the bit and utility macros without dragging in all of merc.h. 
 // Pure token macros with no dependencies; nothing to include.
 //
-// NOTE on ordering: merc.h includes this at the same point the block used to
-// live (after mud.h -> rift.h has already been parsed), so rift.h's
-// `inline long URANGE(...)` is seen before this macro shadows the name — the
-// pre-existing arrangement. A translation unit that includes both this header
-// and rift.h directly must include rift.h first for the same reason.
-//
 
-#define URANGE(a, b, c)				(b < a ? a : (b > c ? c : b))
 #define LOWER(c)					(c >= 'A' && c <= 'Z' ? c + 'a' - 'A' : c)
 #define UPPER(c)					(c >= 'a' && c <= 'z' ? c + 'A' - 'a' : c)
 

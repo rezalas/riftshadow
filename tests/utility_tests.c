@@ -1330,3 +1330,33 @@ SCENARIO("building a printable string from a flag table", "[flags_to_string]")
 		}
 	}
 }
+
+SCENARIO("clamping a value to a range", "[URANGE]")
+{
+	GIVEN("a value below, inside and above the range")
+	{
+		THEN("it comes back as the bound it crossed, or unchanged")
+		{
+			REQUIRE(URANGE(5, 1, 10) == 5);
+			REQUIRE(URANGE(5, 7, 10) == 7);
+			REQUIRE(URANGE(5, 40, 10) == 10);
+		}
+	}
+
+	GIVEN("a value that is expensive or unsafe to compute twice")
+	{
+		int evaluations = 0;
+		auto value = [&evaluations]() -> long { evaluations++; return 7; };
+
+		WHEN("it is clamped")
+		{
+			long clamped = URANGE(5, value(), 10);
+
+			THEN("the argument is evaluated exactly once")
+			{
+				REQUIRE(clamped == 7);
+				REQUIRE(evaluations == 1);
+			}
+		}
+	}
+}

@@ -935,7 +935,7 @@ int get_curr_stat(CHAR_DATA *ch, int stat)
 			mod = 2;
 	}
 
-	return std::min(URANGE(3, ch->perm_stat[stat] + ch->mod_stat[stat], max) + mod, 25);
+	return std::min<int>(URANGE(3, ch->perm_stat[stat] + ch->mod_stat[stat], max) + mod, 25);
 }
 
 /* command for returning max training score */
