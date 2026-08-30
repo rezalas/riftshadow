@@ -9,9 +9,6 @@
 // Pure token macros with no dependencies; nothing to include.
 //
 
-#define LOWER(c)					(c >= 'A' && c <= 'Z' ? c + 'a' - 'A' : c)
-#define UPPER(c)					(c >= 'a' && c <= 'z' ? c + 'A' - 'a' : c)
-
 // Array flags -- operate on a long[MAX_BITVECTOR]; the bit is split into a word
 // index and an offset. `act`, `affected_by`, `bitvector` and friends.
 #define IS_SET(flag, bit)			((flag)[(bit) / 32] &   (1L << ((bit) % 32)))

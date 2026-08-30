@@ -7,6 +7,8 @@
 // MAX_EXITS removed -- it duplicated MAX_EXIT (direction.h), which is the count
 // of the Directions enum and the natural home. Both were 6.
 
+#include <cctype>
+
 #include "stdlibs/bitvector.h"
 #include "stdlibs/funcptr.h"
 #include "riftpath.h"
@@ -97,8 +99,28 @@ void bug(const char *bugstr, ...); //wraps onto RS.Bug
 #define end_benchmark(name)	gettimeofday(&bttime, NULL); esec = bttime.tv_usec; float res = (float)(esec - bsec) / 1000; \
 							RS.Log("%s took %f ms.", name, res);
 /////// smallmacros ///////
-#define LOWCHAR(c) 		((c) >= 'A' && (c) <= 'Z' ? (c) + 'a' - 'A' : (c))
-#define UPCHAR(c)		((c) >= 'a' && (c) <= 'z' ? (c) + 'A' - 'a' : (c))
+
+//
+// Case conversion for a single character. These were four macros in two
+// headers, two of which parenthesized their argument and two of which did not,
+// and all four expanded it three times.
+//
+// std::tolower and std::toupper take an int that has to be representable as an
+// unsigned char, so a char with the high bit set is undefined behaviour without
+// the cast below. Writing the cast once here is the reason these exist rather
+// than the standard calls appearing at the call sites. The server never calls
+// setlocale, so the C locale applies and only the ASCII letters convert, which
+// is what the macros did.
+//
+inline char LOWER(char c)
+{
+	return static_cast<char>(std::tolower(static_cast<unsigned char>(c)));
+}
+
+inline char UPPER(char c)
+{
+	return static_cast<char>(std::toupper(static_cast<unsigned char>(c)));
+}
 
 inline long URANGE(long a, long b, long c)
 {
@@ -110,7 +132,7 @@ inline long URANGE(long a, long b, long c)
 inline bool strprefix(const char *astr, const char *bstr)
 {
 	for(; *astr != '\0'; astr++, bstr++)
-		if(LOWCHAR(*astr) != LOWCHAR(*bstr))
+		if(LOWER(*astr) != LOWER(*bstr))
 		   return false;
 	return true;
 }

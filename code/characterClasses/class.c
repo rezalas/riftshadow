@@ -77,7 +77,7 @@ static bool class_name_matches(const std::string &className, const char *query)
 
 	for (; *query && *mystr; query++, mystr++)
 	{
-		if (UPCHAR(*query) != UPCHAR(*mystr))
+		if (UPPER(*query) != UPPER(*mystr))
 			return false;
 	}
 
