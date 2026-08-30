@@ -4832,7 +4832,7 @@ void report_weapon_skill(CHAR_DATA *ch, OBJ_DATA *obj)
 	if (obj->item_type != ITEM_WEAPON)
 	{
 		RS.Logger.Debug("report_weapon_skill: Bad obj->type, {}, vnum {}, carried by {}.", 
-			obj->item_type,
+			write_persisted(obj->item_type),
 			obj->pIndexData->vnum,
 			ch->name);
 		return;
@@ -5144,11 +5144,11 @@ bool is_carrying(CHAR_DATA *ch, int vnum)
 	return false;
 }
 
-bool is_carrying_type(CHAR_DATA *ch, int type)
+bool is_carrying_type(CHAR_DATA *ch, ItemType type)
 {
 	for (OBJ_DATA *obj = ch->carrying; obj; obj = obj->next_content)
 	{
-		if (obj->item_type == ITEM_BOAT)
+		if (obj->item_type == type)
 			return true;
 	}
 

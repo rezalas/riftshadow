@@ -253,6 +253,19 @@ SCENARIO("reading a stored character class", "[persisted_enum]")
 		}
 	}
 
+	GIVEN("a stored item type the enumeration does not name")
+	{
+		THEN("it survives the trip")
+		{
+			// Zero is what an object that has never been given a type holds,
+			// and it is deliberately not a named value, so a player file that
+			// carries one gets reported rather than passed over.
+			REQUIRE(write_persisted(read_persisted<ItemType>(0, "Ityp")) == 0);
+			REQUIRE(write_persisted(read_persisted<ItemType>(-1, "Ityp")) == -1);
+			REQUIRE(write_persisted(read_persisted<ItemType>(14, "Ityp")) == 14);
+		}
+	}
+
 	GIVEN("a per-class array")
 	{
 		THEN("a class subscripts it by its own number")
@@ -353,6 +366,17 @@ static_assert(POS_SLEEPING < POS_RESTING, "the order is what the comparisons rea
 static_assert(POS_RESTING < POS_SITTING, "the order is what the comparisons read");
 static_assert(POS_SITTING < POS_FIGHTING, "the order is what the comparisons read");
 static_assert(POS_FIGHTING < POS_STANDING, "the order is what the comparisons read");
+
+// Three families share the ITEM_ prefix and their values collide: ITEM_LIGHT
+// is the type 1, ITEM_HUM is extra flag bit 1, ITEM_WEAR_FINGER is wear bit 1.
+// Only the type is an ordinal; the other two are bit numbers and are still
+// plain enumerations, so this asserts what the split bought rather than
+// pretending all three are done.
+static_assert(!std::is_convertible_v<ItemType, int>, "an item type is not a number");
+static_assert(!std::is_convertible_v<int, ItemType>, "a number is not an item type");
+static_assert(!std::is_convertible_v<ItemExtraFlag, ItemType>, "an extra flag is not an item type");
+static_assert(!std::is_convertible_v<ItemWearFlag, ItemType>, "a wear flag is not an item type");
+static_assert(!std::is_convertible_v<ItemType, WearLocation>, "an item type is not a worn slot");
 
 SCENARIO("the values behind the hit arguments", "[hit_flags]")
 {

@@ -125,6 +125,21 @@ struct PersistedEnum<Position>
 		POS_RESTING, POS_SITTING, POS_FIGHTING, POS_STANDING};
 };
 
+template <>
+struct PersistedEnum<ItemType>
+{
+	static constexpr const char *Family = "ItemType";
+	static constexpr ItemType Named[] = {
+		ITEM_LIGHT, ITEM_SCROLL, ITEM_WAND, ITEM_STAFF, ITEM_WEAPON, ITEM_NULL6,
+		ITEM_DICE, ITEM_TREASURE, ITEM_ARMOR, ITEM_POTION, ITEM_CLOTHING,
+		ITEM_FURNITURE, ITEM_TRASH, ITEM_CONTAINER, ITEM_DRINK_CON, ITEM_KEY,
+		ITEM_FOOD, ITEM_MONEY, ITEM_BOAT, ITEM_CORPSE_NPC, ITEM_CORPSE_PC,
+		ITEM_FOUNTAIN, ITEM_PILL, ITEM_PROTECT, ITEM_MAP, ITEM_PORTAL,
+		ITEM_WARP_STONE, ITEM_ROOM_KEY, ITEM_GEM, ITEM_JEWELRY, ITEM_CAMPFIRE,
+		ITEM_CABAL_ITEM, ITEM_SKELETON, ITEM_URN, ITEM_GRAVITYWELL, ITEM_BOOK,
+		ITEM_PEN, ITEM_ALTAR, ITEM_STONE};
+};
+
 /// Whether the stored integer is one of the values the family names.
 template <class E>
 bool is_named_value(int raw)

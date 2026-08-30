@@ -359,7 +359,7 @@ SCENARIO("Testing item lookup", "[item_lookup]")
 	{
 		WHEN("item_lookup function is called")
 		{
-			int test = item_lookup("food");
+			auto test = item_lookup("food");
 
 			THEN("then it should return the correct item type")
 			{
@@ -369,7 +369,7 @@ SCENARIO("Testing item lookup", "[item_lookup]")
 
 		WHEN("item_lookup function is called with the item in uppercase")
 		{
-			int test = item_lookup("FOOD");
+			auto test = item_lookup("FOOD");
 
 			THEN("then it should return the correct item type")
 			{
@@ -382,31 +382,31 @@ SCENARIO("Testing item lookup", "[item_lookup]")
 	{
 		WHEN("item_lookup function is called")
 		{
-			int test = item_lookup("bar");
+			auto test = item_lookup("bar");
 
-			THEN("then it should return an index of -1")
+			THEN("then it should answer with nothing")
 			{
-				REQUIRE(test == -1);
+				REQUIRE_FALSE(test.has_value());
 			}
 		}
 
 		WHEN("item_lookup function is called with a valid item but with extra characters")
 		{
-			int test = item_lookup("food  ");
+			auto test = item_lookup("food  ");
 
-			THEN("then it should return an index of -1")
+			THEN("then it should answer with nothing")
 			{
-				REQUIRE(test == -1);
+				REQUIRE_FALSE(test.has_value());
 			}
 		}
 
 		WHEN("item_lookup function is called with special characters")
 		{
-			int test = item_lookup("ÿàÞ");
+			auto test = item_lookup("ÿàÞ");
 
-			THEN("then it should return an index of -1")
+			THEN("then it should answer with nothing")
 			{
-				REQUIRE(test == -1);
+				REQUIRE_FALSE(test.has_value());
 			}
 		}
 	}
@@ -415,11 +415,11 @@ SCENARIO("Testing item lookup", "[item_lookup]")
 	{
 		WHEN("item_lookup function is called")
 		{
-			int test = item_lookup(nullptr);
+			auto test = item_lookup(nullptr);
 
-			THEN("then it should return an index of -1")
+			THEN("then it should answer with nothing")
 			{
-				REQUIRE(test == -1);
+				REQUIRE_FALSE(test.has_value());
 			}
 		}
 	}
@@ -444,7 +444,7 @@ SCENARIO("Testing item name lookup", "[item_name_lookup]")
 	{
 		WHEN("item_name_lookup function is called")
 		{
-			char* test = item_name_lookup(-18);
+			char* test = item_name_lookup(static_cast<ItemType>(-18));
 
 			THEN("then it should return \"none\" as the weapon name")
 			{

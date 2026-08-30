@@ -1059,7 +1059,18 @@ void load_objs(FILE *fp)
 		pObjIndex->name = fread_string(fp);
 		pObjIndex->short_descr = fread_string(fp);
 		pObjIndex->description = fread_string(fp);
-		pObjIndex->item_type = item_lookup(fread_word(fp));
+		char *type_word = fread_word(fp);
+		auto item_type = item_lookup(type_word);
+
+		if (!item_type)
+		{
+			RS.Logger.Warn("Load_objects: object {} has an unknown item type '{}'.", pObjIndex->vnum, type_word);
+		}
+
+		// -1 is what this has always stored for a word it does not know. Kept
+		// rather than corrected, because only an edit command should change
+		// what a file holds.
+		pObjIndex->item_type = item_type.value_or(static_cast<ItemType>(-1));
 		pObjIndex->material = fread_string(fp);
 
 		pObjIndex->material_index = material_lookup(pObjIndex->material);

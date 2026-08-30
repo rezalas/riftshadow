@@ -805,7 +805,7 @@ void fwrite_obj(CHAR_DATA *ch, OBJ_DATA *obj, FILE *fp, int iNest)
 		fprintf(fp, "WeaF %s\n", print_flags(obj->wear_flags));
 
 	if (obj->item_type != obj->pIndexData->item_type)
-		fprintf(fp, "Ityp %d\n", obj->item_type);
+		fprintf(fp, "Ityp %d\n", write_persisted(obj->item_type));
 
 	if (obj->weight != obj->pIndexData->weight)
 		fprintf(fp, "Wt   %d\n", obj->weight);
@@ -2270,8 +2270,8 @@ void fread_obj(CHAR_DATA *ch, FILE *fp)
 
 				break;
 			case 'I':
-				KEY("ItemType", obj->item_type, fread_number(fp))
-				KEY("Ityp", obj->item_type, fread_number(fp))
+				KEY("ItemType", obj->item_type, read_persisted<ItemType>(fread_number(fp), "ItemType"))
+				KEY("Ityp", obj->item_type, read_persisted<ItemType>(fread_number(fp), "Ityp"))
 				break;
 			case 'L':
 				KEY("Level", obj->level, fread_number(fp))

@@ -215,27 +215,29 @@ char *weapon_name_lookup(int type, char* default_name)
 
 /// Queries the item table for the type of the given item.
 /// @param name: The name of the item to query.
-/// @returns The type of the given item. (Default: -1)
-int item_lookup(const char *name)
+/// @returns The type, or nothing when the name is not one. There is no item
+///          type that means "not an item type", and the -1 this used to answer
+///          with was not one either.
+std::optional<ItemType> item_lookup(const char *name)
 {
 	auto it = std::find_if(item_table.begin(), item_table.end(), [name] (auto item) {
 		return item.name != nullptr && !str_prefix(name, item.name);
 	});
 
 	if (it == item_table.end())
-		return -1;
+		return {};
 
 	auto idx = it - item_table.begin();
-	return item_table[idx].type;
+	return static_cast<ItemType>(item_table[idx].type);
 }
 
 /// Queries the item table for the name of the given item type.
 /// @param item_type: The type of the item to query.
 /// @returns The name of the given item type. (Default: none)
-char *item_name_lookup(int item_type)
+char *item_name_lookup(ItemType item_type)
 {
 	auto it = std::find_if(item_table.begin(), item_table.end(), [item_type] (auto item) {
-		return item.name != nullptr && item_type == item.type;
+		return item.name != nullptr && write_persisted(item_type) == item.type;
 	});
 
 	if (it == item_table.end())

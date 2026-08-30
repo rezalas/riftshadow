@@ -2,6 +2,7 @@
 #define HANDLER_H
 
 #include <list>
+#include <optional>
 #include <string>
 
 #include "entity/fwd.h"
@@ -28,8 +29,8 @@ int liq_lookup (const char *name);
 int weapon_lookup (const char *name);
 int weapon_type_lookup (const char *name);
 char *weapon_name_lookup (int type, char* default_name = "weapon");
-int item_lookup (const char *name);
-char *item_name_lookup (int item_type);
+std::optional<ItemType> item_lookup (const char *name);
+char *item_name_lookup (ItemType item_type);
 int attack_lookup  (const char *name);
 /* returns a flag for wiznet */
 long wiznet_lookup (const char *name);

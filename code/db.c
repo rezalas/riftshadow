@@ -1150,10 +1150,17 @@ void reset_room(ROOM_INDEX_DATA *pRoom)
 				{
 					pObj2_next = pObj2->next_content;
 
+					// The two corpse names below are item types, not extra
+					// flags, so what these actually test is extra flag bit 24,
+					// which is ITEM_BURN_PROOF, and bit 23, which has no name.
+					// Left as they are: as written they exempt burn-proof
+					// containers, and as intended they could not fire at all,
+					// because the container test on the next line already rules
+					// out anything whose type is a corpse.
 					if (pObj2->pIndexData->vnum == pObjIndex->vnum
 						&& !is_obj_stat(pObj2, ITEM_DONATION_PIT)
-						&& !is_obj_stat(pObj2, ITEM_CORPSE_PC)
-						&& !is_obj_stat(pObj2, ITEM_CORPSE_NPC)
+						&& !is_obj_stat(pObj2, write_persisted(ITEM_CORPSE_PC))
+						&& !is_obj_stat(pObj2, write_persisted(ITEM_CORPSE_NPC))
 						&& pObj2->item_type == ITEM_CONTAINER
 						&& !pObj2->contains)
 					{

@@ -103,7 +103,12 @@ const struct olc_help_type help_table[] =
 const struct wear_type wear_table[] =
 {
 	{wear_index(WEAR_NONE), ITEM_TAKE},
-	{wear_index(WEAR_LIGHT), ITEM_LIGHT},
+	// ITEM_LIGHT is an item type, not a wear flag, and its value is 1, which
+	// in the wear flag family is ITEM_WEAR_FINGER. There is no wear flag for
+	// the light slot at all, so this row asks whether an object can be worn on
+	// a finger. Left alone: giving the slot a wear flag of its own changes what
+	// an area file can say about an object.
+	{wear_index(WEAR_LIGHT), write_persisted(ITEM_LIGHT)},
 	{wear_index(WEAR_FINGER_L), ITEM_WEAR_FINGER},
 	{wear_index(WEAR_FINGER_R), ITEM_WEAR_FINGER},
 	{wear_index(WEAR_NECK_1), ITEM_WEAR_NECK},
@@ -497,7 +502,7 @@ bool redit_olist(CHAR_DATA *ch, char *argument)
 
 		if (pObjIndex)
 		{
-			if (fAll || is_name(arg, pObjIndex->name) || flag_value(type_flags, arg) == pObjIndex->item_type)
+			if (fAll || is_name(arg, pObjIndex->name) || flag_value(type_flags, arg) == write_persisted(pObjIndex->item_type))
 			{
 				found = true;
 
@@ -4106,7 +4111,7 @@ bool oedit_show(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 	send_to_char(buf, ch);
 
 	sprintf(buf, "Vnum:             [%5d]\n\r", pObj->vnum);
-	sprintf(buf, "Type:             [%s]\n\r", flag_string_old(type_flags, pObj->item_type));
+	sprintf(buf, "Type:             [%s]\n\r", flag_string_old(type_flags, write_persisted(pObj->item_type)));
 	send_to_char(buf, ch);
 
 	sprintf(buf, "Level:            [%5d]\n\r", pObj->level);
@@ -5343,7 +5348,7 @@ bool oedit_type(CHAR_DATA *ch, char *argument) /* Moved out of oedit() due to na
 		value = flag_value(type_flags, argument);
 		if ((value) != NO_FLAG)
 		{
-			pObj->item_type = value;
+			pObj->item_type = static_cast<ItemType>(value);
 
 			send_to_char("Type set.\n\r", ch);
 

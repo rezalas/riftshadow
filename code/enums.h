@@ -808,7 +808,7 @@ constexpr Size SIZE_IMMENSE = Size::SIZE_IMMENSE;
 // They are separate enums for that reason. Names are unchanged, so no call site
 // moves; the split is documentation the compiler happens to hold.
 // Wire format (area files) - rename freely, never renumber.
-enum ItemType : int
+enum class ItemType : int
 {
 	ITEM_LIGHT					= 1,
 	ITEM_SCROLL					= 2,
@@ -852,6 +852,47 @@ enum ItemType : int
 	// an *extra flag* with value 33, which is a different family entirely.
 	ITEM_STONE					= 43,
 };
+
+constexpr ItemType ITEM_LIGHT = ItemType::ITEM_LIGHT;
+constexpr ItemType ITEM_SCROLL = ItemType::ITEM_SCROLL;
+constexpr ItemType ITEM_WAND = ItemType::ITEM_WAND;
+constexpr ItemType ITEM_STAFF = ItemType::ITEM_STAFF;
+constexpr ItemType ITEM_WEAPON = ItemType::ITEM_WEAPON;
+constexpr ItemType ITEM_NULL6 = ItemType::ITEM_NULL6;
+constexpr ItemType ITEM_DICE = ItemType::ITEM_DICE;
+constexpr ItemType ITEM_TREASURE = ItemType::ITEM_TREASURE;
+constexpr ItemType ITEM_ARMOR = ItemType::ITEM_ARMOR;
+constexpr ItemType ITEM_POTION = ItemType::ITEM_POTION;
+constexpr ItemType ITEM_CLOTHING = ItemType::ITEM_CLOTHING;
+constexpr ItemType ITEM_FURNITURE = ItemType::ITEM_FURNITURE;
+constexpr ItemType ITEM_TRASH = ItemType::ITEM_TRASH;
+constexpr ItemType ITEM_CONTAINER = ItemType::ITEM_CONTAINER;
+constexpr ItemType ITEM_DRINK_CON = ItemType::ITEM_DRINK_CON;
+constexpr ItemType ITEM_KEY = ItemType::ITEM_KEY;
+constexpr ItemType ITEM_FOOD = ItemType::ITEM_FOOD;
+constexpr ItemType ITEM_MONEY = ItemType::ITEM_MONEY;
+constexpr ItemType ITEM_BOAT = ItemType::ITEM_BOAT;
+constexpr ItemType ITEM_CORPSE_NPC = ItemType::ITEM_CORPSE_NPC;
+constexpr ItemType ITEM_CORPSE_PC = ItemType::ITEM_CORPSE_PC;
+constexpr ItemType ITEM_FOUNTAIN = ItemType::ITEM_FOUNTAIN;
+constexpr ItemType ITEM_PILL = ItemType::ITEM_PILL;
+constexpr ItemType ITEM_PROTECT = ItemType::ITEM_PROTECT;
+constexpr ItemType ITEM_MAP = ItemType::ITEM_MAP;
+constexpr ItemType ITEM_PORTAL = ItemType::ITEM_PORTAL;
+constexpr ItemType ITEM_WARP_STONE = ItemType::ITEM_WARP_STONE;
+constexpr ItemType ITEM_ROOM_KEY = ItemType::ITEM_ROOM_KEY;
+constexpr ItemType ITEM_GEM = ItemType::ITEM_GEM;
+constexpr ItemType ITEM_JEWELRY = ItemType::ITEM_JEWELRY;
+constexpr ItemType ITEM_CAMPFIRE = ItemType::ITEM_CAMPFIRE;
+constexpr ItemType ITEM_CABAL_ITEM = ItemType::ITEM_CABAL_ITEM;
+constexpr ItemType ITEM_SKELETON = ItemType::ITEM_SKELETON;
+constexpr ItemType ITEM_URN = ItemType::ITEM_URN;
+constexpr ItemType ITEM_GRAVITYWELL = ItemType::ITEM_GRAVITYWELL;
+constexpr ItemType ITEM_BOOK = ItemType::ITEM_BOOK;
+constexpr ItemType ITEM_PEN = ItemType::ITEM_PEN;
+constexpr ItemType ITEM_ALTAR = ItemType::ITEM_ALTAR;
+constexpr ItemType ITEM_STONE = ItemType::ITEM_STONE;
+
 
 // Extra flags - bit indices into obj_data::extra_flags, and into
 // obj_index_data's affect bitvector where ITEM_EVIL / ITEM_BURN_PROOF are set

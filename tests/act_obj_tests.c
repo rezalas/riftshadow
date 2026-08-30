@@ -511,3 +511,85 @@ SCENARIO("envenoming a weapon", "[do_envenom]")
 		}
 	}
 }
+
+//
+// is_carrying_type takes a type and used to ignore it.
+//
+// The body tested ITEM_BOAT no matter what it was asked about, and the one
+// caller asks about a boat, so it answered correctly by coincidence. The
+// parameter it was handed had been unused for long enough that the compiler
+// was warning about it.
+//
+
+SCENARIO("asking what type of thing a character is carrying", "[is_carrying_type]")
+{
+	TestWorld world;
+
+	auto room = world.CreateRoom();
+	auto walker = world.CreatePlayer("Walker", room);
+	auto raft = world.CreateItem("raft", "a small raft");
+
+	raft->item_type = ITEM_BOAT;
+	obj_to_char(raft, walker);
+
+	GIVEN("a character carrying a boat")
+	{
+		THEN("they are carrying a boat")
+		{
+			REQUIRE(is_carrying_type(walker, ITEM_BOAT));
+		}
+
+		THEN("they are not carrying any of the other types")
+		{
+			REQUIRE_FALSE(is_carrying_type(walker, ITEM_FOOD));
+			REQUIRE_FALSE(is_carrying_type(walker, ITEM_WEAPON));
+		}
+	}
+
+	GIVEN("a character carrying something else as well")
+	{
+		auto loaf = world.CreateItem("loaf", "a loaf of bread");
+
+		loaf->item_type = ITEM_FOOD;
+		obj_to_char(loaf, walker);
+
+		THEN("both types are found")
+		{
+			REQUIRE(is_carrying_type(walker, ITEM_BOAT));
+			REQUIRE(is_carrying_type(walker, ITEM_FOOD));
+		}
+	}
+}
+
+//
+// The item type table does not carry every item type.
+//
+// ITEM_CABAL_ITEM has no row, so there is no word an area file or the object
+// editor can spell it with, and an object that somehow had that type would be
+// written to an area file as "none" and read back as no type at all. Recorded
+// rather than fixed: giving it a name lets a builder set a type that nothing
+// in the game tests for.
+//
+
+SCENARIO("the word an area file spells an item type with", "[item_name_lookup]")
+{
+	GIVEN("the item types the table carries")
+	{
+		THEN("each writes the word its loader reads back")
+		{
+			REQUIRE(item_lookup(item_name_lookup(ITEM_WEAPON)) == ITEM_WEAPON);
+			REQUIRE(item_lookup(item_name_lookup(ITEM_FOOD)) == ITEM_FOOD);
+			REQUIRE(item_lookup(item_name_lookup(ITEM_CONTAINER)) == ITEM_CONTAINER);
+			REQUIRE(item_lookup(item_name_lookup(ITEM_CORPSE_PC)) == ITEM_CORPSE_PC);
+		}
+	}
+
+	GIVEN("the one item type the table does not carry")
+	{
+		THEN("it has no word, and the round trip loses it")
+		{
+			REQUIRE(!str_cmp(item_name_lookup(ITEM_CABAL_ITEM), "none"));
+			REQUIRE_FALSE(item_lookup(item_name_lookup(ITEM_CABAL_ITEM)).has_value());
+		}
+	}
+}
