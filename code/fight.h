@@ -3,6 +3,7 @@
 
 #include <string>
 
+#include "enums.h"
 #include "entity/fwd.h"
 #include "entity/spell_target.h"
 
@@ -39,11 +40,11 @@ void mob_hit (CHAR_DATA *ch, CHAR_DATA *victim, int dt);
 int one_hit (CHAR_DATA *ch, CHAR_DATA *victim, int dt);
 /* De-Ceranized by Cal on 10/24/01 
 * return of -1 = Death			*/
-int one_hit_new (CHAR_DATA *ch, CHAR_DATA *victim, int dt, bool specials, bool blockable, int addition, int multiplier, char *dnoun);
+int one_hit_new (CHAR_DATA *ch, CHAR_DATA *victim, int dt, HitSpecials specials, HitBlockable blockable, int addition, int multiplier, char *dnoun);
 /*
  * Inflict damage from a hit.
  */
-int damage_new (CHAR_DATA *ch, CHAR_DATA *victim, int idam, int dt, int dam_type, bool show, bool blockable, int addition, int multiplier, char *dnoun);
+int damage_new (CHAR_DATA *ch, CHAR_DATA *victim, int idam, int dt, int dam_type, bool show, HitBlockable blockable, int addition, int multiplier, char *dnoun);
 //
 // The dam_type and show arguments sit next to each other and one is a bool, so
 // swapping them compiles silently and deals DAM_BASH (which is 1, the same as
@@ -51,7 +52,7 @@ int damage_new (CHAR_DATA *ch, CHAR_DATA *victim, int idam, int dt, int dam_type
 // mistake a compile error instead: a bool is an exact match here and only a
 // promotion for the declaration above, so passing one picks this and fails.
 //
-int damage_new (CHAR_DATA *ch, CHAR_DATA *victim, int idam, int dt, bool dam_type, bool show, bool blockable, int addition, int multiplier, char *dnoun) = delete;
+int damage_new (CHAR_DATA *ch, CHAR_DATA *victim, int idam, int dt, bool dam_type, bool show, HitBlockable blockable, int addition, int multiplier, char *dnoun) = delete;
 int damage (CHAR_DATA *ch,CHAR_DATA *victim, int dam,int dt,int dam_type, bool show);
 /*
  * Inflict damage from a hit.

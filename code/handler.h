@@ -357,7 +357,7 @@ char *flag_room_name (int vector);
 void modify_location (CHAR_DATA *ch, int location, int mod, bool add);
 int get_align (CHAR_DATA *ch);
 int get_ethos (CHAR_DATA *ch);
-int damage_queue (CHAR_DATA *ch, CHAR_DATA *victim, int dam, int damtype, bool blockable, int add, int mult, char *dnoun);
-int damage_queued (CHAR_DATA *ch, CHAR_DATA *victim, int dam, int damtype, bool blockable, int add, int mult, std::string dnoun);
+int damage_queue (CHAR_DATA *ch, CHAR_DATA *victim, int dam, int damtype, HitBlockable blockable, int add, int mult, char *dnoun);
+int damage_queued (CHAR_DATA *ch, CHAR_DATA *victim, int dam, int damtype, HitBlockable blockable, int add, int mult, std::string dnoun);
 
 #endif /* HANDLER_H */

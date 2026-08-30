@@ -1,3 +1,5 @@
+#include <type_traits>
+
 #include "catch.hpp"
 #include "../code/persisted_enum.h"
 #include "../code/enums.h"
@@ -193,6 +195,56 @@ SCENARIO("reading a stored character class", "[persisted_enum]")
 		{
 			REQUIRE(class_index(CLASS_NONE) == 0);
 			REQUIRE(class_index(CLASS_SORCERER) == 11);
+		}
+	}
+}
+
+//
+// What no runtime assertion in this file can check: the promoted families do
+// not convert to each other, or to the ints and bools they used to be. A
+// regression here is a compile error in this file rather than a failing
+// assertion, which is the whole point of the promotion.
+//
+static_assert(!std::is_convertible_v<Sex, int>, "a sex is not a number");
+static_assert(!std::is_convertible_v<int, Sex>, "a number is not a sex");
+static_assert(!std::is_convertible_v<Size, int>, "a size is not a number");
+static_assert(!std::is_convertible_v<SectorType, int>, "a terrain is not a number");
+static_assert(!std::is_convertible_v<CharClass, int>, "a class is not a number");
+static_assert(!std::is_convertible_v<Sex, Size>, "a sex is not a size");
+static_assert(!std::is_convertible_v<Size, SectorType>, "a size is not a terrain");
+static_assert(!std::is_convertible_v<CharClass, SectorType>, "a class is not a terrain");
+
+// The two arguments that sit next to each other in one_hit_new and damage_new.
+// They were both bool, so a call could pass them the wrong way round and say
+// nothing.
+static_assert(!std::is_convertible_v<HitSpecials, HitBlockable>, "the two hit flags are not each other");
+static_assert(!std::is_convertible_v<HitBlockable, HitSpecials>, "the two hit flags are not each other");
+static_assert(!std::is_convertible_v<bool, HitBlockable>, "a bool is not a blockable flag");
+static_assert(!std::is_convertible_v<bool, HitSpecials>, "a bool is not a specials flag");
+static_assert(!std::is_convertible_v<HitBlockable, bool>, "a blockable flag is not a bool");
+
+SCENARIO("the values behind the hit arguments", "[hit_flags]")
+{
+	GIVEN("the two flag families")
+	{
+		THEN("their values are what they were before they had types")
+		{
+			REQUIRE(static_cast<int>(HIT_UNBLOCKABLE) == 0);
+			REQUIRE(static_cast<int>(HIT_BLOCKABLE) == 1);
+			REQUIRE(static_cast<int>(HIT_NOSPECIALS) == 0);
+			REQUIRE(static_cast<int>(HIT_SPECIALS) == 1);
+		}
+	}
+
+	GIVEN("the two do-nothing values for the numeric arguments")
+	{
+		// These are not a family and are not typed: an addition of nothing is
+		// zero, and the multiplier is a percentage that the damage skips
+		// entirely when it is one.
+		THEN("they stay numbers")
+		{
+			REQUIRE(HIT_NOADD == 0);
+			REQUIRE(HIT_NOMULT == 1);
 		}
 	}
 }

@@ -1344,23 +1344,33 @@ enum WearLocation : int
 
 // damage_new() flag arguments. Three independent two-value families, passed
 // positionally. Kept as three enums matching their argument slots.
-enum HitBlockable : int
+enum class HitBlockable : int
 {
 	HIT_UNBLOCKABLE				= 0,
 	HIT_BLOCKABLE				= 1,
 };
 
-enum HitSpecials : int
+enum class HitSpecials : int
 {
 	HIT_NOSPECIALS				= 0,
 	HIT_SPECIALS				= 1,
 };
 
-enum HitModifier : int
-{
-	HIT_NOMULT					= 1,
-	HIT_NOADD					= 0,
-};
+// Reachable unqualified, as the other promoted families are. These two are
+// what the hit and damage functions take for the arguments of those names.
+// They were bools sitting next to each other, so a call could swap them and
+// say nothing.
+constexpr HitBlockable HIT_UNBLOCKABLE = HitBlockable::HIT_UNBLOCKABLE;
+constexpr HitBlockable HIT_BLOCKABLE = HitBlockable::HIT_BLOCKABLE;
+constexpr HitSpecials HIT_NOSPECIALS = HitSpecials::HIT_NOSPECIALS;
+constexpr HitSpecials HIT_SPECIALS = HitSpecials::HIT_SPECIALS;
+
+// The remaining two are not a family and never were. They are the do-nothing
+// values for the two numeric arguments that follow: an addition of nothing is
+// zero, and the multiplier is a percentage that is skipped entirely when it is
+// one. Both are arithmetic, so they stay numbers.
+constexpr int HIT_NOADD = 0;
+constexpr int HIT_NOMULT = 1;
 
 // Combat posture, an ordinal spanning -1..1. POSTURE_DEFENSE is -1 (hence : int).
 enum Posture : int

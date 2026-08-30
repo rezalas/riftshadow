@@ -826,7 +826,7 @@ int one_hit(CHAR_DATA *ch, CHAR_DATA *victim, int dt)
 
 /* De-Ceranized by Cal on 10/24/01
  * return of -1 = Death			*/
-int one_hit_new(CHAR_DATA *ch, CHAR_DATA *victim, int dt, bool specials, bool blockable, int addition, int multiplier, char *dnoun)
+int one_hit_new(CHAR_DATA *ch, CHAR_DATA *victim, int dt, HitSpecials specials, HitBlockable blockable, int addition, int multiplier, char *dnoun)
 {
 	OBJ_DATA *wield = nullptr;
 	AFFECT_DATA *af;
@@ -1041,7 +1041,7 @@ int one_hit_new(CHAR_DATA *ch, CHAR_DATA *victim, int dt, bool specials, bool bl
 /*
  * Inflict damage from a hit.
  */
-int damage_new(CHAR_DATA *ch, CHAR_DATA *victim, int idam, int dt, int dam_type, bool show, bool blockable, int addition, int multiplier, char *dnoun)
+int damage_new(CHAR_DATA *ch, CHAR_DATA *victim, int idam, int dt, int dam_type, bool show, HitBlockable blockable, int addition, int multiplier, char *dnoun)
 {
 	char buf[MSL];
 	OBJ_DATA *corpse, *wield;
