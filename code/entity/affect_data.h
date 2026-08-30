@@ -1,6 +1,7 @@
 #ifndef ENTITY_AFFECT_DATA_H
 #define ENTITY_AFFECT_DATA_H
 
+#include "../enums.h"
 #include "fwd.h"
 #include "limits.h"
 #include "../stdlibs/handle.h"
@@ -20,7 +21,7 @@ struct affect_data
 {
 	Handle<CHAR_DATA> owner;
 	char *name = nullptr;
-	short where = 0;
+	AffectWhere where = TO_AFFECTS;
 	short type = 0;
 	short level = 0;
 	short duration = 0;
@@ -56,7 +57,7 @@ struct affect_data
 struct room_affect_data
 {
 	Handle<CHAR_DATA> owner;
-	short where = 0;
+	RoomAffectWhere where = TO_ROOM_AFFECTS;
 	short type = 0;
 	short level = 0;
 	short duration = 0;
@@ -81,7 +82,7 @@ struct room_affect_data
 struct area_affect_data
 {
 	Handle<CHAR_DATA> owner;
-	short where = 0;
+	AreaAffectWhere where = TO_AREA_AFFECTS;
 	short type = 0;
 	short level = 0;
 	short duration = 0;
@@ -100,7 +101,7 @@ struct area_affect_data
 struct obj_affect_data
 {
 	Handle<CHAR_DATA> owner;
-	short where = 0;
+	ObjAffectWhere where = TO_OBJ_AFFECTS;
 	short type = 0;
 	short level = 0;
 	short duration = 0;

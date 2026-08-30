@@ -223,6 +223,20 @@ static_assert(!std::is_convertible_v<bool, HitBlockable>, "a bool is not a block
 static_assert(!std::is_convertible_v<bool, HitSpecials>, "a bool is not a specials flag");
 static_assert(!std::is_convertible_v<HitBlockable, bool>, "a blockable flag is not a bool");
 
+// The five families that all spell their values TO_*. Four of them are stored
+// in a field called "where" on four affect types, and the fifth is what act()
+// takes. Their values collide from 0 upwards.
+static_assert(!std::is_convertible_v<ActTarget, int>, "an act target is not a number");
+static_assert(!std::is_convertible_v<AffectWhere, int>, "an affect where is not a number");
+static_assert(!std::is_convertible_v<RoomAffectWhere, int>, "a room affect where is not a number");
+static_assert(!std::is_convertible_v<ObjAffectWhere, int>, "an object affect where is not a number");
+static_assert(!std::is_convertible_v<AreaAffectWhere, int>, "an area affect where is not a number");
+static_assert(!std::is_convertible_v<ActTarget, AffectWhere>, "an act target is not an affect where");
+static_assert(!std::is_convertible_v<AffectWhere, RoomAffectWhere>, "a character affect is not a room affect");
+static_assert(!std::is_convertible_v<AffectWhere, ObjAffectWhere>, "a character affect is not an object affect");
+static_assert(!std::is_convertible_v<RoomAffectWhere, AreaAffectWhere>, "a room affect is not an area affect");
+static_assert(!std::is_convertible_v<ObjAffectWhere, AffectWhere>, "an object affect is not a character affect");
+
 SCENARIO("the values behind the hit arguments", "[hit_flags]")
 {
 	GIVEN("the two flag families")
@@ -245,6 +259,32 @@ SCENARIO("the values behind the hit arguments", "[hit_flags]")
 		{
 			REQUIRE(HIT_NOADD == 0);
 			REQUIRE(HIT_NOMULT == 1);
+		}
+	}
+}
+
+SCENARIO("reading a stored affect discriminator", "[persisted_enum]")
+{
+	GIVEN("the values each affect family names")
+	{
+		THEN("each reads back as itself")
+		{
+			REQUIRE(read_persisted<AffectWhere>(0, "affect where") == TO_AFFECTS);
+			REQUIRE(read_persisted<AffectWhere>(5, "affect where") == TO_WEAPON);
+			REQUIRE(read_persisted<RoomAffectWhere>(2, "room affect where") == TO_ROOM_FLAGS);
+			REQUIRE(read_persisted<ObjAffectWhere>(1, "object affect where") == TO_OBJ_APPLY);
+		}
+	}
+
+	GIVEN("an object affect carrying a character affect's discriminator")
+	{
+		// Which is what envenom stores, and what an object prototype's spell
+		// affect is copied into. Five is not a value ObjAffectWhere names, and
+		// the load has to hand it back unchanged rather than turning somebody's
+		// saved object into a different affect.
+		THEN("the value survives being read and written back")
+		{
+			REQUIRE(write_persisted(read_persisted<ObjAffectWhere>(5, "object affect where")) == 5);
 		}
 	}
 }

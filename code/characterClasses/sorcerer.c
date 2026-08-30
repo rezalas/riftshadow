@@ -1987,7 +1987,10 @@ void spell_interference(int sn, int level, CHAR_DATA *ch, SpellTarget /* vo */, 
 	}
 
 	init_affect_area(&aaf);
-	aaf.where = TO_ROOM_AFFECTS;
+	// An area affect, so its discriminator is the area one. This said
+	// TO_ROOM_AFFECTS, which is a room affect's; both are zero, so the value
+	// stored is the same and only the name changes.
+	aaf.where = TO_AREA_AFFECTS;
 	aaf.type = gsn_interference;
 	aaf.aftype = AFT_SPELL;
 	aaf.level = level;

@@ -494,7 +494,6 @@ struct old_char
 // where definitions for area
 //
 
-#define TO_AREA_AFFECTS				0
 
 //
 /// room applies

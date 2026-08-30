@@ -1972,7 +1972,11 @@ OBJ_DATA *create_object(OBJ_INDEX_DATA *pObjIndex, int level)
 			OBJ_AFFECT_DATA oaf;
 
 			init_affect_obj(&oaf);
-			oaf.where = paf.where;
+			// The prototype's affect carries a character affect's
+			// discriminator and this is an object affect's, so the value is
+			// copied across rather than translated. The two families agree on
+			// 0 and disagree on everything above it.
+			oaf.where = static_cast<ObjAffectWhere>(write_persisted(paf.where));
 			oaf.type = paf.type;
 			oaf.level = paf.level;
 			oaf.duration = paf.duration;

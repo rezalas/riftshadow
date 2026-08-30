@@ -1367,7 +1367,7 @@ AREA_AFFECT_DATA *affect_find_area(std::list<AREA_AFFECT_DATA> &affects, int sn)
 }
 
 /* fix object affects when removing one */
-void affect_check(CHAR_DATA *ch, int where, long vector[])
+void affect_check(CHAR_DATA *ch, AffectWhere where, long vector[])
 {
 	if (where == TO_OBJECT || where == TO_WEAPON || vector == 0)
 		return;
@@ -1436,7 +1436,7 @@ void new_affect_to_char(CHAR_DATA *ch, AFFECT_DATA *paf)
  */
 void affect_remove(CHAR_DATA *ch, AFFECT_DATA *paf)
 {
-	int where;
+	AffectWhere where;
 	long vector[MAX_BITVECTOR];
 
 	if (ch->affected.empty())
@@ -3991,7 +3991,7 @@ void new_affect_to_room(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *paf)
 	affect_modify_room(room, &room->affected.front(), true);
 }
 
-void affect_check_room(ROOM_INDEX_DATA *room, int where, long vector[])
+void affect_check_room(ROOM_INDEX_DATA *room, RoomAffectWhere where, long vector[])
 {
 	if (IS_ZERO_VECTOR(vector))
 		return;
@@ -4022,7 +4022,7 @@ void affect_check_room(ROOM_INDEX_DATA *room, int where, long vector[])
  */
 void affect_remove_room(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *paf)
 {
-	int where;
+	RoomAffectWhere where;
 	long vector[MAX_BITVECTOR];
 
 	if (room->affected.empty())
@@ -4358,7 +4358,7 @@ void affect_to_obj(OBJ_DATA *obj, OBJ_AFFECT_DATA *paf)
 	affect_modify_obj(obj, &obj->affected.front(), true);
 }
 
-void affect_check_obj(OBJ_DATA *obj, int where, long vector[])
+void affect_check_obj(OBJ_DATA *obj, ObjAffectWhere where, long vector[])
 {
 	if (IS_ZERO_VECTOR(vector))
 		return;
@@ -4381,7 +4381,7 @@ void affect_check_obj(OBJ_DATA *obj, int where, long vector[])
 
 void affect_remove_obj(OBJ_DATA *obj, OBJ_AFFECT_DATA *paf, bool show)
 {
-	int where;
+	ObjAffectWhere where;
 	long vector[MAX_BITVECTOR];
 
 	if (obj->affected.empty())
@@ -4578,7 +4578,7 @@ void affect_to_area(AREA_DATA *area, AREA_AFFECT_DATA *paf)
 	affect_modify_area(area, &area->affected.front(), true);
 }
 
-void affect_check_area(AREA_DATA *area, int where, long vector[])
+void affect_check_area(AREA_DATA *area, AreaAffectWhere where, long vector[])
 {
 	if (vector == 0)
 		return;
@@ -4601,7 +4601,7 @@ void affect_check_area(AREA_DATA *area, int where, long vector[])
 
 void affect_remove_area(AREA_DATA *area, AREA_AFFECT_DATA *paf)
 {
-	int where;
+	AreaAffectWhere where;
 	long vector[MAX_BITVECTOR];
 
 	if (area->affected.empty())

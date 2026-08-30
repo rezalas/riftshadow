@@ -22,6 +22,7 @@
 #include <string>
 #include <variant>
 
+#include "enums.h"
 #include "entity/fwd.h"
 #include "entity/limits.h"
 #include "entity/descriptor_data.h"	// DescriptorList: descriptor_list owns its connections
@@ -247,10 +248,10 @@ struct ActArg
 	}
 };
 
-void act (const char *format, CHAR_DATA *ch, ActArg arg1, ActArg arg2, int type);
-void act_queue (std::string format, CHAR_DATA *ch, OBJ_DATA *arg1, CHAR_DATA *arg2, int type);
+void act (const char *format, CHAR_DATA *ch, ActArg arg1, ActArg arg2, ActTarget type);
+void act_queue (std::string format, CHAR_DATA *ch, OBJ_DATA *arg1, CHAR_DATA *arg2, ActTarget type);
 void act_area (const char *format, CHAR_DATA *ch, CHAR_DATA *victim);
-void act_new (const char *format, CHAR_DATA *ch, ActArg arg1, ActArg arg2, int type, int min_pos);
+void act_new (const char *format, CHAR_DATA *ch, ActArg arg1, ActArg arg2, ActTarget type, int min_pos);
 void announce_login (CHAR_DATA *ch);
 void announce_logout (CHAR_DATA *ch);
 void do_rename (CHAR_DATA* ch, char* argument);

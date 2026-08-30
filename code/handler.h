@@ -89,7 +89,7 @@ OBJ_AFFECT_DATA *affect_find_obj (std::list<OBJ_AFFECT_DATA> &affects, int sn);
 ROOM_AFFECT_DATA *affect_find_room (std::list<ROOM_AFFECT_DATA> &affects, int sn);
 AREA_AFFECT_DATA *affect_find_area (std::list<AREA_AFFECT_DATA> &affects, int sn);
 /* fix object affects when removing one */
-void affect_check (CHAR_DATA *ch, int where, long vector[]);
+void affect_check (CHAR_DATA *ch, AffectWhere where, long vector[]);
 /*
  * Give an affect to a char.
  */
@@ -295,7 +295,7 @@ void affect_modify_room (ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *paf, bool fAdd
  */
 void affect_to_room (ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *paf);
 void new_affect_to_room (ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *paf);
-void affect_check_room (ROOM_INDEX_DATA *room,int where, long vector[]);
+void affect_check_room (ROOM_INDEX_DATA *room, RoomAffectWhere where, long vector[]);
 /*
  * Remove an affect from a room.
  */
@@ -329,7 +329,7 @@ void charaff_from_obj_index (OBJ_INDEX_DATA *obj, AFFECT_DATA *paf);
 void init_affect_obj (OBJ_AFFECT_DATA *paf);
 void affect_modify_obj (OBJ_DATA *obj, OBJ_AFFECT_DATA *paf, bool fAdd);
 void affect_to_obj (OBJ_DATA *obj, OBJ_AFFECT_DATA *paf);
-void affect_check_obj (OBJ_DATA *obj, int where, long vector[]);
+void affect_check_obj (OBJ_DATA *obj, ObjAffectWhere where, long vector[]);
 void affect_remove_obj (OBJ_DATA *obj, OBJ_AFFECT_DATA *paf, bool show);
 void affect_strip_obj (OBJ_DATA *obj, int sn);
 bool is_affected_obj (OBJ_DATA *obj, int sn);
@@ -342,7 +342,7 @@ char *oaffect_bit_name (long vector[]);
 void init_affect_area (AREA_AFFECT_DATA *paf);
 void affect_modify_area (AREA_DATA *area, AREA_AFFECT_DATA *paf, bool fAdd);
 void affect_to_area (AREA_DATA *area, AREA_AFFECT_DATA *paf);
-void affect_check_area (AREA_DATA *area, int where, long vector[]);
+void affect_check_area (AREA_DATA *area, AreaAffectWhere where, long vector[]);
 void affect_remove_area (AREA_DATA *area, AREA_AFFECT_DATA *paf);
 void affect_strip_area (AREA_DATA *area, int sn);
 bool is_affected_area (AREA_DATA *area, int sn);

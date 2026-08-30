@@ -38,6 +38,7 @@
 #include <stdlib.h>
 #include <algorithm>
 #include "merc.h"
+#include "persisted_enum.h"
 #include "act_obj.h"
 #include "entity/handles.h"
 #include "rift.h"
@@ -1418,7 +1419,15 @@ void do_envenom(CHAR_DATA *ch, char *argument)
 		if (percent < skill)
 		{
 			init_affect_obj(&oaf);
-			oaf.where = TO_WEAPON;
+			// TO_WEAPON is a character affect's discriminator, not an object
+			// affect's, and this is an object affect. affect_modify_obj
+			// switches on the two values an object affect can carry, so this
+			// one matches neither and the bitvector below is never applied.
+			// Nothing else in the tree ever applies a TO_WEAPON affect. Kept
+			// as it is here, value and all, because the affect is written to
+			// player files and correcting it is a behaviour change rather than
+			// a rename.
+			oaf.where = static_cast<ObjAffectWhere>(write_persisted(TO_WEAPON));
 			oaf.aftype = AFT_SKILL;
 			oaf.type = gsn_poison;
 			oaf.level = ch->level * percent / 100;

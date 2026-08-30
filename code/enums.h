@@ -123,7 +123,7 @@ enum ConnectionState : int
 
 // act() message target ordinal. A separate family from the TO_* "where" values
 // below (which discriminate affect_data::bitvector); values 0-5 collide.
-enum ActTarget : int
+enum class ActTarget : int
 {
 	TO_ROOM						= 0,
 	TO_NOTVICT					= 1,
@@ -135,6 +135,17 @@ enum ActTarget : int
 	TO_NOTGROUP					= 7,
 	TO_AREA						= 8,
 };
+
+// Reachable unqualified, as the other promoted families are.
+constexpr ActTarget TO_ROOM = ActTarget::TO_ROOM;
+constexpr ActTarget TO_NOTVICT = ActTarget::TO_NOTVICT;
+constexpr ActTarget TO_VICT = ActTarget::TO_VICT;
+constexpr ActTarget TO_CHAR = ActTarget::TO_CHAR;
+constexpr ActTarget TO_ALL = ActTarget::TO_ALL;
+constexpr ActTarget TO_IMMINROOM = ActTarget::TO_IMMINROOM;
+constexpr ActTarget TO_GROUP = ActTarget::TO_GROUP;
+constexpr ActTarget TO_NOTGROUP = ActTarget::TO_NOTGROUP;
+constexpr ActTarget TO_AREA = ActTarget::TO_AREA;
 
 // Door-bar restriction criterion. Three separate BAR_ families follow, colliding
 // in value; each is its own enum. Wire format - never renumber.
@@ -216,7 +227,7 @@ enum MagicCommand : int
 
 // affect_data::where - the discriminator that decides which family the sibling
 // bitvector holds and which field it applies to (handler.c dispatches on it).
-enum AffectWhere : int
+enum class AffectWhere : int
 {
 	TO_AFFECTS					= 0,
 	TO_OBJECT					= 1,
@@ -225,6 +236,13 @@ enum AffectWhere : int
 	TO_VULN						= 4,
 	TO_WEAPON					= 5,
 };
+
+constexpr AffectWhere TO_AFFECTS = AffectWhere::TO_AFFECTS;
+constexpr AffectWhere TO_OBJECT = AffectWhere::TO_OBJECT;
+constexpr AffectWhere TO_IMMUNE = AffectWhere::TO_IMMUNE;
+constexpr AffectWhere TO_RESIST = AffectWhere::TO_RESIST;
+constexpr AffectWhere TO_VULN = AffectWhere::TO_VULN;
+constexpr AffectWhere TO_WEAPON = AffectWhere::TO_WEAPON;
 
 // What a rune is applied to - an ordinal. Separate family from RUNE_TRIGGER_*
 // and the RUNE_* masks below (all three collide in value).
@@ -244,19 +262,37 @@ enum RuneTrigger : int
 };
 
 // room_affect_data::where - discriminator for a room affect's bitvector.
-enum RoomAffectWhere : int
+enum class RoomAffectWhere : int
 {
 	TO_ROOM_AFFECTS				= 0,
 	TO_ROOM_CONST				= 1,
 	TO_ROOM_FLAGS				= 2,
 };
 
+constexpr RoomAffectWhere TO_ROOM_AFFECTS = RoomAffectWhere::TO_ROOM_AFFECTS;
+constexpr RoomAffectWhere TO_ROOM_CONST = RoomAffectWhere::TO_ROOM_CONST;
+constexpr RoomAffectWhere TO_ROOM_FLAGS = RoomAffectWhere::TO_ROOM_FLAGS;
+
 // obj_affect_data::where - discriminator for an object affect's bitvector.
-enum ObjAffectWhere : int
+enum class ObjAffectWhere : int
 {
 	TO_OBJ_AFFECTS				= 0,
 	TO_OBJ_APPLY				= 1,
 };
+
+constexpr ObjAffectWhere TO_OBJ_AFFECTS = ObjAffectWhere::TO_OBJ_AFFECTS;
+constexpr ObjAffectWhere TO_OBJ_APPLY = ObjAffectWhere::TO_OBJ_APPLY;
+
+// area_affect_data::where - discriminator for an area affect's bitvector. The
+// fifth and last TO_* family. It was a lone #define in merc.h rather than an
+// enumeration, which is why an area affect could be given a room affect's
+// discriminator instead and nothing said so: both are zero.
+enum class AreaAffectWhere : int
+{
+	TO_AREA_AFFECTS				= 0,
+};
+
+constexpr AreaAffectWhere TO_AREA_AFFECTS = AreaAffectWhere::TO_AREA_AFFECTS;
 
 // Room-affect apply locations. A separate family from the main APPLY_* below:
 // values 0-4 collide with APPLY_NONE..APPLY_WIS, so it must be its own enum.

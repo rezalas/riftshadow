@@ -3043,12 +3043,12 @@ void fix_sex(CHAR_DATA *ch)
 /// Exists for compatibility only with older code that may use it.
 /// @deprecated Please use act_new instead.
 ///
-void act(const char *format, CHAR_DATA *ch, ActArg arg1, ActArg arg2, int type)
+void act(const char *format, CHAR_DATA *ch, ActArg arg1, ActArg arg2, ActTarget type)
 {
 	act_new(format, ch, arg1, arg2, type, POS_RESTING);
 }
 
-void act_queue(std::string format, CHAR_DATA *ch, OBJ_DATA *arg1, CHAR_DATA *arg2, int type)
+void act_queue(std::string format, CHAR_DATA *ch, OBJ_DATA *arg1, CHAR_DATA *arg2, ActTarget type)
 {
 	act_new(format.c_str(), ch, arg1, arg2, type, POS_RESTING);
 }
@@ -3191,7 +3191,7 @@ void act_area(const char *format, CHAR_DATA *ch, CHAR_DATA *victim)
 /// @param arg2: (optional) The second subject mentioned
 /// @param type: The scope of the message, e.g. TO_ROOM, TO_GROUP, etc.
 /// @param min_pos: The minimum position for the act (lowest default is POS_RESTING)
-void act_new(const char *format, CHAR_DATA *ch, ActArg arg1, ActArg arg2, int type, int min_pos)
+void act_new(const char *format, CHAR_DATA *ch, ActArg arg1, ActArg arg2, ActTarget type, int min_pos)
 {
 	static char *const he_she[] = {"it", "he", "she"};
 	static char *const him_her[] = {"it", "him", "her"};

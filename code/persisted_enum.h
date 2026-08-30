@@ -66,6 +66,28 @@ struct PersistedEnum<CharClass>
 		CLASS_HEALER, CLASS_NECROMANCER, CLASS_SORCERER};
 };
 
+template <>
+struct PersistedEnum<AffectWhere>
+{
+	static constexpr const char *Family = "AffectWhere";
+	static constexpr AffectWhere Named[] = {TO_AFFECTS, TO_OBJECT, TO_IMMUNE,
+											TO_RESIST, TO_VULN, TO_WEAPON};
+};
+
+template <>
+struct PersistedEnum<RoomAffectWhere>
+{
+	static constexpr const char *Family = "RoomAffectWhere";
+	static constexpr RoomAffectWhere Named[] = {TO_ROOM_AFFECTS, TO_ROOM_CONST, TO_ROOM_FLAGS};
+};
+
+template <>
+struct PersistedEnum<ObjAffectWhere>
+{
+	static constexpr const char *Family = "ObjAffectWhere";
+	static constexpr ObjAffectWhere Named[] = {TO_OBJ_AFFECTS, TO_OBJ_APPLY};
+};
+
 /// Whether the stored integer is one of the values the family names.
 template <class E>
 bool is_named_value(int raw)

@@ -5,6 +5,7 @@
 #include "../code/handler.h"
 #include "../code/const.h"
 #include "../code/lookup.h"
+#include "../code/utility.h"
 #include "../code/tables.h"
 #include "../code/db.h"
 #include "../code/iprog.h"
@@ -451,5 +452,62 @@ SCENARIO("giving an object that carries a give program", "[do_give]")
 
 		delete obj->pIndexData->iprogs;
 		obj->pIndexData->iprogs = nullptr;
+	}
+}
+
+
+//
+// Characterized, not endorsed.
+//
+// Envenoming a weapon builds an object affect and gives it TO_WEAPON as its
+// discriminator. TO_WEAPON belongs to the character affect family, not the
+// object one, so affect_modify_obj matches neither of its two cases and the
+// bitvector is never applied. Even if it were, it would be applied to
+// obj->affected_by, while is_weapon_stat, which is what the poison on hit
+// actually reads, looks at obj->value[4].
+//
+// So the skill reports success, spends the lag and trains, and the weapon is
+// not poisoned. This test says what happens today. When it is fixed, this is
+// the test that will fail.
+//
+SCENARIO("envenoming a weapon", "[do_envenom]")
+{
+	TestWorld::WireSkillNumbers();
+
+	GIVEN("an assassin carrying a weapon, with the skill learned")
+	{
+		TestWorld world;
+		auto room = world.CreateRoom();
+		// An assassin, because envenom is level 25 for them and 53 for a
+		// thief, and a fixture player is level 50.
+		auto ch = world.CreatePlayer("Poisoner", room, CLASS_ASSASSIN);
+		auto weapon = world.CreateItem("dagger", "a plain dagger");
+
+		weapon->item_type = ITEM_WEAPON;
+		obj_to_char(weapon, ch);
+		ch->pcdata->learned[gsn_envenom] = 100;
+
+		WHEN("the envenoming succeeds")
+		{
+			bool succeeded = false;
+
+			for (int attempt = 0; attempt < 50 && !succeeded; attempt++)
+			{
+				TestWorld::ClearOutput(ch);
+				do_envenom(ch, (char *)"dagger");
+				succeeded = TestWorld::Heard(ch, "You coat");
+			}
+
+			THEN("the character is told it worked")
+			{
+				REQUIRE(succeeded);
+			}
+
+			THEN("the weapon is not poisoned")
+			{
+				REQUIRE(succeeded);
+				REQUIRE_FALSE(is_weapon_stat(weapon, WEAPON_POISON));
+			}
+		}
 	}
 }

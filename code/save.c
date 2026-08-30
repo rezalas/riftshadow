@@ -1257,7 +1257,7 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
 					else
 						paf.type = sn;
 
-					paf.where = fread_number(fp);
+					paf.where = read_persisted<AffectWhere>(fread_number(fp), "affect where");
 					paf.level = fread_number(fp);
 					paf.duration = fread_number(fp);
 					paf.modifier = fread_number(fp);
@@ -1911,7 +1911,7 @@ void fread_pet(CHAR_DATA *ch, FILE *fp)
 					else
 						paf.type = sn;
 
-					paf.where = fread_number(fp);
+					paf.where = read_persisted<AffectWhere>(fread_number(fp), "affect where");
 					paf.level = fread_number(fp);
 					paf.duration = fread_number(fp);
 					paf.modifier = fread_number(fp);
@@ -2137,7 +2137,7 @@ void fread_obj(CHAR_DATA *ch, FILE *fp)
 					else
 						paf.type = sn;
 
-					paf.where = fread_number(fp);
+					paf.where = read_persisted<ObjAffectWhere>(fread_number(fp), "object affect where");
 					paf.level = fread_number(fp);
 					paf.duration = fread_number(fp);
 					paf.modifier = fread_number(fp);
