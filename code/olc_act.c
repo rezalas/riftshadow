@@ -102,25 +102,25 @@ const struct olc_help_type help_table[] =
 
 const struct wear_type wear_table[] =
 {
-	{WEAR_NONE, ITEM_TAKE},
-	{WEAR_LIGHT, ITEM_LIGHT},
-	{WEAR_FINGER_L, ITEM_WEAR_FINGER},
-	{WEAR_FINGER_R, ITEM_WEAR_FINGER},
-	{WEAR_NECK_1, ITEM_WEAR_NECK},
-	{WEAR_NECK_2, ITEM_WEAR_NECK},
-	{WEAR_BODY, ITEM_WEAR_BODY},
-	{WEAR_HEAD, ITEM_WEAR_HEAD},
-	{WEAR_LEGS, ITEM_WEAR_LEGS},
-	{WEAR_FEET, ITEM_WEAR_FEET},
-	{WEAR_HANDS, ITEM_WEAR_HANDS},
-	{WEAR_ARMS, ITEM_WEAR_ARMS},
-	{WEAR_SHIELD, ITEM_WEAR_SHIELD},
-	{WEAR_ABOUT, ITEM_WEAR_ABOUT},
-	{WEAR_WAIST, ITEM_WEAR_WAIST},
-	{WEAR_WRIST_L, ITEM_WEAR_WRIST},
-	{WEAR_WRIST_R, ITEM_WEAR_WRIST},
-	{WEAR_WIELD, ITEM_WEAR_WIELD},
-	{WEAR_HOLD, ITEM_WEAR_HOLD},
+	{wear_index(WEAR_NONE), ITEM_TAKE},
+	{wear_index(WEAR_LIGHT), ITEM_LIGHT},
+	{wear_index(WEAR_FINGER_L), ITEM_WEAR_FINGER},
+	{wear_index(WEAR_FINGER_R), ITEM_WEAR_FINGER},
+	{wear_index(WEAR_NECK_1), ITEM_WEAR_NECK},
+	{wear_index(WEAR_NECK_2), ITEM_WEAR_NECK},
+	{wear_index(WEAR_BODY), ITEM_WEAR_BODY},
+	{wear_index(WEAR_HEAD), ITEM_WEAR_HEAD},
+	{wear_index(WEAR_LEGS), ITEM_WEAR_LEGS},
+	{wear_index(WEAR_FEET), ITEM_WEAR_FEET},
+	{wear_index(WEAR_HANDS), ITEM_WEAR_HANDS},
+	{wear_index(WEAR_ARMS), ITEM_WEAR_ARMS},
+	{wear_index(WEAR_SHIELD), ITEM_WEAR_SHIELD},
+	{wear_index(WEAR_ABOUT), ITEM_WEAR_ABOUT},
+	{wear_index(WEAR_WAIST), ITEM_WEAR_WAIST},
+	{wear_index(WEAR_WRIST_L), ITEM_WEAR_WRIST},
+	{wear_index(WEAR_WRIST_R), ITEM_WEAR_WRIST},
+	{wear_index(WEAR_WIELD), ITEM_WEAR_WIELD},
+	{wear_index(WEAR_HOLD), ITEM_WEAR_HOLD},
 	{NO_FLAG, NO_FLAG}
 };
 
@@ -3487,7 +3487,7 @@ bool redit_oreset(CHAR_DATA *ch, char *argument)
 		/*
 		 * Can't load into same position.
 		 */
-		if (get_eq_char(to_mob, wear_loc))
+		if (get_eq_char(to_mob, wear_slot(wear_loc)))
 		{
 			send_to_char("REdit:  Object already equipped.\n\r", ch);
 			return false;
@@ -3497,7 +3497,7 @@ bool redit_oreset(CHAR_DATA *ch, char *argument)
 		pReset->arg1 = pObjIndex->vnum;
 		pReset->arg2 = wear_loc;
 
-		if (pReset->arg2 == WEAR_NONE)
+		if (pReset->arg2 == wear_index(WEAR_NONE))
 			pReset->command = 'G';
 		else
 			pReset->command = 'E';
@@ -3545,7 +3545,7 @@ bool redit_oreset(CHAR_DATA *ch, char *argument)
 
 			newobj = create_object(pObjIndex, olevel);
 
-			if (pReset->arg2 == WEAR_NONE)
+			if (pReset->arg2 == wear_index(WEAR_NONE))
 				SET_BIT(newobj->extra_flags, ITEM_INVENTORY);
 		}
 		else
@@ -3556,7 +3556,7 @@ bool redit_oreset(CHAR_DATA *ch, char *argument)
 		obj_to_char(newobj, to_mob);
 
 		if (pReset->command == 'E')
-			equip_char(to_mob, newobj, pReset->arg3, false);
+			equip_char(to_mob, newobj, wear_slot(pReset->arg3), false);
 
 		sprintf(output,
 				"%s (%d) has been loaded "\

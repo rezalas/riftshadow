@@ -650,7 +650,7 @@ void fwrite_char(CHAR_DATA *ch, FILE *fp)
 
 	for (i = 0; i < MAX_WEAR; i++)
 	{
-		if ((obj = get_eq_char(ch, i)) == nullptr)
+		if ((obj = get_eq_char(ch, wear_slot(i))) == nullptr)
 			fprintf(fp, " 0");
 		else
 			fprintf(fp, " %d", obj->pIndexData->vnum);
@@ -821,7 +821,7 @@ void fwrite_obj(CHAR_DATA *ch, OBJ_DATA *obj, FILE *fp, int iNest)
 
 	/* variable data */
 
-	fprintf(fp, "Wear %d\n", obj->wear_loc);
+	fprintf(fp, "Wear %d\n", write_persisted(obj->wear_loc));
 
 	if (obj->level != obj->pIndexData->level)
 		fprintf(fp, "Lev  %d\n", obj->level);
@@ -2250,9 +2250,8 @@ void fread_obj(CHAR_DATA *ch, FILE *fp)
 
 						if (make_new)
 						{
-							int wear;
+							WearLocation wear = obj->wear_loc;
 
-							wear = obj->wear_loc;
 							extract_obj(obj);
 							obj->pIndexData->limcount += 1;
 							obj = create_object(obj->pIndexData, 0);
@@ -2397,8 +2396,8 @@ void fread_obj(CHAR_DATA *ch, FILE *fp)
 				KEYV("WearFlags", obj->wear_flags)
 				KEYV("WeaF", obj->wear_flags)
 				KEY("WLName", obj->wear_loc_name, fread_string(fp))
-				KEY("WearLoc", obj->wear_loc, fread_number(fp))
-				KEY("Wear", obj->wear_loc, fread_number(fp))
+				KEY("WearLoc", obj->wear_loc, read_persisted<WearLocation>(fread_number(fp), "WearLoc"))
+				KEY("Wear", obj->wear_loc, read_persisted<WearLocation>(fread_number(fp), "Wear"))
 				KEY("Weight", obj->weight, fread_number(fp))
 				KEY("Wt", obj->weight, fread_number(fp))
 				break;

@@ -104,6 +104,18 @@ struct PersistedEnum<ApplyLocation>
 		APPLY_ETHOS, APPLY_OBJ_PROPERTIES};
 };
 
+template <>
+struct PersistedEnum<WearLocation>
+{
+	static constexpr const char *Family = "WearLocation";
+	static constexpr WearLocation Named[] = {
+		WEAR_NONE, WEAR_LIGHT, WEAR_FINGER_L, WEAR_FINGER_R, WEAR_NECK_1,
+		WEAR_NECK_2, WEAR_BODY, WEAR_HEAD, WEAR_LEGS, WEAR_FEET, WEAR_HANDS,
+		WEAR_ARMS, WEAR_SHIELD, WEAR_ABOUT, WEAR_WAIST, WEAR_WRIST_L,
+		WEAR_WRIST_R, WEAR_WIELD, WEAR_HOLD, WEAR_DUAL_WIELD, WEAR_BRAND,
+		WEAR_STRAPPED, WEAR_COSMETIC};
+};
+
 /// Whether the stored integer is one of the values the family names.
 template <class E>
 bool is_named_value(int raw)

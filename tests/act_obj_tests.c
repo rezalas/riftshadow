@@ -125,7 +125,7 @@ obj_data* TestHelperCreateItem(char *itemName = "broken_lamp", int cost = 0)
 	item->self = objectHandles.Add(item);	// as new_obj would
 	item->name = itemName;
 	item->cost = cost;
-	item->wear_loc = -1;
+	item->wear_loc = WEAR_NONE;
 	item->description = "A magically generated item for testing";
 
 	return item;

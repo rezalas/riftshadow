@@ -207,6 +207,11 @@ public:
 		obj->short_descr = palloc_string(shortDescr);
 		obj->description = palloc_string("A test trinket lies here.");
 		obj->item_type = ITEM_TRASH;
+		// create_object gives every object this, and is_restricted reads it on
+		// every player equip: an object with no owner belongs to somebody else,
+		// so a player handed one by the fixture could not wear it. A literal
+		// rather than a pstring because nothing frees this field.
+		obj->owner = (char *)"none";
 		obj->wear_loc = WEAR_NONE;
 		obj->level = 1;
 		obj->condition = 100;

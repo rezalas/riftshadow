@@ -1180,7 +1180,7 @@ void do_finger(CHAR_DATA *ch, char *argument)
 							continue;
 
 						pObjIndex = get_obj_index(vnum);
-						sprintf(buf2, "%s%s (%d)\n\r", get_where_name(i), pObjIndex ? pObjIndex->short_descr : "# NON-EXISTANT #", vnum);
+						sprintf(buf2, "%s%s (%d)\n\r", get_where_name(wear_slot(i)), pObjIndex ? pObjIndex->short_descr : "# NON-EXISTANT #", vnum);
 						strcat(eqbuf, buf2);
 					}
 				}

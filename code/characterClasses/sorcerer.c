@@ -3691,9 +3691,10 @@ void spell_freezemetal(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe
 
 	for (iWear = 0; iWear < MAX_WEAR; iWear++)
 	{
-		obj = get_eq_char(victim, iWear);
+		WearLocation slot = wear_slot(iWear);
+		obj = get_eq_char(victim, slot);
 
-		if (obj == nullptr || iWear == WEAR_WIELD || iWear == WEAR_DUAL_WIELD)
+		if (obj == nullptr || slot == WEAR_WIELD || slot == WEAR_DUAL_WIELD)
 			continue;
 
 		if (is_obj_stat(obj, ITEM_BURN_PROOF))
@@ -3884,7 +3885,8 @@ void spell_acid_stream(int /* sn */, int level, CHAR_DATA *ch, SpellTarget vo, C
 		tochar3[MSL], tovict3[MSL], toroom3[MSL],
 		bodypart[MSL];
 	int dam = dice(level, 3);
-	int diceroll, location, hardness = 0;
+	int diceroll, hardness = 0;
+	WearLocation location;
 
 	diceroll = number_percent();
 
@@ -7612,9 +7614,10 @@ void spell_melt_rock(int sn, [[maybe_unused]] int level, CHAR_DATA *ch, SpellTar
 
 	for (iWear = 0; iWear < MAX_WEAR; iWear++)
 	{
-		obj = get_eq_char(victim, iWear);
+		WearLocation slot = wear_slot(iWear);
+		obj = get_eq_char(victim, slot);
 
-		if (obj == nullptr || iWear == WEAR_WIELD || iWear == WEAR_DUAL_WIELD)
+		if (obj == nullptr || slot == WEAR_WIELD || slot == WEAR_DUAL_WIELD)
 			continue;
 
 		if (is_obj_stat(obj, ITEM_BURN_PROOF))

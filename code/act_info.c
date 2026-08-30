@@ -721,8 +721,10 @@ void show_char_to_char_1(CHAR_DATA *victim, CHAR_DATA *ch)
 		return;
 
 	auto found = false;
-	for (auto iWear = 0; iWear < MAX_WEAR; iWear++)
+	for (auto slot = 0; slot < MAX_WEAR; slot++)
 	{
+		WearLocation iWear = wear_slot(slot);
+
 		if (iWear == WEAR_WIELD) // cosmetics come right before "wield" on display
 		{
 			for (auto tObj = victim->carrying; tObj; tObj = tObj->next_content)
@@ -776,7 +778,7 @@ void show_char_to_char_1(CHAR_DATA *victim, CHAR_DATA *ch)
 				found = true;
 			}
 
-			send_to_char(where_name[iWear], ch);
+			send_to_char(where_name[slot], ch);
 			send_to_char(format_obj_to_char(obj, ch, true), ch);
 			send_to_char("\n\r", ch);
 		}
@@ -907,8 +909,10 @@ void show_char_to_char_2(CHAR_DATA *victim, CHAR_DATA *ch)
 	send_to_char(buf, ch);
 
 	auto found = false;
-	for (auto iWear = 0; iWear < MAX_WEAR; iWear++)
+	for (auto slot = 0; slot < MAX_WEAR; slot++)
 	{
+		WearLocation iWear = wear_slot(slot);
+
 		auto obj = get_eq_char(victim, iWear);
 		if (obj != nullptr && can_see_obj(ch, obj))
 		{
@@ -919,7 +923,7 @@ void show_char_to_char_2(CHAR_DATA *victim, CHAR_DATA *ch)
 				found = true;
 			}
 
-			send_to_char(where_name[iWear], ch);
+			send_to_char(where_name[slot], ch);
 			send_to_char(format_obj_to_char(obj, ch, true), ch);
 			send_to_char("\n\r", ch);
 		}
@@ -3555,8 +3559,10 @@ void do_equipment(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 	send_to_char("You are using:\n\r", ch);
 
 	auto found = false;
-	for (auto iWear = 0; iWear < MAX_WEAR; iWear++)
+	for (auto slot = 0; slot < MAX_WEAR; slot++)
 	{
+		WearLocation iWear = wear_slot(slot);
+
 		if (iWear == WEAR_WIELD) // cosmetics come right before "wield" on display
 		{
 			for (auto tObj = ch->carrying; tObj; tObj = tObj->next_content)
@@ -3582,7 +3588,7 @@ void do_equipment(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 		if (iWear == WEAR_COSMETIC || obj == nullptr)
 			continue;
 
-		send_to_char(where_name[iWear], ch);
+		send_to_char(where_name[slot], ch);
 
 		if (can_see_obj(ch, obj))
 			send_to_char(format_obj_to_char(obj, ch, true), ch);
@@ -5277,12 +5283,14 @@ void do_xlook(CHAR_DATA *ch, char *argument)
 
 	send_to_char("\n\rEquipment:\n\r", ch);
 
-	for (auto iWear = 0; iWear < MAX_WEAR; iWear++)
+	for (auto slot = 0; slot < MAX_WEAR; slot++)
 	{
+		WearLocation iWear = wear_slot(slot);
+
 		auto obj = get_eq_char(victim, iWear);
 		if (obj != nullptr && can_see_obj(ch, obj))
 		{
-			send_to_char(where_name[iWear], ch);
+			send_to_char(where_name[slot], ch);
 			send_to_char(format_obj_to_char(obj, ch, true), ch);
 			send_to_char("\n\r", ch);
 		}
@@ -5293,9 +5301,15 @@ void do_xlook(CHAR_DATA *ch, char *argument)
 	show_list_to_char(victim->carrying, ch, true, false);
 }
 
-char *get_where_name(int iWear)
+char *get_where_name(WearLocation iWear)
 {
-	return where_name[iWear];
+	// where_name is laid out in slot order and WEAR_NONE is the -1 that means
+	// the object is carried rather than worn, so it has no row here. No caller
+	// asks for it today: every one of them is walking the slots in order.
+	if (iWear == WEAR_NONE)
+		return "<not worn>          ";
+
+	return where_name[wear_index(iWear)];
 }
 
 void do_trustgroup(CHAR_DATA *ch, [[maybe_unused]] char *argument)

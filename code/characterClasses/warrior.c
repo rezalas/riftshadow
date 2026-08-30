@@ -2428,9 +2428,11 @@ int armor_weight(CHAR_DATA *ch)
 	if (is_npc(ch))
 		return 0;
 
-	for (i = 1; i < 16; i++)
+	// Armour only: the slots between the light and the weapons, so a lit torch
+	// and whatever is in the hands do not count as armour being worn.
+	for (i = wear_index(WEAR_FINGER_L); i < wear_index(WEAR_WIELD); i++)
 	{
-		eq = get_eq_char(ch, i);
+		eq = get_eq_char(ch, wear_slot(i));
 
 		if (eq != nullptr)
 			total_weight += eq->weight;

@@ -162,7 +162,7 @@ SCENARIO("a conflagration pulses in a room with no exits", "[conflagration_pulse
 // worth reading.
 //
 
-static bool RustReachesSlot(int wearLoc, int attempts)
+static bool RustReachesSlot(WearLocation wearLoc, int attempts)
 {
 	TestWorld::WireSkillNumbers();
 

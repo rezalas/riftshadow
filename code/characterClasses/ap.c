@@ -371,8 +371,10 @@ void spell_dispaters(int /* sn */, int /* level */, CHAR_DATA *ch, SpellTarget /
 	send_to_char(buf, ch);
 	send_to_char(buf2, ch);
 
-	for (int wear = 0; wear < MAX_WEAR; wear++)
+	for (int slot = 0; slot < MAX_WEAR; slot++)
 	{
+		WearLocation wear = wear_slot(slot);
+
 		if ((obj = get_eq_char(victim, wear)) != nullptr && (can_see_obj(ch, obj)))
 		{
 			send_to_char(get_where_name(wear), ch);

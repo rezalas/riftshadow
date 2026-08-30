@@ -3,6 +3,7 @@
 
 #include <string>
 
+#include "enums.h"
 #include "entity/fwd.h"
 
 //
@@ -124,7 +125,7 @@ bool isCabalItem( OBJ_DATA *obj);
 bool isNewbie (CHAR_DATA *ch);
 void debug_string( const char *str);
 void do_xlook (CHAR_DATA *ch, char *argument);
-char *get_where_name(int iWear);
+char *get_where_name(WearLocation iWear);
 void do_trustgroup(CHAR_DATA *ch, char *argument);
 void do_trustcabal(CHAR_DATA *ch, char *argument);
 void do_trustchar(CHAR_DATA *ch, char *argument);

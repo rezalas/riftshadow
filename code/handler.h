@@ -135,16 +135,16 @@ void obj_from_char (OBJ_DATA *obj);
 /*
  * Find the ac value of an obj, including position effect.
  */
-int apply_ac (OBJ_DATA *obj, int iWear, int type);
+int apply_ac (OBJ_DATA *obj, WearLocation iWear, int type);
 /*
  * Find a piece of eq on a character.
  */
-OBJ_DATA *get_eq_char (CHAR_DATA *ch, int iWear);
+OBJ_DATA *get_eq_char (CHAR_DATA *ch, WearLocation iWear);
 bool is_worn (OBJ_DATA *obj);
 /*
  * Equip a char with an obj.
  */
-void equip_char (CHAR_DATA *ch, OBJ_DATA *obj, int iWear, bool show);
+void equip_char (CHAR_DATA *ch, OBJ_DATA *obj, WearLocation iWear, bool show);
 /*
  * Unequip a char with an obj.
  */

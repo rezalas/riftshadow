@@ -14,6 +14,8 @@
 #include "../code/recycle.h"
 #include "../code/pstring.h"
 #include "../code/mspec.h"
+#include "../code/lookup.h"
+#include "../code/tables.h"
 #include "world_fixture.h"
 
 // TEST_CASE("Test capitalization", "[string]" )
@@ -3037,6 +3039,93 @@ SCENARIO("can_see answers for a character that is not there", "[can_see]")
 				REQUIRE(can_see(watcher, seen) == true);
 				REQUIRE(can_see(seen, watcher) == true);
 			}
+		}
+	}
+}
+
+//
+// What comes off a cosmetic slot.
+//
+// equip_char returns as soon as it has put a cosmetic on: no armour class, no
+// applies, no affects, no immunity or resistance bits. unequip_char has the
+// matching early return, but it cleared the object's slot first and then asked
+// the object which slot it had been in, so the test never matched and a
+// cosmetic had taken off it everything that was never put on.
+//
+
+SCENARIO("taking off a cosmetic item", "[unequip_char]")
+{
+	GIVEN("a player wearing a cosmetic that carries an apply")
+	{
+		TestWorld world;
+		auto room = world.CreateRoom();
+		auto player = world.CreatePlayer("Wearer", room);
+		auto obj = world.CreateItem("mask", "a porcelain mask");
+
+		OBJ_APPLY_DATA app;
+		app.location = APPLY_HITROLL;
+		app.modifier = 5;
+		app.type = 0;
+		obj->apply.push_front(app);
+
+		obj_to_char(obj, player);
+
+		int hitrollBefore = player->hitroll;
+
+		WHEN("it is worn")
+		{
+			equip_char(player, obj, WEAR_COSMETIC, false);
+
+			THEN("the apply is not added, because a cosmetic carries no effect")
+			{
+				REQUIRE(obj->wear_loc == WEAR_COSMETIC);
+				REQUIRE(player->hitroll == hitrollBefore);
+			}
+
+			WHEN("it is taken off again")
+			{
+				unequip_char(player, obj, false);
+
+				THEN("the apply is not taken away either")
+				{
+					REQUIRE(obj->wear_loc == WEAR_NONE);
+					REQUIRE(player->hitroll == hitrollBefore);
+				}
+			}
+		}
+	}
+}
+
+//
+// The wear location table is scanned rather than indexed.
+//
+// flag_lookup and flag_name_lookup both walk until they reach a row with a null
+// name, so a table without one runs off its own end for every lookup that does
+// not match.
+//
+
+SCENARIO("looking up a wear location that is not in the table", "[wear_locations]")
+{
+	GIVEN("the wear location table")
+	{
+		// A missing terminator cannot be caught from here: the scan runs into
+		// whatever the linker put next and stops at the first null name it
+		// finds there, which is why this went unnoticed. What catches it is
+		// AddressSanitizer, which reports the read past the end of the object.
+		THEN("a name it does not carry answers no")
+		{
+			REQUIRE(flag_lookup("nonesuch", wear_locations) == NO_FLAG);
+		}
+
+		THEN("a value it does not carry answers nothing")
+		{
+			REQUIRE(flag_name_lookup(9999, wear_locations) == nullptr);
+		}
+
+		THEN("the names it does carry still answer")
+		{
+			REQUIRE(flag_lookup("wield", wear_locations) == wear_index(WEAR_WIELD));
+			REQUIRE(flag_lookup("hold", wear_locations) == wear_index(WEAR_HOLD));
 		}
 	}
 }

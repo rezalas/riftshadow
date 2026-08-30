@@ -1,6 +1,7 @@
 #ifndef ACT_OBJ_H
 #define ACT_OBJ_H
 
+#include "enums.h"
 #include "entity/fwd.h"
 
 
@@ -45,7 +46,7 @@ void do_eat (CHAR_DATA *ch, char *argument);
 /*
  * Remove an object.
  */
-bool remove_obj (CHAR_DATA *ch, int iWear, bool fReplace);
+bool remove_obj (CHAR_DATA *ch, WearLocation iWear, bool fReplace);
 /*
  * Wear one object.
  * Optional replacement of existing objects.

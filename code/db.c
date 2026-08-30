@@ -1320,31 +1320,35 @@ void reset_room(ROOM_INDEX_DATA *pRoom)
 
 				if (pReset->command == 'E')
 				{
-					if (pReset->arg3 == 16)
+					// A reset's third argument means something different for
+					// each command letter, and for an equip it is a slot.
+					WearLocation slot = wear_slot(pReset->arg3);
+
+					if (slot == WEAR_WIELD)
 					{
 						secondary = get_eq_char(LastMob, WEAR_WIELD);
 
 						if (secondary != nullptr)
 						{
 							unequip_char(LastMob, secondary, true);
-							equip_char(LastMob, secondary, 18, true);
-							equip_char(LastMob, pObj, 16, true);
+							equip_char(LastMob, secondary, WEAR_DUAL_WIELD, true);
+							equip_char(LastMob, pObj, WEAR_WIELD, true);
 						}
 						else
 						{
-							equip_char(LastMob, pObj, pReset->arg3, true);
+							equip_char(LastMob, pObj, slot, true);
 						}
 					}
-					else if (pReset->arg3 == 18)
+					else if (slot == WEAR_DUAL_WIELD)
 					{
 						if (get_eq_char(LastMob, WEAR_WIELD) == nullptr)
-							equip_char(LastMob, pObj, 16, true);
+							equip_char(LastMob, pObj, WEAR_WIELD, true);
 						else
-							equip_char(LastMob, pObj, pReset->arg3, true);
+							equip_char(LastMob, pObj, slot, true);
 					}
 					else
 					{
-						equip_char(LastMob, pObj, pReset->arg3, true);
+						equip_char(LastMob, pObj, slot, true);
 					}
 				}
 				last = true;
@@ -1830,7 +1834,7 @@ OBJ_DATA *create_object(OBJ_INDEX_DATA *pObjIndex, int level)
 	else
 		obj->level = std::max(0, level);
 
-	obj->wear_loc = -1;
+	obj->wear_loc = WEAR_NONE;
 	obj->name = palloc_string(pObjIndex->name);				  /* OLC */
 	obj->short_descr = palloc_string(pObjIndex->short_descr); /* OLC */
 	obj->description = palloc_string(pObjIndex->description); /* OLC */

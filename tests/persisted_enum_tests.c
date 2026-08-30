@@ -4,6 +4,7 @@
 #include "../code/persisted_enum.h"
 #include "../code/enums.h"
 #include "../code/utility.h"
+#include "../code/merc.h"
 
 SCENARIO("reading a stored value into a typed enumeration", "[persisted_enum]")
 {
@@ -189,6 +190,35 @@ SCENARIO("reading a stored character class", "[persisted_enum]")
 		}
 	}
 
+	GIVEN("a slot number and the slot it names")
+	{
+		THEN("each is the other's inverse over every slot a character has")
+		{
+			for (int slot = 0; slot < MAX_WEAR; slot++)
+			{
+				REQUIRE(wear_index(wear_slot(slot)) == slot);
+			}
+
+			REQUIRE(wear_index(WEAR_NONE) == -1);
+			REQUIRE(wear_slot(0) == WEAR_LIGHT);
+			REQUIRE(wear_slot(21) == WEAR_COSMETIC);
+		}
+
+		THEN("the two names for slot eighteen are the same slot")
+		{
+			REQUIRE(WEAR_DUAL_WIELD == WEAR_FLOAT);
+		}
+	}
+
+	GIVEN("a stored slot the enumeration does not name")
+	{
+		THEN("it survives the trip")
+		{
+			REQUIRE(write_persisted(read_persisted<WearLocation>(64, "Wear")) == 64);
+			REQUIRE(write_persisted(read_persisted<WearLocation>(-7, "Wear")) == -7);
+		}
+	}
+
 	GIVEN("a per-class array")
 	{
 		THEN("a class subscripts it by its own number")
@@ -268,6 +298,14 @@ static_assert(!std::is_convertible_v<RuneTarget, RuneTrigger>, "a rune target is
 static_assert(!std::is_convertible_v<RuneTrigger, RuneTarget>, "a rune trigger is not a target");
 static_assert(!std::is_convertible_v<RuneMask, RuneTarget>, "a rune mask is not a rune target");
 static_assert(!std::is_convertible_v<RuneMask, RuneTrigger>, "a rune mask is not a rune trigger");
+
+// A worn slot is a slot, not a number. WEAR_NONE is -1, which is what the
+// carried-not-worn case has always been written as, so the family has to be
+// able to hold it and the loops that count slots have to say they are counting.
+static_assert(!std::is_convertible_v<WearLocation, int>, "a wear location is not a number");
+static_assert(!std::is_convertible_v<int, WearLocation>, "a number is not a wear location");
+static_assert(!std::is_convertible_v<WearLocation, ApplyLocation>, "a wear location is not an apply location");
+static_assert(!std::is_convertible_v<WearLocation, BarCriterion>, "a wear location is not a bar criterion");
 
 SCENARIO("the values behind the hit arguments", "[hit_flags]")
 {

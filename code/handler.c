@@ -759,7 +759,7 @@ void reset_char(CHAR_DATA *ch)
 		/* do a FULL reset */
 		for (loc = 0; loc < MAX_WEAR; loc++)
 		{
-			obj = get_eq_char(ch, loc);
+			obj = get_eq_char(ch, wear_slot(loc));
 
 			if (obj == nullptr)
 				continue;
@@ -816,14 +816,14 @@ void reset_char(CHAR_DATA *ch)
 	/* now start adding back the effects */
 	for (loc = 0; loc < MAX_WEAR; loc++)
 	{
-		obj = get_eq_char(ch, loc);
+		obj = get_eq_char(ch, wear_slot(loc));
 
 		if (obj == nullptr)
 			continue;
 
 		for (i = 0; i < 4; i++)
 		{
-			ch->armor[i] += apply_ac(obj, loc, i);
+			ch->armor[i] += apply_ac(obj, wear_slot(loc), i);
 		}
 
 		for (auto &af : obj->charaffs)
@@ -1786,7 +1786,7 @@ void obj_from_char(OBJ_DATA *obj)
 /*
  * Find the ac value of an obj, including position effect.
  */
-int apply_ac(OBJ_DATA *obj, int iWear, int type)
+int apply_ac(OBJ_DATA *obj, WearLocation iWear, int type)
 {
 	if (obj->item_type != ITEM_ARMOR)
 		return 0;
@@ -1835,7 +1835,7 @@ int apply_ac(OBJ_DATA *obj, int iWear, int type)
 /*
  * Find a piece of eq on a character.
  */
-OBJ_DATA *get_eq_char(CHAR_DATA *ch, int iWear)
+OBJ_DATA *get_eq_char(CHAR_DATA *ch, WearLocation iWear)
 {
 	OBJ_DATA *obj;
 
@@ -1862,13 +1862,13 @@ bool is_worn(OBJ_DATA *obj)
 /*
  * Equip a char with an obj.
  */
-void equip_char(CHAR_DATA *ch, OBJ_DATA *obj, int iWear, bool show)
+void equip_char(CHAR_DATA *ch, OBJ_DATA *obj, WearLocation iWear, bool show)
 {
 	int i;
 
 	if (iWear != WEAR_COSMETIC && get_eq_char(ch, iWear) != nullptr)
 	{
-		RS.Logger.Warn("Equip_char: already equipped ({}) -- {} -- {}.", iWear, ch->name, ch->in_room->area->file_name);
+		RS.Logger.Warn("Equip_char: already equipped ({}) -- {} -- {}.", write_persisted(iWear), ch->name, ch->in_room->area->file_name);
 		return;
 	}
 
@@ -1953,7 +1953,8 @@ void equip_char(CHAR_DATA *ch, OBJ_DATA *obj, int iWear, bool show)
  */
 void unequip_char(CHAR_DATA *ch, OBJ_DATA *obj, bool show)
 {
-	int i, wearloc = obj->wear_loc;
+	int i;
+	WearLocation wearloc = obj->wear_loc;
 
 	if (obj->wear_loc == WEAR_NONE)
 	{
@@ -1968,7 +1969,7 @@ void unequip_char(CHAR_DATA *ch, OBJ_DATA *obj, bool show)
 		do_uncoil(carrier, "automagic");
 	}
 
-	obj->wear_loc = -1;
+	obj->wear_loc = WEAR_NONE;
 
 	if (show && IS_SET(obj->progtypes, IPROG_REMOVE))
 		(obj->pIndexData->iprogs->remove_prog)(obj, ch);
@@ -1976,7 +1977,11 @@ void unequip_char(CHAR_DATA *ch, OBJ_DATA *obj, bool show)
 	if (show)
 		spec_obj_remove(obj, ch);
 
-	if (obj->wear_loc == WEAR_COSMETIC)
+	// The slot the object was in, not the one it is in now. This asked the
+	// object where it was after clearing the field, so it never matched, and a
+	// cosmetic had the armour, applies and flag sets taken off it that
+	// equip_char returns without ever putting on.
+	if (wearloc == WEAR_COSMETIC)
 		return;
 
 	for (i = 0; i < 4; i++)
@@ -4244,7 +4249,8 @@ void init_affect_obj(OBJ_AFFECT_DATA *paf)
 void affect_modify_obj(OBJ_DATA *obj, OBJ_AFFECT_DATA *paf, bool fAdd)
 {
 	CHAR_DATA *ch;
-	int mod, wear;
+	int mod;
+	WearLocation wear;
 	mod = paf->modifier;
 
 	if (fAdd)

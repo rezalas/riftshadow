@@ -1452,10 +1452,12 @@ constexpr int class_index(CharClass cclass)
 	return static_cast<int>(cclass);
 }
 
-// Worn-equipment slot index into char_data::equipment[]. WEAR_NONE is the -1
-// sentinel (hence : int); WEAR_DUAL_WIELD and WEAR_FLOAT deliberately share slot
-// 18. Wire format - rename freely, never renumber.
-enum WearLocation : int
+// Where a worn object sits on a character, in obj_data::wear_loc. WEAR_NONE is
+// the -1 that means "carried, not worn", so it is a real member of the family
+// rather than an absence. WEAR_DUAL_WIELD and WEAR_FLOAT deliberately name the
+// same slot: nothing floats beside a character who is wielding two weapons.
+// A player file stores this as a number, so rename freely, never renumber.
+enum class WearLocation : int
 {
 	WEAR_NONE					= -1,
 	WEAR_LIGHT					= 0,
@@ -1482,6 +1484,46 @@ enum WearLocation : int
 	WEAR_STRAPPED				= 20,
 	WEAR_COSMETIC				= 21,
 };
+
+constexpr WearLocation WEAR_NONE = WearLocation::WEAR_NONE;
+constexpr WearLocation WEAR_LIGHT = WearLocation::WEAR_LIGHT;
+constexpr WearLocation WEAR_FINGER_L = WearLocation::WEAR_FINGER_L;
+constexpr WearLocation WEAR_FINGER_R = WearLocation::WEAR_FINGER_R;
+constexpr WearLocation WEAR_NECK_1 = WearLocation::WEAR_NECK_1;
+constexpr WearLocation WEAR_NECK_2 = WearLocation::WEAR_NECK_2;
+constexpr WearLocation WEAR_BODY = WearLocation::WEAR_BODY;
+constexpr WearLocation WEAR_HEAD = WearLocation::WEAR_HEAD;
+constexpr WearLocation WEAR_LEGS = WearLocation::WEAR_LEGS;
+constexpr WearLocation WEAR_FEET = WearLocation::WEAR_FEET;
+constexpr WearLocation WEAR_HANDS = WearLocation::WEAR_HANDS;
+constexpr WearLocation WEAR_ARMS = WearLocation::WEAR_ARMS;
+constexpr WearLocation WEAR_SHIELD = WearLocation::WEAR_SHIELD;
+constexpr WearLocation WEAR_ABOUT = WearLocation::WEAR_ABOUT;
+constexpr WearLocation WEAR_WAIST = WearLocation::WEAR_WAIST;
+constexpr WearLocation WEAR_WRIST_L = WearLocation::WEAR_WRIST_L;
+constexpr WearLocation WEAR_WRIST_R = WearLocation::WEAR_WRIST_R;
+constexpr WearLocation WEAR_WIELD = WearLocation::WEAR_WIELD;
+constexpr WearLocation WEAR_HOLD = WearLocation::WEAR_HOLD;
+constexpr WearLocation WEAR_DUAL_WIELD = WearLocation::WEAR_DUAL_WIELD;
+constexpr WearLocation WEAR_FLOAT = WearLocation::WEAR_FLOAT;
+constexpr WearLocation WEAR_BRAND = WearLocation::WEAR_BRAND;
+constexpr WearLocation WEAR_STRAPPED = WearLocation::WEAR_STRAPPED;
+constexpr WearLocation WEAR_COSMETIC = WearLocation::WEAR_COSMETIC;
+
+// The slot numbered n, for the loops that walk every slot a character has.
+// Those loops count, and counting is the one thing this family does not do.
+constexpr WearLocation wear_slot(int slot)
+{
+	return static_cast<WearLocation>(slot);
+}
+
+// The number of the slot, for the one table that is laid out in slot order.
+// WEAR_NONE answers -1 here, which is not a row of anything, so a caller that
+// subscripts with this has to rule it out first.
+constexpr int wear_index(WearLocation location)
+{
+	return static_cast<int>(location);
+}
 
 // damage_new() flag arguments. Three independent two-value families, passed
 // positionally. Kept as three enums matching their argument slots.

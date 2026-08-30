@@ -59,7 +59,7 @@ struct obj_data
 	long res_flags[MAX_BITVECTOR];
 	long vuln_flags[MAX_BITVECTOR];
 	long affected_by[MAX_BITVECTOR];
-	short wear_loc;
+	WearLocation wear_loc = WEAR_NONE;
 	short weight;
 	int cost;
 	short level;

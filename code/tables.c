@@ -422,29 +422,39 @@ const struct flag_type extra_flags[] =
 	{	nullptr,			0,						0		}
 };
 
+// flag_type carries its value as a long and a wear location is its own type,
+// so the three tables below say so once rather than at every row.
+static constexpr long wear_value(WearLocation location)
+{
+	return static_cast<long>(location);
+}
+
 const struct flag_type wear_locations[] =
 {
 	//	name			bit					settable
-	{	"light",		WEAR_LIGHT,			true	},
-	{	"lfinger",		WEAR_FINGER_L,		true	},
-	{	"rfinger",		WEAR_FINGER_R,		true	},
-	{	"neckone",		WEAR_NECK_1,		true	},
-	{	"necktwo",		WEAR_NECK_2,		true	},
-	{	"body",			WEAR_BODY,			true	},
-	{	"head",			WEAR_HEAD,			true	},
-	{	"legs",			WEAR_LEGS,			true	},
-	{	"feet",			WEAR_FEET,			true	},
-	{	"hands",		WEAR_HANDS,			true	},
-	{	"arms",			WEAR_ARMS,			true	},
-	{	"shield",		WEAR_SHIELD,		true	},
-	{	"about",		WEAR_ABOUT,			true	},
-	{	"waist",		WEAR_WAIST,			true	},
-	{	"wristone",		WEAR_WRIST_R,		true	},
-	{	"wristtwo",		WEAR_WRIST_L,		true	},
-	{	"wield",		WEAR_WIELD,			true	},
-	{	"dualwield",	WEAR_DUAL_WIELD,	true	},
-	{	"tattooed",		WEAR_BRAND,			true	},
-	{	"hold",			WEAR_HOLD,			true	},
+	{	"light",		wear_value(WEAR_LIGHT),				true	},
+	{	"lfinger",		wear_value(WEAR_FINGER_L),			true	},
+	{	"rfinger",		wear_value(WEAR_FINGER_R),			true	},
+	{	"neckone",		wear_value(WEAR_NECK_1),			true	},
+	{	"necktwo",		wear_value(WEAR_NECK_2),			true	},
+	{	"body",			wear_value(WEAR_BODY),				true	},
+	{	"head",			wear_value(WEAR_HEAD),				true	},
+	{	"legs",			wear_value(WEAR_LEGS),				true	},
+	{	"feet",			wear_value(WEAR_FEET),				true	},
+	{	"hands",		wear_value(WEAR_HANDS),				true	},
+	{	"arms",			wear_value(WEAR_ARMS),				true	},
+	{	"shield",		wear_value(WEAR_SHIELD),			true	},
+	{	"about",		wear_value(WEAR_ABOUT),				true	},
+	{	"waist",		wear_value(WEAR_WAIST),				true	},
+	{	"wristone",		wear_value(WEAR_WRIST_R),			true	},
+	{	"wristtwo",		wear_value(WEAR_WRIST_L),			true	},
+	{	"wield",		wear_value(WEAR_WIELD),				true	},
+	{	"dualwield",	wear_value(WEAR_DUAL_WIELD),		true	},
+	{	"tattooed",		wear_value(WEAR_BRAND),				true	},
+	{	"hold",			wear_value(WEAR_HOLD),				true	},
+	// flag_lookup and flag_name_lookup both scan until the null name, so this
+	// row is what stops them walking off the end of the table.
+	{	nullptr,		0,									true	},
 };
 
 const struct flag_type wear_flags[] =
@@ -1404,26 +1414,26 @@ const struct flag_type apply_flags[] =
 const struct flag_type wear_loc_strings[] =
 {
 	//	name,					bit,			settable
-	{	"in the inventory",		WEAR_NONE,		true	},
-	{	"as a light",			WEAR_LIGHT,		true	},
-	{	"on the left finger",	WEAR_FINGER_L,	true	},
-	{	"on the right finger",	WEAR_FINGER_R,	true	},
-	{	"around the neck (1)",	WEAR_NECK_1,	true	},
-	{	"around the neck (2)",	WEAR_NECK_2,	true	},
-	{	"on the body",			WEAR_BODY,		true	},
-	{	"over the head",		WEAR_HEAD,		true	},
-	{	"on the legs",			WEAR_LEGS,		true	},
-	{	"on the feet",			WEAR_FEET,		true	},
-	{	"on the hands",			WEAR_HANDS,		true	},
-	{	"on the arms",			WEAR_ARMS,		true	},
-	{	"as a shield",			WEAR_SHIELD,	true	},
-	{	"about the shoulders",	WEAR_ABOUT,		true	},
-	{	"around the waist",		WEAR_WAIST,		true	},
-	{	"on the left wrist",	WEAR_WRIST_L,	true	},
-	{	"on the right wrist",	WEAR_WRIST_R,	true	},
-	{	"wielded",				WEAR_WIELD,		true	},
-	{	"held in the hands",	WEAR_HOLD,		true	},
-	{	"floating nearby",		WEAR_FLOAT,		true	},
+	{	"in the inventory",		wear_value(WEAR_NONE),				true	},
+	{	"as a light",			wear_value(WEAR_LIGHT),				true	},
+	{	"on the left finger",	wear_value(WEAR_FINGER_L),			true	},
+	{	"on the right finger",	wear_value(WEAR_FINGER_R),			true	},
+	{	"around the neck (1)",	wear_value(WEAR_NECK_1),			true	},
+	{	"around the neck (2)",	wear_value(WEAR_NECK_2),			true	},
+	{	"on the body",			wear_value(WEAR_BODY),				true	},
+	{	"over the head",		wear_value(WEAR_HEAD),				true	},
+	{	"on the legs",			wear_value(WEAR_LEGS),				true	},
+	{	"on the feet",			wear_value(WEAR_FEET),				true	},
+	{	"on the hands",			wear_value(WEAR_HANDS),				true	},
+	{	"on the arms",			wear_value(WEAR_ARMS),				true	},
+	{	"as a shield",			wear_value(WEAR_SHIELD),			true	},
+	{	"about the shoulders",	wear_value(WEAR_ABOUT),				true	},
+	{	"around the waist",		wear_value(WEAR_WAIST),				true	},
+	{	"on the left wrist",	wear_value(WEAR_WRIST_L),			true	},
+	{	"on the right wrist",	wear_value(WEAR_WRIST_R),			true	},
+	{	"wielded",				wear_value(WEAR_WIELD),				true	},
+	{	"held in the hands",	wear_value(WEAR_HOLD),				true	},
+	{	"floating nearby",		wear_value(WEAR_FLOAT),				true	},
 	{	nullptr,				0,				0		}
 };
 
@@ -1431,27 +1441,27 @@ const struct flag_type wear_loc_strings[] =
 const struct flag_type wear_loc_flags[] =
 {
 	//	name,		bit,			settable
-	{	"none",		WEAR_NONE,		true	},
-	{	"light",	WEAR_LIGHT,		true	},
-	{	"lfinger",	WEAR_FINGER_L,	true	},
-	{	"rfinger",	WEAR_FINGER_R,	true	},
-	{	"neck1",	WEAR_NECK_1,	true	},
-	{	"neck2",	WEAR_NECK_2,	true	},
-	{	"body",		WEAR_BODY,		true	},
-	{	"head",		WEAR_HEAD,		true	},
-	{	"legs",		WEAR_LEGS,		true	},
-	{	"feet",		WEAR_FEET,		true	},
-	{	"hands",	WEAR_HANDS,		true	},
-	{	"arms",		WEAR_ARMS,		true	},
-	{	"shield",	WEAR_SHIELD,	true	},
-	{	"about",	WEAR_ABOUT,		true	},
-	{	"waist",	WEAR_WAIST,		true	},
-	{	"lwrist",	WEAR_WRIST_L,	true	},
-	{	"rwrist",	WEAR_WRIST_R,	true	},
-	{	"wielded",	WEAR_WIELD,		true	},
-	{	"hold",		WEAR_HOLD,		true	},
-	{	"floating",	WEAR_FLOAT,		true	},
-	{	"tattoo",	WEAR_BRAND,		true	},
+	{	"none",			wear_value(WEAR_NONE),				true	},
+	{	"light",		wear_value(WEAR_LIGHT),				true	},
+	{	"lfinger",		wear_value(WEAR_FINGER_L),			true	},
+	{	"rfinger",		wear_value(WEAR_FINGER_R),			true	},
+	{	"neck1",		wear_value(WEAR_NECK_1),			true	},
+	{	"neck2",		wear_value(WEAR_NECK_2),			true	},
+	{	"body",			wear_value(WEAR_BODY),				true	},
+	{	"head",			wear_value(WEAR_HEAD),				true	},
+	{	"legs",			wear_value(WEAR_LEGS),				true	},
+	{	"feet",			wear_value(WEAR_FEET),				true	},
+	{	"hands",		wear_value(WEAR_HANDS),				true	},
+	{	"arms",			wear_value(WEAR_ARMS),				true	},
+	{	"shield",		wear_value(WEAR_SHIELD),			true	},
+	{	"about",		wear_value(WEAR_ABOUT),				true	},
+	{	"waist",		wear_value(WEAR_WAIST),				true	},
+	{	"lwrist",		wear_value(WEAR_WRIST_L),			true	},
+	{	"rwrist",		wear_value(WEAR_WRIST_R),			true	},
+	{	"wielded",		wear_value(WEAR_WIELD),				true	},
+	{	"hold",			wear_value(WEAR_HOLD),				true	},
+	{	"floating",		wear_value(WEAR_FLOAT),				true	},
+	{	"tattoo",		wear_value(WEAR_BRAND),				true	},
 	{	nullptr,	0,				0		}
 };
 
