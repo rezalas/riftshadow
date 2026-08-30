@@ -21,7 +21,7 @@
 //
 
 
-extern CProficiencies prof_none; //empty proficiencies for jackasses who are going to ref ch->Profs() without checking IS_NPC
+extern CProficiencies prof_none; //empty proficiencies for jackasses who are going to ref ch->Profs() without checking is_npc
 
 /// The global character list owns every character in the world. Declared here
 /// rather than in db.h because a character caches its own node in it.

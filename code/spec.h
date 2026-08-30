@@ -384,7 +384,7 @@ extern const MSpec mspec_table[];
 /// @param mob The character to resolve. May be null or a player.
 /// @return The attached program, or null when there is none.
 /// @note Replaces the owner->pIndexData->spec_prog dereference in TRAPS_MEVENT
-///       and CALL_MEVENT. The IS_NPC test that guarded TRAPS_MEVENT lives here
+///       and CALL_MEVENT. The is_npc test that guarded TRAPS_MEVENT lives here
 ///       now, so callers no longer repeat it.
 inline const MSpec *mob_spec(CHAR_DATA *mob)
 {

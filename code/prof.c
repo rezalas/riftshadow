@@ -17,6 +17,7 @@
 #include "update.h"
 #include "pstring.h"
 #include "act_info.h"
+#include "utility.h"
 #include "./include/spdlog/fmt/bundled/format.h"
 #include "./include/spdlog/fmt/bundled/printf.h"
 
@@ -844,12 +845,12 @@ void do_proficiencies(CHAR_DATA *ch, char *argument)
 	CHAR_DATA *trainer = nullptr;
 	bool bBreak= false;
 
-	if (IS_NPC(ch))
+	if (is_npc(ch))
 		return;
 
 	for (auto iterator = ch->in_room->people; iterator && !bBreak; iterator = iterator->next_in_room)
 	{
-		if (!IS_NPC(iterator))
+		if (!is_npc(iterator))
 			continue;
 
 		for (int i = 0; i < MAX_PROFS_TAUGHT_BY_MOB && !bBreak; i++)
@@ -904,7 +905,7 @@ void prof_tracking(CHAR_DATA *ch, char *argument)
 	}
 
 	auto victim = get_char_world(ch, argument);
-	if (!victim || victim == ch || IS_NPC(victim))
+	if (!victim || victim == ch || is_npc(victim))
 	{
 		send_to_char("Track who?\n\r",ch);
 		return;
@@ -917,7 +918,7 @@ void prof_tracking(CHAR_DATA *ch, char *argument)
 	}
 
 	auto sect = ch->in_room->sector_type;
-	if (!IS_GROUND(ch->in_room) || sect == SECT_CITY || sect == SECT_INSIDE || sect == SECT_BURNING || sect == SECT_ROAD)
+	if (!is_ground(ch->in_room) || sect == SECT_CITY || sect == SECT_INSIDE || sect == SECT_BURNING || sect == SECT_ROAD)
 	{
 		send_to_char("Even if they had been here, there would be no suitable tracks left for you to follow.\n\r", ch);
 		return;
