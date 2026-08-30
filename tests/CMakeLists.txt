@@ -39,6 +39,7 @@ set(TEST_SRC_FILES act_obj_tests.c
 	rune_tests.c
 	spell_target_tests.c
 	theft_tests.c
+	thief_tests.c
 	vote_tests.c
 	utility_tests.c
 	standalone_tests.c

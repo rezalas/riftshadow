@@ -1051,13 +1051,25 @@ void do_tripwire(CHAR_DATA *ch, char *argument)
 	EXIT_DATA *pexit_opp;
 	CHAR_DATA *victim;
 	char *direction;
-	int skill, door = *((int *)argument);
+	int skill, door;
 
 	skill = get_skill(ch, gsn_tripwire);
 
 	if (skill == 0)
 	{
 		send_to_char("Huh?\n\r", ch);
+		return;
+	}
+
+	// The argument is the direction as the player typed it. This used to read
+	// it as a pointer to an integer, which the interpreter never passed, and
+	// the read happened in the declaration ahead of the skill check above, so
+	// a character who had never learned the skill took the same fault.
+	door = direction_lookup(argument);
+
+	if (door < 0 || ch->in_room->exit[door] == nullptr)
+	{
+		send_to_char("That's not a valid direction.\n\r", ch);
 		return;
 	}
 

@@ -1084,7 +1084,12 @@ void interpret(CHAR_DATA *ch, char *argument)
 					return;
 				}
 
-				vo = (void *)(long)where;
+				// The direction index is validated here and the text the
+				// player typed is what gets passed on. Handing the index over
+				// as the pointer put a value of 0 through 5 in a variable every
+				// command handler reads as a string, and the one command with
+				// this target dereferenced it.
+				vo = argument;
 				break;
 			case TAR_IGNORE:
 			default:
