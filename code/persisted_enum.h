@@ -116,6 +116,15 @@ struct PersistedEnum<WearLocation>
 		WEAR_STRAPPED, WEAR_COSMETIC};
 };
 
+template <>
+struct PersistedEnum<Position>
+{
+	static constexpr const char *Family = "Position";
+	static constexpr Position Named[] = {
+		POS_DEAD, POS_MORTAL, POS_INCAP, POS_STUNNED, POS_SLEEPING,
+		POS_RESTING, POS_SITTING, POS_FIGHTING, POS_STANDING};
+};
+
 /// Whether the stored integer is one of the values the family names.
 template <class E>
 bool is_named_value(int raw)

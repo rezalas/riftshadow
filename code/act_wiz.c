@@ -2632,7 +2632,7 @@ void do_mstat(CHAR_DATA *ch, char *argument)
 					: "neutral",
 		victim->gold,
 		size_table[static_cast<int>(victim->size)].name,
-		position_table[victim->position].name);
+		position_row(victim->position)->name);
 	send_to_char(buf, ch);
 
 	opponent = Deref(victim->fighting);

@@ -509,7 +509,20 @@ void load_mobs(FILE *fp)
 		copy_vector(pMobIndex->vuln_flags, race_data_lookup(pMobIndex->race)->vuln);
 
 		/* vital statistics */
-		pMobIndex->start_pos = position_lookup(fread_word(fp));
+		char *start_word = fread_word(fp);
+		auto start_pos = position_lookup(start_word);
+
+		if (!start_pos)
+		{
+			// The value this has always stored for a word it does not know is
+			// -1, which is below dead, and the area writer turns that back into
+			// "dead" the next time the area is saved. Reported rather than
+			// corrected here: only an edit command should change what a file
+			// holds.
+			RS.Logger.Warn("Load_mobiles: mob {} has an unknown start position '{}'.", pMobIndex->vnum, start_word);
+		}
+
+		pMobIndex->start_pos = start_pos.value_or(position_at(-1));
 		// sex_lookup answers with the row index, and -1 for a word it does
 		// not know, which the loader has always read as neutral.
 		pMobIndex->sex = read_persisted<Sex>(std::max(0, sex_lookup(fread_word(fp))), "sex");

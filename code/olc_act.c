@@ -5967,7 +5967,7 @@ bool medit_show(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 	sprintf(buf, "Size:        [%s]\n\r", flag_string_old(size_flags, write_persisted(pMob->size)));
 	send_to_char(buf, ch);
 
-	sprintf(buf, "Start pos.   [%s]\n\r", flag_string_old(position_flags, pMob->start_pos));
+	sprintf(buf, "Start pos.   [%s]\n\r", flag_string_old(position_flags, position_index(pMob->start_pos)));
 	send_to_char(buf, ch);
 
 	sprintf(buf, "Wealth:      [%s]\n\r", flag_name_lookup(pMob->wealth, wealth_table));
@@ -7168,12 +7168,12 @@ bool medit_position(CHAR_DATA *ch, char *argument)
 {
 	MOB_INDEX_DATA *pMob;
 	char arg[MAX_INPUT_LENGTH];
-	int value;
 
 	argument = one_argument(argument, arg);
 
-	value = position_lookup(arg);
-	if (value == -1)
+	auto value = position_lookup(arg);
+
+	if (!value)
 		return false;
 
 	EDIT_MOB(ch, pMob);
@@ -7181,7 +7181,7 @@ bool medit_position(CHAR_DATA *ch, char *argument)
 	if (pMob == nullptr)
 		return false;
 
-	pMob->start_pos = value;
+	pMob->start_pos = value.value();
 	send_to_char("Start position set.\n\r", ch);
 	return true;
 }

@@ -1576,11 +1576,13 @@ enum ConditionType : int
 	COND_HUNGRY					= 50,
 };
 
-// Character position, an ordinal in char_data::position (a short). Ordering is
-// load-bearing: ~96 relational comparisons (position >= POS_RESTING etc.) and it
-// is stored in cmd_type::position for the command table. Wire format - never
-// renumber. Kept ascending exactly as-is so all comparisons hold.
-enum Position : int
+// How upright a character is, in char_data::position, and the least a command
+// or a spell will settle for. The ordering is the point: most of the ~96 tests
+// on it are relational, so POS_RESTING is "at least resting" rather than one
+// value. A scoped enumeration compares the same way, so those all still hold.
+// A player file stores this as a number, so rename freely, never renumber, and
+// never reorder either.
+enum class Position : int
 {
 	POS_DEAD					= 0,
 	POS_MORTAL					= 1,
@@ -1592,6 +1594,28 @@ enum Position : int
 	POS_FIGHTING				= 7,
 	POS_STANDING				= 8,
 };
+
+constexpr Position POS_DEAD = Position::POS_DEAD;
+constexpr Position POS_MORTAL = Position::POS_MORTAL;
+constexpr Position POS_INCAP = Position::POS_INCAP;
+constexpr Position POS_STUNNED = Position::POS_STUNNED;
+constexpr Position POS_SLEEPING = Position::POS_SLEEPING;
+constexpr Position POS_RESTING = Position::POS_RESTING;
+constexpr Position POS_SITTING = Position::POS_SITTING;
+constexpr Position POS_FIGHTING = Position::POS_FIGHTING;
+constexpr Position POS_STANDING = Position::POS_STANDING;
+
+// The row number of a position, for the two tables laid out in position order.
+constexpr int position_index(Position position)
+{
+	return static_cast<int>(position);
+}
+
+// The position with that row number, for the lookups that answer with one.
+constexpr Position position_at(int index)
+{
+	return static_cast<Position>(index);
+}
 
 // PK alignment-kill counters. Separate family from the killed[] index pair
 // below. Wire format - never renumber.

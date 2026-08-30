@@ -39,6 +39,7 @@
 #include <string>
 #include <string_view>
 
+#include "enums.h"
 #include "entity/fwd.h"
 
 /* for command types */
@@ -61,7 +62,7 @@ struct cmd_type
 {
 	std::string_view name;
 	DO_FUN *do_fun;
-	short position;
+	Position position;
 	short level;
 	short log;
 	short show;

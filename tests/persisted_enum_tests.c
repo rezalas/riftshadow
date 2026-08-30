@@ -5,6 +5,8 @@
 #include "../code/enums.h"
 #include "../code/utility.h"
 #include "../code/merc.h"
+#include "../code/lookup.h"
+#include "../code/tables.h"
 
 SCENARIO("reading a stored value into a typed enumeration", "[persisted_enum]")
 {
@@ -219,6 +221,38 @@ SCENARIO("reading a stored character class", "[persisted_enum]")
 		}
 	}
 
+	GIVEN("a position and its row number")
+	{
+		THEN("each is the other's inverse over the whole family")
+		{
+			for (int row = position_index(POS_DEAD); row <= position_index(POS_STANDING); row++)
+			{
+				REQUIRE(position_index(position_at(row)) == row);
+			}
+		}
+
+		THEN("the row lookup answers for every position and for one that is not")
+		{
+			REQUIRE(std::string(position_row(POS_STANDING)->name) == "standing");
+			REQUIRE(std::string(position_row(POS_DEAD)->name) == "dead");
+
+			// An area file with a start position word this does not know is
+			// stored below dead, and both callers used to subscript the table
+			// with it.
+			REQUIRE(std::string(position_row(position_at(-1))->name) == "dead");
+			REQUIRE(std::string(position_row(position_at(99))->name) == "dead");
+		}
+	}
+
+	GIVEN("a stored position the enumeration does not name")
+	{
+		THEN("it survives the trip")
+		{
+			REQUIRE(write_persisted(read_persisted<Position>(-1, "Pos")) == -1);
+			REQUIRE(write_persisted(read_persisted<Position>(42, "Pos")) == 42);
+		}
+	}
+
 	GIVEN("a per-class array")
 	{
 		THEN("a class subscripts it by its own number")
@@ -306,6 +340,19 @@ static_assert(!std::is_convertible_v<WearLocation, int>, "a wear location is not
 static_assert(!std::is_convertible_v<int, WearLocation>, "a number is not a wear location");
 static_assert(!std::is_convertible_v<WearLocation, ApplyLocation>, "a wear location is not an apply location");
 static_assert(!std::is_convertible_v<WearLocation, BarCriterion>, "a wear location is not a bar criterion");
+
+// A position is ordered, and the ordering is what most of the tests on it use.
+// A scoped enumeration keeps the relational operators between its own values
+// and takes away the ones that would compare it with a number, which is the
+// whole trade.
+static_assert(!std::is_convertible_v<Position, int>, "a position is not a number");
+static_assert(!std::is_convertible_v<int, Position>, "a number is not a position");
+static_assert(!std::is_convertible_v<Position, WearLocation>, "a position is not a wear location");
+static_assert(POS_DEAD < POS_SLEEPING, "the order is what the comparisons read");
+static_assert(POS_SLEEPING < POS_RESTING, "the order is what the comparisons read");
+static_assert(POS_RESTING < POS_SITTING, "the order is what the comparisons read");
+static_assert(POS_SITTING < POS_FIGHTING, "the order is what the comparisons read");
+static_assert(POS_FIGHTING < POS_STANDING, "the order is what the comparisons read");
 
 SCENARIO("the values behind the hit arguments", "[hit_flags]")
 {

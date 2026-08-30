@@ -3,6 +3,7 @@
 
 #include <list>
 
+#include "../enums.h"
 #include "fwd.h"
 #include "limits.h"
 #include "speech_data.h"						// SPEECH_DATA held by value in mob->speech
@@ -49,7 +50,7 @@ public:
 	long mprog_flags[MAX_BITVECTOR];
 	short xp_mod;
 	float dam_mod;
-	short start_pos;
+	Position start_pos = POS_STANDING;
 	Sex sex;
 	short race;
 	int wealth;

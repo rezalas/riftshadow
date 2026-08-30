@@ -42,6 +42,7 @@
 
 struct flag_type;		// code/tables.h
 struct display_type;	// code/tables.h
+struct position_type;	// code/tables.h
 
 //
 // LOCAL FUNCTIONS
@@ -74,7 +75,15 @@ std::optional<BarComparison> bar_comparison_lookup (const char *name);
 const char *bar_message_name (BarMessage msg_type);
 std::optional<BarMessage> bar_message_lookup (const char *name);
 int cabal_lookup  (const char *name);
-int position_lookup	(const char *name);
+/// The row for a position, for the two places that need its long or short name.
+/// Total over the family: a position with no row answers with the dead row, so
+/// a caller never reads past the end of the table.
+const struct position_type *position_row (Position position);
+
+/// The position that name means. Empty when the name is not one: there is no
+/// position value that means "not a position", and the -1 this used to answer
+/// with is below dead rather than beside it.
+std::optional<Position> position_lookup (const char *name);
 int sex_lookup (const char *name);
 int size_lookup	(const char *name);
 int hometown_lookup (const char *name);

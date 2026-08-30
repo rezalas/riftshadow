@@ -2,6 +2,8 @@
 #define CONST_H
 
 #include <vector>
+
+#include "enums.h"
 #include "entity/fwd.h"
 #include "entity/limits.h"
 
@@ -44,7 +46,7 @@ struct skill_type
 	short skill_level[MAX_CLASS];		// Level needed by class
 	SPELL_FUN *spell_fun;				// Spell pointer (for spells)
 	short target;						// Legal targets
-	short minimum_position;			// Position for caster / user
+	Position minimum_position;		// Position for caster / user
 	short *pgsn;						// Pointer to associated gsn
 	short dispel;						// affect bitvector for dispel
 	short min_mana;					// Minimum mana used

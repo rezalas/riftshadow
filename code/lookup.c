@@ -337,17 +337,30 @@ int cabal_lookup(const char *name)
 	return 0;
 }
 
-int position_lookup(const char *name)
+const struct position_type *position_row(Position position)
+{
+	int index = position_index(position);
+
+	// A mob whose area file gave it a start position this does not understand
+	// is stored below dead, and both callers of this used to subscript the
+	// table with whatever it held.
+	if (index < position_index(POS_DEAD) || index > position_index(POS_STANDING))
+		index = position_index(POS_DEAD);
+
+	return &position_table[index];
+}
+
+std::optional<Position> position_lookup(const char *name)
 {
 	int pos;
 
 	for (pos = 0; position_table[pos].name != nullptr; pos++)
 	{
 		if (LOWER(name[0]) == LOWER(position_table[pos].name[0]) && !str_prefix(name, position_table[pos].name))
-			return pos;
+			return position_at(pos);
 	}
 
-	return -1;
+	return {};
 }
 
 int sex_lookup(const char *name)

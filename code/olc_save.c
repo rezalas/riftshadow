@@ -165,7 +165,7 @@ void save_mobile(FILE *fp, MOB_INDEX_DATA *pMobIndex)
 		pMobIndex->ac[AC_SLASH],
 		pMobIndex->ac[AC_EXOTIC]);
 	fprintf(fp, "%s %s ",
-		position_table[std::max((int)pMobIndex->start_pos, 0)].name,
+		position_row(pMobIndex->start_pos)->name,
 		sex_table[std::max(static_cast<int>(pMobIndex->sex), 1)].name);
 	fprintf(fp, "%s\n", wealth_lookup(pMobIndex->wealth));
 

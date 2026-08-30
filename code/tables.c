@@ -1670,15 +1670,15 @@ const struct flag_type material_type[] =    /* not yet implemented */
 const struct flag_type position_flags[] =
 {
 	//	name,			bit,				settable
-	{	"dead",			POS_DEAD,			false	},
-	{	"mortal",		POS_MORTAL,			false	},
-	{	"incap",		POS_INCAP,			false	},
-	{	"stunned",		POS_STUNNED,		false	},
-	{	"sleeping",		POS_SLEEPING,		true	},
-	{	"resting",		POS_RESTING,		true	},
-	{	"sitting",		POS_SITTING,		true	},
-	{	"fighting",		POS_FIGHTING,		false	},
-	{	"standing",		POS_STANDING,		true	},
+	{	"dead",			position_index(POS_DEAD),			false	},
+	{	"mortal",		position_index(POS_MORTAL),			false	},
+	{	"incap",		position_index(POS_INCAP),			false	},
+	{	"stunned",		position_index(POS_STUNNED),		false	},
+	{	"sleeping",		position_index(POS_SLEEPING),		true	},
+	{	"resting",		position_index(POS_RESTING),		true	},
+	{	"sitting",		position_index(POS_SITTING),		true	},
+	{	"fighting",		position_index(POS_FIGHTING),		false	},
+	{	"standing",		position_index(POS_STANDING),		true	},
 	{	nullptr,		0,					0		}
 };
 

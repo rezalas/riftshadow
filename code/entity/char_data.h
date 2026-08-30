@@ -179,7 +179,7 @@ public:
 	short invis_level;
 	short incog_level;
 	long affected_by[MAX_BITVECTOR];
-	short position;
+	Position position = POS_STANDING;
 	short practice;
 	short train;
 	short carry_weight;
@@ -217,7 +217,7 @@ public:
 	long off_flags[MAX_BITVECTOR];
 	short damage[3];
 	short dam_type;
-	short start_pos;
+	Position start_pos = POS_STANDING;
 	short pause;
 	short ghost;
 	int status;

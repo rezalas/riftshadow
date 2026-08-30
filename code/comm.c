@@ -3191,7 +3191,7 @@ void act_area(const char *format, CHAR_DATA *ch, CHAR_DATA *victim)
 /// @param arg2: (optional) The second subject mentioned
 /// @param type: The scope of the message, e.g. TO_ROOM, TO_GROUP, etc.
 /// @param min_pos: The minimum position for the act (lowest default is POS_RESTING)
-void act_new(const char *format, CHAR_DATA *ch, ActArg arg1, ActArg arg2, ActTarget type, int min_pos)
+void act_new(const char *format, CHAR_DATA *ch, ActArg arg1, ActArg arg2, ActTarget type, Position min_pos)
 {
 	static char *const he_she[] = {"it", "he", "she"};
 	static char *const him_her[] = {"it", "him", "her"};

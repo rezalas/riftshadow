@@ -386,7 +386,7 @@ void fwrite_char(CHAR_DATA *ch, FILE *fp)
 		if (ch->incog_level)
 			fprintf(fp, "Inco %d\n", ch->incog_level);
 
-		fprintf(fp, "Pos  %d\n", ch->position == POS_FIGHTING ? POS_STANDING : ch->position);
+		fprintf(fp, "Pos  %d\n", write_persisted(ch->position == POS_FIGHTING ? POS_STANDING : ch->position));
 
 		if (ch->practice != 0)
 			fprintf(fp, "Prac %d\n", ch->practice);
@@ -705,7 +705,7 @@ void fwrite_pet(CHAR_DATA *pet, FILE *fp)
 	if (!IS_ZERO_VECTOR(pet->comm))
 		fprintf(fp, "Comm %s\n", print_flags(pet->comm));
 
-	fprintf(fp, "Pos  %d\n", pet->position == POS_FIGHTING ? POS_STANDING : pet->position);
+	fprintf(fp, "Pos  %d\n", write_persisted(pet->position == POS_FIGHTING ? POS_STANDING : pet->position));
 
 	if (pet->saving_throw != 0)
 		fprintf(fp, "Save %d\n", pet->saving_throw);
@@ -1007,7 +1007,7 @@ bool load_char_obj(DESCRIPTOR_DATA *d, char *name)
 	ch->disrupted = false;
 	ch->stolen_from = false;
 	ch->pcdata->souls = 0;
-	ch->position = 0;
+	ch->position = POS_DEAD;
 	ch->pcdata->cabal_level = 0;
 	ch->pcdata->bounty_killed = 0;
 	ch->pcdata->paladin_path = 0;
@@ -1631,8 +1631,8 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
 				KEY("Pass", ch->pcdata->pwd, fread_string(fp))
 				KEY("Played", ch->played, fread_number(fp))
 				KEY("Plyd", ch->played, fread_number(fp))
-				KEY("Position", ch->position, fread_number(fp))
-				KEY("Pos", ch->position, fread_number(fp))
+				KEY("Position", ch->position, read_persisted<Position>(fread_number(fp), "Position"))
+				KEY("Pos", ch->position, read_persisted<Position>(fread_number(fp), "Pos"))
 				KEY("Practice", ch->practice, fread_number(fp))
 				KEY("Prac", ch->practice, fread_number(fp))
 				KEY("Prompt", ch->prompt, fread_string(fp))
@@ -2032,7 +2032,7 @@ void fread_pet(CHAR_DATA *ch, FILE *fp)
 				KEY("Name", pet->name, fread_string(fp))
 				break;
 			case 'P':
-				KEY("Pos", pet->position, fread_number(fp))
+				KEY("Pos", pet->position, read_persisted<Position>(fread_number(fp), "Pos"))
 				break;
 			case 'R':
 				KEY("Race", pet->race, race_lookup(fread_string(fp)))
