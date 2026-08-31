@@ -7,6 +7,7 @@
 #include "../code/merc.h"
 #include "../code/lookup.h"
 #include "../code/tables.h"
+#include "../code/const.h"
 
 SCENARIO("reading a stored value into a typed enumeration", "[persisted_enum]")
 {
@@ -266,6 +267,48 @@ SCENARIO("reading a stored character class", "[persisted_enum]")
 		}
 	}
 
+	GIVEN("the damage class that used to be a define in merc.h")
+	{
+		THEN("the family names it, so the seam stops reporting it")
+		{
+			REQUIRE(is_named_value<DamageType>(20));
+			REQUIRE(read_persisted<DamageType>(20, "damage class") == DAM_INTERNAL);
+		}
+	}
+
+	GIVEN("a stored damage class the enumeration does not name")
+	{
+		THEN("it survives the trip")
+		{
+			REQUIRE(write_persisted(read_persisted<DamageType>(-1, "damage class")) == -1);
+			REQUIRE(write_persisted(read_persisted<DamageType>(77, "damage class")) == 77);
+		}
+	}
+
+	GIVEN("the attack table")
+	{
+		THEN("every attack but the no-attack row carries a damage class the family names")
+		{
+			// Row zero is the mob with no attack, and its damage class is
+			// deliberately not one. Every other row has to be a real class, or
+			// the immunity check falls through to its default and the attack
+			// silently ignores resistances.
+			for (size_t row = 1; row < attack_table.size(); row++)
+			{
+				if (attack_table[row].name == nullptr)
+					continue;
+
+				INFO("attack row " << row);
+				REQUIRE(is_named_value<DamageType>(write_persisted(attack_table[row].damage)));
+			}
+		}
+
+		THEN("the no-attack row is the one exception")
+		{
+			REQUIRE(write_persisted(attack_table[0].damage) == -1);
+		}
+	}
+
 	GIVEN("a per-class array")
 	{
 		THEN("a class subscripts it by its own number")
@@ -377,6 +420,16 @@ static_assert(!std::is_convertible_v<int, ItemType>, "a number is not an item ty
 static_assert(!std::is_convertible_v<ItemExtraFlag, ItemType>, "an extra flag is not an item type");
 static_assert(!std::is_convertible_v<ItemWearFlag, ItemType>, "a wear flag is not an item type");
 static_assert(!std::is_convertible_v<ItemType, WearLocation>, "an item type is not a worn slot");
+
+// A damage class used to be an int sitting next to a bool in the damage
+// functions, and the two could be passed the wrong way round in silence: true
+// is 1 and so is DAM_BASH. fight.h carried a deleted overload whose only job
+// was to catch that. These two assertions are what replaced it.
+static_assert(!std::is_convertible_v<bool, DamageType>, "a bool is not a damage class");
+static_assert(!std::is_convertible_v<DamageType, bool>, "a damage class is not a bool");
+static_assert(!std::is_convertible_v<DamageType, int>, "a damage class is not a number");
+static_assert(!std::is_convertible_v<int, DamageType>, "a number is not a damage class");
+static_assert(!std::is_convertible_v<DamageType, ItemType>, "a damage class is not an item type");
 
 SCENARIO("the values behind the hit arguments", "[hit_flags]")
 {

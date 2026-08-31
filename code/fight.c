@@ -830,7 +830,8 @@ int one_hit_new(CHAR_DATA *ch, CHAR_DATA *victim, int dt, HitSpecials specials, 
 {
 	OBJ_DATA *wield = nullptr;
 	AFFECT_DATA *af;
-	int mdam, sn, skill, dam_type, result, rdt;
+	int mdam, sn, skill, result, rdt;
+	DamageType dam_type;
 	float dam;
 	bool truestrike = false;
 
@@ -869,7 +870,9 @@ int one_hit_new(CHAR_DATA *ch, CHAR_DATA *victim, int dt, HitSpecials specials, 
 	else
 		dam_type = attack_table[ch->dam_type].damage;
 
-	if (dam_type == -1)
+	// The no-attack row of the attack table carries a damage class that is not
+	// one, so anybody swinging with it hits as though bashing.
+	if (dam_type == static_cast<DamageType>(-1))
 		dam_type = DAM_BASH;
 
 	sn = get_weapon_sn_new(ch, dt);
@@ -1041,7 +1044,7 @@ int one_hit_new(CHAR_DATA *ch, CHAR_DATA *victim, int dt, HitSpecials specials, 
 /*
  * Inflict damage from a hit.
  */
-int damage_new(CHAR_DATA *ch, CHAR_DATA *victim, int idam, int dt, int dam_type, bool show, HitBlockable blockable, int addition, int multiplier, char *dnoun)
+int damage_new(CHAR_DATA *ch, CHAR_DATA *victim, int idam, int dt, DamageType dam_type, bool show, HitBlockable blockable, int addition, int multiplier, char *dnoun)
 {
 	char buf[MSL];
 	OBJ_DATA *corpse, *wield;
@@ -1408,13 +1411,20 @@ int damage_new(CHAR_DATA *ch, CHAR_DATA *victim, int idam, int dt, int dam_type,
 
 	if ((dt >= TYPE_HIT || dt == gsn_dual_wield) && ch != victim)
 	{
-		if (is_affected(victim, gsn_corona) && dam > 0 && dt != DAM_COLD)
+		// dt is a skill number or an attack table offset, not a damage class,
+		// and inside this block it is either at least TYPE_HIT or the dual
+		// wield skill, so neither of these two tests can ever be false. What
+		// they were reaching for is dam_type, which is the argument beside
+		// them. Left alone: making them read it stops these two auras firing
+		// against the element each was written to ignore, which is a change to
+		// how combat plays.
+		if (is_affected(victim, gsn_corona) && dam > 0 && dt != write_persisted(DAM_COLD))
 		{
 			kineticdam = dice(victim->level / 12, 6);
 			damage_old(victim, ch, kineticdam, gsn_corona, DAM_FIRE, true);
 		}
 
-		if (is_affected(victim, gsn_frigidaura) && dam > 0 && dt != DAM_FIRE)
+		if (is_affected(victim, gsn_frigidaura) && dam > 0 && dt != write_persisted(DAM_FIRE))
 		{
 			kineticdam = dice(victim->level / 12, 6);
 			damage_old(victim, ch, kineticdam, gsn_frigidaura, DAM_COLD, true);
@@ -1580,7 +1590,7 @@ int damage_new(CHAR_DATA *ch, CHAR_DATA *victim, int idam, int dt, int dam_type,
 	return (int)dam;
 }
 
-int damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int dam_type, bool show)
+int damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, DamageType dam_type, bool show)
 {
 	return damage_new(ch, victim, dam, dt, dam_type, show, HIT_BLOCKABLE, HIT_NOADD, HIT_NOMULT, nullptr);
 }
@@ -1588,7 +1598,7 @@ int damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int dam_type, bool
 /*
  * Inflict damage from a hit.
  */
-int damage_old(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int dam_type, bool show)
+int damage_old(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, DamageType dam_type, bool show)
 {
 	return damage_new(ch, victim, dam, dt, dam_type, show, HIT_BLOCKABLE, HIT_NOADD, HIT_NOMULT, nullptr);
 }
@@ -1903,7 +1913,7 @@ bool is_safe_spell(CHAR_DATA *ch, CHAR_DATA *victim, bool area)
 	return false;
 }
 
-int check_armor(CHAR_DATA *ch, CHAR_DATA *victim, int dt, int dam_type, int dam)
+int check_armor(CHAR_DATA *ch, CHAR_DATA *victim, int dt, DamageType dam_type, int dam)
 {
 	int armor;
 	float chance;
@@ -6473,7 +6483,8 @@ void do_cleave(CHAR_DATA *ch, char *argument)
 	OBJ_DATA *weapon;
 	CHAR_DATA *victim;
 	char arg[MAX_INPUT_LENGTH];
-	int dam, chance, dam_type;
+	int dam, chance;
+	DamageType dam_type;
 	char buf[MAX_STRING_LENGTH];
 	int sn;
 	int skill;

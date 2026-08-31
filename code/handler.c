@@ -348,7 +348,7 @@ int strlen_color(char *argument)
    the 'globals' (magic and weapons) may be overriden
    three other cases -- wood, silver, and iron -- are checked in fight.c */
 
-int check_immune(CHAR_DATA *ch, int dam_type)
+int check_immune(CHAR_DATA *ch, DamageType dam_type)
 {
 	int immune, def;
 	int bit;
@@ -359,7 +359,7 @@ int check_immune(CHAR_DATA *ch, int dam_type)
 	if (dam_type == DAM_NONE)
 		return immune;
 
-	if (dam_type <= 3)
+	if (dam_type <= DAM_SLASH)
 	{
 		if (IS_SET(ch->imm_flags, IMM_WEAPON))
 			def = IS_IMMUNE;
@@ -4941,12 +4941,12 @@ int get_ethos(CHAR_DATA *ch)
 	return 0;
 }
 
-int damage_queue(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int damtype, HitBlockable blockable, int add, int mult, char *dnoun)
+int damage_queue(CHAR_DATA *ch, CHAR_DATA *victim, int dam, DamageType damtype, HitBlockable blockable, int add, int mult, char *dnoun)
 {
 	return damage_new(ch, victim, dam, gsn_bash, damtype, true, blockable, add, mult, dnoun);
 }
 
-int damage_queued(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int damtype, HitBlockable blockable, int add, int mult, std::string dnoun)
+int damage_queued(CHAR_DATA *ch, CHAR_DATA *victim, int dam, DamageType damtype, HitBlockable blockable, int add, int mult, std::string dnoun)
 {
 	return damage_new(ch, victim, dam, gsn_bash, damtype, true, blockable, add, mult, dnoun.data());
 }

@@ -32,7 +32,7 @@ struct attack_type
 {
 	char *name;		// name
 	char *noun;		// message
-	int damage;		// damage class
+	DamageType damage;	// damage class
 	int modifier;	// difficulty to parry, - for harder + for easier
 };
 

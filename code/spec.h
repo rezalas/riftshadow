@@ -43,7 +43,7 @@ struct ISpec
 
 	// dam, dt and dam_type are the running values for this blow. A program
 	// may adjust them in place. Returning non-zero cancels the blow.
-	int (*on_one_hit)(CHAR_DATA *ch, CHAR_DATA *victim, OBJ_DATA *wield, float &dam, int &dt, int &dam_type) = nullptr;
+	int (*on_one_hit)(CHAR_DATA *ch, CHAR_DATA *victim, OBJ_DATA *wield, float &dam, int &dt, DamageType &dam_type) = nullptr;
 
 	// vo is the command's resolved target and is still type erased. It keeps
 	// whatever shape the skill table gave it.
@@ -308,7 +308,7 @@ inline int spec_obj_verb(OBJ_DATA *obj, CHAR_DATA *ch, const char *verb, const c
 ///       written with the EVENT_IONEHIT macro now fill ISpec::on_one_hit. The
 ///       macro passed dam, dt and dam_type as pointers and rebound them as
 ///       references, which the slot now does directly.
-inline int spec_obj_one_hit(OBJ_DATA *wield, CHAR_DATA *ch, CHAR_DATA *victim, float &dam, int &dt, int &dam_type)
+inline int spec_obj_one_hit(OBJ_DATA *wield, CHAR_DATA *ch, CHAR_DATA *victim, float &dam, int &dt, DamageType &dam_type)
 {
 	const ISpec *spec = obj_spec(wield);
 
@@ -373,7 +373,7 @@ struct MSpec
 
 	// dam, dt and dam_type are the running values for the blow landing on mob.
 	// A program may adjust them in place. Returning non-zero cancels the blow.
-	int (*on_one_hit)(CHAR_DATA *ch, CHAR_DATA *mob, OBJ_DATA *wield, float &dam, int &dt, int &dam_type) = nullptr;
+	int (*on_one_hit)(CHAR_DATA *ch, CHAR_DATA *mob, OBJ_DATA *wield, float &dam, int &dt, DamageType &dam_type) = nullptr;
 
 	int (*on_move)(CHAR_DATA *ch, CHAR_DATA *mob, int door) = nullptr;
 };
@@ -492,7 +492,7 @@ inline int spec_mob_death(CHAR_DATA *mob, CHAR_DATA *ch)
 ///       TRAP_MONEHIT. The fire site used the object macro to dispatch a mob
 ///       event, which went unnoticed because the two macros were identical.
 ///       Bodies written with the EVENT_MONEHIT macro now fill MSpec::on_one_hit.
-inline int spec_mob_one_hit(CHAR_DATA *mob, CHAR_DATA *ch, OBJ_DATA *wield, float &dam, int &dt, int &dam_type)
+inline int spec_mob_one_hit(CHAR_DATA *mob, CHAR_DATA *ch, OBJ_DATA *wield, float &dam, int &dt, DamageType &dam_type)
 {
 	const MSpec *spec = mob_spec(mob);
 

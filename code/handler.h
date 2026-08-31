@@ -5,6 +5,7 @@
 #include <optional>
 #include <string>
 
+#include "enums.h"
 #include "entity/fwd.h"
 
 //
@@ -39,7 +40,7 @@ int strlen_color (char *argument);
 /* for immunity, vulnerability, and resistant
    the 'globals' (magic and weapons) may be overriden
    three other cases -- wood, silver, and iron -- are checked in fight.c */
-int check_immune (CHAR_DATA *ch, int dam_type);
+int check_immune (CHAR_DATA *ch, DamageType dam_type);
 bool is_cabal (CHAR_DATA *ch);
 bool is_same_cabal (CHAR_DATA *ch, CHAR_DATA *victim);
 /* checks mob format */
@@ -358,7 +359,7 @@ char *flag_room_name (int vector);
 void modify_location (CHAR_DATA *ch, ApplyLocation location, int mod, bool add);
 int get_align (CHAR_DATA *ch);
 int get_ethos (CHAR_DATA *ch);
-int damage_queue (CHAR_DATA *ch, CHAR_DATA *victim, int dam, int damtype, HitBlockable blockable, int add, int mult, char *dnoun);
-int damage_queued (CHAR_DATA *ch, CHAR_DATA *victim, int dam, int damtype, HitBlockable blockable, int add, int mult, std::string dnoun);
+int damage_queue (CHAR_DATA *ch, CHAR_DATA *victim, int dam, DamageType damtype, HitBlockable blockable, int add, int mult, char *dnoun);
+int damage_queued (CHAR_DATA *ch, CHAR_DATA *victim, int dam, DamageType damtype, HitBlockable blockable, int add, int mult, std::string dnoun);
 
 #endif /* HANDLER_H */

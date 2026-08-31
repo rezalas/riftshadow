@@ -54,7 +54,7 @@ static int fallendesert_spirits_death(CHAR_DATA *ch, CHAR_DATA *mob)
 /// @note Body taken from the EVENT_MONEHIT block of mspec_minotaur_zombie. The
 ///       macro bound the mob under the name victim and the body aliased it to
 ///       mob, so the alias is gone.
-static int minotaur_zombie_one_hit(CHAR_DATA *ch, CHAR_DATA *mob, OBJ_DATA *wield, float &, int &, int &)
+static int minotaur_zombie_one_hit(CHAR_DATA *ch, CHAR_DATA *mob, OBJ_DATA *wield, float &, int &, DamageType &)
 {
 		if (number_percent() > 25)
 		{

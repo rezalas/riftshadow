@@ -151,7 +151,9 @@ const std::vector<wiznet_type> wiznet_table =
 const std::vector<attack_type> attack_table	=
 {
 	//	name			noun					damage			modifier
-	{	"none",			"hit",					-1,				  0		},  /*  0 */
+	// The no-attack row. Its damage class is deliberately not one: a mob whose
+	// area file gave it no attack is given a real one at load time.
+	{	"none",			"hit",	  static_cast<DamageType>(-1),	  0		},  /*  0 */
 	{	"slice",		"slice",	 			DAM_SLASH,		  0		},
 	{	"stab",			"stab",					DAM_PIERCE,		  0		},
 	{	"slash",		"slash",				DAM_SLASH,		 10		},
@@ -212,7 +214,7 @@ const std::vector<attack_type> attack_table	=
 	{	"sblast",		"searing blast",		DAM_FIRE,		  0		},
 	{	"disease",		"poisonous bite",		DAM_POISON,		  0		},	
 	{	"grasp",		"foul grasp",			DAM_NEGATIVE,	  0		},
-	{	nullptr,		nullptr,				0,				  0		}
+	{	nullptr,		nullptr,				DAM_NONE,		  0		}
 };
 
 

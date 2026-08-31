@@ -140,6 +140,17 @@ struct PersistedEnum<ItemType>
 		ITEM_PEN, ITEM_ALTAR, ITEM_STONE};
 };
 
+template <>
+struct PersistedEnum<DamageType>
+{
+	static constexpr const char *Family = "DamageType";
+	static constexpr DamageType Named[] = {
+		DAM_NONE, DAM_BASH, DAM_PIERCE, DAM_SLASH, DAM_FIRE, DAM_COLD,
+		DAM_LIGHTNING, DAM_ACID, DAM_POISON, DAM_NEGATIVE, DAM_HOLY, DAM_ENERGY,
+		DAM_MENTAL, DAM_DISEASE, DAM_DROWNING, DAM_LIGHT, DAM_OTHER, DAM_CHARM,
+		DAM_SOUND, DAM_TRUESTRIKE, DAM_INTERNAL};
+};
+
 /// Whether the stored integer is one of the values the family names.
 template <class E>
 bool is_named_value(int raw)

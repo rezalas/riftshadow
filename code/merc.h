@@ -682,12 +682,6 @@ struct kill_data
 
 
 //
-// damage classes
-//
-
-#define	DAM_INTERNAL				20
-
-//
 // OFF bits for mobiles
 //
 

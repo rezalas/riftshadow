@@ -212,7 +212,7 @@ void say_spell(CHAR_DATA *ch, int sn)
  * Compute a saving throw.
  * Negative apply's make saving throw better.
  */
-bool saves_spell(int level, CHAR_DATA *victim, int dam_type)
+bool saves_spell(int level, CHAR_DATA *victim, DamageType dam_type)
 {
 	int roll;
 	float save;

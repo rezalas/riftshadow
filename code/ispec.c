@@ -73,7 +73,7 @@ static int g_money_remove(CHAR_DATA *ch, OBJ_DATA *obj)
 /// @note Body taken from the EVENT_IONEHIT block of ispec_qwhip. The damage,
 ///       damage type and damage class parameters are unused here. The commented
 ///       out lines that once adjusted them are kept for reference.
-static int qwhip_one_hit(CHAR_DATA *ch, CHAR_DATA *, OBJ_DATA *, float &, int &, int &)
+static int qwhip_one_hit(CHAR_DATA *ch, CHAR_DATA *, OBJ_DATA *, float &, int &, DamageType &)
 {
 	if (number_percent() > 96 && Deref(ch->fighting))
 	{

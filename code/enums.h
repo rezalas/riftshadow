@@ -429,9 +429,12 @@ enum ActFlag : int
 	ACT_LAW						= 34,
 };
 
-// Damage classes - an ordinal passed around as an int and switched on. Wire
-// format - rename freely, never renumber.
-enum DamageType : int
+// What kind of damage a blow does. Passed around as an argument and switched
+// on, and not to be confused with char_data::dam_type, which despite the name
+// holds an attack table row number rather than one of these. An area file
+// stores it by the name of the attack that carries it, so rename freely, never
+// renumber.
+enum class DamageType : int
 {
 	DAM_NONE					= 0,
 	DAM_BASH					= 1,
@@ -453,7 +456,34 @@ enum DamageType : int
 	DAM_CHARM					= 17,
 	DAM_SOUND					= 18,
 	DAM_TRUESTRIKE				= 19,
+	// Damage from inside: thirst, suffocation, poison in the blood. It has its
+	// own immunity bit and its own case in the immunity check, and it was the
+	// one member of this family still living as a define in merc.h.
+	DAM_INTERNAL				= 20,
 };
+
+constexpr DamageType DAM_NONE = DamageType::DAM_NONE;
+constexpr DamageType DAM_BASH = DamageType::DAM_BASH;
+constexpr DamageType DAM_PIERCE = DamageType::DAM_PIERCE;
+constexpr DamageType DAM_SLASH = DamageType::DAM_SLASH;
+constexpr DamageType DAM_FIRE = DamageType::DAM_FIRE;
+constexpr DamageType DAM_COLD = DamageType::DAM_COLD;
+constexpr DamageType DAM_LIGHTNING = DamageType::DAM_LIGHTNING;
+constexpr DamageType DAM_ACID = DamageType::DAM_ACID;
+constexpr DamageType DAM_POISON = DamageType::DAM_POISON;
+constexpr DamageType DAM_NEGATIVE = DamageType::DAM_NEGATIVE;
+constexpr DamageType DAM_HOLY = DamageType::DAM_HOLY;
+constexpr DamageType DAM_ENERGY = DamageType::DAM_ENERGY;
+constexpr DamageType DAM_MENTAL = DamageType::DAM_MENTAL;
+constexpr DamageType DAM_DISEASE = DamageType::DAM_DISEASE;
+constexpr DamageType DAM_DROWNING = DamageType::DAM_DROWNING;
+constexpr DamageType DAM_LIGHT = DamageType::DAM_LIGHT;
+constexpr DamageType DAM_OTHER = DamageType::DAM_OTHER;
+constexpr DamageType DAM_CHARM = DamageType::DAM_CHARM;
+constexpr DamageType DAM_SOUND = DamageType::DAM_SOUND;
+constexpr DamageType DAM_TRUESTRIKE = DamageType::DAM_TRUESTRIKE;
+constexpr DamageType DAM_INTERNAL = DamageType::DAM_INTERNAL;
+
 
 // Offensive/assist bit indices into char_data::off_flags and
 // mob_index_data::off_flags. One contiguous 0-26 numbering carrying five name

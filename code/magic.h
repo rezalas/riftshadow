@@ -34,6 +34,7 @@
 #ifndef MAGIC_H
 #define MAGIC_H
 
+#include "enums.h"
 #include "entity/fwd.h"
 #include "entity/spell_target.h"
 
@@ -90,7 +91,7 @@ extern char *target_name;
 int skill_lookup (const char *name);
 int find_spell(CHAR_DATA *ch, const char *name);
 void say_spell (CHAR_DATA *ch, int sn);
-bool saves_spell (int level, CHAR_DATA *victim, int dam_type);
+bool saves_spell (int level, CHAR_DATA *victim, DamageType dam_type);
 bool saves_dispel(int dis_level, int spell_level, int duration);
 bool check_dispel(int dis_level, CHAR_DATA *victim, int sn);
 bool check_dispel_cancellation(int dis_level, CHAR_DATA *victim, CHAR_DATA *ch, int sn, bool commune, bool cancel);

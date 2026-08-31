@@ -44,24 +44,23 @@ int one_hit_new (CHAR_DATA *ch, CHAR_DATA *victim, int dt, HitSpecials specials,
 /*
  * Inflict damage from a hit.
  */
-int damage_new (CHAR_DATA *ch, CHAR_DATA *victim, int idam, int dt, int dam_type, bool show, HitBlockable blockable, int addition, int multiplier, char *dnoun);
+int damage_new (CHAR_DATA *ch, CHAR_DATA *victim, int idam, int dt, DamageType dam_type, bool show, HitBlockable blockable, int addition, int multiplier, char *dnoun);
 //
-// The dam_type and show arguments sit next to each other and one is a bool, so
-// swapping them compiles silently and deals DAM_BASH (which is 1, the same as
-// true). Two of the 179 call sites had drifted that way. This overload makes the
-// mistake a compile error instead: a bool is an exact match here and only a
-// promotion for the declaration above, so passing one picks this and fails.
+// The deleted overload that used to sit here caught the dam_type and show
+// arguments being passed the wrong way round, which compiled silently while
+// dam_type was an int and dealt DAM_BASH, because that is 1 and so is true. A
+// damage type is its own type now, so neither argument converts to the other
+// and the swap is an error in both directions.
 //
-int damage_new (CHAR_DATA *ch, CHAR_DATA *victim, int idam, int dt, bool dam_type, bool show, HitBlockable blockable, int addition, int multiplier, char *dnoun) = delete;
-int damage (CHAR_DATA *ch,CHAR_DATA *victim, int dam,int dt,int dam_type, bool show);
+int damage (CHAR_DATA *ch,CHAR_DATA *victim, int dam,int dt,DamageType dam_type, bool show);
 /*
  * Inflict damage from a hit.
  */
-int damage_old (CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int dam_type, bool show);
+int damage_old (CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, DamageType dam_type, bool show);
 bool is_safe (CHAR_DATA *ch, CHAR_DATA *victim);
 bool is_safe_new (CHAR_DATA *ch, CHAR_DATA *victim, bool show);
 bool is_safe_spell (CHAR_DATA *ch, CHAR_DATA *victim, bool area);
-int check_armor (CHAR_DATA *ch, CHAR_DATA *victim, int dt, int dam_type, int dam);
+int check_armor (CHAR_DATA *ch, CHAR_DATA *victim, int dt, DamageType dam_type, int dam);
 bool check_parry (CHAR_DATA *ch, CHAR_DATA *victim, int dt);
 /*
  * Check for shield block.
