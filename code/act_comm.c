@@ -1939,9 +1939,9 @@ void do_quit_new(CHAR_DATA *ch, [[maybe_unused]] char *argument, bool autoq)
 	// The handle is copied before the extract because the character does not
 	// survive it. Resolving is left until after, because extract_char routes a
 	// switched connection through do_return, which writes to it, and a write
-	// that overflows the output buffer closes the connection. A pointer taken
-	// before the extract would be tested for null after it had already stopped
-	// standing for anything.
+	// that overflowed the output buffer used to close the connection on the spot.
+	// An overflow only marks it now, so the extract can no longer close it and
+	// the late resolve is belt and braces rather than load-bearing.
 	auto connection = ch->desc;
 
 	extract_char(ch, true);
@@ -1959,9 +1959,10 @@ void do_quit_new(CHAR_DATA *ch, [[maybe_unused]] char *argument, bool autoq)
 		auto tch = Deref(d->original) ? Deref(d->original) : Deref(d->character);
 		if (tch && tch->id == id)
 		{
-			// Same reason as above: the extract can reach this connection and
-			// close it, so what gets closed here is whatever the handle still
-			// resolves to rather than the pointer the walk handed out.
+			// Same reason as above: the extract used to be able to reach this
+			// connection and close it, through an overflowing write, so what
+			// gets closed here is whatever the handle still resolves to rather
+			// than the pointer the walk handed out. Belt and braces now.
 			auto connection = d->self;
 
 			extract_char(tch, true);

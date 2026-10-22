@@ -56,6 +56,11 @@ struct descriptor_data
 	char *outbuf;
 	int outsize;
 	int outtop;
+	// Set when the output buffer overflows. The connection takes no more output
+	// and runs no more input, and ClosePendingConnections closes it by the end
+	// of the pulse. Closing it on the spot, inside write_to_buffer, made every
+	// output call a call that could destroy the connection being written to.
+	bool closePending = false;
 	char *showstr_head;
 	char *showstr_point;
 	void *pEdit;	// OLC

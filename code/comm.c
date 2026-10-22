@@ -310,6 +310,32 @@ void init_descriptor(int control)
 	}
 }
 
+void ClosePendingConnections()
+{
+	// Closing a playing connection tells the room that the character lost
+	// their link, and that can overflow, and so mark, a connection the walk has
+	// already passed. So walk again until a pass closes nothing. Every pass
+	// that continues has closed at least one connection, so this ends.
+	bool closedAny = true;
+
+	while (closedAny)
+	{
+		closedAny = false;
+
+		// Protected rather than plain: close_socket erases the node it closes.
+		for (OwningListWalk<DESCRIPTOR_DATA> walk(descriptor_list); !walk.Done(); walk.Step())
+		{
+			DESCRIPTOR_DATA *d = walk.Current();
+
+			if (d->closePending)
+			{
+				close_socket(d);
+				closedAny = true;
+			}
+		}
+	}
+}
+
 void close_socket(DESCRIPTOR_DATA *dclose)
 {
 	CHAR_DATA *ch;
@@ -579,9 +605,10 @@ bool process_output(DESCRIPTOR_DATA *d, bool fPrompt)
 
 		CHAR_DATA *original = Deref(d->original);
 
-		// Re-read rather than reusing the local above: the write_to_buffer calls
-		// in the battle prompt can overflow the output buffer, and that closes
-		// the socket and frees the character.
+		// Re-read rather than reusing the local above. The write_to_buffer calls
+		// in the battle prompt could overflow the output buffer, and that used to
+		// close the socket and free the character on the spot. An overflow only
+		// marks the connection now, but the guard below does not rely on that.
 		ch = original ? original : Deref(d->character);
 
 		// The re-read exists to produce this null. Acting on it is the other
@@ -597,7 +624,9 @@ bool process_output(DESCRIPTOR_DATA *d, bool fPrompt)
 		{
 			// The prompt is drawn for the body being driven rather than for the
 			// player driving it, so this is deliberately not the local above.
-			// It is resolved again because the write just made can free it.
+			// It is resolved again because the write just made used to be able
+			// to free it. An overflow only marks the connection now; the re-read
+			// stays.
 			CHAR_DATA *prompted = Deref(d->character);
 
 			if (prompted == nullptr)
@@ -1166,6 +1195,10 @@ bool output_buffer(DESCRIPTOR_DATA *d)
  */
 void write_to_buffer(DESCRIPTOR_DATA *d, const char *txt, int length)
 {
+	// A connection waiting to close has nobody left to read what it is told.
+	if (d->closePending)
+		return;
+
 	/*
 	 * Find length in case caller didn't.
 	 */
@@ -1191,9 +1224,14 @@ void write_to_buffer(DESCRIPTOR_DATA *d, const char *txt, int length)
 
 		if (d->outsize >= 32000)
 		{
-			RS.Logger.Warn("Buffer overflow. Closing.\n\r");
+			// Marked rather than closed. Closing here destroyed the connection,
+			// and freed the character on the end of it, inside whatever output
+			// call happened to overflow, while its caller still held both. The
+			// game loop closes it at the end of the pulse instead, through
+			// ClosePendingConnections.
+			RS.Logger.Warn("Buffer overflow. Closing at the end of the pulse.\n\r");
 			d->outtop = 0;
-			close_socket(d);
+			d->closePending = true;
 			return;
 		}
 
@@ -1450,10 +1488,6 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
 				return;
 			}
 
-			// TODO: Same overflow hazard as check_playing. If this write overflows
-			// d's buffer, write_to_buffer closes and frees d, and close_socket also
-			// frees the character because d is not yet CON_PLAYING. The code below
-			// goes on to use both: ch->true_name here, and d inside check_playing.
 			write_to_buffer(d, echo_on_str, 0);
 
 			if (check_playing(d, (ch->true_name ? ch->true_name : ch->name)))
@@ -2882,8 +2916,10 @@ bool check_reconnect(DESCRIPTOR_DATA *d, char *name, bool fConn)
  */
 bool check_playing(DESCRIPTOR_DATA *d, char *name)
 {
-	// Protected rather than plain: the write_to_buffer below can overflow and
-	// close a connection, which erases a node in the list being walked.
+	// Protected rather than plain. The writes below used to be able to close a
+	// connection mid-walk, back when an overflowing buffer closed on the spot.
+	// An overflow only marks the connection now, but the protected walk costs
+	// nothing and does not depend on that.
 	for (OwningListWalk<DESCRIPTOR_DATA> walk(descriptor_list); !walk.Done(); walk.Step())
 	{
 		DESCRIPTOR_DATA *dold = walk.Current();
@@ -2901,13 +2937,6 @@ bool check_playing(DESCRIPTOR_DATA *d, char *name)
 			&& dold->connected != CON_GET_OLD_PASSWORD
 			&& !str_cmp(name, switchedFrom ? switchedFrom->true_name : driving->true_name))
 		{
-			// TODO: Live use-after-free on `d`, not on `dold`. The walk and the
-			// Deref guards above protect the descriptors being walked; nothing
-			// protects the parameter. If d's output buffer overflows (outsize >=
-			// 32000), write_to_buffer calls close_socket(d), which erases and frees
-			// it, and the second write_to_buffer and the d->connected store then
-			// touch freed memory. A fix has to stop touching d once a write has
-			// closed it, and tell the caller that d is gone.
 			write_to_buffer(d, "That character is already playing.\n\r", 0);
 			write_to_buffer(d, "Do you wish to connect anyway (Y/N)?", 0);
 
@@ -3087,8 +3116,10 @@ void act_area(const char *format, CHAR_DATA *ch, CHAR_DATA *victim)
 		return;
 
 	/*colorconv(format, format, ch);*/
-	// Protected rather than plain: the write_to_buffer below can overflow and
-	// close the connection it is writing to, which erases a node in this list.
+	// Protected rather than plain. The write_to_buffer below used to be able to
+	// overflow and close the connection it was writing to, which erased a node
+	// in this list. An overflow only marks the connection now, but the protected
+	// walk costs nothing and does not depend on that.
 	for (OwningListWalk<DESCRIPTOR_DATA> walk(descriptor_list); !walk.Done(); walk.Step())
 	{
 		DESCRIPTOR_DATA *d = walk.Current();

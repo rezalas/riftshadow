@@ -329,8 +329,9 @@ private:
 
 	/// A connection with a growable output buffer and no socket behind it.
 	/// write_to_buffer is pure buffer manipulation, so output capture needs
-	/// nothing else: the only path that touches the socket is the overflow
-	/// branch, which a test does not reach.
+	/// nothing else. Even its overflow branch only marks the connection
+	/// closePending; the socket is touched only when ClosePendingConnections
+	/// closes it, and close(-1) on this fake one is harmless.
 	DESCRIPTOR_DATA *CreateConnection(CHAR_DATA *ch)
 	{
 		auto d = new descriptor_data();

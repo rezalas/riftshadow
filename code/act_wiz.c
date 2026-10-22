@@ -3804,8 +3804,8 @@ void do_return(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 
 	// Read again rather than reusing the local above. The message and the wiznet
 	// call between there and here both reach the output buffer, and a buffer that
-	// overflows closes this connection and destroys it. There is nothing to
-	// return to if that has happened.
+	// overflowed used to close this connection and destroy it on the spot. It is
+	// only marked now, but the re-read does not have to depend on that.
 	connection = Deref(ch->desc);
 
 	if (connection == nullptr)

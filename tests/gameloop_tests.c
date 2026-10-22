@@ -19,6 +19,11 @@
 // use-after-free itself is a write into freed memory, which a plain build does
 // not notice, so these tests catch a regression in the sanitizer build, where
 // AddressSanitizer reports it. That build runs in CI.
+//
+// An overflowing output buffer no longer closes anything mid-command -- it
+// marks the connection for ClosePendingConnections -- so the closes here are
+// the direct ones: nanny's, and an immortal disconnecting their own connection,
+// which reaches close_socket the way quit does without quit's player file.
 
 /// Puts a connection on descriptor_list for the life of a scenario, which is
 /// what init_descriptor does for a real one. close_socket only destroys
@@ -87,8 +92,8 @@ private:
 };
 
 /// Fills the output buffer to its ceiling, so the next write of any length
-/// overflows it and write_to_buffer closes the connection. The buffer really
-/// is that size, so nothing reading up to outtop strays out of it.
+/// overflows it and write_to_buffer marks the connection closePending. The
+/// buffer really is that size, so nothing reading up to outtop strays out of it.
 static void FillOutputToCeiling(DESCRIPTOR_DATA *d)
 {
 	delete[] d->outbuf;
@@ -99,6 +104,15 @@ static void FillOutputToCeiling(DESCRIPTOR_DATA *d)
 	memset(d->outbuf, 'x', d->outtop);
 }
 
+/// Makes the player an immortal who can use disconnect, and returns the line
+/// that disconnects their own connection. A fixture connection's descriptor
+/// number is -1, which disconnect accepts as a number.
+static const char *SelfDisconnect(CHAR_DATA *player)
+{
+	player->level = MAX_LEVEL;
+	return "disconn -1";
+}
+
 /// Hands the connection a line of input, as read_from_descriptor would.
 static void TypeLine(DESCRIPTOR_DATA *d, const char *line)
 {
@@ -107,7 +121,7 @@ static void TypeLine(DESCRIPTOR_DATA *d, const char *line)
 
 SCENARIO("a command that closes its own connection", "[gameloop][lifetime]")
 {
-	GIVEN("a playing character whose output buffer is at its ceiling")
+	GIVEN("a playing immortal")
 	{
 		TestWorld world;
 		ROOM_INDEX_DATA *room = world.CreateRoom();
@@ -116,11 +130,9 @@ SCENARIO("a command that closes its own connection", "[gameloop][lifetime]")
 		auto connection = d->self;
 		ListedConnection listed(d, true);
 
-		FillOutputToCeiling(d);
-
-		WHEN("the player types a command whose reply overflows the buffer")
+		WHEN("they type a command that disconnects their own connection")
 		{
-			TypeLine(d, "xyzzy");
+			TypeLine(d, SelfDisconnect(player));
 			ProcessConnectionInput(d);
 
 			THEN("the connection is closed, and the dispatch did not use it afterwards")
@@ -130,7 +142,7 @@ SCENARIO("a command that closes its own connection", "[gameloop][lifetime]")
 		}
 	}
 
-	GIVEN("a playing character with a queued command and a full output buffer")
+	GIVEN("a playing immortal with a queued command that disconnects them")
 	{
 		TestWorld world;
 		ROOM_INDEX_DATA *room = world.CreateRoom();
@@ -139,14 +151,12 @@ SCENARIO("a command that closes its own connection", "[gameloop][lifetime]")
 		auto connection = d->self;
 		ListedConnection listed(d, true);
 
-		FillOutputToCeiling(d);
-
-		strcpy(player->pcdata->queue[0], "xyzzy");
+		strcpy(player->pcdata->queue[0], SelfDisconnect(player));
 		player->pcdata->write_next = 1;
 		player->pcdata->pending = true;
 		player->wait = 0;
 
-		WHEN("the queued command runs and its reply overflows the buffer")
+		WHEN("the queued command runs")
 		{
 			ProcessConnectionInput(d);
 
@@ -184,12 +194,13 @@ SCENARIO("a command that closes its own connection", "[gameloop][lifetime]")
 
 	GIVEN("an idle player in limbo, and a bystander where they will return to, both buffers full")
 	{
-		// stop_idling brings the player back with a room message. The
-		// bystander's full buffer overflows on it, and closing a playing
-		// connection tells the room that the bystander lost their link. The
-		// returning player is in that room by then, so that message overflows
-		// the player's own buffer and closes the player's connection, before
-		// any command has run at all.
+		// stop_idling brings the player back with a room message, and the
+		// bystander's full buffer overflows on it. That used to close the
+		// bystander on the spot, and closing a playing connection tells the
+		// room they lost their link -- which overflowed the returning player's
+		// buffer too and closed their connection before any command had run.
+		// An overflow now only marks a connection, so the chain stops at the
+		// first link.
 		TestWorld world;
 		ROOM_INDEX_DATA *limbo = world.CreateRoom("Limbo");
 		ROOM_INDEX_DATA *room = world.CreateRoom();
@@ -197,6 +208,7 @@ SCENARIO("a command that closes its own connection", "[gameloop][lifetime]")
 
 		CHAR_DATA *bystander = world.CreatePlayer("Bystander", room);
 		DESCRIPTOR_DATA *bd = Deref(bystander->desc);
+		auto bystanderConnection = bd->self;
 		ListedConnection bystanderListed(bd, true);
 
 		CHAR_DATA *player = world.CreatePlayer("Tester", limbo);
@@ -213,9 +225,36 @@ SCENARIO("a command that closes its own connection", "[gameloop][lifetime]")
 			TypeLine(d, "xyzzy");
 			ProcessConnectionInput(d);
 
-			THEN("the connection is closed, and nothing after the wake used it")
+			THEN("the bystander is waiting to close, and the player was back in the room to run the command")
 			{
-				REQUIRE(Deref(connection) == nullptr);
+				REQUIRE(Deref(bystanderConnection) == bd);
+				REQUIRE(bd->closePending);
+				REQUIRE(Deref(connection) == d);
+				REQUIRE(player->in_room == room);
+			}
+		}
+	}
+
+	GIVEN("a playing character whose connection is waiting to close")
+	{
+		TestWorld world;
+		ROOM_INDEX_DATA *room = world.CreateRoom();
+		CHAR_DATA *player = world.CreatePlayer("Tester", room);
+		DESCRIPTOR_DATA *d = Deref(player->desc);
+		ListedConnection listed(d, true);
+
+		d->closePending = true;
+
+		WHEN("a line arrives on it")
+		{
+			TypeLine(d, SelfDisconnect(player));
+			ProcessConnectionInput(d);
+
+			THEN("the line is not run: it is still in the input buffer, and the connection is still there")
+			{
+				REQUIRE(strcmp(d->inbuf, "disconn -1\n") == 0);
+				REQUIRE(d->incomm[0] == '\0');
+				REQUIRE(Deref(player->desc) == d);
 			}
 		}
 	}

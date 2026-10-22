@@ -186,12 +186,22 @@ void CGameLoop::ProcessInput()
 void ProcessConnectionInput(DESCRIPTOR_DATA *d)
 {
 	// Every command below can close this connection: quit does it on purpose,
-	// nanny does it for a bad name or password, and any reply that overflows
-	// the output buffer does it through write_to_buffer. Closing erases the
+	// nanny does it for a bad name or password, and an immortal can disconnect
+	// it. (Overflowing the output buffer no longer does; it only sets
+	// closePending, for ClosePendingConnections.) Closing erases the
 	// descriptor from descriptor_list, which destroys it. So the handle is
 	// copied now, and `d` is read again through it after each dispatch rather
 	// than used as it was.
 	auto connection = d->self;
+
+	// Its output overflowed and it closes at the end of the pulse. Nothing it
+	// asks for now would reach it. Its wait stops counting down and its queue
+	// stops draining for that short time, which is what happened to it before as
+	// well: an overflow closed it on the spot, and a link-dead character is not
+	// on any connection for this loop to count down.
+	if (d->closePending)
+		return;
+
 	CHAR_DATA *player = Deref(d->character);
 
 	if (player != nullptr && player->wait > 0)
@@ -248,10 +258,13 @@ void ProcessConnectionInput(DESCRIPTOR_DATA *d)
 
 		// stop_idling moves the character back out of limbo and fires a
 		// room act, so read the connection again rather than carrying
-		// the value above across it. The act can close this connection
-		// too, though it never writes to it: a bystander whose buffer
-		// overflows on it is closed, and that close tells the room -- now
-		// including this character -- that they lost their link.
+		// the value above across it. The connection is read again as well.
+		// The act used to be able to close it without writing to it: a
+		// bystander whose buffer overflowed on it was closed on the spot, and
+		// that close told the room, this character now included, that they
+		// lost their link. Overflow is deferred now, so that chain cannot
+		// start, but the re-read is what this code relies on rather than the
+		// details of what an act can reach.
 		d = Deref(connection);
 
 		if (d == nullptr)
@@ -297,6 +310,12 @@ void ProcessConnectionInput(DESCRIPTOR_DATA *d)
 
 void CGameLoop::ProcessOutput()
 {
+	// Before the flush, so that nothing below prompts a connection that has
+	// already overflowed, and again after it, because the prompt, a snooper's
+	// copy and a failed flush's close can all overflow somebody else. Together
+	// they close everything that overflowed this pulse before the next begins.
+	ClosePendingConnections();
+
 	for (OwningListWalk<DESCRIPTOR_DATA> walk(descriptor_list); !walk.Done(); walk.Step())
 	{
 		DESCRIPTOR_DATA *d = walk.Current();
@@ -305,8 +324,9 @@ void CGameLoop::ProcessOutput()
 		{
 			if (!process_output(d, true))
 			{
-				// Read after process_output, not before: its write path can
-				// overflow the output buffer and close the connection.
+				// Read after process_output, not before. Its write path used to
+				// be able to overflow the output buffer and close the connection;
+				// an overflow only marks it now, but the order costs nothing.
 				CHAR_DATA *player = Deref(d->character);
 
 				if (player != nullptr && player->level > 1)
@@ -317,6 +337,8 @@ void CGameLoop::ProcessOutput()
 			}
 		}
 	}
+
+	ClosePendingConnections();
 }
 
 void CGameLoop::SleepUntilSynchronized()

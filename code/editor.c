@@ -120,10 +120,11 @@ void string_add(CHAR_DATA *ch, char *argument)
 {
 	// Read once, and read again below wherever a message has been sent since.
 	// An earlier note here said nothing in this function can close the socket.
-	// That is not so: send_to_char reaches the output buffer, and a buffer that
-	// passes its ceiling closes the connection and destroys it. Most of the
-	// touches below already happen before their message, and the two that did
-	// not have been reordered.
+	// That was not so at the time: send_to_char reaches the output buffer, and a
+	// buffer that passed its ceiling closed the connection and destroyed it.
+	// Most of the touches below already happen before their message, and the two
+	// that did not were reordered. An overflow only marks the connection now, so
+	// the re-reads are belt and braces rather than load-bearing.
 	DESCRIPTOR_DATA *connection = Deref(ch->desc);
 	char buf[MAX_STRING_LENGTH];
 	char obuf[MSL * 2];

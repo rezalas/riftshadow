@@ -111,6 +111,14 @@ int select (int width, fd_set *readfds, fd_set *writefds, fd_set *exceptfds, str
 int init_socket  (int port);
 void init_descriptor (int control);
 void close_socket (DESCRIPTOR_DATA *dclose);
+/*
+ * Closes every connection marked closePending, repeating until none is left,
+ * since a close tells the room and that can overflow somebody else. The game
+ * loop calls it before and after flushing output each pulse, at points where
+ * nothing holds a pointer to a connection, which is what makes it safe to
+ * destroy them there.
+ */
+void ClosePendingConnections ();
 bool read_from_descriptor (DESCRIPTOR_DATA *d);
 /*
  * Transfer one line from input buffer to input line.
@@ -141,15 +149,17 @@ bool output_buffer (DESCRIPTOR_DATA *d);
 /*
  * Append onto an output buffer.
  *
- * This can destroy the connection it is given. A buffer that has grown to its
- * ceiling and still cannot fit the text closes the socket, which frees the
- * descriptor and expires every handle to it, including the character's ch->desc
- * and any snooper's snoop_by.
+ * This never destroys the connection it is given. A buffer that has grown to
+ * its ceiling and still cannot fit the text marks the connection closePending:
+ * the buffer is emptied, later output to it is dropped, and the game loop closes
+ * it by the end of the pulse through ClosePendingConnections.
  *
- * That matters to callers well upstream, because send_to_char, act and every
- * page dump end here. A pointer to a descriptor, or to a character reached
- * through one, does not survive being used to write to it. Re-read it through
- * its handle afterwards and test the result. See entity/handles.h.
+ * It used to close the socket on the spot, which made send_to_char, act and
+ * every page dump calls that could free the character being written to. A
+ * great many callers re-read their descriptor and character through the handle
+ * after writing because of that. Those re-reads are still right, because other
+ * calls do close connections and extract characters directly. See
+ * entity/handles.h.
  */
 void write_to_buffer (DESCRIPTOR_DATA *d, const char *txt, int length);
 /*

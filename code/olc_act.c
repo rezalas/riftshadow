@@ -566,8 +566,9 @@ bool redit_mshow(CHAR_DATA *ch, char *argument)
 	medit_show(ch, argument);
 
 	// Resolved again rather than reusing the pointer above. medit_show is a page
-	// dump, and a dump long enough to pass the output buffer's ceiling closes the
-	// connection and destroys it, which leaves the local standing for nothing.
+	// dump, and a dump long enough to pass the output buffer's ceiling used to
+	// close the connection and destroy it, which left the local standing for
+	// nothing. An overflow only marks the connection now; the re-read stays.
 	connection = Deref(ch->desc);
 
 	if (connection == nullptr)
