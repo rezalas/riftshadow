@@ -147,14 +147,13 @@ std::string get_demon_names(CHAR_DATA *ch)
 
 	buf2[0] = '\0';
 
-	// TODO: lesserdata has MAX_LESSER entries, so lesserdata[i] reads past its
-	// end for every i in this loop. The intended read is greaterdata[i -
-	// MAX_LESSER]. The output is right today only because greaterdata follows
-	// lesserdata in pc_data, so the overrun happens to land on it. That is
-	// undefined behaviour, and gcc reports it under -Warray-bounds in Release.
+	// demon_table lists the greater demons after the lesser ones, so the table
+	// index runs on past MAX_LESSER while greaterdata starts again at zero.
+	// This used to read lesserdata[i], past its end, and was right only because
+	// greaterdata happens to follow it in pc_data.
 	for (i = MAX_LESSER; i < MAX_GREATER + MAX_LESSER; i++)
 	{
-		if ((favor = ch->pcdata->lesserdata[i]) != FAVOR_NONE)
+		if ((favor = ch->pcdata->greaterdata[i - MAX_LESSER]) != FAVOR_NONE)
 		{
 			sprintf(buf3, "%s (%s)  ",
 				capitalize(demon_table[i].name),

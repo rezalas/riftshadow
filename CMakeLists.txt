@@ -68,6 +68,16 @@ if(CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
 	add_compile_options(-Werror=null-dereference)
 endif()
 
+# Same shape, same reasons. -Wall reports this one, but only where an optimized
+# build's range analysis can see the index, so it is silent at -O0 and the
+# Release leg of CI is what holds it. Both sites it found were live: a
+# constructor clearing a third slot of two-element arrays, and a loop reading
+# the lesser-demon favors at indexes that belonged to the greater ones. Each was
+# right only because of what the struct happened to lay out next.
+if(CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
+	add_compile_options(-Werror=array-bounds)
+endif()
+
 # This is mostly a severity change rather than new diagnostics. Nine of the
 # eleven groups below are already reported by the -Wall -Wextra above, and all
 # that happens here is the build stops when one of them fires. Only
