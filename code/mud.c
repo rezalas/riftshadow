@@ -254,6 +254,10 @@ void CMud::LoadObjLimits()
 			temp_player_name[0] = '\0';
 			letter = fread_letter(fpChar);
 
+			// TODO: Nothing here tests for end of file. fread_letter returns EOF on
+			// every call once the file is exhausted, so a .plr file that ends before
+			// its #End marker (a zero-byte file is enough) makes this loop spin
+			// forever and boot hangs. do_llimit in db.c has the same loop.
 			if (letter != '#')
 				continue;
 

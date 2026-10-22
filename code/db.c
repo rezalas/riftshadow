@@ -3499,6 +3499,9 @@ void do_llimit(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 
 			letter = fread_letter(fpChar);
 
+			// TODO: No end-of-file test, the same defect as CMud::LoadObjLimits in
+			// mud.c. A .plr file without an #End marker, including a zero-byte one,
+			// makes this loop spin forever and hangs the game.
 			if (letter != '#')
 				continue;
 

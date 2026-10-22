@@ -728,6 +728,10 @@ bool medit_vnum(CHAR_DATA *ch, char *argument)
 	pMob->next = mob_index_hash[iHash];
 	mob_index_hash[iHash] = pMob;
 
+	// TODO: M resets that name the old vnum are not rewritten, so they go on
+	// loading whatever mob now holds it, or nothing at all. The builder is only
+	// warned. Rewriting the resets is a behaviour change to OLC and still has to
+	// be decided.
 	send_to_char("Vnum set.\n\r", ch);
 	send_to_char("Resets referring to the old vnum are NOT updated. Check them before saving.\n\r", ch);
 	return true;

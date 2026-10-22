@@ -1450,6 +1450,10 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
 				return;
 			}
 
+			// TODO: Same overflow hazard as check_playing. If this write overflows
+			// d's buffer, write_to_buffer closes and frees d, and close_socket also
+			// frees the character because d is not yet CON_PLAYING. The code below
+			// goes on to use both: ch->true_name here, and d inside check_playing.
 			write_to_buffer(d, echo_on_str, 0);
 
 			if (check_playing(d, (ch->true_name ? ch->true_name : ch->name)))
@@ -2897,6 +2901,13 @@ bool check_playing(DESCRIPTOR_DATA *d, char *name)
 			&& dold->connected != CON_GET_OLD_PASSWORD
 			&& !str_cmp(name, switchedFrom ? switchedFrom->true_name : driving->true_name))
 		{
+			// TODO: Live use-after-free on `d`, not on `dold`. The walk and the
+			// Deref guards above protect the descriptors being walked; nothing
+			// protects the parameter. If d's output buffer overflows (outsize >=
+			// 32000), write_to_buffer calls close_socket(d), which erases and frees
+			// it, and the second write_to_buffer and the d->connected store then
+			// touch freed memory. A fix has to stop touching d once a write has
+			// closed it, and tell the caller that d is gone.
 			write_to_buffer(d, "That character is already playing.\n\r", 0);
 			write_to_buffer(d, "Do you wish to connect anyway (Y/N)?", 0);
 

@@ -358,6 +358,10 @@ OBJ_INDEX_DATA *new_obj_index(void)
 	pObj->material = palloc_string("unknown"); /* ROM */
 	pObj->condition = 100;					   /* ROM */
 	pObj->verb = nullptr;
+	// TODO: wear_echo and remove_echo are char *[2] (obj_index_data.h), so the
+	// [2] stores below write out of bounds. Today they land on remove_echo[0] and
+	// verb, both of which are set to null anyway, so nothing visible breaks, but
+	// it is undefined behaviour. gcc reports both under -Warray-bounds in Release.
 	pObj->wear_echo[0] = nullptr;
 	pObj->wear_echo[1] = nullptr;
 	pObj->wear_echo[2] = nullptr;
