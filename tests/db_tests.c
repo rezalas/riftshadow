@@ -139,3 +139,78 @@ SCENARIO("Testing random number generator", "[random_mm]")
 		}
 	}
 }
+// The loaders that scan player files read letters until one is '#', which opens
+// a section, and stop at the "#End" section. They never asked whether the file
+// had run out first, so a file that ends without "#End" -- a zero-byte one is
+// enough -- kept them reading end-of-file forever and hung the boot.
+// SkipToSection is that scan with the question asked.
+
+namespace
+{
+	/// A temporary file holding the text given, positioned at its start.
+	FILE *FileHolding(const char *text)
+	{
+		FILE *fp = tmpfile();
+
+		fputs(text, fp);
+		rewind(fp);
+
+		return fp;
+	}
+}
+
+SCENARIO("skipping to the next section of a player file", "[SkipToSection]")
+{
+	GIVEN("an empty file")
+	{
+		FILE *fp = FileHolding("");
+
+		THEN("there is no section to find")
+		{
+			REQUIRE_FALSE(SkipToSection(fp));
+		}
+
+		fclose(fp);
+	}
+
+	GIVEN("a file that has text but no section marker")
+	{
+		FILE *fp = FileHolding("  Name Tester~\n Levl 10\n");
+
+		THEN("the scan reaches the end and says so")
+		{
+			REQUIRE_FALSE(SkipToSection(fp));
+		}
+
+		fclose(fp);
+	}
+
+	GIVEN("a file with text before an #End marker")
+	{
+		FILE *fp = FileHolding("Vnum 1234\n\n#End\n");
+
+		THEN("the scan stops after the '#', so the next word is the section name")
+		{
+			REQUIRE(SkipToSection(fp));
+			REQUIRE(strcmp(fread_word(fp), "End") == 0);
+		}
+
+		fclose(fp);
+	}
+
+	GIVEN("a file with two sections")
+	{
+		FILE *fp = FileHolding("#O\nVnum 1234\n#End\n");
+
+		THEN("each scan finds the next one, and then there are none")
+		{
+			REQUIRE(SkipToSection(fp));
+			REQUIRE(strcmp(fread_word(fp), "O") == 0);
+			REQUIRE(SkipToSection(fp));
+			REQUIRE(strcmp(fread_word(fp), "End") == 0);
+			REQUIRE_FALSE(SkipToSection(fp));
+		}
+
+		fclose(fp);
+	}
+}

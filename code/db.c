@@ -2160,6 +2160,20 @@ char fread_letter(FILE *fp)
 	return c;
 }
 
+bool SkipToSection(FILE *fp)
+{
+	// fread_letter answers EOF on every call once the file has run out, so the
+	// end has to be asked about directly, or a file with no marker left in it
+	// is read forever.
+	while (fread_letter(fp) != '#')
+	{
+		if (feof(fp))
+			return false;
+	}
+
+	return true;
+}
+
 /*
  * Read a number from a file.
  */
@@ -3493,17 +3507,16 @@ void do_llimit(CHAR_DATA *ch, [[maybe_unused]] char *argument)
 		for (;;)
 		{
 			int vnum;
-			char letter;
 			char *word;
 			OBJ_INDEX_DATA *pObjIndex;
 
-			letter = fread_letter(fpChar);
-
-			// TODO: No end-of-file test, the same defect as CMud::LoadObjLimits in
-			// mud.c. A .plr file without an #End marker, including a zero-byte one,
-			// makes this loop spin forever and hangs the game.
-			if (letter != '#')
-				continue;
+			// A file that ends before its #End -- a zero-byte one, say -- used to
+			// keep this loop reading end-of-file forever and hang the game.
+			if (!SkipToSection(fpChar))
+			{
+				RS.Logger.Warn("Do_llimit: {} ends without #End.", strPlr);
+				break;
+			}
 
 			word = fread_word(fpChar);
 

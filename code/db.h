@@ -196,6 +196,11 @@ MOB_INDEX_DATA *get_mob_index (int vnum);
 OBJ_INDEX_DATA *get_obj_index(int vnum);
 ROOM_INDEX_DATA *get_room_index (int vnum);
 char fread_letter (FILE *fp);
+/// Reads past everything up to and including the next '#', which opens a
+/// section in a player file. Returns false if the file ends first.
+/// @param fp The file to read.
+/// @return Whether a section marker was found.
+bool SkipToSection (FILE *fp);
 int fread_number (FILE *fp);
 long fread_flag (FILE *fp);
 void fread_flag_new (long vector[], FILE *fp);

@@ -247,19 +247,18 @@ void CMud::LoadObjLimits()
 		for (; ;)
 		{
 			int vnum, lastlogin = 0, plevel = 0;
-			char letter;
 			char *word;
 			OBJ_INDEX_DATA *pObjIndex;
 
 			temp_player_name[0] = '\0';
-			letter = fread_letter(fpChar);
 
-			// TODO: Nothing here tests for end of file. fread_letter returns EOF on
-			// every call once the file is exhausted, so a .plr file that ends before
-			// its #End marker (a zero-byte file is enough) makes this loop spin
-			// forever and boot hangs. do_llimit in db.c has the same loop.
-			if (letter != '#')
-				continue;
+			// A file that ends before its #End -- a zero-byte one, say -- used to
+			// keep this loop reading end-of-file forever and hang the boot.
+			if (!SkipToSection(fpChar))
+			{
+				RS.Logger.Warn("LoadObjLimits: {} ends without #End.", strPlr);
+				break;
+			}
 
 			word = fread_word(fpChar);
 
