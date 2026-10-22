@@ -1842,7 +1842,7 @@ int apply_ac(OBJ_DATA *obj, WearLocation iWear, int type)
 			return obj->value[type];
 		case WEAR_FINGER_R:
 			return obj->value[type];
-		// Not armour slots, so they add nothing to armour class. WEAR_FLOAT is the
+		// Not armor slots, so they add nothing to armor class. WEAR_FLOAT is the
 		// same slot as WEAR_DUAL_WIELD (see enums.h), so one label covers both.
 		case WEAR_BRAND:
 		case WEAR_COSMETIC:

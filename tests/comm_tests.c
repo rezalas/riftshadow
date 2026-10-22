@@ -252,18 +252,18 @@ SCENARIO("closing a pending connection can overflow another, and both close in t
 	GIVEN("two playing characters in one room, both buffers full, the second already overflowed")
 	{
 		// Closing a playing connection tells the room the character lost their
-		// link. That can overflow a neighbour's buffer and mark it too. The
-		// neighbour is listed ahead of the one being closed, so a single walk
+		// link. That can overflow a neighbor's buffer and mark it too. The
+		// neighbor is listed ahead of the one being closed, so a single walk
 		// has already passed it by the time it is marked.
 		TestWorld world;
 		auto room = world.CreateRoom();
-		auto neighbour = world.CreatePlayer("Neighbour", room);
+		auto neighbor = world.CreatePlayer("Neighbor", room);
 		auto overflowed = world.CreatePlayer("Overflowed", room);
-		DESCRIPTOR_DATA *nd = Deref(neighbour->desc);
+		DESCRIPTOR_DATA *nd = Deref(neighbor->desc);
 		DESCRIPTOR_DATA *od = Deref(overflowed->desc);
-		auto neighbourConnection = nd->self;
+		auto neighborConnection = nd->self;
 		auto overflowedConnection = od->self;
-		ListedConnection neighbourListed(nd);
+		ListedConnection neighborListed(nd);
 		ListedConnection overflowedListed(od);
 
 		FillOutputToCeiling(nd);
@@ -276,7 +276,7 @@ SCENARIO("closing a pending connection can overflow another, and both close in t
 			THEN("both are closed, not just the one that was marked when it started")
 			{
 				REQUIRE(Deref(overflowedConnection) == nullptr);
-				REQUIRE(Deref(neighbourConnection) == nullptr);
+				REQUIRE(Deref(neighborConnection) == nullptr);
 			}
 		}
 	}
