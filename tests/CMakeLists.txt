@@ -20,6 +20,7 @@ set(TEST_SRC_FILES act_obj_tests.c
 	class_tests.c
 	db_tests.c
 	fight_tests.c
+	gameloop_tests.c
 	handler_tests.c
 	help_tests.c
 	induction_tests.c

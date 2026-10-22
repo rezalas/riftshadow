@@ -4,6 +4,8 @@
 #include <sys/select.h>
 #include <sys/time.h>
 
+#include "entity/fwd.h"
+
 //
 // The main game loop.  It owns the listening socket, the descriptor poll and
 // the pulse clock, and it runs until merc_down is set.
@@ -41,5 +43,15 @@ private:
 	int control;
 	timeval last_time;
 };
+
+/// Runs whatever one connection has waiting this pulse, after its socket has
+/// been read: a queued command if the character's wait has run out, otherwise
+/// the next line from its input buffer, dispatched by connection state.
+///
+/// A free function rather than a step of CGameLoop because none of it touches
+/// the poll sets, and because it can be driven without a socket, which is how
+/// the tests reach it.
+/// @param d The connection. Any command it runs can close it.
+void ProcessConnectionInput(DESCRIPTOR_DATA *d);
 
 #endif /* GAMELOOP_H */
