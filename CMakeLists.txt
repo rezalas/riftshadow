@@ -108,9 +108,15 @@ endif()
 # -Wunsequenced, which correctly stays quiet because C++17 made `i = i++` well
 # defined. Rejected and inert are grouped together so that the gated list means
 # one thing, which is that the diagnostic is GCC only in practice.
+#
+# -Wformat joined the list later, after the enum-class conversion. A scoped enum
+# passed to printf's %d is the wrong type even when its underlying type is int,
+# and five of them had landed, four in the player-file writers. The bytes were
+# right only because of how the ABI passes a scoped enum. Both compilers emit
+# this one, checked the same way as the rest.
 add_compile_options(-Werror=implicit-fallthrough -Werror=empty-body
 	-Werror=tautological-compare -Werror=missing-field-initializers
-	-Werror=misleading-indentation -Werror=sign-compare)
+	-Werror=misleading-indentation -Werror=sign-compare -Werror=format)
 if(CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
 	add_compile_options(-Werror=sequence-point
 		-Werror=int-in-bool-context -Werror=bool-compare

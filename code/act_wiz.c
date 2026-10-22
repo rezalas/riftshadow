@@ -1949,7 +1949,7 @@ void do_ostat(CHAR_DATA *ch, char *argument)
 		obj->in_room == nullptr ? 0 : obj->in_room->vnum,
 		container == nullptr ? "(none)" : container->short_descr,
 		objCarrier == nullptr ? "(none)" : can_see(ch, objCarrier) ? objCarrier->name : "someone",
-		obj->wear_loc);
+		static_cast<int>(obj->wear_loc));
 	send_to_char(buf, ch);
 
 	sprintf(buf, "Values: %d %d %d %d %d\n\r",
