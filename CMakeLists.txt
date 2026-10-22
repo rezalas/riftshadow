@@ -114,9 +114,18 @@ endif()
 # and five of them had landed, four in the player-file writers. The bytes were
 # right only because of how the ABI passes a scoped enum. Both compilers emit
 # this one, checked the same way as the rest.
+#
+# -Wswitch came from the same conversion. Once a family is an enum class, a
+# switch over it that leaves values out is reported, and the conversion of the
+# first 23 families left 21 such switches unread. None was a live defect, but
+# reading them is the point: the next family converted will report its gaps
+# here instead of adding to an uncounted pile. Each switch now lists the values
+# it leaves alone, or says in a comment why everything else does nothing. Both
+# compilers emit this one too.
 add_compile_options(-Werror=implicit-fallthrough -Werror=empty-body
 	-Werror=tautological-compare -Werror=missing-field-initializers
-	-Werror=misleading-indentation -Werror=sign-compare -Werror=format)
+	-Werror=misleading-indentation -Werror=sign-compare -Werror=format
+	-Werror=switch)
 if(CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
 	add_compile_options(-Werror=sequence-point
 		-Werror=int-in-bool-context -Werror=bool-compare

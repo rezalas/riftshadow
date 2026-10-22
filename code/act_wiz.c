@@ -2120,6 +2120,9 @@ void do_ostat(CHAR_DATA *ch, char *argument)
 				cont_bit_name(obj->value[1]));
 			send_to_char(buf, ch);
 			break;
+		// Every other item type has no values worth naming.
+		default:
+			break;
 	}
 
 	if (obj->pIndexData->notes)

@@ -5533,6 +5533,12 @@ void do_dirt(CHAR_DATA *ch, char *argument)
 		case SECT_DESERT:
 			chance += 10;
 			break;
+		// No terrain modifier. The sectors listed above are ROM's. Burning, cave,
+		// conflagration, ice, none, park, road, snow, swamp, trail and vertical were
+		// added later and never given one. Whether any of them should is a balance
+		// question, not something to settle here.
+		default:
+			break;
 	}
 
 	if (chance == 0)

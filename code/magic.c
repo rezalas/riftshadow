@@ -3403,6 +3403,9 @@ void spell_identify(int /* sn */, int /* level */, CHAR_DATA *ch, SpellTarget vo
 				send_to_char(buf, ch);
 
 			break;
+		// Every other item type has nothing more to identify.
+		default:
+			break;
 	}
 
 	for (const auto &app : obj->apply)

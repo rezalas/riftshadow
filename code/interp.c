@@ -972,6 +972,10 @@ void interpret(CHAR_DATA *ch, char *argument)
 			case POS_FIGHTING:
 				send_to_char("No way!  You are still fighting!\n\r", ch);
 				break;
+			// Inside `position < required`. Standing is the highest position, so it is
+			// never below what a command asks for.
+			case POS_STANDING:
+				break;
 		}
 
 		return;
@@ -1202,6 +1206,12 @@ bool check_social(CHAR_DATA *ch, char *command, char *argument)
 
 			send_to_char("In your dreams, or what?\n\r", ch);
 			return true;
+		// Every other position can perform a social.
+		case POS_FIGHTING:
+		case POS_RESTING:
+		case POS_SITTING:
+		case POS_STANDING:
+			break;
 	}
 
 	one_argument(argument, arg);

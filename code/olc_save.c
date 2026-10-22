@@ -238,6 +238,9 @@ void save_mobile(FILE *fp, MOB_INDEX_DATA *pMobIndex)
 			case CLASS_SORCERER:
 				fprintf(fp, "%s %s", sphere_table[pMobIndex->ele_major].name, sphere_table[pMobIndex->ele_para].name);
 				break;
+			// Only warriors (styles) and sorcerers (spheres) carry extra class data.
+			default:
+				break;
 		}
 
 		fprintf(fp, "\n");

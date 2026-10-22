@@ -861,6 +861,9 @@ void fwrite_obj(CHAR_DATA *ch, OBJ_DATA *obj, FILE *fp, int iNest)
 				fprintf(fp, "Spell 3 '%s'\n", skill_table[obj->value[3]].name);
 
 			break;
+		// Only these types hold spell numbers, which are saved by name.
+		default:
+			break;
 	}
 
 	for (auto &paf : obj->affected)

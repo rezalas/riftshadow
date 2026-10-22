@@ -1188,6 +1188,11 @@ void affect_modify(CHAR_DATA *ch, AFFECT_DATA *paf, bool fAdd)
 			case TO_VULN:
 				BITWISE_OR(ch->vuln_flags, paf->bitvector);
 				break;
+			// Object and weapon affects carry no character bits. Nothing gives a
+			// character affect either of these, and ROM left them out the same way.
+			case TO_OBJECT:
+			case TO_WEAPON:
+				break;
 		}
 	}
 	else
@@ -1205,6 +1210,10 @@ void affect_modify(CHAR_DATA *ch, AFFECT_DATA *paf, bool fAdd)
 				break;
 			case TO_VULN:
 				BITWISE_XAND(ch->vuln_flags, paf->bitvector);
+				break;
+			// As above: object and weapon affects carry no character bits.
+			case TO_OBJECT:
+			case TO_WEAPON:
 				break;
 		}
 	}
@@ -1392,6 +1401,10 @@ void affect_check(CHAR_DATA *ch, AffectWhere where, long vector[])
 					break;
 				case TO_VULN:
 					BITWISE_OR(ch->vuln_flags, vector);
+					break;
+				// As in affect_modify: object and weapon affects carry no character bits.
+				case TO_OBJECT:
+				case TO_WEAPON:
 					break;
 			}
 
@@ -1829,6 +1842,15 @@ int apply_ac(OBJ_DATA *obj, WearLocation iWear, int type)
 			return obj->value[type];
 		case WEAR_FINGER_R:
 			return obj->value[type];
+		// Not armour slots, so they add nothing to armour class. WEAR_FLOAT is the
+		// same slot as WEAR_DUAL_WIELD (see enums.h), so one label covers both.
+		case WEAR_BRAND:
+		case WEAR_COSMETIC:
+		case WEAR_DUAL_WIELD:
+		case WEAR_LIGHT:
+		case WEAR_NONE:
+		case WEAR_WIELD:
+			break;
 	}
 
 	return 0;
@@ -4383,6 +4405,9 @@ void affect_check_obj(OBJ_DATA *obj, ObjAffectWhere where, long vector[])
 				case TO_OBJ_AFFECTS:
 					BITWISE_OR(obj->affected_by, vector);
 					break;
+				// Applies set no flag bits on the object.
+				case TO_OBJ_APPLY:
+					break;
 			}
 
 			return;
@@ -4924,6 +4949,11 @@ void modify_location(CHAR_DATA *ch, ApplyLocation location, int mod, bool add)
 				mod = 0 - mod;
 				ch->dam_mod *= 1.00f / (1.00f + (float)mod / 100.00f);
 			}
+			break;
+		// APPLY_LUCK is marked unused in enums.h, and APPLY_OBJ_PROPERTIES applies
+		// to objects rather than characters. No area file uses either.
+		case APPLY_LUCK:
+		case APPLY_OBJ_PROPERTIES:
 			break;
 	}
 }

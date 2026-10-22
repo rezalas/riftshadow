@@ -495,6 +495,15 @@ int move_gain(CHAR_DATA *ch)
 			case POS_RESTING:
 				gain += get_curr_stat(ch, STAT_DEX) / 2;
 				break;
+			// Only sleeping and resting add to the base gain.
+			case POS_DEAD:
+			case POS_FIGHTING:
+			case POS_INCAP:
+			case POS_MORTAL:
+			case POS_SITTING:
+			case POS_STANDING:
+			case POS_STUNNED:
+				break;
 		}
 
 		if (is_hungry(ch))
