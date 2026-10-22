@@ -136,7 +136,6 @@ void save_mobile(FILE *fp, MOB_INDEX_DATA *pMobIndex)
 {
 	long i;
 	int styles;
-	char buf[MSL], buf2[MSL];
 	long dummy[MAX_BITVECTOR], dummy2[MAX_BITVECTOR];
 
 	fprintf(fp, "#%d\n", pMobIndex->vnum);
