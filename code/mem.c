@@ -358,12 +358,12 @@ OBJ_INDEX_DATA *new_obj_index(void)
 	pObj->material = palloc_string("unknown"); /* ROM */
 	pObj->condition = 100;					   /* ROM */
 	pObj->verb = nullptr;
+	// Two slots each (obj_index_data.h). A third was cleared here as well,
+	// which wrote past both arrays, onto remove_echo[0] and verb.
 	pObj->wear_echo[0] = nullptr;
 	pObj->wear_echo[1] = nullptr;
-	pObj->wear_echo[2] = nullptr;
 	pObj->remove_echo[0] = nullptr;
 	pObj->remove_echo[1] = nullptr;
-	pObj->remove_echo[2] = nullptr;
 	pObj->cabal = 0;
 	pObj->notes = nullptr;
 	pObj->wear_loc_name = nullptr;

@@ -3403,6 +3403,9 @@ void spell_identify(int /* sn */, int /* level */, CHAR_DATA *ch, SpellTarget vo
 				send_to_char(buf, ch);
 
 			break;
+		// Every other item type has nothing more to identify.
+		default:
+			break;
 	}
 
 	for (const auto &app : obj->apply)
@@ -4773,6 +4776,12 @@ void spell_acid_breath(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[maybe
 	if (dam > ch->hit)
 		dam = ch->hit;
 
+	// TODO: hp_dam is zeroed and never used: the formula below that scaled
+	// breath damage with the breather's current hit points is commented out,
+	// and dam is built from hit / 9 plus dice instead. Restoring either the
+	// formula or a cleaned-up version of it changes breath damage, so this is
+	// a balance decision, not a mechanical fix. The acid, frost and lightning
+	// breaths all carry the same vestige.
 	hp_dam = 0;
 
 	/*
@@ -4889,6 +4898,12 @@ void spell_frost_breath(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[mayb
 	if (dam > ch->hit)
 		dam = ch->hit;
 
+	// TODO: hp_dam is zeroed and never used: the formula below that scaled
+	// breath damage with the breather's current hit points is commented out,
+	// and dam is built from hit / 9 plus dice instead. Restoring either the
+	// formula or a cleaned-up version of it changes breath damage, so this is
+	// a balance decision, not a mechanical fix. The acid, frost and lightning
+	// breaths all carry the same vestige.
 	hp_dam = 0;
 
 	/*
@@ -5036,6 +5051,12 @@ void spell_lightning_breath(int sn, int level, CHAR_DATA *ch, SpellTarget vo, [[
 	if (dam > ch->hit)
 		dam = ch->hit;
 
+	// TODO: hp_dam is zeroed and never used: the formula below that scaled
+	// breath damage with the breather's current hit points is commented out,
+	// and dam is built from hit / 9 plus dice instead. Restoring either the
+	// formula or a cleaned-up version of it changes breath damage, so this is
+	// a balance decision, not a mechanical fix. The acid, frost and lightning
+	// breaths all carry the same vestige.
 	hp_dam = 0;
 
 	/*

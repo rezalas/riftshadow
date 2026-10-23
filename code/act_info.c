@@ -5145,6 +5145,9 @@ void do_lore(CHAR_DATA *ch, char *argument) /* Lore by Detlef */
 					obj->value[3]);
 				send_to_char(buf, ch);
 				break;
+			// Every other item type has nothing more to tell.
+			default:
+				break;
 		}
 
 		for (const auto &app : obj->apply)

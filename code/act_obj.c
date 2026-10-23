@@ -1859,6 +1859,10 @@ void do_eat(CHAR_DATA *ch, char *argument)
 			obj_cast_spell(obj->value[2], obj->value[0], ch, ch, nullptr);
 			obj_cast_spell(obj->value[3], obj->value[0], ch, ch, nullptr);
 			break;
+		// Only an immortal gets here with anything else (everyone else is refused
+		// above), and eating it does nothing.
+		default:
+			break;
 	}
 
 	extract_obj(obj);

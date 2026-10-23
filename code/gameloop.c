@@ -155,9 +155,10 @@ void CGameLoop::ProcessInput()
 
 		d->fcommand= false;
 
-		// Nothing between here and the interpret() below can free the
-		// character: read_from_descriptor only touches the socket, and the
-		// branch that does close the connection continues out of the loop.
+		// Only the socket read below runs on this value. ProcessConnectionInput
+		// reads the character again for itself, and nothing between here and
+		// there can free it: read_from_descriptor only touches the socket, and
+		// the branch that does close the connection continues out of the loop.
 		CHAR_DATA *player = Deref(d->character);
 
 		if (FD_ISSET(d->descriptor, &in_set))
@@ -178,90 +179,143 @@ void CGameLoop::ProcessInput()
 			}
 		}
 
-		if (player != nullptr && player->wait > 0)
-			--player->wait;
+		ProcessConnectionInput(d);
+	}
+}
 
-		if (player != nullptr && player->wait <= 0 && player->pcdata->pending)
+void ProcessConnectionInput(DESCRIPTOR_DATA *d)
+{
+	// Every command below can close this connection: quit does it on purpose,
+	// nanny does it for a bad name or password, and an immortal can disconnect
+	// it. (Overflowing the output buffer no longer does; it only sets
+	// closePending, for ClosePendingConnections.) Closing erases the
+	// descriptor from descriptor_list, which destroys it. So the handle is
+	// copied now, and `d` is read again through it after each dispatch rather
+	// than used as it was.
+	auto connection = d->self;
+
+	// Its output overflowed and it closes at the end of the pulse. Nothing it
+	// asks for now would reach it. Its wait stops counting down and its queue
+	// stops draining for that short time, which is what happened to it before as
+	// well: an overflow closed it on the spot, and a link-dead character is not
+	// on any connection for this loop to count down.
+	if (d->closePending)
+		return;
+
+	CHAR_DATA *player = Deref(d->character);
+
+	if (player != nullptr && player->wait > 0)
+		--player->wait;
+
+	if (player != nullptr && player->wait <= 0 && player->pcdata->pending)
+	{
+		int i = 0;
+
+		interpret(player, player->pcdata->queue[0]);
+
+		// The queued command can be "quit", which extracts the
+		// character out from under us, so read the connection again
+		// here rather than before the call. Everything below this point
+		// only shuffles the command queue and cannot free anything, so
+		// the one read covers all of it. The connection is read first,
+		// because the command can have closed it, and then d->character
+		// would be a read of freed memory.
+		d = Deref(connection);
+
+		if (d == nullptr)
+			return;
+
+		player = Deref(d->character);
+
+		if (!player)
+			return;
+
+		for (i = 1; i < player->pcdata->write_next; i++)
 		{
-			int i = 0;
-
-			interpret(player, player->pcdata->queue[0]);
-
-			// The queued command can be "quit", which extracts the
-			// character out from under us, so read the connection again
-			// here rather than before the call. Everything below this point
-			// only shuffles the command queue and cannot free anything, so
-			// the one read covers all of it.
-			player = Deref(d->character);
-
-			if (!player)
-				continue;
-
-			for (i = 1; i < player->pcdata->write_next; i++)
-			{
-				if (i > MAX_QUEUE - 1) break;
-				strcpy(player->pcdata->queue[(i - 1)], player->pcdata->queue[i]);
-			}
-
-			player->pcdata->write_next--;
-
-			for (i = player->pcdata->write_next; i < MAX_QUEUE; i++)
-			{
-				player->pcdata->queue[i][0] = '\0';
-			}
-
-			if (player->pcdata->write_next == 0)
-				player->pcdata->pending = false;
-
-			continue;
+			if (i > MAX_QUEUE - 1) break;
+			strcpy(player->pcdata->queue[(i - 1)], player->pcdata->queue[i]);
 		}
 
-		read_from_buffer(d);
+		player->pcdata->write_next--;
 
-		if (d->incomm[0] != '\0')
+		for (i = player->pcdata->write_next; i < MAX_QUEUE; i++)
 		{
-			d->fcommand = true;
-			stop_idling(player);
+			player->pcdata->queue[i][0] = '\0';
+		}
 
-			// stop_idling moves the character back out of limbo and fires a
-			// room act, so read the connection again rather than carrying
-			// the value above across it.
-			player = Deref(d->character);
+		if (player->pcdata->write_next == 0)
+			player->pcdata->pending = false;
 
-			/* OLC */
-			if (d->showstr_point)
-			{
-				show_string(d, d->incomm);
-			}
-			else if (d->pString)
-			{
-				string_add(player, d->incomm);
-			}
-			else if (d->connected == CON_PLAYING && player->pcdata && player->pcdata->entering_text)
-			{
-				process_text(player, d->incomm);
-			}
-			else
-			{
-				switch (d->connected)
-				{
-					case CON_PLAYING:
-						if (!run_olc_editor(d))
-							substitute_alias(d, d->incomm);
-						break;
-					default:
-						nanny(d, d->incomm);
-						break;
-				}
-			}
+		return;
+	}
 
+	read_from_buffer(d);
+
+	if (d->incomm[0] != '\0')
+	{
+		d->fcommand = true;
+		stop_idling(player);
+
+		// stop_idling moves the character back out of limbo and fires a
+		// room act, so read the connection again rather than carrying
+		// the value above across it. The connection is read again as well.
+		// The act used to be able to close it without writing to it: a
+		// bystander whose buffer overflowed on it was closed on the spot, and
+		// that close told the room, this character now included, that they
+		// lost their link. Overflow is deferred now, so that chain cannot
+		// start, but the re-read is what this code relies on rather than the
+		// details of what an act can reach.
+		d = Deref(connection);
+
+		if (d == nullptr)
+			return;
+
+		player = Deref(d->character);
+
+		/* OLC */
+		if (d->showstr_point)
+		{
+			show_string(d, d->incomm);
+		}
+		else if (d->pString)
+		{
+			string_add(player, d->incomm);
+		}
+		else if (d->connected == CON_PLAYING && player->pcdata && player->pcdata->entering_text)
+		{
+			process_text(player, d->incomm);
+		}
+		else
+		{
+			switch (d->connected)
+			{
+				case CON_PLAYING:
+					if (!run_olc_editor(d))
+						substitute_alias(d, d->incomm);
+					break;
+				default:
+					nanny(d, d->incomm);
+					break;
+			}
+		}
+
+		// Whatever ran above can have closed the connection. A closed one has
+		// no pending command left to clear.
+		d = Deref(connection);
+
+		if (d != nullptr)
 			d->incomm[0] = '\0';
-		}
 	}
 }
 
 void CGameLoop::ProcessOutput()
 {
+	// Before the flush, so that nothing below prompts a connection that has
+	// already overflowed, and again after it, because the prompt, a snooper's
+	// copy and a failed flush's close can all overflow somebody else. Together
+	// they close everything that overflowed this pulse before the next begins.
+	ClosePendingConnections();
+
 	for (OwningListWalk<DESCRIPTOR_DATA> walk(descriptor_list); !walk.Done(); walk.Step())
 	{
 		DESCRIPTOR_DATA *d = walk.Current();
@@ -270,8 +324,9 @@ void CGameLoop::ProcessOutput()
 		{
 			if (!process_output(d, true))
 			{
-				// Read after process_output, not before: its write path can
-				// overflow the output buffer and close the connection.
+				// Read after process_output, not before. Its write path used to
+				// be able to overflow the output buffer and close the connection;
+				// an overflow only marks it now, but the order costs nothing.
 				CHAR_DATA *player = Deref(d->character);
 
 				if (player != nullptr && player->level > 1)
@@ -282,6 +337,8 @@ void CGameLoop::ProcessOutput()
 			}
 		}
 	}
+
+	ClosePendingConnections();
 }
 
 void CGameLoop::SleepUntilSynchronized()

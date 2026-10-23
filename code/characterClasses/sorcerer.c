@@ -4023,6 +4023,9 @@ void spell_acid_stream(int /* sn */, int level, CHAR_DATA *ch, SpellTarget vo, C
 		case WEAR_BODY:
 			dam = (int)((float)dam * 1.5);
 			break;
+		// location is only ever set to one of the four slots above.
+		default:
+			break;
 	}
 
 	if (!is_affected(victim, gsn_acid_stream) && location != WEAR_BODY)

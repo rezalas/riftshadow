@@ -18,7 +18,7 @@
 // Scalar flags -- operate on a single integer field, overwhelmingly obj->value[N]
 // (the furniture flags in act_info.c among them). The bit is an absolute shift,
 // with no word split. The _OLD suffix names the representation, NOT deprecation:
-// these three have 134 live call sites (140 counting TOGGLE_BIT_OLD below).
+// these three have 134 live call sites (139 counting TOGGLE_BIT_OLD below).
 #define IS_SET_OLD(flag, bit) 		((flag) &   (1L << (bit)))
 #define SET_BIT_OLD(var, bit) 		((var)  |=  (1L << (bit)))
 #define REMOVE_BIT_OLD(var,bit) 	((var)  &= ~(1L << (bit)))

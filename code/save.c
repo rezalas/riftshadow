@@ -594,11 +594,11 @@ void fwrite_char(CHAR_DATA *ch, FILE *fp)
 
 		fprintf(fp, "Affc '%s' %3d %3d %3d %3d %3d %s %3d %s '%s'\n",
 			skill_table[paf.type].name,
-			paf.where,
+			write_persisted(paf.where),
 			paf.level,
 			paf.duration,
 			paf.modifier,
-			paf.location,
+			write_persisted(paf.location),
 			print_flags(paf.bitvector),
 			paf.aftype,
 			owner ? owner->name : "none", paf.name ? paf.name : "none");
@@ -861,6 +861,9 @@ void fwrite_obj(CHAR_DATA *ch, OBJ_DATA *obj, FILE *fp, int iNest)
 				fprintf(fp, "Spell 3 '%s'\n", skill_table[obj->value[3]].name);
 
 			break;
+		// Only these types hold spell numbers, which are saved by name.
+		default:
+			break;
 	}
 
 	for (auto &paf : obj->affected)
@@ -874,7 +877,7 @@ void fwrite_obj(CHAR_DATA *ch, OBJ_DATA *obj, FILE *fp, int iNest)
 
 		fprintf(fp, "Affc '%s' %3d %3d %3d %3d %3d %s %d %s\n",
 			skill_table[paf.type].name,
-			paf.where,
+			write_persisted(paf.where),
 			paf.level,
 			paf.duration,
 			paf.modifier,
@@ -902,7 +905,7 @@ void fwrite_obj(CHAR_DATA *ch, OBJ_DATA *obj, FILE *fp, int iNest)
 		}
 
 		if (!inherited)
-			fprintf(fp, "AddApp %d %d %d\n", oad.location, oad.modifier, oad.type);
+			fprintf(fp, "AddApp %d %d %d\n", write_persisted(oad.location), oad.modifier, oad.type);
 	}
 
 	if (!obj->extra_descr.empty())

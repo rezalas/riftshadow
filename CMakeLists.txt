@@ -68,6 +68,16 @@ if(CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
 	add_compile_options(-Werror=null-dereference)
 endif()
 
+# Same shape, same reasons. -Wall reports this one, but only where an optimized
+# build's range analysis can see the index, so it is silent at -O0 and the
+# Release leg of CI is what holds it. Both sites it found were live: a
+# constructor clearing a third slot of two-element arrays, and a loop reading
+# the lesser-demon favors at indexes that belonged to the greater ones. Each was
+# right only because of what the struct happened to lay out next.
+if(CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
+	add_compile_options(-Werror=array-bounds)
+endif()
+
 # This is mostly a severity change rather than new diagnostics. Nine of the
 # eleven groups below are already reported by the -Wall -Wextra above, and all
 # that happens here is the build stops when one of them fires. Only
@@ -98,9 +108,24 @@ endif()
 # -Wunsequenced, which correctly stays quiet because C++17 made `i = i++` well
 # defined. Rejected and inert are grouped together so that the gated list means
 # one thing, which is that the diagnostic is GCC only in practice.
+#
+# -Wformat joined the list later, after the enum-class conversion. A scoped enum
+# passed to printf's %d is the wrong type even when its underlying type is int,
+# and five of them had landed, four in the player-file writers. The bytes were
+# right only because of how the ABI passes a scoped enum. Both compilers emit
+# this one, checked the same way as the rest.
+#
+# -Wswitch came from the same conversion. Once a family is an enum class, a
+# switch over it that leaves values out is reported, and the conversion of the
+# first 23 families left 21 such switches unread. None was a live defect, but
+# reading them is the point: the next family converted will report its gaps
+# here instead of adding to an uncounted pile. Each switch now lists the values
+# it leaves alone, or says in a comment why everything else does nothing. Both
+# compilers emit this one too.
 add_compile_options(-Werror=implicit-fallthrough -Werror=empty-body
 	-Werror=tautological-compare -Werror=missing-field-initializers
-	-Werror=misleading-indentation -Werror=sign-compare)
+	-Werror=misleading-indentation -Werror=sign-compare -Werror=format
+	-Werror=switch)
 if(CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
 	add_compile_options(-Werror=sequence-point
 		-Werror=int-in-bool-context -Werror=bool-compare

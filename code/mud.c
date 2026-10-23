@@ -247,15 +247,18 @@ void CMud::LoadObjLimits()
 		for (; ;)
 		{
 			int vnum, lastlogin = 0, plevel = 0;
-			char letter;
 			char *word;
 			OBJ_INDEX_DATA *pObjIndex;
 
 			temp_player_name[0] = '\0';
-			letter = fread_letter(fpChar);
 
-			if (letter != '#')
-				continue;
+			// A file that ends before its #End -- a zero-byte one, say -- used to
+			// keep this loop reading end-of-file forever and hang the boot.
+			if (!SkipToSection(fpChar))
+			{
+				RS.Logger.Warn("LoadObjLimits: {} ends without #End.", strPlr);
+				break;
+			}
 
 			word = fread_word(fpChar);
 

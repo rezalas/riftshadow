@@ -38,16 +38,24 @@
 //
 // Reading the same handle several times in a row looks redundant and is a
 // standing temptation to hoist into one local, but it is often load-bearing.
-// Two families of call can invalidate an entity partway through the block that
-// is reading it:
+// Calls that can invalidate an entity partway through the block that is reading
+// it:
 //
 //   * Combat and movement. damage_new, multi_hit, one_hit, track_attack and
 //     anything that moves a character can end a fight or kill outright.
-//   * ANY OUTPUT. send_to_char, act and every page dump reach write_to_buffer,
-//     and a buffer that passes its ceiling closes the socket. That destroys the
-//     descriptor and frees the character on the end of it. This is the one that
-//     gets missed, because writing to somebody does not read like a call that
-//     can destroy them.
+//   * Anything that closes a connection directly: close_socket, and the
+//     commands and states that call it (quit, disconnect, nanny's refusals,
+//     the game loop). That destroys the descriptor, and for a connection that
+//     is not yet playing it frees the character too.
+//
+// Output used to be on this list, and it was the one that got missed. A buffer
+// that passed its ceiling closed the socket inside write_to_buffer, so any
+// send_to_char, act or page dump could destroy whoever it was written to. An
+// overflow now only marks the connection closePending, and the game loop closes
+// it at the end of the pulse, so output no longer frees anything. Many sites
+// still re-read after writing, and they are commented as doing it for the old
+// reason. Leave them: a re-read is cheap and stays correct whatever the calls
+// in between turn out to reach.
 //
 // A cached pointer survives both. The handle does not, which is the entire
 // point of it being a handle.

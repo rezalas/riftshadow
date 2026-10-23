@@ -2229,6 +2229,14 @@ void do_stand(CHAR_DATA *ch, char *argument)
 		case POS_FIGHTING:
 			send_to_char("You are already fighting!\n\r", ch);
 			break;
+		// Positions below sleeping never get here through the command table, which
+		// asks for at least POS_SLEEPING. Called directly, there is nothing to do in
+		// them, as there never was.
+		case POS_DEAD:
+		case POS_INCAP:
+		case POS_MORTAL:
+		case POS_STUNNED:
+			break;
 	}
 }
 
@@ -2388,6 +2396,16 @@ void do_rest(CHAR_DATA *ch, char *argument)
 
 			ch->position = POS_RESTING;
 			break;
+		// Positions below sleeping never get here through the command table, which
+		// asks for at least POS_SLEEPING. Called directly, there is nothing to do in
+		// them, as there never was.
+		// POS_FIGHTING was refused above.
+		case POS_DEAD:
+		case POS_FIGHTING:
+		case POS_INCAP:
+		case POS_MORTAL:
+		case POS_STUNNED:
+			break;
 	}
 }
 
@@ -2518,6 +2536,16 @@ void do_sit(CHAR_DATA *ch, char *argument)
 
 			ch->position = POS_SITTING;
 			break;
+		// Positions below sleeping never get here through the command table, which
+		// asks for at least POS_SLEEPING. Called directly, there is nothing to do in
+		// them, as there never was.
+		// POS_FIGHTING was refused above.
+		case POS_DEAD:
+		case POS_FIGHTING:
+		case POS_INCAP:
+		case POS_MORTAL:
+		case POS_STUNNED:
+			break;
 	}
 }
 
@@ -2601,6 +2629,14 @@ void do_sleep(CHAR_DATA *ch, char *argument)
 			break;
 		case POS_FIGHTING:
 			send_to_char("You are already fighting!\n\r", ch);
+			break;
+		// Positions below sleeping never get here through the command table, which
+		// asks for at least POS_SLEEPING. Called directly, there is nothing to do in
+		// them, as there never was.
+		case POS_DEAD:
+		case POS_INCAP:
+		case POS_MORTAL:
+		case POS_STUNNED:
 			break;
 	}
 }

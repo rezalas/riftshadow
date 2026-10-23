@@ -566,8 +566,9 @@ bool redit_mshow(CHAR_DATA *ch, char *argument)
 	medit_show(ch, argument);
 
 	// Resolved again rather than reusing the pointer above. medit_show is a page
-	// dump, and a dump long enough to pass the output buffer's ceiling closes the
-	// connection and destroys it, which leaves the local standing for nothing.
+	// dump, and a dump long enough to pass the output buffer's ceiling used to
+	// close the connection and destroy it, which left the local standing for
+	// nothing. An overflow only marks the connection now; the re-read stays.
 	connection = Deref(ch->desc);
 
 	if (connection == nullptr)
@@ -728,6 +729,10 @@ bool medit_vnum(CHAR_DATA *ch, char *argument)
 	pMob->next = mob_index_hash[iHash];
 	mob_index_hash[iHash] = pMob;
 
+	// TODO: M resets that name the old vnum are not rewritten, so they go on
+	// loading whatever mob now holds it, or nothing at all. The builder is only
+	// warned. Rewriting the resets is a behavior change to OLC and still has to
+	// be decided.
 	send_to_char("Vnum set.\n\r", ch);
 	send_to_char("Resets referring to the old vnum are NOT updated. Check them before saving.\n\r", ch);
 	return true;

@@ -15,6 +15,8 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     gdb \
     clang \
     clang-tools \
+	clangd \
+	clang-format \
     mariadb-server \
     libmariadb-dev \
     libmariadb-dev-compat \

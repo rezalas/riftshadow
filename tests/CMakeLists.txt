@@ -20,11 +20,14 @@ set(TEST_SRC_FILES act_obj_tests.c
 	class_tests.c
 	db_tests.c
 	fight_tests.c
+	gameloop_tests.c
 	handler_tests.c
 	help_tests.c
 	induction_tests.c
 	login_tests.c
+	lookup_tests.c
 	magic_tests.c
+	mem_tests.c
 	mprog_tests.c
 	note_tests.c
 	pathfind_tests.c
